@@ -48,3 +48,4 @@ Giochi (campo `tipo` negli esercizi): `memory` (coppie), `bucato` (testo con [pa
 Campi facoltativi della lezione: `storia` {personaggio, testo, immagini, missione}, `premio` (emoji della figurina), `ricorda` [frasi].
 Campi facoltativi di una sezione: `pensa` {domanda, risposta}, `scopri` [{fronte, retro}], `esperimento` {titolo, materiali, passi, domanda}.
 Le figurine vinte finiscono in `album.html` (salvate solo su quel computer).
+Equivalenze numeriche (k, h, da, u): esercizio `equivalenza` {n, da, a} e video `{"tipo":"scena","scena":"equivalenza","n":3,"da":"h","a":"da"}`.

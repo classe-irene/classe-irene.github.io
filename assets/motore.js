@@ -2,7 +2,7 @@
 // Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", "equivalenza", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Bravissimo! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -39,6 +39,7 @@
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
       if (window.Giochi?.TIPI.includes(e.tipo)) errori.push(...Giochi.valida(e, n));
       if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
+      if (e.tipo === "equivalenza" && !(Number.isInteger(e.n) && e.n > 0 && ["k", "h", "da", "u"].includes(e.da) && ["k", "h", "da", "u"].includes(e.a) && Number.isInteger(Animazioni.calcolaEquivalenza(e.n, e.da, e.a)))) errori.push(`${n}: servono "n", "da" e "a" (k, h, da, u) con risultato intero.`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
     });
     return errori;
@@ -364,6 +365,8 @@
     ESERCIZI[g] = (e, c, esito) => Giochi[g](e, c, esito, domanda(e.domanda || DOMANDA_GIOCO[g], e));
   ESERCIZI.costruisci = (e, c, esito) =>
     Animazioni.esercizioCostruisci(e, c, esito, domanda(e.domanda || `Costruisci il numero ${e.numero} con decine e unità.`, e));
+  ESERCIZI.equivalenza = (e, c, esito) =>
+    Animazioni.esercizioEquivalenza(e, c, esito, domanda(e.domanda || `Sposta il numero nella tabella: ${e.n} ${e.da} = ? ${e.a}`, e));
   ESERCIZI.gelosia = (e, c, esito) =>
     Animazioni.esercizioGelosia(e, c, esito, domanda(e.domanda || `Calcola con la griglia: ${e.a} × ${e.b}`, e));
   ESERCIZI.colonna = (e, c, esito) =>

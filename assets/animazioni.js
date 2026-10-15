@@ -490,7 +490,107 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero };
+
+  /* ---------- Equivalenze con i numeri: tabella k h da u ---------- */
+  const UNITA_EQ = [
+    { s: "k", nome: "migliaia", uno: "migliaio", e: "🚚", c: "#8B5CF6" },
+    { s: "h", nome: "centinaia", uno: "centinaio", e: "🗃️", c: "#E0533D" },
+    { s: "da", nome: "decine", uno: "decina", e: "📦", c: "#3D6BE0" },
+    { s: "u", nome: "unità", uno: "unità", e: "🍫", c: "#F2994A" }];
+  const colEq = (s) => UNITA_EQ.findIndex((x) => x.s === s);
+  // Risultato dell'equivalenza, oppure null se non è un numero intero.
+  function calcolaEquivalenza(n, da, a) {
+    const salti = colEq(a) - colEq(da);
+    if (salti >= 0) return n * 10 ** salti;
+    const r = n / 10 ** -salti;
+    return Number.isInteger(r) ? r : null;
+  }
+  const xEq = (i) => 130 + i * 140;
+  function tabellaEqSVG(evid = -1) {
+    return UNITA_EQ.map((x, i) => `<rect x="${xEq(i) - 66}" y="20" width="132" height="94" rx="14" fill="${x.c}" opacity="${i === evid ? 1 : .18}"/>
+      ${fig(x.e, xEq(i), 52, 44)}<text x="${xEq(i)}" y="102" class="eq-sigla ${i === evid ? "chiara" : ""}">${x.s}</text>
+      <rect x="${xEq(i) - 66}" y="122" width="132" height="96" rx="14" class="eq-casella"/>`).join("");
+  }
+  function cifreEqSVG(testo, ultima, cls = "", barrate = 0) {
+    const t = String(testo);
+    return [...t].map((c, k) => {
+      const i = ultima - (t.length - 1 - k);
+      const x = i >= 0 ? xEq(i) : xEq(0) - 140 * -i;
+      const barra = k >= t.length - barrate;
+      return `<text x="${x}" y="194" class="eq-cifra ${cls} ${barra ? "barrata" : ""}">${c}</text>${barra ? `<path d="M${x - 30} 196 L${x + 30} 140" class="eq-barra"/>` : ""}`;
+    }).join("");
+  }
+  function scenaEquivalenza(anim) {
+    const n = Math.max(1, +anim.n || 3), da = UNITA_EQ[colEq(anim.da)] ? anim.da : "h", a = UNITA_EQ[colEq(anim.a)] ? anim.a : "da";
+    const i0 = colEq(da), i1 = colEq(a), salti = i1 - i0, ris = calcolaEquivalenza(n, da, a);
+    const U0 = UNITA_EQ[i0], U1 = UNITA_EQ[i1], pezzi = [], passi = [];
+    const nomeU = (U, q) => (q === 1 ? U.uno : U.nome);
+    pezzi.push({ da: 0, a: 0, svg: tabellaEqSVG() });
+    passi.push("Ecco la tabella: migliaia, centinaia, decine e unità. Ogni casella vale 10 volte quella a destra.");
+    pezzi.push({ da: 1, svg: tabellaEqSVG(i1) });
+    pezzi.push({ da: 1, a: 1, svg: cifreEqSVG(n, i0) });
+    passi.push(`Scrivo ${n} ${U0.s}: l'ultima cifra va nella casella delle ${U0.nome}. Voglio arrivare alle ${U1.nome}.`);
+    const passo = Math.abs(salti);
+    const freccia = (k) => `<path d="M${xEq(i0 + Math.sign(salti) * k)} 250 Q ${(xEq(i0 + Math.sign(salti) * k) + xEq(i0 + Math.sign(salti) * (k + 1))) / 2} 225 ${xEq(i0 + Math.sign(salti) * (k + 1))} 250" class="eq-salto" marker-end="url(#punta)"/>`;
+    if (salti === 0) {
+      pezzi.push({ da: 2, svg: cifreEqSVG(n, i0) });
+      passi.push("Sono già nella casella giusta: il numero non cambia.");
+    } else if (salti > 0) {
+      for (let k = 1; k <= passo; k++) {
+        pezzi.push({ da: k + 1, svg: freccia(k - 1) });
+        pezzi.push({ da: k + 1, a: k === passo ? undefined : k + 1, svg: cifreEqSVG(n + "0".repeat(k), i0 + k) });
+        passi.push(`Salto ${k} verso destra: aggiungo uno 0. ${n + "0".repeat(k)}.`);
+      }
+    } else if (ris !== null) {
+      for (let k = 1; k <= passo; k++) {
+        pezzi.push({ da: k + 1, svg: freccia(k - 1) });
+        pezzi.push({ da: k + 1, a: k === passo ? k + 1 : k + 1, svg: cifreEqSVG(n, i0, "", k) });
+        passi.push(`Salto ${k} verso sinistra: tolgo uno 0.`);
+      }
+      pezzi.push({ da: passo + 2, svg: cifreEqSVG(ris, i1) });
+      passi.push(`Restano ${ris}: l'ultima cifra è nella casella delle ${U1.nome}.`);
+    }
+    const ultimo = passi.length;
+    pezzi.push({ da: ultimo, svg: `<text x="340" y="292" class="eq-risultato">${n} ${U0.s} = ${ris ?? "?"} ${U1.s}</text>` });
+    passi.push(ris === null ? "Qui servono i numeri con la virgola: li vedremo più avanti." : `${n} ${U0.s} = ${ris} ${U1.s}. ${ris} ${nomeU(U1, ris)}!`);
+    return { viewBox: "0 0 680 305", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "equivalenza": il bambino sposta il numero nella tabella aggiungendo o togliendo zeri ---------- */
+  function esercizioEquivalenza(e, c, esito, intestazione) {
+    const n = +e.n, i0 = colEq(e.da), i1 = colEq(e.a), ris = calcolaEquivalenza(n, e.da, e.a);
+    let testo = String(n), col = i0;
+    c.innerHTML = intestazione + `<div class="equivalenza">
+      <div class="eq-domanda">${n} ${e.da} = <b class="eq-ris">?</b> ${e.a}</div>
+      <svg viewBox="0 0 680 230" class="eq-tabella"></svg>
+      <p class="eq-aiuto">➡️ verso destra aggiungo uno 0 · ⬅️ verso sinistra tolgo uno 0</p>
+      <div class="costruisci-tasti">
+        <button class="btn bianco" data-q="s">⬅️ Togli 0</button>
+        <button class="btn" data-q="d">Aggiungi 0 ➡️</button>
+        <button class="btn verde" data-q="ok">✔ Ho finito</button>
+      </div></div>`;
+    const svg = c.querySelector(".eq-tabella"), r = c.querySelector(".eq-ris");
+    const disegna = () => {
+      svg.innerHTML = `<defs><marker id="punta-eq" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>` + tabellaEqSVG(i1) + cifreEqSVG(testo, col);
+      r.textContent = col === i1 ? testo : "?";
+    };
+    disegna();
+    c.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-q]");
+      if (!b || c.classList.contains("risolto")) return;
+      const q = b.dataset.q;
+      if (q === "d" && col < 3) { testo += "0"; col++; Suono?.clic?.(); }
+      else if (q === "s" && col > 0) {
+        if (!testo.endsWith("0") || testo.length === 1) { Voce.parla("Qui non c'è uno zero da togliere."); return; }
+        testo = testo.slice(0, -1); col--;
+      }
+      if (q !== "ok") { disegna(); return; }
+      if (col === i1 && +testo === ris) esito.ok();
+      else { e.suggerimento = `Porta l'ultima cifra nella casella ${e.a}: ${n} ${e.da} = ${ris} ${e.a}.`; esito.ko(b); }
+    });
+  }
+
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -688,5 +788,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();
