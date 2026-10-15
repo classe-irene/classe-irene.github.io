@@ -5,28 +5,252 @@
   "classe": 4,
   "introduzione": "Gli scienziati dividono i viventi in cinque gruppi. Si chiamano regni.",
   "sezioni": [
-    { "titolo": "Le monere", "immagine": "🦠", "testo": "Sono i batteri. Sono piccolissimi.\nSi vedono solo con il microscopio.", "immagini": ["🔬 microscopio", "🥛 yogurt"], "curiosita": "Alcuni batteri sono buoni: aiutano a fare lo yogurt." },
-    { "titolo": "I protisti", "immagine": "💧", "testo": "Sono piccolissimi anche loro.\nVivono quasi tutti nell'acqua.", "immagini": ["🌊 acqua", "🦠 ameba"] },
-    { "titolo": "I funghi", "immagine": "🍄", "testo": "I funghi non sono piante. Non sono verdi.\nAnche la muffa e il lievito sono funghi.", "immagini": ["🍄 fungo", "🍞 muffa del pane"] },
-    { "titolo": "Le piante", "immagine": "🌳", "testo": "Le piante fanno il cibo da sole con la luce del sole.\nCi regalano ossigeno.", "immagini": ["☀️ luce", "🌳 albero", "🌻 fiore"] },
-    { "titolo": "Gli animali", "immagine": "🦁", "testo": "Gli animali mangiano altri viventi.\nQuasi tutti si muovono.", "immagini": ["🦁 leone", "🐝 ape", "🐟 pesce"] }
+    {
+      "titolo": "Le monere",
+      "immagine": "🦠",
+      "testo": "Sono i batteri. Sono piccolissimi.\nSi vedono solo con il microscopio.",
+      "immagini": [
+        "🔬 microscopio",
+        "🥛 yogurt"
+      ],
+      "curiosita": "Alcuni batteri sono buoni: aiutano a fare lo yogurt."
+    },
+    {
+      "titolo": "I protisti",
+      "immagine": "💧",
+      "testo": "Sono piccolissimi anche loro.\nVivono quasi tutti nell'acqua.",
+      "immagini": [
+        "🌊 acqua",
+        "🦠 ameba"
+      ]
+    },
+    {
+      "titolo": "I funghi",
+      "immagine": "🍄",
+      "testo": "I funghi non sono piante. Non sono verdi.\nAnche la muffa e il lievito sono funghi.",
+      "immagini": [
+        "🍄 fungo",
+        "🍞 muffa del pane"
+      ]
+    },
+    {
+      "titolo": "🍞 La muffa cresce",
+      "immagine": "🍞",
+      "testo": "La muffa è un fungo piccolissimo.\nCresce sul pane vecchio, se c'è umido.\nGuarda cosa succede in pochi giorni.",
+      "immagini": [
+        "🍞 pane",
+        "💧 umido",
+        "🍄 muffa"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il pane e la muffa",
+        "passi": [
+          {
+            "figure": "🍞",
+            "testo": "Lunedì: il pane è fresco."
+          },
+          {
+            "figure": "🍞 💧",
+            "testo": "Lo lasciamo chiuso in un sacchetto, con un po' di umido."
+          },
+          {
+            "figure": "🍞 → 🔍",
+            "testo": "Mercoledì: con la lente vediamo dei puntini verdi. È la muffa!"
+          },
+          {
+            "figure": "💨 🍄 💨",
+            "testo": "La muffa fa delle polverine piccolissime: le spore. Volano nell'aria."
+          },
+          {
+            "figure": "🗑️ 🚫 😋",
+            "testo": "Il pane con la muffa non si mangia! Si butta via."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "Le piante",
+      "immagine": "🌳",
+      "testo": "Le piante fanno il cibo da sole con la luce del sole.\nCi regalano ossigeno.",
+      "immagini": [
+        "☀️ luce",
+        "🌳 albero",
+        "🌻 fiore"
+      ]
+    },
+    {
+      "titolo": "🌱 Come mangia una pianta",
+      "immagine": "🌱",
+      "testo": "La pianta non mangia come noi.\nPrende acqua, luce e aria.\nCon queste cose prepara il suo cibo nelle foglie.",
+      "immagini": [
+        "💧 acqua",
+        "☀️ luce",
+        "💨 aria",
+        "🍬 zucchero"
+      ],
+      "curiosita": "Il cibo della pianta è uno zucchero. Per questo la frutta è dolce!",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "fotosintesi",
+        "video": true,
+        "titolo": "la fotosintesi"
+      }
+    },
+    {
+      "titolo": "Gli animali",
+      "immagine": "🦁",
+      "testo": "Gli animali mangiano altri viventi.\nQuasi tutti si muovono.",
+      "immagini": [
+        "🦁 leone",
+        "🐝 ape",
+        "🐟 pesce"
+      ]
+    }
   ],
-  "parole_chiave": ["🦠 monere", "💧 protisti", "🍄 funghi", "🌳 piante", "🦁 animali"],
+  "parole_chiave": [
+    "🦠 monere",
+    "💧 protisti",
+    "🍄 funghi",
+    "🌳 piante",
+    "🦁 animali",
+    "🌱 fotosintesi"
+  ],
   "esercizi": [
-    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo e semplice al più grande.", "elementi": ["🦠 Monere", "💧 Protisti", "🍄 Funghi", "🌳 Piante", "🦁 Animali"] },
-    { "tipo": "categorie", "immagine": "🧺", "domanda": "Di quale regno è?", "categorie": ["🍄 Funghi", "🌳 Piante", "🦁 Animali"], "elementi": [
-      { "testo": "🍞 muffa", "categoria": "🍄 Funghi" },
-      { "testo": "🍄 porcino", "categoria": "🍄 Funghi" },
-      { "testo": "🌻 girasole", "categoria": "🌳 Piante" },
-      { "testo": "🌵 cactus", "categoria": "🌳 Piante" },
-      { "testo": "🪼 medusa", "categoria": "🦁 Animali" },
-      { "testo": "🐌 lumaca", "categoria": "🦁 Animali" }
-    ], "suggerimento": "I funghi non sono verdi." },
-    { "tipo": "vero_falso", "immagine": "🍄", "affermazione": "I funghi sono piante.", "corretta": false, "spiegazione": "I funghi sono un regno tutto loro." },
-    { "tipo": "scelta", "immagine": "🔬", "domanda": "In quale regno ci sono i batteri?", "opzioni": ["🦠 Monere", "🍄 Funghi", "🌳 Piante"], "corretta": 0, "spiegazione": "I batteri sono monere." },
-    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il regno a cosa fa.", "coppie": [["🌳 Piante", "☀️ fanno il cibo con la luce"], ["🦁 Animali", "🍽️ mangiano altri viventi"], ["🍄 Funghi", "🍂 mangiano foglie e cose morte"]] },
-    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "Le piante usano la luce del [sole] e ci regalano [ossigeno].", "distrattori": ["luna", "fumo"] },
-    { "tipo": "vero_falso", "immagine": "🥛", "affermazione": "Alcuni batteri aiutano a fare lo yogurt.", "corretta": true, "spiegazione": "Non tutti i batteri sono cattivi!" },
-    { "tipo": "scelta", "immagine": "🌊", "domanda": "L'ameba è piccolissima e vive nell'acqua. Che cos'è?", "opzioni": ["🦁 un animale", "💧 un protista", "🌳 una pianta"], "corretta": 1, "spiegazione": "L'ameba è un protista." }
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dal più piccolo e semplice al più grande.",
+      "elementi": [
+        "🦠 Monere",
+        "💧 Protisti",
+        "🍄 Funghi",
+        "🌳 Piante",
+        "🦁 Animali"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Di quale regno è?",
+      "categorie": [
+        "🍄 Funghi",
+        "🌳 Piante",
+        "🦁 Animali"
+      ],
+      "elementi": [
+        {
+          "testo": "🍞 muffa",
+          "categoria": "🍄 Funghi"
+        },
+        {
+          "testo": "🍄 porcino",
+          "categoria": "🍄 Funghi"
+        },
+        {
+          "testo": "🌻 girasole",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🌵 cactus",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🪼 medusa",
+          "categoria": "🦁 Animali"
+        },
+        {
+          "testo": "🐌 lumaca",
+          "categoria": "🦁 Animali"
+        }
+      ],
+      "suggerimento": "I funghi non sono verdi."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍄",
+      "affermazione": "I funghi sono piante.",
+      "corretta": false,
+      "spiegazione": "I funghi sono un regno tutto loro."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔬",
+      "domanda": "In quale regno ci sono i batteri?",
+      "opzioni": [
+        "🦠 Monere",
+        "🍄 Funghi",
+        "🌳 Piante"
+      ],
+      "corretta": 0,
+      "spiegazione": "I batteri sono monere."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il regno a cosa fa.",
+      "coppie": [
+        [
+          "🌳 Piante",
+          "☀️ fanno il cibo con la luce"
+        ],
+        [
+          "🦁 Animali",
+          "🍽️ mangiano altri viventi"
+        ],
+        [
+          "🍄 Funghi",
+          "🍂 mangiano foglie e cose morte"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le piante usano la luce del [sole] e ci regalano [ossigeno].",
+      "distrattori": [
+        "luna",
+        "fumo"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥛",
+      "affermazione": "Alcuni batteri aiutano a fare lo yogurt.",
+      "corretta": true,
+      "spiegazione": "Non tutti i batteri sono cattivi!"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌊",
+      "domanda": "L'ameba è piccolissima e vive nell'acqua. Che cos'è?",
+      "opzioni": [
+        "🦁 un animale",
+        "💧 un protista",
+        "🌳 una pianta"
+      ],
+      "corretta": 1,
+      "spiegazione": "L'ameba è un protista."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌱",
+      "domanda": "Come fa la pianta il suo cibo? Metti in ordine.",
+      "elementi": [
+        "💧 le radici bevono l'acqua",
+        "☀️ le foglie prendono la luce",
+        "🍬 la foglia prepara lo zucchero",
+        "🫧 la pianta regala ossigeno"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍞",
+      "affermazione": "La muffa è un fungo.",
+      "corretta": true,
+      "spiegazione": "Sì! La muffa è un fungo piccolissimo."
+    }
   ]
 }

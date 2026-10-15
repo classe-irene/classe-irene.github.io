@@ -274,6 +274,152 @@
     d.showModal ? d.showModal() : d.setAttribute("open", "");
   }
 
+  /* ---------- Scene di Scienze: piccoli "video" disegnati ----------
+     Ogni scena è un disegno SVG con dei pezzi che compaiono passo dopo passo
+     (da = dal passo, a = fino al passo). Il disegno resta fermo e i movimenti
+     continui (palline, pioggia, fiume) sono animazioni CSS. */
+  const fig = (e, x, y, s, extra = "") => {
+    const f = window.Figura?.file(e);
+    return f ? `<image href="${f}" x="${x - s / 2}" y="${y - s / 2}" width="${s}" height="${s}" ${extra}/>`
+      : `<text x="${x}" y="${y + s * 0.35}" font-size="${s}" text-anchor="middle" ${extra}>${e}</text>`;
+  };
+  const casuale = (seme) => () => ((seme = (seme * 9301 + 49297) % 233280) / 233280);
+
+  function scenaStati() {
+    const r = casuale(7);
+    const scatola = (x, titolo, emoji) => `<rect x="${x}" y="70" width="170" height="190" rx="18" class="sc-scatola"/>
+      ${fig(emoji, x + 85, 40, 44)}<text x="${x + 85}" y="292" class="sc-etichetta">${titolo}</text>`;
+    let solido = "", liquido = "", gas = "";
+    for (let i = 0; i < 5; i++) for (let j = 0; j < 5; j++)
+      solido += `<circle cx="${45 + i * 26}" cy="${142 + j * 26}" r="11" class="pallina vibra" style="animation-delay:-${(r() * 0.4).toFixed(2)}s"/>`;
+    for (let k = 0; k < 18; k++) {
+      const x = 240 + (k % 6) * 22 + r() * 6, y = 180 + Math.floor(k / 6) * 25 + r() * 4;
+      liquido += `<circle cx="${x}" cy="${y}" r="11" class="pallina scivola" style="animation-delay:-${(r() * 4).toFixed(2)}s"/>`;
+    }
+    for (let k = 0; k < 9; k++)
+      gas += `<circle cx="${455 + r() * 80}" cy="${125 + r() * 80}" r="11" class="pallina vola v${k % 4}" style="animation-delay:-${(r() * 6).toFixed(2)}s"/>`;
+    return {
+      viewBox: "0 0 620 330",
+      pezzi: [
+        { da: 0, a: 0, svg: fig("🔍", 250, 150, 170) + [0, 1, 2, 3, 4, 5, 6].map((k) => `<circle cx="${400 + (k % 3) * 34}" cy="${120 + Math.floor(k / 3) * 34}" r="14" class="pallina vibra"/>`).join("") },
+        { da: 1, svg: scatola(20, "SOLIDO", "🧊") + solido },
+        { da: 2, svg: scatola(215, "LIQUIDO", "💧") + `<rect x="217" y="152" width="166" height="106" rx="14" class="sc-acqua"/>` + liquido },
+        { da: 3, svg: scatola(410, "GAS", "♨️") + gas },
+        { da: 4, a: 4, svg: `<path d="M195 165 h14" class="sc-freccia caldo"/><path d="M390 165 h14" class="sc-freccia caldo"/>${fig("🔥", 202, 205, 34)}${fig("🔥", 397, 205, 34)}` },
+        { da: 5, svg: `<path d="M209 135 h-14" class="sc-freccia freddo"/><path d="M404 135 h-14" class="sc-freccia freddo"/>${fig("❄️", 202, 100, 30)}${fig("❄️", 397, 100, 30)}` },
+      ],
+      passi: [
+        "Tutte le cose sono fatte di pezzettini piccolissimi. Li disegniamo come palline.",
+        "Nel solido le palline sono strette strette. Tremano, ma restano al loro posto. Per questo il solido ha una forma sua.",
+        "Nel liquido le palline sono vicine, ma scivolano. Per questo il liquido scorre e prende la forma del bicchiere.",
+        "Nel gas le palline sono lontane e volano dappertutto. Per questo il gas riempie tutto lo spazio.",
+        "Se scaldo, le palline si muovono di più. Il ghiaccio diventa acqua. L'acqua diventa vapore.",
+        "Se raffreddo, succede il contrario. Il vapore torna acqua. L'acqua diventa ghiaccio.",
+      ],
+    };
+  }
+
+  function scenaCicloAcqua() {
+    let gocce = "", vapore = "", neve = "";
+    for (let k = 0; k < 9; k++) gocce += `<line x1="${330 + k * 22}" y1="${118 + (k % 3) * 8}" x2="${326 + k * 22}" y2="${132 + (k % 3) * 8}" class="sc-pioggia" style="animation-delay:-${(k * 0.17).toFixed(2)}s"/>`;
+    for (let k = 0; k < 6; k++) vapore += `<path d="M${80 + k * 34} 250 q 8 -12 0 -24 q -8 -12 0 -24" class="sc-vapore" style="animation-delay:-${(k * 0.45).toFixed(2)}s"/>`;
+    for (let k = 0; k < 4; k++) neve += fig("❄️", 470 + k * 18, 125 + (k % 2) * 10, 16, `class="sc-fiocco" style="animation-delay:-${k * 0.5}s"`);
+    return {
+      viewBox: "0 0 620 330",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="330" class="sc-cielo"/>
+          <path d="M300 300 L470 110 L640 300 Z" class="sc-monte"/><path d="M445 140 L470 110 L497 140 L482 134 L470 146 L458 134 Z" class="sc-cima"/>
+          <path d="M0 260 Q 60 248 120 260 T 240 260 T 340 262 L340 330 L0 330 Z" class="sc-mare"/>
+          <rect x="300" y="300" width="320" height="30" class="sc-prato"/>
+          ${fig("🌊", 160, 285, 46)}<text x="60" y="318" class="sc-etichetta piccola">MARE</text><text x="470" y="290" class="sc-etichetta piccola">MONTAGNA</text>` },
+        { da: 0, svg: `<g class="${""}sc-sole">${fig("☀️", 70, 62, 90)}</g>` },
+        { da: 1, svg: `<circle cx="70" cy="62" r="62" class="sc-alone"/>` },
+        { da: 2, a: 3, svg: vapore + `<text x="170" y="170" class="sc-parola">evaporazione</text>` },
+        { da: 3, svg: `<g class="sc-nuvola">${fig("☁️", 390, 85, 110)}${fig("☁️", 470, 75, 96)}</g>` },
+        { da: 3, a: 3, svg: `<text x="420" y="160" class="sc-parola">condensazione</text>` },
+        { da: 4, a: 5, svg: gocce + neve + `<text x="560" y="200" class="sc-parola">pioggia</text>` },
+        { da: 5, svg: `<path d="M470 150 C 440 200, 400 220, 380 250 S 330 275, 290 268" class="sc-fiume"/><path d="M470 150 C 440 200, 400 220, 380 250 S 330 275, 290 268" class="sc-fiume-scorre"/><text x="380" y="292" class="sc-parola">fiume</text>` },
+        { da: 6, svg: `<path d="M140 200 C 160 110, 260 60, 330 70" class="sc-giro"/><path d="M560 120 C 600 200, 520 300, 420 300" class="sc-giro"/><path d="M300 305 C 240 315, 190 300, 170 280" class="sc-giro"/>` },
+      ],
+      passi: [
+        "Ecco il mare, la montagna e il sole.",
+        "Il sole scalda l'acqua del mare.",
+        "L'acqua calda diventa vapore e sale in cielo. Si chiama evaporazione.",
+        "In alto fa freddo. Il vapore diventa tante goccioline: nasce una nuvola. Si chiama condensazione.",
+        "Le gocce diventano pesanti e cadono: è la pioggia. In montagna, se fa molto freddo, cade la neve.",
+        "L'acqua scorre nel fiume e torna al mare.",
+        "E il viaggio ricomincia, sempre! È il ciclo dell'acqua.",
+      ],
+    };
+  }
+
+  function scenaFotosintesi() {
+    let acqua = "", ossigeno = "", co2 = "";
+    for (let k = 0; k < 4; k++) acqua += `<circle cx="310" cy="300" r="7" class="sc-goccia-sale" style="animation-delay:-${k * 0.7}s"/>`;
+    for (let k = 0; k < 4; k++) ossigeno += `<g class="sc-bolla-esce" style="animation-delay:-${k * 0.8}s"><circle cx="400" cy="120" r="16" class="sc-o2"/><text x="400" y="126" class="sc-formula">O₂</text></g>`;
+    for (let k = 0; k < 3; k++) co2 += `<g class="sc-bolla-entra" style="animation-delay:-${k * 1}s"><circle cx="560" cy="90" r="18" class="sc-co2"/><text x="560" y="96" class="sc-formula">CO₂</text></g>`;
+    return {
+      viewBox: "0 0 620 360",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="360" class="sc-cielo"/><rect x="0" y="250" width="620" height="110" class="sc-terra"/>
+          <path d="M310 250 v-150" class="sc-fusto"/>
+          <path d="M310 250 q -20 30 -50 45 M310 250 q 5 40 -5 70 M310 250 q 25 25 55 40 M285 282 q -20 5 -35 20 M330 275 q 20 10 25 30" class="sc-radici"/>
+          <path d="M310 170 C 250 150, 220 110, 230 90 C 270 90, 300 120, 310 170 Z" class="sc-foglia"/>
+          <path d="M310 140 C 370 120, 400 80, 390 60 C 350 60, 320 90, 310 140 Z" class="sc-foglia"/>
+          <path d="M310 205 C 370 195, 410 160, 405 140 C 360 140, 325 170, 310 205 Z" class="sc-foglia"/>
+` },
+        { da: 0, a: 0, svg: `<text x="170" y="120" class="sc-parola">foglie</text><text x="250" y="230" class="sc-parola">fusto</text><text x="200" y="320" class="sc-parola">radici</text>` },
+        { da: 1, svg: acqua }, { da: 1, a: 1, svg: fig("💧", 400, 300, 40) + `<text x="470" y="306" class="sc-parola">acqua</text>` },
+        { da: 2, svg: fig("☀️", 70, 60, 90) + `<path d="M115 85 L 225 110 M110 105 L 230 160 M100 120 L 290 190" class="sc-raggio"/>` }, { da: 2, a: 2, svg: `<text x="120" y="190" class="sc-parola">luce</text>` },
+        { da: 3, svg: co2 }, { da: 3, a: 3, svg: `<text x="540" y="160" class="sc-parola">aria</text>` },
+        { da: 4, svg: fig("🍬", 255, 118, 34, 'class="sc-zucchero"') + fig("🍬", 375, 160, 34, 'class="sc-zucchero"') }, { da: 4, a: 4, svg: `<text x="440" y="215" class="sc-parola">cibo!</text>` },
+        { da: 5, svg: ossigeno + fig("🧒", 560, 300, 70) + `<text x="470" y="250" class="sc-parola">ossigeno</text>` },
+      ],
+      passi: [
+        "Ecco una pianta. Ha le radici, il fusto e le foglie.",
+        "Le radici bevono l'acqua del terreno. L'acqua sale nel fusto fino alle foglie.",
+        "Le foglie prendono la luce del sole. Sono verdi proprio per catturarla.",
+        "Le foglie prendono anche un gas dall'aria: si chiama anidride carbonica.",
+        "Con acqua, luce e aria la foglia prepara il suo cibo: uno zucchero. Si chiama fotosintesi.",
+        "E intanto la pianta regala ossigeno: l'aria che noi respiriamo! Grazie, piante!",
+      ],
+    };
+  }
+
+  // Sequenza semplice per qualsiasi argomento (la usa anche la "lezione in 5 minuti"):
+  // ogni passo mostra grandi figure (emoji) e una frase. "→" fra le figure disegna una freccia.
+  function scenaSequenza(anim) {
+    const passi = (anim.passi || []).map((p) => String(p.testo || ""));
+    const pezzi = (anim.passi || []).map((p, k) => {
+      const parti = String(p.figure || "").trim().split(/\s+/).filter(Boolean).slice(0, 5);
+      const passo = 600 / Math.max(parti.length, 1);
+      const svg = parti.map((t, i) => {
+        const x = passo * i + passo / 2;
+        return t === "→" ? `<path d="M${x - 28} 150 h50" class="sc-freccia sequenza"/>`
+          : `<g class="sc-entra" style="animation-delay:${(i * 0.35).toFixed(2)}s">${fig(t, x, 150, Math.min(150, passo * 0.8))}</g>`;
+      }).join("");
+      return { da: k, a: k, svg };
+    });
+    return { viewBox: "0 0 600 300", pezzi, passi };
+  }
+
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi };
+  function disegnaScena(palco, sc, n) {
+    let svg = palco.querySelector("svg.scena");
+    if (!svg) {
+      palco.innerHTML = `<svg viewBox="${sc.viewBox}" class="scena" role="img"><defs>
+        <marker id="punta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>
+        ${sc.pezzi.map((p, i) => `<g data-i="${i}">${p.svg}</g>`).join("")}</svg>`;
+      svg = palco.querySelector("svg.scena");
+    }
+    sc.pezzi.forEach((p, i) => {
+      const g = svg.querySelector(`g[data-i="${i}"]`);
+      const visibile = n >= p.da && (p.a === undefined || n <= p.a);
+      g.style.display = visibile ? "" : "none";
+      g.classList.toggle("sc-nuovo", n === p.da);
+    });
+  }
+
   /* ---------- Lettore: Guarda / Passo / Da capo, con voce facoltativa ---------- */
   function crea(contenitore, anim) {
     const a = +anim.a, b = +anim.b;
@@ -296,6 +442,11 @@
       const s = passiGelosia(a, b);
       passi = s.passi;
       disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
+    } else if (tipo === "scena" || tipo === "sequenza") {
+      const sc = tipo === "sequenza" ? scenaSequenza(anim) : SCENE[anim.scena]?.();
+      if (!sc || !sc.passi.length) return;
+      passi = sc.passi.map((testo, i) => ({ testo, finale: i === sc.passi.length - 1 }));
+      disegna = (palco, n) => disegnaScena(palco, sc, n);
     } else return;
 
     contenitore.innerHTML = `
@@ -450,5 +601,5 @@
     });
   }
 
-  window.Animazioni = { crea, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

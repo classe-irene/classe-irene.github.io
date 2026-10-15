@@ -426,3 +426,56 @@ body.lim .scheda.con-animazione.corrente .galleria { display: none; }
 .esci-nav { border: none; cursor: pointer; font: 800 1rem "Nunito", sans-serif; padding: 8px 16px; border-radius: 999px; background: var(--corallo); color: #fff; }
 .esci-nav:hover { filter: brightness(1.08); }
 .esci-btn { background: var(--corallo); }
+
+/* ---------- Scene di Scienze (video guide disegnate) ---------- */
+.scena { width: 100%; max-width: 640px; height: auto; border-radius: 14px; }
+.scena .sc-nuovo { animation: compari .6s; }
+.sc-scatola { fill: #fff; stroke: var(--testo); stroke-width: 4; }
+.sc-acqua { fill: #CFE6FF; }
+.sc-etichetta { font: 800 22px "Baloo 2", sans-serif; fill: var(--testo); text-anchor: middle; }
+.sc-etichetta.piccola { font-size: 16px; fill: var(--testo-tenue); }
+.sc-parola { font: 800 22px "Baloo 2", sans-serif; fill: var(--sci); text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 6px; }
+.pallina { fill: var(--sci); stroke: #fff; stroke-width: 2; }
+.pallina.vibra { animation: vibra .18s infinite alternate; }
+.pallina.scivola { animation: scivola 3.2s ease-in-out infinite alternate; }
+.pallina.vola { animation: 3.4s ease-in-out infinite alternate; }
+.pallina.vola.v0 { animation-name: vola0; } .pallina.vola.v1 { animation-name: vola1; }
+.pallina.vola.v2 { animation-name: vola2; } .pallina.vola.v3 { animation-name: vola3; }
+@keyframes vibra { from { transform: translate(-1.5px, 1px); } to { transform: translate(1.5px, -1px); } }
+@keyframes scivola { 0% { transform: translate(-10px, 0); } 50% { transform: translate(6px, -6px); } 100% { transform: translate(12px, 2px); } }
+@keyframes vola0 { 0% { transform: translate(0, 0); } 33% { transform: translate(-38px, 38px); } 66% { transform: translate(36px, 30px); } 100% { transform: translate(-20px, -38px); } }
+@keyframes vola1 { 0% { transform: translate(0, 0); } 33% { transform: translate(38px, -36px); } 66% { transform: translate(-38px, 26px); } 100% { transform: translate(20px, 38px); } }
+@keyframes vola2 { 0% { transform: translate(0, 0); } 50% { transform: translate(-36px, -38px); } 100% { transform: translate(38px, 18px); } }
+@keyframes vola3 { 0% { transform: translate(0, 0); } 50% { transform: translate(36px, 38px); } 100% { transform: translate(-38px, -10px); } }
+.sc-freccia { stroke-width: 6; fill: none; marker-end: url(#punta); stroke-linecap: round; }
+.sc-freccia.caldo { stroke: var(--corallo); } .sc-freccia.freddo { stroke: var(--mat); }
+.sc-freccia.sequenza { stroke: var(--testo-tenue); stroke-width: 8; }
+.sc-cielo { fill: #EAF6FF; }
+.sc-monte { fill: #9C8B7A; } .sc-cima { fill: #fff; }
+.sc-mare { fill: #4FA3E8; } .sc-prato { fill: #8BCB6A; } .sc-terra { fill: #B98B5E; }
+.sc-alone { fill: #FFC93C; opacity: .35; animation: pulsa 1.6s infinite; transform-box: fill-box; transform-origin: center; }
+.sc-vapore { fill: none; stroke: #9DB7D0; stroke-width: 5; stroke-linecap: round; animation: sale 2.6s linear infinite; }
+@keyframes sale { from { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } to { transform: translateY(-110px); opacity: 0; } }
+.sc-nuvola { animation: compari 1s; }
+.sc-pioggia { stroke: #2F7FD1; stroke-width: 4; stroke-linecap: round; animation: cade 0.9s linear infinite; }
+@keyframes cade { from { transform: translateY(0); opacity: 1; } to { transform: translateY(120px); opacity: 0; } }
+.sc-fiocco { animation: cade 2.4s linear infinite; }
+.sc-fiume { fill: none; stroke: #4FA3E8; stroke-width: 14; stroke-linecap: round; }
+.sc-fiume-scorre { fill: none; stroke: #CFE6FF; stroke-width: 4; stroke-dasharray: 10 18; animation: scorre 1s linear infinite; }
+@keyframes scorre { to { stroke-dashoffset: -28; } }
+.sc-giro { fill: none; stroke: var(--sci); stroke-width: 5; stroke-dasharray: 12 10; marker-end: url(#punta); animation: scorre 1.2s linear infinite; }
+.sc-fusto { stroke: #4E8A2E; stroke-width: 12; stroke-linecap: round; }
+.sc-radici { stroke: #7A5530; stroke-width: 6; fill: none; stroke-linecap: round; }
+.sc-foglia { fill: #4CAF50; stroke: #2E7D32; stroke-width: 3; }
+.sc-goccia-sale { fill: #2F7FD1; animation: risale 2.8s linear infinite; }
+@keyframes risale { from { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } to { transform: translateY(-170px); opacity: 0; } }
+.sc-raggio { stroke: #FFB300; stroke-width: 5; stroke-dasharray: 14 10; animation: scorre .8s linear infinite reverse; }
+.sc-co2 { fill: #C9CED6; } .sc-o2 { fill: #BDEBFF; }
+.sc-formula { font: 800 14px "Nunito", sans-serif; text-anchor: middle; fill: var(--testo); }
+.sc-bolla-entra { animation: entra 3s ease-in infinite; }
+@keyframes entra { from { transform: translate(0, 0); opacity: 0; } 15% { opacity: 1; } to { transform: translate(-200px, 60px); opacity: 0; } }
+.sc-bolla-esce { animation: esce 3.2s ease-out infinite; }
+@keyframes esce { from { transform: translate(0, 0); opacity: 0; } 15% { opacity: 1; } to { transform: translate(140px, 160px); opacity: 0; } }
+.sc-zucchero { animation: pulsa 1.4s infinite; transform-box: fill-box; transform-origin: center; }
+.sc-entra { animation: rimbalza .6s both; transform-box: fill-box; transform-origin: center; }
+body.lim .scena { height: 40vh; width: auto; max-width: 100%; }

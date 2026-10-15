@@ -17,8 +17,14 @@
     if (!Array.isArray(l.esercizi) || !l.esercizi.length) errori.push("Mancano gli esercizi.");
     (l.sezioni || []).forEach((s, i) => {
       const an = s.animazione;
-      if (an && !(["moltiplicazione", "scomposizione", "gelosia"].includes(an.tipo) && Number.isInteger(an.a) && Number.isInteger(an.b) && an.a > 0 && an.b > 0 && an.a <= 999 && an.b <= 99))
-        errori.push(`Sezione ${i + 1}: animazione non valida (tipo "moltiplicazione", "scomposizione" o "gelosia", a fino a 999, b fino a 99).`);
+      if (!an) return;
+      if (an.tipo === "scena") {
+        if (!(window.Animazioni?.SCENE || []).includes(an.scena)) errori.push(`Sezione ${i + 1}: la scena "${an.scena}" non esiste (scene pronte: ${(window.Animazioni?.SCENE || []).join(", ")}).`);
+      } else if (an.tipo === "sequenza") {
+        if (!Array.isArray(an.passi) || an.passi.length < 2 || an.passi.length > 10 || an.passi.some((p) => !p || typeof p.testo !== "string" || !p.testo.trim()))
+          errori.push(`Sezione ${i + 1}: la sequenza ha bisogno di 2-10 "passi", ognuno con "figure" e "testo".`);
+      } else if (!(["moltiplicazione", "scomposizione", "gelosia"].includes(an.tipo) && Number.isInteger(an.a) && Number.isInteger(an.b) && an.a > 0 && an.b > 0 && an.a <= 999 && an.b <= 99))
+        errori.push(`Sezione ${i + 1}: animazione non valida (tipo "moltiplicazione", "scomposizione" o "gelosia", a fino a 999, b fino a 99; oppure "scena" o "sequenza").`);
     });
     (l.esercizi || []).forEach((e, i) => {
       const n = `Esercizio ${i + 1}`;
