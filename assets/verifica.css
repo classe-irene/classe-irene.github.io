@@ -1,0 +1,90 @@
+/* ---------- Verifiche: foglio A4 da stampare ---------- */
+.v-comandi { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; margin: 18px 0; }
+.v-gruppo { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.v-comandi .nota { width: 100%; text-align: center; margin: 0; }
+
+.foglio {
+  --vf: 15pt;
+  background: #fff; color: #222; max-width: 210mm; margin: 0 auto 40px; padding: 14mm 14mm 12mm;
+  box-shadow: var(--ombra); border-radius: 6px; font-family: "Nunito", sans-serif; font-size: var(--vf); line-height: 1.45;
+}
+body.grande .foglio, body.facilitata .foglio { --vf: 18pt; line-height: 1.6; }
+body.maiuscolo .foglio { text-transform: uppercase; }
+body.modifica .foglio { outline: 3px dashed var(--viola); outline-offset: 4px; }
+.foglio h1 { font-family: "Baloo 2", sans-serif; font-size: 1.9em; margin: 10px 0 0; display: flex; align-items: center; gap: 12px; line-height: 1.1; }
+.foglio h3 { font-family: "Baloo 2", sans-serif; font-size: 1.15em; margin: 0; line-height: 1.25; }
+.v-campi { display: flex; flex-wrap: wrap; gap: 6px 22px; justify-content: space-between; font-weight: 700; }
+.v-sotto { margin: 2px 0 0; color: #666; font-weight: 700; }
+.v-facile { color: var(--sci); }
+.v-obiettivi { font-size: .78em; color: #555; margin: 6px 0 0; }
+.v-consegna { margin: 8px 0 0; font-weight: 700; }
+.v-intestazione { border-bottom: 3px solid #222; padding-bottom: 10px; margin-bottom: 8px; }
+.figura.v-img-titolo { width: 1.6em; height: 1.6em; }
+.figura.v-img { width: 1.9em; height: 1.9em; flex: none; }
+.figura.mini { width: 1.5em; height: 1.5em; }
+
+.v-domanda { padding: 12px 0 14px; border-bottom: 2px dashed #cfcfcf; break-inside: avoid; page-break-inside: avoid; }
+.v-testa { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.v-num { flex: none; width: 1.7em; height: 1.7em; border-radius: 50%; background: #222; color: #fff; display: grid; place-items: center; font-weight: 800; font-size: .9em; }
+.consegna-p { margin: 0 0 6px; color: #555; font-size: .85em; font-style: italic; }
+.foglio .con-figura { display: inline-flex; align-items: center; gap: 8px; flex-direction: row; }
+.foglio .figura.piccola { width: 1.7em; height: 1.7em; }
+
+.v-opzioni { display: flex; flex-wrap: wrap; gap: 10px 26px; }
+.v-opzione { display: flex; align-items: center; gap: 10px; }
+.cerchio { width: 1.1em; height: 1.1em; border: 2.5px solid #222; border-radius: 50%; flex: none; }
+.casella { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; padding: 0 4px; border: 2.5px solid #222; border-radius: 6px; vertical-align: middle; flex: none; }
+.v-vf { border-collapse: collapse; width: 100%; }
+.v-vf td { padding: 5px 6px; border-bottom: 1px solid #eee; }
+.v-vf td:nth-child(n+2) { width: 3.6em; white-space: nowrap; font-weight: 800; }
+.v-frase { margin: 0; line-height: 2.2; }
+.buco { display: inline-block; min-width: 6em; border-bottom: 2.5px solid #222; text-align: center; line-height: 1.3; }
+.v-banca { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 8px 12px; border: 2px solid #bbb; border-radius: 10px; margin-bottom: 10px; }
+.v-tessera { display: inline-flex; }
+.v-collega { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22%; }
+.v-voce { display: flex; align-items: center; gap: 10px; min-height: 2.4em; }
+.v-collega > div:first-child .v-voce { justify-content: space-between; }
+.punto { font-size: .9em; }
+.lettera { font-weight: 800; color: #888; font-size: .8em; }
+.v-ordina { display: flex; flex-wrap: wrap; gap: 6px 28px; }
+.v-calcoli { display: flex; flex-wrap: wrap; gap: 14px 40px; }
+.v-calcolo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15em; }
+.v-calcoli.colonna { gap: 18px; }
+.v-colonna { text-align: center; }
+.v-op { font-weight: 800; font-size: 1.1em; margin-bottom: 4px; }
+.quadretti { width: 6.5cm; height: 4.2cm; border: 1px solid #9ab; background-image: linear-gradient(#b9c9dd 1px, transparent 1px), linear-gradient(90deg, #b9c9dd 1px, transparent 1px); background-size: 0.6cm 0.6cm; }
+.v-conta { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.v-conta .gruppo-figure { display: flex; flex-wrap: wrap; gap: 6px; max-width: 70%; }
+.riga { height: 1.9em; border-bottom: 1.5px solid #999; }
+.v-disegno { height: 6cm; border: 2.5px solid #222; border-radius: 12px; }
+.v-tabella { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.v-tabella th, .v-tabella td { border: 2.5px solid #222; padding: 6px; vertical-align: top; }
+.v-tabella td { height: 4.5em; }
+.v-fine { display: grid; gap: 10px; margin-top: 14px; font-size: .9em; break-inside: avoid; }
+.v-auto, .v-livello { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.v-livello span { display: inline-flex; align-items: center; gap: 6px; }
+.faccine { display: inline-flex; gap: 12px; }
+
+/* Soluzioni: solo nella copia dell'insegnante */
+.sol { display: none; color: #D02B2B; font-weight: 800; }
+body.soluzioni .sol { display: inline; }
+body.soluzioni .sol.blocco { display: block; margin: 4px 0 0; }
+body.soluzioni .cerchio.giusto { background: #D02B2B; border-color: #D02B2B; }
+body.soluzioni .v-ris { display: block; }
+
+@media (max-width: 700px) {
+  .foglio { padding: 16px; --vf: 12pt; }
+  .v-collega { gap: 0 8%; }
+  .quadretti { width: 100%; }
+}
+@page { size: A4; margin: 12mm; }
+@media print {
+  body { background: #fff !important; }
+  .testata, .piede, .non-stampare, body::before, body::after { display: none !important; }
+  .contenitore { max-width: none; padding: 0; margin: 0; }
+  .foglio { box-shadow: none; padding: 0; margin: 0; max-width: none; border-radius: 0; outline: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+.foglio .con-figura { max-width: 100%; }
+.foglio .con-figura > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 700px) { .v-comandi .btn { padding: 8px 12px; font-size: .9rem; } }

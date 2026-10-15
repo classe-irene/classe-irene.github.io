@@ -36,6 +36,7 @@
       <span class="etichetta">${m.icona} ${m.nome}</span>
       <h1>Classe ${c}ª</h1>
       <p>Riferimento: ${RIFERIMENTO(c)}</p>
+      <p style="margin-top:12px"><a class="btn piccolo bianco" href="area-insegnante.html?scheda=verifica&materia=${materia}&classe=${c}">🔒 📝 Crea una verifica</a></p>
     </div>
     ${mie.length ? `<h2>⭐ Le mie lezioni</h2><div class="argomenti">${mie.map((l) => `
       <div class="argomento pronta">${Figura.img(l.emoji || "✨", "figura media")}<h3>${escapeHTML(l.titolo)}</h3><p>${escapeHTML(l.introduzione || "")}</p>

@@ -35,3 +35,10 @@ Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un 
 - In una sezione: `"animazione": { "tipo": "moltiplicazione", "a": 23, "b": 14 }` oppure `"tipo": "scomposizione"`. Mostra il calcolo passo passo, con una frase (e la voce) per ogni passo: ▶ Guarda, ⏭ Un passo, ↺ Da capo.
 - Esercizio `{ "tipo": "colonna", "a": 32, "b": 24 }`: moltiplicazione in colonna guidata, il bambino scrive le cifre con un tastierino; i riporti compaiono da soli.
 - Codice: `assets/animazioni.js`.
+
+## Verifiche da stampare
+
+- Pagina `verifica.html?file=verifiche/nome.json` (o `?locale=id` per quelle create nell'area insegnante).
+- Il formato è in `assets/verifica.js` (tipi: scelta, vero_falso, completa, collega, ordina, calcolo, conta, classifica, risposta, disegna).
+- `domande_facilitate` è la versione per BES/DSA. Il pulsante "Soluzioni" mostra le risposte in rosso (copia dell'insegnante).
+- Si creano nell'area insegnante, scheda "📝 Crea una verifica".

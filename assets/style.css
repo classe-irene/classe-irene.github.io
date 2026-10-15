@@ -479,3 +479,10 @@ body.lim .scheda.con-animazione.corrente .galleria { display: none; }
 .sc-zucchero { animation: pulsa 1.4s infinite; transform-box: fill-box; transform-origin: center; }
 .sc-entra { animation: rimbalza .6s both; transform-box: fill-box; transform-origin: center; }
 body.lim .scena { height: 40vh; width: auto; max-width: 100%; }
+
+/* ---------- Area insegnante: schede e verifiche ---------- */
+.schede-area { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 14px; }
+.elenco-verifiche { display: grid; gap: 8px; }
+.voce-verifica { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 2px solid var(--bordo); border-radius: 14px; background: #fff; }
+.voce-verifica a { flex: 1; color: var(--testo); text-decoration: none; }
+.voce-verifica a:hover b { text-decoration: underline; }

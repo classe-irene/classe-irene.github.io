@@ -1,0 +1,240 @@
+{
+  "titolo": "I cinque regni dei viventi",
+  "emoji": "🌍",
+  "materia": "scienze",
+  "classe": 4,
+  "obiettivi": [
+    "riconoscere i cinque regni",
+    "descrivere le caratteristiche principali di piante, animali e funghi",
+    "conoscere la fotosintesi"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Scrivi ogni essere vivente nella colonna giusta.",
+      "categorie": [
+        "🍄 Funghi",
+        "🌳 Piante",
+        "🦁 Animali"
+      ],
+      "elementi": [
+        {
+          "testo": "🍄 porcino",
+          "categoria": "🍄 Funghi"
+        },
+        {
+          "testo": "🍞 muffa",
+          "categoria": "🍄 Funghi"
+        },
+        {
+          "testo": "🌻 girasole",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🌵 cactus",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🐌 lumaca",
+          "categoria": "🦁 Animali"
+        },
+        {
+          "testo": "🐝 ape",
+          "categoria": "🦁 Animali"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔬",
+      "affermazioni": [
+        {
+          "testo": "I batteri si vedono solo con il microscopio.",
+          "vero": true
+        },
+        {
+          "testo": "I funghi sono piante.",
+          "vero": false
+        },
+        {
+          "testo": "Le piante producono ossigeno.",
+          "vero": true
+        },
+        {
+          "testo": "Tutti gli animali hanno le zampe.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "testo": "Di che cosa ha bisogno una pianta per fare il suo cibo?",
+      "opzioni": [
+        "💧☀️ acqua, luce e aria",
+        "🍔 cibo dagli animali",
+        "🍄 funghi"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Le piante fanno il loro cibo con la ___ . Questo lavoro si chiama ___ . Le piante regalano ___ .",
+      "soluzioni": [
+        "luce",
+        "fotosintesi",
+        "ossigeno"
+      ],
+      "parole": [
+        "luce",
+        "fotosintesi",
+        "ossigeno",
+        "acqua"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni regno al suo esempio.",
+      "coppie": [
+        [
+          "🦠 Monere",
+          "batteri dello yogurt"
+        ],
+        [
+          "💧 Protisti",
+          "ameba"
+        ],
+        [
+          "🍄 Funghi",
+          "lievito"
+        ],
+        [
+          "🌳 Piante",
+          "quercia"
+        ],
+        [
+          "🦁 Animali",
+          "delfino"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌿",
+      "testo": "Come fa la pianta il suo cibo? Metti in ordine.",
+      "elementi": [
+        "💧 le radici assorbono l'acqua",
+        "☀️ le foglie prendono la luce",
+        "🍬 la foglia prepara lo zucchero",
+        "🫧 la pianta libera ossigeno"
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché i funghi non sono piante? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché non sono verdi e non fanno il cibo con la luce del sole."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una pianta e scrivi i nomi: radici, fusto, foglie."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Pianta o animale? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🌳 Piante",
+        "🦁 Animali"
+      ],
+      "elementi": [
+        {
+          "testo": "🌻 girasole",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🌳 albero",
+          "categoria": "🌳 Piante"
+        },
+        {
+          "testo": "🐝 ape",
+          "categoria": "🦁 Animali"
+        },
+        {
+          "testo": "🐟 pesce",
+          "categoria": "🦁 Animali"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍄",
+      "affermazioni": [
+        {
+          "testo": "I funghi sono piante.",
+          "vero": false
+        },
+        {
+          "testo": "Le piante fanno l'ossigeno.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "testo": "Che cosa serve alla pianta?",
+      "opzioni": [
+        "☀️ la luce",
+        "🍔 un panino"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "La pianta fa il cibo con la ___ del sole.",
+      "soluzioni": [
+        "luce"
+      ],
+      "parole": [
+        "luce",
+        "pioggia"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "🍄 Funghi",
+          "muffa"
+        ],
+        [
+          "🌳 Piante",
+          "girasole"
+        ],
+        [
+          "🦁 Animali",
+          "gatto"
+        ]
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una pianta con le radici."
+    }
+  ]
+}
