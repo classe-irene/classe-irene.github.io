@@ -1,8 +1,8 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta.
+// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna"];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia"];
   const BRAVO = ["Bravissimo! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -17,8 +17,8 @@
     if (!Array.isArray(l.esercizi) || !l.esercizi.length) errori.push("Mancano gli esercizi.");
     (l.sezioni || []).forEach((s, i) => {
       const an = s.animazione;
-      if (an && !(["moltiplicazione", "scomposizione"].includes(an.tipo) && Number.isInteger(an.a) && Number.isInteger(an.b) && an.a > 0 && an.b > 0 && an.a <= 999 && an.b <= 99))
-        errori.push(`Sezione ${i + 1}: animazione non valida (tipo "moltiplicazione" o "scomposizione", a fino a 999, b fino a 99).`);
+      if (an && !(["moltiplicazione", "scomposizione", "gelosia"].includes(an.tipo) && Number.isInteger(an.a) && Number.isInteger(an.b) && an.a > 0 && an.b > 0 && an.a <= 999 && an.b <= 99))
+        errori.push(`Sezione ${i + 1}: animazione non valida (tipo "moltiplicazione", "scomposizione" o "gelosia", a fino a 999, b fino a 99).`);
     });
     (l.esercizi || []).forEach((e, i) => {
       const n = `Esercizio ${i + 1}`;
@@ -30,7 +30,7 @@
       if (e.tipo === "ordina" && !(Array.isArray(e.elementi) && e.elementi.length >= 2)) errori.push(`${n}: servono almeno 2 elementi da ordinare.`);
       if (e.tipo === "completa" && !/\[[^\]]+\]/.test(e.testo || "")) errori.push(`${n}: il testo deve avere le parole da completare tra [parentesi quadre].`);
       if (e.tipo === "conta" && !(e.oggetto && Number.isInteger(e.numero))) errori.push(`${n}: servono "oggetto" e "numero".`);
-      if (e.tipo === "colonna" && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
+      if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
     });
     return errori;
@@ -54,6 +54,7 @@
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
         <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
+        <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
         <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
       </div>
@@ -82,6 +83,10 @@
       if (a === "leggi-tutto") leggi(testoIntero);
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "lim") avviaLIM(radice);
+      if (a === "velocita") {
+        const nomi = Object.keys(Voce.VELOCITA), dopo = nomi[(nomi.indexOf(Voce.velocita()) + 1) % nomi.length];
+        Voce.impostaVelocita(dopo); b.textContent = `🐢 Voce: ${dopo}`; Voce.parla("Leggo così.");
+      }
       if (a === "maiuscolo") document.body.classList.toggle("maiuscolo");
       if (a === "suoni") { Suono.attivo = !Suono.attivo; b.textContent = `🔔 Suoni: ${Suono.attivo ? "sì" : "no"}`; }
     });
@@ -287,6 +292,8 @@
     },
   };
 
+  ESERCIZI.gelosia = (e, c, esito) =>
+    Animazioni.esercizioGelosia(e, c, esito, domanda(e.domanda || `Calcola con la griglia: ${e.a} × ${e.b}`, e));
   ESERCIZI.colonna = (e, c, esito) =>
     Animazioni.esercizioColonna(e, c, esito, domanda(e.domanda || `Calcola in colonna: ${e.a} × ${e.b}`, e));
 

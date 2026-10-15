@@ -167,6 +167,113 @@
     palco.innerHTML = svg;
   }
 
+  /* ---------- Moltiplicazione "per gelosia" (a griglia) ----------
+     Strategia compensativa adatta ai DSA: niente riporti a mente, ogni casella è
+     un prodotto della tavola pitagorica, alla fine si somma lungo le diagonali. */
+  function calcolaGelosia(a, b) {
+    const A = cifre(a), B = cifre(b);           // A in alto (colonne), B a destra (righe)
+    const n = A.length, m = B.length;
+    const caselle = [];
+    for (let r = 0; r < m; r++) for (let c = 0; c < n; c++) {
+      const p = A[c] * B[r];
+      caselle.push({ r, c, p, d: Math.floor(p / 10), u: p % 10, diag: (n - 1 - c) + (m - 1 - r) });
+    }
+    const diagonali = [];
+    let riporto = 0;
+    for (let k = 0; k < n + m; k++) {
+      const pezzi = [];
+      for (const x of caselle) { if (x.diag === k) pezzi.push({ ...x, parte: "u", v: x.u }); if (x.diag + 1 === k) pezzi.push({ ...x, parte: "d", v: x.d }); }
+      const somma = pezzi.reduce((t, x) => t + x.v, 0) + riporto;
+      diagonali.push({ k, pezzi, riportoPrima: riporto, somma, cifra: somma % 10, riporto: Math.floor(somma / 10) });
+      riporto = Math.floor(somma / 10);
+    }
+    return { A, B, n, m, caselle, diagonali };
+  }
+  function passiGelosia(a, b) {
+    const g = calcolaGelosia(a, b);
+    const passi = [{ testo: `Disegno una griglia. ${a} va in alto, ${b} a destra. Ogni casella ha una diagonale.`, caselle: 0, diag: 0 }];
+    passi.push({ testo: "In ogni casella scrivo un risultato della tavola pitagorica: le decine sopra la diagonale, le unità sotto.", caselle: 0, diag: 0 });
+    g.caselle.forEach((x, i) => passi.push({ testo: `${g.B[x.r]} × ${g.A[x.c]} = ${x.p}. Scrivo ${x.d} sopra e ${x.u} sotto.`, caselle: i + 1, diag: 0, attiva: i }));
+    passi.push({ testo: "Ora sommo lungo le diagonali, partendo dall'angolo in basso a destra.", caselle: g.caselle.length, diag: 0 });
+    g.diagonali.forEach((dg, i) => {
+      const numeri = dg.pezzi.map((x) => x.v);
+      if (dg.riportoPrima) numeri.push(dg.riportoPrima);
+      let testo = numeri.length > 1 ? `${numeri.join(" + ")} = ${dg.somma}.` : `Qui c'è solo ${dg.somma}.`;
+      if (dg.riportoPrima) testo = testo.replace(/ \+ (\d+) =/, " + $1 di riporto =");
+      testo += dg.riporto ? ` Scrivo ${dg.cifra} e porto ${dg.riporto} nella diagonale dopo.` : ` Scrivo ${dg.cifra}.`;
+      passi.push({ testo, caselle: g.caselle.length, diag: i + 1, diagAttiva: i });
+    });
+    const letto = g.diagonali.map((x) => x.cifra).reverse().join("");
+    passi.push({ testo: `Leggo il risultato da sinistra: ${letto.replace(/^0+(?=\d)/, "")}. Quindi ${a} × ${b} = ${a * b}! 🎉`, caselle: g.caselle.length, diag: g.diagonali.length, finale: true });
+    return { g, passi };
+  }
+  function svgGelosia(g, stato) {
+    // stato: { caselle: quante riempite, diag: quante diagonali sommate, attiva, diagAttiva, attese: Set di chiavi da evidenziare }
+    const S = 92, x0 = 70, y0 = 56, W = x0 + g.n * S + 70, H = y0 + g.m * S + 60;
+    const colori = ["var(--mat)", "var(--sci)", "var(--corallo)", "var(--viola)", "#E0A100", "#0E9AA7"];
+    let svg = `<svg viewBox="0 0 ${W} ${H}" class="gelosia" role="img">`;
+    // fasce colorate delle diagonali già sommate
+    for (let k = 0; k < stato.diag; k++) {
+      const col = colori[k % colori.length];
+      for (const x of g.caselle) {
+        const X = x0 + x.c * S, Y = y0 + x.r * S;
+        if (x.diag === k) svg += `<polygon points="${X + S},${Y} ${X + S},${Y + S} ${X},${Y + S}" fill="${col}" fill-opacity="${stato.diagAttiva === k ? 0.35 : 0.14}"/>`;
+        if (x.diag + 1 === k) svg += `<polygon points="${X},${Y} ${X + S},${Y} ${X},${Y + S}" fill="${col}" fill-opacity="${stato.diagAttiva === k ? 0.35 : 0.14}"/>`;
+      }
+    }
+    g.caselle.forEach((x, i) => {
+      const X = x0 + x.c * S, Y = y0 + x.r * S;
+      const att = stato.attiva === i;
+      svg += `<rect x="${X}" y="${Y}" width="${S}" height="${S}" fill="${att ? "var(--giallo-chiaro)" : "none"}" stroke="var(--testo)" stroke-width="3"/>`;
+      svg += `<line x1="${X + S}" y1="${Y}" x2="${X}" y2="${Y + S}" stroke="var(--testo-tenue)" stroke-width="2"/>`;
+      if (i < stato.caselle) {
+        svg += `<text x="${X + S * 0.3}" y="${Y + S * 0.42}" class="g-cifra${att ? " nuova-svg" : ""}">${x.d}</text>`;
+        svg += `<text x="${X + S * 0.7}" y="${Y + S * 0.86}" class="g-cifra${att ? " nuova-svg" : ""}">${x.u}</text>`;
+      }
+      if (stato.chiedi?.has(`c${i}d`)) svg += `<rect x="${X + 8}" y="${Y + 8}" width="${S * 0.42}" height="${S * 0.42}" rx="8" class="g-chiedi"/>`;
+      if (stato.chiedi?.has(`c${i}u`)) svg += `<rect x="${X + S * 0.5}" y="${Y + S * 0.5}" width="${S * 0.42}" height="${S * 0.42}" rx="8" class="g-chiedi"/>`;
+    });
+    g.A.forEach((d, c) => { svg += `<text x="${x0 + c * S + S / 2}" y="${y0 - 14}" class="g-dato">${d}</text>`; });
+    g.B.forEach((d, r) => { svg += `<text x="${x0 + g.n * S + 30}" y="${y0 + r * S + S / 2 + 12}" class="g-dato">${d}</text>`; });
+    svg += `<text x="${x0 + g.n * S + 30}" y="${y0 - 14}" class="g-dato segno">×</text>`;
+    // risultati delle diagonali: sotto la griglia e a sinistra
+    g.diagonali.forEach((dg, k) => {
+      let X, Y;
+      if (k < g.n) { X = x0 + (g.n - 1 - k) * S + S / 2; Y = y0 + g.m * S + 42; }
+      else { const r = g.n + g.m - 1 - k; X = x0 - 30; Y = y0 + r * S + S / 2 + 12; }
+      if (k < stato.diag) svg += `<text x="${X}" y="${Y}" class="g-risultato${stato.diagAttiva === k ? " nuova-svg" : ""}" fill="${colori[k % colori.length]}">${dg.cifra}</text>`;
+      if (stato.chiedi?.has(`r${k}`)) svg += `<rect x="${X - 22}" y="${Y - 34}" width="44" height="44" rx="10" class="g-chiedi"/>`;
+    });
+    return svg + "</svg>";
+  }
+
+  /* ---------- Tavola pitagorica (strumento compensativo) ---------- */
+  function apriTavola() {
+    let d = document.getElementById("tavola-pitagorica");
+    if (!d) {
+      d = document.createElement("dialog");
+      d.id = "tavola-pitagorica";
+      let t = '<table><tr><th>×</th>' + [1,2,3,4,5,6,7,8,9,10].map((x) => `<th>${x}</th>`).join("") + "</tr>";
+      for (let r = 1; r <= 10; r++) t += `<tr><th>${r}</th>` + [1,2,3,4,5,6,7,8,9,10].map((c) => `<td data-r="${r}" data-c="${c}">${r * c}</td>`).join("") + "</tr>";
+      t += "</table>";
+      d.innerHTML = `<div class="tavola-testa"><h2>📋 Tavola pitagorica</h2><button class="btn bianco piccolo" data-chiudi>✕ Chiudi</button></div>
+        <p class="tavola-frase">Tocca un numero.</p>${t}`;
+      d.addEventListener("click", (ev) => {
+        if (ev.target.closest("[data-chiudi]") || ev.target === d) return d.close();
+        const td = ev.target.closest("td");
+        if (!td) return;
+        const r = +td.dataset.r, c = +td.dataset.c;
+        d.querySelectorAll("td").forEach((x) => x.classList.toggle("riga", (+x.dataset.r === r && +x.dataset.c <= c) || (+x.dataset.c === c && +x.dataset.r <= r)));
+        d.querySelectorAll(".scelto").forEach((x) => x.classList.remove("scelto")); td.classList.add("scelto");
+        const frase = `${r} × ${c} = ${r * c}`;
+        d.querySelector(".tavola-frase").textContent = frase;
+        Voce.parla(frase.replace("×", "per"));
+      });
+      document.body.append(d);
+    }
+    d.showModal ? d.showModal() : d.setAttribute("open", "");
+  }
+
   /* ---------- Lettore: Guarda / Passo / Da capo, con voce facoltativa ---------- */
   function crea(contenitore, anim) {
     const a = +anim.a, b = +anim.b;
@@ -185,14 +292,21 @@
       const s = passiScomposizione(a, b);
       passi = s.passi;
       disegna = (palco, n) => disegnaScomposizione(palco, a, b, s, n);
+    } else if (tipo === "gelosia") {
+      const s = passiGelosia(a, b);
+      passi = s.passi;
+      disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
     } else return;
 
     contenitore.innerHTML = `
-      <div class="animazione">
+      <div class="animazione${anim.video ? " video" : ""}">
+        ${anim.video ? `<div class="video-titolo">🎬 Video guida${anim.titolo ? ": " + escapeHTML(anim.titolo) : ""}</div>` : ""}
         <div class="palco"></div>
+        <div class="avanzamento"><span></span></div>
         <p class="didascalia" aria-live="polite"></p>
         <div class="comandi">
           <button class="btn" data-anim="play">▶ Guarda</button>
+          ${tipo === "gelosia" || tipo === "moltiplicazione" ? '<button class="btn bianco" data-anim="tavola">📋 Tavola pitagorica</button>' : ""}
           <button class="btn bianco" data-anim="passo">⏭ Un passo</button>
           <button class="btn bianco" data-anim="capo">↺ Da capo</button>
           <label class="con-voce"><input type="checkbox" data-anim="voce" checked> 🔊 Con la voce</label>
@@ -206,10 +320,12 @@
       n = Math.max(0, Math.min(passi.length - 1, k));
       disegna(palco, n);
       didascalia.textContent = passi[n].testo;
+      contenitore.querySelector(".avanzamento span").style.width = `${(n / (passi.length - 1)) * 100}%`;
       didascalia.classList.remove("nuova"); void didascalia.offsetWidth; didascalia.classList.add("nuova");
       if (passi[n].finale) Suono.giusto();
-      if (parla && voce.checked) Voce.parla(passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 700); });
-      else if (inCorso) timer = setTimeout(avanti, 2600);
+      // Pause lunghe: i bambini hanno il tempo di guardare prima del passo successivo.
+      if (parla && voce.checked) Voce.parla(passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); });
+      else if (inCorso) timer = setTimeout(avanti, 4000);
     }
     function avanti() {
       if (!inCorso) return;
@@ -226,6 +342,7 @@
         vai(n >= passi.length - 1 ? 0 : n, true);
       }
       if (az === "passo") { ferma(); vai(n + 1, true); }
+      if (az === "tavola") apriTavola();
       if (az === "capo") { ferma(); speechSynthesis?.cancel?.(); vai(0, false); }
     });
     vai(0, false);
@@ -285,5 +402,53 @@
     });
   }
 
-  window.Animazioni = { crea, esercizioColonna, passiMoltiplicazione };
+  /* ---------- Esercizio "gelosia": il bambino riempie la griglia ---------- */
+  function esercizioGelosia(e, c, esito, intestazione) {
+    const a = +e.a, b = +e.b;
+    const g = calcolaGelosia(a, b);
+    const sequenza = [];
+    g.caselle.forEach((x, i) => {
+      const aiuto = `Guarda la tavola pitagorica: ${g.B[x.r]} × ${g.A[x.c]} = ${x.p}.`;
+      sequenza.push({ chiave: `c${i}d`, val: x.d, aiuto: aiuto + ` Sopra scrivo ${x.d}.`, casella: i }, { chiave: `c${i}u`, val: x.u, aiuto: aiuto + ` Sotto scrivo ${x.u}.`, casella: i });
+    });
+    g.diagonali.forEach((dg, k) => {
+      if (k === g.diagonali.length - 1 && dg.cifra === 0) return; // lo 0 iniziale non si scrive
+      const numeri = dg.pezzi.map((x) => x.v).concat(dg.riportoPrima ? [dg.riportoPrima] : []);
+      sequenza.push({ chiave: `r${k}`, val: dg.cifra, aiuto: `Somma la diagonale: ${numeri.join(" + ")} = ${dg.somma}.`, diag: k });
+    });
+    c.innerHTML = intestazione + `<div class="colonna-es"><div class="colonna-posto gelosia-posto"></div>
+      <div class="lato-tastierino"><div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}</div>
+      <button class="btn bianco piccolo" data-tavola>📋 Tavola pitagorica</button></div></div>`;
+    const posto = c.querySelector(".gelosia-posto");
+    let k = 0;
+    const disegna = () => {
+      const at = sequenza[k];
+      const casellePiene = at ? (at.casella !== undefined ? at.casella : g.caselle.length) : g.caselle.length;
+      const diagFatte = at ? (at.diag !== undefined ? at.diag : 0) : g.diagonali.length;
+      posto.innerHTML = svgGelosia(g, {
+        caselle: casellePiene, diag: diagFatte, attiva: at?.casella, diagAttiva: at?.diag,
+        chiedi: new Set(at ? [at.chiave] : []),
+      });
+      // cifra già scritta nella casella in corso (le decine prima delle unità)
+      if (at?.chiave?.endsWith("u")) {
+        const x = g.caselle[at.casella];
+        const S = 92, X = 70 + x.c * S, Y = 56 + x.r * S;
+        posto.querySelector("svg").insertAdjacentHTML("beforeend", `<text x="${X + S * 0.3}" y="${Y + S * 0.42}" class="g-cifra">${x.d}</text>`);
+      }
+    };
+    disegna();
+    c.addEventListener("click", (ev) => {
+      if (ev.target.closest("[data-tavola]")) return apriTavola();
+      const t = ev.target.closest(".tasto");
+      if (!t || k >= sequenza.length) return;
+      c.querySelectorAll(".tasto.sbagliata").forEach((x) => x.classList.remove("sbagliata"));
+      if (+t.dataset.d === sequenza[k].val) {
+        k++;
+        disegna();
+        if (k >= sequenza.length) esito.ok(); else Suono.giusto();
+      } else { e.suggerimento = sequenza[k].aiuto; esito.ko(t); }
+    });
+  }
+
+  window.Animazioni = { crea, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

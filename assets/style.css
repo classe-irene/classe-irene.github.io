@@ -382,3 +382,42 @@ body.lim .scheda.con-animazione .animazione { display: grid; grid-template-colum
 body.lim .scheda.con-animazione .palco { grid-area: palco; }
 body.lim .scheda.con-animazione .didascalia { grid-area: didascalia; justify-self: center; }
 body.lim .scheda.con-animazione .comandi { grid-area: comandi; flex-direction: column; align-items: stretch; }
+
+/* ---------- Video guida, moltiplicazione per gelosia, tavola pitagorica ---------- */
+.animazione.video { background: #1E1B2E; padding: 14px; border-radius: 22px; box-shadow: var(--ombra); }
+.scheda .animazione.video .didascalia { color: #fff; }
+.animazione.video .con-voce { color: #fff; }
+.video-titolo { align-self: flex-start; color: #FFC93C; font: 800 1.15rem "Baloo 2", sans-serif; }
+.avanzamento { width: 100%; height: 10px; border-radius: 6px; background: rgba(128,128,128,.25); overflow: hidden; }
+.avanzamento span { display: block; height: 100%; width: 0; background: var(--giallo); border-radius: 6px; transition: width .5s; }
+.gelosia { width: 100%; max-width: 440px; height: auto; }
+.gelosia .g-cifra { font: 800 34px "Baloo 2", sans-serif; fill: var(--testo); text-anchor: middle; }
+.gelosia .g-dato { font: 800 40px "Baloo 2", sans-serif; fill: var(--mat); text-anchor: middle; }
+.gelosia .g-dato.segno { fill: var(--testo-tenue); }
+.gelosia .g-risultato { font: 800 40px "Baloo 2", sans-serif; text-anchor: middle; }
+.gelosia .g-chiedi { fill: var(--tema-chiaro, #E4ECFF); stroke: var(--tema, #3D6BE0); stroke-width: 4; animation: lampeggia-svg 1.2s infinite; }
+.gelosia .nuova-svg { animation: compari .5s; }
+@keyframes lampeggia-svg { 50% { stroke: var(--giallo); } }
+.gelosia-posto { width: min(440px, 100%); }
+.lato-tastierino { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+#tavola-pitagorica { border: none; border-radius: 22px; padding: 18px; box-shadow: var(--ombra); max-width: 96vw; max-height: 96vh; }
+#tavola-pitagorica::backdrop { background: rgba(30, 27, 46, .55); }
+.tavola-testa { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.tavola-testa h2 { margin: 0; }
+.tavola-frase { text-align: center; font: 800 2rem "Baloo 2", sans-serif; color: var(--mat); margin: 6px 0 10px; min-height: 1.3em; }
+#tavola-pitagorica table { border-collapse: collapse; margin: 0 auto; font: 800 1.25rem "Baloo 2", sans-serif; }
+#tavola-pitagorica th, #tavola-pitagorica td { width: min(52px, 8.4vw); height: min(46px, 6.4vh); text-align: center; border: 2px solid var(--bordo); }
+#tavola-pitagorica th { background: var(--mat-chiaro); color: var(--mat); }
+#tavola-pitagorica td { cursor: pointer; background: #fff; }
+#tavola-pitagorica td.riga { background: var(--giallo-chiaro); }
+#tavola-pitagorica td.scelto { background: var(--giallo); font-size: 1.6rem; }
+body.lim #tavola-pitagorica th, body.lim #tavola-pitagorica td { width: min(78px, 8vw); height: min(62px, 7vh); font-size: 1.8rem; }
+body.lim .gelosia { height: 30vh; max-width: none; width: auto; }
+body.lim .scheda.con-animazione.corrente .galleria figure { padding: 4px 10px; }
+body.lim .scheda.con-animazione.corrente .galleria .figura { max-height: 7vh; width: auto; }
+body.lim .gelosia-posto { width: auto; }
+body.lim .scheda.con-animazione .animazione { grid-template-areas: "titolo comandi" "palco comandi" "avanzamento comandi" "didascalia comandi"; }
+body.lim .scheda.con-animazione .video-titolo { grid-area: titolo; }
+body.lim .scheda.con-animazione .avanzamento { grid-area: avanzamento; }
+body.lim .animazione.video { padding: 10px 14px; gap: 8px 22px; }
+body.lim .scheda.con-animazione.corrente .galleria { display: none; }
