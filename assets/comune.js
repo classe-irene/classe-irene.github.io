@@ -33,7 +33,7 @@ window.creaTestata = function (attivo) {
       <nav class="nav">
         <a href="index.html#matematica" class="${attivo === "matematica" ? "attivo" : ""}">🔢 Matematica</a>
         <a href="index.html#scienze" class="${attivo === "scienze" ? "attivo" : ""}">🔬 Scienze</a>
-        <a href="cinque-minuti.html" class="${attivo === "cinque" ? "attivo" : ""}">⏱️ Lezione in 5 minuti</a>
+        <a href="area-insegnante.html" class="${attivo === "cinque" ? "attivo" : ""}">🔒 Area insegnante</a>
       </nav>
     </div>`;
   document.body.prepend(t);

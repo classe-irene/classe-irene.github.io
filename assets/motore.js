@@ -47,7 +47,7 @@
       <div class="barra-lezione">
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
-        <button class="btn bianco" data-azione="lim">🖥️ Testo grande (LIM)</button>
+        <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
       </div>
       ${l.sezioni.map((s) => `
@@ -69,7 +69,7 @@
       const a = b.dataset.azione;
       if (a === "leggi-tutto") leggi(testoIntero);
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
-      if (a === "lim") document.body.classList.toggle("lim");
+      if (a === "lim") avviaLIM(radice);
       if (a === "suoni") { Suono.attivo = !Suono.attivo; b.textContent = `🔔 Suoni: ${Suono.attivo ? "sì" : "no"}`; }
     });
 
@@ -93,6 +93,7 @@
         const sp = el.querySelector(".spiegazione");
         sp.textContent = caso(BRAVO) + (spiegazione ? " " + spiegazione : "");
         sp.classList.add("visibile");
+        radice.dispatchEvent(new CustomEvent("risolto"));
         if (risolti === l.esercizi.length) finale();
       },
     };
@@ -105,7 +106,8 @@
         <p>${stelle === 3 ? "Sei un vero campione!" : stelle === 2 ? "Ottimo lavoro, continua così!" : "Ce l'hai fatta! Con un po' di allenamento andrà ancora meglio."}</p>
         <button class="btn" onclick="location.reload()">🔁 Ricomincia</button>`;
       Suono.festa(); coriandoli();
-      fine.scrollIntoView({ behavior: "smooth", block: "center" });
+      radice.dispatchEvent(new CustomEvent("finita"));
+      if (!document.body.classList.contains("lim")) fine.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
     l.esercizi.forEach((e, i) => {
@@ -268,6 +270,59 @@
       });
     },
   };
+
+  /* ---------- Modalità LIM ----------
+     Schermo intero, una schermata alla volta (titolo, spiegazioni, esercizi, finale),
+     tasti grandi, frecce della tastiera e telecomandi da presentazione (PagSu/PagGiù). */
+  function avviaLIM(radice) {
+    if (document.body.classList.contains("lim")) return;
+    document.body.classList.add("lim");
+    document.documentElement.requestFullscreen?.().catch(() => {});
+    const pagine = () => [radice.querySelector(".lezione-testa"), ...radice.querySelectorAll(".scheda, .esercizio, [data-fine]")]
+      .filter((p) => p && !p.hidden);
+    let i = 0;
+    const barra = document.createElement("div");
+    barra.className = "lim-barra";
+    barra.innerHTML = `<button class="lim-freccia" data-lim="prec" aria-label="Indietro">◀</button>
+      <span class="lim-conta"></span>
+      <button class="lim-freccia" data-lim="succ" aria-label="Avanti">▶</button>
+      <button class="lim-esci" data-lim="esci">✕ Esci</button>`;
+    document.body.append(barra);
+    const succ = barra.querySelector('[data-lim="succ"]');
+
+    function mostra(n) {
+      const pp = pagine();
+      i = Math.max(0, Math.min(pp.length - 1, n));
+      pp.forEach((p, k) => p.classList.toggle("corrente", k === i));
+      barra.querySelector(".lim-conta").textContent = `${i + 1} / ${pp.length}`;
+      barra.querySelector('[data-lim="prec"]').disabled = i === 0;
+      succ.disabled = i === pp.length - 1;
+      const cur = pp[i];
+      succ.classList.toggle("pulsa", cur.classList.contains("risolto") || !cur.classList.contains("esercizio"));
+      scrollTo(0, 0);
+    }
+    function esci() {
+      document.body.classList.remove("lim");
+      radice.querySelectorAll(".corrente").forEach((p) => p.classList.remove("corrente"));
+      barra.remove();
+      document.removeEventListener("keydown", tasti);
+      if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+    }
+    function tasti(ev) {
+      if (["ArrowRight", "PageDown"].includes(ev.key)) { ev.preventDefault(); mostra(i + 1); }
+      if (["ArrowLeft", "PageUp"].includes(ev.key)) { ev.preventDefault(); mostra(i - 1); }
+    }
+    barra.addEventListener("click", (ev) => {
+      const a = ev.target.closest("button")?.dataset.lim;
+      if (a === "prec") mostra(i - 1);
+      if (a === "succ") mostra(i + 1);
+      if (a === "esci") esci();
+    });
+    document.addEventListener("keydown", tasti);
+    radice.addEventListener("risolto", () => mostra(i));
+    radice.addEventListener("finita", () => setTimeout(() => mostra(pagine().length - 1), 1200));
+    mostra(0);
+  }
 
   /* Trascinamento con dito, penna o mouse (funziona anche sulla LIM). */
   function trascinabile(radice, selTessera, selBersaglio, rilascia) {

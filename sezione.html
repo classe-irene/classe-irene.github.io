@@ -28,7 +28,7 @@
   const scheda = (a) => a.lezione
     ? `<a class="argomento pronta" href="lezione.html?file=${encodeURIComponent(a.lezione)}"><span class="emoji">${a.emoji}</span><h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p><span class="stato">▶ Lezione pronta</span></a>`
     : `<div class="argomento"><span class="emoji">${a.emoji}</span><h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p>
-        <div class="azioni"><a class="btn piccolo bianco" href="cinque-minuti.html?materia=${materia}&classe=${c}&argomento=${encodeURIComponent(a.titolo)}">✨ Crea in 5 minuti</a></div></div>`;
+        <div class="azioni"><a class="btn piccolo bianco" href="area-insegnante.html?materia=${materia}&classe=${c}&argomento=${encodeURIComponent(a.titolo)}">🔒 Crea in 5 minuti</a></div></div>`;
 
   document.getElementById("radice").innerHTML = `
     <div class="intest-sezione" data-numero="${c}ª">

@@ -7,7 +7,7 @@ Non ha bisogno di server né di database: si pubblica gratis con GitHub Pages.
 - `index.html`: home con le due materie e le cinque classi
 - `sezione.html?materia=scienze&classe=3`: argomenti dell'anno e lezioni salvate
 - `lezione.html?file=lezioni/....json`: una lezione con esercizi interattivi
-- `cinque-minuti.html`: la "lezione in 5 minuti"
+- `area-insegnante.html`: la "lezione in 5 minuti", cifrata con password (AES-256). Il sorgente in chiaro e lo script `cifra.mjs` NON stanno in questo repository: sono nella cartella privata del progetto.
 
 ## Aggiungere una lezione per tutti
 1. Crea la lezione con "Lezione in 5 minuti" e premi **Scarica il file**.
@@ -18,7 +18,11 @@ Le lezioni create e non pubblicate restano salvate solo nel browser in cui sono 
 
 ## Tipi di esercizio
 `scelta`, `vero_falso`, `abbina`, `categorie`, `ordina`, `completa`, `conta`, `retta`.
-Il formato esatto di ognuno è scritto nelle istruzioni che prepara `cinque-minuti.html`.
+Il formato esatto di ognuno è scritto nelle istruzioni che prepara l'area insegnante.
 
 ## Programmi
 Classi prime dal 2026/27: Nuove Indicazioni Nazionali. Classi 2ª–5ª: Indicazioni Nazionali 2012, fino al passaggio graduale (completo nel 2030/31).
+
+## Modalità LIM
+Nel pulsante "Modalità LIM" di ogni lezione: schermo intero, una schermata alla volta, tasti grandi.
+Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un telecomando da presentazione (PagSu/PagGiù).

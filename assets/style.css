@@ -236,8 +236,49 @@ select:focus, textarea:focus, input:focus { outline: none; border-color: var(--v
 
 .piede { text-align: center; color: var(--testo-tenue); padding: 30px 16px 40px; font-size: .9rem; }
 
-/* Modalità LIM: testo più grande */
-body.lim { font-size: 22px; }
+button { touch-action: manipulation; }
+
+/* ---------- Modalità LIM ---------- */
+body.lim { font-size: 25px; }
+body.lim .testata, body.lim .piede, body.lim .barra-lezione, body.lim #esercizi { display: none; }
+body.lim .contenitore { max-width: 1500px; }
+body.lim .lezione-testa, body.lim .scheda, body.lim .esercizio, body.lim [data-fine] { display: none; }
+body.lim .corrente {
+  display: flex !important; flex-direction: column; justify-content: center;
+  min-height: calc(100vh - 150px); margin: 16px 0 120px; animation: compari .35s;
+}
+body.lim .lezione-testa.corrente .emoji { font-size: 7rem; }
+body.lim .scheda.corrente p { font-size: 1.8rem; max-width: 60ch; }
+body.lim .scheda.corrente h2 { font-size: 2.6rem; }
+body.lim .curiosita { font-size: 1.4rem; }
+body.lim .parola { font-size: 1.6rem; padding: 10px 22px; }
+body.lim .esercizio .domanda { font-size: 2.2rem; margin-bottom: 28px; }
+body.lim .spiegazione { font-size: 1.4rem; }
+body.lim .opzione, body.lim .tessera { min-height: 90px; font-size: 1.7rem; padding: 18px 22px; border-width: 4px; }
+body.lim .vf .opzione { min-width: 260px; font-size: 2.2rem; }
+body.lim .oggetti { font-size: 4.2rem; }
+body.lim .frase-completa { font-size: 1.7rem; }
+body.lim .retta { height: 150px; }
+body.lim .retta .tacca { width: 64px; margin-left: -32px; }
+body.lim .retta .tacca::before { height: 52px; width: 6px; }
+body.lim .retta .tacca span { font-size: 1.4rem; padding: 4px 0; }
+body.lim .punteggio { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: 16px; margin: 0; font-size: 1.3rem; }
+.lim-barra {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, .94); box-shadow: 0 -6px 24px rgba(43, 42, 51, .12);
+}
+.lim-freccia {
+  width: 84px; height: 84px; border-radius: 50%; border: 0; background: var(--tema); color: #fff;
+  font-size: 2.2rem; box-shadow: 0 6px 0 rgba(0, 0, 0, .18);
+}
+.lim-freccia:disabled { opacity: .25; }
+.lim-freccia.pulsa { animation: pulsa 1.4s infinite; }
+@keyframes pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+.lim-conta { font-weight: 800; font-size: 1.3rem; min-width: 90px; text-align: center; font-variant-numeric: tabular-nums; }
+.lim-esci { position: absolute; right: 16px; border: 0; background: none; font-weight: 800; color: var(--testo-tenue); font-size: 1rem; padding: 12px; }
+@media (max-width: 600px) { .lim-esci { position: static; } .lim-freccia { width: 64px; height: 64px; } }
 
 @media print {
   .testata, .barra-lezione, .punteggio, .piede, .leggi { display: none; }
