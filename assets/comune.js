@@ -25,6 +25,7 @@ window.MASCOTTE = `
 </svg>`;
 
 window.creaTestata = function (attivo) {
+  document.querySelectorAll("header.testata, footer.piede").forEach((x) => x.remove());
   const t = document.createElement("header");
   t.className = "testata";
   t.innerHTML = `
