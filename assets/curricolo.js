@@ -6,6 +6,8 @@
 window.SITO = {
   nome: "La classe di Irene",
   motto: "Matematica e Scienze per piccoli esploratori",
+  // Classi in cui Irene insegna quest'anno: in evidenza nella home.
+  classiInEvidenza: [2, 4],
 };
 
 window.MATERIE = {
@@ -34,7 +36,7 @@ window.CURRICOLO = {
       { id: "mat1-algoritmi", emoji: "🤖", titolo: "Istruzioni in fila", descrizione: "Primi algoritmi: seguire e dare comandi in ordine." },
     ],
     2: [
-      { id: "mat2-numeri100", emoji: "💯", titolo: "I numeri fino a 100", descrizione: "Decine e unità, valore posizionale." },
+      { id: "mat2-numeri100", emoji: "💯", titolo: "I numeri fino a 100", descrizione: "Decine e unità, valore posizionale.", lezione: "lezioni/mat2-numeri-fino-a-100.json" },
       { id: "mat2-addcambio", emoji: "➕", titolo: "Addizioni in colonna", descrizione: "Con e senza cambio." },
       { id: "mat2-sottcambio", emoji: "➖", titolo: "Sottrazioni in colonna", descrizione: "Con e senza prestito." },
       { id: "mat2-moltiplicazione", emoji: "✖️", titolo: "La moltiplicazione", descrizione: "Addizioni ripetute e schieramenti." },
@@ -58,7 +60,7 @@ window.CURRICOLO = {
       { id: "mat3-problemi", emoji: "🧩", titolo: "Problemi con due domande", descrizione: "Dati, domanda, operazioni." },
     ],
     4: [
-      { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri." },
+      { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri.", lezione: "lezioni/mat4-grandi-numeri.json" },
       { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime." },
       { id: "mat4-divisioni", emoji: "➗", titolo: "Divisioni a due cifre", descrizione: "Divisore a due cifre e prova." },
       { id: "mat4-frazioni", emoji: "🍕", titolo: "Frazioni proprie e improprie", descrizione: "Frazioni equivalenti e complementari." },
@@ -94,7 +96,7 @@ window.CURRICOLO = {
       { id: "sci1-animali", emoji: "🐾", titolo: "Gli animali intorno a noi", descrizione: "Dove vivono e come si muovono." },
     ],
     2: [
-      { id: "sci2-materia", emoji: "🧊", titolo: "Solidi, liquidi e gas", descrizione: "Gli stati della materia." },
+      { id: "sci2-materia", emoji: "🧊", titolo: "Solidi, liquidi e gas", descrizione: "Gli stati della materia.", lezione: "lezioni/sci2-solidi-liquidi-gas.json" },
       { id: "sci2-acqua", emoji: "💧", titolo: "L'acqua", descrizione: "Proprietà e trasformazioni dell'acqua." },
       { id: "sci2-semi", emoji: "🌰", titolo: "Dal seme alla pianta", descrizione: "La germinazione e la crescita." },
       { id: "sci2-ciclovita", emoji: "🔄", titolo: "Il ciclo della vita", descrizione: "Nascere, crescere, riprodursi, morire." },
@@ -115,7 +117,7 @@ window.CURRICOLO = {
     ],
     4: [
       { id: "sci4-cellula", emoji: "🧫", titolo: "La cellula", descrizione: "Il mattoncino della vita." },
-      { id: "sci4-regni", emoji: "🍄", titolo: "I cinque regni", descrizione: "Batteri, protisti, funghi, piante, animali." },
+      { id: "sci4-regni", emoji: "🍄", titolo: "I cinque regni", descrizione: "Batteri, protisti, funghi, piante, animali.", lezione: "lezioni/sci4-cinque-regni.json" },
       { id: "sci4-piante", emoji: "🌸", titolo: "Riproduzione delle piante", descrizione: "Fiore, impollinazione, frutto e seme." },
       { id: "sci4-invertebrati", emoji: "🐝", titolo: "Gli invertebrati", descrizione: "Insetti, molluschi, aracnidi..." },
       { id: "sci4-vertebrati", emoji: "🐬", titolo: "I vertebrati", descrizione: "Pesci, anfibi, rettili, uccelli, mammiferi." },

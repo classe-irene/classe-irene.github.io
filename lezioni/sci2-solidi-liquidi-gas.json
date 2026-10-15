@@ -1,0 +1,31 @@
+{
+  "titolo": "Solidi, liquidi e gas",
+  "emoji": "🧊",
+  "materia": "scienze",
+  "classe": 2,
+  "introduzione": "Tutto quello che ci circonda è fatto di materia: il banco, il succo di frutta, perfino l'aria! Scopriamo le sue tre forme.",
+  "sezioni": [
+    { "titolo": "I solidi", "emoji": "🪨", "testo": "I solidi hanno una forma tutta loro. Se metti un sasso in una tazza, resta un sasso con la sua forma.\nSono solidi la matita, il libro, il ghiaccio." },
+    { "titolo": "I liquidi", "emoji": "🥛", "testo": "I liquidi non hanno una forma propria: prendono la forma del contenitore.\nSe versi il latte in un bicchiere ha la forma del bicchiere. Nella bottiglia ha la forma della bottiglia.", "curiosita": "Anche il miele è un liquido, solo che scorre molto piano!" },
+    { "titolo": "I gas", "emoji": "🎈", "testo": "I gas spesso sono invisibili e occupano tutto lo spazio che trovano.\nL'aria che gonfia il palloncino è un gas. Anche il profumo che arriva fino al naso viaggia nell'aria." },
+    { "titolo": "L'acqua cambia forma", "emoji": "💧", "testo": "L'acqua è speciale: può essere solida, liquida o gas.\nNel freezer diventa ghiaccio. Dal rubinetto esce liquida. Quando bolle nella pentola diventa vapore." }
+  ],
+  "parole_chiave": ["materia", "solido", "liquido", "gas", "ghiaccio", "vapore"],
+  "esercizi": [
+    { "tipo": "categorie", "domanda": "Solido, liquido o gas? Metti ogni cosa nel cesto giusto.", "categorie": ["Solido 🪨", "Liquido 💧", "Gas 🎈"], "elementi": [
+      { "testo": "la gomma", "categoria": "Solido 🪨" },
+      { "testo": "il sasso", "categoria": "Solido 🪨" },
+      { "testo": "l'olio", "categoria": "Liquido 💧" },
+      { "testo": "il succo", "categoria": "Liquido 💧" },
+      { "testo": "l'aria", "categoria": "Gas 🎈" },
+      { "testo": "il vapore", "categoria": "Gas 🎈" }
+    ] },
+    { "tipo": "vero_falso", "affermazione": "Un liquido prende la forma del contenitore.", "corretta": true, "spiegazione": "Nel bicchiere ha la forma del bicchiere!" },
+    { "tipo": "scelta", "domanda": "Che cosa c'è dentro un palloncino gonfio?", "opzioni": ["Acqua", "Aria", "Sabbia"], "corretta": 1, "spiegazione": "L'aria è un gas." },
+    { "tipo": "abbina", "domanda": "Unisci ogni forma dell'acqua al posto dove la trovi.", "coppie": [["Ghiaccio", "nel freezer"], ["Acqua liquida", "nel rubinetto"], ["Vapore", "sopra la pentola che bolle"]] },
+    { "tipo": "ordina", "domanda": "Metti in ordine: che cosa succede a un cubetto di ghiaccio lasciato al sole?", "elementi": ["Il cubetto è duro e freddo", "Il cubetto si scioglie", "Diventa una pozza d'acqua", "La pozza si asciuga e sparisce nell'aria"] },
+    { "tipo": "completa", "domanda": "Completa la frase.", "testo": "Il sasso è un [solido] perché ha una forma sua. Il latte è un [liquido].", "distrattori": ["gas"] },
+    { "tipo": "vero_falso", "affermazione": "Il ghiaccio e l'acqua sono due cose completamente diverse.", "corretta": false, "spiegazione": "Il ghiaccio è acqua diventata solida per il freddo." },
+    { "tipo": "scelta", "domanda": "Perché sentiamo il profumo della torta anche dall'altra stanza?", "opzioni": ["Perché il profumo viaggia nell'aria", "Perché la torta cammina", "Perché abbiamo le orecchie grandi"], "corretta": 0, "spiegazione": "Il profumo si sparge nell'aria e arriva fino al nostro naso." }
+  ]
+}

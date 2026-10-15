@@ -1,0 +1,33 @@
+{
+  "titolo": "I cinque regni dei viventi",
+  "emoji": "🍄",
+  "materia": "scienze",
+  "classe": 4,
+  "introduzione": "Una quercia, un fungo, un batterio e un leone: sono tutti viventi, ma molto diversi! Gli scienziati li hanno divisi in cinque grandi gruppi, i regni.",
+  "sezioni": [
+    { "titolo": "Le monere", "emoji": "🦠", "testo": "Sono i viventi più piccoli e semplici: i batteri. Sono formati da una sola cellula senza nucleo e si vedono solo al microscopio.\nAlcuni ci fanno ammalare, ma molti sono utili: per esempio aiutano a fare lo yogurt.", "curiosita": "Nel nostro intestino vivono miliardi di batteri buoni che ci aiutano a digerire!" },
+    { "titolo": "I protisti", "emoji": "🔬", "testo": "Sono formati di solito da una sola cellula, ma con il nucleo. Vivono soprattutto nell'acqua.\nAlcuni, come le alghe microscopiche, producono il proprio nutrimento con la luce. Altri, come l'ameba, si nutrono di altri esseri." },
+    { "titolo": "I funghi", "emoji": "🍄", "testo": "I funghi non sono piante: non sono verdi e non fanno la fotosintesi.\nSi nutrono di sostanze prese da materiali morti o da altri viventi. Sono funghi anche i lieviti e le muffe." },
+    { "titolo": "Le piante", "emoji": "🌳", "testo": "Le piante sono formate da tante cellule e producono da sole il nutrimento grazie alla luce del Sole: è la fotosintesi.\nLiberano ossigeno, il gas che respiriamo." },
+    { "titolo": "Gli animali", "emoji": "🦁", "testo": "Gli animali sono formati da tante cellule e devono nutrirsi di altri viventi.\nQuasi tutti possono muoversi. Si dividono in vertebrati, con lo scheletro interno, e invertebrati." }
+  ],
+  "parole_chiave": ["regno", "cellula", "nucleo", "monere", "protisti", "funghi", "fotosintesi"],
+  "esercizi": [
+    { "tipo": "ordina", "domanda": "Metti i regni in ordine, dal più semplice al più complesso.", "elementi": ["Monere", "Protisti", "Funghi", "Piante", "Animali"] },
+    { "tipo": "categorie", "domanda": "A quale regno appartiene ognuno?", "categorie": ["Funghi 🍄", "Piante 🌳", "Animali 🦁"], "elementi": [
+      { "testo": "la muffa del pane", "categoria": "Funghi 🍄" },
+      { "testo": "il lievito", "categoria": "Funghi 🍄" },
+      { "testo": "il porcino", "categoria": "Funghi 🍄" },
+      { "testo": "la felce", "categoria": "Piante 🌳" },
+      { "testo": "il girasole", "categoria": "Piante 🌳" },
+      { "testo": "la medusa", "categoria": "Animali 🦁" },
+      { "testo": "il lombrico", "categoria": "Animali 🦁" }
+    ], "suggerimento": "Ricorda: i funghi non sono verdi e non fanno la fotosintesi." },
+    { "tipo": "vero_falso", "affermazione": "I funghi sono piante perché crescono nel bosco.", "corretta": false, "spiegazione": "I funghi formano un regno a sé: non fanno la fotosintesi." },
+    { "tipo": "scelta", "domanda": "Quale regno comprende i batteri?", "opzioni": ["Protisti", "Monere", "Funghi"], "corretta": 1, "spiegazione": "I batteri sono monere: una cellula senza nucleo." },
+    { "tipo": "abbina", "domanda": "Unisci ogni regno alla sua caratteristica.", "coppie": [["Piante", "producono nutrimento con la luce"], ["Animali", "si nutrono di altri viventi e si muovono"], ["Monere", "una cellula senza nucleo"], ["Funghi", "si nutrono di materiali morti"]] },
+    { "tipo": "completa", "domanda": "Completa la frase.", "testo": "Le piante producono il loro nutrimento con la [fotosintesi] e liberano [ossigeno].", "distrattori": ["digestione", "fumo"] },
+    { "tipo": "vero_falso", "affermazione": "Alcuni batteri sono utili, per esempio per fare lo yogurt.", "corretta": true, "spiegazione": "Non tutti i batteri sono cattivi!" },
+    { "tipo": "scelta", "domanda": "L'ameba vive nell'acqua ed è formata da una sola cellula con il nucleo. Di quale regno fa parte?", "opzioni": ["Monere", "Protisti", "Animali"], "corretta": 1, "spiegazione": "Una cellula con nucleo: è un protista." }
+  ]
+}

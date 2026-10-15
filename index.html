@@ -19,7 +19,8 @@
     <div>
       <h1>Impariamo giocando! 🎈</h1>
       <p>Lezioni colorate ed esercizi interattivi di Matematica e Scienze, dalla classe prima alla quinta.</p>
-      <p style="margin-top:18px"><a class="btn giallo" href="#matematica">Cominciamo! 🚀</a></p>
+      <p class="nota" style="margin:22px 0 10px;font-weight:800">Le nostre classi quest'anno</p>
+      <div class="scorciatoie" id="scorciatoie"></div>
     </div>
     <div class="mascotte" id="mascotte"></div>
   </section>
@@ -49,10 +50,13 @@
 <script>
   creaTestata();
   document.getElementById("mascotte").innerHTML = MASCOTTE;
+  const evid = SITO.classiInEvidenza || [];
+  document.getElementById("scorciatoie").innerHTML = evid.flatMap((c) => ["matematica", "scienze"].map((m) =>
+    `<a class="btn ${m === "scienze" ? "verde" : ""}" href="sezione.html?materia=${m}&classe=${c}">${MATERIE[m].icona} ${MATERIE[m].nome} ${c}ª</a>`)).join("");
   document.querySelectorAll(".classi").forEach((box) => {
     const m = box.dataset.materia;
     box.innerHTML = [1, 2, 3, 4, 5].map((c) =>
-      `<a class="classe" href="sezione.html?materia=${m}&classe=${c}">${c}ª<small>classe</small></a>`).join("");
+      `<a class="classe${evid.includes(c) ? " evidenza" : ""}" href="sezione.html?materia=${m}&classe=${c}">${c}ª<small>classe</small></a>`).join("");
   });
 </script>
 </body>

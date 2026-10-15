@@ -75,6 +75,11 @@ button { font: inherit; cursor: pointer; }
   box-shadow: 0 5px 0 rgba(0, 0, 0, .18); transition: transform .1s, box-shadow .1s;
 }
 .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 rgba(0, 0, 0, .18); }
+.btn.verde { background: var(--sci); }
+.scorciatoie { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px; }
+@media (max-width: 760px) { .scorciatoie { justify-content: center; grid-template-columns: repeat(2, minmax(0, max-content)); } }
+.classe.evidenza { position: relative; outline: 3px solid var(--c); outline-offset: 2px; }
+.classe.evidenza::after { content: "⭐"; position: absolute; top: -10px; right: -8px; font-size: 1rem; }
 .btn.giallo { background: var(--giallo); color: var(--testo); }
 .btn.bianco { background: var(--carta); color: var(--testo); }
 .btn.piccolo { padding: 8px 14px; font-size: .9rem; }
@@ -152,11 +157,11 @@ a.argomento:hover { transform: translateY(-3px); }
 .esercizio .num { position: absolute; top: -14px; left: 20px; background: var(--giallo); border-radius: 999px; padding: 2px 14px; font-weight: 800; font-size: .9rem; }
 .esercizio .domanda { font-size: 1.3rem; font-weight: 800; margin: 6px 0 16px; }
 .esercizio.risolto { outline: 4px solid var(--ok); }
-.opzioni { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.opzioni { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 12px; }
 .opzione, .tessera {
   border: 3px solid var(--bordo); background: #fff; border-radius: 16px; padding: 14px 16px;
   font-size: 1.15rem; font-weight: 700; text-align: center; transition: transform .1s, background .15s, border-color .15s;
-  user-select: none; touch-action: none; color: var(--testo);
+  user-select: none; touch-action: none; color: var(--testo); overflow-wrap: anywhere; min-width: 0;
 }
 .opzione:hover, .tessera:hover { border-color: var(--tema); }
 .opzione.giusta, .tessera.giusta { background: #DFF6E8; border-color: var(--ok); }
@@ -170,7 +175,7 @@ a.argomento:hover { transform: translateY(-3px); }
 .spiegazione.visibile { display: block; animation: compari .3s; }
 @keyframes compari { from { opacity: 0; transform: translateY(6px); } }
 
-.abbina { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+.abbina { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px 28px; }
 .abbina .colonna { display: flex; flex-direction: column; gap: 12px; }
 
 .categorie { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px; }
@@ -193,11 +198,11 @@ a.argomento:hover { transform: translateY(-3px); }
 .oggetti span { animation: rimbalza .5s backwards; }
 @keyframes rimbalza { from { transform: scale(0); } 70% { transform: scale(1.2); } }
 
-.retta { position: relative; height: 110px; margin: 10px 8px 6px; }
+.retta { position: relative; height: 110px; margin: 10px 24px 6px; }
 .retta .linea { position: absolute; left: 0; right: 0; top: 50px; height: 6px; background: var(--testo); border-radius: 3px; }
 .retta .tacca { position: absolute; top: 34px; width: 44px; margin-left: -22px; text-align: center; border: 0; background: none; padding: 0; }
 .retta .tacca::before { content: ""; display: block; width: 4px; height: 38px; background: var(--testo); margin: 0 auto; border-radius: 2px; }
-.retta .tacca span { display: block; font-weight: 800; font-size: 1.1rem; margin-top: 2px; border-radius: 10px; }
+.retta .tacca span { display: block; font-weight: 800; font-size: clamp(.6rem, 2.2vw, 1.1rem); white-space: nowrap; margin-top: 2px; border-radius: 10px; }
 .retta .tacca:hover span { background: var(--giallo-chiaro); }
 .retta .tacca.giusta span { background: var(--ok); color: #fff; }
 .retta .tacca.sbagliata span { background: var(--ko); color: #fff; }

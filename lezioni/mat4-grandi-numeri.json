@@ -1,0 +1,31 @@
+{
+  "titolo": "I grandi numeri",
+  "emoji": "🚀",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Quanti spettatori entrano in uno stadio? Quanti chilometri ci sono tra Milano e Palermo? Per rispondere servono i grandi numeri!",
+  "sezioni": [
+    { "titolo": "La classe delle migliaia", "emoji": "🏟️", "testo": "Dopo le unità semplici (u, da, h) arriva la classe delle migliaia: unità di migliaia (uk), decine di migliaia (dak) e centinaia di migliaia (hk).\n10 centinaia formano 1 migliaio: 1 000.", "curiosita": "Uno stadio grande può contenere circa 80 000 persone: otto decine di migliaia!" },
+    { "titolo": "Il valore posizionale", "emoji": "🧭", "testo": "Ogni cifra vale in base al posto che occupa.\nIn 352 418 il 3 vale 3 centinaia di migliaia, cioè 300 000. L'8 vale solo 8 unità." },
+    { "titolo": "Leggere e scrivere", "emoji": "✍️", "testo": "Per leggere un numero grande lo dividiamo in classi di tre cifre, partendo da destra, lasciando un piccolo spazio.\n45 230 si legge: quarantacinquemila duecentotrenta." },
+    { "titolo": "Confrontare", "emoji": "⚖️", "testo": "Tra due numeri, è maggiore quello con più cifre.\nSe hanno le stesse cifre, si confrontano partendo da sinistra: 72 315 > 71 999 perché 2 migliaia sono più di 1." }
+  ],
+  "parole_chiave": ["migliaio", "uk", "dak", "hk", "valore posizionale", "classe"],
+  "esercizi": [
+    { "tipo": "scelta", "domanda": "Nel numero 46 205, quanto vale la cifra 6?", "opzioni": ["6", "600", "6 000", "60 000"], "corretta": 2, "spiegazione": "Il 6 è al posto delle unità di migliaia: vale 6 000." },
+    { "tipo": "abbina", "domanda": "Unisci ogni numero a come si legge.", "coppie": [["12 500", "dodicimilacinquecento"], ["120 050", "centoventimilacinquanta"], ["1 250", "milleduecentocinquanta"], ["21 005", "ventunomilacinque"]] },
+    { "tipo": "retta", "domanda": "Dove si trova il numero 7 000?", "min": 0, "max": 10000, "passo": 1000, "corretta": 7000 },
+    { "tipo": "ordina", "domanda": "Metti in ordine crescente (dal più piccolo).", "elementi": ["9 870", "10 200", "10 500", "98 000", "100 000"], "suggerimento": "Conta prima quante cifre ha ogni numero." },
+    { "tipo": "completa", "domanda": "Scomponi il numero 305 420.", "testo": "305 420 = [3] hk + [5] uk + [4] h + [2] da", "distrattori": ["0", "30"] },
+    { "tipo": "vero_falso", "affermazione": "64 999 è maggiore di 65 001.", "corretta": false, "spiegazione": "65 001 ha 5 unità di migliaia, 64 999 ne ha solo 4." },
+    { "tipo": "categorie", "domanda": "Il numero è più piccolo o più grande di diecimila?", "categorie": ["Meno di 10 000", "Più di 10 000"], "elementi": [
+      { "testo": "9 999", "categoria": "Meno di 10 000" },
+      { "testo": "1 000", "categoria": "Meno di 10 000" },
+      { "testo": "8 500", "categoria": "Meno di 10 000" },
+      { "testo": "10 001", "categoria": "Più di 10 000" },
+      { "testo": "25 000", "categoria": "Più di 10 000" },
+      { "testo": "100 000", "categoria": "Più di 10 000" }
+    ] },
+    { "tipo": "scelta", "domanda": "Qual è il numero più grande che si scrive con le cifre 4, 9, 1, 7, 3 usate una sola volta?", "opzioni": ["13 479", "97 431", "94 731"], "corretta": 1, "spiegazione": "Si mettono le cifre dalla più grande alla più piccola: 97 431." }
+  ]
+}
