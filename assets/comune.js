@@ -110,7 +110,21 @@ window.Voce = (() => {
     for (const re of PREFERITE) { const v = voci.find((x) => re.test(x.name)); if (v) return v; }
     return voci.find((v) => !MASCHILI.test(v.name)) || voci[0];
   }
+  // "1 pacco" letto dal sintetizzatore diventa "uno pacco": lo trasformo in "un pacco", "una decina", "uno zaino".
+  // Dopo "1" queste parole non sono nomi: "scrivo 1 sopra", "porto 1 nella diagonale", "1 più 1".
+  const NON_NOMI = /^(sopra|sotto|nella|nel|nello|nei|nelle|e|ed|o|più|meno|per|di|da|a|in|con|su|fa|fanno|è|sono|volta|alla|al|allo|della|del|dello|dopo|prima|poi|che|come|se|non|si|ci|ne|lo|la|le|li|il|gli|un|una|uno|uguale|diviso|virgola)$/i;
+  const FEMMINILI = /^(mano|radio|foto|moto|eco|auto|bici)$/i;
+  function articolo(parola) {
+    const p = parola.toLowerCase();
+    const femminile = FEMMINILI.test(p) || /(a|à|ione|tù)$/.test(p) && !/^(problema|tema|sistema|pigiama|papà|pianeta|cinema|programma|clima|poeta)$/.test(p);
+    if (femminile) return /^[aeiouàèéìòù]/.test(p) ? "un'" : "una ";
+    return /^(s[^aeiouàèéìòù]|z|gn|ps|pn|x|y)/.test(p) ? "uno " : "un ";
+  }
+  const leggibile = (t) => t.replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
+    NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
+
   return {
+    leggibile,
     elenco: () => voci,
     scelta,
     imposta(nome) { try { localStorage.setItem(CHIAVE, nome); } catch {} },
@@ -122,7 +136,7 @@ window.Voce = (() => {
       if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       speechSynthesis.cancel();
       // Le emoji non vanno lette ad alta voce.
-      const pulito = String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ");
+      const pulito = leggibile(String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " "));
       const u = new SpeechSynthesisUtterance(pulito);
       u.lang = "it-IT"; u.rate = VELOCITA[this.velocita()]; u.pitch = 1.05;
       const v = scelta(); if (v) u.voice = v;
