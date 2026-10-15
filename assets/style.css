@@ -27,6 +27,7 @@ body.scienze { --tema: var(--sci); --tema-chiaro: var(--sci-chiaro); }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
+  letter-spacing: .01em;
   background: var(--sfondo);
   color: var(--testo);
   font-family: "Nunito", system-ui, sans-serif;
@@ -148,6 +149,39 @@ a.argomento:hover { transform: translateY(-3px); }
 .parola { background: var(--tema-chiaro); color: var(--tema); padding: 6px 14px; border-radius: 999px; font-weight: 800; }
 .leggi { background: none; border: 2px solid var(--bordo); border-radius: 999px; padding: 4px 12px; font-size: .85rem; font-weight: 700; margin-left: auto; }
 
+/* ---------- Figure illustrate ---------- */
+.figura { display: inline-block; object-fit: contain; flex: none; user-select: none; -webkit-user-drag: none; }
+.figura-testo { line-height: 1; text-align: center; }
+.figura.gigante { width: 150px; height: 150px; font-size: 120px; }
+.figura.grande { width: 130px; height: 130px; font-size: 104px; }
+.figura.media { width: 72px; height: 72px; font-size: 56px; }
+.figura.piccola { width: 56px; height: 56px; font-size: 44px; }
+.figura.conta { width: 52px; height: 52px; font-size: 42px; }
+.lezione-testa .figura.gigante { display: block; margin: 0 auto 6px; animation: dondola 4s ease-in-out infinite; }
+.argomento .figura.media { width: 64px; height: 64px; }
+.con-figura { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+.parola .con-figura { flex-direction: row; }
+.parola .figura.piccola { width: 30px; height: 30px; font-size: 24px; }
+.scheda { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 24px; align-items: center; }
+.scheda h2 { flex-wrap: wrap; }
+@media (max-width: 600px) { .scheda { grid-template-columns: 1fr; } .scheda-figura { order: -1; justify-self: center; } .figura.grande { width: 96px; height: 96px; } }
+.galleria { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 12px; }
+.galleria figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--tema-chiaro); border-radius: 16px; padding: 10px 14px; min-width: 96px; }
+.galleria figure .con-figura { font-weight: 800; font-size: .95rem; }
+.gruppo-figure { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 2px; }
+.gruppo-figure .figura.media { width: 52px; height: 52px; }
+.domanda-riga { display: flex; align-items: center; gap: 14px; margin: 6px 0 16px; }
+.domanda-riga .domanda { margin: 0; flex: 1; min-width: 0; }
+.domanda-riga .leggi { margin-left: 0; font-size: 1.2rem; padding: 6px 12px; }
+.cesto h4 .con-figura { flex-direction: row; }
+.cesto h4 .figura.piccola { width: 40px; height: 40px; }
+.cesto .dentro .figura.piccola { width: 36px; height: 36px; }
+.sequenza .figura.piccola { width: 44px; height: 44px; }
+.oggetti { gap: 8px; }
+
+/* Stampato maiuscolo, come in prima e seconda */
+body.maiuscolo main { text-transform: uppercase; letter-spacing: .03em; }
+
 /* ---------- Esercizi ---------- */
 .punteggio {
   position: sticky; top: 10px; z-index: 5; margin: 0 auto 22px; width: fit-content;
@@ -256,7 +290,11 @@ body.lim .esercizio .domanda { font-size: 2.2rem; margin-bottom: 28px; }
 body.lim .spiegazione { font-size: 1.4rem; }
 body.lim .opzione, body.lim .tessera { min-height: 90px; font-size: 1.7rem; padding: 18px 22px; border-width: 4px; }
 body.lim .vf .opzione { min-width: 260px; font-size: 2.2rem; }
-body.lim .oggetti { font-size: 4.2rem; }
+body.lim .oggetti .figura.conta { width: 84px; height: 84px; }
+body.lim .figura.piccola { width: 84px; height: 84px; }
+body.lim .figura.media { width: 110px; height: 110px; }
+body.lim .figura.grande { width: 220px; height: 220px; }
+body.lim .figura.gigante { width: 220px; height: 220px; }
 body.lim .frase-completa { font-size: 1.7rem; }
 body.lim .retta { height: 150px; }
 body.lim .retta .tacca { width: 64px; margin-left: -32px; }
@@ -286,3 +324,6 @@ body.lim .punteggio { position: fixed; top: max(12px, env(safe-area-inset-top, 0
   .scheda, .esercizio { box-shadow: none; border: 1px solid #ccc; break-inside: avoid; }
 }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+body.lim .scheda.corrente { display: grid !important; align-content: center; }
+body.lim .cesto h4 { font-size: 1.6rem; }
+body.lim .galleria figure .con-figura { font-size: 1.3rem; }

@@ -3,30 +3,28 @@
   "emoji": "💧",
   "materia": "scienze",
   "classe": 3,
-  "introduzione": "Lo sai che l'acqua che bevi oggi potrebbe essere stata, tanto tempo fa, la pioggia caduta su un dinosauro? Seguiamo il viaggio di una goccia!",
+  "introduzione": "Seguiamo una goccia d'acqua nel suo lungo viaggio.",
   "sezioni": [
-    { "titolo": "L'evaporazione", "emoji": "☀️", "testo": "Il Sole scalda l'acqua dei mari, dei laghi e dei fiumi. Quando si scalda, l'acqua diventa vapore: un gas invisibile che sale verso il cielo.", "curiosita": "Anche le pozzanghere spariscono dopo la pioggia perché l'acqua evapora!" },
-    { "titolo": "La condensazione", "emoji": "☁️", "testo": "In alto l'aria è fredda. Il vapore si raffredda e torna a essere tante goccioline piccolissime. Tutte insieme formano le nuvole." },
-    { "titolo": "Le precipitazioni", "emoji": "🌧️", "testo": "Quando le goccioline diventano grandi e pesanti, cadono a terra come pioggia. Se fa molto freddo, cadono come neve o grandine." },
-    { "titolo": "Il ritorno al mare", "emoji": "🌊", "testo": "L'acqua caduta scorre nei torrenti e nei fiumi, oppure entra nel terreno. Alla fine torna al mare… e il viaggio ricomincia! Per questo si chiama ciclo.", "curiosita": "L'acqua sulla Terra è sempre la stessa da milioni di anni: non si crea e non sparisce, cambia solo forma." }
+    { "titolo": "L'acqua sale", "immagine": "☀️", "testo": "Il sole scalda il mare.\nL'acqua diventa vapore e sale in cielo.", "immagini": ["🌊 mare", "☀️ caldo", "♨️ vapore"] },
+    { "titolo": "Nascono le nuvole", "immagine": "☁️", "testo": "In alto fa freddo.\nIl vapore diventa tante goccioline: è una nuvola." },
+    { "titolo": "Piove", "immagine": "🌧️", "testo": "Le gocce diventano pesanti e cadono.\nSe fa molto freddo, cade la neve.", "immagini": ["🌧️ pioggia", "❄️ neve"] },
+    { "titolo": "Si ricomincia", "immagine": "🔄", "testo": "L'acqua scorre nei fiumi e torna al mare.\nPoi il viaggio ricomincia!" }
   ],
-  "parole_chiave": ["evaporazione", "vapore", "condensazione", "nuvola", "precipitazione", "ciclo"],
+  "parole_chiave": ["♨️ evaporazione", "☁️ condensazione", "🌧️ precipitazione", "🔄 ciclo"],
   "esercizi": [
-    { "tipo": "scelta", "domanda": "Chi scalda l'acqua del mare e la fa evaporare?", "opzioni": ["La Luna", "Il Sole", "Il vento"], "corretta": 1, "spiegazione": "Il calore del Sole trasforma l'acqua in vapore." },
-    { "tipo": "vero_falso", "affermazione": "Il vapore acqueo si può vedere facilmente nel cielo.", "corretta": false, "spiegazione": "Il vapore è invisibile. Le nuvole invece sono fatte di goccioline." },
-    { "tipo": "ordina", "domanda": "Metti in ordine il viaggio della goccia.", "elementi": ["Il Sole scalda il mare", "L'acqua evapora e sale", "Si formano le nuvole", "Piove", "L'acqua torna al mare"] },
-    { "tipo": "abbina", "domanda": "Unisci ogni parola al suo significato.", "coppie": [["Evaporazione", "l'acqua diventa vapore"], ["Condensazione", "il vapore diventa goccioline"], ["Precipitazione", "l'acqua cade dal cielo"]] },
-    { "tipo": "completa", "domanda": "Completa la frase.", "testo": "Quando fa molto freddo, invece della pioggia cade la [neve]. Le nuvole sono fatte di tante [goccioline].", "distrattori": ["sabbia", "foglie"] },
-    { "tipo": "categorie", "domanda": "Dove si trova l'acqua? Metti ogni cosa nel cesto giusto.", "categorie": ["Acqua liquida 💧", "Acqua solida 🧊", "Vapore ♨️"], "elementi": [
-      { "testo": "il mare", "categoria": "Acqua liquida 💧" },
-      { "testo": "la pioggia", "categoria": "Acqua liquida 💧" },
-      { "testo": "un ghiacciolo", "categoria": "Acqua solida 🧊" },
-      { "testo": "la neve", "categoria": "Acqua solida 🧊" },
-      { "testo": "la grandine", "categoria": "Acqua solida 🧊" },
-      { "testo": "il fumo della pentola", "categoria": "Vapore ♨️" },
-      { "testo": "il fiume", "categoria": "Acqua liquida 💧" }
-    ], "suggerimento": "Pensa: è liquido, è duro come il ghiaccio, o sale nell'aria?" },
-    { "tipo": "vero_falso", "affermazione": "Il ciclo dell'acqua non finisce mai: ricomincia sempre.", "corretta": true, "spiegazione": "Per questo si chiama ciclo!" },
-    { "tipo": "scelta", "domanda": "Perché le pozzanghere spariscono quando torna il sole?", "opzioni": ["Le bevono gli uccellini", "L'acqua evapora", "L'acqua diventa ghiaccio"], "corretta": 1, "spiegazione": "Il calore trasforma l'acqua in vapore." }
+    { "tipo": "scelta", "immagine": "🌊", "domanda": "Chi scalda l'acqua del mare?", "opzioni": ["🌙 la luna", "☀️ il sole", "🌬️ il vento"], "corretta": 1 },
+    { "tipo": "vero_falso", "immagine": "♨️", "affermazione": "Il vapore sale verso il cielo.", "corretta": true },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Metti in ordine il viaggio della goccia.", "elementi": ["☀️ Il sole scalda", "♨️ L'acqua sale", "☁️ Si forma la nuvola", "🌧️ Piove", "🌊 Torna al mare"] },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci la parola al disegno giusto.", "coppie": [["Evaporazione", "♨️ l'acqua sale"], ["Condensazione", "☁️ nasce la nuvola"], ["Precipitazione", "🌧️ cade la pioggia"]] },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "Quando fa freddo cade la [neve].", "distrattori": ["sabbia"] },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Liquida o solida?", "categorie": ["💧 Liquida", "🧊 Solida"], "elementi": [
+      { "testo": "🌊 mare", "categoria": "💧 Liquida" },
+      { "testo": "🌧️ pioggia", "categoria": "💧 Liquida" },
+      { "testo": "🏞️ fiume", "categoria": "💧 Liquida" },
+      { "testo": "❄️ neve", "categoria": "🧊 Solida" },
+      { "testo": "🧊 ghiaccio", "categoria": "🧊 Solida" }
+    ] },
+    { "tipo": "vero_falso", "immagine": "🔄", "affermazione": "Il viaggio dell'acqua finisce e non ricomincia più.", "corretta": false, "spiegazione": "Ricomincia sempre: è un ciclo!" },
+    { "tipo": "scelta", "immagine": "🌦️", "domanda": "Dove va la pozzanghera quando torna il sole?", "opzioni": ["🐦 la bevono gli uccellini", "♨️ diventa vapore", "🧊 diventa ghiaccio"], "corretta": 1, "spiegazione": "Il caldo trasforma l'acqua in vapore." }
   ]
 }

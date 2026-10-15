@@ -87,16 +87,80 @@ window.Suono = (() => {
   };
 })();
 
-/* ---------- Voce: legge ad alta voce in italiano ---------- */
-window.leggi = function (testo) {
-  if (!("speechSynthesis" in window)) return;
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(testo);
-  u.lang = "it-IT"; u.rate = 0.92;
-  const voce = speechSynthesis.getVoices().find((v) => v.lang.startsWith("it"));
-  if (voce) u.voice = voce;
-  speechSynthesis.speak(u);
-};
+/* ---------- Voce: legge ad alta voce in italiano ----------
+   Sceglie la voce femminile italiana più naturale disponibile sul computer.
+   L'insegnante può cambiarla nell'area insegnante: la scelta resta su quel computer. */
+window.Voce = (() => {
+  const CHIAVE = "classe-irene-voce";
+  // In ordine di preferenza: voci "naturali" di Edge/Windows, Chrome, Apple.
+  const PREFERITE = [/elsa.*natural/i, /isabella.*natural/i, /natural.*it/i, /google italiano/i, /alice/i, /federica/i, /elsa/i, /paola/i, /emma/i];
+  const MASCHILI = /cosimo|diego|luca|giuseppe|benigno|marcello|rinaldi/i;
+  let voci = [];
+  const carica = () => { voci = ("speechSynthesis" in window) ? speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("it")) : []; };
+  carica();
+  if ("speechSynthesis" in window) speechSynthesis.addEventListener?.("voiceschanged", carica);
+  function scelta() {
+    let nome = null;
+    try { nome = localStorage.getItem(CHIAVE); } catch {}
+    const salvata = voci.find((v) => v.name === nome);
+    if (salvata) return salvata;
+    for (const re of PREFERITE) { const v = voci.find((x) => re.test(x.name)); if (v) return v; }
+    return voci.find((v) => !MASCHILI.test(v.name)) || voci[0];
+  }
+  return {
+    elenco: () => voci,
+    scelta,
+    imposta(nome) { try { localStorage.setItem(CHIAVE, nome); } catch {} },
+    parla(testo) {
+      if (!("speechSynthesis" in window)) return;
+      speechSynthesis.cancel();
+      // Le emoji non vanno lette ad alta voce.
+      const pulito = String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ");
+      const u = new SpeechSynthesisUtterance(pulito);
+      u.lang = "it-IT"; u.rate = 0.88; u.pitch = 1.05;
+      const v = scelta(); if (v) u.voice = v;
+      speechSynthesis.speak(u);
+    },
+  };
+})();
+window.leggi = (t) => Voce.parla(t);
+
+/* ---------- Immagini illustrate ----------
+   Ogni emoji diventa un'immagine 3D colorata (cartella assets/emoji).
+   Se un testo comincia con un'emoji ("🍎 mela"), l'emoji diventa la figura dell'elemento. */
+window.Figura = (() => {
+  const EMO = "\\p{Extended_Pictographic}(?:\\uFE0F|\\u20E3|[\\u{1F3FB}-\\u{1F3FF}]|\\u200D\\p{Extended_Pictographic}\\uFE0F?)*";
+  const RE_INIZIO = new RegExp(`^\\s*((?:${EMO}\\s*)+)`, "u");
+  const RE_UNA = new RegExp(EMO, "gu");
+  const nomeFile = (e) => [...e].map((c) => c.codePointAt(0).toString(16)).join("-");
+  function file(emoji) {
+    const set = window.EMOJI_DISPONIBILI;
+    if (!set) return null;
+    const n = nomeFile(emoji);
+    const senza = n.split("-").filter((x) => x !== "fe0f").join("-");
+    const conFe = senza.includes("-") ? null : senza + "-fe0f";
+    for (const c of [n, senza, conFe]) if (c && set.has(c)) return `assets/emoji/${c}.webp`;
+    return null;
+  }
+  function img(emoji, classe = "figura") {
+    const f = file(emoji);
+    return f ? `<img class="${classe}" src="${f}" alt="" draggable="false">` : `<span class="${classe} figura-testo" aria-hidden="true">${escapeHTML(emoji)}</span>`;
+  }
+  // Separa le emoji iniziali (anche ripetute: "🍎🍎🍎 3") dal resto del testo.
+  function dividi(t) {
+    const m = String(t ?? "").match(RE_INIZIO);
+    if (!m) return { emoji: null, tutte: [], testo: String(t ?? "") };
+    const tutte = m[1].match(RE_UNA) || [];
+    return { emoji: tutte[0], tutte, testo: String(t).slice(m[0].length) };
+  }
+  const gruppo = (tutte, classe) => tutte.length > 1 ? `<span class="gruppo-figure">${tutte.map((e) => img(e, classe)).join("")}</span>` : img(tutte[0], classe);
+  // HTML per un'opzione o una tessera: figura sopra, parola sotto.
+  function ricco(t, classe = "figura piccola") {
+    const { tutte, testo } = dividi(t);
+    return tutte.length ? `<span class="con-figura">${gruppo(tutte, classe)}<span>${escapeHTML(testo)}</span></span>` : escapeHTML(testo);
+  }
+  return { img, dividi, ricco, file };
+})();
 
 /* ---------- Coriandoli ---------- */
 window.coriandoli = function (quanti = 80) {

@@ -39,7 +39,7 @@
 
     radice.innerHTML = `
       <div class="lezione-testa">
-        <span class="emoji">${h(l.emoji || materia.icona)}</span>
+        ${Figura.img(l.emoji || materia.icona, "figura gigante")}
         <div class="etichetta" style="background:var(--tema-chiaro);color:var(--tema)">${h(materia.nome)}${l.classe ? ` · classe ${h(l.classe)}ª` : ""}</div>
         <h1>${h(l.titolo)}</h1>
         ${l.introduzione ? `<p>${h(l.introduzione)}</p>` : ""}
@@ -49,14 +49,19 @@
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
         <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
+        <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
       </div>
       ${l.sezioni.map((s) => `
         <section class="scheda">
-          <h2><span class="emoji">${h(s.emoji || "📘")}</span>${h(s.titolo)}<button class="leggi" data-leggi="${h(s.titolo + ". " + s.testo)}">🔊 Leggi</button></h2>
-          ${String(s.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}
-          ${s.curiosita ? `<div class="curiosita">${h(s.curiosita)}</div>` : ""}
+          <div class="scheda-corpo">
+            <h2>${h(s.titolo)}<button class="leggi" data-leggi="${h(s.titolo + ". " + s.testo)}">🔊 Leggi</button></h2>
+            ${String(s.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}
+            ${s.immagini?.length ? `<div class="galleria">${s.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
+            ${s.curiosita ? `<div class="curiosita">${h(s.curiosita)}</div>` : ""}
+          </div>
+          <div class="scheda-figura">${Figura.img(s.immagine || s.emoji || "📘", "figura grande")}</div>
         </section>`).join("")}
-      ${l.parole_chiave?.length ? `<section class="scheda"><h2><span class="emoji">🗝️</span>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${h(p)}</span>`).join("")}</div></section>` : ""}
+      ${l.parole_chiave?.length ? `<section class="scheda"><div class="scheda-corpo"><h2>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${Figura.ricco(p)}</span>`).join("")}</div></div><div class="scheda-figura">${Figura.img("🗝️", "figura grande")}</div></section>` : ""}
       <h2 id="esercizi" style="text-align:center;margin-top:36px">🎯 Ora tocca a te!</h2>
       <div class="punteggio">⭐ <span data-punti>0</span> / ${l.esercizi.length}</div>
       <div data-esercizi></div>
@@ -70,6 +75,7 @@
       if (a === "leggi-tutto") leggi(testoIntero);
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "lim") avviaLIM(radice);
+      if (a === "maiuscolo") document.body.classList.toggle("maiuscolo");
       if (a === "suoni") { Suono.attivo = !Suono.attivo; b.textContent = `🔔 Suoni: ${Suono.attivo ? "sì" : "no"}`; }
     });
 
@@ -127,12 +133,14 @@
     });
   }
 
-  const domanda = (t) => (t ? `<div class="domanda">${h(t)}</div>` : "");
+  // Domanda con figura facoltativa e pulsante per ascoltarla (utile a chi legge con fatica).
+  const domanda = (t, e = {}) => (t ? `<div class="domanda-riga">${e.immagine ? Figura.img(e.immagine, "figura media") : ""}
+    <div class="domanda">${h(t)}</div><button class="leggi" data-leggi="${h(t)}" aria-label="Ascolta la domanda">🔊</button></div>` : "");
 
   const ESERCIZI = {
     scelta(e, c, esito) {
       const ordine = mescola(e.opzioni.map((t, i) => ({ t, i })));
-      c.innerHTML = domanda(e.domanda) + `<div class="opzioni">${ordine.map((o) => `<button class="opzione" data-i="${o.i}">${h(o.t)}</button>`).join("")}</div>`;
+      c.innerHTML = domanda(e.domanda, e) + `<div class="opzioni">${ordine.map((o) => `<button class="opzione" data-i="${o.i}">${Figura.ricco(o.t)}</button>`).join("")}</div>`;
       c.addEventListener("click", (ev) => {
         const b = ev.target.closest(".opzione");
         if (!b || c.closest(".risolto")) return;
@@ -141,7 +149,7 @@
     },
 
     vero_falso(e, c, esito) {
-      c.innerHTML = domanda(e.affermazione) + `<div class="vf"><button class="opzione" data-v="true">👍 Vero</button><button class="opzione" data-v="false">👎 Falso</button></div>`;
+      c.innerHTML = domanda(e.affermazione, e) + `<div class="vf"><button class="opzione" data-v="true">${Figura.ricco("👍 Vero")}</button><button class="opzione" data-v="false">${Figura.ricco("👎 Falso")}</button></div>`;
       c.addEventListener("click", (ev) => {
         const b = ev.target.closest(".opzione");
         if (!b || c.closest(".risolto")) return;
@@ -153,9 +161,9 @@
     abbina(e, c, esito) {
       const sx = mescola(e.coppie.map((p, i) => ({ t: p[0], i })));
       const dx = mescola(e.coppie.map((p, i) => ({ t: p[1], i })));
-      c.innerHTML = domanda(e.domanda || "Unisci le coppie: tocca un elemento a sinistra e poi il suo compagno.") +
-        `<div class="abbina"><div class="colonna">${sx.map((o) => `<button class="tessera" data-lato="sx" data-i="${o.i}">${h(o.t)}</button>`).join("")}</div>
-         <div class="colonna">${dx.map((o) => `<button class="tessera" data-lato="dx" data-i="${o.i}">${h(o.t)}</button>`).join("")}</div></div>`;
+      c.innerHTML = domanda(e.domanda || "Unisci le coppie: tocca un elemento a sinistra e poi il suo compagno.", e) +
+        `<div class="abbina"><div class="colonna">${sx.map((o) => `<button class="tessera" data-lato="sx" data-i="${o.i}">${Figura.ricco(o.t)}</button>`).join("")}</div>
+         <div class="colonna">${dx.map((o) => `<button class="tessera" data-lato="dx" data-i="${o.i}">${Figura.ricco(o.t)}</button>`).join("")}</div></div>`;
       let scelta = null, fatte = 0;
       c.addEventListener("click", (ev) => {
         const b = ev.target.closest(".tessera");
@@ -175,9 +183,9 @@
 
     // Tocca una tessera, poi il cesto giusto (si può anche trascinare).
     categorie(e, c, esito) {
-      c.innerHTML = domanda(e.domanda || "Metti ogni elemento nel cesto giusto.") +
-        `<div class="mazzo">${mescola(e.elementi).map((x) => `<button class="tessera" data-cat="${h(x.categoria)}">${h(x.testo)}</button>`).join("")}</div>
-         <div class="categorie">${e.categorie.map((k) => `<div class="cesto" data-cat="${h(k)}"><h4>${h(k)}</h4><div class="dentro"></div></div>`).join("")}</div>`;
+      c.innerHTML = domanda(e.domanda || "Metti ogni elemento nel cesto giusto.", e) +
+        `<div class="mazzo">${mescola(e.elementi).map((x) => `<button class="tessera" data-cat="${h(x.categoria)}">${Figura.ricco(x.testo)}</button>`).join("")}</div>
+         <div class="categorie">${e.categorie.map((k) => `<div class="cesto" data-cat="${h(k)}"><h4>${Figura.ricco(k)}</h4><div class="dentro"></div></div>`).join("")}</div>`;
       let scelta = null, fatte = 0;
       const metti = (t, cesto) => {
         if (t.dataset.cat === cesto.dataset.cat) {
@@ -199,9 +207,9 @@
 
     // Tocca le tessere nell'ordine giusto.
     ordina(e, c, esito) {
-      c.innerHTML = domanda(e.domanda || "Metti in ordine.") +
+      c.innerHTML = domanda(e.domanda || "Metti in ordine.", e) +
         `<div class="sequenza"><span class="vuoto">Tocca le tessere nell'ordine giusto…</span></div>
-         <div class="mazzo">${mescola(e.elementi.map((t, i) => ({ t, i }))).map((o) => `<button class="tessera" data-i="${o.i}">${h(o.t)}</button>`).join("")}</div>`;
+         <div class="mazzo">${mescola(e.elementi.map((t, i) => ({ t, i }))).map((o) => `<button class="tessera" data-i="${o.i}">${Figura.ricco(o.t)}</button>`).join("")}</div>`;
       const seq = c.querySelector(".sequenza");
       let prossimo = 0;
       c.addEventListener("click", (ev) => {
@@ -221,7 +229,7 @@
       const risposte = [];
       const frase = h(e.testo).replace(/\[([^\]]+)\]/g, (_, r) => { risposte.push(r); return `<span class="buco" data-n="${risposte.length - 1}">&nbsp;</span>`; });
       const tessere = mescola([...risposte, ...(e.distrattori || [])]);
-      c.innerHTML = domanda(e.domanda || "Completa la frase con le parole giuste.") +
+      c.innerHTML = domanda(e.domanda || "Completa la frase con le parole giuste.", e) +
         `<p class="frase-completa">${frase}</p><div class="mazzo">${tessere.map((t) => `<button class="tessera">${h(t)}</button>`).join("")}</div>`;
       let n = 0;
       const buchi = c.querySelectorAll(".buco");
@@ -244,8 +252,8 @@
         while (s.size < 4) s.add(Math.max(0, e.numero + Math.floor(Math.random() * 7) - 3));
         opz = [...s];
       }
-      c.innerHTML = domanda(e.domanda || "Quanti sono?") +
-        `<div class="oggetti">${Array.from({ length: e.numero }, (_, i) => `<span style="animation-delay:${i * 60}ms">${h(e.oggetto)}</span>`).join("")}</div>
+      c.innerHTML = domanda(e.domanda || "Quanti sono?", e) +
+        `<div class="oggetti">${Array.from({ length: e.numero }, (_, i) => `<span style="animation-delay:${i * 60}ms">${Figura.img(e.oggetto, "figura conta")}</span>`).join("")}</div>
          <div class="opzioni">${mescola(opz).map((n) => `<button class="opzione" data-n="${n}">${n}</button>`).join("")}</div>`;
       c.addEventListener("click", (ev) => {
         const b = ev.target.closest(".opzione");
@@ -259,7 +267,7 @@
       const valori = [];
       for (let v = e.min; v <= e.max + 1e-9; v += passo) valori.push(+v.toFixed(2));
       const mostra = e.nascondi_numeri ? (v) => (v === e.min || v === e.max ? v : "?") : (v) => v;
-      c.innerHTML = domanda(e.domanda || `Tocca il numero ${e.corretta} sulla linea.`) +
+      c.innerHTML = domanda(e.domanda || `Tocca il numero ${e.corretta} sulla linea.`, e) +
         `<div class="retta"><div class="linea"></div>${valori.map((v, i) =>
           `<button class="tacca" data-v="${v}" style="left:${(i / (valori.length - 1)) * 100}%"><span>${mostra(v)}</span></button>`).join("")}</div>`;
       c.addEventListener("click", (ev) => {

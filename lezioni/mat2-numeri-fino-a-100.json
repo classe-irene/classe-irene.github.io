@@ -1,31 +1,32 @@
 {
-  "titolo": "Il paese dei numeri fino a 100",
+  "titolo": "I numeri fino a 100",
   "emoji": "💯",
   "materia": "matematica",
   "classe": 2,
-  "introduzione": "Le decine sono come pacchi da 10 caramelle. Con i pacchi e le caramelle sciolte possiamo contare fino a 100!",
+  "introduzione": "Contiamo con i pacchi e le caramelle!",
   "sezioni": [
-    { "titolo": "Decine e unità", "emoji": "📦", "testo": "Quando abbiamo 10 unità le chiudiamo in un pacco: è una decina.\nIl numero 34 ha 3 decine e 4 unità: tre pacchi e quattro caramelle sciolte.", "curiosita": "1 decina = 10 unità. 10 decine = 100 unità, cioè un centinaio!" },
-    { "titolo": "Il posto delle cifre", "emoji": "🏠", "testo": "Ogni cifra abita in una casetta. A destra c'è la casetta delle unità (u), a sinistra quella delle decine (da).\nIn 52 il 5 vale 5 decine, cioè 50. Il 2 vale 2 unità." },
-    { "titolo": "Contare per 10", "emoji": "🦘", "testo": "Possiamo saltare come un canguro, di 10 in 10: 10, 20, 30, 40, 50…\nOgni salto aggiunge una decina e le unità restano uguali: 13, 23, 33, 43." },
-    { "titolo": "Più grande o più piccolo?", "emoji": "🐊", "testo": "Per confrontare due numeri guardiamo prima le decine. Chi ha più decine è più grande.\nSe le decine sono uguali, guardiamo le unità. Il coccodrillo apre la bocca verso il numero più grande: 47 > 39." }
+    { "titolo": "Le unità", "immagine": "🍬", "testo": "Una caramella da sola è un'unità.\nLe unità si contano una alla volta.", "immagini": ["🍬 1 unità", "🍬🍬🍬 3 unità"] },
+    { "titolo": "Le decine", "immagine": "📦", "testo": "Dieci caramelle stanno in un pacco.\nUn pacco da dieci è una decina.", "immagini": ["📦 1 decina", "🍬 10 unità"], "curiosita": "1 decina = 10 unità." },
+    { "titolo": "Pacchi e caramelle", "immagine": "🧸", "testo": "Il numero 34 ha 3 pacchi e 4 caramelle.\n3 decine e 4 unità." },
+    { "titolo": "Contiamo di dieci in dieci", "immagine": "🦘", "testo": "Il canguro salta di dieci in dieci.\n10, 20, 30, 40, 50… fino a 100!" },
+    { "titolo": "Chi è più grande?", "immagine": "🐊", "testo": "Guarda prima i pacchi: vince chi ne ha di più.\n47 è più grande di 39." }
   ],
-  "parole_chiave": ["unità", "decina", "centinaio", "cifra", "maggiore >", "minore <"],
+  "parole_chiave": ["🍬 unità", "📦 decina", "💯 cento", "🐊 più grande"],
   "esercizi": [
-    { "tipo": "scelta", "domanda": "Quante decine ci sono nel numero 63?", "opzioni": ["3", "6", "63"], "corretta": 1, "spiegazione": "63 = 6 decine e 3 unità." },
-    { "tipo": "abbina", "domanda": "Unisci ogni numero alla sua scomposizione.", "coppie": [["48", "4 da e 8 u"], ["84", "8 da e 4 u"], ["70", "7 da e 0 u"], ["17", "1 da e 7 u"]] },
-    { "tipo": "retta", "domanda": "Salta come un canguro: dove si trova il 70?", "min": 0, "max": 100, "passo": 10, "corretta": 70 },
-    { "tipo": "completa", "domanda": "Completa la frase.", "testo": "Il numero 59 ha [5] decine e [9] unità. Dopo il 59 viene il [60].", "distrattori": ["95", "58"] },
-    { "tipo": "vero_falso", "affermazione": "36 è più grande di 63.", "corretta": false, "spiegazione": "63 ha 6 decine, 36 ne ha solo 3: 63 è più grande." },
-    { "tipo": "ordina", "domanda": "Metti in ordine dal più piccolo al più grande.", "elementi": ["19", "41", "45", "70", "98"], "suggerimento": "Guarda prima le decine!" },
-    { "tipo": "categorie", "domanda": "Questi numeri sono maggiori o minori di 50?", "categorie": ["Minori di 50", "Maggiori di 50"], "elementi": [
-      { "testo": "27", "categoria": "Minori di 50" },
-      { "testo": "49", "categoria": "Minori di 50" },
-      { "testo": "5", "categoria": "Minori di 50" },
-      { "testo": "51", "categoria": "Maggiori di 50" },
-      { "testo": "80", "categoria": "Maggiori di 50" },
-      { "testo": "94", "categoria": "Maggiori di 50" }
+    { "tipo": "scelta", "immagine": "📦", "domanda": "Nel numero 63, quanti pacchi da dieci ci sono?", "opzioni": ["3", "6", "9"], "corretta": 1, "spiegazione": "63 = 6 decine e 3 unità." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il numero ai suoi pacchi e caramelle.", "coppie": [["48", "📦 4 decine e 🍬 8 unità"], ["84", "📦 8 decine e 🍬 4 unità"], ["70", "📦 7 decine e 🍬 0 unità"]] },
+    { "tipo": "retta", "immagine": "🦘", "domanda": "Il canguro salta di 10 in 10. Tocca il 70.", "min": 0, "max": 100, "passo": 10, "corretta": 70 },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "59 ha [5] decine e [9] unità.", "distrattori": ["4"] },
+    { "tipo": "vero_falso", "immagine": "🐊", "affermazione": "36 è più grande di 63.", "corretta": false, "spiegazione": "63 ha 6 decine. 36 ne ha solo 3." },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo al più grande.", "elementi": ["19", "41", "70", "98"], "suggerimento": "Guarda prima le decine!" },
+    { "tipo": "categorie", "immagine": "⚖️", "domanda": "Più piccolo o più grande di 50?", "categorie": ["🐭 Meno di 50", "🐘 Più di 50"], "elementi": [
+      { "testo": "27", "categoria": "🐭 Meno di 50" },
+      { "testo": "8", "categoria": "🐭 Meno di 50" },
+      { "testo": "49", "categoria": "🐭 Meno di 50" },
+      { "testo": "61", "categoria": "🐘 Più di 50" },
+      { "testo": "80", "categoria": "🐘 Più di 50" },
+      { "testo": "94", "categoria": "🐘 Più di 50" }
     ] },
-    { "tipo": "scelta", "domanda": "Luca ha 4 pacchi da 10 figurine e 6 figurine sciolte. Quante figurine ha?", "opzioni": ["10", "46", "64"], "corretta": 1, "spiegazione": "4 decine e 6 unità fanno 46." }
+    { "tipo": "scelta", "immagine": "🃏", "domanda": "Luca ha 4 pacchi da 10 figurine e 6 figurine sciolte. Quante sono?", "opzioni": ["10", "46", "64"], "corretta": 1, "spiegazione": "4 decine e 6 unità: 46!" }
   ]
 }

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
 <script src="assets/curricolo.js"></script>
+<script src="assets/emoji-elenco.js"></script>
 <script src="assets/comune.js"></script>
 </head>
 <body>
@@ -26,8 +27,8 @@
   const mie = Archivio.tutte().filter((l) => l.materia === materia && +l.classe === c);
 
   const scheda = (a) => a.lezione
-    ? `<a class="argomento pronta" href="lezione.html?file=${encodeURIComponent(a.lezione)}"><span class="emoji">${a.emoji}</span><h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p><span class="stato">▶ Lezione pronta</span></a>`
-    : `<div class="argomento"><span class="emoji">${a.emoji}</span><h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p>
+    ? `<a class="argomento pronta" href="lezione.html?file=${encodeURIComponent(a.lezione)}">${Figura.img(a.emoji, "figura media")}<h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p><span class="stato">▶ Lezione pronta</span></a>`
+    : `<div class="argomento">${Figura.img(a.emoji, "figura media")}<h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p>
         <div class="azioni"><a class="btn piccolo bianco" href="area-insegnante.html?materia=${materia}&classe=${c}&argomento=${encodeURIComponent(a.titolo)}">🔒 Crea in 5 minuti</a></div></div>`;
 
   document.getElementById("radice").innerHTML = `
@@ -37,7 +38,7 @@
       <p>Riferimento: ${RIFERIMENTO(c)}</p>
     </div>
     ${mie.length ? `<h2>⭐ Le mie lezioni</h2><div class="argomenti">${mie.map((l) => `
-      <div class="argomento pronta"><span class="emoji">${escapeHTML(l.emoji || "✨")}</span><h3>${escapeHTML(l.titolo)}</h3><p>${escapeHTML(l.introduzione || "")}</p>
+      <div class="argomento pronta">${Figura.img(l.emoji || "✨", "figura media")}<h3>${escapeHTML(l.titolo)}</h3><p>${escapeHTML(l.introduzione || "")}</p>
       <div class="azioni"><a class="btn piccolo" href="lezione.html?locale=${encodeURIComponent(l.id)}">▶ Apri</a>
       <button class="btn piccolo bianco" data-elimina="${escapeHTML(l.id)}">🗑️</button></div></div>`).join("")}</div>` : ""}
     <h2>📚 Argomenti dell'anno</h2>
