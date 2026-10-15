@@ -121,7 +121,8 @@ window.Voce = (() => {
     if (femminile) return /^[aeiouàèéìòù]/.test(p) ? "un'" : "una ";
     return /^(s[^aeiouàèéìòù]|z|gn|ps|pn|x|y)/.test(p) ? "uno " : "un ";
   }
-  const leggibile = (t) => t.replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
+  // "1 000" o "1.000" -> "1000", così la voce dice "mille" e non "uno, zero zero zero".
+  const leggibile = (t) => t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1").replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
 
   return {
