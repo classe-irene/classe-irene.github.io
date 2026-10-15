@@ -111,14 +111,16 @@ window.Voce = (() => {
     elenco: () => voci,
     scelta,
     imposta(nome) { try { localStorage.setItem(CHIAVE, nome); } catch {} },
-    parla(testo) {
-      if (!("speechSynthesis" in window)) return;
+    // "fine" (facoltativa) viene chiamata quando la voce ha finito di parlare.
+    parla(testo, fine) {
+      if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       speechSynthesis.cancel();
       // Le emoji non vanno lette ad alta voce.
       const pulito = String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ");
       const u = new SpeechSynthesisUtterance(pulito);
       u.lang = "it-IT"; u.rate = 0.88; u.pitch = 1.05;
       const v = scelta(); if (v) u.voice = v;
+      if (fine) { let fatto = false; const una = () => { if (!fatto) { fatto = true; fine(); } }; u.onend = una; u.onerror = una; setTimeout(una, 4000 + pulito.length * 90); }
       speechSynthesis.speak(u);
     },
   };

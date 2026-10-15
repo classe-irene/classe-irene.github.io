@@ -61,7 +61,7 @@ window.CURRICOLO = {
     ],
     4: [
       { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri.", lezione: "lezioni/mat4-grandi-numeri.json" },
-      { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime." },
+      { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime.", lezione: "lezioni/mat4-moltiplicazioni-due-cifre.json" },
       { id: "mat4-divisioni", emoji: "➗", titolo: "Divisioni a due cifre", descrizione: "Divisore a due cifre e prova." },
       { id: "mat4-frazioni", emoji: "🍕", titolo: "Frazioni proprie e improprie", descrizione: "Frazioni equivalenti e complementari." },
       { id: "mat4-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Operazioni con i decimali." },

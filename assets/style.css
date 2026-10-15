@@ -300,7 +300,7 @@ body.lim .retta { height: 150px; }
 body.lim .retta .tacca { width: 64px; margin-left: -32px; }
 body.lim .retta .tacca::before { height: 52px; width: 6px; }
 body.lim .retta .tacca span { font-size: 1.4rem; padding: 4px 0; }
-body.lim .punteggio { position: fixed; top: max(12px, env(safe-area-inset-top, 0px)); right: 16px; margin: 0; font-size: 1.3rem; }
+body.lim .punteggio { position: fixed; top: auto; bottom: calc(26px + env(safe-area-inset-bottom, 0px)); left: max(16px, env(safe-area-inset-left, 0px)); margin: 0; font-size: 1.3rem; z-index: 45; }
 .lim-barra {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
   display: flex; align-items: center; justify-content: center; gap: 22px;
@@ -327,3 +327,58 @@ body.lim .punteggio { position: fixed; top: max(12px, env(safe-area-inset-top, 0
 body.lim .scheda.corrente { display: grid !important; align-content: center; }
 body.lim .cesto h4 { font-size: 1.6rem; }
 body.lim .galleria figure .con-figura { font-size: 1.3rem; }
+
+/* ---------- Animazioni e calcolo in colonna (quaderno a quadretti) ---------- */
+.scheda.con-animazione { grid-template-columns: 1fr; }
+.scheda.con-animazione .scheda-figura { display: none; }
+.animazione { margin-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.palco {
+  width: 100%; display: flex; justify-content: center; padding: 18px; border-radius: 18px;
+  background-color: #FDFEFF;
+  background-image: linear-gradient(#DCE6F7 1px, transparent 1px), linear-gradient(90deg, #DCE6F7 1px, transparent 1px);
+  background-size: 28px 28px; border: 2px solid var(--bordo);
+}
+.didascalia { min-height: 2.6em; margin: 0; font-size: 1.3rem; font-weight: 800; text-align: center; max-width: 40ch; color: var(--tema); }
+.didascalia.nuova { animation: compari .4s; }
+.comandi { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; }
+.con-voce { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; margin: 0; }
+.colonna-griglia { display: grid; gap: 0; font-family: "Baloo 2", "Nunito", sans-serif; font-variant-numeric: tabular-nums; }
+.colonna-griglia .cella {
+  width: 56px; height: 56px; display: grid; place-items: center; font-size: 2.2rem; font-weight: 800;
+  border-radius: 10px; transition: background .2s, box-shadow .2s;
+}
+.colonna-griglia .cella.riporto { height: 30px; font-size: 1.1rem; color: var(--corallo); align-self: end; }
+.colonna-griglia .cella.segno { color: var(--testo-tenue); }
+.colonna-griglia .cella.evid { background: var(--giallo-chiaro); box-shadow: inset 0 0 0 3px var(--giallo); }
+.colonna-griglia .cella.segnaposto { color: var(--testo-tenue); }
+.colonna-griglia .cella.nuova { animation: scrivi .45s; }
+.colonna-griglia .cella.attiva { box-shadow: inset 0 0 0 4px var(--tema); background: var(--tema-chiaro); animation: lampeggia 1.2s infinite; }
+.colonna-griglia.finita [class*="cella"].evid { background: #DFF6E8; box-shadow: inset 0 0 0 3px var(--ok); }
+.colonna-linea { height: 4px; background: var(--testo); border-radius: 2px; margin: 4px 0; }
+@keyframes scrivi { from { transform: scale(1.8) rotate(-8deg); opacity: 0; } }
+@keyframes lampeggia { 50% { box-shadow: inset 0 0 0 4px var(--giallo); } }
+.scomposizione { width: 100%; max-width: 560px; height: auto; }
+.scomposizione .etichetta-svg { font: 800 22px "Baloo 2", sans-serif; fill: var(--testo); text-anchor: middle; }
+.scomposizione .valore-svg { font: 800 28px "Baloo 2", sans-serif; fill: var(--testo); text-anchor: middle; paint-order: stroke; stroke: #fff; stroke-width: 5px; }
+.scomposizione .pezzo-nuovo { animation: compari .5s; }
+.colonna-es { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; align-items: center; }
+.colonna-posto { padding: 14px; border-radius: 16px; background-color: #FDFEFF; background-image: linear-gradient(#DCE6F7 1px, transparent 1px), linear-gradient(90deg, #DCE6F7 1px, transparent 1px); background-size: 28px 28px; border: 2px solid var(--bordo); }
+.tastierino { display: grid; grid-template-columns: repeat(5, 64px); gap: 10px; }
+.tasto { height: 64px; border-radius: 16px; border: 3px solid var(--bordo); background: #fff; font: 800 1.8rem "Baloo 2", sans-serif; color: var(--testo); box-shadow: 0 4px 0 rgba(0,0,0,.08); }
+.tasto:active { transform: translateY(3px); box-shadow: none; }
+.tasto.sbagliata { border-color: var(--ko); background: var(--corallo-chiaro); animation: scuoti .35s; }
+@media (max-width: 600px) {
+  .colonna-griglia .cella { width: 40px; height: 44px; font-size: 1.6rem; }
+  .tastierino { grid-template-columns: repeat(5, 52px); } .tasto { height: 52px; }
+}
+body.lim .colonna-griglia .cella { width: min(84px, 7.2vh); height: min(84px, 7.2vh); font-size: min(3.2rem, 5.4vh); }
+body.lim .colonna-griglia .cella.riporto { height: min(40px, 3.6vh); font-size: min(1.6rem, 3vh); }
+body.lim .scheda.con-animazione.corrente p { font-size: 1.4rem; margin: .3em 0; }
+body.lim .scheda.con-animazione.corrente .palco { padding: 10px; }
+body.lim .tastierino { grid-template-columns: repeat(5, 96px); gap: 14px; }
+body.lim .tasto { height: 96px; font-size: 2.6rem; }
+body.lim .didascalia { font-size: 2rem; }
+body.lim .scheda.con-animazione .animazione { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "palco comandi" "didascalia comandi"; align-items: center; gap: 14px 22px; width: 100%; }
+body.lim .scheda.con-animazione .palco { grid-area: palco; }
+body.lim .scheda.con-animazione .didascalia { grid-area: didascalia; justify-self: center; }
+body.lim .scheda.con-animazione .comandi { grid-area: comandi; flex-direction: column; align-items: stretch; }

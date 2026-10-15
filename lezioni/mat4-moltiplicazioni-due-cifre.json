@@ -1,0 +1,26 @@
+{
+  "titolo": "Moltiplicazioni a due cifre",
+  "emoji": "✖️",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "23 × 14 sembra difficile. Con due trucchi diventa facile!",
+  "sezioni": [
+    { "titolo": "Moltiplicare è sommare in fretta", "immagine": "🍫", "testo": "3 × 4 vuol dire: 4 + 4 + 4.\nLa moltiplicazione è un'addizione veloce.", "immagini": ["🍫🍫🍫🍫 4", "🍫🍫🍫🍫 4", "🍫🍫🍫🍫 4"] },
+    { "titolo": "Per 10 è facilissimo", "immagine": "🔟", "testo": "Per moltiplicare per 10 aggiungo uno 0.\n23 × 10 = 230.", "immagini": ["🔟 × 10", "0️⃣ aggiungo 0"] },
+    { "titolo": "Il trucco: spezzo i numeri", "immagine": "✂️", "testo": "Spezzo i numeri in pezzi facili.\nPoi sommo tutti i pezzi.\nPremi ▶ Guarda.", "animazione": { "tipo": "scomposizione", "a": 23, "b": 14 } },
+    { "titolo": "In colonna, passo passo", "immagine": "✏️", "testo": "Prima moltiplico per le unità.\nPoi per le decine, con lo 0 segnaposto.\nAlla fine sommo.", "animazione": { "tipo": "moltiplicazione", "a": 23, "b": 14 } },
+    { "titolo": "Con il riporto", "immagine": "🎒", "testo": "Se il risultato è più di 9, scrivo le unità.\nLe decine le porto sopra: è il riporto.", "animazione": { "tipo": "moltiplicazione", "a": 36, "b": 24 }, "curiosita": "Il riporto si scrive piccolo, sopra la cifra dopo." }
+  ],
+  "parole_chiave": ["✖️ moltiplicazione", "0️⃣ segnaposto", "🎒 riporto", "➕ somma"],
+  "esercizi": [
+    { "tipo": "scelta", "immagine": "🔟", "domanda": "23 × 10 = ?", "opzioni": ["23", "230", "2 300"], "corretta": 1, "spiegazione": "Per 10 aggiungo uno 0." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il calcolo al risultato.", "coppie": [["12 × 10", "120"], ["5 × 20", "100"], ["3 × 30", "90"]] },
+    { "tipo": "vero_falso", "immagine": "0️⃣", "affermazione": "Quando moltiplico per le decine, scrivo prima lo 0 segnaposto.", "corretta": true, "spiegazione": "Lo 0 tiene il posto delle unità." },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Metti in ordine i passi.", "elementi": ["✏️ Scrivo i numeri in colonna", "1️⃣ Moltiplico per le unità", "0️⃣ Scrivo lo 0 segnaposto", "🔟 Moltiplico per le decine", "➕ Sommo i risultati"] },
+    { "tipo": "colonna", "immagine": "✏️", "domanda": "Prova tu: 21 × 13. Tocca i numeri.", "a": 21, "b": 13, "spiegazione": "21 × 13 = 273." },
+    { "tipo": "completa", "immagine": "✂️", "domanda": "Spezzo il numero 14.", "testo": "23 × 14 = 23 × 10 + 23 × [4]", "distrattori": ["14", "1"] },
+    { "tipo": "colonna", "immagine": "🎒", "domanda": "Con il riporto: 32 × 24.", "a": 32, "b": 24, "spiegazione": "32 × 24 = 768." },
+    { "tipo": "scelta", "immagine": "🚌", "domanda": "Un pullman ha 52 posti. Quanti posti ci sono in 12 pullman?", "opzioni": ["104", "520", "624"], "corretta": 2, "spiegazione": "52 × 12 = 624." },
+    { "tipo": "colonna", "immagine": "🏆", "domanda": "Sfida: 45 × 23.", "a": 45, "b": 23, "spiegazione": "45 × 23 = 1 035. Campione!" }
+  ]
+}
