@@ -421,3 +421,8 @@ body.lim .scheda.con-animazione .video-titolo { grid-area: titolo; }
 body.lim .scheda.con-animazione .avanzamento { grid-area: avanzamento; }
 body.lim .animazione.video { padding: 10px 14px; gap: 8px 22px; }
 body.lim .scheda.con-animazione.corrente .galleria { display: none; }
+
+/* ---------- Pulsante Esci dell'area insegnante ---------- */
+.esci-nav { border: none; cursor: pointer; font: 800 1rem "Nunito", sans-serif; padding: 8px 16px; border-radius: 999px; background: var(--corallo); color: #fff; }
+.esci-nav:hover { filter: brightness(1.08); }
+.esci-btn { background: var(--corallo); }
