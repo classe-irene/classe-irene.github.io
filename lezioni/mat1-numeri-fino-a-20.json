@@ -1,0 +1,24 @@
+{
+  "titolo": "I numeri fino a 20",
+  "emoji": "🔢",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "I numeri sono dappertutto: sulle porte, sugli orologi, sulle magliette dei calciatori. Oggi impariamo a contarli fino a 20!",
+  "sezioni": [
+    { "titolo": "Contiamo insieme", "emoji": "🖐️", "testo": "Per contare tocchiamo un oggetto alla volta e diciamo un numero.\nUno, due, tre... Ogni oggetto si conta una volta sola!", "curiosita": "Le dita delle mani sono 10. Con mani e piedi arriviamo a 20!" },
+    { "titolo": "Il numero che viene dopo", "emoji": "➡️", "testo": "Ogni numero ha un vicino che viene dopo: è più grande di uno.\nDopo il 7 viene l'8. Dopo il 12 viene il 13." },
+    { "titolo": "Una decina", "emoji": "🔟", "testo": "Quando abbiamo 10 oggetti, possiamo metterli tutti insieme in un sacchetto: è una decina.\nIl numero 14 è una decina e 4 unità." },
+    { "titolo": "Più grande, più piccolo", "emoji": "🐘", "testo": "Il numero più grande indica più oggetti.\n15 caramelle sono più di 9 caramelle. Evviva!" }
+  ],
+  "parole_chiave": ["contare", "numero", "decina", "unità", "prima", "dopo"],
+  "esercizi": [
+    { "tipo": "conta", "domanda": "Quante mele ci sono?", "oggetto": "🍎", "numero": 6, "spiegazione": "Sono 6 mele!" },
+    { "tipo": "conta", "domanda": "Quante stelline vedi?", "oggetto": "⭐", "numero": 13, "suggerimento": "Conta piano, una alla volta.", "spiegazione": "13 stelline: una decina e 3 unità." },
+    { "tipo": "retta", "domanda": "Tocca il numero 8 sulla linea.", "min": 0, "max": 10, "passo": 1, "corretta": 8 },
+    { "tipo": "scelta", "domanda": "Quale numero viene dopo il 15?", "opzioni": ["14", "16", "17"], "corretta": 1, "spiegazione": "Dopo il 15 viene il 16." },
+    { "tipo": "ordina", "domanda": "Metti i numeri in ordine, dal più piccolo al più grande.", "elementi": ["3", "7", "11", "18"] },
+    { "tipo": "vero_falso", "affermazione": "12 è più grande di 20.", "corretta": false, "spiegazione": "20 è più grande di 12." },
+    { "tipo": "abbina", "domanda": "Unisci ogni numero alla sua parola.", "coppie": [["5", "cinque"], ["10", "dieci"], ["14", "quattordici"], ["20", "venti"]] },
+    { "tipo": "retta", "domanda": "Dove si trova il 17? Alcuni numeri sono nascosti!", "min": 10, "max": 20, "passo": 1, "corretta": 17, "nascondi_numeri": true, "suggerimento": "Parti dal 10 e conta le tacche." }
+  ]
+}

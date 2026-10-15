@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>La classe di Irene</title>
+<meta name="description" content="Matematica e Scienze per la scuola primaria: lezioni ed esercizi interattivi dalla prima alla quinta.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
+<script src="assets/curricolo.js"></script>
+<script src="assets/comune.js"></script>
+</head>
+<body>
+<main class="contenitore">
+  <section class="eroe">
+    <div>
+      <h1>Impariamo giocando! 🎈</h1>
+      <p>Lezioni colorate ed esercizi interattivi di Matematica e Scienze, dalla classe prima alla quinta.</p>
+      <p style="margin-top:18px"><a class="btn giallo" href="#matematica">Cominciamo! 🚀</a></p>
+    </div>
+    <div class="mascotte" id="mascotte"></div>
+  </section>
+
+  <section class="materie">
+    <div class="materia mat" id="matematica">
+      <h2><span class="icona">🔢</span>Matematica</h2>
+      <p class="nota">Numeri, operazioni, forme, misure e problemi.</p>
+      <div class="classi" data-materia="matematica"></div>
+    </div>
+    <div class="materia sci" id="scienze">
+      <h2><span class="icona">🔬</span>Scienze</h2>
+      <p class="nota">Esplorare, osservare e fare esperimenti.</p>
+      <div class="classi" data-materia="scienze"></div>
+    </div>
+  </section>
+
+  <section class="banda-cinque">
+    <div class="orologio">⏱️</div>
+    <div>
+      <h2>La lezione in 5 minuti</h2>
+      <p>Incolla un testo o carica un documento: il sito prepara le istruzioni per l'intelligenza artificiale e trasforma la risposta in una lezione con esercizi pronti per la classe.</p>
+      <a class="btn giallo" href="cinque-minuti.html">Crea una lezione ✨</a>
+    </div>
+  </section>
+</main>
+<script>
+  creaTestata();
+  document.getElementById("mascotte").innerHTML = MASCOTTE;
+  document.querySelectorAll(".classi").forEach((box) => {
+    const m = box.dataset.materia;
+    box.innerHTML = [1, 2, 3, 4, 5].map((c) =>
+      `<a class="classe" href="sezione.html?materia=${m}&classe=${c}">${c}ª<small>classe</small></a>`).join("");
+  });
+</script>
+</body>
+</html>
