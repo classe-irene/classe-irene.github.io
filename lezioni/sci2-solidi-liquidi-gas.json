@@ -13,6 +13,20 @@
         "🪨 sasso",
         "✏️ matita",
         "🧊 ghiaccio"
+      ],
+      "scopri": [
+        {
+          "fronte": "🪨 Sasso",
+          "retro": "Solido: ha una forma sua."
+        },
+        {
+          "fronte": "🥛 Latte",
+          "retro": "Liquido: prende la forma del bicchiere."
+        },
+        {
+          "fronte": "🎈 Aria",
+          "retro": "Gas: riempie tutto il palloncino."
+        }
       ]
     },
     {
@@ -23,7 +37,11 @@
         "🥛 latte",
         "🧃 succo",
         "💧 acqua"
-      ]
+      ],
+      "pensa": {
+        "domanda": "Se versi l'acqua da un bicchiere in una bottiglia, cambia la quantità o la forma?",
+        "risposta": "Cambia solo la forma! La quantità d'acqua resta la stessa."
+      }
     },
     {
       "titolo": "I gas",
@@ -32,7 +50,22 @@
       "immagini": [
         "🎈 aria nel palloncino",
         "♨️ vapore"
-      ]
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: l'aria c'è!",
+        "materiali": [
+          "🎈 palloncino",
+          "🍶 bottiglia di plastica vuota",
+          "🥣 bacinella d'acqua"
+        ],
+        "passi": [
+          "🍶 Schiaccia la bottiglia vuota: senti l'aria che esce?",
+          "🎈 Gonfia il palloncino: l'aria lo riempie tutto.",
+          "🥣 Metti la bottiglia vuota sott'acqua, con il tappo aperto.",
+          "🫧 Guarda: escono le bolle! Era piena d'aria."
+        ],
+        "domanda": "La bottiglia era davvero vuota?"
+      }
     },
     {
       "titolo": "🔍 Dentro le cose",
@@ -119,6 +152,25 @@
       ]
     },
     {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: unisci la cosa al suo stato.",
+      "coppie": [
+        [
+          "🧊 ghiaccio",
+          "🪨 solido"
+        ],
+        [
+          "🥛 latte",
+          "💧 liquido"
+        ],
+        [
+          "♨️ vapore",
+          "🎈 gas"
+        ]
+      ]
+    },
+    {
       "tipo": "vero_falso",
       "immagine": "🥛",
       "affermazione": "Il latte prende la forma del bicchiere.",
@@ -136,6 +188,26 @@
       ],
       "corretta": 1,
       "spiegazione": "L'aria è un gas."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo i liquidi!",
+      "giusti": [
+        "🥛 latte",
+        "🧃 succo",
+        "💧 acqua",
+        "🫒 olio",
+        "🍯 miele"
+      ],
+      "sbagliati": [
+        "🪨 sasso",
+        "✏️ matita",
+        "🎈 aria",
+        "🧱 mattone",
+        "🧸 orsetto"
+      ],
+      "quanti": 5
     },
     {
       "tipo": "abbina",
@@ -165,6 +237,13 @@
         "☀️ Il sole lo scalda",
         "💧 Diventa acqua"
       ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "GHIAC-CIO",
+      "indizio": "🧊 È freddo e solido"
     },
     {
       "tipo": "completa",
@@ -215,6 +294,37 @@
         "☀️ arriva il caldo",
         "🫕 diventa liquido"
       ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi non è un solido?",
+      "elementi": [
+        "🪨 sasso",
+        "🧱 mattone",
+        "🧃 succo",
+        "✏️ matita"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il succo è un liquido."
     }
+  ],
+  "storia": {
+    "personaggio": "🧊",
+    "testo": "Ciao! Sono Cubetto, un cubetto di ghiaccio.\nOggi è una giornata caldissima… mi sento strano!\nChe cosa mi succede?",
+    "immagini": [
+      "☀️ caldo",
+      "🧊 Cubetto",
+      "💧 goccia"
+    ],
+    "missione": "Seguite Cubetto nel suo viaggio: da solido a liquido a gas. Vincete la figurina del cubetto!"
+  },
+  "premio": "🧊",
+  "ricorda": [
+    "🪨 Il solido ha una forma sua.",
+    "💧 Il liquido scorre e prende la forma del contenitore.",
+    "🎈 Il gas riempie tutto lo spazio.",
+    "🔥 Con il caldo: ghiaccio → acqua → vapore.",
+    "❄️ Con il freddo: vapore → acqua → ghiaccio."
   ]
 }

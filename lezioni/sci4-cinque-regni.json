@@ -13,7 +13,11 @@
         "🔬 microscopio",
         "🥛 yogurt"
       ],
-      "curiosita": "Alcuni batteri sono buoni: aiutano a fare lo yogurt."
+      "curiosita": "Alcuni batteri sono buoni: aiutano a fare lo yogurt.",
+      "pensa": {
+        "domanda": "Se i batteri sono così piccoli, come facciamo a sapere che esistono?",
+        "risposta": "Li vediamo con il microscopio! E vediamo quello che fanno: per esempio trasformano il latte in yogurt."
+      }
     },
     {
       "titolo": "I protisti",
@@ -31,6 +35,20 @@
       "immagini": [
         "🍄 fungo",
         "🍞 muffa del pane"
+      ],
+      "scopri": [
+        {
+          "fronte": "🍄 Porcino",
+          "retro": "Fungo: cresce nel bosco."
+        },
+        {
+          "fronte": "🍞 Muffa",
+          "retro": "Fungo piccolissimo: cresce sul pane vecchio."
+        },
+        {
+          "fronte": "🍕 Lievito",
+          "retro": "Fungo piccolissimo: fa gonfiare la pizza!"
+        }
       ]
     },
     {
@@ -106,7 +124,22 @@
         "🦁 leone",
         "🐝 ape",
         "🐟 pesce"
-      ]
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: caccia ai viventi",
+        "materiali": [
+          "🔍 lente d'ingrandimento",
+          "📒 quaderno",
+          "✏️ matita"
+        ],
+        "passi": [
+          "🌳 Uscite in giardino con la lente.",
+          "🐜 Cercate un animale, una pianta e, se c'è, un fungo o una muffa.",
+          "✏️ Disegnate ognuno sul quaderno.",
+          "🧺 In classe, mettete ogni disegno nel regno giusto."
+        ],
+        "domanda": "Quale regno è stato più facile da trovare?"
+      }
     }
   ],
   "parole_chiave": [
@@ -128,6 +161,29 @@
         "🍄 Funghi",
         "🌳 Piante",
         "🦁 Animali"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il regno e un suo esempio.",
+      "coppie": [
+        [
+          "🦠 Monere",
+          "🥛 batteri dello yogurt"
+        ],
+        [
+          "🍄 Funghi",
+          "🍞 muffa"
+        ],
+        [
+          "🌳 Piante",
+          "🌻 girasole"
+        ],
+        [
+          "🦁 Animali",
+          "🐬 delfino"
+        ]
       ]
     },
     {
@@ -175,6 +231,18 @@
       "spiegazione": "I funghi sono un regno tutto loro."
     },
     {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova i nomi dei regni.",
+      "parole": [
+        "🦠 monere",
+        "💧 protisti",
+        "🍄 funghi",
+        "🌳 piante",
+        "🦁 animali"
+      ]
+    },
+    {
       "tipo": "scelta",
       "immagine": "🔬",
       "domanda": "In quale regno ci sono i batteri?",
@@ -204,6 +272,19 @@
           "🍂 mangiano foglie e cose morte"
         ]
       ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi non è un animale?",
+      "elementi": [
+        "🐝 ape",
+        "🪼 medusa",
+        "🍄 fungo",
+        "🐌 lumaca"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il fungo ha un regno tutto suo!"
     },
     {
       "tipo": "completa",
@@ -251,6 +332,31 @@
       "affermazione": "La muffa è un fungo.",
       "corretta": true,
       "spiegazione": "Sì! La muffa è un fungo piccolissimo."
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "FOTOSINTESI",
+      "indizio": "🌱 Così la pianta fa il suo cibo"
     }
+  ],
+  "storia": {
+    "personaggio": "🕵️",
+    "testo": "Ciao, sono l'esploratrice Lia!\nNel mio zaino ho una lente, un microscopio e un quaderno.\nVoglio mettere ogni essere vivente nella sua famiglia: il suo regno.",
+    "immagini": [
+      "🔍 lente",
+      "🔬 microscopio",
+      "📒 quaderno"
+    ],
+    "missione": "Esplorate con Lia i cinque regni dei viventi. Vincete la figurina della lente!"
+  },
+  "premio": "🔍",
+  "ricorda": [
+    "🦠 Monere: i batteri, piccolissimi.",
+    "💧 Protisti: piccolissimi, vivono nell'acqua.",
+    "🍄 Funghi: non sono verdi, non fanno la fotosintesi.",
+    "🌳 Piante: fanno il cibo con la luce e regalano ossigeno.",
+    "🦁 Animali: mangiano altri viventi e quasi tutti si muovono."
   ]
 }

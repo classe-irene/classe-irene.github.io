@@ -13,7 +13,11 @@
         "🍬 1",
         "🍬🍬🍬 3",
         "🍬🍬🍬🍬🍬 5"
-      ]
+      ],
+      "pensa": {
+        "domanda": "Secondo te, è più facile contare 34 caramelle sparse o 3 pacchi e 4 caramelle?",
+        "risposta": "Con i pacchi è molto più facile! 10, 20, 30… e poi 31, 32, 33, 34."
+      }
     },
     {
       "titolo": "📦 La decina",
@@ -23,7 +27,22 @@
         "🍬🍬🍬🍬🍬🍬🍬🍬🍬🍬 10 unità",
         "📦 1 decina"
       ],
-      "curiosita": "1 decina = 10 unità. Anche le dita delle mani sono 10! 🖐️🖐️"
+      "curiosita": "1 decina = 10 unità. Anche le dita delle mani sono 10! 🖐️🖐️",
+      "esperimento": {
+        "titolo": "Proviamo in classe: facciamo i pacchi!",
+        "materiali": [
+          "🥤 bicchieri di carta",
+          "🔴 tappi o fagioli",
+          "📏 elastici o bustine"
+        ],
+        "passi": [
+          "🔴 Ogni bambino prende una manciata di tappi.",
+          "🥤 Mettete 10 tappi in ogni bicchiere: è una decina.",
+          "🔢 Contate i bicchieri pieni e i tappi rimasti fuori.",
+          "✏️ Scrivete il numero: bicchieri = decine, tappi fuori = unità."
+        ],
+        "domanda": "Chi ha il numero più grande?"
+      }
     },
     {
       "titolo": "🧱 Costruiamo il 34",
@@ -45,6 +64,20 @@
         "📦📦📦 3 decine",
         "🍬🍬🍬🍬 4 unità",
         "✏️ 34"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 47",
+          "retro": "📦📦📦📦 4 decine e 🍬 7 unità"
+        },
+        {
+          "fronte": "❓ 70",
+          "retro": "📦📦📦📦📦📦📦 7 decine e 0 unità"
+        },
+        {
+          "fronte": "❓ 09",
+          "retro": "🍬 solo 9 unità: nessun pacco!"
+        }
       ]
     },
     {
@@ -136,6 +169,29 @@
       "spiegazione": "26 = 2 decine e 6 unità."
     },
     {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il numero e i suoi pacchi.",
+      "coppie": [
+        [
+          "34",
+          "📦📦📦 3 decine e 4 unità"
+        ],
+        [
+          "52",
+          "📦📦📦📦📦 5 decine e 2 unità"
+        ],
+        [
+          "70",
+          "📦📦📦📦📦📦📦 7 decine"
+        ],
+        [
+          "16",
+          "📦 1 decina e 6 unità"
+        ]
+      ]
+    },
+    {
       "tipo": "abbina",
       "immagine": "🔗",
       "domanda": "Unisci il numero ai suoi pacchi e caramelle.",
@@ -172,6 +228,28 @@
       "spiegazione": "7 decine fanno 70."
     },
     {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo i numeri più grandi di 50!",
+      "giusti": [
+        "61",
+        "75",
+        "88",
+        "53",
+        "99",
+        "70"
+      ],
+      "sbagliati": [
+        "12",
+        "45",
+        "30",
+        "8",
+        "49",
+        "27"
+      ],
+      "quanti": 5
+    },
+    {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
@@ -186,6 +264,16 @@
       "affermazione": "36 è più grande di 63.",
       "corretta": false,
       "spiegazione": "63 ha 6 decine. 36 ne ha solo 3."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧑‍🍳",
+      "domanda": "Completa il testo bucato di Pino.",
+      "testo": "Pino ha 10 caramelle: fanno una [decina].\nUna caramella da sola è una [unità].\nCon 10 pacchi da 10 arriva a [100].",
+      "distrattori": [
+        "50",
+        "pacco"
+      ]
     },
     {
       "tipo": "scelta",
@@ -264,6 +352,37 @@
       "domanda": "Sfida: costruisci l'83.",
       "numero": 83,
       "spiegazione": "83 = 8 decine e 3 unità."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi non ha 3 decine?",
+      "elementi": [
+        "35",
+        "31",
+        "53",
+        "38"
+      ],
+      "intruso": 2,
+      "spiegazione": "53 ha 5 decine!"
     }
+  ],
+  "storia": {
+    "personaggio": "🧑‍🍳",
+    "testo": "Ciao bambini! Sono Pino, il pasticcere.\nOggi ho fatto tantissime caramelle!\nDevo metterle nei pacchi da 10, ma da solo non ce la faccio.",
+    "immagini": [
+      "🍬 caramelle",
+      "📦 pacchi",
+      "🏪 negozio"
+    ],
+    "missione": "Aiutate Pino a contare e impacchettare le caramelle. Alla fine vincete la figurina della caramella!"
+  },
+  "premio": "🍬",
+  "ricorda": [
+    "🍬 1 caramella da sola è 1 unità.",
+    "📦 10 unità fanno 1 decina.",
+    "🔢 Nel numero, a sinistra le decine e a destra le unità.",
+    "💯 10 decine fanno 100.",
+    "🐊 Per confrontare, guarda prima le decine."
   ]
 }

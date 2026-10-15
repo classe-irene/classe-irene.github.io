@@ -509,3 +509,119 @@ body.lim .scena { height: 40vh; width: auto; max-width: 100%; }
 .costruisci-conto { font-size: 1.4rem; margin: 0; }
 body.lim .costruisci-meta { font-size: 6rem; }
 body.lim .costruisci-tasti .btn { font-size: 1.5rem; padding: 16px 24px; }
+
+/* ---------- Giochi ---------- */
+.gioco-aiuto { text-align: center; color: var(--testo-tenue); font-weight: 700; margin: 4px 0 12px; }
+.gioco-conto { text-align: center; font-weight: 800; margin: 10px 0 0; }
+.memory { display: grid; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); gap: 12px; max-width: 720px; margin: 0 auto; }
+.carta-memory { position: relative; aspect-ratio: 1 / 1.1; border: none; padding: 0; background: none; cursor: pointer; perspective: 800px; font: inherit; }
+.carta-memory > span { position: absolute; inset: 0; display: grid; place-items: center; border-radius: 18px; backface-visibility: hidden; transition: transform .45s; box-shadow: 0 4px 0 rgba(0,0,0,.12); padding: 6px; text-align: center; font-weight: 800; overflow-wrap: anywhere; }
+.carta-memory .dorso { background: linear-gradient(135deg, var(--viola), #B794FF); }
+.carta-memory .faccia { background: #fff; border: 3px solid var(--bordo); transform: rotateY(180deg); font-size: 1.15rem; }
+.carta-memory.girata .dorso { transform: rotateY(180deg); }
+.carta-memory.girata .faccia { transform: rotateY(360deg); }
+.carta-memory.trovata .faccia { border-color: var(--ok); background: #E6F8EE; }
+.carta-memory .con-figura { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.testo-bucato { font-size: 1.35rem; line-height: 2.4; background: #fff; border-radius: 16px; padding: 8px 18px; border: 2px solid var(--bordo); }
+.testo-bucato p { margin: 6px 0; }
+.buco-gioco { min-width: 6.5em; min-height: 1.7em; vertical-align: middle; border: none; border-bottom: 4px solid var(--testo-tenue); background: var(--sfondo); border-radius: 8px 8px 0 0; font: 800 1.2rem "Nunito", sans-serif; color: var(--tema); cursor: pointer; padding: 0 8px; }
+.buco-gioco.attivo { background: var(--giallo-chiaro); border-color: var(--giallo); animation: lampeggia 1.2s infinite; }
+.buco-gioco.pieno { background: #E6F8EE; border-color: var(--ok); color: var(--testo); animation: rimbalza .4s; cursor: default; }
+.banca-parole { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+.tessera.usata { opacity: .35; }
+.tessera.grande { font-size: 1.8rem; min-width: 64px; }
+.cruci-posto { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; align-items: flex-start; }
+.cruci { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 3px; width: min(100%, calc(var(--n) * 50px)); }
+.lettera-c { aspect-ratio: 1; border: 2px solid var(--bordo); background: #fff; border-radius: 8px; font: 800 clamp(.9rem, 3.4vw, 1.5rem) "Nunito", sans-serif; color: var(--testo); cursor: pointer; padding: 0; }
+.lettera-c.inizio { background: var(--tema); color: #fff; animation: pulsa 1s infinite; }
+.lettera-c.trovata { border-color: transparent; }
+.cruci-elenco { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-weight: 800; font-size: 1.15rem; }
+.cruci-elenco li.fatta { text-decoration: line-through; opacity: .5; }
+.indovina, .mescolata { display: grid; gap: 16px; justify-items: center; }
+.indizio { font-size: 1.3rem; font-weight: 800; }
+.palloncini { display: flex; gap: 4px; }
+.figura.scoppiato { opacity: .12; transform: scale(.6); transition: .3s; }
+.parola-nascosta { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.casella-l { width: 52px; height: 60px; border-bottom: 5px solid var(--testo); display: grid; place-items: center; font: 800 2.2rem "Baloo 2", sans-serif; }
+.casella-l.larga { width: auto; min-width: 60px; padding: 0 6px; }
+.casella-l.rivelata { color: var(--ko); }
+.casella-l.fissa { border-bottom-color: transparent; }
+.parola-nascosta .spazio { width: 24px; }
+.tastiera { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-width: 720px; }
+.tastiera .tasto { width: 58px; height: 58px; font-size: 1.5rem; }
+.tastiera .tasto.giusta { background: #E6F8EE; border-color: var(--ok); }
+.tastiera .tasto.no { background: var(--corallo-chiaro); opacity: .5; }
+.intruso { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+.carta-intruso { background: #fff; border: 3px solid var(--bordo); border-radius: 20px; padding: 16px 10px; font: 800 1.15rem "Nunito", sans-serif; cursor: pointer; box-shadow: 0 4px 0 rgba(0,0,0,.08); }
+.carta-intruso .con-figura { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.carta-intruso.giusta { border-color: var(--ok); background: #E6F8EE; }
+.carta-intruso.sbagliata { border-color: var(--ko); animation: scuoti .35s; }
+.acchiappa { display: grid; gap: 14px; justify-items: center; }
+.acchiappa-conto { font: 800 1.4rem "Baloo 2", sans-serif; }
+.tane { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; width: min(640px, 100%); }
+.tana { position: relative; height: 130px; border-radius: 50% 50% 18px 18px / 30% 30% 18px 18px; background: radial-gradient(ellipse at 50% 85%, #5B3B1F 0 38%, #8BCB6A 40%); overflow: hidden; }
+.talpa { position: absolute; left: 8%; right: 8%; bottom: 10px; min-height: 96px; border-radius: 18px; border: 3px solid var(--bordo); background: #fff; font: 800 1.2rem "Nunito", sans-serif; cursor: pointer; animation: spunta .35s ease-out; }
+.talpa .con-figura { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.talpa.presa { border-color: var(--ok); background: #E6F8EE; }
+.talpa.sbagliata { border-color: var(--ko); background: var(--corallo-chiaro); }
+@keyframes spunta { from { transform: translateY(100%); } }
+body.lim .tana { height: 180px; } body.lim .talpa { min-height: 140px; font-size: 1.6rem; }
+body.lim .carta-memory .faccia { font-size: 1.5rem; }
+body.lim .testo-bucato { font-size: 1.8rem; }
+
+/* ---------- Storia, missione, scopri, esperimenti, ricorda, mappa, album ---------- */
+.scheda.storia { background: linear-gradient(135deg, #FFF7DD, #FFFFFF); grid-template-columns: 1fr; }
+.fumetto-riga { display: flex; gap: 18px; align-items: center; }
+.fumetto-riga .personaggio { flex: none; width: 120px; height: 120px; animation: dondola 4s ease-in-out infinite; }
+.fumetto { position: relative; background: #fff; border: 3px solid var(--testo); border-radius: 22px; padding: 10px 20px; font-size: 1.25rem; font-weight: 700; }
+.fumetto::before { content: ""; position: absolute; left: -16px; top: 40%; border: 10px solid transparent; border-right: 14px solid var(--testo); }
+.fumetto p { margin: 6px 0; }
+.missione { margin: 14px 0; padding: 12px 18px; border-radius: 16px; background: var(--tema); color: #fff; font-size: 1.2rem; }
+.pensa { margin: 12px 0; padding: 12px 16px; border-radius: 16px; background: #F1EAFF; display: grid; gap: 8px; justify-items: start; font-size: 1.15rem; }
+.pensa-risposta { margin: 0; font-weight: 800; color: var(--viola); animation: compari .4s; }
+.scopri { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 8px 0 12px; }
+.carta-scopri { position: relative; min-height: 150px; border: none; background: none; padding: 0; cursor: pointer; perspective: 800px; font: 700 1.05rem "Nunito", sans-serif; }
+.carta-scopri > span { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 10px; border-radius: 18px; backface-visibility: hidden; transition: transform .5s; box-shadow: 0 4px 0 rgba(0,0,0,.1); }
+.carta-scopri .fronte { background: var(--tema-chiaro); border: 3px solid var(--tema); }
+.carta-scopri .retro { background: #fff; border: 3px solid var(--giallo); transform: rotateY(180deg); }
+.carta-scopri.girata .fronte { transform: rotateY(180deg); }
+.carta-scopri.girata .retro { transform: rotateY(360deg); }
+.carta-scopri .con-figura { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.esperimento { margin: 12px 0; padding: 14px 18px; border-radius: 18px; border: 3px dashed var(--sci); background: #F0FBF5; }
+.esperimento h3 { margin: 0 0 8px; color: var(--sci); }
+.materiali { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 8px; }
+.materiale { display: inline-flex; background: #fff; border-radius: 12px; padding: 4px 10px; }
+.materiale .con-figura, .passo-esp .con-figura { flex-direction: row; gap: 8px; }
+.passi-esp { margin: 0; padding-left: 26px; display: grid; gap: 6px; }
+.passo-esp { border: none; background: #fff; border-radius: 12px; padding: 8px 12px; font: 700 1.05rem "Nunito", sans-serif; text-align: left; cursor: pointer; width: 100%; }
+.passo-esp.fatto { background: #D8F3E4; text-decoration: line-through; }
+.passo-esp.fatto::after { content: " ✅"; }
+.esp-domanda { font-weight: 800; margin: 10px 0 0; }
+.ricorda-lista { margin: 0; padding-left: 28px; display: grid; gap: 10px; font-size: 1.2rem; font-weight: 700; }
+.ricorda-lista .con-figura { flex-direction: row; gap: 10px; }
+.mappa { position: relative; max-width: 760px; margin: 10px auto 26px; padding: 34px 10px 6px; }
+.sentiero { display: flex; justify-content: space-between; align-items: center; position: relative; }
+.sentiero::before { content: ""; position: absolute; left: 14px; right: 14px; top: 50%; border-top: 5px dotted #C9B79C; z-index: 0; }
+.sasso { position: relative; z-index: 1; width: 34px; height: 34px; border-radius: 50%; background: #E9E2D6; display: grid; place-items: center; font-weight: 800; color: #8A7A63; font-size: .9rem; }
+.sasso.fatto { background: var(--ok); color: #fff; }
+.sasso.traguardo { width: 46px; height: 46px; background: var(--giallo-chiaro); }
+.viaggiatore { position: absolute; top: -6px; left: calc(10px + var(--pos) * (100% - 66px)); transition: left 1s ease-in-out; }
+.viaggiatore .figura { animation: dondola 2s ease-in-out infinite; }
+body.lim .mappa { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); width: min(760px, 70vw); margin: 0; z-index: 44; background: rgba(255,255,255,.9); border-radius: 18px; padding: 28px 10px 4px; }
+.figurina-vinta { display: grid; justify-items: center; }
+.figurina-vinta .figura { animation: rimbalza .8s; }
+.album { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-bottom: 40px; }
+.figurina { display: grid; justify-items: center; gap: 6px; text-align: center; padding: 16px 10px; border-radius: 18px; background: #fff; box-shadow: var(--ombra); border: 4px solid var(--giallo); color: var(--testo); text-decoration: none; }
+.figurina.vuota { border: 4px dashed var(--bordo); background: var(--sfondo); box-shadow: none; }
+.punto-domanda { font: 800 3.4rem "Baloo 2", sans-serif; color: var(--bordo); line-height: 1.2; }
+@media (max-width: 600px) {
+  .fumetto-riga { flex-direction: column; } .fumetto::before { display: none; }
+  .tane { gap: 8px; } .tana { height: 110px; } .talpa { min-height: 80px; font-size: 1rem; }
+  .tastiera .tasto { width: 44px; height: 48px; font-size: 1.2rem; }
+  .casella-l { width: 36px; height: 48px; font-size: 1.6rem; }
+}
+.palloncini { flex-wrap: wrap; justify-content: center; max-width: 100%; }
+.palloncini .figura { width: clamp(30px, 9vw, 64px); height: auto; }
+.indizio { max-width: 100%; text-align: center; }
+.indizio .con-figura { flex-wrap: wrap; justify-content: center; }
+.indizio .con-figura > span:last-child { min-width: 0; overflow-wrap: anywhere; }

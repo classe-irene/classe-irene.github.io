@@ -42,3 +42,9 @@ Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un 
 - Il formato è in `assets/verifica.js` (tipi: scelta, vero_falso, completa, collega, ordina, calcolo, conta, classifica, risposta, disegna).
 - `domande_facilitate` è la versione per BES/DSA. Il pulsante "Soluzioni" mostra le risposte in rosso (copia dell'insegnante).
 - Si creano nell'area insegnante, scheda "📝 Crea una verifica".
+
+## Giochi, storia e album
+Giochi (campo `tipo` negli esercizi): `memory` (coppie), `bucato` (testo con [parole] e distrattori), `crucipuzzle` (parole), `indovina` (parola, indizio), `intruso` (elementi, intruso), `acchiappa` (giusti, sbagliati, quanti), `mescolata` (parola, sillabe con "-").
+Campi facoltativi della lezione: `storia` {personaggio, testo, immagini, missione}, `premio` (emoji della figurina), `ricorda` [frasi].
+Campi facoltativi di una sezione: `pensa` {domanda, risposta}, `scopri` [{fronte, retro}], `esperimento` {titolo, materiali, passi, domanda}.
+Le figurine vinte finiscono in `album.html` (salvate solo su quel computer).

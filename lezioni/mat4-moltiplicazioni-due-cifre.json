@@ -13,7 +13,11 @@
         "🍫🍫🍫🍫 4",
         "🍫🍫🍫🍫 4",
         "🍫🍫🍫🍫 4"
-      ]
+      ],
+      "pensa": {
+        "domanda": "Nina ha 3 cesti con 12 mele ciascuno. Come fai a sapere quante mele sono, senza contarle tutte?",
+        "risposta": "12 + 12 + 12 oppure 3 × 12 = 36. La moltiplicazione è più veloce!"
+      }
     },
     {
       "titolo": "Per 10 è facilissimo",
@@ -22,6 +26,20 @@
       "immagini": [
         "🔟 × 10",
         "0️⃣ aggiungo 0"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 7 × 10",
+          "retro": "70: aggiungo uno 0!"
+        },
+        {
+          "fronte": "❓ 23 × 10",
+          "retro": "230"
+        },
+        {
+          "fronte": "❓ 40 × 10",
+          "retro": "400"
+        }
       ]
     },
     {
@@ -111,6 +129,33 @@
       "spiegazione": "Per 10 aggiungo uno 0."
     },
     {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory delle tabelline.",
+      "coppie": [
+        [
+          "6 × 7",
+          "42"
+        ],
+        [
+          "8 × 4",
+          "32"
+        ],
+        [
+          "9 × 6",
+          "54"
+        ],
+        [
+          "7 × 8",
+          "56"
+        ],
+        [
+          "4 × 25",
+          "100"
+        ]
+      ]
+    },
+    {
       "tipo": "abbina",
       "immagine": "🔗",
       "domanda": "Unisci il calcolo al risultato.",
@@ -135,6 +180,30 @@
       "affermazione": "Quando moltiplico per le decine, scrivo prima lo 0 segnaposto.",
       "corretta": true,
       "spiegazione": "Lo 0 tiene il posto delle unità."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa i risultati della tabellina del 7!",
+      "giusti": [
+        "14",
+        "21",
+        "28",
+        "35",
+        "42",
+        "49",
+        "56",
+        "63"
+      ],
+      "sbagliati": [
+        "15",
+        "22",
+        "30",
+        "45",
+        "50",
+        "60"
+      ],
+      "quanti": 5
     },
     {
       "tipo": "ordina",
@@ -211,6 +280,34 @@
       "a": 45,
       "b": 23,
       "spiegazione": "45 × 23 = 1 035. Campione!"
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧑‍🌾",
+      "domanda": "Completa il testo bucato di Nina.",
+      "testo": "Nina ha 23 file con 14 mele.\nSpezza il 14 in [10] e 4.\n23 × 10 = [230] e 23 × 4 = [92].\nIn tutto le mele sono [322]!",
+      "distrattori": [
+        "320",
+        "40"
+      ]
     }
+  ],
+  "storia": {
+    "personaggio": "🧑‍🌾",
+    "testo": "Ciao! Sono Nina e ho un frutteto.\nHo 23 file di alberi e ogni fila ha 14 mele.\nQuante mele devo raccogliere? Contarle una per una è lunghissimo!",
+    "immagini": [
+      "🌳 alberi",
+      "🍎 mele",
+      "🧺 cesti"
+    ],
+    "missione": "Imparate a moltiplicare con due cifre e aiutate Nina a riempire i cesti. Vincete la figurina della mela!"
+  },
+  "premio": "🍎",
+  "ricorda": [
+    "✖️ Moltiplicare è sommare tante volte lo stesso numero.",
+    "🔟 Per 10: aggiungo uno 0.",
+    "✂️ Posso spezzare i numeri: 23 × 14 = 23 × 10 + 23 × 4.",
+    "0️⃣ In colonna, nella seconda riga scrivo prima lo 0 segnaposto.",
+    "🪟 Con la griglia uso solo la tavola pitagorica."
   ]
 }

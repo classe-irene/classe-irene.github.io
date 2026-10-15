@@ -2,7 +2,7 @@
 // Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci"];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Bravissimo! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -37,6 +37,7 @@
       if (e.tipo === "completa" && !/\[[^\]]+\]/.test(e.testo || "")) errori.push(`${n}: il testo deve avere le parole da completare tra [parentesi quadre].`);
       if (e.tipo === "conta" && !(e.oggetto && Number.isInteger(e.numero))) errori.push(`${n}: servono "oggetto" e "numero".`);
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
+      if (window.Giochi?.TIPI.includes(e.tipo)) errori.push(...Giochi.valida(e, n));
       if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
     });
@@ -65,6 +66,7 @@
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
         <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
       </div>
+      ${l.storia ? storiaHTML(l) : ""}
       ${l.sezioni.map((s) => `
         <section class="scheda${s.animazione ? " con-animazione" : ""}">
           <div class="scheda-corpo">
@@ -72,13 +74,19 @@
             ${String(s.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}
             ${s.immagini?.length ? `<div class="galleria">${s.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
             ${s.animazione ? `<div class="anim-posto" data-anim="${h(JSON.stringify(s.animazione))}"></div>` : ""}
+            ${s.pensa ? `<div class="pensa"><b>🤔 ${h(s.pensa.domanda)}</b><button class="btn bianco piccolo" data-svela>👀 Scopri la risposta</button><p class="pensa-risposta" hidden>${h(s.pensa.risposta)}</p></div>` : ""}
+            ${s.scopri?.length ? `<p class="gioco-aiuto">Tocca le carte per scoprire cosa c'è dietro!</p><div class="scopri">${s.scopri.map((x) => `<button class="carta-scopri" data-retro="${h(x.retro)}"><span class="fronte">${Figura.ricco(x.fronte, "figura grande")}</span><span class="retro">${Figura.ricco(x.retro, "figura media")}</span></button>`).join("")}</div>` : ""}
+            ${s.esperimento ? esperimentoHTML(s.esperimento) : ""}
             ${s.curiosita ? `<div class="curiosita">${h(s.curiosita)}</div>` : ""}
           </div>
           <div class="scheda-figura">${Figura.img(s.immagine || s.emoji || "📘", "figura grande")}</div>
         </section>`).join("")}
+      ${l.ricorda?.length ? `<section class="scheda ricorda"><div class="scheda-corpo"><h2>📌 Ricordiamo<button class="leggi" data-leggi="${h(l.ricorda.map((x) => Figura.dividi(x).testo).join(". "))}">🔊 Leggi</button></h2>
+        <ol class="ricorda-lista">${l.ricorda.map((x) => `<li>${Figura.ricco(x, "figura media")}</li>`).join("")}</ol></div><div class="scheda-figura">${Figura.img("📌", "figura grande")}</div></section>` : ""}
       ${l.parole_chiave?.length ? `<section class="scheda"><div class="scheda-corpo"><h2>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${Figura.ricco(p)}</span>`).join("")}</div></div><div class="scheda-figura">${Figura.img("🗝️", "figura grande")}</div></section>` : ""}
       <h2 id="esercizi" style="text-align:center;margin-top:36px">🎯 Ora tocca a te!</h2>
       <div class="punteggio">⭐ <span data-punti>0</span> / ${l.esercizi.length}</div>
+      ${mappaHTML(l)}
       <div data-esercizi></div>
       <div class="fine" data-fine hidden></div>`;
 
@@ -86,6 +94,10 @@
       const b = ev.target.closest("button");
       if (!b) return;
       if (b.dataset.leggi) leggi(b.dataset.leggi);
+      if (b.classList.contains("carta-scopri")) { b.classList.toggle("girata"); if (b.classList.contains("girata")) leggi(Figura.dividi(b.dataset.retro).testo); }
+      if (b.hasAttribute("data-svela")) { const r = b.nextElementSibling; r.hidden = false; b.hidden = true; leggi(r.textContent); }
+      if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
+      if (b.dataset.azione === "storia") leggi(`${l.storia.testo} ${l.storia.missione || ""}`);
       const a = b.dataset.azione;
       if (a === "leggi-tutto") leggi(testoIntero);
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
@@ -102,6 +114,41 @@
     disegnaEsercizi(l, radice);
   }
 
+  /* ---------- Storia, missione, esperimenti, mappa e album ---------- */
+  function storiaHTML(l) {
+    const st = l.storia;
+    return `<section class="scheda storia"><div class="scheda-corpo">
+      <div class="fumetto-riga">${Figura.img(st.personaggio || "🦉", "figura gigante personaggio")}
+        <div class="fumetto">${String(st.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}</div></div>
+      ${st.immagini?.length ? `<div class="galleria">${st.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
+      ${st.missione ? `<div class="missione">🎯 <b>La missione:</b> ${h(st.missione)}</div>` : ""}
+      <button class="btn bianco" data-azione="storia">🔊 Ascolta la storia</button>
+    </div></section>`;
+  }
+  function esperimentoHTML(x) {
+    return `<div class="esperimento"><h3>🧪 ${h(x.titolo || "Proviamo in classe!")}</h3>
+      ${x.materiali?.length ? `<div class="materiali"><b>Ci serve:</b> ${x.materiali.map((m) => `<span class="materiale">${Figura.ricco(m, "figura piccola")}</span>`).join("")}</div>` : ""}
+      <ol class="passi-esp">${(x.passi || []).map((p) => `<li><button class="passo-esp">${Figura.ricco(p, "figura piccola")}</button></li>`).join("")}</ol>
+      ${x.domanda ? `<p class="esp-domanda">🤔 ${h(x.domanda)}</p>` : ""}</div>`;
+  }
+  function mappaHTML(l) {
+    const chi = l.storia?.personaggio || "🦉", premio = l.premio || "🏆";
+    return `<div class="mappa" aria-hidden="true"><div class="sentiero">
+      ${l.esercizi.map((_, i) => `<span class="sasso" data-sasso="${i}">${i + 1}</span>`).join("")}
+      <span class="sasso traguardo">${Figura.img(premio, "figura piccola")}</span></div>
+      <span class="viaggiatore" style="--pos:0">${Figura.img(chi, "figura media")}</span></div>`;
+  }
+  const Album = {
+    chiave: "classe-irene-album",
+    tutte() { try { return JSON.parse(localStorage.getItem(this.chiave)) || []; } catch { return []; } },
+    aggiungi(f) {
+      const el = this.tutte().filter((x) => x.titolo !== f.titolo || x.file !== f.file);
+      el.push(f);
+      try { localStorage.setItem(this.chiave, JSON.stringify(el)); } catch {}
+    },
+  };
+  window.Album = Album;
+
   /* ---------- Esercizi ---------- */
   function disegnaEsercizi(l, radice) {
     const box = radice.querySelector("[data-esercizi]");
@@ -115,6 +162,11 @@
         if (el.classList.contains("risolto")) return;
         el.classList.add("risolto");
         risolti++; punti.textContent = risolti;
+        const mappa = radice.querySelector(".mappa");
+        if (mappa) {
+          mappa.querySelector(`[data-sasso="${[...box.children].indexOf(el)}"]`)?.classList.add("fatto");
+          mappa.querySelector(".viaggiatore").style.setProperty("--pos", risolti / l.esercizi.length);
+        }
         Suono.giusto();
         const sp = el.querySelector(".spiegazione");
         sp.textContent = caso(BRAVO) + (spiegazione ? " " + spiegazione : "");
@@ -124,11 +176,17 @@
       },
     };
 
+    function premioHTML() {
+      const premio = l.premio || "🏆";
+      Album.aggiungi({ titolo: l.titolo, file: parametri().file || "", premio, materia: l.materia, classe: l.classe, data: new Date().toISOString().slice(0, 10) });
+      return `<div class="figurina-vinta">${Figura.img(premio, "figura gigante")}<p>Hai vinto una figurina per il tuo <a href="album.html">album</a>!</p></div>`;
+    }
     function finale() {
       const stelle = errori <= l.esercizi.length * 0.2 ? 3 : errori <= l.esercizi.length * 0.6 ? 2 : 1;
       fine.hidden = false;
       fine.innerHTML = `<div class="stelle">${"⭐".repeat(stelle)}${"☆".repeat(3 - stelle)}</div>
-        <h2>Hai completato la lezione!</h2>
+        ${premioHTML()}
+        <h2>${l.storia?.missione ? "Missione compiuta!" : "Hai completato la lezione!"}</h2>
         <p>${stelle === 3 ? "Sei un vero campione!" : stelle === 2 ? "Ottimo lavoro, continua così!" : "Ce l'hai fatta! Con un po' di allenamento andrà ancora meglio."}</p>
         <button class="btn" onclick="location.reload()">🔁 Ricomincia</button>`;
       Suono.festa(); coriandoli();
@@ -299,6 +357,11 @@
     },
   };
 
+  // Giochi (assets/giochi.js): memory, testo bucato, crucipuzzle, indovina, intruso, acchiappa, parola mescolata.
+  const DOMANDA_GIOCO = { memory: "Gioca a memory: trova le coppie!", bucato: "Completa il testo bucato.", crucipuzzle: "Trova le parole nascoste.",
+    indovina: "Indovina la parola!", intruso: "Trova l'intruso.", acchiappa: "Acchiappa le risposte giuste!", mescolata: "Rimetti in ordine la parola." };
+  for (const g of window.Giochi?.TIPI || [])
+    ESERCIZI[g] = (e, c, esito) => Giochi[g](e, c, esito, domanda(e.domanda || DOMANDA_GIOCO[g], e));
   ESERCIZI.costruisci = (e, c, esito) =>
     Animazioni.esercizioCostruisci(e, c, esito, domanda(e.domanda || `Costruisci il numero ${e.numero} con decine e unità.`, e));
   ESERCIZI.gelosia = (e, c, esito) =>
