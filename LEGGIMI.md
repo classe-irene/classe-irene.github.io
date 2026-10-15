@@ -49,3 +49,6 @@ Campi facoltativi della lezione: `storia` {personaggio, testo, immagini, mission
 Campi facoltativi di una sezione: `pensa` {domanda, risposta}, `scopri` [{fronte, retro}], `esperimento` {titolo, materiali, passi, domanda}.
 Le figurine vinte finiscono in `album.html` (salvate solo su quel computer).
 Equivalenze numeriche (k, h, da, u): esercizio `equivalenza` {n, da, a} e video `{"tipo":"scena","scena":"equivalenza","n":3,"da":"h","a":"da"}`.
+
+## Effetti speciali
+`assets/effetti.js` (caricato da `lezione.html`): sipario d'apertura (si salta con `&nosipario=1`), entrate delle schede sempre diverse, titoli lettera per lettera, figure che fanno scherzi quando si toccano, "gratta e scopri" per le domande "Pensaci tu", personaggio della storia che commenta, 8 feste diverse per le risposte giuste, serie "🔥 3 di fila!". Si spengono con "✨ Effetti" nella barra della lezione.

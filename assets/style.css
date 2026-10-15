@@ -641,3 +641,122 @@ body.lim .mappa { position: fixed; top: 8px; left: 50%; transform: translateX(-5
 .eq-tabella { width: min(100%, 680px); height: auto; }
 .eq-aiuto { margin: 0; color: var(--testo-tenue); font-weight: 700; text-align: center; }
 body.lim .eq-tabella { max-height: 38vh; }
+
+/* ==================== Effetti speciali (assets/effetti.js) ==================== */
+.tela-effetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 90; }
+
+/* Entrate delle schede: ogni scheda entra in modo diverso */
+body.effetti .entra:not(.visto) { opacity: 0; }
+body.effetti .entra.visto { animation: .9s cubic-bezier(.2,.9,.3,1.2) both; }
+body.effetti .entra-zoom.visto { animation-name: e-zoom; }
+body.effetti .entra-sinistra.visto { animation-name: e-sinistra; }
+body.effetti .entra-destra.visto { animation-name: e-destra; }
+body.effetti .entra-cade.visto { animation-name: e-cade; animation-timing-function: cubic-bezier(.3,1.6,.5,1); }
+body.effetti .entra-gira.visto { animation-name: e-gira; }
+body.effetti .entra-sfoca.visto { animation-name: e-sfoca; animation-duration: 1.1s; }
+body.effetti .entra-sipario.visto { animation-name: e-sipario; animation-duration: 1.1s; animation-timing-function: ease-out; }
+body.effetti .entra-ruota.visto { animation-name: e-ruota; }
+body.effetti .entra-molla.visto { animation-name: e-molla; animation-duration: 1.2s; }
+body.effetti .entra-onda.visto { animation-name: e-onda; animation-duration: 1.1s; }
+@keyframes e-zoom { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes e-sinistra { from { opacity: 0; transform: translateX(-120px) rotate(-3deg); } to { opacity: 1; transform: none; } }
+@keyframes e-destra { from { opacity: 0; transform: translateX(120px) rotate(3deg); } to { opacity: 1; transform: none; } }
+@keyframes e-cade { from { opacity: 0; transform: translateY(-160px); } to { opacity: 1; transform: none; } }
+@keyframes e-gira { from { opacity: 0; transform: perspective(900px) rotateY(80deg); } to { opacity: 1; transform: none; } }
+@keyframes e-sfoca { from { opacity: 0; filter: blur(16px); transform: scale(1.08); } to { opacity: 1; filter: none; transform: none; } }
+@keyframes e-sipario { from { opacity: 1; clip-path: inset(0 50% 0 50% round 24px); } to { opacity: 1; clip-path: inset(0 0 0 0 round 24px); } }
+@keyframes e-ruota { from { opacity: 0; transform: rotate(-12deg) scale(.7); } to { opacity: 1; transform: none; } }
+@keyframes e-molla { 0% { opacity: 0; transform: scaleY(.1); transform-origin: bottom; } 40% { opacity: 1; transform: scaleY(1.15); } 60% { transform: scaleY(.92); } 80% { transform: scaleY(1.04); } 100% { transform: none; } }
+@keyframes e-onda { 0% { opacity: 0; transform: translateY(80px) skewY(6deg); } 60% { opacity: 1; transform: translateY(-10px) skewY(-2deg); } 100% { transform: none; } }
+
+/* Titoli che arrivano lettera per lettera */
+body.effetti .visto .titolo-lettere .parola-intera > span { display: inline-block; animation: lettera .6s cubic-bezier(.3,1.7,.5,1) both; animation-delay: calc(.25s + var(--i) * 35ms); }
+@keyframes lettera { from { opacity: 0; transform: translateY(-40px) rotate(-20deg) scale(.4); } to { opacity: 1; transform: none; } }
+
+/* Gallerie: le figure arrivano una alla volta, in modi diversi */
+body.effetti .visto .galleria > figure { animation: .7s cubic-bezier(.3,1.6,.5,1) both; animation-delay: calc(.35s + var(--i) * 140ms); }
+body.effetti .visto .gal-pop > figure { animation-name: g-pop; }
+body.effetti .visto .gal-volo > figure { animation-name: g-volo; }
+body.effetti .visto .gal-rimbalzo > figure { animation-name: g-rimbalzo; }
+body.effetti .visto .gal-carte > figure { animation-name: g-carte; }
+@keyframes g-pop { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: none; } }
+@keyframes g-volo { from { opacity: 0; transform: translate(-60vw, -30px) rotate(-30deg); } to { opacity: 1; transform: none; } }
+@keyframes g-rimbalzo { 0% { opacity: 0; transform: translateY(-120px); } 60% { opacity: 1; transform: translateY(0); } 75% { transform: translateY(-22px); } 100% { transform: none; } }
+@keyframes g-carte { from { opacity: 0; transform: perspective(600px) rotateX(-90deg); } to { opacity: 1; transform: none; } }
+.galleria figure.toccabile { cursor: pointer; }
+
+/* Figure grandi: si muovono da sole e fanno scherzi quando si toccano */
+body.effetti .scherzosa { cursor: pointer; }
+body.effetti .ozio-galleggia { animation: ozio-g 3.4s ease-in-out infinite; }
+body.effetti .ozio-dondola { animation: ozio-d 3s ease-in-out infinite; }
+body.effetti .ozio-respira { animation: ozio-r 2.6s ease-in-out infinite; }
+@keyframes ozio-g { 50% { transform: translateY(-10px); } }
+@keyframes ozio-d { 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+@keyframes ozio-r { 50% { transform: scale(1.07); } }
+.g-salta { animation: gs-salta .7s cubic-bezier(.3,1.6,.5,1) !important; }
+.g-giravolta { animation: gs-gira .8s ease-in-out !important; }
+.g-trema { animation: gs-trema .5s linear !important; }
+.g-cresce { animation: gs-cresce .7s cubic-bezier(.3,1.6,.5,1) !important; }
+@keyframes gs-salta { 0%,100% { transform: none; } 40% { transform: translateY(-50px) scale(1.1, .9); } 70% { transform: translateY(0) scale(1.2, .8); } }
+@keyframes gs-gira { to { transform: rotate(360deg) scale(1.1); } }
+@keyframes gs-trema { 20%,60% { transform: translateX(-8px) rotate(-5deg); } 40%,80% { transform: translateX(8px) rotate(5deg); } }
+@keyframes gs-cresce { 50% { transform: scale(1.6) rotate(8deg); } }
+
+/* Gratta e scopri */
+.gratta { position: relative; margin-top: 10px; border-radius: 14px; overflow: hidden; min-height: 70px; background: #FFFBEA; border: 3px dashed var(--giallo); padding: 14px 16px; }
+.gratta .pensa-risposta { margin: 0; font-weight: 700; }
+.gratta canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; transition: opacity .5s; }
+.gratta canvas.via { opacity: 0; }
+.gratta-aiuto { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; font-weight: 800; color: #4B5563; text-align: center; padding: 0 10px; }
+
+/* Il compagno della lezione */
+.compagno { position: fixed; left: 14px; bottom: 14px; z-index: 46; width: 84px; height: 84px; border-radius: 50%; border: 4px solid #fff; background: var(--tema-chiaro, #EEF3FF); box-shadow: var(--ombra); cursor: pointer; padding: 6px; display: grid; place-items: center; }
+.compagno > .figura { width: 100%; height: 100%; }
+.compagno .nuvola { position: absolute; left: 70px; bottom: 60px; background: #fff; color: var(--testo); font: 800 1.05rem "Nunito", sans-serif; padding: 10px 14px; border-radius: 16px; box-shadow: var(--ombra); white-space: nowrap; max-width: 70vw; overflow: hidden; text-overflow: ellipsis; }
+.compagno .nuvola.appare { animation: g-pop .4s cubic-bezier(.3,1.6,.5,1); }
+body:not(.effetti) .compagno { display: none; }
+body.lim .compagno { bottom: 96px; width: 104px; height: 104px; }
+@media (max-width: 700px) { .compagno { width: 60px; height: 60px; } .compagno .nuvola { left: 52px; bottom: 44px; font-size: .9rem; white-space: normal; width: max-content; max-width: 60vw; } }
+
+/* Timbro, arcobaleno, serie */
+.esercizio { position: relative; }
+.timbro { position: absolute; top: 40%; left: 50%; z-index: 6; pointer-events: none; font: 800 clamp(2.4rem, 7vw, 5rem) "Baloo 2", sans-serif; border: 7px solid currentColor; border-radius: 18px; padding: 0 22px; background: rgba(255,255,255,.85); animation: timbro 2.2s ease-out both; }
+@keyframes timbro { 0% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--ruota)) scale(3); } 15% { opacity: 1; transform: translate(-50%, -50%) rotate(var(--ruota)) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--ruota)) scale(1); } }
+.arcobaleno { position: absolute; left: 50%; top: -30px; width: min(520px, 90%); transform: translateX(-50%); pointer-events: none; z-index: 6; animation: sparisci 2.6s ease-in both; }
+.arcobaleno path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: traccia .9s ease-out forwards; }
+.arcobaleno path:nth-child(n) { animation-delay: calc(var(--k, 0) * 1s); }
+@keyframes traccia { to { stroke-dashoffset: 0; } }
+@keyframes sparisci { 0%,70% { opacity: 1; } 100% { opacity: 0; } }
+.serie { position: fixed; top: 30%; left: 0; z-index: 95; font: 800 clamp(2.4rem, 8vw, 5.5rem) "Baloo 2", sans-serif; color: #FF6B1A; text-shadow: 0 4px 0 #fff, 0 8px 24px rgba(0,0,0,.25); white-space: nowrap; pointer-events: none; animation: serie 2.4s cubic-bezier(.2,.8,.3,1) both; }
+@keyframes serie { 0% { transform: translateX(-100%) skewX(-20deg); } 25% { transform: translateX(calc(50vw - 50%)) skewX(0); } 75% { transform: translateX(calc(50vw - 50%)) scale(1.1); } 100% { transform: translateX(110vw) skewX(20deg); } }
+
+/* Sipario d'apertura */
+.sipario { position: fixed; inset: 0; z-index: 100; cursor: pointer; overflow: hidden; }
+.tenda { position: absolute; top: 0; bottom: 0; width: 51%; background: repeating-linear-gradient(90deg, #B3122E 0 34px, #D6213F 34px 52px, #9C0F27 52px 70px); box-shadow: inset 0 -40px 60px rgba(0,0,0,.35); transition: transform 1.1s cubic-bezier(.7,0,.3,1); }
+.tenda.sx { left: 0; border-right: 6px solid #7C0B1F; }
+.tenda.dx { right: 0; border-left: 6px solid #7C0B1F; }
+.sipario.aperto .tenda.sx { transform: translateX(-102%); }
+.sipario.aperto .tenda.dx { transform: translateX(102%); }
+.sipario-centro { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 14px; text-align: center; padding: 20px; transition: opacity .4s, transform .5s; }
+.sipario.aperto .sipario-centro { opacity: 0; transform: scale(1.4); }
+.sipario-figura .figura { width: clamp(120px, 22vw, 220px); height: auto; animation: sip-fig 1s cubic-bezier(.3,1.6,.5,1) both, ozio-g 3s 1s ease-in-out infinite; filter: drop-shadow(0 12px 24px rgba(0,0,0,.4)); }
+@keyframes sip-fig { from { transform: scale(0) rotate(-200deg); } to { transform: none; } }
+.sipario-titolo { margin: 0; color: #fff; font: 800 clamp(2rem, 6vw, 4.4rem) "Baloo 2", sans-serif; text-shadow: 0 5px 0 #7C0B1F, 0 10px 30px rgba(0,0,0,.4); line-height: 1.05; }
+.sipario-titolo .parola-intera > span { display: inline-block; animation: lettera .7s cubic-bezier(.3,1.7,.5,1) both; animation-delay: calc(.5s + var(--i) * 45ms); }
+.sipario-ospite { animation: sip-ospite 1.2s 1s cubic-bezier(.3,1.4,.5,1) both; }
+.sipario-ospite .figura { width: 110px; height: auto; }
+@keyframes sip-ospite { from { transform: translateX(-70vw) rotate(-30deg); } to { transform: none; } }
+.sipario-via { font-size: 1.5rem; padding: 14px 34px; background: #FFC93C; color: #2B2A33; animation: g-pop .5s 1.6s both, pulsa 1.6s 2.2s infinite; }
+
+/* Sfondo vivo: le figure della lezione volano piano dietro alle schede */
+.sfondo-vivo { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.sfondo-vivo span { position: absolute; left: var(--x); top: 100%; opacity: .16; animation: sale var(--d) linear infinite; animation-delay: var(--ritardo); }
+.sfondo-vivo .figura { width: 64px; height: 64px; }
+@keyframes sale { from { transform: translateY(0) rotate(0); } to { transform: translateY(-120vh) rotate(calc(var(--r) * 360deg)); } }
+body:not(.effetti) .sfondo-vivo { display: none; }
+@media (prefers-reduced-motion: reduce) { .sfondo-vivo, .sipario, .compagno { display: none !important; } }
+.gratta-aiuto[hidden] { display: none; }
+.compagno .nuvola { pointer-events: none; }
+.parola-intera { display: inline-block; white-space: nowrap; }
+body.effetti .visto .titolo-lettere .parola-intera > span, .sipario-titolo .parola-intera > span { display: inline-block; }
+body.lim .compagno { bottom: 124px; }

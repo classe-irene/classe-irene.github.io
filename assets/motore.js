@@ -113,6 +113,7 @@
 
     radice.querySelectorAll(".anim-posto").forEach((p) => { try { Animazioni.crea(p, JSON.parse(p.dataset.anim)); } catch {} });
     disegnaEsercizi(l, radice);
+    try { window.Effetti?.avvia(l, radice); } catch (err) { console.warn(err); }
   }
 
   /* ---------- Storia, missione, esperimenti, mappa e album ---------- */
@@ -158,7 +159,7 @@
     let risolti = 0, errori = 0;
 
     const stato = {
-      errore() { errori++; Suono.sbagliato(); },
+      errore() { errori++; Suono.sbagliato(); radice.dispatchEvent(new CustomEvent("errore")); },
       risolto(el, spiegazione) {
         if (el.classList.contains("risolto")) return;
         el.classList.add("risolto");
@@ -172,7 +173,7 @@
         const sp = el.querySelector(".spiegazione");
         sp.textContent = caso(BRAVO) + (spiegazione ? " " + spiegazione : "");
         sp.classList.add("visibile");
-        radice.dispatchEvent(new CustomEvent("risolto"));
+        radice.dispatchEvent(new CustomEvent("risolto", { detail: { el } }));
         if (risolti === l.esercizi.length) finale();
       },
     };
