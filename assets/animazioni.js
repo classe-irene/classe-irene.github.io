@@ -403,7 +403,94 @@
     return { viewBox: "0 0 600 300", pezzi, passi };
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi };
+  /* ---------- Decine e unità con i cubetti (numeri fino a 100) ---------- */
+  const Q = 18; // lato di un cubetto
+  function barraDecina(x, y, cls = "") {
+    let r = `<g class="decina ${cls}"><rect x="${x - 2}" y="${y - 2}" width="${Q + 4}" height="${Q * 10 + 4}" rx="5" class="decina-bordo"/>`;
+    for (let k = 0; k < 10; k++) r += `<rect x="${x}" y="${y + k * Q}" width="${Q}" height="${Q}" rx="3" class="cubo cubo-d"/>`;
+    return r + "</g>";
+  }
+  const cubetto = (x, y, cls = "") => `<rect x="${x}" y="${y}" width="${Q}" height="${Q}" rx="3" class="cubo cubo-u ${cls}"/>`;
+  function blocchiSVG(d, u, x0 = 30, y0 = 40) {
+    let svg = "";
+    for (let i = 0; i < d; i++) svg += barraDecina(x0 + i * (Q + 12), y0);
+    const xu = x0 + d * (Q + 12) + (d ? 24 : 0);
+    for (let k = 0; k < u; k++) svg += cubetto(xu + (k % 3) * (Q + 6), y0 + Q * 10 - Q - Math.floor(k / 3) * (Q + 6));
+    return svg;
+  }
+  function abaco(x, y, d, u, c = 0) {
+    const asta = (xa, n, cls, et) => `<line x1="${xa}" y1="${y}" x2="${xa}" y2="${y + 150}" class="asta"/>
+      ${Array.from({ length: n }, (_, k) => `<ellipse cx="${xa}" cy="${y + 140 - k * 14}" rx="18" ry="7" class="pallina-abaco ${cls}"/>`).join("")}
+      <text x="${xa}" y="${y + 180}" class="sc-etichetta">${et}</text>`;
+    return `<rect x="${x - 10}" y="${y + 150}" width="${c ? 200 : 140}" height="12" rx="4" class="base-abaco"/>`
+      + (c ? asta(x + 30, c, "c", "h") + asta(x + 100, d, "d", "da") + asta(x + 170, u, "u", "u") : asta(x + 30, d, "d", "da") + asta(x + 100, u, "u", "u"));
+  }
+  function scenaNumero(anim) {
+    const n = Math.max(1, Math.min(100, +anim.n || 34));
+    if (n === 100) {
+      const pezzi = [{ da: 0, a: 0, svg: blocchiSVG(9, 10, 40, 40) }, { da: 1, svg: blocchiSVG(10, 0, 40, 40) },
+        { da: 2, a: 2, svg: `<rect x="30" y="30" width="${10 * 30 + 4}" height="200" rx="12" class="centinaio"/><text x="530" y="170" class="g-numero">100</text>` },
+        { da: 3, svg: abaco(450, 30, 0, 0, 1) }];
+      return { viewBox: "0 0 680 300", pezzi, passi: [
+        "Ecco 9 decine e 10 unità. 10 unità fanno una decina nuova!",
+        "Ora le decine sono 10.",
+        "10 decine fanno 100: un centinaio!",
+        "Sull'abaco: 1 pallina nelle centinaia, 0 nelle decine, 0 nelle unità. Si scrive 100."] };
+    }
+    const d = Math.floor(n / 10), u = n % 10;
+    const pezzi = [], passi = [];
+    pezzi.push({ da: 0, a: 0, svg: `<text x="340" y="170" class="g-numero grigio">${n}</text>` });
+    passi.push(`Ecco il numero ${n}. Lo costruiamo con i cubetti.`);
+    for (let i = 0; i < d; i++) {
+      pezzi.push({ da: i + 1, svg: barraDecina(30 + i * (Q + 12), 40) + `<text x="${30 + i * (Q + 12) + Q / 2}" y="250" class="g-conto">${(i + 1) * 10}</text>` });
+      passi.push(i === 0 ? "Una barretta ha 10 cubetti: è una decina. 10." : `${(i + 1) * 10}.`);
+    }
+    const xu = 30 + d * (Q + 12) + (d ? 24 : 0);
+    let cubi = "";
+    for (let k = 0; k < u; k++) cubi += cubetto(xu + (k % 3) * (Q + 6), 40 + Q * 9 - Math.floor(k / 3) * (Q + 6));
+    if (u) { pezzi.push({ da: d + 1, svg: cubi }); passi.push(`Ora i cubetti da soli: le unità. ${Array.from({ length: u }, (_, k) => n - u + k + 1).join(", ")}.`); }
+    const k = passi.length;
+    pezzi.push({ da: k, svg: `<text x="${Math.max(xu + 100, 380)}" y="170" class="g-numero"><tspan class="cifra-d">${d || ""}</tspan><tspan class="cifra-u">${u}</tspan></text>` });
+    passi.push(`${d} ${d === 1 ? "decina" : "decine"} e ${u} ${u === 1 ? "unità" : "unità"}: ${n}.${d ? ` La cifra blu dice le decine, la cifra arancione le unità.` : ""}`);
+    pezzi.push({ da: k + 1, svg: abaco(Math.max(xu + 90, 370) + 160, 40, d, u) });
+    passi.push(`Sull'abaco: ${d} ${d === 1 ? "pallina" : "palline"} sull'asta delle decine e ${u} sull'asta delle unità.`);
+    return { viewBox: "0 0 680 300", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "costruisci": il bambino costruisce un numero con decine e unità ---------- */
+  function esercizioCostruisci(e, c, esito, intestazione) {
+    const n = +e.numero;
+    let d = 0, u = 0;
+    c.innerHTML = intestazione + `<div class="costruisci">
+      <div class="costruisci-meta">${n}</div>
+      <div class="colonna-posto costruisci-posto"></div>
+      <div class="costruisci-tasti">
+        <button class="btn" data-c="d+">➕ 1 decina</button><button class="btn bianco" data-c="d-">➖ decina</button>
+        <button class="btn arancio" data-c="u+">➕ 1 unità</button><button class="btn bianco" data-c="u-">➖ unità</button>
+        <button class="btn verde" data-c="ok">✔ Ho finito</button>
+      </div>
+      <p class="costruisci-conto"></p></div>`;
+    const posto = c.querySelector(".costruisci-posto"), conto = c.querySelector(".costruisci-conto");
+    const disegna = () => {
+      posto.innerHTML = `<svg viewBox="0 0 ${Math.max(420, 60 + d * 30 + 90)} 230" class="blocchi">${blocchiSVG(d, u, 20, 20)}</svg>`;
+      conto.innerHTML = `<b class="cifra-d">${d}</b> ${d === 1 ? "decina" : "decine"} e <b class="cifra-u">${u}</b> unità = <b>${d * 10 + u}</b>`;
+    };
+    disegna();
+    c.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-c]");
+      if (!b || c.classList.contains("risolto")) return;
+      const a = b.dataset.c;
+      if (a === "d+" && d < 10) d++;
+      if (a === "d-" && d > 0) d--;
+      if (a === "u+") { u++; if (u === 10) { u = 0; d++; Voce.parla("10 unità fanno una decina!"); } }
+      if (a === "u-" && u > 0) u--;
+      if (a !== "ok") { disegna(); return; }
+      if (d * 10 + u === n) esito.ok();
+      else { e.suggerimento = `${n} = ${Math.floor(n / 10)} decine e ${n % 10} unità.`; esito.ko(b); }
+    });
+  }
+
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -443,7 +530,7 @@
       passi = s.passi;
       disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
     } else if (tipo === "scena" || tipo === "sequenza") {
-      const sc = tipo === "sequenza" ? scenaSequenza(anim) : SCENE[anim.scena]?.();
+      const sc = tipo === "sequenza" ? scenaSequenza(anim) : SCENE[anim.scena]?.(anim);
       if (!sc || !sc.passi.length) return;
       passi = sc.passi.map((testo, i) => ({ testo, finale: i === sc.passi.length - 1 }));
       disegna = (palco, n) => disegnaScena(palco, sc, n);
@@ -601,5 +688,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

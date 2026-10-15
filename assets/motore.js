@@ -2,7 +2,7 @@
 // Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia"];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci"];
   const BRAVO = ["Bravissimo! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -37,6 +37,7 @@
       if (e.tipo === "completa" && !/\[[^\]]+\]/.test(e.testo || "")) errori.push(`${n}: il testo deve avere le parole da completare tra [parentesi quadre].`);
       if (e.tipo === "conta" && !(e.oggetto && Number.isInteger(e.numero))) errori.push(`${n}: servono "oggetto" e "numero".`);
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
+      if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
     });
     return errori;
@@ -298,6 +299,8 @@
     },
   };
 
+  ESERCIZI.costruisci = (e, c, esito) =>
+    Animazioni.esercizioCostruisci(e, c, esito, domanda(e.domanda || `Costruisci il numero ${e.numero} con decine e unità.`, e));
   ESERCIZI.gelosia = (e, c, esito) =>
     Animazioni.esercizioGelosia(e, c, esito, domanda(e.domanda || `Calcola con la griglia: ${e.a} × ${e.b}`, e));
   ESERCIZI.colonna = (e, c, esito) =>

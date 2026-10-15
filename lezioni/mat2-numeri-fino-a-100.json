@@ -3,30 +3,267 @@
   "emoji": "💯",
   "materia": "matematica",
   "classe": 2,
-  "introduzione": "Contiamo con i pacchi e le caramelle!",
+  "introduzione": "Contiamo con caramelle, pacchi e cubetti!",
   "sezioni": [
-    { "titolo": "Le unità", "immagine": "🍬", "testo": "Una caramella da sola è un'unità.\nLe unità si contano una alla volta.", "immagini": ["🍬 1 unità", "🍬🍬🍬 3 unità"] },
-    { "titolo": "Le decine", "immagine": "📦", "testo": "Dieci caramelle stanno in un pacco.\nUn pacco da dieci è una decina.", "immagini": ["📦 1 decina", "🍬 10 unità"], "curiosita": "1 decina = 10 unità." },
-    { "titolo": "Pacchi e caramelle", "immagine": "🧸", "testo": "Il numero 34 ha 3 pacchi e 4 caramelle.\n3 decine e 4 unità." },
-    { "titolo": "Contiamo di dieci in dieci", "immagine": "🦘", "testo": "Il canguro salta di dieci in dieci.\n10, 20, 30, 40, 50… fino a 100!" },
-    { "titolo": "Chi è più grande?", "immagine": "🐊", "testo": "Guarda prima i pacchi: vince chi ne ha di più.\n47 è più grande di 39." }
+    {
+      "titolo": "🍬 Le unità",
+      "immagine": "🍬",
+      "testo": "Una caramella è 1 unità.",
+      "immagini": [
+        "🍬 1",
+        "🍬🍬🍬 3",
+        "🍬🍬🍬🍬🍬 5"
+      ]
+    },
+    {
+      "titolo": "📦 La decina",
+      "immagine": "📦",
+      "testo": "10 caramelle vanno in 1 pacco.\nIl pacco è 1 decina.",
+      "immagini": [
+        "🍬🍬🍬🍬🍬🍬🍬🍬🍬🍬 10 unità",
+        "📦 1 decina"
+      ],
+      "curiosita": "1 decina = 10 unità. Anche le dita delle mani sono 10! 🖐️🖐️"
+    },
+    {
+      "titolo": "🧱 Costruiamo il 34",
+      "immagine": "🧱",
+      "testo": "Guarda il video: barrette da 10 e cubetti da 1.",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 34,
+        "video": true,
+        "titolo": "costruiamo il 34"
+      }
+    },
+    {
+      "titolo": "🔢 Ogni cifra ha il suo posto",
+      "immagine": "🔢",
+      "testo": "A sinistra le decine. A destra le unità.",
+      "immagini": [
+        "📦📦📦 3 decine",
+        "🍬🍬🍬🍬 4 unità",
+        "✏️ 34"
+      ]
+    },
+    {
+      "titolo": "🧮 L'abaco",
+      "immagine": "🧮",
+      "testo": "Anche l'abaco ha le decine e le unità.",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 52,
+        "video": true,
+        "titolo": "il 52 sull'abaco"
+      }
+    },
+    {
+      "titolo": "🦘 Di dieci in dieci",
+      "immagine": "🦘",
+      "testo": "Il canguro salta di 10 in 10.",
+      "immagini": [
+        "📦 10",
+        "📦📦 20",
+        "📦📦📦 30",
+        "📦📦📦📦 40",
+        "📦📦📦📦📦 50"
+      ]
+    },
+    {
+      "titolo": "💯 Arriviamo a 100",
+      "immagine": "💯",
+      "testo": "10 decine fanno 100.\n100 è un centinaio.",
+      "immagini": [
+        "📦📦📦📦📦📦📦📦📦📦 10 decine",
+        "💯 100"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 100,
+        "video": true,
+        "titolo": "10 decine fanno 100"
+      }
+    },
+    {
+      "titolo": "🐊 Chi è più grande?",
+      "immagine": "🐊",
+      "testo": "Guarda i pacchi: vince chi ne ha di più.\nIl coccodrillo mangia il numero più grande!",
+      "immagini": [
+        "📦📦📦📦 47",
+        "📦📦📦 39",
+        "🐊 47 > 39"
+      ]
+    },
+    {
+      "titolo": "🏠 Prima e dopo",
+      "immagine": "🏠",
+      "testo": "Ogni numero ha due vicini di casa.",
+      "immagini": [
+        "⬅️ 45 prima",
+        "🏠 46",
+        "➡️ 47 dopo"
+      ]
+    }
   ],
-  "parole_chiave": ["🍬 unità", "📦 decina", "💯 cento", "🐊 più grande"],
+  "parole_chiave": [
+    "🍬 unità",
+    "📦 decina",
+    "🧮 abaco",
+    "💯 centinaio",
+    "🐊 più grande"
+  ],
   "esercizi": [
-    { "tipo": "scelta", "immagine": "📦", "domanda": "Nel numero 63, quanti pacchi da dieci ci sono?", "opzioni": ["3", "6", "9"], "corretta": 1, "spiegazione": "63 = 6 decine e 3 unità." },
-    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il numero ai suoi pacchi e caramelle.", "coppie": [["48", "📦 4 decine e 🍬 8 unità"], ["84", "📦 8 decine e 🍬 4 unità"], ["70", "📦 7 decine e 🍬 0 unità"]] },
-    { "tipo": "retta", "immagine": "🦘", "domanda": "Il canguro salta di 10 in 10. Tocca il 70.", "min": 0, "max": 100, "passo": 10, "corretta": 70 },
-    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "59 ha [5] decine e [9] unità.", "distrattori": ["4"] },
-    { "tipo": "vero_falso", "immagine": "🐊", "affermazione": "36 è più grande di 63.", "corretta": false, "spiegazione": "63 ha 6 decine. 36 ne ha solo 3." },
-    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo al più grande.", "elementi": ["19", "41", "70", "98"], "suggerimento": "Guarda prima le decine!" },
-    { "tipo": "categorie", "immagine": "⚖️", "domanda": "Più piccolo o più grande di 50?", "categorie": ["🐭 Meno di 50", "🐘 Più di 50"], "elementi": [
-      { "testo": "27", "categoria": "🐭 Meno di 50" },
-      { "testo": "8", "categoria": "🐭 Meno di 50" },
-      { "testo": "49", "categoria": "🐭 Meno di 50" },
-      { "testo": "61", "categoria": "🐘 Più di 50" },
-      { "testo": "80", "categoria": "🐘 Più di 50" },
-      { "testo": "94", "categoria": "🐘 Più di 50" }
-    ] },
-    { "tipo": "scelta", "immagine": "🃏", "domanda": "Luca ha 4 pacchi da 10 figurine e 6 figurine sciolte. Quante sono?", "opzioni": ["10", "46", "64"], "corretta": 1, "spiegazione": "4 decine e 6 unità: 46!" }
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "Nel numero 63, quanti pacchi da dieci ci sono?",
+      "opzioni": [
+        "3",
+        "6",
+        "9"
+      ],
+      "corretta": 1,
+      "spiegazione": "63 = 6 decine e 3 unità."
+    },
+    {
+      "tipo": "costruisci",
+      "immagine": "🧱",
+      "domanda": "Costruisci il 26 con decine e unità.",
+      "numero": 26,
+      "spiegazione": "26 = 2 decine e 6 unità."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il numero ai suoi pacchi e caramelle.",
+      "coppie": [
+        [
+          "48",
+          "📦 4 decine e 🍬 8 unità"
+        ],
+        [
+          "84",
+          "📦 8 decine e 🍬 4 unità"
+        ],
+        [
+          "70",
+          "📦 7 decine e 🍬 0 unità"
+        ]
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🦘",
+      "domanda": "Il canguro salta di 10 in 10. Tocca il 70.",
+      "min": 0,
+      "max": 100,
+      "passo": 10,
+      "corretta": 70
+    },
+    {
+      "tipo": "conta",
+      "immagine": "📦",
+      "domanda": "Quante decine vedi?",
+      "oggetto": "📦",
+      "numero": 7,
+      "spiegazione": "7 decine fanno 70."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "59 ha [5] decine e [9] unità.",
+      "distrattori": [
+        "4"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐊",
+      "affermazione": "36 è più grande di 63.",
+      "corretta": false,
+      "spiegazione": "63 ha 6 decine. 36 ne ha solo 3."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏠",
+      "domanda": "Chi viene subito dopo 59?",
+      "opzioni": [
+        "58",
+        "60",
+        "69"
+      ],
+      "corretta": 1,
+      "spiegazione": "Dopo 59 viene 60: una decina nuova!"
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dal più piccolo al più grande.",
+      "elementi": [
+        "19",
+        "41",
+        "70",
+        "98"
+      ],
+      "suggerimento": "Guarda prima le decine!"
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "Più piccolo o più grande di 50?",
+      "categorie": [
+        "🐭 Meno di 50",
+        "🐘 Più di 50"
+      ],
+      "elementi": [
+        {
+          "testo": "27",
+          "categoria": "🐭 Meno di 50"
+        },
+        {
+          "testo": "8",
+          "categoria": "🐭 Meno di 50"
+        },
+        {
+          "testo": "49",
+          "categoria": "🐭 Meno di 50"
+        },
+        {
+          "testo": "61",
+          "categoria": "🐘 Più di 50"
+        },
+        {
+          "testo": "80",
+          "categoria": "🐘 Più di 50"
+        },
+        {
+          "testo": "94",
+          "categoria": "🐘 Più di 50"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🃏",
+      "domanda": "Luca ha 4 pacchi da 10 figurine e 6 figurine sciolte. Quante sono?",
+      "opzioni": [
+        "10",
+        "46",
+        "64"
+      ],
+      "corretta": 1,
+      "spiegazione": "4 decine e 6 unità: 46!"
+    },
+    {
+      "tipo": "costruisci",
+      "immagine": "🧱",
+      "domanda": "Sfida: costruisci l'83.",
+      "numero": 83,
+      "spiegazione": "83 = 8 decine e 3 unità."
+    }
   ]
 }

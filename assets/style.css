@@ -486,3 +486,26 @@ body.lim .scena { height: 40vh; width: auto; max-width: 100%; }
 .voce-verifica { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 2px solid var(--bordo); border-radius: 14px; background: #fff; }
 .voce-verifica a { flex: 1; color: var(--testo); text-decoration: none; }
 .voce-verifica a:hover b { text-decoration: underline; }
+
+/* ---------- Decine e unità: cubetti, abaco, "costruisci il numero" ---------- */
+.cubo { stroke: rgba(0,0,0,.35); stroke-width: 1.5; }
+.cubo-d { fill: #3D6BE0; } .cubo-u { fill: #FF9F1C; }
+.decina-bordo { fill: none; stroke: #1F3F99; stroke-width: 2; }
+.asta { stroke: #8A6A4A; stroke-width: 5; stroke-linecap: round; }
+.base-abaco { fill: #8A6A4A; }
+.pallina-abaco { stroke: rgba(0,0,0,.3); stroke-width: 1.5; }
+.pallina-abaco.d { fill: #3D6BE0; } .pallina-abaco.u { fill: #FF9F1C; } .pallina-abaco.c { fill: #1FA36A; }
+.g-numero { font: 800 110px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.g-numero.grigio { fill: #C9CED6; }
+.g-conto { font: 800 20px "Baloo 2", sans-serif; text-anchor: middle; fill: #3D6BE0; }
+.cifra-d { fill: #3D6BE0; color: #3D6BE0; } .cifra-u { fill: #FF9F1C; color: #E08500; }
+.centinaio { fill: rgba(31,163,106,.12); stroke: var(--sci); stroke-width: 5; stroke-dasharray: 10 6; }
+.btn.arancio { background: #FF9F1C; }
+.costruisci { display: grid; gap: 12px; justify-items: center; }
+.costruisci-meta { font: 800 4.5rem "Baloo 2", sans-serif; line-height: 1; color: var(--tema); }
+.costruisci-posto { width: min(520px, 100%); }
+.blocchi { width: 100%; height: auto; max-height: 260px; }
+.costruisci-tasti { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.costruisci-conto { font-size: 1.4rem; margin: 0; }
+body.lim .costruisci-meta { font-size: 6rem; }
+body.lim .costruisci-tasti .btn { font-size: 1.5rem; padding: 16px 24px; }
