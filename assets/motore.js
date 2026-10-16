@@ -3,7 +3,7 @@
 
 (function () {
   const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", "equivalenza", ...(window.Giochi?.TIPI || [])];
-  const BRAVO = ["Bravissimo! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
+  const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
   const h = escapeHTML;
@@ -189,7 +189,7 @@
       fine.innerHTML = `<div class="stelle">${"⭐".repeat(stelle)}${"☆".repeat(3 - stelle)}</div>
         ${premioHTML()}
         <h2>${l.storia?.missione ? "Missione compiuta!" : "Hai completato la lezione!"}</h2>
-        <p>${stelle === 3 ? "Sei un vero campione!" : stelle === 2 ? "Ottimo lavoro, continua così!" : "Ce l'hai fatta! Con un po' di allenamento andrà ancora meglio."}</p>
+        <p>${stelle === 3 ? "Risultato da campioni!" : stelle === 2 ? "Ottimo lavoro, continua così!" : "Ce l'hai fatta! Con un po' di allenamento andrà ancora meglio."}</p>
         <button class="btn" onclick="location.reload()">🔁 Ricomincia</button>`;
       Suono.festa(); coriandoli();
       radice.dispatchEvent(new CustomEvent("finita"));

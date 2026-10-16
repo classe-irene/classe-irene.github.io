@@ -116,7 +116,7 @@
     timbro(el) {
       SUONI.timbro();
       const t = document.createElement("div"); t.className = "timbro";
-      t.textContent = caso(["BRAVO!", "SUPER!", "WOW!", "GRANDE!", "PERFETTO!", "SÌ!", "FANTASTICO!"]);
+      t.textContent = caso(["EVVIVA!", "SUPER!", "WOW!", "GRANDE!", "PERFETTO!", "SÌ!", "FANTASTICO!"]);
       t.style.setProperty("--ruota", tra(-14, 14) + "deg"); t.style.color = caso(["#E0533D", "#1F9D66", "#3D6BE0", "#8B5CF6"]);
       el.append(t); setTimeout(() => t.remove(), 2200);
     },
@@ -137,7 +137,7 @@
 
   /* ---------- Il compagno: il personaggio della storia che commenta ---------- */
   let compagno, nuvola, timerNuvola;
-  const GIUSTO = ["Evviva!", "Che bravo!", "Lo sapevi!", "Sei un fulmine!", "Mi hai salvato!", "Ancora così!", "Wow, che occhio!", "Hai fatto centro!"];
+  const GIUSTO = ["Evviva!", "Che forza!", "Lo sapevi!", "Veloci come un fulmine!", "Mi hai salvato!", "Ancora così!", "Wow, che occhio!", "Hai fatto centro!"];
   const SBAGLIATO = ["Quasi! Riprova.", "Ci sei vicino!", "Pensaci ancora un po'.", "Niente paura, riprova!", "Guarda bene…"];
   function creaCompagno(l) {
     compagno = document.createElement("button");

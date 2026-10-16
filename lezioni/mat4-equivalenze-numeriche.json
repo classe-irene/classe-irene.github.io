@@ -5,7 +5,7 @@
   "classe": 4,
   "introduzione": "Unità, decine, centinaia e migliaia: cambiamo il nome, ma la quantità resta uguale!",
   "storia": {
-    "personaggio": "🧑‍🏭",
+    "personaggio": "👨‍🏭",
     "testo": "Ciao! Sono Tito e lavoro nella fabbrica di cioccolatini.\nMetto 10 cioccolatini in una scatola, 10 scatole in una cassa e 10 casse su un camion.\nIl capo mi chiede: «Quante scatole ci sono in 3 casse?» Aiuto!",
     "immagini": [
       "🍫 cioccolatini",
@@ -287,7 +287,7 @@
     },
     {
       "tipo": "bucato",
-      "immagine": "🧑‍🏭",
+      "immagine": "👨‍🏭",
       "domanda": "Completa il testo bucato di Tito.",
       "testo": "10 cioccolatini fanno una [decina].\n10 scatole fanno un [centinaio].\n10 casse fanno un [migliaio].",
       "distrattori": [

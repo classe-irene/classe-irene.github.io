@@ -267,7 +267,7 @@
     },
     {
       "tipo": "bucato",
-      "immagine": "🧑‍🍳",
+      "immagine": "👨‍🍳",
       "domanda": "Completa il testo bucato di Pino.",
       "testo": "Pino ha 10 caramelle: fanno una [decina].\nUna caramella da sola è una [unità].\nCon 10 pacchi da 10 arriva a [100].",
       "distrattori": [
@@ -368,7 +368,7 @@
     }
   ],
   "storia": {
-    "personaggio": "🧑‍🍳",
+    "personaggio": "👨‍🍳",
     "testo": "Ciao bambini! Sono Pino, il pasticcere.\nOggi ho fatto tantissime caramelle!\nDevo metterle nei pacchi da 10, ma da solo non ce la faccio.",
     "immagini": [
       "🍬 caramelle",
