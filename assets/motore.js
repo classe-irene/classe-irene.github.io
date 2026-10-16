@@ -51,7 +51,6 @@
     const materia = MATERIE[l.materia] || MATERIE.matematica;
     document.body.classList.toggle("scienze", l.materia === "scienze");
     document.title = `${l.titolo} · ${SITO.nome}`;
-    const testoIntero = [l.titolo, l.introduzione, ...l.sezioni.map((s) => `${s.titolo}. ${s.testo}`)].join(". ");
 
     radice.innerHTML = `
       <div class="lezione-testa">
@@ -64,6 +63,7 @@
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
         <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
+        <button class="btn bianco" data-azione="scritte">💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}</button>
         <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
         <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
@@ -101,7 +101,8 @@
       if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
       if (b.dataset.azione === "storia") leggi(`${l.storia.testo} ${l.storia.missione || ""}`);
       const a = b.dataset.azione;
-      if (a === "leggi-tutto") leggi(testoIntero);
+      if (a === "leggi-tutto") leggiLezione(b);
+      if (a === "scritte") { Sottotitoli.attivo = !Sottotitoli.attivo; b.textContent = `💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}`; }
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "lim") avviaLIM(radice);
       if (a === "velocita") {
@@ -111,6 +112,30 @@
       if (a === "maiuscolo") document.body.classList.toggle("maiuscolo");
       if (a === "suoni") { Suono.attivo = !Suono.attivo; b.textContent = `🔔 Suoni: ${Suono.attivo ? "sì" : "no"}`; }
     });
+
+    // Parole della lezione con la loro iconcina, per le scritte che accompagnano la voce.
+    Sottotitoli.dizionario([...(l.parole_chiave || []), ...(l.storia?.immagini || []), ...l.sezioni.flatMap((s) => [...(s.immagini || []), `${s.immagine || ""} ${s.titolo.replace(/^\S+\s/, "")}`]), ...(l.ricorda || [])]);
+
+    // "Ascolta la lezione": legge una scheda alla volta, la mostra e la illumina.
+    let lettura = 0;
+    function leggiLezione(btn) {
+      const mio = ++lettura;
+      if (btn.dataset.inCorso) { delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; speechSynthesis?.cancel(); radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); return; }
+      btn.dataset.inCorso = "1"; btn.textContent = "⏹ Ferma la lettura";
+      const pezzi = [{ el: radice.querySelector(".lezione-testa"), t: `${l.titolo}. ${l.introduzione || ""}` },
+        ...(l.storia ? [{ el: radice.querySelector(".storia"), t: `${l.storia.testo} ${l.storia.missione || ""}` }] : []),
+        ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}` }))];
+      const avanti = (k) => {
+        radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura"));
+        if (mio !== lettura || !btn.dataset.inCorso) return;
+        if (k >= pezzi.length) { delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; return; }
+        const p = pezzi[k];
+        p.el?.classList.add("in-lettura");
+        if (!document.body.classList.contains("lim")) p.el?.scrollIntoView({ behavior: "smooth", block: "start" });
+        Voce.parla(p.t, () => setTimeout(() => avanti(k + 1), 700));
+      };
+      avanti(0);
+    }
 
     radice.querySelectorAll(".anim-posto").forEach((p) => { try { Animazioni.crea(p, JSON.parse(p.dataset.anim)); } catch {} });
     disegnaEsercizi(l, radice);

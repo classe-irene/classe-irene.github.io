@@ -789,3 +789,22 @@ html, body { overflow-x: clip; }
   .sentiero .sasso:not(.traguardo) { width: auto; height: auto; flex: 1 1 0; min-width: 0; max-width: 30px; aspect-ratio: 1; font-size: .6rem; }
   .sentiero .sasso.traguardo { flex: none; width: 38px; height: 38px; }
 }
+
+/* ---------- Scritte che accompagnano la voce ---------- */
+.sottotitoli { position: fixed; left: 50%; bottom: 18px; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translateX(-50%);
+  background: #fff; border: 4px solid #FFC93C; border-radius: 26px; box-shadow: 0 14px 40px rgba(43,42,51,.25); padding: 16px 52px 16px 24px;
+  transition: opacity .35s, transform .35s; pointer-events: auto; }
+.sottotitoli.via { opacity: 0; transform: translate(-50%, 30px); pointer-events: none; }
+.st-testo { font: 600 clamp(1.4rem, 2.6vw, 2.3rem)/1.45 "Fredoka", "Baloo 2", sans-serif; color: #B9BDC7; text-align: center; }
+.st-testo.st-nuova { animation: g-pop .4s cubic-bezier(.3,1.6,.5,1); }
+.st-parola { display: inline-block; transition: color .2s, transform .2s; }
+.st-parola.detta { color: #2B2A33; }
+.st-parola.ora { color: #FF6B1A; transform: scale(1.18) translateY(-3px); }
+.st-parola:nth-child(5n+2).detta { color: #3D6BE0; }
+.st-parola:nth-child(7n+4).detta { color: #1F9D66; }
+.st-icona { width: 1.15em; height: 1.15em; vertical-align: -.18em; margin-right: .12em; display: inline-block; }
+.st-parola.ora .st-icona { animation: gs-salta .6s; }
+.st-chiudi { position: absolute; top: 8px; right: 10px; border: 0; background: #F1F2F5; border-radius: 50%; width: 34px; height: 34px; font-size: 1rem; cursor: pointer; }
+body.lim .sottotitoli { bottom: 104px; }
+.in-lettura { outline: 5px solid #FFC93C; outline-offset: 6px; }
+.st-parola { margin: 0 .1em; transform-origin: center bottom; }

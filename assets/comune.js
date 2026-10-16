@@ -143,7 +143,8 @@ window.Voce = (() => {
     velocita() { let v = null; try { v = localStorage.getItem(CHIAVE_VEL); } catch {} return VELOCITA[v] ? v : "lenta"; },
     impostaVelocita(nome) { try { localStorage.setItem(CHIAVE_VEL, nome); } catch {} },
     // "fine" (facoltativa) viene chiamata quando la voce ha finito di parlare.
-    parla(testo, fine) {
+    // opz.scritte = false: niente scritte a schermo (per esempio nei video, che hanno già la loro didascalia).
+    parla(testo, fine, opz = {}) {
       if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       speechSynthesis.cancel();
       // Le emoji non vanno lette ad alta voce.
@@ -152,11 +153,101 @@ window.Voce = (() => {
       u.lang = "it-IT"; u.rate = VELOCITA[this.velocita()]; u.pitch = 1.05;
       const v = scelta(); if (v) u.voice = v;
       if (fine) { let fatto = false; const una = () => { if (!fatto) { fatto = true; fine(); } }; u.onend = una; u.onerror = una; setTimeout(una, 4000 + pulito.length * 140); }
+      if (opz.scritte !== false) window.Sottotitoli?.mostra(pulito, u);
       speechSynthesis.speak(u);
     },
   };
 })();
-window.leggi = (t) => Voce.parla(t);
+window.leggi = (t, fine) => Voce.parla(t, fine);
+
+/* ---------- Scritte a schermo mentre la voce parla ----------
+   Le parole compaiono una alla volta, con caratteri allegri; la parola detta in quel momento si illumina.
+   Le parole importanti della lezione hanno accanto la loro iconcina. */
+window.Sottotitoli = (() => {
+  const CHIAVE = "classe-irene-scritte";
+  let attivo = (() => { try { return localStorage.getItem(CHIAVE) !== "no"; } catch { return true; } })();
+  let box, giro = 0, timer;
+  const diz = new Map(Object.entries({ ciao: "👋", caramell: "🍬", pacc: "📦", missione: "🎯", aiut: "🤝", pensa: "🤔", guard: "👀", ascolt: "👂",
+    acqua: "💧", ghiacci: "🧊", sole: "☀️", caldo: "🔥", fredd: "❄️", piant: "🌱", fior: "🌸", animal: "🐾", fung: "🍄", libr: "📚",
+    bambin: "🧒", scuola: "🏫", casa: "🏠", ricord: "📌", gioc: "🎲", figurin: "🏆", tabella: "🗂️", virgola: "🔴", zer: "⭕",
+    migliai: "🏟️", centinai: "💯", decin: "🔟", unità: "1️⃣", numer: "🔢", cifr: "🔢", moltiplic: "✖️", somm: "➕", sottra: "➖", divisi: "➗" }));
+  const norm = (w) => w.toLowerCase().replace(/[^a-zàèéìòù]/g, "");
+  function icona(w) {
+    const p = norm(w);
+    if (p.length < 4) return null;
+    for (const [k, e] of diz) if (p.startsWith(k)) return e;
+    return null;
+  }
+  // La lezione aggiunge le sue parole: "🍬 caramelle" → caramell = 🍬
+  function dizionario(voci) {
+    for (const v of voci) {
+      const { emoji, testo } = Figura.dividi(v || "");
+      if (!emoji) continue;
+      for (const w of testo.split(/\s+/)) { const p = norm(w); if (p.length >= 4 && !/^(sono|della|delle|degli|dalla|nella|nelle|questo|questa|ogni|anche)$/.test(p)) diz.set(p.slice(0, Math.max(4, p.length - 1)), emoji); }
+    }
+  }
+  const bello = (w) => w.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+  function nascondi(g) { if (g !== giro || !box) return; box.classList.add("via"); }
+  function mostra(testo, u) {
+    if (!attivo || !u) return;
+    const parole = [...testo.matchAll(/\S+/g)];
+    if (parole.length < 3) return;
+    const g = ++giro;
+    clearTimeout(timer);
+    if (!box) {
+      box = document.createElement("div"); box.className = "sottotitoli via"; box.setAttribute("aria-hidden", "true");
+      box.innerHTML = `<button class="st-chiudi" type="button" aria-label="Chiudi">✕</button><div class="st-testo"></div>`;
+      box.querySelector(".st-chiudi").onclick = () => { box.classList.add("via"); };
+      document.body.append(box);
+    }
+    // Una frase alla volta: le frasi lunghe stanno comode sulla LIM.
+    const frasi = []; let cur = [];
+    parole.forEach((m, i) => { cur.push(i); if (/[.!?]$/.test(m[0]) || cur.length >= 22) { frasi.push(cur); cur = []; } });
+    if (cur.length) frasi.push(cur);
+    const frase = (i) => frasi.findIndex((f) => f.includes(i));
+    const t = box.querySelector(".st-testo");
+    let fCor = -1, wCor = -1, usaConfini = false;
+    const disegna = (fi) => {
+      fCor = fi; let gia = new Set();
+      t.innerHTML = frasi[fi].map((i) => {
+        const w = parole[i][0], e = icona(w);
+        const ico = e && !gia.has(e) ? (gia.add(e), Figura.img(e, "st-icona")) : "";
+        return `<span class="st-parola" data-i="${i}">${ico}${escapeHTML(bello(w))}</span>`;
+      }).join(" ");
+      t.classList.remove("st-nuova"); void t.offsetWidth; t.classList.add("st-nuova");
+    };
+    const evidenzia = (i) => {
+      if (g !== giro || i === wCor || i >= parole.length) return;
+      wCor = i;
+      const fi = frase(i); if (fi !== fCor) disegna(fi);
+      t.querySelectorAll(".st-parola").forEach((s) => { const k = +s.dataset.i; s.classList.toggle("detta", k < i); s.classList.toggle("ora", k === i); });
+    };
+    box.classList.remove("via");
+    disegna(0); evidenzia(0);
+    u.addEventListener("boundary", (ev) => {
+      if (ev.name && ev.name !== "word") return;
+      usaConfini = true;
+      let i = parole.findIndex((m) => m.index + m[0].length > ev.charIndex); if (i < 0) i = parole.length - 1;
+      evidenzia(i);
+    });
+    // Se il browser non dice a che parola è arrivato, stimo i tempi.
+    const vel = u.rate || .8;
+    let k = 0;
+    const passo = () => {
+      if (g !== giro || usaConfini) return;
+      evidenzia(k);
+      const d = (120 + parole[k][0].length * 62) / vel + (/[.,;:!?]$/.test(parole[k][0]) ? 260 : 0);
+      if (++k < parole.length) timer = setTimeout(passo, d);
+    };
+    u.addEventListener("start", () => { if (g === giro && !usaConfini) { k = 0; timer = setTimeout(passo, 150); } });
+    u.addEventListener("end", () => { if (g !== giro) return; t.querySelectorAll(".st-parola").forEach((s) => { s.classList.add("detta"); s.classList.remove("ora"); }); setTimeout(() => nascondi(g), 1600); });
+  }
+  return {
+    mostra, dizionario,
+    get attivo() { return attivo; },
+    set attivo(v) { attivo = v; try { localStorage.setItem(CHIAVE, v ? "si" : "no"); } catch {} if (!v) box?.classList.add("via"); },
+  };
+})();
 
 /* ---------- Immagini illustrate ----------
    Ogni emoji diventa un'immagine 3D colorata (cartella assets/emoji).

@@ -267,7 +267,7 @@
         d.querySelectorAll(".scelto").forEach((x) => x.classList.remove("scelto")); td.classList.add("scelto");
         const frase = `${r} × ${c} = ${r * c}`;
         d.querySelector(".tavola-frase").textContent = frase;
-        Voce.parla(frase.replace("×", "per"));
+        Voce.parla(frase.replace("×", "per"), null, { scritte: false });
       });
       document.body.append(d);
     }
@@ -777,7 +777,7 @@
       didascalia.classList.remove("nuova"); void didascalia.offsetWidth; didascalia.classList.add("nuova");
       if (passi[n].finale) Suono.giusto();
       // Pause lunghe: i bambini hanno il tempo di guardare prima del passo successivo.
-      if (parla && voce.checked) Voce.parla(passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); });
+      if (parla && voce.checked) Voce.parla(passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); }, { scritte: false });
       else if (inCorso) timer = setTimeout(avanti, 4000);
     }
     function avanti() {
