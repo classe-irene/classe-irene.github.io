@@ -275,7 +275,13 @@
         sp.textContent = caso(RIPROVA) + (e.suggerimento ? " " + e.suggerimento : "");
         sp.classList.add("visibile");
       };
-      ESERCIZI[e.tipo](e, corpo, { ok: () => stato.risolto(el, e.spiegazione), ko: sbaglia });
+      // Passo giusto dentro un esercizio a più mosse: tolgo il rosso e il vecchio "ritenta".
+      const bene = (nodo) => {
+        nodo?.classList.remove("sbagliata");
+        const sp = el.querySelector(".spiegazione");
+        if (sp.classList.contains("visibile")) { sp.textContent = caso(["Giusto! 👍", "Bravo! Continua così.", "Sì, è quello giusto!"]); }
+      };
+      ESERCIZI[e.tipo](e, corpo, { ok: () => stato.risolto(el, e.spiegazione), ko: sbaglia, bene });
     });
   }
 
@@ -319,7 +325,7 @@
           scelta = b; b.classList.add("scelta"); return;
         }
         if (scelta.dataset.i === b.dataset.i) {
-          [scelta, b].forEach((x) => { x.classList.remove("scelta"); x.classList.add("giusta"); setTimeout(() => x.classList.add("usata"), 400); });
+          [scelta, b].forEach((x) => { x.classList.remove("scelta"); x.classList.add("giusta"); esito.bene?.(x); setTimeout(() => x.classList.add("usata"), 400); });
           Suono.giusto();
           if (++fatte === e.coppie.length) esito.ok();
         } else { scelta.classList.remove("scelta"); esito.ko(b); }
@@ -330,13 +336,15 @@
     // Tocca una tessera, poi il cesto giusto (si può anche trascinare).
     categorie(e, c, esito) {
       c.innerHTML = domanda(e.domanda || "Metti ogni elemento nel cesto giusto.", e) +
-        `<div class="mazzo">${mescola(e.elementi).map((x) => `<button class="tessera" data-cat="${h(x.categoria)}">${Figura.ricco(x.testo)}</button>`).join("")}</div>
+        `<p class="gioco-aiuto">✋ Trascina ogni carta nel box giusto. Oppure tocca la carta e poi tocca il box.</p>
+         <div class="mazzo trascina">${mescola(e.elementi).map((x) => `<button class="tessera" data-cat="${h(x.categoria)}">${Figura.ricco(x.testo)}</button>`).join("")}</div>
          <div class="categorie">${e.categorie.map((k) => `<div class="cesto" data-cat="${h(k)}"><h4>${Figura.ricco(k)}</h4><div class="dentro"></div></div>`).join("")}</div>`;
       let scelta = null, fatte = 0;
       const metti = (t, cesto) => {
         if (t.dataset.cat === cesto.dataset.cat) {
-          t.classList.remove("scelta"); t.classList.add("giusta");
+          t.classList.remove("scelta"); t.classList.add("giusta"); esito.bene?.(t);
           cesto.querySelector(".dentro").append(t);
+          cesto.classList.remove("accoglie"); void cesto.offsetWidth; cesto.classList.add("accoglie");
           Suono.giusto();
           if (++fatte === e.elementi.length) esito.ok();
         } else { t.classList.remove("scelta"); esito.ko(t); }
@@ -363,7 +371,7 @@
         if (!b) return;
         if (+b.dataset.i === prossimo) {
           seq.querySelector(".vuoto")?.remove();
-          b.classList.add("giusta"); seq.append(b); b.disabled = true;
+          b.classList.add("giusta"); esito.bene?.(b); seq.append(b); b.disabled = true;
           Suono.giusto();
           if (++prossimo === e.elementi.length) esito.ok();
         } else esito.ko(b);
@@ -508,19 +516,23 @@
       if (!fantasma) {
         mosso = true;
         fantasma = origine.cloneNode(true);
-        Object.assign(fantasma.style, { position: "fixed", pointerEvents: "none", zIndex: 50, width: origine.offsetWidth + "px", opacity: .9 });
+        fantasma.classList.add("fantasma"); origine.classList.add("in-volo");
+        Object.assign(fantasma.style, { position: "fixed", pointerEvents: "none", zIndex: 130, width: origine.offsetWidth + "px", margin: 0 });
         document.body.append(fantasma);
       }
       fantasma.style.left = ev.clientX - dx + "px"; fantasma.style.top = ev.clientY - dy + "px";
       const b = document.elementFromPoint(ev.clientX, ev.clientY)?.closest(selBersaglio);
       if (b !== sopra) { sopra?.classList.remove("bersaglio"); sopra = b && radice.contains(b) ? b : null; sopra?.classList.add("bersaglio"); }
     });
-    window.addEventListener("pointerup", () => {
+    const fine = (annulla) => {
       if (fantasma) { fantasma.remove(); fantasma = null; }
-      if (origine && mosso && sopra) rilascia(origine, sopra);
+      if (!annulla && origine && mosso && sopra) rilascia(origine, sopra);
+      if (origine && mosso) { origine.classList.remove("in-volo"); radice.addEventListener("click", (e) => { e.stopPropagation(); e.preventDefault(); }, { capture: true, once: true }); }
       sopra?.classList.remove("bersaglio");
       origine = sopra = null;
-    });
+    };
+    window.addEventListener("pointerup", () => fine(false));
+    window.addEventListener("pointercancel", () => fine(true));
   }
 
   window.Motore = { valida, disegnaLezione, TIPI };

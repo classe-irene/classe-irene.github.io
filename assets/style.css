@@ -871,3 +871,12 @@ body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 48
 .tc-maniglia:active, .voce-dock.trascino .tc-maniglia { cursor: grabbing; background: #FFB703; }
 .tc-presa { font-size: 1.4rem; line-height: 1; opacity: .7; }
 .voce-dock.trascino .sottotitoli { box-shadow: 0 24px 60px rgba(43,42,51,.4); }
+
+/* Trascinamento delle carte nei box */
+.mazzo.trascina .tessera { touch-action: none; cursor: grab; }
+.tessera.in-volo { opacity: .35; }
+.tessera.fantasma { transform: rotate(-4deg) scale(1.08); box-shadow: 0 16px 34px rgba(43,42,51,.3); opacity: .95; cursor: grabbing; }
+.cesto.bersaglio { border-color: var(--tema, #3D6BE0); border-style: solid; background: var(--tema-chiaro, #EEF3FF); transform: scale(1.03); transition: transform .15s; }
+.cesto.accoglie { animation: cesto-ok .45s ease-out; }
+@keyframes cesto-ok { 0% { box-shadow: 0 0 0 0 rgba(31,157,102,.6); } 100% { box-shadow: 0 0 0 16px rgba(31,157,102,0); } }
+.tessera.giusta.sbagliata { animation: none; background: #DFF6E8; border-color: var(--ok); }
