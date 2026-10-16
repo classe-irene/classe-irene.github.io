@@ -37,7 +37,7 @@ window.CURRICOLO = {
     ],
     2: [
       { id: "mat2-numeri100", emoji: "💯", titolo: "I numeri fino a 100", descrizione: "Decine e unità, valore posizionale.", lezione: "lezioni/mat2-numeri-fino-a-100.json" },
-      { id: "mat2-addcambio", emoji: "➕", titolo: "Addizioni in colonna", descrizione: "Con e senza cambio." },
+      { id: "mat2-addcambio", emoji: "➕", titolo: "Addizioni in colonna", descrizione: "Con e senza cambio.", lezione: "lezioni/mat2-addizioni-in-colonna.json" },
       { id: "mat2-sottcambio", emoji: "➖", titolo: "Sottrazioni in colonna", descrizione: "Con e senza prestito." },
       { id: "mat2-moltiplicazione", emoji: "✖️", titolo: "La moltiplicazione", descrizione: "Addizioni ripetute e schieramenti." },
       { id: "mat2-tabelline", emoji: "🎶", titolo: "Le tabelline", descrizione: "Dalla tabellina del 2 a quella del 10." },
@@ -77,6 +77,7 @@ window.CURRICOLO = {
       { id: "mat5-milioni", emoji: "🌌", titolo: "Milioni e miliardi", descrizione: "Numeri grandissimi e potenze." },
       { id: "mat5-potenze", emoji: "⚡", titolo: "Le potenze", descrizione: "Base, esponente e notazione." },
       { id: "mat5-multipli", emoji: "🔗", titolo: "Multipli, divisori e primi", descrizione: "Criteri di divisibilità." },
+      { id: "mat5-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Decimi, centesimi, millesimi; per e diviso 10, 100, 1000.", lezione: "lezioni/mat5-numeri-decimali.json" },
       { id: "mat5-relativi", emoji: "🌡️", titolo: "I numeri negativi", descrizione: "Temperature e retta dei numeri relativi." },
       { id: "mat5-percentuali", emoji: "💯", titolo: "Le percentuali", descrizione: "Sconti, aumenti e frazioni." },
       { id: "mat5-aree", emoji: "📐", titolo: "Area dei poligoni", descrizione: "Formule per triangoli e quadrilateri." },
@@ -100,7 +101,7 @@ window.CURRICOLO = {
     2: [
       { id: "sci2-materia", emoji: "🧊", titolo: "Solidi, liquidi e gas", descrizione: "Gli stati della materia.", lezione: "lezioni/sci2-solidi-liquidi-gas.json" },
       { id: "sci2-acqua", emoji: "💧", titolo: "L'acqua", descrizione: "Proprietà e trasformazioni dell'acqua." },
-      { id: "sci2-semi", emoji: "🌰", titolo: "Dal seme alla pianta", descrizione: "La germinazione e la crescita." },
+      { id: "sci2-semi", emoji: "🌰", titolo: "Dal seme alla pianta", descrizione: "La germinazione e la crescita.", lezione: "lezioni/sci2-dal-seme-alla-pianta.json" },
       { id: "sci2-ciclovita", emoji: "🔄", titolo: "Il ciclo della vita", descrizione: "Nascere, crescere, riprodursi, morire." },
       { id: "sci2-animali", emoji: "🦁", titolo: "Classificare gli animali", descrizione: "Cosa mangiano, come nascono, come si muovono." },
       { id: "sci2-ambienti", emoji: "🏞️", titolo: "Gli ambienti naturali", descrizione: "Bosco, prato, mare, montagna." },
@@ -128,7 +129,7 @@ window.CURRICOLO = {
       { id: "sci4-miscugli", emoji: "🥣", titolo: "Miscugli e soluzioni", descrizione: "Separare e sciogliere." },
     ],
     5: [
-      { id: "sci5-corpo", emoji: "🫀", titolo: "Il corpo umano", descrizione: "Organi, apparati e sistemi." },
+      { id: "sci5-corpo", emoji: "🫀", titolo: "Il corpo umano", descrizione: "Organi, apparati e sistemi.", lezione: "lezioni/sci5-corpo-umano.json" },
       { id: "sci5-digerente", emoji: "🍎", titolo: "Apparato digerente", descrizione: "Il viaggio del cibo." },
       { id: "sci5-respiratorio", emoji: "🫁", titolo: "Respiratorio e circolatorio", descrizione: "Polmoni, cuore e sangue." },
       { id: "sci5-nervoso", emoji: "🧠", titolo: "Il sistema nervoso", descrizione: "Cervello, nervi e sensi." },

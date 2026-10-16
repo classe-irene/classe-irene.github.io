@@ -17,7 +17,7 @@ Non ha bisogno di server né di database: si pubblica gratis con GitHub Pages.
 Le lezioni create e non pubblicate restano salvate solo nel browser in cui sono state create.
 
 ## Tipi di esercizio
-`scelta`, `vero_falso`, `abbina`, `categorie`, `ordina`, `completa`, `conta`, `retta`.
+`scelta`, `vero_falso`, `abbina`, `categorie`, `ordina`, `completa`, `conta`, `retta`, `addizione`.
 Il formato esatto di ognuno è scritto nelle istruzioni che prepara l'area insegnante.
 
 ## Programmi
@@ -34,6 +34,8 @@ Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un 
 ## Animazioni ed esercizi in colonna
 - In una sezione: `"animazione": { "tipo": "moltiplicazione", "a": 23, "b": 14 }` oppure `"tipo": "scomposizione"`. Mostra il calcolo passo passo, con una frase (e la voce) per ogni passo: ▶ Guarda, ⏭ Un passo, ↺ Da capo.
 - Esercizio `{ "tipo": "colonna", "a": 32, "b": 24 }`: moltiplicazione in colonna guidata, il bambino scrive le cifre con un tastierino; i riporti compaiono da soli.
+- Addizione in colonna di 2ª (somma fino a 99, con o senza cambio): in una sezione `"animazione": { "tipo": "addizione", "a": 27, "b": 15 }` (cubetti + colonna, il cambio di 10 unità in 1 decina e il riporto); esercizio `{ "tipo": "addizione", "a": 27, "b": 15 }` con il tastierino, il riporto compare da solo.
+- Scena di scienze `"scena": "seme"`: dal seme di fagiolo alla pianta con fiore e frutto.
 - Codice: `assets/animazioni.js`.
 
 ## Verifiche da stampare
@@ -72,3 +74,11 @@ Scritte e telecomando compaiono al centro dello schermo. La maniglia gialla "⠿
 - Video `{"tipo":"scena","scena":"frazioni_equivalenti","n":1,"d":2,"k":2}`: due pizze, 1/2 = 2/4, il trucco del "× 2".
 - Esercizio `colora_frazione` {n, d, forma}: il bambino tocca le parti da colorare. Esercizio `leggi_frazione` {n, d, forma, chiedi}: sceglie la frazione colorata fra 3 (con `"chiedi":"complementare"` quella rimasta bianca).
 - In tutti i testi "3/4" si vede in colonna (numeratore sopra, denominatore sotto) e la voce dice "3 quarti".
+## Numeri decimali (classe 5ª)
+Tabella h da u , d c m con la virgola ferma in mezzo: × 10, 100, 1000 le cifre vanno a sinistra, : 10, 100, 1000 vanno a destra.
+Video `{"tipo":"scena","scena":"decimali","n":"2,35","operazioni":["x10","x100",":10"]}` (senza `operazioni` spiega solo intero, decimi, centesimi, millesimi).
+Esercizio `virgola` {n: "2,4", op: "x" oppure ":", per: 10 | 100 | 1000}: il bambino sposta le cifre con le frecce e preme "Ho finito". Numero e risultato devono stare nella tabella (al massimo 3 cifre prima e 3 dopo la virgola).
+L'esercizio `retta` mostra i numeri con la virgola (es. `"min": 0, "max": 1, "passo": 0.1, "corretta": 0.7`).
+
+## Corpo umano (classe 5ª)
+Video `{"tipo":"scena","scena":"corpo"}`: cervello, polmoni (respirano), cuore (batte), stomaco e intestino, ossa e muscoli, poi "organi in squadra = apparati".

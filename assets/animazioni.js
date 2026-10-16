@@ -386,6 +386,76 @@
     };
   }
 
+  function scenaCorpo() {
+    const linea = (x1, y1, x2, y2) => `<path d="M${x1} ${y1} L${x2} ${y2}" class="sc-linea"/>`;
+    const etichetta = (x, y, t) => `<text x="${x}" y="${y}" class="sc-parola">${t}</text>`;
+    return {
+      viewBox: "0 0 620 400",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="400" class="sc-cielo"/>
+          <path d="M258 135 L205 262 M362 135 L415 262 M287 275 L278 385 M333 275 L342 385" class="sc-arto"/>
+          <rect x="296" y="105" width="28" height="24" rx="8" class="sc-pelle"/>
+          <path d="M248 128 Q310 108 372 128 L384 272 Q310 294 236 272 Z" class="sc-pelle"/>
+          <circle cx="310" cy="66" r="46" class="sc-pelle"/>` },
+        { da: 1, svg: fig("🧠", 310, 62, 64) }, { da: 1, a: 1, svg: linea(355, 60, 455, 60) + etichetta(510, 68, "cervello") },
+        { da: 2, svg: `<g class="sc-respira">${fig("🫁", 310, 168, 104)}</g>` }, { da: 2, a: 2, svg: linea(262, 168, 170, 168) + etichetta(115, 176, "polmoni") },
+        { da: 3, svg: `<g class="sc-batte">${fig("🫀", 332, 182, 44)}</g>` }, { da: 3, a: 3, svg: linea(352, 182, 455, 182) + etichetta(500, 190, "cuore") },
+        { da: 4, svg: `<path d="M298 214 C 300 200, 345 198, 348 216 C 350 236, 318 246, 304 236 C 296 230, 296 222, 298 214 Z" class="sc-stomaco"/>
+          <path d="M276 252 q 12 -10 24 0 t 24 0 t 24 0 t 18 4 M282 266 q 12 -10 24 0 t 24 0 t 24 0" class="sc-intestino"/>` },
+        { da: 4, a: 4, svg: linea(348, 222, 455, 222) + etichetta(510, 230, "stomaco") + linea(272, 258, 170, 258) + etichetta(110, 266, "intestino") },
+        { da: 5, svg: `<path d="M210 250 L254 145 M410 250 L366 145 M281 378 L289 285 M339 378 L331 285" class="sc-osso"/>` },
+        { da: 5, a: 5, svg: fig("🦴", 130, 330, 54) + etichetta(130, 378, "ossa") + fig("💪", 490, 330, 54) + etichetta(490, 378, "muscoli") },
+        { da: 6, svg: etichetta(510, 68, "comanda") + etichetta(115, 176, "respira") + etichetta(500, 190, "batte")
+          + etichetta(510, 230, "digerisce") + `<text x="310" y="392" class="sc-parola">Organi in squadra = apparati</text>` },
+      ],
+      passi: [
+        "Ecco il corpo umano. Dentro ci sono tanti organi. Ogni organo ha un lavoro.",
+        "Nella testa c'è il cervello. Il cervello comanda tutto il corpo.",
+        "Nel petto ci sono i polmoni. Si gonfiano e prendono l'aria.",
+        "Vicino ai polmoni c'è il cuore. Batte sempre e spinge il sangue in tutto il corpo.",
+        "Nella pancia ci sono lo stomaco e l'intestino. Digeriscono il cibo.",
+        "Le ossa ci tengono dritti. I muscoli tirano le ossa e ci fanno muovere.",
+        "Gli organi lavorano in squadra. Una squadra di organi si chiama apparato.",
+      ],
+    };
+  }
+
+  function scenaSeme() {
+    let gocce = "";
+    for (let k = 0; k < 8; k++) gocce += `<line x1="${250 + k * 17}" y1="${60 + (k % 3) * 12}" x2="${247 + k * 17}" y2="${76 + (k % 3) * 12}" class="sc-pioggia" style="animation-delay:-${(k * 0.21).toFixed(2)}s"/>`;
+    return {
+      viewBox: "0 0 620 360",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="360" class="sc-cielo"/><rect x="0" y="228" width="620" height="132" class="sc-terra"/><rect x="0" y="222" width="620" height="12" rx="6" class="sc-prato"/>` },
+        { da: 0, a: 1, svg: fig("🫘", 310, 282, 46) },
+        { da: 0, a: 0, svg: `<text x="400" y="290" class="sc-parola">seme</text>` },
+        { da: 1, a: 1, svg: gocce + fig("💧", 470, 120, 44) + `<text x="470" y="180" class="sc-parola">acqua</text>` },
+        { da: 2, svg: `<path d="M310 292 C 304 315, 318 332, 306 352" pathLength="100" class="sc-radici sc-cresce"/>
+          <path d="M309 312 q -22 8 -34 26 M311 326 q 20 6 30 22" pathLength="100" class="sc-radici sc-cresce lenta"/>` },
+        { da: 2, svg: fig("🫘", 310, 282, 54, 'class="sc-gonfia"') },
+        { da: 2, a: 2, svg: `<text x="400" y="340" class="sc-parola">radice</text>` },
+        { da: 3, svg: `<path d="M310 268 C 298 230, 322 180, 310 135" pathLength="100" class="sc-fusto sc-cresce"/>` + fig("☀️", 80, 70, 90) },
+        { da: 3, a: 3, svg: `<text x="400" y="190" class="sc-parola">fusto</text><path d="M115 95 L 230 140 M120 120 L 250 190" class="sc-raggio"/>` },
+        { da: 4, svg: `<g class="sc-entra"><path d="M310 150 C 260 140, 235 110, 242 92 C 278 92, 300 118, 310 150 Z" class="sc-foglia"/>
+          <path d="M310 150 C 360 140, 385 110, 378 92 C 342 92, 320 118, 310 150 Z" class="sc-foglia"/></g>` },
+        { da: 4, a: 4, svg: `<text x="440" y="120" class="sc-parola">foglie</text>` },
+        { da: 5, svg: `<g class="sc-entra">${fig("🌸", 310, 112, 64)}</g><g class="sc-entra" style="animation-delay:.6s">${fig("🫛", 340, 205, 44)}</g>` },
+        { da: 5, a: 5, svg: `<text x="200" y="110" class="sc-parola">fiore</text><text x="470" y="210" class="sc-parola">frutto</text>` },
+        { da: 6, a: 6, svg: `<rect x="20" y="245" width="580" height="100" rx="18" class="sc-riquadro"/>
+          ${[["💧", "acqua"], ["☀️", "luce"], ["🌬️", "aria"], ["", "terra"]].map(([e, t], i) => `<g class="sc-entra" style="animation-delay:${i * 0.35}s">${e ? fig(e, 95 + i * 145, 282, 46) : `<path d="M${55 + i * 145} 300 Q ${95 + i * 145} 250 ${135 + i * 145} 300 Z" class="sc-terra"/>`}<text x="${95 + i * 145}" y="334" class="sc-etichetta">${t}</text></g>`).join("")}` },
+      ],
+      passi: [
+        "Questo è un seme di fagiolo. Dentro dorme una piccola pianta.",
+        "Mettiamo il seme nella terra e gli diamo l'acqua.",
+        "Il seme beve, si gonfia e si apre. Esce la radice: va giù, nella terra.",
+        "Poi esce il fusto: va su, verso la luce del sole.",
+        "Spuntano le prime foglie. È nata una piantina!",
+        "La pianta cresce e fa i fiori. Dal fiore nasce il frutto. Dentro ci sono semi nuovi!",
+        "Per crescere, la pianta ha bisogno di acqua, luce, aria e terra.",
+      ],
+    };
+  }
+
   // Sequenza semplice per qualsiasi argomento (la usa anche la "lezione in 5 minuti"):
   // ogni passo mostra grandi figure (emoji) e una frase. "→" fra le figure disegna una freccia.
   function scenaSequenza(anim) {
@@ -707,6 +777,269 @@
     });
   }
 
+  /* ---------- Numeri decimali: tabella h da u , d c m (classe 5ª) ----------
+     Un numero è { D: cifre senza virgola, p: quante cifre stanno prima della virgola }.
+     × 10, 100, 1000: le cifre si spostano verso sinistra; : 10, 100, 1000 verso destra.
+     La virgola resta ferma in mezzo alla tabella, come sul quaderno. */
+  const COLD = [
+    { s: "h", nome: "centinaia", c: "#2FA35B" },
+    { s: "da", nome: "decine", c: "#E0533D" },
+    { s: "u", nome: "unità", c: "#3D6BE0" },
+    { s: "d", nome: "decimi", c: "#8B5CF6" },
+    { s: "c", nome: "centesimi", c: "#F08A24" },
+    { s: "m", nome: "millesimi", c: "#14A3A3" }];
+  const XD = (i) => (i < 3 ? 60 + i * 100 : 100 + i * 100);
+  function leggiDecimale(n) {
+    const t = String(n).trim().replace(".", ",");
+    if (!/^\d+(,\d+)?$/.test(t)) return null;
+    const [int, dec = ""] = t.split(",");
+    return { D: int + dec, p: int.length };
+  }
+  function spostaDecimale(x, k) {
+    let { D, p } = x;
+    for (; k > 0; k--) { p++; if (p > D.length) D += "0"; }
+    for (; k < 0; k++) { p--; if (p < 1) { D = "0" + D; p = 1; } }
+    return { D, p };
+  }
+  function partiDecimale(x) {
+    const int = x.D.slice(0, x.p).replace(/^0+(?=\d)/, ""), dec = x.D.slice(x.p).replace(/0+$/, "");
+    return { int, dec, testo: int + (dec ? "," + dec : "") };
+  }
+  // Cifre nelle 6 caselle (null se il numero non entra nella tabella).
+  function cifreDecimale(x) {
+    const { int, dec } = partiDecimale(x);
+    if (int.length > 3 || dec.length > 3) return null;
+    const cifre = Array(6).fill("");
+    [...int].forEach((ch, k) => { cifre[3 - int.length + k] = ch; });
+    [...dec].forEach((ch, k) => { cifre[3 + k] = ch; });
+    return cifre;
+  }
+  const PASSI_PER = { 10: 1, 100: 2, 1000: 3 };
+  // "x" = per, ":" = diviso. Restituisce null se l'operazione non è valida o il risultato non entra.
+  function calcolaVirgola(n, op, per) {
+    const x = leggiDecimale(n), k = PASSI_PER[per];
+    if (!x || !k || !["x", ":"].includes(op) || !cifreDecimale(x)) return null;
+    const y = spostaDecimale(x, op === "x" ? k : -k);
+    return cifreDecimale(y) ? partiDecimale(y).testo : null;
+  }
+  function tabellaDecSVG({ cifre = [], evid = [], nuove = {}, fantasmi = [], cliccabile = false } = {}) {
+    let svg = `<rect x="10" y="6" width="300" height="28" rx="8" class="t6-classe semplici"/><text x="160" y="26" class="t6-classe-t">PARTE INTERA</text>
+      <rect x="350" y="6" width="300" height="28" rx="8" class="t6-classe"/><text x="500" y="26" class="t6-classe-t">PARTE DECIMALE</text>`;
+    COLD.forEach((x, i) => {
+      const acc = evid.includes(i);
+      svg += `<g ${cliccabile ? `data-col="${i}" class="t6-col"` : ""}>
+        <rect x="${XD(i) - 48}" y="40" width="96" height="50" rx="10" fill="${x.c}" opacity="${acc ? 1 : .22}"/>
+        <text x="${XD(i)}" y="74" class="t6-sigla" fill="${acc ? "#fff" : x.c}">${x.s}</text>
+        <rect x="${XD(i) - 48}" y="96" width="96" height="84" rx="10" class="t6-casella ${acc ? "accesa" : ""}" ${acc ? `stroke="${x.c}"` : ""}/></g>`;
+    });
+    fantasmi.forEach((ch, i) => { if (ch) svg += `<text x="${XD(i)}" y="160" class="t6-cifra spenta">${ch}</text>`; });
+    cifre.forEach((ch, i) => {
+      if (!ch) return;
+      const nv = nuove[i];
+      svg += nv === undefined ? `<text x="${XD(i)}" y="160" class="t6-cifra">${ch}</text>`
+        : `<text x="${XD(i)}" y="160" class="t6-cifra dec-scivola ${nv === 0 ? "dec-zero" : ""}" style="--dx:${XD(i + nv) - XD(i)}px">${ch}</text>`;
+    });
+    return svg + `<text x="330" y="166" class="t6-virgola">,</text>`;
+  }
+  function scenaDecimali(anim) {
+    const x = leggiDecimale(anim.n ?? "2,35") || leggiDecimale("2,35");
+    const cifre = cifreDecimale(x) || cifreDecimale(leggiDecimale("2,35"));
+    const { int, dec, testo } = partiDecimale(x);
+    const pezzi = [], passi = [];
+    const passo = (svg, frase) => { pezzi.push({ da: pezzi.length, a: pezzi.length, svg }); passi.push(frase); };
+    passo(tabellaDecSVG(), "Ecco la tabella dei numeri decimali. A sinistra c'è la parte intera, a destra la parte decimale. In mezzo c'è la virgola.");
+    passo(tabellaDecSVG({ cifre }), `Scrivo il numero ${testo}. Le cifre prima della virgola sono la parte intera. Quelle dopo la virgola sono la parte decimale.`);
+    const iInt = cifre.map((ch, i) => (ch && i < 3 ? i : -1)).filter((i) => i >= 0);
+    passo(tabellaDecSVG({ cifre, evid: iInt }) + `<text x="160" y="232" class="t6-leggo">${int} ${int === "1" ? "intero" : "interi"}</text>`, `La parte intera è ${int}.`);
+    [...dec].forEach((ch, k) => {
+      const i = 3 + k, U = COLD[i];
+      const spiega = ["Un decimo è una parte dell'intero diviso in 10.", "Un centesimo è una parte dell'intero diviso in 100.", "Un millesimo è una parte dell'intero diviso in 1000."][k];
+      passo(tabellaDecSVG({ cifre, evid: [i] }) + `<text x="${XD(i)}" y="232" class="t6-leggo">${ch} ${U.s}</text>`, `Il ${ch} è nei ${U.nome}: vale ${ch} ${U.nome}. ${spiega}`);
+    });
+    const righe = [];
+    (anim.operazioni || []).forEach((o) => {
+      const m = /^([x:])(10|100|1000)$/.exec(String(o).replace("×", "x").replace("÷", ":"));
+      if (!m) return;
+      const op = m[1], per = +m[2], k = PASSI_PER[per];
+      const y = spostaDecimale(x, op === "x" ? k : -k), dopo = cifreDecimale(y);
+      if (!dopo) return;
+      const ris = partiDecimale(y).testo, segno = op === "x" ? "×" : ":";
+      // Le cifre del numero si spostano di k posti; quelle nuove sono zeri.
+      const sh = op === "x" ? -k : k, nuove = {};
+      dopo.forEach((ch, i) => { if (ch) nuove[i] = cifre[i - sh] ? -sh : 0; });
+      const riga = `${testo} ${segno} ${per} = ${ris}`; righe.push(riga);
+      const verso = op === "x" ? "a sinistra" : "a destra", posti = k === 1 ? "1 posto" : `${k} posti`;
+      passo(tabellaDecSVG({ cifre: dopo, nuove, fantasmi: cifre }) + `<text x="330" y="232" class="t6-leggo">${riga}</text>`,
+        `${op === "x" ? "Moltiplico" : "Divido"} per ${per}: le cifre si spostano di ${posti} ${verso}. ${riga}.`
+        + (Object.values(nuove).includes(0) ? " Dove resta una casella vuota scrivo lo zero." : ""));
+    });
+    if (righe.length > 1) passo(tabellaDecSVG({ cifre }) + righe.map((r, k) => `<text x="${k % 2 ? 490 : 170}" y="${222 + Math.floor(k / 2) * 34}" class="t6-riga">${r}</text>`).join(""),
+      "Per 10, 100, 1000 le cifre vanno a sinistra: il numero diventa più grande. Diviso 10, 100, 1000 vanno a destra: il numero diventa più piccolo.");
+    return { viewBox: "0 0 660 270", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "virgola": sposto le cifre nella tabella per × o : 10, 100, 1000 ---------- */
+  function esercizioVirgola(e, c, esito, intestazione) {
+    const x0 = leggiDecimale(e.n), per = +e.per, segno = e.op === "x" ? "×" : ":", k = PASSI_PER[per];
+    const ris = calcolaVirgola(e.n, e.op, per), start = partiDecimale(x0).testo;
+    let x = x0, mosse = 0;
+    c.innerHTML = intestazione + `<div class="equivalenza">
+      <div class="eq-domanda">${start} ${segno} ${per} = <b class="eq-ris">?</b></div>
+      <svg viewBox="0 0 660 200" class="eq-tabella dec-tabella"></svg>
+      <p class="eq-aiuto">× 10, 100, 1000: le cifre vanno a ⬅️ sinistra · : 10, 100, 1000: le cifre vanno a destra ➡️</p>
+      <p class="dec-mosse"></p>
+      <div class="costruisci-tasti">
+        <button class="btn bianco" data-q="s">⬅️ Cifre a sinistra</button>
+        <button class="btn bianco" data-q="d">Cifre a destra ➡️</button>
+        <button class="btn verde" data-q="ok">✔ Ho finito</button>
+      </div></div>`;
+    const svg = c.querySelector(".dec-tabella"), r = c.querySelector(".eq-ris"), m = c.querySelector(".dec-mosse");
+    const disegna = (nuove = {}) => {
+      svg.innerHTML = tabellaDecSVG({ cifre: cifreDecimale(x), nuove });
+      const t = partiDecimale(x).testo;
+      r.textContent = mosse ? t : "?";
+      m.textContent = mosse ? `Hai spostato le cifre di ${Math.abs(mosse)} ${Math.abs(mosse) === 1 ? "posto" : "posti"} ${mosse > 0 ? "a sinistra" : "a destra"}.` : "Tocca le frecce per spostare le cifre.";
+    };
+    disegna();
+    c.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-q]");
+      if (!b || c.classList.contains("risolto") || c.closest(".risolto")) return;
+      const q = b.dataset.q;
+      if (q === "s" || q === "d") {
+        const dir = q === "s" ? 1 : -1, y = spostaDecimale(x, dir);
+        if (!cifreDecimale(y)) { Voce.parla("Non c'è più posto nella tabella.", null, { scritte: false }); return; }
+        const prima = cifreDecimale(x), dopo = cifreDecimale(y), nuove = {};
+        dopo.forEach((ch, i) => { if (ch) nuove[i] = prima[i + dir] ? dir : 0; });
+        x = y; mosse += dir; Suono?.clic?.(); disegna(nuove); return;
+      }
+      if (partiDecimale(x).testo === ris) { r.textContent = ris; esito.ok(); }
+      else {
+        e.suggerimento = `${segno === "×" ? "Per" : "Diviso"} ${per}: sposta le cifre di ${k} ${k === 1 ? "posto" : "posti"} ${e.op === "x" ? "a sinistra" : "a destra"}.`;
+        esito.ko(b);
+      }
+    });
+  }
+
+  /* ---------- Addizione in colonna con i cubetti (2ª: senza e con cambio) ---------- */
+  const S = 11; // cubetto piccolo
+  function decinaPiccola(x, y, cls = "") {
+    let r = `<g class="${cls}"><rect x="${x - 2}" y="${y - 2}" width="${S + 4}" height="${S * 10 + 4}" rx="4" class="decina-bordo"/>`;
+    for (let k = 0; k < 10; k++) r += `<rect x="${x}" y="${y + k * S}" width="${S}" height="${S}" rx="2" class="cubo cubo-d"/>`;
+    return r + "</g>";
+  }
+  // Cubetti delle unità: 5 per fila, dal basso (così 10 unità sono due file piene).
+  const unitaPiccole = (u, y, da = 0) => Array.from({ length: u - da }, (_, i) => {
+    const k = i + da;
+    return `<rect x="${250 + (k % 5) * 16}" y="${y + S * 9 - Math.floor(k / 5) * 16}" width="${S}" height="${S}" rx="2" class="cubo cubo-u"/>`;
+  }).join("");
+  const decinePiccole = (n, y, da = 0, cls = "") => Array.from({ length: n - da }, (_, i) => decinaPiccola(30 + (i + da) * 19, y, cls)).join("");
+  // Le parti di una somma, senza gli zeri: [1, 2, 0] -> "1 + 2".
+  const sommaTesto = (xs) => xs.filter((x) => x).join(" + ");
+
+  function scenaAddizione(anim) {
+    const a = +anim.a, b = +anim.b, s = a + b;
+    const da = Math.floor(a / 10), ua = a % 10, db = Math.floor(b / 10), ub = b % 10;
+    const su = ua + ub, rip = su >= 10 ? 1 : 0, sd = da + db + rip;
+    const Y = { a: 30, b: 160, r: 300 }, T = { a: 107, b: 237, r: 377 };
+    const X = { s: 520, d: 610, u: 700 };
+    const cifra = (x, y, t, cls = "") => `<text x="${x}" y="${y}" class="add-cifra ${cls}">${t}</text>`;
+    const colonna = (x, cls = "add-evid") => `<rect x="${x - 40}" y="${Y.a + 20}" width="80" height="${T.r - Y.a + 2}" rx="14" class="${cls}"/>`;
+    const pezzi = [], passi = [];
+    let k = 0;
+    // Passo 0: i due numeri, in colonna e con i cubetti.
+    pezzi.push({ da: 0, svg: `<text x="${X.d}" y="24" class="add-testa cifra-d">da</text><text x="${X.u}" y="24" class="add-testa cifra-u">u</text>
+      <line x1="20" y1="285" x2="790" y2="285" class="add-linea"/><line x1="430" y1="10" x2="430" y2="410" class="add-separa"/>
+      ${cifra(X.d, T.a, da || "", "cifra-d")}${cifra(X.u, T.a, ua, "cifra-u")}
+      ${cifra(X.s, T.b, "+", "segno")}${cifra(X.d, T.b, db || "", "cifra-d")}${cifra(X.u, T.b, ub, "cifra-u")}
+      ${decinePiccole(da, Y.a)}${unitaPiccole(ua, Y.a)}${decinePiccole(db, Y.b)}${unitaPiccole(ub, Y.b)}` });
+    passi.push(`Calcoliamo ${a} + ${b}. Le decine sotto le decine, le unità sotto le unità.`);
+    // Unità.
+    k++;
+    pezzi.unshift({ da: k, a: k + rip, svg: colonna(X.u) + `<rect x="240" y="${Y.a}" width="90" height="250" rx="12" class="add-evid"/>` });
+    if (rip) {
+      pezzi.push({ da: k, a: k, svg: unitaPiccole(su, Y.r) + `<rect x="244" y="${Y.r + S * 9 - 20}" width="88" height="36" rx="8" class="add-gruppo"/>` });
+      passi.push(`Si parte dalle unità: ${ua} + ${ub} = ${su}. C'è il cambio!`);
+      k++;
+      pezzi.push({ da: k, svg: decinaPiccola(30 + (da + db) * 19, Y.r, "decina-cambio") + unitaPiccole(su, Y.r, 10)
+        + cifra(X.u, T.r, su - 10, "cifra-u") + `<text x="${X.d}" y="56" class="add-riporto">1</text>` });
+      const xb = 30 + (da + db) * 19 + S + 12;
+      pezzi.push({ da: k, a: k, svg: `<path d="M242 ${Y.r + 80} C 200 ${Y.r + 80}, ${xb + 40} ${Y.r + 60}, ${xb} ${Y.r + 60}" class="add-freccia"/>
+        <text x="320" y="${Y.r + 45}" class="add-nota">10 unità = 1 decina</text>` });
+      passi.push(`10 unità fanno 1 decina! Scrivo ${su - 10} sotto le unità e porto 1 sopra le decine.`);
+    } else {
+      pezzi.push({ da: k, svg: unitaPiccole(su, Y.r) + cifra(X.u, T.r, su, "cifra-u") });
+      passi.push(`Si parte dalle unità: ${ua} + ${ub} = ${su}. Scrivo ${su} sotto le unità.`);
+    }
+    // Decine.
+    if (sd) {
+      k++;
+      pezzi.unshift({ da: k, a: k, svg: colonna(X.d) + `<rect x="20" y="${Y.a}" width="210" height="250" rx="12" class="add-evid"/>` });
+      pezzi.push({ da: k, svg: decinePiccole(da + db, Y.r) + cifra(X.d, T.r, sd, "cifra-d") });
+      const parti = [rip, da, db].filter((x) => x);
+      passi.push(parti.length < 2 ? `Ora le decine: c'è solo ${sd}. Scrivo ${sd}.`
+        : `Ora le decine${rip ? ", con il riporto" : ""}: ${sommaTesto([rip, da, db])} = ${sd}. Scrivo ${sd}.`);
+    }
+    // Fine.
+    k++;
+    pezzi.unshift({ da: k, svg: `<rect x="${X.d - 40}" y="${Y.r + 10}" width="170" height="90" rx="14" class="add-fine"/>` });
+    passi.push(`${a} + ${b} = ${s}. Fatto!`);
+    return { viewBox: "0 0 800 420", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "addizione": il bambino scrive il risultato in colonna ---------- */
+  function esercizioAddizione(e, c, esito, intestazione) {
+    const a = +e.a, b = +e.b;
+    const da = Math.floor(a / 10), ua = a % 10, db = Math.floor(b / 10), ub = b % 10;
+    const rip = ua + ub >= 10 ? 1 : 0, sd = da + db + rip;
+    const el = document.createElement("div");
+    el.className = "colonna-griglia";
+    el.style.gridTemplateColumns = "repeat(3, 1fr)";
+    const celle = {};
+    const cella = (k, cls = "", t = "") => { const x = document.createElement("div"); x.className = "cella " + cls; x.textContent = t; celle[k] = x; el.append(x); };
+    cella("t-s", "intesta"); cella("t-d", "intesta cifra-d", "da"); cella("t-u", "intesta cifra-u", "u");
+    cella("rip-s", "riporto"); cella("rip-d", "riporto"); cella("rip-u", "riporto");
+    cella("a-s"); cella("a-d", "cifra-d", da || ""); cella("a-u", "cifra-u", ua);
+    cella("b-s", "segno", "+"); cella("b-d", "cifra-d", db || ""); cella("b-u", "cifra-u", ub);
+    const l = document.createElement("div"); l.className = "colonna-linea"; l.style.gridColumn = "1 / span 3"; el.append(l);
+    cella("r-s"); cella("r-d", "cifra-d"); cella("r-u", "cifra-u");
+    const sequenza = [{ cella: "r-u", val: (ua + ub) % 10, evid: ["a-u", "b-u"], aiuto: `Somma le unità: ${ua} + ${ub}.` }];
+    if (sd) sequenza.push({ cella: "r-d", val: sd, evid: ["rip-d", "a-d", "b-d"],
+      aiuto: rip ? `Somma le decine e il riporto: ${sommaTesto([1, da, db])}.` : `Somma le decine: ${sommaTesto([da, db]) || 0}.` });
+    c.innerHTML = intestazione + `<div class="colonna-es"><div class="colonna-posto"></div>
+      <div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}</div></div>`;
+    c.querySelector(".colonna-posto").append(el);
+    let k = 0;
+    const prepara = () => {
+      Object.values(celle).forEach((x) => x.classList.remove("attiva", "evid"));
+      const at = sequenza[k];
+      if (!at) return;
+      celle[at.cella].classList.add("attiva");
+      at.evid.forEach((x) => { if (celle[x].textContent) celle[x].classList.add("evid"); });
+    };
+    prepara();
+    c.addEventListener("click", (ev) => {
+      const t = ev.target.closest(".tasto");
+      if (!t || k >= sequenza.length) return;
+      c.querySelectorAll(".tasto.sbagliata").forEach((x) => x.classList.remove("sbagliata"));
+      const at = sequenza[k];
+      if (+t.dataset.d !== at.val) { e.suggerimento = at.aiuto; return esito.ko(t); }
+      const x = celle[at.cella];
+      x.textContent = at.val; x.classList.add("nuova");
+      esito.bene?.(t);
+      if (at.cella === "r-u" && rip) {
+        celle["rip-d"].textContent = "1"; celle["rip-d"].classList.add("nuova");
+        Voce.parla("10 unità fanno 1 decina: porto 1!", null, { scritte: false });
+      }
+      k++;
+      prepara();
+      if (k >= sequenza.length) {
+        el.classList.add("finita");
+        ["r-d", "r-u"].forEach((y) => { if (celle[y].textContent) celle[y].classList.add("evid"); });
+        esito.ok();
+      } else Suono.giusto();
+    });
+  }
+
   /* ---------- Frazioni: pizza o tavoletta di cioccolata divisa in parti uguali ----------
      Le parti prese sono rosse (con il salame, sulla pizza); quelle che restano, se servono, azzurre. */
   const NOMI_FRAZ = { 2: ["mezzo", "mezzi"], 3: ["terzo", "terzi"], 4: ["quarto", "quarti"], 5: ["quinto", "quinti"], 6: ["sesto", "sesti"],
@@ -868,7 +1201,7 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -907,8 +1240,8 @@
       const s = passiGelosia(a, b);
       passi = s.passi;
       disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
-    } else if (tipo === "scena" || tipo === "sequenza") {
-      const sc = tipo === "sequenza" ? scenaSequenza(anim) : SCENE[anim.scena]?.(anim);
+    } else if (tipo === "scena" || tipo === "sequenza" || tipo === "addizione") {
+      const sc = tipo === "sequenza" ? scenaSequenza(anim) : tipo === "addizione" ? scenaAddizione(anim) : SCENE[anim.scena]?.(anim);
       if (!sc || !sc.passi.length) return;
       passi = sc.passi.map((testo, i) => ({ testo, finale: i === sc.passi.length - 1 }));
       disegna = (palco, n) => disegnaScena(palco, sc, n);
@@ -1066,5 +1399,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();
