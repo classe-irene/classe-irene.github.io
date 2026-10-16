@@ -122,8 +122,13 @@
     const norm = (x) => x.normalize("NFD").replace(/[̀-ͯ]/g, "");
     const VITE = 7;
     let vite = VITE, prese = new Set();
+    // La prima lettera è un aiuto: si vede già (in tutta la parola).
+    const prima = norm(parola.match(/[A-ZÀ-Ú]/)?.[0] || "");
+    const aiuto = () => { if (prima) prese.add(prima); };
+    aiuto();
     c.innerHTML = intestazione + `<div class="indovina">
       ${e.indizio ? `<div class="indizio">${ric(e.indizio, "figura grande")}</div>` : ""}
+      <p class="gioco-aiuto">È una parola della lezione: ha <b>${[...parola].filter((x) => /[A-ZÀ-Ú]/.test(x)).length} lettere</b> e la prima te la regalo io.<br>Tocca le lettere. Ogni lettera sbagliata fa scoppiare un palloncino 🎈</p>
       <div class="palloncini"></div>
       <div class="parola-nascosta"></div>
       <div class="tastiera">${[..."ABCDEFGHILMNOPQRSTUVZ"].map((x) => `<button class="tasto" data-l="${x}">${x}</button>`).join("")}</div></div>`;
@@ -132,8 +137,9 @@
       c.querySelector(".parola-nascosta").innerHTML = [...parola].map((x) => x === " " ? '<span class="spazio"></span>'
         : /[A-ZÀ-Ú]/.test(x) ? `<span class="casella-l">${prese.has(norm(x)) ? x : ""}</span>` : `<span class="casella-l fissa">${x}</span>`).join("");
     };
-    const reset = () => { vite = VITE; prese = new Set(); c.querySelectorAll(".tastiera .tasto").forEach((t) => { t.disabled = false; t.className = "tasto"; }); disegna(); };
-    disegna();
+    const reset = () => { vite = VITE; prese = new Set(); aiuto(); c.querySelectorAll(".tastiera .tasto").forEach((t) => { t.disabled = false; t.className = "tasto"; }); segnaPrima(); disegna(); };
+    const segnaPrima = () => { const t = c.querySelector(`.tasto[data-l="${prima}"]`); if (t) { t.disabled = true; t.classList.add("giusta"); } };
+    segnaPrima(); disegna();
     c.querySelector(".tastiera").addEventListener("click", (ev) => {
       const t = ev.target.closest(".tasto");
       if (!t || t.disabled || c.closest(".risolto")) return;

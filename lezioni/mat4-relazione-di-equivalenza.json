@@ -426,7 +426,7 @@
     {
       "tipo": "indovina",
       "immagine": "🎈",
-      "domanda": "Indovina la parola!",
+      "domanda": "Indovina la parola della lezione!",
       "parola": "EQUIVALENZA",
       "indizio": "⚖️ Due scritture diverse per la stessa quantità"
     }

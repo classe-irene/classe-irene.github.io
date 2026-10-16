@@ -273,7 +273,8 @@
     const prossimaEntrata = sorteggio(ENTRATE, 4), prossimaGalleria = sorteggio(GALLERIE, 1);
     const pagine = radice.querySelectorAll(".lezione-testa, .scheda, .esercizio, [data-fine]");
     pagine.forEach((p) => {
-      p.classList.add("entra", "entra-" + prossimaEntrata());
+      // Gli esercizi compaiono solo con una dissolvenza (richiesta di Michele): niente movimenti mentre si lavora.
+      p.classList.add("entra", "entra-" + (p.classList.contains("esercizio") ? "dissolvi" : prossimaEntrata()));
       p.querySelectorAll(".galleria").forEach((g) => { g.classList.add("gal-" + prossimaGalleria()); [...g.children].forEach((f, i) => f.style.setProperty("--i", i)); });
       const h2 = p.querySelector(":scope > .scheda-corpo > h2");
       if (h2) spezzaTitolo(h2);
