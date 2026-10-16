@@ -707,7 +707,168 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore };
+  /* ---------- Frazioni: pizza o tavoletta di cioccolata divisa in parti uguali ----------
+     Le parti prese sono rosse (con il salame, sulla pizza); quelle che restano, se servono, azzurre. */
+  const NOMI_FRAZ = { 2: ["mezzo", "mezzi"], 3: ["terzo", "terzi"], 4: ["quarto", "quarti"], 5: ["quinto", "quinti"], 6: ["sesto", "sesti"],
+    7: ["settimo", "settimi"], 8: ["ottavo", "ottavi"], 9: ["nono", "noni"], 10: ["decimo", "decimi"] };
+  const nomeFraz = (d, uno = false) => (NOMI_FRAZ[d] || ["", ""])[uno ? 0 : 1];
+  // stato(i) -> "pasta" | "presa" | "resto" | "uno"; opz.tocca: parti cliccabili; opz.conta: numeri sulle parti prese.
+  function formaSVG(forma, cx, cy, R, d, stato = () => "pasta", opz = {}) {
+    const tocca = (i) => (opz.tocca ? `class="fr-spicchio fr-${stato(i)} fr-tocca" data-p="${i}"` : `class="fr-spicchio fr-${stato(i)}"`);
+    let svg = "", contati = 0;
+    if (forma === "cioccolata") {
+      const W = R * 2.6, H = R * 1.1, w = W / d, x0 = cx - W / 2, y0 = cy - H / 2;
+      svg += `<rect x="${x0 - 8}" y="${y0 - 8}" width="${W + 16}" height="${H + 16}" rx="14" class="fr-ciocc"/>`;
+      for (let i = 0; i < d; i++) {
+        svg += `<rect x="${x0 + i * w}" y="${y0}" width="${w}" height="${H}" rx="8" ${tocca(i)}/>`;
+        if (opz.conta && stato(i) === "presa") svg += `<text x="${x0 + i * w + w / 2}" y="${cy + 10}" class="fr-conta">${++contati}</text>`;
+      }
+      return svg;
+    }
+    svg += `<circle cx="${cx}" cy="${cy}" r="${R + 10}" class="fr-crosta"/>`;
+    if (d === 1) return svg + `<circle cx="${cx}" cy="${cy}" r="${R}" ${tocca(0)}/>`;
+    const pt = (r, a) => `${(cx + r * Math.cos(a)).toFixed(1)} ${(cy + r * Math.sin(a)).toFixed(1)}`;
+    const ang = (i) => -Math.PI / 2 + (2 * Math.PI * i) / d;
+    for (let i = 0; i < d; i++) {
+      svg += `<path d="M${cx} ${cy} L${pt(R, ang(i))} A${R} ${R} 0 0 1 ${pt(R, ang(i + 1))} Z" ${tocca(i)}/>`;
+      const m = (ang(i) + ang(i + 1)) / 2, larga = Math.PI / d;
+      if (opz.conta && stato(i) === "presa") svg += `<text x="${pt(R * 0.62, m).split(" ")[0]}" y="${+pt(R * 0.62, m).split(" ")[1] + 9}" class="fr-conta">${++contati}</text>`;
+      else if (stato(i) === "presa") {
+        const posti = d <= 5 ? [[0.42, -0.35], [0.72, 0.3], [0.72, -0.4]] : [[0.5, 0], [0.8, 0.2]];
+        svg += posti.map(([r, s]) => `<circle cx="${pt(R * r, m + s * larga).split(" ")[0]}" cy="${pt(R * r, m + s * larga).split(" ")[1]}" r="${(R * 0.075).toFixed(1)}" class="fr-salame"/>`).join("");
+      }
+    }
+    return svg;
+  }
+  // Frazione in colonna dentro una scena: numeratore, linea, denominatore (y = altezza della linea).
+  function frazSVG(x, y, n, d, cls = "") {
+    const w = String(n).length > 1 || String(d).length > 1 ? 44 : 30;
+    return `<text x="${x}" y="${y - 12}" class="fr-num ${cls}">${n}</text><path d="M${x - w} ${y} H${x + w}" class="fr-linea ${cls}"/><text x="${x}" y="${y + 50}" class="fr-num ${cls}">${d}</text>`;
+  }
+
+  function scenaFrazione(anim) {
+    const d = Math.max(2, Math.min(10, +anim.d || 4)), n = Math.max(1, Math.min(2 * d, +anim.n || 3)), forma = anim.forma === "cioccolata" ? "cioccolata" : "pizza";
+    const cosa = forma === "pizza" ? "pizza" : "tavoletta di cioccolata", pezzi = [], passi = [];
+    if (n < d) {
+      const P = (stato, opz) => formaSVG(forma, 200, 160, 120, d, stato, opz);
+      pezzi.push({ da: 0, a: 0, svg: formaSVG(forma, 200, 160, 120, 1) + `<text x="500" y="170" class="sc-etichetta">l'intero</text>` });
+      passi.push(`Ecco una ${cosa} intera. È l'intero.`);
+      pezzi.push({ da: 1, a: 1, svg: P() });
+      passi.push(`La tagliamo in ${d} parti uguali. Tutte grandi uguali!`);
+      pezzi.push({ da: 2, a: 2, svg: P((i) => (i === 0 ? "uno" : "pasta")) + frazSVG(500, 160, 1, d) + `<text x="500" y="270" class="fr-nota" text-anchor="middle">unità frazionaria</text>` });
+      passi.push(`Ogni parte è un ${nomeFraz(d, true)}. Si scrive 1/${d}. Si chiama unità frazionaria.`);
+      const prese = (i) => (i < n ? "presa" : "pasta");
+      pezzi.push({ da: 3, a: 3, svg: P(prese, { conta: true }) });
+      passi.push(`Ne prendiamo ${n}. Contiamo: ${Array.from({ length: n }, (_, k) => k + 1).join(", ")}.`);
+      pezzi.push({ da: 4, a: 4, svg: P(prese) + frazSVG(470, 160, n, d, "presa")
+        + `<text x="515" y="128" class="fr-nota">⬅ numeratore:</text><text x="515" y="150" class="fr-nota">le parti che prendo</text>`
+        + `<text x="515" y="198" class="fr-nota">⬅ denominatore:</text><text x="515" y="220" class="fr-nota">in quante parti taglio</text>` });
+      passi.push(`Si scrive ${n}/${d}. Sopra la linea c'è il numeratore: le parti che prendo. Sotto c'è il denominatore: in quante parti uguali ho tagliato.`);
+      pezzi.push({ da: 5, svg: P((i) => (i < n ? "presa" : "resto")) + frazSVG(430, 160, n, d, "presa") + `<text x="505" y="182" class="fr-uguale">+</text>` + frazSVG(580, 160, d - n, d, "resto")
+        + `<text x="430" y="262" class="fr-nota" text-anchor="middle">prendo</text><text x="580" y="262" class="fr-nota" text-anchor="middle">resta</text><text x="505" y="300" class="sc-etichetta">= l'intero</text>` });
+      passi.push(`${d - n === 1 ? "Resta 1 parte" : `Restano ${d - n} parti`}: ${d - n}/${d}. È la frazione complementare. Insieme, ${n}/${d} e ${d - n}/${d} fanno l'intero.`);
+      return { viewBox: "0 0 680 320", pezzi, passi };
+    }
+    // n >= d: servono una o due forme intere (frazione apparente o impropria).
+    const quante = Math.ceil(n / d), xs = quante === 1 ? [200] : [130, 340], R = quante === 1 ? 120 : 92;
+    const tutte = (stato, opz) => xs.map((x, k) => formaSVG(forma, x, 160, R, d, (i) => stato(k * d + i), opz)).join("");
+    pezzi.push({ da: 0, a: 0, svg: xs.map((x) => formaSVG(forma, x, 160, R, 1)).join("") });
+    passi.push(quante === 1 ? `Ecco una ${cosa} intera.` : `Ecco due ${forma === "pizza" ? "pizze" : "tavolette"} intere, uguali.`);
+    pezzi.push({ da: 1, a: 1, svg: tutte(() => "pasta") });
+    passi.push(`Tagliamo ${quante === 1 ? "la" : "ogni"} ${forma === "pizza" ? "pizza" : "tavoletta"} in ${d} parti uguali: sono ${d} ${nomeFraz(d)}.`);
+    const prese = (j) => (j < n ? "presa" : "pasta");
+    pezzi.push({ da: 2, a: 2, svg: tutte(prese, { conta: true }) });
+    passi.push(n === d ? `Prendiamo tutte le ${d} parti.` : n === 2 * d ? `Prendiamo tutte le parti: ${n}.` : `Prendiamo ${n} parti: tutta la prima e ancora ${n - d} della seconda.`);
+    pezzi.push({ da: 3, svg: tutte(prese) + frazSVG(575, 150, n, d, "presa") + `<text x="575" y="270" class="fr-nota" text-anchor="middle">${n % d ? "impropria" : "apparente"}</text>` });
+    passi.push(n % d === 0
+      ? `Si scrive ${n}/${d}. ${n === d ? "Fa un intero esatto" : "Fa due interi esatti"}: è una frazione apparente.`
+      : `Si scrive ${n}/${d}. Il numeratore è più grande del denominatore: è una frazione impropria. È più di un intero!`);
+    return { viewBox: "0 0 680 320", pezzi, passi };
+  }
+
+  function scenaFrazioniEquivalenti(anim) {
+    const d = Math.max(2, Math.min(5, +anim.d || 2)), n = Math.max(1, Math.min(d - 1, +anim.n || 1)), k = Math.max(2, Math.min(3, +anim.k || 2));
+    const forma = anim.forma === "cioccolata" ? "cioccolata" : "pizza", D = d * k, N = n * k;
+    const A = (cls) => formaSVG(forma, 160, 130, 100, d, (i) => (i < n ? cls : "pasta"));
+    const B = (cls) => formaSVG(forma, 520, 130, 100, D, (i) => (i < N ? cls : "pasta"));
+    const pezzi = [], passi = [];
+    pezzi.push({ da: 0, a: 0, svg: formaSVG(forma, 160, 130, 100, 1) + formaSVG(forma, 520, 130, 100, 1) });
+    passi.push(forma === "pizza" ? "Ecco due pizze uguali." : "Ecco due tavolette di cioccolata uguali.");
+    pezzi.push({ da: 1, svg: A("presa") + frazSVG(160, 300, n, d, "presa") });
+    pezzi.push({ da: 1, a: 1, svg: formaSVG(forma, 520, 130, 100, 1) });
+    passi.push(`La prima la taglio in ${d} parti e ne prendo ${n}: ${n}/${d}.`);
+    pezzi.push({ da: 2, svg: B("presa") + frazSVG(520, 300, N, D, "presa") });
+    passi.push(`La seconda la taglio in ${D} parti e ne prendo ${N}: ${N}/${D}.`);
+    pezzi.push({ da: 3, svg: `<text x="340" y="320" class="fr-uguale">=</text>` + (forma === "pizza" ? `<circle cx="160" cy="130" r="118" class="fr-cerchio"/><circle cx="520" cy="130" r="118" class="fr-cerchio"/>` : "") });
+    passi.push(`Guarda: la parte rossa è grande uguale! ${n}/${d} = ${N}/${D}. Sono frazioni equivalenti.`);
+    pezzi.push({ da: 4, svg: `<text x="340" y="244" class="fr-per">× ${k}</text><text x="340" y="392" class="fr-per">× ${k}</text><path d="M232 270 Q 340 240 448 270" class="eq-salto" marker-end="url(#punta)"/><path d="M232 340 Q 340 370 448 340" class="eq-salto" marker-end="url(#punta)"/>` });
+    passi.push(`Il trucco: moltiplico il numeratore e il denominatore per lo stesso numero, ${k}.`);
+    return { viewBox: "0 0 680 400", pezzi, passi };
+  }
+
+  // Tre frazioni diverse: la giusta e due sbagli tipici (sopra e sotto scambiati, la parte che resta...).
+  function opzioniFrazione(a, b) {
+    const giusta = `${a}/${b}`, alt = [`${b}/${a}`, `${b - a}/${b}`, `${a}/${b + 1}`, `${a + 1}/${b}`, `${a}/${b - 1}`];
+    const scelte = [giusta];
+    for (const x of alt) { const [p, q] = x.split("/").map(Number); if (p > 0 && q > 1 && !scelte.includes(x) && scelte.length < 3) scelte.push(x); }
+    return mescola(scelte);
+  }
+
+  /* ---------- Esercizio "colora_frazione": il bambino tocca le parti da colorare ---------- */
+  function esercizioColoraFrazione(e, c, esito, intestazione) {
+    const n = +e.n, d = +e.d, forma = e.forma === "cioccolata" ? "cioccolata" : "pizza", prese = new Set();
+    const vb = forma === "pizza" ? "0 0 320 300" : "0 0 440 200", cx = forma === "pizza" ? 160 : 220, cy = forma === "pizza" ? 150 : 100, R = forma === "pizza" ? 130 : 150;
+    c.innerHTML = intestazione + `<div class="frazione-es">
+      <p class="gioco-aiuto">Tocca una parte per colorarla. Toccala ancora per togliere il colore.</p>
+      <div class="fr-riga"><div class="fr-meta">${Figura.img(forma === "pizza" ? "🍕" : "🍫", "figura media")} ${Figura.frazioneHTML(n, d)}</div>
+      <svg viewBox="${vb}" class="fr-forma"></svg></div>
+      <p class="fr-contatore"></p>
+      <div class="costruisci-tasti"><button class="btn bianco" data-f="via">↺ Cancella</button><button class="btn verde" data-f="ok">✔ Ho finito</button></div></div>`;
+    const svg = c.querySelector(".fr-forma"), conto = c.querySelector(".fr-contatore");
+    const disegna = () => {
+      svg.innerHTML = formaSVG(forma, cx, cy, R, d, (i) => (prese.has(i) ? "presa" : "pasta"), { tocca: true });
+      conto.textContent = `Parti colorate: ${prese.size}`;
+    };
+    disegna();
+    svg.addEventListener("click", (ev) => {
+      const p = ev.target.closest("[data-p]");
+      if (!p || c.classList.contains("risolto") || c.closest(".risolto")) return;
+      const i = +p.dataset.p;
+      prese.has(i) ? prese.delete(i) : prese.add(i);
+      Suono?.clic?.(); disegna();
+    });
+    c.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-f]");
+      if (!b || c.closest(".risolto")) return;
+      if (b.dataset.f === "via") { prese.clear(); disegna(); return; }
+      if (prese.size === n) esito.ok();
+      else {
+        e.suggerimento = prese.size > n ? `Hai colorato troppe parti. Il numeratore è ${n}: ne servono ${n}.` : `Il numeratore è ${n}: colora ${n} ${n === 1 ? "parte" : "parti"}.`;
+        esito.ko(b);
+      }
+    });
+  }
+
+  /* ---------- Esercizio "leggi_frazione": guarda la figura e scegli la frazione ---------- */
+  function esercizioLeggiFrazione(e, c, esito, intestazione) {
+    const n = +e.n, d = +e.d, forma = e.forma === "cioccolata" ? "cioccolata" : "pizza", comp = e.chiedi === "complementare";
+    const a = comp ? d - n : n, giusta = `${a}/${d}`;
+    const vb = forma === "pizza" ? "0 0 320 300" : "0 0 440 200", cx = forma === "pizza" ? 160 : 220, cy = forma === "pizza" ? 150 : 100, R = forma === "pizza" ? 130 : 150;
+    c.innerHTML = intestazione + `<div class="frazione-es">
+      <svg viewBox="${vb}">${formaSVG(forma, cx, cy, R, d, (i) => (i < n ? "presa" : "pasta"))}</svg>
+      <div class="opzioni fr-opzioni">${opzioniFrazione(a, d).map((x) => `<button class="opzione" data-o="${x}">${Figura.frazioneHTML(...x.split("/"))}</button>`).join("")}</div></div>`;
+    c.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-o]");
+      if (!b || c.closest(".risolto")) return;
+      if (b.dataset.o === giusta) { b.classList.add("giusta"); esito.ok(); }
+      else {
+        e.suggerimento = `Conta le parti ${comp ? "bianche" : "rosse"}: vanno sopra. Tutte le parti insieme vanno sotto.`;
+        esito.ko(b);
+      }
+    });
+  }
+
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -905,5 +1066,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

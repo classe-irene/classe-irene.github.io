@@ -580,13 +580,14 @@ body.lim .testo-bucato { font-size: 1.8rem; }
 .pensa { margin: 12px 0; padding: 12px 16px; border-radius: 16px; background: #F1EAFF; display: grid; gap: 8px; justify-items: start; font-size: 1.15rem; }
 .pensa-risposta { margin: 0; font-weight: 800; color: var(--viola); animation: compari .4s; }
 .scopri { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 8px 0 12px; }
-.carta-scopri { position: relative; min-height: 150px; border: none; background: none; padding: 0; cursor: pointer; perspective: 800px; font: 700 1.05rem "Nunito", sans-serif; }
+.carta-scopri { position: relative; min-height: 190px; border: none; background: none; padding: 0; cursor: pointer; perspective: 800px; font: 700 1.05rem "Nunito", sans-serif; }
 .carta-scopri > span { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 10px; border-radius: 18px; backface-visibility: hidden; transition: transform .5s; box-shadow: 0 4px 0 rgba(0,0,0,.1); }
 .carta-scopri .fronte { background: var(--tema-chiaro); border: 3px solid var(--tema); }
 .carta-scopri .retro { background: #fff; border: 3px solid var(--giallo); transform: rotateY(180deg); }
 .carta-scopri.girata .fronte { transform: rotateY(180deg); }
 .carta-scopri.girata .retro { transform: rotateY(360deg); }
 .carta-scopri .con-figura { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.carta-scopri:has(.fraz) { min-height: 210px; }
 .esperimento { margin: 12px 0; padding: 14px 18px; border-radius: 18px; border: 3px dashed var(--sci); background: #F0FBF5; }
 .esperimento h3 { margin: 0 0 8px; color: var(--sci); }
 .materiali { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 8px; }
@@ -608,6 +609,9 @@ body.lim .testo-bucato { font-size: 1.8rem; }
 .viaggiatore { position: absolute; top: -6px; left: calc(10px + var(--pos) * (100% - 66px)); transition: left 1s ease-in-out; }
 .viaggiatore .figura { animation: dondola 2s ease-in-out infinite; }
 body.lim .mappa { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); width: min(760px, 70vw); margin: 0; z-index: 44; background: rgba(255,255,255,.9); border-radius: 18px; padding: 28px 10px 4px; }
+/* In LIM il sentiero serve solo negli esercizi: sulle spiegazioni coprirebbe il titolo. */
+body.lim:not(:has(.esercizio.corrente)) .mappa { display: none; }
+body.lim .esercizio.corrente { padding-top: 100px; }
 .figurina-vinta { display: grid; justify-items: center; }
 .figurina-vinta .figura { animation: rimbalza .8s; }
 .album { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; margin-bottom: 40px; }
@@ -641,6 +645,44 @@ body.lim .mappa { position: fixed; top: 8px; left: 50%; transform: translateX(-5
 .eq-tabella { width: min(100%, 680px); height: auto; }
 .eq-aiuto { margin: 0; color: var(--testo-tenue); font-weight: 700; text-align: center; }
 body.lim .eq-tabella { max-height: 38vh; }
+
+/* ---------- Frazioni ---------- */
+.fraz { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1; margin: 0 .12em; font-weight: 800; }
+.fraz-n { padding: 0 .2em .08em; }
+.fraz-d { padding: .08em .2em 0; border-top: .12em solid currentColor; }
+.tessera .fraz, .opzione .fraz, .parola .fraz, .carta-memory .fraz { font-size: 1.25em; }
+.fr-spicchio { stroke: #fff; stroke-width: 4; stroke-linejoin: round; transition: fill .2s; }
+.fr-pasta { fill: #FBEFD5; }
+.fr-presa { fill: #E0533D; }
+.fr-resto { fill: #3D9BE0; }
+.fr-uno { fill: #F4B63F; }
+.fr-crosta { fill: #E9B26B; }
+.fr-salame { fill: #A8321F; pointer-events: none; }
+.fr-carta { fill: #EADBC8; }
+.fr-ciocc { fill: #7B4A2A; }
+.fr-num { font: 800 54px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.fr-num.presa { fill: #E0533D; }
+.fr-num.resto { fill: #3D9BE0; }
+.fr-linea { stroke: var(--testo); stroke-width: 6; stroke-linecap: round; }
+.fr-linea.presa { stroke: #E0533D; }
+.fr-linea.resto { stroke: #3D9BE0; }
+.fr-nota { font: 800 19px "Baloo 2", sans-serif; fill: var(--testo-tenue); }
+.fr-conta { font: 800 26px "Baloo 2", sans-serif; text-anchor: middle; fill: #fff; pointer-events: none; }
+.fr-per { font: 800 30px "Baloo 2", sans-serif; text-anchor: middle; fill: #E0533D; }
+.fr-uguale { font: 800 64px "Baloo 2", sans-serif; text-anchor: middle; fill: #1F9D66; }
+.fr-cerchio { fill: none; stroke: #1F9D66; stroke-width: 6; stroke-dasharray: 12 8; }
+.frazione-es { display: grid; gap: 12px; justify-items: center; }
+.frazione-es svg { width: min(100%, 420px); height: auto; touch-action: manipulation; }
+.frazione-es .fr-tocca { cursor: pointer; }
+.frazione-es .fr-tocca:hover { filter: brightness(1.06); }
+.fr-riga { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 40px; width: 100%; }
+.fr-meta { font: 800 3.2rem "Baloo 2", sans-serif; color: #E0533D; display: flex; align-items: center; gap: 18px; }
+.fr-contatore { margin: 0; font-weight: 800; font-size: 1.3rem; }
+.fr-opzioni { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.fr-opzioni .opzione { font: 800 2.4rem "Baloo 2", sans-serif; min-width: 110px; }
+body.lim .frazione-es svg { height: 38vh; width: auto; max-width: 100%; }
+body.lim .fr-meta { font-size: 4.5rem; }
+body.lim .fr-opzioni .opzione { font-size: 3.4rem; min-width: 160px; }
 
 /* ==================== Effetti speciali (assets/effetti.js) ==================== */
 .tela-effetti { position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 90; }

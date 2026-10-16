@@ -195,11 +195,15 @@ window.Voce = (() => {
   // Sigle delle equivalenze lette per intero: "3 dak" -> "3 decine di migliaia", "1 h" -> "un centinaio".
   const SIGLE = { hk: ["centinaio di migliaia", "centinaia di migliaia"], dak: ["decina di migliaia", "decine di migliaia"], uk: ["unità di migliaia", "unità di migliaia"],
     k: ["migliaio", "migliaia"], h: ["centinaio", "centinaia"], da: ["decina", "decine"], u: ["unità", "unità"] };
+  // Frazioni lette come a scuola: "3/4" -> "3 quarti", "1/2" -> "un mezzo".
+  const FRAZ = { 2: ["mezzo", "mezzi"], 3: ["terzo", "terzi"], 4: ["quarto", "quarti"], 5: ["quinto", "quinti"], 6: ["sesto", "sesti"],
+    7: ["settimo", "settimi"], 8: ["ottavo", "ottavi"], 9: ["nono", "noni"], 10: ["decimo", "decimi"] };
   const sigle = (t) => t
     .replace(/(^|[^\d,])(\d[\d,]*) ?(hk|dak|uk|k|h|da|u)\b(?![àèéìòù'])/g, (m, p, num, s) => `${p}${num} ${SIGLE[s][num === "1" ? 0 : 1]}`)
     .replace(/\b(casella|colonna) (hk|dak|uk|h|da|u)\b(?![àèéìòù'])/g, (m, c, s) => `${c} delle ${SIGLE[s][1]}`)
     .replace(/\b([Qq]uant[ei]) (hk|dak|uk|h|da|u)\b(?![àèéìòù'])/g, (m, q, s) => `${q} ${SIGLE[s][1]}`)
     .replace(/\b(hk|dak|uk)\b/g, (m, s) => SIGLE[s][1])
+    .replace(/(^|[^\d\/])(\d{1,2})\/(\d{1,2})(?![\d\/])/g, (m, p, n, d) => (FRAZ[d] ? `${p}${n === "1" ? "un" : n} ${FRAZ[d][n === "1" ? 0 : 1]}` : m))
     .replace(/ = /g, " uguale a ");
   const leggibile = (t) => sigle(t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1")).replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
@@ -394,9 +398,12 @@ window.Figura = (() => {
   // HTML per un'opzione o una tessera: figura sopra, parola sotto.
   function ricco(t, classe = "figura piccola") {
     const { tutte, testo } = dividi(t);
-    return tutte.length ? `<span class="con-figura">${gruppo(tutte, classe)}<span>${escapeHTML(testo)}</span></span>` : escapeHTML(testo);
+    return tutte.length ? `<span class="con-figura">${gruppo(tutte, classe)}<span>${frazioni(escapeHTML(testo))}</span></span>` : frazioni(escapeHTML(testo));
   }
-  return { img, dividi, ricco, file };
+  // "3/4" in un testo già sicuro (HTML) diventa una frazione in colonna: numeratore sopra, linea, denominatore sotto.
+  const frazioneHTML = (n, d) => `<span class="fraz" role="img" aria-label="${n}/${d}"><span class="fraz-n">${n}</span><span class="fraz-d">${d}</span></span>`;
+  const frazioni = (html) => String(html).replace(/(^|[^\d\/])(\d{1,2})\/(\d{1,2})(?![\d\/])/g, (m, p, n, d) => p + frazioneHTML(n, d));
+  return { img, dividi, ricco, file, frazioni, frazioneHTML };
 })();
 
 /* ---------- Coriandoli ---------- */

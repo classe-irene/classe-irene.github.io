@@ -1,8 +1,8 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
+// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, colora_frazione, leggi_frazione.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", "equivalenza", "leggi_tabella", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", "equivalenza", "leggi_tabella", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -41,6 +41,7 @@
       if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
       if (e.tipo === "equivalenza" && !(Number.isInteger(e.n) && e.n > 0 && ["k", "h", "da", "u"].includes(e.da) && ["k", "h", "da", "u"].includes(e.a) && Number.isInteger(Animazioni.calcolaEquivalenza(e.n, e.da, e.a)))) errori.push(`${n}: servono "n", "da" e "a" (k, h, da, u) con risultato intero.`);
       if (e.tipo === "leggi_tabella" && !(Number.isInteger(e.n) && e.n > 0 && e.n < 1000 && ["hk", "dak", "uk", "h", "da", "u"].includes(e.da) && ["hk", "dak", "uk", "h", "da", "u"].includes(e.a) && e.da !== e.a)) errori.push(`${n}: servono "n" (fino a 999), "da" e "a" diversi (hk, dak, uk, h, da, u).`);
+      if ((e.tipo === "colora_frazione" || e.tipo === "leggi_frazione") && !(Number.isInteger(e.d) && Number.isInteger(e.n) && e.d >= 2 && e.d <= 10 && e.n >= 1 && e.n < (e.tipo === "colora_frazione" ? e.d + 1 : e.d))) errori.push(`${n}: servono "n" e "d" (d da 2 a 10, n più piccolo di d).`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
     });
     return errori;
@@ -74,13 +75,13 @@
         <section class="scheda${s.animazione ? " con-animazione" : ""}">
           <div class="scheda-corpo">
             <h2>${h(s.titolo)}<button class="leggi" data-leggi="${h(s.titolo + ". " + s.testo)}">🔊 Leggi</button></h2>
-            ${String(s.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}
+            ${String(s.testo).split(/\n+/).map((p) => `<p>${Figura.frazioni(h(p))}</p>`).join("")}
             ${s.immagini?.length ? `<div class="galleria">${s.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
             ${s.animazione ? `<div class="anim-posto" data-anim="${h(JSON.stringify(s.animazione))}"></div>` : ""}
             ${s.pensa ? `<div class="pensa"><b>🤔 ${h(s.pensa.domanda)}</b><button class="btn bianco piccolo" data-svela>👀 Scopri la risposta</button><p class="pensa-risposta" hidden>${h(s.pensa.risposta)}</p></div>` : ""}
             ${s.scopri?.length ? `<p class="gioco-aiuto">Tocca le carte per scoprire cosa c'è dietro!</p><div class="scopri">${s.scopri.map((x) => `<button class="carta-scopri" data-retro="${h(x.retro)}"><span class="fronte">${Figura.ricco(x.fronte, "figura grande")}</span><span class="retro">${Figura.ricco(x.retro, "figura media")}</span></button>`).join("")}</div>` : ""}
             ${s.esperimento ? esperimentoHTML(s.esperimento) : ""}
-            ${s.curiosita ? `<div class="curiosita">${h(s.curiosita)}</div>` : ""}
+            ${s.curiosita ? `<div class="curiosita">${Figura.frazioni(h(s.curiosita))}</div>` : ""}
           </div>
           <div class="scheda-figura">${Figura.img(s.immagine || s.emoji || "📘", "figura grande")}</div>
         </section>`).join("")}
@@ -287,7 +288,7 @@
 
   // Domanda con figura facoltativa e pulsante per ascoltarla (utile a chi legge con fatica).
   const domanda = (t, e = {}) => (t ? `<div class="domanda-riga">${e.immagine ? Figura.img(e.immagine, "figura media") : ""}
-    <div class="domanda">${h(t)}</div><button class="leggi" data-leggi="${h(t)}" aria-label="Ascolta la domanda">🔊</button></div>` : "");
+    <div class="domanda">${Figura.frazioni(h(t))}</div><button class="leggi" data-leggi="${h(t)}" aria-label="Ascolta la domanda">🔊</button></div>` : "");
 
   const ESERCIZI = {
     scelta(e, c, esito) {
@@ -444,6 +445,10 @@
     Animazioni.esercizioEquivalenza(e, c, esito, domanda(e.domanda || `Sposta il numero nella tabella: ${e.n} ${e.da} = ? ${e.a}`, e));
   ESERCIZI.leggi_tabella = (e, c, esito) =>
     Animazioni.esercizioLeggiTabella(e, c, esito, domanda(e.domanda || `Quante ${e.a} sono ${e.n} ${e.da}? Usa la tabella.`, e));
+  ESERCIZI.colora_frazione = (e, c, esito) =>
+    Animazioni.esercizioColoraFrazione(e, c, esito, domanda(e.domanda || `Colora ${e.n}/${e.d} della ${e.forma === "cioccolata" ? "tavoletta" : "pizza"}.`, e));
+  ESERCIZI.leggi_frazione = (e, c, esito) =>
+    Animazioni.esercizioLeggiFrazione(e, c, esito, domanda(e.domanda || (e.chiedi === "complementare" ? "Quale frazione è rimasta bianca?" : "Quale frazione è colorata di rosso?"), e));
   ESERCIZI.gelosia = (e, c, esito) =>
     Animazioni.esercizioGelosia(e, c, esito, domanda(e.domanda || `Calcola con la griglia: ${e.a} × ${e.b}`, e));
   ESERCIZI.colonna = (e, c, esito) =>
