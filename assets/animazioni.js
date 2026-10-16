@@ -679,7 +679,7 @@
       <div class="lt-opzioni" hidden>${opzioni.map((o) => `<button class="opzione" data-o="${o}">${o} ${e.a}</button>`).join("")}</div></div>`;
     const svg = c.querySelector(".lt-tabella"), fase_ = c.querySelector(".lt-fase"), ris = c.querySelector(".eq-ris"), ops = c.querySelector(".lt-opzioni");
     const disegna = () => {
-      if (fase === 1) { svg.innerHTML = tabella6SVG({ cliccabile: true }); fase_.innerHTML = `1️⃣ Tocca la casella <b>${e.da}</b>: lì va il ${e.n}.`; }
+      if (fase === 1) { svg.innerHTML = tabella6SVG({ cliccabile: true }); const nn = String(e.n); fase_.innerHTML = nn.length > 1 ? `1️⃣ Tocca la casella <b>${e.da}</b>: lì va l'ultima cifra del ${nn}, cioè il ${nn.slice(-1)}.` : `1️⃣ Tocca la casella <b>${e.da}</b>: lì va il ${nn}.`; }
       if (fase === 2) { svg.innerHTML = tabella6SVG({ cliccabile: true, cifre: L.cifre, scuri: [i0] }); fase_.innerHTML = `2️⃣ Vuoi sapere quante <b>${e.a}</b>. Tocca la casella fino a cui leggere.`; }
       if (fase === 3) {
         const cifre = L.cifre.map((x, i) => (i >= t && i < L.prima ? "0" : x));

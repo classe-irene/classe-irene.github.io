@@ -216,7 +216,7 @@
     },
     {
       "tipo": "scelta",
-      "immagine": "🟥",
+      "immagine": "⚖️",
       "domanda": "3 dak = ? da",
       "opzioni": [
         "300",

@@ -813,6 +813,9 @@ html, body { overflow-x: clip; }
 .voce-dock { position: fixed; left: 50%; bottom: 18px; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; transition: opacity .35s, transform .35s; }
 .voce-dock > * { pointer-events: auto; }
+/* le scritte non devono bloccare i tocchi sull'esercizio sotto: si tocca solo la ✕ */
+.voce-dock .sottotitoli { pointer-events: none; }
+.voce-dock .st-chiudi { pointer-events: auto; }
 .voce-dock.via { opacity: 0; transform: translate(-50%, 30px); }
 .voce-dock.via > * { pointer-events: none; }
 body.lim .voce-dock { bottom: 104px; }
