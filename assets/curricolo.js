@@ -37,7 +37,7 @@ window.CURRICOLO = {
     ],
     2: [
       { id: "mat2-numeri100", emoji: "💯", titolo: "I numeri fino a 100", descrizione: "Decine e unità, valore posizionale.", lezione: "lezioni/mat2-numeri-fino-a-100.json" },
-      { id: "mat2-addcambio", emoji: "➕", titolo: "Addizioni in colonna", descrizione: "Con e senza cambio." },
+      { id: "mat2-addcambio", emoji: "➕", titolo: "Addizioni in colonna", descrizione: "Con e senza cambio.", lezione: "lezioni/mat2-addizioni-in-colonna.json" },
       { id: "mat2-sottcambio", emoji: "➖", titolo: "Sottrazioni in colonna", descrizione: "Con e senza prestito." },
       { id: "mat2-moltiplicazione", emoji: "✖️", titolo: "La moltiplicazione", descrizione: "Addizioni ripetute e schieramenti." },
       { id: "mat2-tabelline", emoji: "🎶", titolo: "Le tabelline", descrizione: "Dalla tabellina del 2 a quella del 10." },
@@ -101,7 +101,7 @@ window.CURRICOLO = {
     2: [
       { id: "sci2-materia", emoji: "🧊", titolo: "Solidi, liquidi e gas", descrizione: "Gli stati della materia.", lezione: "lezioni/sci2-solidi-liquidi-gas.json" },
       { id: "sci2-acqua", emoji: "💧", titolo: "L'acqua", descrizione: "Proprietà e trasformazioni dell'acqua." },
-      { id: "sci2-semi", emoji: "🌰", titolo: "Dal seme alla pianta", descrizione: "La germinazione e la crescita." },
+      { id: "sci2-semi", emoji: "🌰", titolo: "Dal seme alla pianta", descrizione: "La germinazione e la crescita.", lezione: "lezioni/sci2-dal-seme-alla-pianta.json" },
       { id: "sci2-ciclovita", emoji: "🔄", titolo: "Il ciclo della vita", descrizione: "Nascere, crescere, riprodursi, morire." },
       { id: "sci2-animali", emoji: "🦁", titolo: "Classificare gli animali", descrizione: "Cosa mangiano, come nascono, come si muovono." },
       { id: "sci2-ambienti", emoji: "🏞️", titolo: "Gli ambienti naturali", descrizione: "Bosco, prato, mare, montagna." },

@@ -1,12 +1,15 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia.
+// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "costruisci", "equivalenza", "leggi_tabella", "virgola", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "costruisci", "equivalenza", "leggi_tabella", "virgola", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
   const h = escapeHTML;
+
+  // Addizione in colonna di 2ª: due numeri interi (anche di una cifra) con somma fino a 99.
+  const addizioneValida = (x) => Number.isInteger(x.a) && Number.isInteger(x.b) && x.a >= 1 && x.b >= 1 && x.a + x.b <= 99;
 
   /* ---------- Controllo del formato (usato anche da "5 minuti") ---------- */
   function valida(l) {
@@ -23,6 +26,8 @@
       } else if (an.tipo === "sequenza") {
         if (!Array.isArray(an.passi) || an.passi.length < 2 || an.passi.length > 10 || an.passi.some((p) => !p || typeof p.testo !== "string" || !p.testo.trim()))
           errori.push(`Sezione ${i + 1}: la sequenza ha bisogno di 2-10 "passi", ognuno con "figure" e "testo".`);
+      } else if (an.tipo === "addizione") {
+        if (!addizioneValida(an)) errori.push(`Sezione ${i + 1}: l'addizione ha bisogno di "a" e "b" con somma fino a 99.`);
       } else if (!(["moltiplicazione", "scomposizione", "gelosia"].includes(an.tipo) && Number.isInteger(an.a) && Number.isInteger(an.b) && an.a > 0 && an.b > 0 && an.a <= 999 && an.b <= 99))
         errori.push(`Sezione ${i + 1}: animazione non valida (tipo "moltiplicazione", "scomposizione" o "gelosia", a fino a 999, b fino a 99; oppure "scena" o "sequenza").`);
     });
@@ -37,6 +42,7 @@
       if (e.tipo === "completa" && !/\[[^\]]+\]/.test(e.testo || "")) errori.push(`${n}: il testo deve avere le parole da completare tra [parentesi quadre].`);
       if (e.tipo === "conta" && !(e.oggetto && Number.isInteger(e.numero))) errori.push(`${n}: servono "oggetto" e "numero".`);
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
+      if (e.tipo === "addizione" && !addizioneValida(e)) errori.push(`${n}: servono "a" e "b" con somma fino a 99.`);
       if (window.Giochi?.TIPI.includes(e.tipo)) errori.push(...Giochi.valida(e, n));
       if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
       if (e.tipo === "equivalenza" && !(Number.isInteger(e.n) && e.n > 0 && ["k", "h", "da", "u"].includes(e.da) && ["k", "h", "da", "u"].includes(e.a) && Number.isInteger(Animazioni.calcolaEquivalenza(e.n, e.da, e.a)))) errori.push(`${n}: servono "n", "da" e "a" (k, h, da, u) con risultato intero.`);
@@ -450,6 +456,8 @@
     Animazioni.esercizioVirgola(e, c, esito, domanda(e.domanda || `Sposta le cifre nella tabella: ${String(e.n).replace(".", ",")} ${e.op === "x" ? "×" : ":"} ${e.per}`, e));
   ESERCIZI.gelosia = (e, c, esito) =>
     Animazioni.esercizioGelosia(e, c, esito, domanda(e.domanda || `Calcola con la griglia: ${e.a} × ${e.b}`, e));
+  ESERCIZI.addizione = (e, c, esito) =>
+    Animazioni.esercizioAddizione(e, c, esito, domanda(e.domanda || `Calcola in colonna: ${e.a} + ${e.b}`, e));
   ESERCIZI.colonna = (e, c, esito) =>
     Animazioni.esercizioColonna(e, c, esito, domanda(e.domanda || `Calcola in colonna: ${e.a} × ${e.b}`, e));
 
