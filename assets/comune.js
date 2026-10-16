@@ -393,8 +393,8 @@ window.Figura = (() => {
   const RE_INIZIO = new RegExp(`^\\s*((?:${EMO}\\s*)+)`, "u");
   const RE_UNA = new RegExp(EMO, "gu");
   const nomeFile = (e) => [...e].map((c) => c.codePointAt(0).toString(16)).join("-");
-  // Disegni fatti a mano per le cose che non hanno un'emoji giusta (🧫 = la cellula).
-  const DISEGNI = { "🧫": "assets/disegni/cellula.svg" };
+  // Disegni fatti a mano per le cose che non hanno un'emoji giusta (🧫 = cellula animale, 🥬 = cellula vegetale).
+  const DISEGNI = { "🧫": "assets/disegni/cellula.svg", "🥬": "assets/disegni/cellula-vegetale.svg" };
   function file(emoji) {
     if (DISEGNI[emoji]) return DISEGNI[emoji];
     const set = window.EMOJI_DISPONIBILI;

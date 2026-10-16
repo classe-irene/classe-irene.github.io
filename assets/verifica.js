@@ -2,7 +2,7 @@
 // Due versioni: "standard" e "facilitata" (per BES/DSA). Soluzioni visibili solo nella copia dell'insegnante.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "completa", "collega", "ordina", "calcolo", "conta", "risposta", "disegna", "classifica"];
+  const TIPI = ["scelta", "vero_falso", "completa", "collega", "ordina", "calcolo", "conta", "risposta", "disegna", "classifica", "etichette"];
   const h = escapeHTML;
   const ric = (t) => Figura.ricco(t, "figura piccola");
 
@@ -32,6 +32,7 @@
     if (d.tipo === "ordina" && !lista(d.elementi, 2)) e.push(`${n}: servono "elementi" in ordine giusto.`);
     if (d.tipo === "calcolo" && !(lista(d.operazioni, 1) && d.operazioni.every((o) => o.testo && o.risultato !== undefined))) e.push(`${n}: servono "operazioni" con "testo" e "risultato".`);
     if (d.tipo === "conta" && !(d.figura && Number.isInteger(d.numero) && d.numero > 0 && d.numero <= 30)) e.push(`${n}: servono "figura" e "numero" (fino a 30).`);
+    if (d.tipo === "etichette" && !(/^assets\/disegni\/[\w-]+\.svg$/.test(d.disegno || "") && lista(d.parti, 2))) e.push(`${n}: servono "disegno" (assets/disegni/…svg) e "parti" in ordine.`);
     if (d.tipo === "classifica" && !(lista(d.categorie, 2) && lista(d.elementi, 2) && d.elementi.every((x) => d.categorie.includes(x.categoria)))) e.push(`${n}: servono "categorie" ed "elementi" con la categoria giusta.`);
     return e;
   }
@@ -91,6 +92,9 @@
       <span class="v-calcolo">Sono: ${casella(sol(d.numero))}</span></div>`,
     risposta: (d) => `${'<div class="riga"></div>'.repeat(Math.min(8, Math.max(1, d.righe || 3)))}${d.soluzione ? `<p class="sol blocco">${h(d.soluzione)}</p>` : ""}`,
     disegna: () => `<div class="v-disegno"></div>`,
+    // Disegno con i numeri: si scrive il nome di ogni parte (parti in ordine: 1, 2, 3…).
+    etichette: (d) => `${d.parole?.length ? `<div class="v-banca">Usa queste parole: ${d.parole.map((p) => `<b>${h(p)}</b>`).join(" · ")}</div>` : ""}
+      <div class="v-etichette"><img src="${h(d.disegno)}" alt=""><ol>${d.parti.map((p) => `<li><span class="buco">${sol(p)}</span></li>`).join("")}</ol></div>`,
     classifica: (d) => `<div class="v-banca">${d.elementi.map((x) => `<span class="v-tessera">${ric(x.testo)}</span>`).join("")}</div>
       <table class="v-tabella"><tr>${d.categorie.map((c) => `<th>${ric(c)}</th>`).join("")}</tr>
       <tr>${d.categorie.map((c) => `<td>${d.elementi.filter((x) => x.categoria === c).map((x) => sol(Figura.dividi(x.testo).testo)).join("<br>")}</td>`).join("")}</tr></table>`,
