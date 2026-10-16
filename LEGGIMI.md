@@ -82,3 +82,11 @@ L'esercizio `retta` mostra i numeri con la virgola (es. `"min": 0, "max": 1, "pa
 
 ## Corpo umano (classe 5ª)
 Video `{"tipo":"scena","scena":"corpo"}`: cervello, polmoni (respirano), cuore (batte), stomaco e intestino, ossa e muscoli, poi "organi in squadra = apparati".
+
+## Palestra delle equivalenze (equivalenze.html)
+
+Pagina a parte con solo equivalenze, un esercizio alla volta (anche in modalità LIM). Tre livelli: 1 (k h da u, esercizio "equivalenza"), 2 (hk dak uk h da u, esercizio "leggi_tabella"), misto. Ogni giro sono 10 esercizi nuovi creati a caso da `assets/palestra.js` (tabella, scelta, vero o falso, completa). Usa `Motore.esercizio` per disegnare un esercizio fuori da una lezione. Pulsante nella home e nelle sezioni di matematica 4ª e 5ª.
+
+## Prove in stile INVALSI (invalsi.html)
+
+`invalsi.html` elenca le prove; `invalsi.html?file=invalsi/x.json` apre una prova. Domande D1, D2…, risposta con la crocetta sulla lettera (massimo 3 opzioni), nessuna correzione durante la prova, tempo facoltativo, risultati per ambito e soluzioni alla consegna. Tipi di domanda: `scelta` {opzioni, corretta}, `numero` {risposta, unita} con tastierino, `vf` {affermazioni:[{testo, vera}]}. Figure facoltative: `figure` (emoji separate da spazi), `pittogramma`, `grafico` (barre), `tabella`, `quadretti`, `rettangolo`. Per aggiungere una prova: un file in `invalsi/` e una riga in `PROVE` dentro `assets/invalsi.js`.

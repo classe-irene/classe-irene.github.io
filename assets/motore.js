@@ -552,5 +552,8 @@
     window.addEventListener("pointercancel", () => fine(true));
   }
 
-  window.Motore = { valida, disegnaLezione, TIPI };
+  // Un esercizio da solo, fuori da una lezione (palestra delle equivalenze).
+  const esercizio = (e, corpo, esito) => ESERCIZI[e.tipo](e, corpo, esito);
+
+  window.Motore = { valida, disegnaLezione, TIPI, esercizio, BRAVO, RIPROVA };
 })();
