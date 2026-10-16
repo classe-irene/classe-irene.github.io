@@ -420,6 +420,79 @@
     };
   }
 
+  // La cellula disegnata (come assets/disegni/cellula.svg), in un quadrato 200×200.
+  const CELLA_FORMA = "M100 16 C150 14 186 48 184 98 C182 150 146 186 98 184 C50 182 16 148 18 100 C20 52 52 18 100 16 Z";
+  const CELLA = `<path d="${CELLA_FORMA}" fill="#FFD9E0" stroke="#E2667F" stroke-width="6"/>
+    <ellipse cx="56" cy="68" rx="16" ry="9" transform="rotate(-30 56 68)" fill="#F6A04D" stroke="#D97B22" stroke-width="2.5"/>
+    <ellipse cx="62" cy="142" rx="15" ry="8" transform="rotate(25 62 142)" fill="#F6A04D" stroke="#D97B22" stroke-width="2.5"/>
+    <ellipse cx="150" cy="150" rx="14" ry="8" transform="rotate(-15 150 150)" fill="#F6A04D" stroke="#D97B22" stroke-width="2.5"/>
+    <circle cx="142" cy="50" r="5" fill="#EE8FA6"/><circle cx="38" cy="106" r="5" fill="#EE8FA6"/><circle cx="104" cy="162" r="5" fill="#EE8FA6"/><circle cx="162" cy="104" r="5" fill="#EE8FA6"/>
+    <circle cx="108" cy="96" r="34" fill="#A98BF0" stroke="#6B4FC8" stroke-width="4"/><circle cx="118" cy="88" r="11" fill="#6B4FC8"/>`;
+  const cella = (x, y, s, extra = "") => `<g transform="translate(${x - 100 * s} ${y - 100 * s}) scale(${s})"><g ${extra}>${CELLA}</g></g>`;
+  // Tessuto: tante cellule uguali, vicine vicine (a nido d'ape).
+  const tessuto = (x, y, s) => {
+    let g = "";
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 3; c++) g += cella(x + (c - 1) * 150 * s + (r % 2 ? 75 * s : -40 * s), y + (r - 1) * 135 * s, s * 0.82);
+    return g;
+  };
+  const linea = (x1, y1, x2, y2) => `<path d="M${x1} ${y1} L${x2} ${y2}" class="sc-linea"/>`;
+  const parola = (x, y, t) => `<text x="${x}" y="${y}" class="sc-parola">${t}</text>`;
+  const freccia = (x1, x2, y) => `<path d="M${x1} ${y} H${x2}" class="sc-freccia sequenza"/>`;
+
+  // Com'è fatta una cellula: membrana, citoplasma, nucleo (classe 5ª).
+  function scenaCellula() {
+    const S = 1.7, X = 170, Y = 30; // la cellula grande va da x 170 a 510
+    const p = (cx, cy) => [X + cx * S, Y + cy * S];
+    const [mx, my] = p(18, 100), [cx, cy] = p(62, 152), [nx, ny] = p(130, 70);
+    return {
+      viewBox: "0 0 620 400",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="400" class="sc-cielo"/>` },
+        { da: 0, a: 3, svg: cella(340, 200, S) },
+        { da: 0, a: 0, svg: fig("🔬", 540, 310, 90) + parola(530, 380, "microscopio") },
+        { da: 1, a: 1, svg: `<path d="${CELLA_FORMA}" transform="translate(${X} ${Y}) scale(${S})" class="sc-evidenzia"/>` },
+        { da: 1, a: 3, svg: linea(mx - 4, my - 6, 120, 150) + parola(78, 140, "membrana") },
+        { da: 2, a: 2, svg: `<g transform="translate(${X} ${Y}) scale(${S})"><path d="${CELLA_FORMA}" class="sc-gelatina"/><circle cx="108" cy="96" r="34" fill="#A98BF0" stroke="#6B4FC8" stroke-width="4"/><circle cx="118" cy="88" r="11" fill="#6B4FC8"/></g>` },
+        { da: 2, a: 3, svg: linea(cx - 10, cy + 8, 150, 318) + parola(80, 330, "citoplasma") },
+        { da: 3, a: 3, svg: `<circle cx="${X + 108 * S}" cy="${Y + 96 * S}" r="${40 * S}" class="sc-alone"/>` },
+        { da: 3, a: 3, svg: `<circle cx="${X + 108 * S}" cy="${Y + 96 * S}" r="${34 * S}" fill="#A98BF0" stroke="#6B4FC8" stroke-width="${4 * S}"/><circle cx="${X + 118 * S}" cy="${Y + 88 * S}" r="${11 * S}" fill="#6B4FC8"/>` },
+        { da: 3, a: 3, svg: linea(nx + 8, ny - 8, 520, 100) + parola(560, 90, "nucleo") },
+        { da: 4, svg: `<g class="sc-entra">${cella(190, 190, 1.05)}</g><g class="sc-entra" style="animation-delay:.5s">${cella(430, 190, 1.05)}</g>`
+          + `<path d="M300 190 H322" class="sc-freccia sequenza"/>` + parola(310, 370, "una cellula si divide in due") },
+      ],
+      passi: [
+        "Questa è una cellula. È piccolissima: la vediamo solo con il microscopio.",
+        "Intorno c'è la membrana. È come una pelle sottile che chiude la cellula.",
+        "Dentro c'è il citoplasma. È un liquido morbido, come una gelatina.",
+        "Al centro c'è il nucleo. È il capo della cellula: comanda tutto.",
+        "La cellula è viva: mangia e cresce. Poi si divide in due cellule nuove!",
+      ],
+    };
+  }
+
+  // Dalla cellula all'apparato, con i disegni (classe 5ª).
+  function scenaDallaCellula() {
+    return {
+      viewBox: "0 0 620 400",
+      pezzi: [
+        { da: 0, svg: `<rect x="0" y="0" width="620" height="400" class="sc-cielo"/>` },
+        { da: 0, a: 0, svg: `<g class="sc-entra">${cella(310, 180, 1.2)}</g>` + parola(310, 365, "una cellula") },
+        { da: 1, a: 1, svg: cella(110, 190, 0.6) + parola(110, 320, "cellula") + freccia(200, 250, 190)
+          + `<g class="sc-entra">${tessuto(440, 190, 0.5)}</g>` + parola(440, 360, "tessuto") },
+        { da: 2, a: 2, svg: tessuto(140, 190, 0.4) + parola(140, 340, "tessuto") + freccia(270, 330, 190)
+          + `<g class="sc-entra sc-batte">${fig("🫀", 460, 185, 170)}</g>` + parola(460, 340, "organo: il cuore") },
+        { da: 3, svg: `<g class="sc-entra">${fig("🧠", 80, 180, 100)}</g><g class="sc-entra" style="animation-delay:.3s">${fig("🫁", 195, 180, 100)}</g><g class="sc-entra" style="animation-delay:.6s">${fig("🫀", 310, 180, 100)}</g>`
+          + parola(195, 300, "organi") + freccia(375, 425, 180) + `<g class="sc-entra" style="animation-delay:1s">${fig("🤝", 520, 180, 120)}</g>` + parola(520, 300, "apparato") },
+      ],
+      passi: [
+        "Il nostro corpo è fatto di tantissime cellule piccolissime.",
+        "Tante cellule uguali, vicine vicine, formano un tessuto.",
+        "Tanti tessuti insieme formano un organo, per esempio il cuore.",
+        "Gli organi lavorano in squadra: formano un apparato.",
+      ],
+    };
+  }
+
   function scenaSeme() {
     let gocce = "";
     for (let k = 0; k < 8; k++) gocce += `<line x1="${250 + k * 17}" y1="${60 + (k % 3) * 12}" x2="${247 + k * 17}" y2="${76 + (k % 3) * 12}" class="sc-pioggia" style="animation-delay:-${(k * 0.21).toFixed(2)}s"/>`;
@@ -1201,7 +1274,7 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
