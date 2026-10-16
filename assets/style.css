@@ -164,7 +164,7 @@ a.argomento:hover { transform: translateY(-3px); }
 .parola .figura.piccola { width: 30px; height: 30px; font-size: 24px; }
 .scheda { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 24px; align-items: center; }
 .scheda h2 { flex-wrap: wrap; }
-@media (max-width: 600px) { .scheda { grid-template-columns: 1fr; } .scheda-figura { order: -1; justify-self: center; } .figura.grande { width: 96px; height: 96px; } }
+@media (max-width: 600px) { .scheda { grid-template-columns: minmax(0, 1fr); } .scheda-corpo { min-width: 0; } .scheda-figura { order: -1; justify-self: center; } .figura.grande { width: 96px; height: 96px; } }
 /* Le figure stanno tutte su una riga sola (richiesta di Michele): se servono, le parole vanno a capo dentro la loro casella. */
 .galleria { display: flex; flex-wrap: nowrap; gap: 14px; margin: 8px 0 12px; overflow-x: auto; scrollbar-width: thin; }
 .galleria figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; background: var(--tema-chiaro); border-radius: 16px; padding: 10px 12px; flex: 1 1 0; min-width: 0; max-width: 260px; text-align: center; }
@@ -971,6 +971,13 @@ body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 48
 .sc-batte { animation: sc-batte .9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .sc-respira { animation: sc-respira 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes sc-batte { 0%, 60%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1.05); } 45% { transform: scale(1.14); } }
+.sc-cellina { fill: #C4EEF5; stroke: #6BBFD0; stroke-width: 3; }
+.sc-cellina-nucleo { fill: #7CC8D8; }
+.sc-lente-fondo { fill: #E3F7FA; } .sc-lente { fill: none; stroke: #7CC8D8; stroke-width: 8; }
+.sc-scelta { fill: #FFE08A; stroke: #F5A623; stroke-width: 6; }
+.sc-cono { fill: #FFE9A8; opacity: .55; }
+.sc-venatura { fill: none; stroke: #2E7D32; stroke-width: 4; stroke-linecap: round; }
+.sc-acqua { fill: #4FB3C4; opacity: .35; animation: pulsa 1.6s infinite; transform-box: fill-box; transform-origin: center; }
 .sc-evidenzia { fill: none; stroke: #FFC93C; stroke-width: 4; stroke-dasharray: 10 8; animation: scorre 1s linear infinite; }
 .sc-gelatina { fill: #FFC93C; opacity: .3; animation: pulsa 1.6s infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes sc-respira { 0%, 100% { transform: scale(.94); } 50% { transform: scale(1.06); } }

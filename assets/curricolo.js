@@ -119,7 +119,7 @@ window.CURRICOLO = {
       { id: "sci3-catene", emoji: "🦊", titolo: "Le catene alimentari", descrizione: "Produttori, consumatori, decompositori." },
     ],
     4: [
-      { id: "sci4-cellula", emoji: "🧫", titolo: "La cellula", descrizione: "Il mattoncino della vita." },
+      { id: "sci4-cellula", emoji: "🧫", titolo: "La cellula", descrizione: "Cellula animale e cellula vegetale.", lezione: "lezioni/sci4-la-cellula.json" },
       { id: "sci4-regni", emoji: "🍄", titolo: "I cinque regni", descrizione: "Batteri, protisti, funghi, piante, animali.", lezione: "lezioni/sci4-cinque-regni.json" },
       { id: "sci4-piante", emoji: "🌸", titolo: "Riproduzione delle piante", descrizione: "Fiore, impollinazione, frutto e seme.", lezione: "lezioni/sci4-riproduzione-piante.json" },
       { id: "sci4-invertebrati", emoji: "🐝", titolo: "Gli invertebrati", descrizione: "Insetti, molluschi, aracnidi..." },

@@ -96,6 +96,7 @@
         <ol class="ricorda-lista">${l.ricorda.map((x) => `<li>${Figura.ricco(x, "figura media")}</li>`).join("")}</ol></div><div class="scheda-figura">${Figura.img("📌", "figura grande")}</div></section>` : ""}
       ${l.quaderno ? quadernoHTML(l.quaderno) : ""}
       ${l.parole_chiave?.length ? `<section class="scheda"><div class="scheda-corpo"><h2>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${Figura.ricco(p)}</span>`).join("")}</div></div><div class="scheda-figura">${Figura.img("🗝️", "figura grande")}</div></section>` : ""}
+      ${/^verifiche\/[\w.-]+\.json$/.test(l.verifica || "") ? `<section class="scheda"><div class="scheda-corpo"><h2>📝 Verifica da stampare</h2><p>Una verifica su carta per ripassare: c'è anche la versione facilitata e, per l'insegnante, le soluzioni.</p><p><a class="btn" href="verifica.html?file=${h(l.verifica)}">🖨️ Apri la verifica</a></p></div><div class="scheda-figura">${Figura.img("📝", "figura grande")}</div></section>` : ""}
       <h2 id="esercizi" style="text-align:center;margin-top:36px">🎯 Ora tocca a te!</h2>
       <div class="punteggio">⭐ <span data-punti>0</span> / ${l.esercizi.length}</div>
       ${mappaHTML(l)}

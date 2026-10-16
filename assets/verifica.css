@@ -88,3 +88,9 @@ body.soluzioni .v-ris { display: block; }
 .foglio .con-figura { max-width: 100%; }
 .foglio .con-figura > span:last-child { min-width: 0; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .v-comandi .btn { padding: 8px 12px; font-size: .9rem; } }
+
+/* Disegno con i numeri da completare */
+.v-etichette { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.v-etichette img { width: 360px; max-width: 100%; }
+.v-etichette ol { margin: 0; padding-left: 26px; display: grid; gap: 12px; font-weight: 700; }
+.v-etichette .buco { display: inline-block; min-width: 170px; }

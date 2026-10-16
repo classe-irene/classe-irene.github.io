@@ -83,7 +83,9 @@ L'esercizio `retta` mostra i numeri con la virgola (es. `"min": 0, "max": 1, "pa
 ## Corpo umano (classe 5ª)
 Video `{"tipo":"scena","scena":"corpo"}`: cervello, polmoni (respirano), cuore (batte), stomaco e intestino, ossa e muscoli, poi "organi in squadra = apparati".
 Video `{"tipo":"scena","scena":"cellula"}`: la cellula disegnata con membrana, citoplasma e nucleo, poi la cellula che si divide. Video `{"tipo":"scena","scena":"dalla_cellula"}`: cellula → tessuto → organo → apparato.
-L'emoji 🧫 mostra la cellula disegnata (`assets/disegni/cellula.svg`, mappa `DISEGNI` in `assets/comune.js`).
+Video `{"tipo":"scena","scena":"foglia"}` (la foglia al microscopio: tanti contenitori = cellule) e `{"tipo":"scena","scena":"cellula_vegetale"}` (parete, vacuolo, cloroplasti). La scena `cellula` mostra anche i mitocondri.
+Disegni fatti a mano in `assets/disegni/` (mappa `DISEGNI` in `assets/comune.js`): l'emoji 🧫 mostra la cellula animale, 🥬 la cellula vegetale.
+Campo facoltativo della lezione: `"verifica": "verifiche/nome.json"` aggiunge la scheda "📝 Verifica da stampare". Nelle verifiche c'è anche il tipo `etichette` {disegno: "assets/disegni/…-numeri.svg", parti: [nomi in ordine 1, 2, 3…], parole?}: un disegno con i numeri, si scrive il nome di ogni parte.
 
 ## Palestra delle equivalenze (equivalenze.html)
 

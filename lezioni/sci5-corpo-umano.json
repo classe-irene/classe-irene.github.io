@@ -17,21 +17,6 @@
   "premio": "🩺",
   "sezioni": [
     {
-      "titolo": "🔬 Com'è fatta una cellula",
-      "immagine": "🧫",
-      "testo": "La cellula ha tre parti.\nIntorno c'è la membrana, come una pelle sottile.\nDentro c'è il citoplasma, morbido come una gelatina.\nAl centro c'è il nucleo: è il capo della cellula.",
-      "immagini": [
-        "🧫 cellula",
-        "🔬 microscopio"
-      ],
-      "animazione": {
-        "tipo": "scena",
-        "scena": "cellula",
-        "video": true,
-        "titolo": "com'è fatta una cellula"
-      }
-    },
-    {
       "titolo": "🧱 Dalla cellula all'apparato",
       "immagine": "🧱",
       "testo": "Il corpo è fatto di cellule piccolissime.\nTante cellule uguali formano un tessuto.\nI tessuti formano un organo. Gli organi in squadra formano un apparato.",
@@ -167,23 +152,6 @@
         "🫀 organo",
         "🤝 apparato"
       ]
-    },
-    {
-      "tipo": "completa",
-      "immagine": "🧫",
-      "domanda": "Completa.",
-      "testo": "Intorno alla cellula c'è la [membrana]. Al centro c'è il [nucleo].",
-      "distrattori": [
-        "polmone",
-        "osso"
-      ]
-    },
-    {
-      "tipo": "vero_falso",
-      "immagine": "🧫",
-      "affermazione": "Il nucleo è il capo della cellula.",
-      "corretta": true,
-      "spiegazione": "Il nucleo sta al centro e comanda tutta la cellula."
     },
     {
       "tipo": "abbina",
@@ -364,7 +332,6 @@
   ],
   "ricorda": [
     "🧫 Il corpo è fatto di cellule. Cellule uguali formano i tessuti.",
-    "🔬 La cellula ha la membrana, il citoplasma e il nucleo.",
     "🫀 I tessuti formano gli organi. Gli organi in squadra formano gli apparati.",
     "🍎 Il digerente trasforma il cibo. Il respiratorio prende l'aria.",
     "🩸 Il circolatorio porta il sangue: il cuore è la pompa.",
