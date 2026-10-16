@@ -642,7 +642,7 @@
     const svg = c.querySelector(".eq-tabella"), r = c.querySelector(".eq-ris");
     const disegna = () => {
       svg.innerHTML = `<defs><marker id="punta-eq" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="context-stroke"/></marker></defs>` + tabellaEqSVG(i1) + cifreEqSVG(testo, col);
-      r.textContent = col === i1 ? testo : "?";
+      r.textContent = col === i1 ? testo.replace(/\B(?=(\d{3})+(?!\d))/g, " ") : "?";
     };
     disegna();
     c.addEventListener("click", (ev) => {

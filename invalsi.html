@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Prove in stile INVALSI · La classe di Irene</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<script src="assets/curricolo.js"></script>
+<script src="assets/emoji-elenco.js"></script>
+<script src="assets/comune.js"></script>
+<script src="assets/invalsi.js"></script>
+</head>
+<body class="invalsi">
+<main class="contenitore" id="radice"><p style="text-align:center;padding:60px">Sto preparando la prova… 📝</p></main>
+<script>
+  creaTestata("matematica");
+  const p = parametri();
+  const radice = document.getElementById("radice");
+  const errore = (msg) => radice.innerHTML = `<div class="scheda"><h2>😕 Prova non trovata</h2><p>${escapeHTML(msg)}</p><a class="btn" href="invalsi.html">Torna alle prove</a></div>`;
+  (async () => {
+    if (!p.file) return Invalsi.elenco(radice);
+    if (!/^invalsi\/[\w.-]+\.json$/.test(p.file)) return errore("Questa prova non esiste.");
+    let prova;
+    try { prova = await (await fetch(p.file)).json(); } catch { return errore("Non riesco a leggere il file della prova."); }
+    const e = Invalsi.valida(prova);
+    if (e.length) return errore(e.join(" "));
+    Invalsi.avvia(prova, radice);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+{
+  "titolo": "Prova di Matematica",
+  "classe": 5,
+  "materia": "matematica",
+  "emoji": "🧭",
+  "minuti": 45,
+  "domande": [
+    {
+      "ambito": "Numeri",
+      "immagine": "🔸",
+      "testo": "Quale numero è il più grande?",
+      "tipo": "scelta",
+      "opzioni": [
+        "0,7",
+        "0,65",
+        "0,09"
+      ],
+      "corretta": 0,
+      "spiegazione": "0,7 ha 7 decimi: è più di 0,65 (6 decimi) e di 0,09 (0 decimi)."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "🔢",
+      "testo": "Nel numero 45 360, quanto vale la cifra 5?",
+      "tipo": "scelta",
+      "opzioni": [
+        "5",
+        "500",
+        "5 000"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il 5 è nella casella delle unità di migliaia: vale 5 000."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "🍕",
+      "testo": "Una pizza costa 6,50 €. Quanto costano 2 pizze?",
+      "tipo": "numero",
+      "risposta": "13",
+      "unita": "€",
+      "spiegazione": "6,50 + 6,50 = 13 €."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "🍬",
+      "testo": "Luca ha 20 caramelle. Ne regala 1/4 alla sorella. Quante caramelle regala?",
+      "tipo": "scelta",
+      "opzioni": [
+        "4",
+        "5",
+        "15"
+      ],
+      "corretta": 1,
+      "spiegazione": "1/4 di 20: divido 20 in 4 parti uguali. 20 : 4 = 5."
+    },
+    {
+      "ambito": "Spazio e figure",
+      "immagine": "🌳",
+      "testo": "Il giardino ha la forma di un rettangolo. Qual è il suo perimetro?",
+      "rettangolo": {
+        "base": 8,
+        "altezza": 3,
+        "unita": "m"
+      },
+      "tipo": "scelta",
+      "opzioni": [
+        "11 m",
+        "22 m",
+        "24 m"
+      ],
+      "corretta": 1,
+      "spiegazione": "Perimetro = 8 + 3 + 8 + 3 = 22 m."
+    },
+    {
+      "ambito": "Spazio e figure",
+      "immagine": "🟩",
+      "testo": "Ogni quadretto misura 1 cm². Qual è l'area della figura verde?",
+      "quadretti": {
+        "righe": 4,
+        "colonne": 6,
+        "celle": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "tipo": "numero",
+      "risposta": "7",
+      "unita": "cm²",
+      "spiegazione": "Conto i quadretti verdi: 7. L'area è 7 cm²."
+    },
+    {
+      "ambito": "Spazio e figure",
+      "immagine": "📐",
+      "testo": "Quale figura ha 4 lati uguali e 4 angoli retti?",
+      "tipo": "scelta",
+      "opzioni": [
+        "🔷 il rombo",
+        "🟦 il quadrato",
+        "🚪 il rettangolo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il quadrato ha 4 lati uguali e 4 angoli retti. Il rombo ha i lati uguali ma gli angoli non sono retti."
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "📚",
+      "testo": "Il grafico mostra i libri letti in un mese. Quanti libri hanno letto in tutto i quattro bambini?",
+      "grafico": {
+        "titolo": "Libri letti in un mese",
+        "massimo": 10,
+        "passo": 2,
+        "barre": [
+          {
+            "etichetta": "Anna",
+            "valore": 6,
+            "emoji": "👧"
+          },
+          {
+            "etichetta": "Bruno",
+            "valore": 4,
+            "emoji": "👦"
+          },
+          {
+            "etichetta": "Carla",
+            "valore": 8,
+            "emoji": "👩‍🦰"
+          },
+          {
+            "etichetta": "Dario",
+            "valore": 2,
+            "emoji": "🧒"
+          }
+        ]
+      },
+      "tipo": "numero",
+      "risposta": "20",
+      "unita": "libri",
+      "spiegazione": "6 + 4 + 8 + 2 = 20 libri."
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "📚",
+      "testo": "Guarda di nuovo il grafico. Chi ha letto il doppio dei libri di Bruno?",
+      "grafico": {
+        "titolo": "Libri letti in un mese",
+        "massimo": 10,
+        "passo": 2,
+        "barre": [
+          {
+            "etichetta": "Anna",
+            "valore": 6,
+            "emoji": "👧"
+          },
+          {
+            "etichetta": "Bruno",
+            "valore": 4,
+            "emoji": "👦"
+          },
+          {
+            "etichetta": "Carla",
+            "valore": 8,
+            "emoji": "👩‍🦰"
+          },
+          {
+            "etichetta": "Dario",
+            "valore": 2,
+            "emoji": "🧒"
+          }
+        ]
+      },
+      "tipo": "scelta",
+      "opzioni": [
+        "👧 Anna",
+        "👩‍🦰 Carla",
+        "🧒 Dario"
+      ],
+      "corretta": 1,
+      "spiegazione": "Bruno ha letto 4 libri. Il doppio è 8: Carla."
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "🎲",
+      "testo": "Nel sacchetto ci sono 5 palline rosse e 1 pallina blu. Pesco una pallina senza guardare. Che cosa è più probabile?",
+      "figure": "🔴 🔴 🔴 🔴 🔴 🔵",
+      "tipo": "scelta",
+      "opzioni": [
+        "🔴 pescare una pallina rossa",
+        "🔵 pescare la pallina blu",
+        "⚖️ sono ugualmente probabili"
+      ],
+      "corretta": 0,
+      "spiegazione": "Le palline rosse sono 5, quella blu è 1 sola: è più probabile la rossa."
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "📒",
+      "testo": "Un quaderno costa 2 €. Completa la tabella: quanto costano 5 quaderni?",
+      "tabella": {
+        "intestazioni": [
+          "📒 Quaderni",
+          "💶 Prezzo (€)"
+        ],
+        "righe": [
+          [
+            "1",
+            "2"
+          ],
+          [
+            "2",
+            "4"
+          ],
+          [
+            "3",
+            "6"
+          ],
+          [
+            "5",
+            "❓"
+          ]
+        ]
+      },
+      "tipo": "numero",
+      "risposta": "10",
+      "unita": "€",
+      "spiegazione": "Ogni quaderno costa 2 €: 5 × 2 = 10 €."
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "📏",
+      "testo": "1 metro è uguale a quanti centimetri?",
+      "tipo": "scelta",
+      "opzioni": [
+        "10 cm",
+        "100 cm",
+        "1 000 cm"
+      ],
+      "corretta": 1,
+      "spiegazione": "1 m = 100 cm."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "⚖️",
+      "testo": "Leggi le frasi. Per ogni frase segna Vero o Falso.",
+      "tipo": "vf",
+      "affermazioni": [
+        {
+          "testo": "0,5 e 0,50 sono lo stesso numero.",
+          "vera": true
+        },
+        {
+          "testo": "2,4 × 10 = 24",
+          "vera": true
+        },
+        {
+          "testo": "7 : 10 = 70",
+          "vera": false
+        }
+      ],
+      "spiegazione": "Lo zero in fondo non cambia 0,5. 2,4 × 10 = 24. 7 : 10 = 0,7, non 70."
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "🚌",
+      "testo": "Marta parte alle 15:30 e arriva alle 16:15. Quanto dura il viaggio?",
+      "tipo": "scelta",
+      "opzioni": [
+        "45 minuti",
+        "1 ora e 15 minuti",
+        "30 minuti"
+      ],
+      "corretta": 0,
+      "spiegazione": "Dalle 15:30 alle 16:00 sono 30 minuti, poi altri 15: 45 minuti."
+    }
+  ]
+}
