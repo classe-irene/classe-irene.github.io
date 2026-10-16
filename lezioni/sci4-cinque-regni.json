@@ -152,16 +152,36 @@
   ],
   "esercizi": [
     {
-      "tipo": "ordina",
-      "immagine": "🪜",
-      "domanda": "Dal più piccolo e semplice al più grande.",
+      "tipo": "categorie",
+      "immagine": "🔬",
+      "domanda": "Si vede a occhio nudo o serve il microscopio?",
+      "categorie": [
+        "🔬 Serve il microscopio",
+        "👀 Si vede a occhio nudo"
+      ],
       "elementi": [
-        "🦠 Monere",
-        "💧 Protisti",
-        "🍄 Funghi",
-        "🌳 Piante",
-        "🦁 Animali"
-      ]
+        {
+          "testo": "🦠 batterio",
+          "categoria": "🔬 Serve il microscopio"
+        },
+        {
+          "testo": "🦠 ameba",
+          "categoria": "🔬 Serve il microscopio"
+        },
+        {
+          "testo": "🍄 porcino",
+          "categoria": "👀 Si vede a occhio nudo"
+        },
+        {
+          "testo": "🌻 girasole",
+          "categoria": "👀 Si vede a occhio nudo"
+        },
+        {
+          "testo": "🐬 delfino",
+          "categoria": "👀 Si vede a occhio nudo"
+        }
+      ],
+      "suggerimento": "Monere e protisti sono piccolissimi."
     },
     {
       "tipo": "memory",
@@ -269,7 +289,7 @@
         ],
         [
           "🍄 Funghi",
-          "🍂 mangiano foglie e cose morte"
+          "🍂 si nutrono di foglie e resti morti"
         ]
       ]
     },
@@ -316,14 +336,34 @@
       "spiegazione": "L'ameba è un protista."
     },
     {
-      "tipo": "ordina",
+      "tipo": "categorie",
       "immagine": "🌱",
-      "domanda": "Come fa la pianta il suo cibo? Metti in ordine.",
+      "domanda": "Per fare il suo cibo, che cosa prende la pianta e che cosa produce?",
+      "categorie": [
+        "⬇️ La pianta prende",
+        "⬆️ La pianta produce"
+      ],
       "elementi": [
-        "💧 le radici bevono l'acqua",
-        "☀️ le foglie prendono la luce",
-        "🍬 la foglia prepara lo zucchero",
-        "🫧 la pianta regala ossigeno"
+        {
+          "testo": "💧 acqua",
+          "categoria": "⬇️ La pianta prende"
+        },
+        {
+          "testo": "☀️ luce",
+          "categoria": "⬇️ La pianta prende"
+        },
+        {
+          "testo": "💨 aria",
+          "categoria": "⬇️ La pianta prende"
+        },
+        {
+          "testo": "🍬 zucchero",
+          "categoria": "⬆️ La pianta produce"
+        },
+        {
+          "testo": "🫧 ossigeno",
+          "categoria": "⬆️ La pianta produce"
+        }
       ]
     },
     {

@@ -381,7 +381,7 @@
     // Frase con [parole] da completare scegliendo dalle tessere, in ordine.
     completa(e, c, esito) {
       const risposte = [];
-      const frase = h(e.testo).replace(/\[([^\]]+)\]/g, (_, r) => { risposte.push(r); return `<span class="buco" data-n="${risposte.length - 1}">&nbsp;</span>`; });
+      const frase = h(e.testo).replace(/\[([^\]]+)\]/g, (_, r) => { risposte.push(r); return `<span class="buco" data-n="${risposte.length - 1}">&nbsp;</span>`; }).replace(/\n/g, "<br>");
       const tessere = mescola([...risposte, ...(e.distrattori || [])]);
       c.innerHTML = domanda(e.domanda || "Completa la frase con le parole giuste.", e) +
         `<p class="frase-completa">${frase}</p><div class="mazzo">${tessere.map((t) => `<button class="tessera">${h(t)}</button>`).join("")}</div>`;

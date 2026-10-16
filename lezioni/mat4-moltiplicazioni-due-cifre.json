@@ -150,8 +150,8 @@
           "56"
         ],
         [
-          "4 × 25",
-          "100"
+          "5 × 9",
+          "45"
         ]
       ]
     },
@@ -247,10 +247,10 @@
     {
       "tipo": "colonna",
       "immagine": "🎒",
-      "domanda": "Con il riporto: 32 × 24.",
-      "a": 32,
+      "domanda": "Con il riporto: 37 × 24.",
+      "a": 37,
       "b": 24,
-      "spiegazione": "32 × 24 = 768."
+      "spiegazione": "7 × 4 = 28: scrivo 8 e porto 2. 37 × 24 = 888."
     },
     {
       "tipo": "scelta",

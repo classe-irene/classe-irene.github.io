@@ -24,7 +24,7 @@
         "🍫 u = unità = 1",
         "📦 da = decina = 10",
         "🗃️ h = centinaio = 100",
-        "🚚 k = migliaio = 1000"
+        "🚚 k = migliaio = 1 000"
       ],
       "scopri": [
         {
@@ -115,14 +115,14 @@
       },
       "immagini": [
         "🗃️ 3 h = 30 da",
-        "🚚 2 k = 2000 u",
+        "🚚 2 k = 2 000 u",
         "📦 7 da = 70 u"
       ]
     },
     {
       "titolo": "⬆️ Verso le unità più grandi",
       "immagine": "🔭",
-      "testo": "Vado verso sinistra, verso le unità più grandi: tolgo uno 0 per ogni salto.",
+      "testo": "Vado verso sinistra, verso le unità più grandi: tolgo uno 0 per ogni salto.\nFunziona quando il numero finisce con gli zeri giusti.",
       "immagini": [
         "📦 40 da = 4 h",
         "🍫 500 u = 5 h",
@@ -198,7 +198,7 @@
   "ricorda": [
     "🍫 1 da = 10 u",
     "🗃️ 1 h = 10 da = 100 u",
-    "🚚 1 k = 10 h = 100 da = 1000 u",
+    "🚚 1 k = 10 h = 100 da = 1 000 u",
     "➡️ Verso le unità più piccole aggiungo 0.",
     "⬅️ Verso le unità più grandi tolgo 0."
   ],
@@ -233,8 +233,8 @@
           "🗃️ 10 h"
         ],
         [
-          "1 h",
-          "🍫 100 u"
+          "2 da",
+          "🍫 20 u"
         ]
       ]
     },
@@ -281,7 +281,7 @@
     {
       "tipo": "vero_falso",
       "immagine": "🚚",
-      "affermazione": "1 k = 1000 u",
+      "affermazione": "1 k = 1 000 u",
       "corretta": true,
       "spiegazione": "Un migliaio sono mille unità."
     },
@@ -334,7 +334,7 @@
         "1 k",
         "100 da",
         "10 h",
-        "1000 u"
+        "1 000 u"
       ],
       "quanti": 5
     },
@@ -342,7 +342,7 @@
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
-      "testo": "2 k = [2000] u",
+      "testo": "2 k = [2 000] u",
       "distrattori": [
         "200",
         "20"
@@ -390,7 +390,7 @@
       "elementi": [
         "10 h",
         "100 da",
-        "1000 u",
+        "1 000 u",
         "100 h"
       ],
       "intruso": 3,
@@ -437,7 +437,7 @@
     {
       "tipo": "scelta",
       "immagine": "🚚",
-      "domanda": "Il camion porta 2 k di cioccolatini. Quante casse (h) sono?",
+      "domanda": "Tito ha 2 k di cioccolatini. Quante casse (h) riempie?",
       "opzioni": [
         "2",
         "20",

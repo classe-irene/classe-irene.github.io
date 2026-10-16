@@ -15,7 +15,7 @@
         "🏟️ 1 000"
       ],
       "pensa": {
-        "domanda": "Quanti bambini ci sono in uno stadio pieno? Più di 100 o più di 1 000?",
+        "domanda": "Quante persone ci sono in uno stadio pieno? Più di 100 o più di 1 000?",
         "risposta": "Molto più di 1 000! Uno stadio grande ha decine di migliaia di posti."
       }
     },
@@ -51,7 +51,7 @@
     {
       "titolo": "Leggere i grandi numeri",
       "immagine": "👓",
-      "testo": "Dividi il numero in gruppi di tre cifre, da destra.\n45 230 si legge: quarantacinquemila duecentotrenta.",
+      "testo": "Dividi il numero in gruppi di tre cifre, da destra.\n45 230 si legge: quarantacinquemiladuecentotrenta.",
       "esperimento": {
         "titolo": "Proviamo in classe: la tabella gigante",
         "materiali": [
@@ -71,7 +71,7 @@
     {
       "titolo": "Chi è più grande?",
       "immagine": "⚖️",
-      "testo": "Vince il numero con più cifre.\nSe sono uguali, confronta da sinistra."
+      "testo": "Vince il numero con più cifre.\nSe hanno lo stesso numero di cifre, confronta le cifre da sinistra."
     }
   ],
   "parole_chiave": [
@@ -277,6 +277,6 @@
     "🏘️ Le migliaia hanno tre case: uk, dak, hk.",
     "🧭 Più a sinistra sta una cifra, più vale.",
     "👓 Si legge a gruppi di tre cifre, da destra.",
-    "⚖️ Vince il numero con più cifre."
+    "⚖️ Vince il numero con più cifre. Con lo stesso numero di cifre, confronto da sinistra."
   ]
 }
