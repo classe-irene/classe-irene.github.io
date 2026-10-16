@@ -50,12 +50,12 @@
     {
       "titolo": "✖️ Ogni casella vale 10 volte",
       "immagine": "🔟",
-      "testo": "Ogni casella vale 10 volte quella alla sua destra.\n10 u = 1 da. 10 da = 1 h. 10 h = 1 uk.",
+      "testo": "Ogni casella vale 10 volte quella alla sua destra.\n10 uk = 1 dak. 10 h = 1 uk. 10 da = 1 h. 10 u = 1 da.",
       "immagini": [
-        "🟦 10 u = 1 da",
-        "🟥 10 da = 1 h",
+        "🟦 10 uk = 1 dak",
         "🟩 10 h = 1 uk",
-        "🟦 10 uk = 1 dak"
+        "🟥 10 da = 1 h",
+        "🟦 10 u = 1 da"
       ],
       "pensa": {
         "domanda": "Se sposto una cifra di una casella verso sinistra, il suo valore diventa più grande o più piccolo?",
