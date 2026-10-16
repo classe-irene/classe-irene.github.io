@@ -962,3 +962,14 @@ body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 48
 .sc-respira { animation: sc-respira 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes sc-batte { 0%, 60%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1.05); } 45% { transform: scale(1.14); } }
 @keyframes sc-respira { 0%, 100% { transform: scale(.94); } 50% { transform: scale(1.06); } }
+
+/* ---------- Immagini grandi di quello che la voce sta dicendo ---------- */
+.st-figure { display: flex; justify-content: center; align-items: flex-end; gap: clamp(12px, 2.5vw, 34px); margin: 4px 0 18px; flex-wrap: wrap; }
+.st-figure[hidden] { display: none; }
+.st-fig { display: grid; justify-items: center; gap: 4px; opacity: .18; filter: grayscale(1); transform: scale(.85); transition: opacity .35s, filter .35s, transform .35s; }
+.st-fig.accesa { opacity: 1; filter: none; transform: none; }
+.st-fig.ora { transform: scale(1.12); }
+.st-fig.ora .st-fig-img { animation: gs-salta .7s; }
+.st-fig-img { width: clamp(64px, 8vw, 130px); height: clamp(64px, 8vw, 130px); object-fit: contain; }
+.st-fig.sola .st-fig-img { width: clamp(80px, 10vw, 150px); height: clamp(80px, 10vw, 150px); }
+.st-fig b { font: 700 clamp(.95rem, 1.4vw, 1.3rem) "Fredoka", "Baloo 2", sans-serif; color: #2B2A33; }

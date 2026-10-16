@@ -81,7 +81,7 @@
       ${l.sezioni.map((s) => `
         <section class="scheda${s.animazione ? " con-animazione" : ""}">
           <div class="scheda-corpo">
-            <h2>${h(s.titolo)}<button class="leggi" data-leggi="${h(s.titolo + ". " + s.testo)}">🔊 Leggi</button></h2>
+            <h2>${h(s.titolo)}<button class="leggi" data-leggi="${h(s.titolo + ". " + s.testo)}" data-figura="${h(s.immagine || "")}">🔊 Leggi</button></h2>
             ${String(s.testo).split(/\n+/).map((p) => `<p>${Figura.frazioni(h(p))}</p>`).join("")}
             ${s.immagini?.length ? `<div class="galleria">${s.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
             ${s.animazione ? `<div class="anim-posto" data-anim="${h(JSON.stringify(s.animazione))}"></div>` : ""}
@@ -106,7 +106,7 @@
       const b = ev.target.closest("button");
       if (!b) return;
       // Negli esercizi la voce legge senza il riquadro al centro, che coprirebbe le risposte.
-      if (b.dataset.leggi) Voce.parla(b.dataset.leggi, null, b.closest(".esercizio") ? { scritte: false } : {});
+      if (b.dataset.leggi) Voce.parla(b.dataset.leggi, null, b.closest(".esercizio") ? { scritte: false } : { figura: b.dataset.figura || undefined });
       if (b.classList.contains("carta-scopri")) { b.classList.toggle("girata"); if (b.classList.contains("girata")) leggi(Figura.dividi(b.dataset.retro).testo); }
       if (b.hasAttribute("data-svela")) { const r = b.nextElementSibling; r.hidden = false; b.hidden = true; leggi(r.textContent); }
       if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
@@ -127,7 +127,7 @@
     });
 
     // Parole della lezione con la loro iconcina, per le scritte che accompagnano la voce.
-    Sottotitoli.dizionario([...(l.parole_chiave || []), ...(l.storia?.immagini || []), ...l.sezioni.flatMap((s) => [...(s.immagini || []), `${s.immagine || ""} ${s.titolo.replace(/^\S+\s/, "")}`]), ...(l.ricorda || [])]);
+    Sottotitoli.dizionario([...(l.parole_chiave || []), ...(l.storia?.immagini || []), ...l.sezioni.flatMap((s) => s.immagini || [])]);
 
     // "Ascolta la lezione": legge una scheda alla volta, la mostra e la illumina.
     let lettura = 0;
@@ -137,9 +137,9 @@
       btn.dataset.inCorso = "1"; btn.textContent = "⏹ Ferma la lettura";
       // Lo Stop del telecomando ferma anche la lettura di tutta la lezione.
       document.addEventListener("voce-ferma", () => { if (mio !== lettura) return; delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); }, { once: true });
-      const pezzi = [{ el: radice.querySelector(".lezione-testa"), t: `${l.titolo}. ${l.introduzione || ""}` },
-        ...(l.storia ? [{ el: radice.querySelector(".storia"), t: `${l.storia.testo} ${l.storia.missione || ""}` }] : []),
-        ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}` }))];
+      const pezzi = [{ el: radice.querySelector(".lezione-testa"), t: `${l.titolo}. ${l.introduzione || ""}`, figura: l.emoji },
+        ...(l.storia ? [{ el: radice.querySelector(".storia"), t: `${l.storia.testo} ${l.storia.missione || ""}`, figura: l.storia.personaggio }] : []),
+        ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}`, figura: l.sezioni[i].immagine }))];
       const avanti = (k) => {
         radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura"));
         if (mio !== lettura || !btn.dataset.inCorso) return;
@@ -147,7 +147,7 @@
         const p = pezzi[k];
         p.el?.classList.add("in-lettura");
         if (!document.body.classList.contains("lim")) p.el?.scrollIntoView({ behavior: "smooth", block: "start" });
-        Voce.parla(p.t, () => setTimeout(() => avanti(k + 1), 700));
+        Voce.parla(p.t, () => setTimeout(() => avanti(k + 1), 700), { figura: p.figura });
       };
       avanti(0);
     }
