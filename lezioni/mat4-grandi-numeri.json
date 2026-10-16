@@ -22,24 +22,24 @@
     {
       "titolo": "Le case dei numeri",
       "immagine": "🏘️",
-      "testo": "Ogni cifra abita in una casa.\nLa casa delle migliaia ha tre stanze: uk, dak, hk.",
+      "testo": "Ogni cifra abita in una casa.\nLa casa delle migliaia ha tre stanze. Da sinistra: hk, dak, uk.",
       "immagini": [
-        "🏠 uk = unità di migliaia",
-        "🏡 dak = decine di migliaia",
-        "🏰 hk = centinaia di migliaia"
+        "🏰 hk",
+        "🏡 dak",
+        "🏠 uk"
       ],
       "scopri": [
         {
-          "fronte": "🏠 uk",
-          "retro": "unità di migliaia: 1 000"
+          "fronte": "🏰 hk",
+          "retro": "centinaia di migliaia: 100 000"
         },
         {
           "fronte": "🏡 dak",
-          "retro": "decine di migliaia: 10 000"
+          "retro": "decine di migliaia: 10 000"
         },
         {
-          "fronte": "🏰 hk",
-          "retro": "centinaia di migliaia: 100 000"
+          "fronte": "🏠 uk",
+          "retro": "unità di migliaia: 1 000"
         }
       ]
     },
@@ -76,9 +76,9 @@
   ],
   "parole_chiave": [
     "🏟️ migliaio",
-    "🏠 uk",
+    "🏰 hk",
     "🏡 dak",
-    "🏰 hk"
+    "🏠 uk"
   ],
   "esercizi": [
     {
@@ -274,7 +274,7 @@
   "premio": "🚀",
   "ricorda": [
     "🏟️ 10 centinaia fanno 1 000.",
-    "🏘️ Le migliaia hanno tre case: uk, dak, hk.",
+    "🏘️ Le migliaia hanno tre case. Da sinistra: hk, dak, uk.",
     "🧭 Più a sinistra sta una cifra, più vale.",
     "👓 Si legge a gruppi di tre cifre, da destra.",
     "⚖️ Vince il numero con più cifre. Con lo stesso numero di cifre, confronto da sinistra."
