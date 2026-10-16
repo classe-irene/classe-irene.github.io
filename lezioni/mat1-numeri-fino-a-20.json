@@ -7,7 +7,7 @@
   "sezioni": [
     { "titolo": "Contiamo", "immagine": "🖐️", "testo": "Tocca una cosa alla volta.\nDi' un numero per ogni cosa.", "immagini": ["🍎 1", "🍎🍎 2", "🍎🍎🍎 3"] },
     { "titolo": "Il numero dopo", "immagine": "➡️", "testo": "Dopo il 7 viene l'8.\nDopo il 12 viene il 13." },
-    { "titolo": "La decina", "immagine": "🎒", "testo": "Dieci cose insieme fanno una decina.\n14 è una decina e 4.", "curiosita": "Le dita delle mani sono 10!" }
+    { "titolo": "La decina", "immagine": "🔟", "testo": "Dieci cose insieme fanno una decina.\n14 è una decina e 4.", "curiosita": "Le dita delle mani sono 10!" }
   ],
   "parole_chiave": ["🔢 numero", "🎒 decina", "➡️ dopo"],
   "esercizi": [

@@ -8,7 +8,7 @@
     {
       "titolo": "L'acqua sale",
       "immagine": "☀️",
-      "testo": "Il sole scalda il mare.\nL'acqua diventa vapore e sale in cielo.",
+      "testo": "Il sole scalda il mare.\nL'acqua diventa vapore e sale in cielo.\nQuesto si chiama evaporazione.",
       "immagini": [
         "🌊 mare",
         "☀️ caldo",
@@ -18,12 +18,12 @@
     {
       "titolo": "Nascono le nuvole",
       "immagine": "☁️",
-      "testo": "In alto fa freddo.\nIl vapore diventa tante goccioline: è una nuvola."
+      "testo": "In alto fa freddo.\nIl vapore diventa tante goccioline: è una nuvola.\nQuesto si chiama condensazione."
     },
     {
       "titolo": "Piove",
       "immagine": "🌧️",
-      "testo": "Le gocce diventano pesanti e cadono.\nSe fa molto freddo, cade la neve.",
+      "testo": "Le gocce diventano pesanti e cadono.\nSe fa molto freddo, cade la neve.\nQuesto si chiama precipitazione.",
       "immagini": [
         "🌧️ pioggia",
         "❄️ neve"
@@ -172,7 +172,7 @@
       "immagine": "☁️",
       "domanda": "Come si chiama quando il vapore diventa nuvola?",
       "opzioni": [
-        "🔥 evaporazione",
+        "♨️ evaporazione",
         "☁️ condensazione",
         "🌧️ pioggia"
       ],
