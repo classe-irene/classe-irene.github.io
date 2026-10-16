@@ -269,7 +269,7 @@ window.Voce = (() => {
     };
     u.onend = finito; u.onerror = finito;
     o.timer = setTimeout(finito, 4000 + parte.length * 140);
-    if (o.opz.scritte !== false) window.Sottotitoli?.mostra(parte, u);
+    if (o.opz.scritte !== false) window.Sottotitoli?.mostra(parte, u, o.opz);
     if (o.comandi) Telecomando.stato("parla");
     speechSynthesis.speak(u);
   }
@@ -295,16 +295,23 @@ window.Sottotitoli = (() => {
     return null;
   }
   // La lezione aggiunge le sue parole: "🍬 caramelle" → caramell = 🍬
+  // Solo etichette brevi ("🫁 polmoni"): in una frase lunga l'emoji non vale per ogni parola.
+  // Le etichette più corte vincono: "🫁 polmoni" conta più di "🧠 sistema nervoso".
   function dizionario(voci) {
-    for (const v of voci) {
-      const { emoji, testo } = Figura.dividi(v || "");
-      if (!emoji) continue;
-      for (const w of testo.split(/\s+/)) { const p = norm(w); if (p.length >= 4 && !/^(sono|della|delle|degli|dalla|nella|nelle|questo|questa|ogni|anche)$/.test(p)) diz.set(p.slice(0, Math.max(4, p.length - 1)), emoji); }
+    const messe = new Set();
+    const brevi = voci.map((v) => Figura.dividi(v || "")).map((x) => ({ ...x, parole: x.testo.trim().split(/\s+/).filter(Boolean) }))
+      .filter((x) => x.emoji && x.parole.length && x.parole.length <= 3).sort((a, b) => a.parole.length - b.parole.length);
+    for (const { emoji, parole } of brevi) for (const w of parole) {
+      const p = norm(w);
+      if (p.length < 4 || /^(sono|della|delle|degli|dalla|nella|nelle|questo|questa|ogni|anche)$/.test(p)) continue;
+      const k = p.slice(0, Math.max(4, p.length - 1));
+      if (messe.has(k)) continue;
+      messe.add(k); diz.set(k, emoji);
     }
   }
   const bello = (w) => w.replace(/\d{4,}/g, (n) => n.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
   function nascondi(g) { if (g !== giro || !box) return; box.classList.add("via"); }
-  function mostra(testo, u) {
+  function mostra(testo, u, opz = {}) {
     if (!attivo || !u) return;
     const parole = [...testo.matchAll(/\S+/g)];
     if (parole.length < 3) return;
@@ -312,7 +319,7 @@ window.Sottotitoli = (() => {
     clearTimeout(timer);
     if (!box) {
       box = document.createElement("div"); box.className = "sottotitoli via"; box.setAttribute("aria-hidden", "true");
-      box.innerHTML = `<button class="st-chiudi" type="button" aria-label="Chiudi">✕</button><div class="st-testo"></div>`;
+      box.innerHTML = `<button class="st-chiudi" type="button" aria-label="Chiudi">✕</button><div class="st-figure"></div><div class="st-testo"></div>`;
       box.querySelector(".st-chiudi").onclick = () => { box.classList.add("via"); };
       const dk = Telecomando.dock(); dk.insertBefore(box, dk.querySelector(".telecomando"));
     }
@@ -321,7 +328,7 @@ window.Sottotitoli = (() => {
     parole.forEach((m, i) => { cur.push(i); if (/[.!?]$/.test(m[0]) || cur.length >= 22) { frasi.push(cur); cur = []; } });
     if (cur.length) frasi.push(cur);
     const frase = (i) => frasi.findIndex((f) => f.includes(i));
-    const t = box.querySelector(".st-testo");
+    const t = box.querySelector(".st-testo"), fg = box.querySelector(".st-figure");
     let fCor = -1, wCor = -1, usaConfini = false;
     const disegna = (fi) => {
       fCor = fi; let gia = new Set();
@@ -331,12 +338,24 @@ window.Sottotitoli = (() => {
         return `<span class="st-parola" data-i="${i}">${ico}${escapeHTML(bello(w))}</span>`;
       }).join(" ");
       t.classList.remove("st-nuova"); void t.offsetWidth; t.classList.add("st-nuova");
+      // Le immagini grandi di quello che la voce sta dicendo: si accendono quando la parola viene detta.
+      // Se la frase non ha parole con un'immagine, resta la figura della scheda che si sta leggendo.
+      const figure = [], viste = new Set();
+      for (const i of frasi[fi]) {
+        const e = icona(parole[i][0]);
+        if (e && !viste.has(e) && figure.length < 4) { viste.add(e); figure.push({ e, i, w: parole[i][0].replace(/[^\p{L}\p{N}'’ ]/gu, "") }); }
+      }
+      fg.innerHTML = figure.length
+        ? figure.map((x) => `<span class="st-fig" data-i="${x.i}">${Figura.img(x.e, "st-fig-img")}<b>${escapeHTML(x.w)}</b></span>`).join("")
+        : opz.figura ? `<span class="st-fig accesa sola">${Figura.img(opz.figura, "st-fig-img")}</span>` : "";
+      fg.hidden = !fg.innerHTML;
     };
     const evidenzia = (i) => {
       if (g !== giro || i === wCor || i >= parole.length) return;
       wCor = i;
       const fi = frase(i); if (fi !== fCor) disegna(fi);
       t.querySelectorAll(".st-parola").forEach((s) => { const k = +s.dataset.i; s.classList.toggle("detta", k < i); s.classList.toggle("ora", k === i); });
+      fg.querySelectorAll(".st-fig[data-i]").forEach((s) => { const k = +s.dataset.i; s.classList.toggle("accesa", k <= i); s.classList.toggle("ora", k === i); });
     };
     box.classList.remove("via");
     disegna(0); evidenzia(0);
@@ -357,7 +376,7 @@ window.Sottotitoli = (() => {
       if (++k < parole.length) timer = setTimeout(passo, d);
     };
     u.addEventListener("start", () => { if (g === giro && !usaConfini) { k = 0; timer = setTimeout(passo, 150); } });
-    u.addEventListener("end", () => { if (g !== giro || Voce.inPausa) return; t.querySelectorAll(".st-parola").forEach((s) => { s.classList.add("detta"); s.classList.remove("ora"); }); setTimeout(() => nascondi(g), 1600); });
+    u.addEventListener("end", () => { if (g !== giro || Voce.inPausa) return; t.querySelectorAll(".st-parola").forEach((s) => { s.classList.add("detta"); s.classList.remove("ora"); }); fg.querySelectorAll(".st-fig").forEach((s) => { s.classList.add("accesa"); s.classList.remove("ora"); }); setTimeout(() => nascondi(g), 1600); });
   }
   return {
     mostra, dizionario,

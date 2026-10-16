@@ -57,7 +57,7 @@ Equivalenze numeriche (k, h, da, u): esercizio `equivalenza` {n, da, a} e video 
 Tabella hk dak uk h da u (relazione di equivalenza): esercizio `leggi_tabella` {n, da, a} (anche risultati con la virgola) e video `{"tipo":"scena","scena":"tabella_valore","n":3,"da":"dak","letture":["u","da","h","uk","hk"]}`. La voce legge le sigle per intero.
 
 ## Scritte che accompagnano la voce
-`Sottotitoli` in `assets/comune.js`: mentre la voce parla, le parole compaiono a schermo (carattere Fredoka) e quella detta si illumina; le parole della lezione hanno la loro iconcina. Pulsante "💬 Scritte" nella lezione. I video passano `{ scritte: false }` perché hanno già la didascalia.
+`Sottotitoli` in `assets/comune.js`: mentre la voce parla, le parole compaiono a schermo (carattere Fredoka) e quella detta si illumina; le parole della lezione hanno la loro iconcina. Pulsante "💬 Scritte" nella lezione. Sopra le scritte compaiono le immagini grandi delle parole della frase (fino a 4): si accendono quando la voce dice la parola. Le immagini vengono dalle etichette brevi della lezione ("🫁 polmoni" in `immagini`, `parole_chiave`, `storia.immagini`); se la frase non ne ha, si vede la figura della scheda letta. I video passano `{ scritte: false }` perché hanno già la didascalia.
 
 ## Telecomando della voce
 Quando la voce legge (almeno 3 parole), in basso compaiono pulsanti grandi: **⏸ Pausa / ▶ Riprendi**, **🔁 Da capo**, **⏹ Stop**.
