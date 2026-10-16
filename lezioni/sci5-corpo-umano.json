@@ -1,0 +1,358 @@
+{
+  "titolo": "Il corpo umano",
+  "emoji": "🧍",
+  "materia": "scienze",
+  "classe": 5,
+  "introduzione": "Il nostro corpo è come una grande squadra. Ogni parte ha un lavoro e tutte lavorano insieme.",
+  "storia": {
+    "personaggio": "👨‍⚕️",
+    "testo": "Ciao, sono il dottor Leo!\nOgni giorno visito tanti bambini. Ascolto il cuore, guardo la gola, controllo le ossa.\nOggi vi porto in un viaggio dentro il corpo umano.",
+    "immagini": [
+      "🩺 stetoscopio",
+      "🫀 cuore",
+      "🩻 radiografia"
+    ],
+    "missione": "Esplorate con il dottor Leo organi e apparati. Alla fine vincete la figurina dello stetoscopio!"
+  },
+  "premio": "🩺",
+  "sezioni": [
+    {
+      "titolo": "🧱 Dalla cellula all'apparato",
+      "immagine": "🧱",
+      "testo": "Il corpo è fatto di cellule piccolissime.\nTante cellule uguali formano un tessuto.\nI tessuti formano un organo. Gli organi in squadra formano un apparato.",
+      "immagini": [
+        "🦠 cellula",
+        "🧶 tessuto",
+        "🫀 organo",
+        "🤝 apparato"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dalla cellula all'apparato",
+        "passi": [
+          {
+            "figure": "🦠",
+            "testo": "Una cellula è piccolissima. Si vede solo con il microscopio."
+          },
+          {
+            "figure": "🦠 🦠 → 🧶",
+            "testo": "Tante cellule uguali, vicine vicine, formano un tessuto."
+          },
+          {
+            "figure": "🧶 → 🫀",
+            "testo": "I tessuti formano un organo, per esempio il cuore."
+          },
+          {
+            "figure": "🧠 🫁 🫀 → 🤝",
+            "testo": "Gli organi lavorano in squadra: formano un apparato."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché diciamo che il corpo è come una squadra?",
+        "risposta": "Perché ogni organo fa il suo lavoro, ma da solo non basta: tutti insieme ci tengono vivi!"
+      }
+    },
+    {
+      "titolo": "🎬 Viaggio nel corpo",
+      "immagine": "🎬",
+      "testo": "Guarda il video: scopriamo dove sono gli organi più importanti.",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "corpo",
+        "video": true,
+        "titolo": "gli organi del corpo"
+      },
+      "immagini": [
+        "🧠 cervello",
+        "🫁 polmoni",
+        "🫀 cuore",
+        "🦴 ossa"
+      ]
+    },
+    {
+      "titolo": "🍎 Il viaggio del cibo",
+      "immagine": "🍎",
+      "testo": "L'apparato digerente trasforma il cibo.\nLa bocca mastica, lo stomaco rimescola, l'intestino prende le sostanze buone.",
+      "immagini": [
+        "👄 bocca",
+        "🍎 cibo",
+        "🌀 intestino"
+      ],
+      "curiosita": "L'intestino è lunghissimo: circa 7 metri! Sta arrotolato nella pancia."
+    },
+    {
+      "titolo": "🫁 Respiro e sangue",
+      "immagine": "🫁",
+      "testo": "L'apparato respiratorio prende l'aria con i polmoni.\nL'apparato circolatorio porta il sangue in tutto il corpo.\nIl cuore è la pompa che spinge il sangue.",
+      "immagini": [
+        "🫁 polmoni",
+        "🫀 cuore",
+        "🩸 sangue"
+      ],
+      "scopri": [
+        {
+          "fronte": "🫁 Polmoni",
+          "retro": "💨 Prendono l'ossigeno dall'aria."
+        },
+        {
+          "fronte": "🫀 Cuore",
+          "retro": "🩸 Spinge il sangue, sempre."
+        },
+        {
+          "fronte": "🩸 Sangue",
+          "retro": "🚚 Porta ossigeno e cibo a tutte le cellule."
+        }
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: ascolta il cuore",
+        "materiali": [
+          "⏱️ cronometro",
+          "✋ due dita",
+          "📒 quaderno"
+        ],
+        "passi": [
+          "✋ Appoggia due dita sul polso o sul collo.",
+          "⏱️ Conta i battiti per 30 secondi, seduto.",
+          "🤸 Fai 20 saltelli sul posto.",
+          "⏱️ Conta di nuovo i battiti per 30 secondi e scrivi i numeri."
+        ],
+        "domanda": "Dopo i saltelli il cuore batte più forte o più piano? Perché?"
+      }
+    },
+    {
+      "titolo": "🧠 Il capo della squadra",
+      "immagine": "🧠",
+      "testo": "Il sistema nervoso comanda il corpo.\nIl cervello riceve i messaggi dai cinque sensi.\nPoi manda gli ordini ai muscoli con i nervi.",
+      "immagini": [
+        "👁️ vista",
+        "👂 udito",
+        "👃 olfatto",
+        "👅 gusto",
+        "✋ tatto"
+      ],
+      "pensa": {
+        "domanda": "Tocchi una pentola calda e tiri via la mano. Chi ha lavorato?",
+        "risposta": "La pelle ha sentito il caldo, i nervi hanno portato il messaggio e i muscoli hanno spostato la mano. Velocissimi!"
+      }
+    },
+    {
+      "titolo": "🦴 Ossa e muscoli",
+      "immagine": "🦴",
+      "testo": "Lo scheletro è fatto di ossa. Ci tiene dritti e protegge gli organi.\nI muscoli tirano le ossa e ci fanno muovere.",
+      "immagini": [
+        "🩻 scheletro",
+        "💪 muscoli",
+        "🏃 movimento"
+      ],
+      "curiosita": "Un adulto ha circa 206 ossa. Il cranio protegge il cervello come un casco!"
+    }
+  ],
+  "parole_chiave": [
+    "🦠 cellula",
+    "🫀 organo",
+    "🤝 apparato",
+    "🍎 digerente",
+    "🫁 respiratorio",
+    "🩸 circolatorio",
+    "🧠 sistema nervoso"
+  ],
+  "esercizi": [
+    {
+      "tipo": "ordina",
+      "immagine": "🧱",
+      "domanda": "Metti in ordine, dal più piccolo al più grande.",
+      "elementi": [
+        "🦠 cellula",
+        "🧶 tessuto",
+        "🫀 organo",
+        "🤝 apparato"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'organo al suo lavoro.",
+      "coppie": [
+        [
+          "🧠 cervello",
+          "📡 comanda il corpo"
+        ],
+        [
+          "🫁 polmoni",
+          "💨 prendono l'aria"
+        ],
+        [
+          "🫀 cuore",
+          "🩸 spinge il sangue"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "In quale apparato lavora?",
+      "categorie": [
+        "🍎 Digerente",
+        "🫁 Respiratorio",
+        "🩸 Circolatorio"
+      ],
+      "elementi": [
+        {
+          "testo": "👄 bocca",
+          "categoria": "🍎 Digerente"
+        },
+        {
+          "testo": "🌀 intestino",
+          "categoria": "🍎 Digerente"
+        },
+        {
+          "testo": "🫁 polmoni",
+          "categoria": "🫁 Respiratorio"
+        },
+        {
+          "testo": "👃 naso",
+          "categoria": "🫁 Respiratorio"
+        },
+        {
+          "testo": "🫀 cuore",
+          "categoria": "🩸 Circolatorio"
+        },
+        {
+          "testo": "🩸 sangue",
+          "categoria": "🩸 Circolatorio"
+        }
+      ],
+      "suggerimento": "Il naso fa entrare l'aria."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🫀",
+      "affermazione": "Il cuore si ferma quando dormiamo.",
+      "corretta": false,
+      "spiegazione": "Il cuore batte sempre, anche di notte!"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧠",
+      "domanda": "Chi comanda tutto il corpo?",
+      "opzioni": [
+        "🧠 il cervello",
+        "🫀 il cuore",
+        "💪 i muscoli"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il cervello è il capo del sistema nervoso."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il senso e il suo organo.",
+      "coppie": [
+        [
+          "👀 vista",
+          "👁️ occhio"
+        ],
+        [
+          "🎵 udito",
+          "👂 orecchio"
+        ],
+        [
+          "🌸 olfatto",
+          "👃 naso"
+        ],
+        [
+          "🍦 gusto",
+          "👅 lingua"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le [ossa] ci tengono dritti. I [muscoli] ci fanno muovere.",
+      "distrattori": [
+        "polmoni",
+        "nervi"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi non fa parte dell'apparato digerente?",
+      "elementi": [
+        "👄 bocca",
+        "🍽️ stomaco",
+        "🫁 polmoni",
+        "🌀 intestino"
+      ],
+      "intruso": 2,
+      "spiegazione": "I polmoni fanno parte dell'apparato respiratorio."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤸",
+      "domanda": "Dopo una corsa, il cuore batte…",
+      "opzioni": [
+        "🐇 più veloce",
+        "🐢 più piano",
+        "🛑 non batte"
+      ],
+      "corretta": 0,
+      "spiegazione": "I muscoli hanno bisogno di più ossigeno: il cuore spinge più sangue."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🩻",
+      "affermazione": "Il cranio protegge il cervello.",
+      "corretta": true,
+      "spiegazione": "Il cranio è un osso duro, come un casco."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova gli organi.",
+      "parole": [
+        "🧠 cervello",
+        "🫀 cuore",
+        "🫁 polmoni",
+        "🍽️ stomaco",
+        "🦴 ossa"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa gli organi dei cinque sensi!",
+      "giusti": [
+        "👁️ occhio",
+        "👂 orecchio",
+        "👃 naso",
+        "👅 lingua"
+      ],
+      "sbagliati": [
+        "🫀 cuore",
+        "🦴 osso",
+        "🫁 polmoni"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "APPARATO",
+      "indizio": "🤝 Una squadra di organi che lavorano insieme"
+    }
+  ],
+  "ricorda": [
+    "🦠 Il corpo è fatto di cellule. Cellule uguali formano i tessuti.",
+    "🫀 I tessuti formano gli organi. Gli organi in squadra formano gli apparati.",
+    "🍎 Il digerente trasforma il cibo. Il respiratorio prende l'aria.",
+    "🩸 Il circolatorio porta il sangue: il cuore è la pompa.",
+    "🧠 Il sistema nervoso comanda il corpo e riceve i messaggi dai sensi.",
+    "🦴 Le ossa ci sostengono. I muscoli ci fanno muovere."
+  ]
+}

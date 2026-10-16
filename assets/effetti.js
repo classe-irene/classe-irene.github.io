@@ -306,10 +306,11 @@
       const pt = ultimoPunto.y > r.top - 40 && ultimoPunto.y < r.bottom + 40 ? ultimoPunto : { x: r.left + r.width / 2, y: r.top + r.height / 2 };
       FESTE[prossimaFesta()](el, pt);
       gesto(compagno, caso(["salta", "giravolta"])); dici(caso(GIUSTO));
-      if ([3, 5, 8, 12].includes(serie)) setTimeout(() => {
+      const quante = serie;
+      if ([3, 5, 8, 12].includes(quante)) setTimeout(() => {
         SUONI.serie();
         const s = document.createElement("div"); s.className = "serie";
-        s.innerHTML = `🔥 ${serie} di fila!`; document.body.append(s); setTimeout(() => s.remove(), 2400);
+        s.innerHTML = `🔥 ${quante} di fila!`; document.body.append(s); setTimeout(() => s.remove(), 2400);
       }, 700);
     });
     radice.addEventListener("errore", () => { serie = 0; if (!attivi) return; gesto(compagno, "trema"); dici(caso(SBAGLIATO)); });
