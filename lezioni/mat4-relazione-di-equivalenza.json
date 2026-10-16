@@ -153,6 +153,11 @@
     "👀 Leggo le cifre fino alla casella che cerco.",
     "🔴 Se la casella è più a sinistra, scrivo 0 e la virgola."
   ],
+  "quaderno": {
+    "immagine": "immagini/quaderno/mat4-relazione-di-equivalenza.jpg",
+    "titolo": "Ricopiare sul quaderno",
+    "testo": "Ecco la pagina del quaderno. Ricopiala con calma: la tabella, la regola nella nuvola e le equivalenze."
+  },
   "esercizi": [
     {
       "tipo": "leggi_tabella",

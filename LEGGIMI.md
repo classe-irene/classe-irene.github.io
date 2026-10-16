@@ -56,3 +56,12 @@ Tabella hk dak uk h da u (relazione di equivalenza): esercizio `leggi_tabella` {
 
 ## Scritte che accompagnano la voce
 `Sottotitoli` in `assets/comune.js`: mentre la voce parla, le parole compaiono a schermo (carattere Fredoka) e quella detta si illumina; le parole della lezione hanno la loro iconcina. Pulsante "💬 Scritte" nella lezione. I video passano `{ scritte: false }` perché hanno già la didascalia.
+
+## Telecomando della voce
+Quando la voce legge (almeno 3 parole), in basso compaiono pulsanti grandi: **⏸ Pausa / ▶ Riprendi**, **🔁 Da capo**, **⏹ Stop**.
+La ripresa ricomincia dall'inizio della frase interrotta. Da tastiera: **P** pausa/riprendi, **Esc** stop.
+Codice: `Telecomando` e `Voce.pausa / riprendi / daCapo / ferma` in `assets/comune.js`. Lo Stop invia l'evento `voce-ferma` (ferma anche "Ascolta la lezione").
+
+## Pagina del quaderno da ricopiare
+Campo facoltativo della lezione: `"quaderno": { "immagine": "immagini/quaderno/....jpg", "titolo": "Ricopiare sul quaderno", "testo": "..." }`.
+Compare un pulsante arancione in alto e una scheda con la foto (dopo "Ricordiamo"); toccandola si apre a tutto schermo, con Ingrandisci e Stampa.

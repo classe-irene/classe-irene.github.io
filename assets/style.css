@@ -791,10 +791,10 @@ html, body { overflow-x: clip; }
 }
 
 /* ---------- Scritte che accompagnano la voce ---------- */
-.sottotitoli { position: fixed; left: 50%; bottom: 18px; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translateX(-50%);
+.sottotitoli { position: relative; width: 100%;
   background: #fff; border: 4px solid #FFC93C; border-radius: 26px; box-shadow: 0 14px 40px rgba(43,42,51,.25); padding: 16px 52px 16px 24px;
   transition: opacity .35s, transform .35s; pointer-events: auto; }
-.sottotitoli.via { opacity: 0; transform: translate(-50%, 30px); pointer-events: none; }
+.sottotitoli.via { display: none; }
 .st-testo { font: 600 clamp(1.4rem, 2.6vw, 2.3rem)/1.45 "Fredoka", "Baloo 2", sans-serif; color: #B9BDC7; text-align: center; }
 .st-testo.st-nuova { animation: g-pop .4s cubic-bezier(.3,1.6,.5,1); }
 .st-parola { display: inline-block; transition: color .2s, transform .2s; }
@@ -805,6 +805,56 @@ html, body { overflow-x: clip; }
 .st-icona { width: 1.15em; height: 1.15em; vertical-align: -.18em; margin-right: .12em; display: inline-block; }
 .st-parola.ora .st-icona { animation: gs-salta .6s; }
 .st-chiudi { position: absolute; top: 8px; right: 10px; border: 0; background: #F1F2F5; border-radius: 50%; width: 34px; height: 34px; font-size: 1rem; cursor: pointer; }
-body.lim .sottotitoli { bottom: 104px; }
+
 .in-lettura { outline: 5px solid #FFC93C; outline-offset: 6px; }
 .st-parola { margin: 0 .1em; transform-origin: center bottom; }
+
+/* Telecomando della voce: pausa, riprendi, da capo, stop (sempre in vista mentre la voce parla) */
+.voce-dock { position: fixed; left: 50%; bottom: 18px; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; transition: opacity .35s, transform .35s; }
+.voce-dock > * { pointer-events: auto; }
+.voce-dock.via { opacity: 0; transform: translate(-50%, 30px); }
+.voce-dock.via > * { pointer-events: none; }
+body.lim .voce-dock { bottom: 104px; }
+.telecomando { display: flex; align-items: center; gap: 10px; background: #2B2A33; padding: 8px 10px 8px 16px; border-radius: 999px; box-shadow: 0 12px 30px rgba(43,42,51,.35); }
+.tc-btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; cursor: pointer; padding: 10px 20px 10px 14px;
+  font: 800 clamp(1.05rem, 1.8vw, 1.35rem) "Nunito", sans-serif; color: #2B2A33; background: #fff; min-height: 56px; transition: transform .15s, background .2s; }
+.tc-btn:hover { transform: translateY(-2px); }
+.tc-btn:active { transform: scale(.94); }
+.tc-ico { font-size: 1.5em; line-height: 1; width: 1.2em; text-align: center; }
+.tc-pausa { background: #FFC93C; min-width: 9.2em; justify-content: center; }
+.tc-stop { background: #FF7A7A; color: #fff; }
+.voce-dock.in-pausa .tc-pausa { background: #3DDC97; animation: tc-pulsa 1.2s ease-in-out infinite; }
+@keyframes tc-pulsa { 0%,100% { box-shadow: 0 0 0 0 rgba(61,220,151,.7); } 50% { box-shadow: 0 0 0 10px rgba(61,220,151,0); } }
+.tc-onde { display: inline-flex; align-items: flex-end; gap: 3px; height: 26px; margin-right: 4px; }
+.tc-onde i { width: 5px; border-radius: 3px; background: #FFC93C; height: 30%; animation: tc-onda .9s ease-in-out infinite; }
+.tc-onde i:nth-child(2) { animation-delay: .15s; } .tc-onde i:nth-child(3) { animation-delay: .3s; } .tc-onde i:nth-child(4) { animation-delay: .45s; }
+@keyframes tc-onda { 0%,100% { height: 25%; } 50% { height: 100%; } }
+.voce-dock.in-pausa .tc-onde i { animation-play-state: paused; background: #9AA0AE; }
+.voce-dock.in-pausa .st-testo { opacity: .45; }
+@media (max-width: 560px) { .tc-txt { display: none; } .tc-pausa { min-width: 0; } .tc-btn { padding: 10px 16px; } }
+@media (prefers-reduced-motion: reduce) { .tc-onde i, .voce-dock.in-pausa .tc-pausa { animation: none; } }
+
+/* Pagina del quaderno da ricopiare */
+.btn.quaderno-link { background: #FF8A3D; color: #fff; }
+.scheda.quaderno .scheda-corpo { width: 100%; }
+.scheda.quaderno { grid-template-columns: 1fr; }
+.foglio { position: relative; display: block; margin: 18px auto 8px; width: min(560px, 100%); padding: 0; border: 0; background: #fff; cursor: zoom-in;
+  box-shadow: 0 2px 0 #e9e6dd, 0 18px 40px rgba(43,42,51,.22); transform: rotate(-1.2deg); transition: transform .3s; border-radius: 4px; }
+.foglio:hover { transform: rotate(0) scale(1.02); }
+.foglio img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.nastro { position: absolute; top: -10px; width: 80px; height: 24px; background: rgba(255,214,102,.75); box-shadow: 0 2px 4px rgba(0,0,0,.08); z-index: 1; }
+.nastro.n1 { left: -34px; transform: rotate(-38deg); } .nastro.n2 { right: -34px; transform: rotate(38deg); }
+.foglio-lente { position: absolute; right: 12px; bottom: 12px; background: rgba(43,42,51,.85); color: #fff; font: 800 1rem "Nunito", sans-serif; padding: 8px 14px; border-radius: 999px; }
+.quaderno-azioni { text-align: center; margin: 6px 0 22px; }
+body.lim .foglio { width: auto; display: table; }
+body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 480px); }
+@media (max-width: 600px) { .nastro { width: 60px; } .nastro.n1 { left: -12px; } .nastro.n2 { right: -12px; } }
+.quaderno-vista { position: fixed; inset: 0; z-index: 120; background: rgba(30,29,38,.92); display: flex; flex-direction: column; animation: g-pop .3s ease-out; }
+.qv-barra { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; padding: 12px; color: #fff; font: 800 1.2rem "Nunito", sans-serif; }
+.qv-barra b { margin-right: auto; padding-left: 8px; }
+.qv-foglio { flex: 1; overflow: auto; display: flex; justify-content: center; align-items: flex-start; padding: 0 12px 16px; }
+.qv-foglio img { max-height: calc(100vh - 90px); max-width: 100%; background: #fff; border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,.5); cursor: zoom-in; }
+.quaderno-vista.zoom .qv-foglio img { max-height: none; width: min(1240px, 160vw); max-width: none; cursor: zoom-out; }
+@media (max-width: 560px) { .qv-barra b { width: 100%; text-align: center; margin: 0; } }
+@media print { .quaderno-vista { display: none; } }

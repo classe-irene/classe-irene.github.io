@@ -88,6 +88,49 @@ window.Suono = (() => {
   };
 })();
 
+/* ---------- Telecomando della voce ----------
+   Pulsanti grandi in basso, sempre visibili mentre la voce parla:
+   ⏸ Pausa / ▶ Riprendi, 🔁 Da capo, ⏹ Stop. Anche le scritte stanno qui dentro. */
+window.Telecomando = (() => {
+  let dock, timer;
+  function crea() {
+    if (dock) return dock;
+    dock = document.createElement("div"); dock.className = "voce-dock via";
+    dock.innerHTML = `<div class="telecomando" role="toolbar" aria-label="Comandi della voce">
+      <span class="tc-onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <button class="tc-btn tc-pausa" type="button" data-tc="pausa"><span class="tc-ico">⏸</span><span class="tc-txt">Pausa</span></button>
+      <button class="tc-btn tc-dacapo" type="button" data-tc="dacapo"><span class="tc-ico">🔁</span><span class="tc-txt">Da capo</span></button>
+      <button class="tc-btn tc-stop" type="button" data-tc="stop"><span class="tc-ico">⏹</span><span class="tc-txt">Stop</span></button>
+    </div>`;
+    dock.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-tc]"); if (!b) return;
+      const a = b.dataset.tc;
+      if (a === "pausa") Voce.inPausa ? Voce.riprendi() : Voce.pausa();
+      else if (a === "dacapo") Voce.daCapo();
+      else Voce.ferma();
+    });
+    document.body.append(dock);
+    return dock;
+  }
+  function stato(s) {
+    clearTimeout(timer);
+    if (s === "fermo") { if (dock) timer = setTimeout(() => dock.classList.add("via"), 1700); dock?.classList.remove("in-pausa"); return; }
+    const d = crea();
+    d.classList.remove("via");
+    d.classList.toggle("in-pausa", s === "pausa");
+    const b = d.querySelector(".tc-pausa");
+    b.querySelector(".tc-ico").textContent = s === "pausa" ? "▶" : "⏸";
+    b.querySelector(".tc-txt").textContent = s === "pausa" ? "Riprendi" : "Pausa";
+  }
+  // Barra spaziatrice o tasto P: pausa e ripresa (quando il telecomando è visibile).
+  document.addEventListener("keydown", (e) => {
+    if (!dock || dock.classList.contains("via") || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+    if (e.key === "p" || e.key === "P") { e.preventDefault(); Voce.inPausa ? Voce.riprendi() : Voce.pausa(); }
+    if (e.key === "Escape") Voce.ferma();
+  });
+  return { stato, dock: crea };
+})();
+
 /* ---------- Voce: legge ad alta voce in italiano ----------
    Sceglie la voce femminile italiana più naturale disponibile sul computer.
    L'insegnante può cambiarla nell'area insegnante: la scelta resta su quel computer. */
@@ -99,7 +142,7 @@ window.Voce = (() => {
   // In ordine di preferenza: voci "naturali" di Edge/Windows, Chrome, Apple.
   const PREFERITE = [/elsa.*natural/i, /isabella.*natural/i, /natural.*it/i, /google italiano/i, /alice/i, /federica/i, /elsa/i, /paola/i, /emma/i];
   const MASCHILI = /cosimo|diego|luca|giuseppe|benigno|marcello|rinaldi/i;
-  let voci = [];
+  let voci = [], ora = null, giro = 0;
   const carica = () => { voci = ("speechSynthesis" in window) ? speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("it")) : []; };
   carica();
   if ("speechSynthesis" in window) speechSynthesis.addEventListener?.("voiceschanged", carica);
@@ -134,7 +177,7 @@ window.Voce = (() => {
   const leggibile = (t) => sigle(t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1")).replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
 
-  return {
+  const Voce = {
     leggibile,
     elenco: () => voci,
     scelta,
@@ -146,17 +189,59 @@ window.Voce = (() => {
     // opz.scritte = false: niente scritte a schermo (per esempio nei video, che hanno già la loro didascalia).
     parla(testo, fine, opz = {}) {
       if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
-      speechSynthesis.cancel();
       // Le emoji non vanno lette ad alta voce.
-      const pulito = leggibile(String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " "));
-      const u = new SpeechSynthesisUtterance(pulito);
-      u.lang = "it-IT"; u.rate = VELOCITA[this.velocita()]; u.pitch = 1.05;
-      const v = scelta(); if (v) u.voice = v;
-      if (fine) { let fatto = false; const una = () => { if (!fatto) { fatto = true; fine(); } }; u.onend = una; u.onerror = una; setTimeout(una, 4000 + pulito.length * 140); }
-      if (opz.scritte !== false) window.Sottotitoli?.mostra(pulito, u);
-      speechSynthesis.speak(u);
+      const pulito = leggibile(String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
+      ora = { pulito, fine, opz, pos: 0, pausa: false, comandi: opz.scritte !== false && pulito.split(" ").length >= 3 };
+      dici(0);
     },
+    // Telecomando: pausa, riprendi, da capo, stop. In pausa la voce si ferma davvero;
+    // quando riparte, ricomincia dall'inizio della frase interrotta (così il bambino non perde il filo).
+    pausa() {
+      if (!ora || ora.pausa) return;
+      ora.pausa = true; giro++; clearTimeout(ora.timer);
+      let pos = ora.confini ? ora.pos : ora.da + Math.round((performance.now() - (ora.t0 || performance.now())) / 1000 * 11 * (ora.rate || .72));
+      pos = Math.min(Math.max(pos, ora.da), ora.pulito.length);
+      const prima = ora.pulito.slice(0, pos);
+      const m = [...prima.matchAll(/[.!?]\s+/g)].pop();
+      ora.ripresa = m ? m.index + m[0].length : 0;
+      speechSynthesis.cancel();
+      Telecomando.stato("pausa");
+    },
+    riprendi() { if (ora?.pausa) { ora.pausa = false; dici(ora.ripresa || 0); } },
+    daCapo() { if (ora) { ora.pausa = false; dici(0); } },
+    ferma() {
+      giro++; if (ora) clearTimeout(ora.timer); ora = null;
+      if ("speechSynthesis" in window) speechSynthesis.cancel();
+      Telecomando.stato("fermo");
+      document.dispatchEvent(new CustomEvent("voce-ferma"));
+    },
+    get inPausa() { return !!ora?.pausa; },
   };
+  return Voce;
+  function dici(da) {
+    const g = ++giro, o = ora;
+    speechSynthesis.cancel();
+    clearTimeout(o.timer);
+    const parte = o.pulito.slice(da);
+    o.da = da; o.pos = da; o.confini = false; o.t0 = 0;
+    const u = new SpeechSynthesisUtterance(parte);
+    u.lang = "it-IT"; u.rate = o.rate = VELOCITA[Voce.velocita()]; u.pitch = 1.05;
+    const v = scelta(); if (v) u.voice = v;
+    u.addEventListener("start", () => { if (g === giro) o.t0 = performance.now(); });
+    u.addEventListener("boundary", (ev) => { if (g === giro) { o.confini = true; o.pos = da + ev.charIndex; } });
+    const finito = () => {
+      if (g !== giro || o.pausa) return;
+      giro++; clearTimeout(o.timer);
+      if (ora === o) ora = null;
+      Telecomando.stato("fermo");
+      if (o.fine) o.fine();
+    };
+    u.onend = finito; u.onerror = finito;
+    o.timer = setTimeout(finito, 4000 + parte.length * 140);
+    if (o.opz.scritte !== false) window.Sottotitoli?.mostra(parte, u);
+    if (o.comandi) Telecomando.stato("parla");
+    speechSynthesis.speak(u);
+  }
 })();
 window.leggi = (t, fine) => Voce.parla(t, fine);
 
@@ -198,7 +283,7 @@ window.Sottotitoli = (() => {
       box = document.createElement("div"); box.className = "sottotitoli via"; box.setAttribute("aria-hidden", "true");
       box.innerHTML = `<button class="st-chiudi" type="button" aria-label="Chiudi">✕</button><div class="st-testo"></div>`;
       box.querySelector(".st-chiudi").onclick = () => { box.classList.add("via"); };
-      document.body.append(box);
+      Telecomando.dock().append(box);
     }
     // Una frase alla volta: le frasi lunghe stanno comode sulla LIM.
     const frasi = []; let cur = [];
@@ -235,12 +320,13 @@ window.Sottotitoli = (() => {
     let k = 0;
     const passo = () => {
       if (g !== giro || usaConfini) return;
+      if (Voce.inPausa) return;
       evidenzia(k);
       const d = (120 + parole[k][0].length * 62) / vel + (/[.,;:!?]$/.test(parole[k][0]) ? 260 : 0);
       if (++k < parole.length) timer = setTimeout(passo, d);
     };
     u.addEventListener("start", () => { if (g === giro && !usaConfini) { k = 0; timer = setTimeout(passo, 150); } });
-    u.addEventListener("end", () => { if (g !== giro) return; t.querySelectorAll(".st-parola").forEach((s) => { s.classList.add("detta"); s.classList.remove("ora"); }); setTimeout(() => nascondi(g), 1600); });
+    u.addEventListener("end", () => { if (g !== giro || Voce.inPausa) return; t.querySelectorAll(".st-parola").forEach((s) => { s.classList.add("detta"); s.classList.remove("ora"); }); setTimeout(() => nascondi(g), 1600); });
   }
   return {
     mostra, dizionario,

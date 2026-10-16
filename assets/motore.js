@@ -62,6 +62,7 @@
       <div class="barra-lezione">
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
+        ${l.quaderno ? `<button class="btn quaderno-link" data-azione="vai-quaderno">📒 ${h(l.quaderno.titolo || "Ricopiare sul quaderno")}</button>` : ""}
         <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
         <button class="btn bianco" data-azione="scritte">💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}</button>
         <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
@@ -85,6 +86,7 @@
         </section>`).join("")}
       ${l.ricorda?.length ? `<section class="scheda ricorda"><div class="scheda-corpo"><h2>📌 Ricordiamo<button class="leggi" data-leggi="${h(l.ricorda.map((x) => Figura.dividi(x).testo).join(". "))}">🔊 Leggi</button></h2>
         <ol class="ricorda-lista">${l.ricorda.map((x) => `<li>${Figura.ricco(x, "figura media")}</li>`).join("")}</ol></div><div class="scheda-figura">${Figura.img("📌", "figura grande")}</div></section>` : ""}
+      ${l.quaderno ? quadernoHTML(l.quaderno) : ""}
       ${l.parole_chiave?.length ? `<section class="scheda"><div class="scheda-corpo"><h2>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${Figura.ricco(p)}</span>`).join("")}</div></div><div class="scheda-figura">${Figura.img("🗝️", "figura grande")}</div></section>` : ""}
       <h2 id="esercizi" style="text-align:center;margin-top:36px">🎯 Ora tocca a te!</h2>
       <div class="punteggio">⭐ <span data-punti>0</span> / ${l.esercizi.length}</div>
@@ -104,6 +106,8 @@
       if (a === "leggi-tutto") leggiLezione(b);
       if (a === "scritte") { Sottotitoli.attivo = !Sottotitoli.attivo; b.textContent = `💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}`; }
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
+      if (a === "vai-quaderno") { const q = radice.querySelector(".quaderno"); if (document.body.classList.contains("lim")) apriQuaderno(l.quaderno); else q?.scrollIntoView({ behavior: "smooth", block: "start" }); }
+      if (a === "apri-quaderno") apriQuaderno(l.quaderno);
       if (a === "lim") avviaLIM(radice);
       if (a === "velocita") {
         const nomi = Object.keys(Voce.VELOCITA), dopo = nomi[(nomi.indexOf(Voce.velocita()) + 1) % nomi.length];
@@ -122,6 +126,8 @@
       const mio = ++lettura;
       if (btn.dataset.inCorso) { delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; speechSynthesis?.cancel(); radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); return; }
       btn.dataset.inCorso = "1"; btn.textContent = "⏹ Ferma la lettura";
+      // Lo Stop del telecomando ferma anche la lettura di tutta la lezione.
+      document.addEventListener("voce-ferma", () => { if (mio !== lettura) return; delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); }, { once: true });
       const pezzi = [{ el: radice.querySelector(".lezione-testa"), t: `${l.titolo}. ${l.introduzione || ""}` },
         ...(l.storia ? [{ el: radice.querySelector(".storia"), t: `${l.storia.testo} ${l.storia.missione || ""}` }] : []),
         ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}` }))];
@@ -152,6 +158,39 @@
       ${st.missione ? `<div class="missione">🎯 <b>La missione:</b> ${h(st.missione)}</div>` : ""}
       <button class="btn bianco" data-azione="storia">🔊 Ascolta la storia</button>
     </div></section>`;
+  }
+  // La pagina del quaderno da ricopiare: foto ripulita, ben in vista, che si apre a tutto schermo.
+  function quadernoHTML(q) {
+    return `<section class="scheda quaderno" id="quaderno"><div class="scheda-corpo">
+      <h2>📒 ${h(q.titolo || "Ricopiare sul quaderno")}<button class="leggi" data-leggi="${h(q.testo || "Ricopia questa pagina sul quaderno.")}">🔊 Leggi</button></h2>
+      ${q.testo ? `<p>${h(q.testo)}</p>` : ""}
+      <div class="quaderno-azioni"><button class="btn" data-azione="apri-quaderno">✍️ Ricopiare sul quaderno</button></div>
+      <button class="foglio" type="button" data-azione="apri-quaderno" aria-label="Guarda la pagina in grande">
+        <span class="nastro n1"></span><span class="nastro n2"></span>
+        <img src="${h(q.immagine)}" alt="La pagina del quaderno da ricopiare" loading="lazy">
+        <span class="foglio-lente">🔍 Guarda in grande</span>
+      </button>
+    </div></section>`;
+  }
+  function apriQuaderno(q) {
+    if (!q) return;
+    const v = document.createElement("div");
+    v.className = "quaderno-vista";
+    v.innerHTML = `<div class="qv-barra"><b>📒 ${h(q.titolo || "Ricopiare sul quaderno")}</b>
+        <button class="btn bianco" data-qv="zoom">🔍 Ingrandisci</button>
+        <button class="btn bianco" data-qv="stampa">🖨️ Stampa</button>
+        <button class="btn" data-qv="chiudi">✕ Chiudi</button></div>
+      <div class="qv-foglio"><img src="${h(q.immagine)}" alt="La pagina del quaderno da ricopiare"></div>`;
+    const chiudi = () => { v.remove(); document.removeEventListener("keydown", tasto, true); };
+    const tasto = (e) => { if (e.key === "Escape") { e.stopPropagation(); chiudi(); } };
+    v.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-qv]")?.dataset.qv;
+      if (a === "chiudi" || e.target === v) chiudi();
+      if (a === "zoom" || e.target.tagName === "IMG") { const z = v.classList.toggle("zoom"); v.querySelector('[data-qv="zoom"]').textContent = z ? "↩️ Pagina intera" : "🔍 Ingrandisci"; }
+      if (a === "stampa") { const w = open("", "_blank"); if (!w) return; w.document.write(`<title>${h(q.titolo || "Quaderno")}</title><style>@page{margin:10mm}body{margin:0;text-align:center}img{max-width:100%;max-height:100vh}</style><img src="${new URL(q.immagine, location.href).href}" onload="print()">`); w.document.close(); }
+    });
+    document.addEventListener("keydown", tasto, true);
+    document.body.append(v);
   }
   function esperimentoHTML(x) {
     return `<div class="esperimento"><h3>🧪 ${h(x.titolo || "Proviamo in classe!")}</h3>
