@@ -1,0 +1,241 @@
+{
+  "titolo": "Prova di Matematica",
+  "classe": 5,
+  "materia": "matematica",
+  "emoji": "🔭",
+  "minuti": 45,
+  "domande": [
+    {
+      "ambito": "Numeri",
+      "immagine": "🔸",
+      "testo": "Quale numero è il più piccolo?",
+      "tipo": "scelta",
+      "opzioni": [
+        "1,05",
+        "1,5",
+        "1,15"
+      ],
+      "corretta": 0,
+      "spiegazione": "Hanno tutti 1 intero. 1,05 ha 0 decimi: è il più piccolo."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "🔢",
+      "testo": "Nel numero 3 482 017, quanto vale la cifra 4?",
+      "tipo": "scelta",
+      "opzioni": [
+        "4 000",
+        "400 000",
+        "40 000"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il 4 è nella casella delle centinaia di migliaia: vale 400 000."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "✖️",
+      "testo": "Calcola 125 × 4.",
+      "tipo": "numero",
+      "risposta": "500",
+      "spiegazione": "125 × 4 = 500: 100 × 4 = 400 e 25 × 4 = 100."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "🍕",
+      "testo": "Quale frazione è uguale a 1/2?",
+      "tipo": "scelta",
+      "opzioni": [
+        "2/4",
+        "1/3",
+        "2/3"
+      ],
+      "corretta": 0,
+      "spiegazione": "2 pezzi su 4 sono la metà: 2/4 = 1/2."
+    },
+    {
+      "ambito": "Spazio e figure",
+      "immagine": "🟦",
+      "testo": "Il quadrato ha il lato di 5 cm. Qual è la sua area?",
+      "tipo": "scelta",
+      "opzioni": [
+        "20 cm²",
+        "25 cm²",
+        "10 cm²"
+      ],
+      "corretta": 1,
+      "spiegazione": "Area = lato × lato = 5 × 5 = 25 cm².",
+      "rettangolo": {
+        "base": 5,
+        "altezza": 5,
+        "unita": "cm"
+      }
+    },
+    {
+      "ambito": "Spazio e figure",
+      "immagine": "📐",
+      "testo": "Quanti angoli retti ha un rettangolo?",
+      "tipo": "scelta",
+      "opzioni": [
+        "2",
+        "4",
+        "3"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il rettangolo ha 4 angoli, tutti retti."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "👕",
+      "testo": "Una maglietta costa 20 €. C'è lo sconto del 50%. Quanto costa adesso?",
+      "tipo": "numero",
+      "risposta": "10",
+      "spiegazione": "Il 50% è la metà: 20 : 2 = 10 €.",
+      "unita": "€"
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "⚽",
+      "testo": "Il grafico mostra i gol segnati nel torneo. Quanti gol in più hanno segnato i Lupi rispetto alle Tigri?",
+      "tipo": "numero",
+      "risposta": "6",
+      "spiegazione": "Lupi 9, Tigri 3: 9 − 3 = 6.",
+      "grafico": {
+        "titolo": "I gol del torneo",
+        "massimo": 10,
+        "passo": 2,
+        "barre": [
+          {
+            "etichetta": "Leoni",
+            "valore": 7,
+            "emoji": "🦁"
+          },
+          {
+            "etichetta": "Tigri",
+            "valore": 3,
+            "emoji": "🐯"
+          },
+          {
+            "etichetta": "Aquile",
+            "valore": 5,
+            "emoji": "🦅"
+          },
+          {
+            "etichetta": "Lupi",
+            "valore": 9,
+            "emoji": "🐺"
+          }
+        ]
+      },
+      "unita": "gol"
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "⚽",
+      "testo": "Guarda di nuovo il grafico. Qual è la media dei gol delle quattro squadre?",
+      "tipo": "scelta",
+      "opzioni": [
+        "6",
+        "24",
+        "5"
+      ],
+      "corretta": 0,
+      "spiegazione": "Sommo: 7 + 3 + 5 + 9 = 24. Divido per 4 squadre: 24 : 4 = 6.",
+      "grafico": {
+        "titolo": "I gol del torneo",
+        "massimo": 10,
+        "passo": 2,
+        "barre": [
+          {
+            "etichetta": "Leoni",
+            "valore": 7,
+            "emoji": "🦁"
+          },
+          {
+            "etichetta": "Tigri",
+            "valore": 3,
+            "emoji": "🐯"
+          },
+          {
+            "etichetta": "Aquile",
+            "valore": 5,
+            "emoji": "🦅"
+          },
+          {
+            "etichetta": "Lupi",
+            "valore": 9,
+            "emoji": "🐺"
+          }
+        ]
+      }
+    },
+    {
+      "ambito": "Dati e previsioni",
+      "immagine": "🎲",
+      "testo": "Lancio un dado. Qual è la probabilità che esca il 6?",
+      "tipo": "scelta",
+      "opzioni": [
+        "1/6",
+        "1/2",
+        "6/6"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il dado ha 6 facce e solo una ha il 6: 1 su 6."
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "🔁",
+      "testo": "Ogni numero è il doppio di quello prima. Quale numero viene dopo?",
+      "tipo": "numero",
+      "risposta": "48",
+      "spiegazione": "24 × 2 = 48.",
+      "figure": "6 ➡️ 12 ➡️ 24 ➡️ ❓"
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "⚖️",
+      "testo": "2 kg sono uguali a quanti grammi?",
+      "tipo": "scelta",
+      "opzioni": [
+        "200 g",
+        "2 000 g",
+        "20 g"
+      ],
+      "corretta": 1,
+      "spiegazione": "1 kg = 1 000 g, quindi 2 kg = 2 000 g."
+    },
+    {
+      "ambito": "Numeri",
+      "immagine": "⚖️",
+      "testo": "Leggi le frasi. Per ogni frase segna Vero o Falso.",
+      "tipo": "vf",
+      "affermazioni": [
+        {
+          "testo": "0,25 è uguale a 1/4.",
+          "vera": true
+        },
+        {
+          "testo": "Un triangolo può avere due angoli retti.",
+          "vera": false
+        },
+        {
+          "testo": "1 ora è uguale a 60 minuti.",
+          "vera": true
+        }
+      ],
+      "spiegazione": "0,25 = 25/100 = 1/4. Un triangolo ha al massimo un angolo retto. 1 ora = 60 minuti."
+    },
+    {
+      "ambito": "Relazioni e funzioni",
+      "immagine": "🚂",
+      "testo": "Un treno parte alle 9:40. Il viaggio dura 1 ora e 30 minuti. A che ora arriva?",
+      "tipo": "scelta",
+      "opzioni": [
+        "10:70",
+        "11:10",
+        "10:10"
+      ],
+      "corretta": 1,
+      "spiegazione": "9:40 + 1 ora = 10:40. Poi + 30 minuti = 11:10."
+    }
+  ]
+}

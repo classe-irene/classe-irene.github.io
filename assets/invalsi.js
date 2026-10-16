@@ -4,13 +4,17 @@
   const h = escapeHTML;
   const PROVE = [
     { classe: 2, file: "invalsi/mat2-prova-1.json", nome: "Prova 1", emoji: "🎒" },
+    { classe: 2, file: "invalsi/mat2-prova-2.json", nome: "Prova 2", emoji: "🏫" },
+    { classe: 2, file: "invalsi/mat2-prova-3.json", nome: "Prova 3", emoji: "🖍️" },
     { classe: 5, file: "invalsi/mat5-prova-1.json", nome: "Prova 1", emoji: "🧭" },
+    { classe: 5, file: "invalsi/mat5-prova-2.json", nome: "Prova 2", emoji: "🔭" },
+    { classe: 5, file: "invalsi/mat5-prova-3.json", nome: "Prova 3", emoji: "🗺️" },
   ];
   const LETTERE = ["A", "B", "C"];
   const AMBITI = { "Numeri": "🔢", "Spazio e figure": "📐", "Relazioni e funzioni": "🔗", "Dati e previsioni": "📊" };
   const EMO = /\p{Extended_Pictographic}(?:️|⃣|[\u{1F3FB}-\u{1F3FF}]|‍\p{Extended_Pictographic}️?)*/gu;
   // Testo con le emoji trasformate nelle immagini del sito.
-  const conFigure = (t, classe = "figura piccola") => h(t).replace(EMO, (e) => Figura.img(e, classe));
+  const conFigure = (t, classe = "figura piccola") => Figura.frazioni(h(t).replace(EMO, (e) => Figura.img(e, classe)));
   const numero = (t) => Number(String(t ?? "").replace(/\s/g, "").replace(",", "."));
 
   function valida(p) {
