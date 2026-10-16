@@ -77,6 +77,7 @@ window.CURRICOLO = {
       { id: "mat5-milioni", emoji: "🌌", titolo: "Milioni e miliardi", descrizione: "Numeri grandissimi e potenze." },
       { id: "mat5-potenze", emoji: "⚡", titolo: "Le potenze", descrizione: "Base, esponente e notazione." },
       { id: "mat5-multipli", emoji: "🔗", titolo: "Multipli, divisori e primi", descrizione: "Criteri di divisibilità." },
+      { id: "mat5-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Decimi, centesimi, millesimi; per e diviso 10, 100, 1000.", lezione: "lezioni/mat5-numeri-decimali.json" },
       { id: "mat5-relativi", emoji: "🌡️", titolo: "I numeri negativi", descrizione: "Temperature e retta dei numeri relativi." },
       { id: "mat5-percentuali", emoji: "💯", titolo: "Le percentuali", descrizione: "Sconti, aumenti e frazioni." },
       { id: "mat5-aree", emoji: "📐", titolo: "Area dei poligoni", descrizione: "Formule per triangoli e quadrilateri." },
@@ -128,7 +129,7 @@ window.CURRICOLO = {
       { id: "sci4-miscugli", emoji: "🥣", titolo: "Miscugli e soluzioni", descrizione: "Separare e sciogliere." },
     ],
     5: [
-      { id: "sci5-corpo", emoji: "🫀", titolo: "Il corpo umano", descrizione: "Organi, apparati e sistemi." },
+      { id: "sci5-corpo", emoji: "🫀", titolo: "Il corpo umano", descrizione: "Organi, apparati e sistemi.", lezione: "lezioni/sci5-corpo-umano.json" },
       { id: "sci5-digerente", emoji: "🍎", titolo: "Apparato digerente", descrizione: "Il viaggio del cibo." },
       { id: "sci5-respiratorio", emoji: "🫁", titolo: "Respiratorio e circolatorio", descrizione: "Polmoni, cuore e sangue." },
       { id: "sci5-nervoso", emoji: "🧠", titolo: "Il sistema nervoso", descrizione: "Cervello, nervi e sensi." },

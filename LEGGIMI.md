@@ -66,3 +66,12 @@ Codice: `Telecomando` e `Voce.pausa / riprendi / daCapo / ferma` in `assets/comu
 Campo facoltativo della lezione: `"quaderno": { "immagine": "immagini/quaderno/....jpg", "titolo": "Ricopiare sul quaderno", "testo": "..." }`.
 Compare un pulsante arancione in alto e una scheda con la foto (dopo "Ricordiamo"); toccandola si apre a tutto schermo, con Ingrandisci e Stampa.
 Scritte e telecomando compaiono al centro dello schermo. La maniglia gialla "⠿ Trascinami ⠿" li sposta (dito sulla LIM o mouse); la posizione resta salvata su quel computer. Doppio tocco sulla maniglia: torna al centro.
+
+## Numeri decimali (classe 5ª)
+Tabella h da u , d c m con la virgola ferma in mezzo: × 10, 100, 1000 le cifre vanno a sinistra, : 10, 100, 1000 vanno a destra.
+Video `{"tipo":"scena","scena":"decimali","n":"2,35","operazioni":["x10","x100",":10"]}` (senza `operazioni` spiega solo intero, decimi, centesimi, millesimi).
+Esercizio `virgola` {n: "2,4", op: "x" oppure ":", per: 10 | 100 | 1000}: il bambino sposta le cifre con le frecce e preme "Ho finito". Numero e risultato devono stare nella tabella (al massimo 3 cifre prima e 3 dopo la virgola).
+L'esercizio `retta` mostra i numeri con la virgola (es. `"min": 0, "max": 1, "passo": 0.1, "corretta": 0.7`).
+
+## Corpo umano (classe 5ª)
+Video `{"tipo":"scena","scena":"corpo"}`: cervello, polmoni (respirano), cuore (batte), stomaco e intestino, ossa e muscoli, poi "organi in squadra = apparati".
