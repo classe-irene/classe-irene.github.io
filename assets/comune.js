@@ -96,7 +96,8 @@ window.Telecomando = (() => {
   function crea() {
     if (dock) return dock;
     dock = document.createElement("div"); dock.className = "voce-dock via";
-    dock.innerHTML = `<div class="telecomando" role="toolbar" aria-label="Comandi della voce">
+    dock.innerHTML = `<div class="tc-maniglia" title="Trascina per spostare" aria-label="Maniglia: trascina per spostare"><span class="tc-presa">⠿</span> Trascinami <span class="tc-presa">⠿</span></div>
+      <div class="telecomando" role="toolbar" aria-label="Comandi della voce">
       <span class="tc-onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
       <button class="tc-btn tc-pausa" type="button" data-tc="pausa"><span class="tc-ico">⏸</span><span class="tc-txt">Pausa</span></button>
       <button class="tc-btn tc-dacapo" type="button" data-tc="dacapo"><span class="tc-ico">🔁</span><span class="tc-txt">Da capo</span></button>
@@ -110,7 +111,33 @@ window.Telecomando = (() => {
       else Voce.ferma();
     });
     document.body.append(dock);
+    trascina(dock, dock.querySelector(".tc-maniglia"));
     return dock;
+  }
+  // Maniglia: il riquadro si sposta col dito (LIM) o col mouse; la posizione resta su questo computer.
+  const CHIAVE_POS = "classe-irene-scritte-pos";
+  function metti(d, x, y) {
+    const r = d.getBoundingClientRect();
+    x = Math.min(Math.max(x, 0), innerWidth - r.width); y = Math.min(Math.max(y, 0), innerHeight - r.height);
+    d.style.left = x + "px"; d.style.top = y + "px"; d.classList.add("spostato");
+  }
+  function trascina(d, m) {
+    try { const p = JSON.parse(localStorage.getItem(CHIAVE_POS)); if (p) requestAnimationFrame(() => metti(d, p.x * innerWidth, p.y * innerHeight)); } catch {}
+    let dx = 0, dy = 0, attivo = false;
+    m.addEventListener("pointerdown", (e) => {
+      const r = d.getBoundingClientRect(); dx = e.clientX - r.left; dy = e.clientY - r.top; attivo = true;
+      m.setPointerCapture(e.pointerId); d.classList.add("trascino"); e.preventDefault();
+    });
+    m.addEventListener("pointermove", (e) => { if (attivo) metti(d, e.clientX - dx, e.clientY - dy); });
+    const fine = () => {
+      if (!attivo) return; attivo = false; d.classList.remove("trascino");
+      const r = d.getBoundingClientRect();
+      try { localStorage.setItem(CHIAVE_POS, JSON.stringify({ x: r.left / innerWidth, y: r.top / innerHeight })); } catch {}
+    };
+    m.addEventListener("pointerup", fine); m.addEventListener("pointercancel", fine);
+    // Doppio tocco sulla maniglia: torna al centro.
+    m.addEventListener("dblclick", () => { d.classList.remove("spostato"); d.style.left = d.style.top = ""; try { localStorage.removeItem(CHIAVE_POS); } catch {} });
+    addEventListener("resize", () => { if (d.classList.contains("spostato")) { const r = d.getBoundingClientRect(); metti(d, r.left, r.top); } });
   }
   function stato(s) {
     clearTimeout(timer);
@@ -283,7 +310,7 @@ window.Sottotitoli = (() => {
       box = document.createElement("div"); box.className = "sottotitoli via"; box.setAttribute("aria-hidden", "true");
       box.innerHTML = `<button class="st-chiudi" type="button" aria-label="Chiudi">✕</button><div class="st-testo"></div>`;
       box.querySelector(".st-chiudi").onclick = () => { box.classList.add("via"); };
-      Telecomando.dock().append(box);
+      const dk = Telecomando.dock(); dk.insertBefore(box, dk.querySelector(".telecomando"));
     }
     // Una frase alla volta: le frasi lunghe stanno comode sulla LIM.
     const frasi = []; let cur = [];

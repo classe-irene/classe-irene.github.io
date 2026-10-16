@@ -810,15 +810,18 @@ html, body { overflow-x: clip; }
 .st-parola { margin: 0 .1em; transform-origin: center bottom; }
 
 /* Telecomando della voce: pausa, riprendi, da capo, stop (sempre in vista mentre la voce parla) */
-.voce-dock { position: fixed; left: 50%; bottom: 18px; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translateX(-50%);
+.voce-dock { position: fixed; left: 50%; top: 50%; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translate(-50%, -50%);
   display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; transition: opacity .35s, transform .35s; }
 .voce-dock > * { pointer-events: auto; }
 /* le scritte non devono bloccare i tocchi sull'esercizio sotto: si tocca solo la ✕ */
 .voce-dock .sottotitoli { pointer-events: none; }
 .voce-dock .st-chiudi { pointer-events: auto; }
-.voce-dock.via { opacity: 0; transform: translate(-50%, 30px); }
+.voce-dock.via { opacity: 0; transform: translate(-50%, -50%) scale(.92); }
+.voce-dock.spostato { transform: none; transition: opacity .35s; }
+.voce-dock.spostato.via { transform: scale(.92); }
+.voce-dock.trascino { transition: none; }
 .voce-dock.via > * { pointer-events: none; }
-body.lim .voce-dock { bottom: 104px; }
+
 .telecomando { display: flex; align-items: center; gap: 10px; background: #2B2A33; padding: 8px 10px 8px 16px; border-radius: 999px; box-shadow: 0 12px 30px rgba(43,42,51,.35); }
 .tc-btn { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; cursor: pointer; padding: 10px 20px 10px 14px;
   font: 800 clamp(1.05rem, 1.8vw, 1.35rem) "Nunito", sans-serif; color: #2B2A33; background: #fff; min-height: 56px; transition: transform .15s, background .2s; }
@@ -861,3 +864,10 @@ body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 48
 .quaderno-vista.zoom .qv-foglio img { max-height: none; width: min(1240px, 160vw); max-width: none; cursor: zoom-out; }
 @media (max-width: 560px) { .qv-barra b { width: 100%; text-align: center; margin: 0; } }
 @media print { .quaderno-vista { display: none; } }
+
+/* Maniglia per spostare scritte e telecomando */
+.tc-maniglia { align-self: center; display: inline-flex; align-items: center; gap: 10px; padding: 8px 22px; border-radius: 999px; background: #FFC93C; color: #2B2A33;
+  font: 800 1rem "Nunito", sans-serif; cursor: grab; touch-action: none; user-select: none; box-shadow: 0 6px 16px rgba(43,42,51,.25); min-height: 44px; }
+.tc-maniglia:active, .voce-dock.trascino .tc-maniglia { cursor: grabbing; background: #FFB703; }
+.tc-presa { font-size: 1.4rem; line-height: 1; opacity: .7; }
+.voce-dock.trascino .sottotitoli { box-shadow: 0 24px 60px rgba(43,42,51,.4); }
