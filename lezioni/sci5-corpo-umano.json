@@ -5,14 +5,14 @@
   "classe": 5,
   "introduzione": "Il nostro corpo è come una grande squadra. Ogni parte ha un lavoro e tutte lavorano insieme.",
   "storia": {
-    "personaggio": "👨‍⚕️",
-    "testo": "Ciao, sono il dottor Leo!\nOgni giorno visito tanti bambini. Ascolto il cuore, guardo la gola, controllo le ossa.\nOggi vi porto in un viaggio dentro il corpo umano.",
+    "personaggio": "👩‍⚕️",
+    "testo": "Ciao, sono la dottoressa Sara!\nOgni giorno visito tanti bambini. Ascolto il cuore, guardo la gola, controllo le ossa.\nOggi vi porto in un viaggio dentro il corpo umano.",
     "immagini": [
       "🩺 stetoscopio",
       "🫀 cuore",
       "🩻 radiografia"
     ],
-    "missione": "Esplorate con il dottor Leo organi e apparati. Alla fine vincete la figurina dello stetoscopio!"
+    "missione": "Esplorate con la dottoressa Sara organi e apparati. Alla fine vincete la figurina dello stetoscopio!"
   },
   "premio": "🩺",
   "sezioni": [
