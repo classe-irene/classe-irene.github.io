@@ -82,6 +82,8 @@ L'esercizio `retta` mostra i numeri con la virgola (es. `"min": 0, "max": 1, "pa
 
 ## Corpo umano (classe 5ª)
 Video `{"tipo":"scena","scena":"corpo"}`: cervello, polmoni (respirano), cuore (batte), stomaco e intestino, ossa e muscoli, poi "organi in squadra = apparati".
+Video `{"tipo":"scena","scena":"cellula"}`: la cellula disegnata con membrana, citoplasma e nucleo, poi la cellula che si divide. Video `{"tipo":"scena","scena":"dalla_cellula"}`: cellula → tessuto → organo → apparato.
+L'emoji 🧫 mostra la cellula disegnata (`assets/disegni/cellula.svg`, mappa `DISEGNI` in `assets/comune.js`).
 
 ## Palestra delle equivalenze (equivalenze.html)
 

@@ -971,6 +971,8 @@ body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 48
 .sc-batte { animation: sc-batte .9s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 .sc-respira { animation: sc-respira 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes sc-batte { 0%, 60%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1.05); } 45% { transform: scale(1.14); } }
+.sc-evidenzia { fill: none; stroke: #FFC93C; stroke-width: 4; stroke-dasharray: 10 8; animation: scorre 1s linear infinite; }
+.sc-gelatina { fill: #FFC93C; opacity: .3; animation: pulsa 1.6s infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes sc-respira { 0%, 100% { transform: scale(.94); } 50% { transform: scale(1.06); } }
 
 /* ---------- Immagini grandi di quello che la voce sta dicendo ---------- */
