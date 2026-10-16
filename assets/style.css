@@ -664,7 +664,7 @@ body.effetti .entra-onda.visto { animation-name: e-onda; animation-duration: 1.1
 @keyframes e-cade { from { opacity: 0; transform: translateY(-160px); } to { opacity: 1; transform: none; } }
 @keyframes e-gira { from { opacity: 0; transform: perspective(900px) rotateY(80deg); } to { opacity: 1; transform: none; } }
 @keyframes e-sfoca { from { opacity: 0; filter: blur(16px); transform: scale(1.08); } to { opacity: 1; filter: none; transform: none; } }
-@keyframes e-sipario { from { opacity: 1; clip-path: inset(0 50% 0 50% round 24px); } to { opacity: 1; clip-path: inset(0 0 0 0 round 24px); } }
+@keyframes e-sipario { from { opacity: 1; clip-path: inset(0 50% 0 50% round 24px); } to { opacity: 1; clip-path: inset(-60px -60px -60px -60px round 24px); } }
 @keyframes e-ruota { from { opacity: 0; transform: rotate(-12deg) scale(.7); } to { opacity: 1; transform: none; } }
 @keyframes e-molla { 0% { opacity: 0; transform: scaleY(.1); transform-origin: bottom; } 40% { opacity: 1; transform: scaleY(1.15); } 60% { transform: scaleY(.92); } 80% { transform: scaleY(1.04); } 100% { transform: none; } }
 @keyframes e-onda { 0% { opacity: 0; transform: translateY(80px) skewY(6deg); } 60% { opacity: 1; transform: translateY(-10px) skewY(-2deg); } 100% { transform: none; } }
