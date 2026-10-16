@@ -760,3 +760,32 @@ body:not(.effetti) .sfondo-vivo { display: none; }
 .parola-intera { display: inline-block; white-space: nowrap; }
 body.effetti .visto .titolo-lettere .parola-intera > span, .sipario-titolo .parola-intera > span { display: inline-block; }
 body.lim .compagno { bottom: 124px; }
+
+/* ---------- Tabella hk dak uk h da u (relazione di equivalenza) ---------- */
+.t6-classe { fill: #EDE7FB; }
+.t6-classe.semplici { fill: #FFF3D6; }
+.t6-classe-t { font: 800 15px "Nunito", sans-serif; letter-spacing: .12em; text-anchor: middle; fill: #4B4A57; }
+.t6-sigla { font: 800 26px "Baloo 2", sans-serif; text-anchor: middle; }
+.t6-casella { fill: #fff; stroke: #D9DEE6; stroke-width: 3; }
+.t6-casella.accesa { stroke-width: 5; fill: #FFFDF5; }
+.t6-cifra { font: 800 60px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.t6-cifra.spenta { fill: #D3D8E0; }
+.t6-virgola { font: 800 64px "Baloo 2", sans-serif; text-anchor: middle; fill: #E0533D; }
+.t6-graffa { fill: none; stroke: #8B5CF6; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.t6-leggo { font: 800 30px "Baloo 2", sans-serif; text-anchor: middle; fill: #1F9D66; }
+.t6-riga { font: 800 24px "Baloo 2", sans-serif; text-anchor: middle; fill: #1F9D66; }
+.t6-col { cursor: pointer; }
+.t6-col:hover rect:first-child { opacity: .55; }
+.t6-col.sbagliata { animation: gs-trema .5s linear; transform-box: fill-box; }
+.leggi-tab { display: grid; gap: 10px; justify-items: center; }
+.lt-fase { margin: 0; font-weight: 800; font-size: 1.15rem; text-align: center; }
+.lt-tabella { width: min(100%, 720px); height: auto; }
+.lt-opzioni { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.lt-opzioni[hidden] { display: none; }
+body.lim .lt-tabella { max-height: 40vh; }
+html, body { overflow-x: clip; }
+@media (max-width: 700px) {
+  .sentiero { gap: 2px; }
+  .sentiero .sasso:not(.traguardo) { width: auto; height: auto; flex: 1 1 0; min-width: 0; max-width: 30px; aspect-ratio: 1; font-size: .6rem; }
+  .sentiero .sasso.traguardo { flex: none; width: 38px; height: 38px; }
+}

@@ -52,3 +52,4 @@ Equivalenze numeriche (k, h, da, u): esercizio `equivalenza` {n, da, a} e video 
 
 ## Effetti speciali
 `assets/effetti.js` (caricato da `lezione.html`): sipario d'apertura (si salta con `&nosipario=1`), entrate delle schede sempre diverse, titoli lettera per lettera, figure che fanno scherzi quando si toccano, "gratta e scopri" per le domande "Pensaci tu", personaggio della storia che commenta, 8 feste diverse per le risposte giuste, serie "🔥 3 di fila!". Si spengono con "✨ Effetti" nella barra della lezione.
+Tabella hk dak uk h da u (relazione di equivalenza): esercizio `leggi_tabella` {n, da, a} (anche risultati con la virgola) e video `{"tipo":"scena","scena":"tabella_valore","n":3,"da":"dak","letture":["u","da","h","uk","hk"]}`. La voce legge le sigle per intero.

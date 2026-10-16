@@ -590,7 +590,122 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza };
+
+  /* ---------- Tabella del valore posizionale hk dak uk h da u (relazione di equivalenza) ----------
+     Metodo del quaderno: metto la cifra nella sua casella, riempio con gli zeri fino alle unità,
+     leggo le cifre fino alla casella che cerco. Se la casella è più a sinistra, scrivo 0 e la virgola. */
+  const COL6 = [
+    { s: "hk", nome: "centinaia di migliaia", uno: "centinaio di migliaia", c: "#2FA35B" },
+    { s: "dak", nome: "decine di migliaia", uno: "decina di migliaia", c: "#E0533D" },
+    { s: "uk", nome: "unità di migliaia", uno: "unità di migliaia", c: "#3D6BE0" },
+    { s: "h", nome: "centinaia", uno: "centinaio", c: "#2FA35B" },
+    { s: "da", nome: "decine", uno: "decina", c: "#E0533D" },
+    { s: "u", nome: "unità", uno: "unità", c: "#3D6BE0" }];
+  const col6 = (s) => COL6.findIndex((x) => x.s === s);
+  const migliaia = (t) => t.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  // Lettura nella tabella: { cifre (6 caselle), intera, decimale, testo }.
+  function leggiTabella(n, da, a) {
+    const s = String(n), i0 = col6(da), t = col6(a), cifre = Array(6).fill("");
+    [...s].forEach((ch, k) => { const i = i0 - (s.length - 1 - k); if (i >= 0) cifre[i] = ch; });
+    for (let i = i0 + 1; i < 6; i++) cifre[i] = "0";
+    const prima = cifre.findIndex((x) => x !== "");
+    const intera = t < prima ? "0" : cifre.slice(prima, t + 1).join("");
+    const decimale = cifre.slice(t + 1).map((x) => x || "0").join("").replace(/0+$/, "");
+    const testo = migliaia(intera) + (decimale ? "," + decimale : "");
+    return { cifre, prima, i0, t, intera, decimale, testo };
+  }
+  const X6 = (i) => 70 + i * 100;
+  function tabella6SVG({ evid = -1, cifre = [], spente = [], cliccabile = false, scuri = [] } = {}) {
+    let svg = `<rect x="20" y="6" width="298" height="28" rx="8" class="t6-classe"/><text x="169" y="26" class="t6-classe-t">MIGLIAIA</text>
+      <rect x="322" y="6" width="298" height="28" rx="8" class="t6-classe semplici"/><text x="471" y="26" class="t6-classe-t">UNITÀ SEMPLICI</text>`;
+    COL6.forEach((x, i) => {
+      const acc = i === evid || scuri.includes(i);
+      svg += `<g ${cliccabile ? `data-col="${i}" class="t6-col"` : ""}>
+        <rect x="${X6(i) - 48}" y="40" width="96" height="50" rx="10" fill="${x.c}" opacity="${acc ? 1 : .22}"/>
+        <text x="${X6(i)}" y="74" class="t6-sigla ${acc ? "chiara" : ""}" fill="${acc ? "#fff" : x.c}">${x.s}</text>
+        <rect x="${X6(i) - 48}" y="96" width="96" height="84" rx="10" class="t6-casella ${acc ? "accesa" : ""}" ${acc ? `stroke="${x.c}"` : ""}/>
+        ${cifre[i] ? `<text x="${X6(i)}" y="160" class="t6-cifra ${spente.includes(i) ? "spenta" : ""}">${cifre[i]}</text>` : ""}</g>`;
+    });
+    return svg;
+  }
+  function graffa(da, a, testo = "") {
+    const x1 = X6(da) - 44, x2 = X6(a) + 44;
+    return `<path d="M${x1} 190 q0 12 12 12 H${(x1 + x2) / 2 - 10} l10 10 l10 -10 H${x2 - 12} q12 0 12 -12" class="t6-graffa"/>${testo ? `<text x="${Math.min(Math.max((x1 + x2) / 2, 160), 480)}" y="238" class="t6-leggo">${testo}</text>` : ""}`;
+  }
+  const virgola = (t) => `<text x="${X6(t) + 50}" y="166" class="t6-virgola">,</text>`;
+  function scenaTabellaValore(anim) {
+    const n = Math.max(1, +anim.n || 3), da = col6(anim.da) >= 0 ? anim.da : "dak";
+    const letture = (anim.letture || ["u"]).filter((x) => col6(x) >= 0);
+    const L0 = leggiTabella(n, da, "u"), i0 = col6(da), U0 = COL6[i0];
+    const pezzi = [], passi = [];
+    const solo = Array(6).fill(""); [...String(n)].forEach((ch, k, arr) => { const i = i0 - (arr.length - 1 - k); if (i >= 0) solo[i] = ch; });
+    pezzi.push({ da: 0, a: 0, svg: tabella6SVG() });
+    passi.push("Ecco la tabella. A sinistra la classe delle migliaia, a destra le unità semplici. Ogni casella vale 10 volte quella alla sua destra.");
+    pezzi.push({ da: 1, a: 1, svg: tabella6SVG({ evid: i0, cifre: solo }) });
+    passi.push(`Metto ${n} nella casella ${U0.s}.`);
+    pezzi.push({ da: 2, a: 2, svg: tabella6SVG({ evid: i0, cifre: L0.cifre }) });
+    passi.push(i0 < 5 ? `Riempio con gli zeri fino alla casella delle unità.` : "Sono già nella casella delle unità.");
+    const righe = [];
+    letture.forEach((a, k) => {
+      const L = leggiTabella(n, da, a), t = L.t, U = COL6[t], step = 3 + k;
+      const inizioDec = t + 1, spente = L.cifre.map((_, i) => i).filter((i) => i > t && !(i >= inizioDec && i < inizioDec + L.decimale.length));
+      const cifre = L.cifre.map((x, i) => (i >= t && i < L.prima ? "0" : x));
+      const riga = `${n} ${da} = ${L.testo} ${a}`; righe.push(riga);
+      const da_ = Math.min(t, L.prima);
+      pezzi.push({ da: step, a: step, svg: tabella6SVG({ evid: t, cifre, spente }) + graffa(da_, t, riga) + (L.decimale ? virgola(t) : "") });
+      passi.push(L.decimale
+        ? `Cerco le ${U.nome}: la casella ${U.s} è più a sinistra. Leggo fino a ${U.s}, poi metto la virgola. ${riga}.`
+        : `Per sapere quante ${U.nome}, leggo le cifre fino alla casella ${U.s}: ${riga}.`);
+    });
+    if (righe.length > 1) {
+      const fin = 3 + letture.length;
+      pezzi.push({ da: fin, svg: tabella6SVG({ cifre: L0.cifre }) + righe.map((r, k) => `<text x="${k < 3 ? 170 : 470}" y="${222 + (k % 3) * 34}" class="t6-riga">${r}</text>`).join("") });
+      passi.push("Tutte queste scritture indicano la stessa quantità: sono equivalenti!");
+    }
+    return { viewBox: "0 0 640 320", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "leggi_tabella": metti la cifra, scegli fin dove leggere, scegli il risultato ---------- */
+  function esercizioLeggiTabella(e, c, esito, intestazione) {
+    const L = leggiTabella(e.n, e.da, e.a), i0 = col6(e.da), t = L.t;
+    let fase = 1;
+    const sbagli = [L.testo];
+    const alt = (x) => { const v = Number(x.replace(/\s/g, "").replace(",", ".")); return [v * 10, v / 10].map((y) => migliaia(String(+y.toFixed(6)).replace(".", ",").replace(/^(\d+)/, (m) => m))); };
+    const opzioni = mescola([L.testo, ...alt(L.testo).filter((x) => !sbagli.includes(x))].slice(0, 3));
+    c.innerHTML = intestazione + `<div class="leggi-tab">
+      <div class="eq-domanda">${e.n} ${e.da} = <b class="eq-ris">?</b> ${e.a}</div>
+      <p class="lt-fase"></p>
+      <svg viewBox="0 0 640 245" class="lt-tabella"></svg>
+      <div class="lt-opzioni" hidden>${opzioni.map((o) => `<button class="opzione" data-o="${o}">${o} ${e.a}</button>`).join("")}</div></div>`;
+    const svg = c.querySelector(".lt-tabella"), fase_ = c.querySelector(".lt-fase"), ris = c.querySelector(".eq-ris"), ops = c.querySelector(".lt-opzioni");
+    const disegna = () => {
+      if (fase === 1) { svg.innerHTML = tabella6SVG({ cliccabile: true }); fase_.innerHTML = `1️⃣ Tocca la casella <b>${e.da}</b>: lì va il ${e.n}.`; }
+      if (fase === 2) { svg.innerHTML = tabella6SVG({ cliccabile: true, cifre: L.cifre, scuri: [i0] }); fase_.innerHTML = `2️⃣ Vuoi sapere quante <b>${e.a}</b>. Tocca la casella fino a cui leggere.`; }
+      if (fase === 3) {
+        const cifre = L.cifre.map((x, i) => (i >= t && i < L.prima ? "0" : x));
+        const spente = cifre.map((_, i) => i).filter((i) => i > t + L.decimale.length);
+        svg.innerHTML = tabella6SVG({ cifre, evid: t, spente }) + graffa(Math.min(t, L.prima), t) + (L.decimale ? virgola(t) : "");
+        fase_.innerHTML = `3️⃣ Leggi le cifre${L.decimale ? " e ricorda la virgola" : ""}. Quanto fa?`; ops.hidden = false;
+      }
+    };
+    disegna();
+    svg.addEventListener("click", (ev) => {
+      const g = ev.target.closest("[data-col]");
+      if (!g || c.classList.contains("risolto")) return;
+      const i = +g.dataset.col;
+      if (fase === 1 && i === i0) { fase = 2; Suono.giusto(); disegna(); leggi(`Bene! Riempio con gli zeri fino alle unità.`); }
+      else if (fase === 2 && i === t) { fase = 3; Suono.giusto(); disegna(); }
+      else { e.suggerimento = fase === 1 ? `Cerca la casella ${e.da}.` : `Cerca la casella ${e.a}: leggi fino a lì.`; esito.ko(g); }
+    });
+    ops.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-o]");
+      if (!b || c.classList.contains("risolto")) return;
+      if (b.dataset.o === L.testo) { b.classList.add("giusta"); ris.textContent = L.testo; esito.ok(); }
+      else { e.suggerimento = `Leggi le cifre fino alla casella ${e.a}.`; esito.ko(b); }
+    });
+  }
+
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -788,5 +903,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

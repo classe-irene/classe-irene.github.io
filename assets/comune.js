@@ -122,7 +122,16 @@ window.Voce = (() => {
     return /^(s[^aeiouàèéìòù]|z|gn|ps|pn|x|y)/.test(p) ? "uno " : "un ";
   }
   // "1 000" o "1.000" -> "1000", così la voce dice "mille" e non "uno, zero zero zero".
-  const leggibile = (t) => t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1").replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
+  // Sigle delle equivalenze lette per intero: "3 dak" -> "3 decine di migliaia", "1 h" -> "un centinaio".
+  const SIGLE = { hk: ["centinaio di migliaia", "centinaia di migliaia"], dak: ["decina di migliaia", "decine di migliaia"], uk: ["unità di migliaia", "unità di migliaia"],
+    k: ["migliaio", "migliaia"], h: ["centinaio", "centinaia"], da: ["decina", "decine"], u: ["unità", "unità"] };
+  const sigle = (t) => t
+    .replace(/(^|[^\d,])(\d[\d,]*) ?(hk|dak|uk|k|h|da|u)\b(?![àèéìòù'])/g, (m, p, num, s) => `${p}${num} ${SIGLE[s][num === "1" ? 0 : 1]}`)
+    .replace(/\b(casella|colonna) (hk|dak|uk|h|da|u)\b(?![àèéìòù'])/g, (m, c, s) => `${c} delle ${SIGLE[s][1]}`)
+    .replace(/\b([Qq]uant[ei]) (hk|dak|uk|h|da|u)\b(?![àèéìòù'])/g, (m, q, s) => `${q} ${SIGLE[s][1]}`)
+    .replace(/\b(hk|dak|uk)\b/g, (m, s) => SIGLE[s][1])
+    .replace(/ = /g, " uguale a ");
+  const leggibile = (t) => sigle(t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1")).replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
 
   return {

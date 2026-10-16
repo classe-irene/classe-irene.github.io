@@ -1,0 +1,429 @@
+{
+  "titolo": "La relazione di equivalenza",
+  "emoji": "⚖️",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Il valore di una cifra dipende dalla sua casella. Con la tabella scopriamo che la stessa quantità si può scrivere in tanti modi.",
+  "storia": {
+    "personaggio": "🦉",
+    "testo": "Ciao! Sono Archimede, il gufo dei numeri.\nIn biblioteca ho 3 decine di migliaia di libri: 3 dak.\nIl bibliotecario mi chiede: «Quanti libri sono? E quante centinaia?» Mi aiutate a rispondere?",
+    "immagini": [
+      "📚 libri",
+      "🗂️ tabella",
+      "⚖️ equivalenze"
+    ],
+    "missione": "Diventate maghi della tabella: scoprite tutti i modi di scrivere 3 dak. Alla fine vincete la figurina della bilancia!"
+  },
+  "premio": "⚖️",
+  "sezioni": [
+    {
+      "titolo": "🗂️ La tabella del valore posizionale",
+      "immagine": "🗂️",
+      "testo": "Ogni cifra ha la sua casella.\nA sinistra c'è la classe delle migliaia, a destra le unità semplici.",
+      "immagini": [
+        "🟩 hk centinaia di migliaia",
+        "🟥 dak decine di migliaia",
+        "🟦 uk unità di migliaia",
+        "🟩 h centinaia",
+        "🟥 da decine",
+        "🟦 u unità"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 1 hk",
+          "retro": "💯 100 000 unità"
+        },
+        {
+          "fronte": "❓ 1 dak",
+          "retro": "🔟 10 000 unità"
+        },
+        {
+          "fronte": "❓ 1 uk",
+          "retro": "🏟️ 1 000 unità"
+        },
+        {
+          "fronte": "❓ 1 h",
+          "retro": "💯 100 unità"
+        }
+      ]
+    },
+    {
+      "titolo": "✖️ Ogni casella vale 10 volte",
+      "immagine": "🔟",
+      "testo": "Ogni casella vale 10 volte quella alla sua destra.\n10 u = 1 da. 10 da = 1 h. 10 h = 1 uk.",
+      "immagini": [
+        "🟦 10 u = 1 da",
+        "🟥 10 da = 1 h",
+        "🟩 10 h = 1 uk",
+        "🟦 10 uk = 1 dak"
+      ],
+      "pensa": {
+        "domanda": "Se sposto una cifra di una casella verso sinistra, il suo valore diventa più grande o più piccolo?",
+        "risposta": "Più grande: diventa 10 volte più grande! Verso destra invece diventa 10 volte più piccolo."
+      }
+    },
+    {
+      "titolo": "🎬 Tutti i modi di scrivere 3 dak",
+      "immagine": "🎬",
+      "testo": "Guarda il video: mettiamo 3 dak nella tabella e leggiamolo in tanti modi.",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "tabella_valore",
+        "n": 3,
+        "da": "dak",
+        "letture": [
+          "u",
+          "da",
+          "h",
+          "uk",
+          "hk"
+        ],
+        "video": true,
+        "titolo": "3 dak nella tabella"
+      }
+    },
+    {
+      "titolo": "📏 La regola",
+      "immagine": "📏",
+      "testo": "1. Metto la cifra nella sua casella.\n2. Riempio con gli zeri fino alle unità.\n3. Leggo le cifre fino alla casella che cerco.",
+      "immagini": [
+        "🟦 3 dak = 30 000 u",
+        "🟥 3 dak = 3 000 da",
+        "🟩 3 dak = 300 h",
+        "🟦 3 dak = 30 uk"
+      ],
+      "curiosita": "Le scritture che indicano la stessa quantità si chiamano equivalenti. Il segno = vuol dire proprio: vale uguale!"
+    },
+    {
+      "titolo": "🔴 Quando serve la virgola",
+      "immagine": "🔍",
+      "testo": "Se la casella che cerco è a sinistra della cifra, scrivo 0 e poi la virgola.\n3 dak = 0,3 hk: 3 decine di migliaia sono 3 decimi di un centinaio di migliaia.",
+      "animazione": {
+        "tipo": "scena",
+        "scena": "tabella_valore",
+        "n": 45,
+        "da": "h",
+        "letture": [
+          "u",
+          "da",
+          "uk",
+          "dak"
+        ],
+        "video": true,
+        "titolo": "45 h nella tabella"
+      },
+      "immagini": [
+        "🟩 0,3 hk",
+        "🟦 4,5 uk",
+        "🟥 0,45 dak"
+      ]
+    },
+    {
+      "titolo": "🧪 La tabella in classe",
+      "immagine": "🧪",
+      "testo": "Costruiamo una tabella gigante e diventiamo cifre!",
+      "esperimento": {
+        "titolo": "Le cifre viventi",
+        "materiali": [
+          "🟩🟥🟦 6 fogli colorati",
+          "✏️ cartoncini con le cifre 0-9",
+          "📏 nastro adesivo"
+        ],
+        "passi": [
+          "📏 Attaccate a terra o alla LIM 6 caselle: hk, dak, uk, h, da, u.",
+          "🔢 Un bambino prende il cartoncino 3 e si mette nella casella dak.",
+          "⭕ Altri bambini con lo 0 riempiono le caselle fino alle unità.",
+          "👀 La classe legge: fino a u, fino a da, fino a h… Che numero viene ogni volta?"
+        ],
+        "domanda": "Che cosa succede se il 3 si sposta di una casella a destra?"
+      }
+    }
+  ],
+  "parole_chiave": [
+    "🗂️ tabella",
+    "🔢 valore posizionale",
+    "⚖️ equivalenza",
+    "🔴 virgola",
+    "🟩 classe delle migliaia"
+  ],
+  "ricorda": [
+    "🔢 Il valore di una cifra dipende dalla casella in cui si trova.",
+    "🔟 Ogni casella vale 10 volte quella alla sua destra.",
+    "📏 Metto la cifra nella sua casella e riempio con gli zeri fino alle unità.",
+    "👀 Leggo le cifre fino alla casella che cerco.",
+    "🔴 Se la casella è più a sinistra, scrivo 0 e la virgola."
+  ],
+  "esercizi": [
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante u sono 3 dak? Usa la tabella.",
+      "n": 3,
+      "da": "dak",
+      "a": "u",
+      "spiegazione": "Leggo fino alle unità: 3 dak = 30 000 u."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: unisci la sigla al suo nome.",
+      "coppie": [
+        [
+          "hk",
+          "centinaia di migliaia"
+        ],
+        [
+          "dak",
+          "decine di migliaia"
+        ],
+        [
+          "uk",
+          "unità di migliaia"
+        ],
+        [
+          "h",
+          "centinaia"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti le caselle in ordine, dalla più grande alla più piccola.",
+      "elementi": [
+        "hk",
+        "dak",
+        "uk",
+        "h",
+        "da",
+        "u"
+      ],
+      "suggerimento": "Comincia dalla classe delle migliaia!"
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante h sono 3 dak? Usa la tabella.",
+      "n": 3,
+      "da": "dak",
+      "a": "h",
+      "spiegazione": "Leggo fino alle centinaia: 3 dak = 300 h."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🟥",
+      "domanda": "3 dak = ? da",
+      "opzioni": [
+        "300",
+        "3 000",
+        "30 000"
+      ],
+      "corretta": 1,
+      "spiegazione": "Leggo le cifre fino alla casella da: 3 000."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo le scritture uguali a 3 dak!",
+      "giusti": [
+        "30 000 u",
+        "3 000 da",
+        "300 h",
+        "30 uk",
+        "0,3 hk"
+      ],
+      "sbagliati": [
+        "300 u",
+        "30 h",
+        "3 uk",
+        "3 000 u",
+        "30 da",
+        "3 hk"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante da sono 7 uk? Usa la tabella.",
+      "n": 7,
+      "da": "uk",
+      "a": "da",
+      "spiegazione": "7 uk = 700 da."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "1 uk = 100 da",
+      "corretta": true,
+      "spiegazione": "1 000 unità sono 100 decine."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci le scritture equivalenti.",
+      "coppie": [
+        [
+          "5 dak",
+          "50 uk"
+        ],
+        [
+          "2 uk",
+          "200 da"
+        ],
+        [
+          "6 h",
+          "600 u"
+        ],
+        [
+          "4 da",
+          "0,4 h"
+        ]
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🦉",
+      "domanda": "Completa la regola di Archimede.",
+      "testo": "Metto la cifra nella sua [casella].\nRiempio con gli [zeri] fino alle unità.\nLeggo le cifre fino alla casella che [cerco].\nSe la casella è più a sinistra, scrivo 0 e la [virgola].",
+      "distrattori": [
+        "decina",
+        "tabellina"
+      ]
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🔴",
+      "domanda": "Attenzione alla virgola! Quante hk sono 3 dak? Usa la tabella.",
+      "n": 3,
+      "da": "dak",
+      "a": "hk",
+      "spiegazione": "La casella hk è a sinistra: 3 dak = 0,3 hk."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🔴",
+      "domanda": "Il risultato ha la virgola?",
+      "categorie": [
+        "🔴 Sì, la virgola",
+        "⚪ No, niente virgola"
+      ],
+      "elementi": [
+        {
+          "testo": "3 dak = ? hk",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "5 h = ? uk",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "8 u = ? da",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "3 dak = ? h",
+          "categoria": "⚪ No, niente virgola"
+        },
+        {
+          "testo": "2 uk = ? u",
+          "categoria": "⚪ No, niente virgola"
+        },
+        {
+          "testo": "9 h = ? da",
+          "categoria": "⚪ No, niente virgola"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "8 uk = [8 000] u",
+      "distrattori": [
+        "800",
+        "80 000"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è uguale a 2 uk?",
+      "elementi": [
+        "20 h",
+        "200 da",
+        "2 000 u",
+        "20 da"
+      ],
+      "intruso": 3,
+      "spiegazione": "20 da sono solo 200 unità!"
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante uk sono 45 h? Usa la tabella.",
+      "n": 45,
+      "da": "h",
+      "a": "uk",
+      "spiegazione": "Leggo fino a uk e metto la virgola: 45 h = 4,5 uk."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "4 h = 4 000 u",
+      "corretta": false,
+      "spiegazione": "4 h = 400 u. 4 000 u sono 4 uk."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔍",
+      "domanda": "Crucipuzzle: trova le parole della tabella.",
+      "parole": [
+        "🔢 cifra",
+        "🗂️ casella",
+        "⭕ zero",
+        "🔴 virgola",
+        "🟥 decine",
+        "🟩 migliaia"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📚",
+      "domanda": "Archimede ha 3 dak di libri. Quante centinaia di libri sono?",
+      "opzioni": [
+        "30 h",
+        "300 h",
+        "3 000 h"
+      ],
+      "corretta": 1,
+      "spiegazione": "3 dak = 300 h: trecento centinaia di libri!"
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "5 dak = [50] uk\n6 u = [0,6] da",
+      "distrattori": [
+        "500",
+        "0,06"
+      ]
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Ultima sfida! Quante hk sono 12 uk? Usa la tabella.",
+      "n": 12,
+      "da": "uk",
+      "a": "hk",
+      "spiegazione": "12 uk = 0,12 hk."
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "EQUIVALENZA",
+      "indizio": "⚖️ Due scritture diverse per la stessa quantità"
+    }
+  ]
+}
