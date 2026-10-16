@@ -842,13 +842,13 @@ body.lim .voce-dock { bottom: 104px; }
 .btn.quaderno-link { background: #FF8A3D; color: #fff; }
 .scheda.quaderno .scheda-corpo { width: 100%; }
 .scheda.quaderno { grid-template-columns: 1fr; }
-.foglio { position: relative; display: block; margin: 18px auto 8px; width: min(560px, 100%); padding: 0; border: 0; background: #fff; cursor: zoom-in;
+.foglio { position: relative; display: block; margin: 18px auto 34px; width: min(560px, 100%); padding: 0; border: 0; background: #fff; cursor: zoom-in;
   box-shadow: 0 2px 0 #e9e6dd, 0 18px 40px rgba(43,42,51,.22); transform: rotate(-1.2deg); transition: transform .3s; border-radius: 4px; }
 .foglio:hover { transform: rotate(0) scale(1.02); }
 .foglio img { display: block; width: 100%; height: auto; border-radius: 4px; }
 .nastro { position: absolute; top: -10px; width: 80px; height: 24px; background: rgba(255,214,102,.75); box-shadow: 0 2px 4px rgba(0,0,0,.08); z-index: 1; }
 .nastro.n1 { left: -34px; transform: rotate(-38deg); } .nastro.n2 { right: -34px; transform: rotate(38deg); }
-.foglio-lente { position: absolute; right: 12px; bottom: 12px; background: rgba(43,42,51,.85); color: #fff; font: 800 1rem "Nunito", sans-serif; padding: 8px 14px; border-radius: 999px; }
+.foglio-lente { position: absolute; right: 50%; transform: translateX(50%); bottom: -22px; white-space: nowrap; background: rgba(43,42,51,.85); color: #fff; font: 800 1rem "Nunito", sans-serif; padding: 8px 14px; border-radius: 999px; }
 .quaderno-azioni { text-align: center; margin: 6px 0 22px; }
 body.lim .foglio { width: auto; display: table; }
 body.lim .foglio img { width: auto; max-width: 100%; max-height: calc(100vh - 480px); }
