@@ -1,0 +1,145 @@
+{
+  "titolo": "Le frazioni",
+  "emoji": "🍕",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Una pizza si può tagliare in parti uguali. Ogni parte è una frazione.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Nina la pizzaiola!\nOggi taglio tante pizze e tante tavolette di cioccolata.\nMa attenzione: le parti devono essere sempre uguali!",
+    "immagini": ["🍕 pizza", "🔪 coltello", "🍫 cioccolata"],
+    "missione": "Aiutate Nina a dividere bene pizze e cioccolata. Vincete la figurina della pizza!"
+  },
+  "premio": "🍕",
+  "sezioni": [
+    {
+      "titolo": "🍕 L'intero e le parti uguali",
+      "immagine": "🍕",
+      "testo": "La pizza intera è l'intero.\nLa taglio in parti uguali.\nOgni parte è una frazione della pizza.",
+      "immagini": ["🍕 l'intero", "🔪 taglio", "⚖️ parti uguali"],
+      "animazione": { "tipo": "scena", "scena": "frazione", "n": 3, "d": 4, "video": true, "titolo": "la pizza in quarti" },
+      "pensa": {
+        "domanda": "Taglio una pizza in 4 pezzi: uno grande e tre piccoli. Ogni pezzo è un quarto?",
+        "risposta": "No! Le parti devono essere uguali. Solo così ogni pezzo è un quarto."
+      }
+    },
+    {
+      "titolo": "✏️ Numeratore e denominatore",
+      "immagine": "✏️",
+      "testo": "La frazione ha due numeri e una linea.\nSotto la linea c'è il denominatore: in quante parti uguali taglio.\nSopra la linea c'è il numeratore: quante parti prendo.",
+      "immagini": ["⬆️ numeratore", "➖ linea", "⬇️ denominatore"],
+      "curiosita": "Un trucco: Denominatore e Divido cominciano tutte e due con la D!",
+      "scopri": [
+        { "fronte": "🍕 1/2", "retro": "Un mezzo: metà pizza." },
+        { "fronte": "🍕 1/4", "retro": "Un quarto: una parte su quattro." },
+        { "fronte": "🍫 3/10", "retro": "Tre decimi: tre quadretti su dieci." }
+      ]
+    },
+    {
+      "titolo": "🧩 La frazione complementare",
+      "immagine": "🧩",
+      "testo": "Mangio 3/4 della pizza. Resta 1/4.\nLa parte che resta è la frazione complementare.\nInsieme fanno di nuovo l'intero.",
+      "immagini": ["🍕 3/4 mangiati", "🧩 1/4 resta", "⭕ l'intero"],
+      "pensa": {
+        "domanda": "Ho mangiato 5 ottavi di pizza. Quanti ottavi restano?",
+        "risposta": "Restano 3 ottavi! 5 più 3 fa 8: la pizza intera."
+      }
+    },
+    {
+      "titolo": "🍕🍕 Più di un intero",
+      "immagine": "🍕",
+      "testo": "Frazione propria: il numeratore è più piccolo. È meno di un intero.\nFrazione impropria: il numeratore è più grande. È più di un intero.\nFrazione apparente: fa interi esatti, come 4/4.",
+      "immagini": ["🤏 propria", "🍕 impropria", "🎯 apparente"],
+      "animazione": { "tipo": "scena", "scena": "frazione", "n": 5, "d": 4, "video": true, "titolo": "più di una pizza" }
+    },
+    {
+      "titolo": "⚖️ Frazioni equivalenti",
+      "immagine": "⚖️",
+      "testo": "Due frazioni diverse possono dire la stessa parte.\nMetà pizza è 1/2. Ma è anche 2/4.\n1/2 e 2/4 sono frazioni equivalenti.",
+      "immagini": ["🍕 1/2", "🍕 2/4", "⚖️ uguali"],
+      "animazione": { "tipo": "scena", "scena": "frazioni_equivalenti", "n": 1, "d": 2, "k": 2, "video": true, "titolo": "metà pizza" },
+      "esperimento": {
+        "titolo": "Proviamo in classe: il foglio piegato",
+        "materiali": ["📄 un foglio", "🖍️ un pastello"],
+        "passi": [
+          "📄 Piega il foglio a metà e riaprilo.",
+          "🖍️ Colora una metà: è 1/2.",
+          "📄 Ripiega il foglio e piegalo ancora a metà.",
+          "🔍 Riaprilo: ora le parti sono 4. Quante sono colorate?"
+        ],
+        "domanda": "La parte colorata è cambiata?"
+      }
+    }
+  ],
+  "parole_chiave": ["🍕 intero", "⬆️ numeratore", "⬇️ denominatore", "🧩 complementare", "🍕 impropria", "⚖️ equivalenti"],
+  "esercizi": [
+    { "tipo": "leggi_frazione", "immagine": "🍕", "n": 3, "d": 4, "spiegazione": "3 parti rosse su 4: 3/4." },
+    { "tipo": "colora_frazione", "immagine": "🖍️", "n": 2, "d": 5, "forma": "cioccolata", "spiegazione": "Il numeratore è 2: hai colorato 2 quadretti su 5." },
+    {
+      "tipo": "scelta",
+      "immagine": "⬇️",
+      "domanda": "Che cosa dice il denominatore?",
+      "opzioni": ["🔪 in quante parti uguali taglio", "🍕 quante parti prendo", "💶 quanto costa la pizza"],
+      "corretta": 0,
+      "spiegazione": "Il denominatore sta sotto: dice in quante parti uguali taglio."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔪",
+      "affermazione": "Taglio la pizza in 4 pezzi diversi: ogni pezzo è un quarto.",
+      "corretta": false,
+      "spiegazione": "Per fare i quarti le 4 parti devono essere uguali."
+    },
+    { "tipo": "leggi_frazione", "immagine": "🧩", "n": 5, "d": 8, "chiedi": "complementare", "spiegazione": "Restano 3/8: è la frazione complementare di 5/8." },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "La frazione è propria o impropria?",
+      "categorie": ["🤏 Propria: meno di un intero", "🍕 Impropria: più di un intero"],
+      "elementi": [
+        { "testo": "🍕 3/4", "categoria": "🤏 Propria: meno di un intero" },
+        { "testo": "🍫 2/5", "categoria": "🤏 Propria: meno di un intero" },
+        { "testo": "🍕 5/4", "categoria": "🍕 Impropria: più di un intero" },
+        { "testo": "🍫 7/3", "categoria": "🍕 Impropria: più di un intero" }
+      ],
+      "suggerimento": "Guarda il numeratore: è più piccolo o più grande del denominatore?"
+    },
+    { "tipo": "colora_frazione", "immagine": "🍕", "n": 4, "d": 8, "spiegazione": "4/8 è come 1/2: metà pizza!" },
+    {
+      "tipo": "abbina",
+      "immagine": "🧩",
+      "domanda": "Unisci le frazioni che insieme fanno l'intero.",
+      "coppie": [["🍕 1/4", "🍕 3/4"], ["🍫 2/5", "🍫 3/5"], ["🍕 5/8", "🍕 3/8"]]
+    },
+    { "tipo": "leggi_frazione", "immagine": "🍫", "n": 3, "d": 10, "forma": "cioccolata", "spiegazione": "3 quadretti rossi su 10: 3/10." },
+    {
+      "tipo": "scelta",
+      "immagine": "⚖️",
+      "domanda": "Quale frazione è equivalente a 1/2?",
+      "opzioni": ["🍕 2/4", "🍕 1/4", "🍕 2/3"],
+      "corretta": 0,
+      "spiegazione": "2/4 è metà pizza, proprio come 1/2."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Sopra la linea c'è il [numeratore]. Sotto la linea c'è il [denominatore].",
+      "distrattori": ["divisore"]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: la frazione e come si legge.",
+      "coppie": [["🍕 1/2", "💬 un mezzo"], ["🍕 1/3", "💬 un terzo"], ["🍕 1/4", "💬 un quarto"], ["🍕 3/4", "💬 tre quarti"]]
+    },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "NUMERATORE", "indizio": "⬆️ Il numero sopra la linea" }
+  ],
+  "ricorda": [
+    "🍕 L'intero si taglia in parti uguali.",
+    "⬇️ Il denominatore dice in quante parti taglio.",
+    "⬆️ Il numeratore dice quante parti prendo.",
+    "🧩 Complementare: la parte che manca per fare l'intero.",
+    "🍕 Impropria: più di un intero. Propria: meno di un intero.",
+    "⚖️ Equivalenti: frazioni diverse, stessa parte."
+  ]
+}

@@ -65,7 +65,7 @@ window.CURRICOLO = {
       { id: "mat4-relazione", emoji: "⚖️", titolo: "La relazione di equivalenza", descrizione: "Tabella hk, dak, uk, h, da, u e virgola.", lezione: "lezioni/mat4-relazione-di-equivalenza.json" },
       { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime.", lezione: "lezioni/mat4-moltiplicazioni-due-cifre.json" },
       { id: "mat4-divisioni", emoji: "➗", titolo: "Divisioni a due cifre", descrizione: "Divisore a due cifre e prova." },
-      { id: "mat4-frazioni", emoji: "🍕", titolo: "Frazioni proprie e improprie", descrizione: "Frazioni equivalenti e complementari." },
+      { id: "mat4-frazioni", emoji: "🍕", titolo: "Frazioni proprie e improprie", descrizione: "Frazioni equivalenti e complementari.", lezione: "lezioni/mat4-frazioni.json" },
       { id: "mat4-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Operazioni con i decimali." },
       { id: "mat4-perimetro", emoji: "🟩", titolo: "Perimetro dei poligoni", descrizione: "Triangoli e quadrilateri." },
       { id: "mat4-area", emoji: "🧱", titolo: "Il concetto di area", descrizione: "Superfici equiestese e unità di misura." },
@@ -121,7 +121,7 @@ window.CURRICOLO = {
     4: [
       { id: "sci4-cellula", emoji: "🧫", titolo: "La cellula", descrizione: "Il mattoncino della vita." },
       { id: "sci4-regni", emoji: "🍄", titolo: "I cinque regni", descrizione: "Batteri, protisti, funghi, piante, animali.", lezione: "lezioni/sci4-cinque-regni.json" },
-      { id: "sci4-piante", emoji: "🌸", titolo: "Riproduzione delle piante", descrizione: "Fiore, impollinazione, frutto e seme." },
+      { id: "sci4-piante", emoji: "🌸", titolo: "Riproduzione delle piante", descrizione: "Fiore, impollinazione, frutto e seme.", lezione: "lezioni/sci4-riproduzione-piante.json" },
       { id: "sci4-invertebrati", emoji: "🐝", titolo: "Gli invertebrati", descrizione: "Insetti, molluschi, aracnidi..." },
       { id: "sci4-vertebrati", emoji: "🐬", titolo: "I vertebrati", descrizione: "Pesci, anfibi, rettili, uccelli, mammiferi." },
       { id: "sci4-ecosistemi", emoji: "🌳", titolo: "Gli ecosistemi", descrizione: "Equilibri tra viventi e ambiente." },

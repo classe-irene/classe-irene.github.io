@@ -69,6 +69,11 @@ Campo facoltativo della lezione: `"quaderno": { "immagine": "immagini/quaderno/.
 Compare un pulsante arancione in alto e una scheda con la foto (dopo "Ricordiamo"); toccandola si apre a tutto schermo, con Ingrandisci e Stampa.
 Scritte e telecomando compaiono al centro dello schermo. La maniglia gialla "⠿ Trascinami ⠿" li sposta (dito sulla LIM o mouse); la posizione resta salvata su quel computer. Doppio tocco sulla maniglia: torna al centro.
 
+## Frazioni
+- Video `{"tipo":"scena","scena":"frazione","n":3,"d":4}` (anche `"forma":"cioccolata"`): intero, parti uguali, unità frazionaria, numeratore e denominatore, complementare. Con `n` più grande di `d` (fino a 2 interi) mostra la frazione impropria o apparente.
+- Video `{"tipo":"scena","scena":"frazioni_equivalenti","n":1,"d":2,"k":2}`: due pizze, 1/2 = 2/4, il trucco del "× 2".
+- Esercizio `colora_frazione` {n, d, forma}: il bambino tocca le parti da colorare. Esercizio `leggi_frazione` {n, d, forma, chiedi}: sceglie la frazione colorata fra 3 (con `"chiedi":"complementare"` quella rimasta bianca).
+- In tutti i testi "3/4" si vede in colonna (numeratore sopra, denominatore sotto) e la voce dice "3 quarti".
 ## Numeri decimali (classe 5ª)
 Tabella h da u , d c m con la virgola ferma in mezzo: × 10, 100, 1000 le cifre vanno a sinistra, : 10, 100, 1000 vanno a destra.
 Video `{"tipo":"scena","scena":"decimali","n":"2,35","operazioni":["x10","x100",":10"]}` (senza `operazioni` spiega solo intero, decimi, centesimi, millesimi).
