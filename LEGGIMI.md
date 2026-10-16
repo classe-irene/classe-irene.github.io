@@ -17,7 +17,7 @@ Non ha bisogno di server né di database: si pubblica gratis con GitHub Pages.
 Le lezioni create e non pubblicate restano salvate solo nel browser in cui sono state create.
 
 ## Tipi di esercizio
-`scelta`, `vero_falso`, `abbina`, `categorie`, `ordina`, `completa`, `conta`, `retta`.
+`scelta`, `vero_falso`, `abbina`, `categorie`, `ordina`, `completa`, `conta`, `retta`, `addizione`.
 Il formato esatto di ognuno è scritto nelle istruzioni che prepara l'area insegnante.
 
 ## Programmi
@@ -34,6 +34,8 @@ Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un 
 ## Animazioni ed esercizi in colonna
 - In una sezione: `"animazione": { "tipo": "moltiplicazione", "a": 23, "b": 14 }` oppure `"tipo": "scomposizione"`. Mostra il calcolo passo passo, con una frase (e la voce) per ogni passo: ▶ Guarda, ⏭ Un passo, ↺ Da capo.
 - Esercizio `{ "tipo": "colonna", "a": 32, "b": 24 }`: moltiplicazione in colonna guidata, il bambino scrive le cifre con un tastierino; i riporti compaiono da soli.
+- Addizione in colonna di 2ª (somma fino a 99, con o senza cambio): in una sezione `"animazione": { "tipo": "addizione", "a": 27, "b": 15 }` (cubetti + colonna, il cambio di 10 unità in 1 decina e il riporto); esercizio `{ "tipo": "addizione", "a": 27, "b": 15 }` con il tastierino, il riporto compare da solo.
+- Scena di scienze `"scena": "seme"`: dal seme di fagiolo alla pianta con fiore e frutto.
 - Codice: `assets/animazioni.js`.
 
 ## Verifiche da stampare
