@@ -482,7 +482,7 @@
       const a = b.dataset.c;
       if (a === "d+" && d < 10) d++;
       if (a === "d-" && d > 0) d--;
-      if (a === "u+") { u++; if (u === 10) { u = 0; d++; Voce.parla("10 unità fanno una decina!"); } }
+      if (a === "u+") { u++; if (u === 10) { u = 0; d++; Voce.parla("10 unità fanno una decina!", null, { scritte: false }); } }
       if (a === "u-" && u > 0) u--;
       if (a !== "ok") { disegna(); return; }
       if (d * 10 + u === n) esito.ok();
@@ -581,7 +581,7 @@
       const q = b.dataset.q;
       if (q === "d" && col < 3) { testo += "0"; col++; Suono?.clic?.(); }
       else if (q === "s" && col > 0) {
-        if (!testo.endsWith("0") || testo.length === 1) { Voce.parla("Qui non c'è uno zero da togliere."); return; }
+        if (!testo.endsWith("0") || testo.length === 1) { Voce.parla("Qui non c'è uno zero da togliere.", null, { scritte: false }); return; }
         testo = testo.slice(0, -1); col--;
       }
       if (q !== "ok") { disegna(); return; }
@@ -669,6 +669,7 @@
   function esercizioLeggiTabella(e, c, esito, intestazione) {
     const L = leggiTabella(e.n, e.da, e.a), i0 = col6(e.da), t = L.t;
     let fase = 1;
+    const soloNumero = L.cifre.map((x, i) => (i > i0 ? "" : x));
     const sbagli = [L.testo];
     const alt = (x) => { const v = Number(x.replace(/\s/g, "").replace(",", ".")); return [v * 10, v / 10].map((y) => migliaia(String(+y.toFixed(6)).replace(".", ",").replace(/^(\d+)/, (m) => m))); };
     const opzioni = mescola([L.testo, ...alt(L.testo).filter((x) => !sbagli.includes(x))].slice(0, 3));
@@ -680,11 +681,12 @@
     const svg = c.querySelector(".lt-tabella"), fase_ = c.querySelector(".lt-fase"), ris = c.querySelector(".eq-ris"), ops = c.querySelector(".lt-opzioni");
     const disegna = () => {
       if (fase === 1) { svg.innerHTML = tabella6SVG({ cliccabile: true }); const nn = String(e.n); fase_.innerHTML = nn.length > 1 ? `1️⃣ Tocca la casella <b>${e.da}</b>: lì va l'ultima cifra del ${nn}, cioè il ${nn.slice(-1)}.` : `1️⃣ Tocca la casella <b>${e.da}</b>: lì va il ${nn}.`; }
-      if (fase === 2) { svg.innerHTML = tabella6SVG({ cliccabile: true, cifre: L.cifre, scuri: [i0] }); fase_.innerHTML = `2️⃣ Vuoi sapere quante <b>${e.a}</b>. Tocca la casella fino a cui leggere.`; }
+      // Fase 2: solo le cifre del numero, senza zeri (gli zeri arrivano dopo, fino alla casella scelta).
+      if (fase === 2) { svg.innerHTML = tabella6SVG({ cliccabile: true, cifre: soloNumero, scuri: [i0] }); fase_.innerHTML = `2️⃣ Vuoi sapere quante <b>${e.a}</b>. Tocca la casella <b>${e.a}</b>: leggerai fino a lì.`; }
       if (fase === 3) {
-        const cifre = L.cifre.map((x, i) => (i >= t && i < L.prima ? "0" : x));
-        const spente = cifre.map((_, i) => i).filter((i) => i > t + L.decimale.length);
-        svg.innerHTML = tabella6SVG({ cifre, evid: t, spente }) + graffa(Math.min(t, L.prima), t) + (L.decimale ? virgola(t) : "");
+        // Zeri solo fino alla casella scelta: dopo non scrivo niente, così si legge subito il risultato.
+        const cifre = L.cifre.map((x, i) => (i >= t && i < L.prima ? "0" : i > t && i > i0 ? "" : x));
+        svg.innerHTML = tabella6SVG({ cifre, evid: t }) + graffa(Math.min(t, L.prima), t) + (L.decimale ? virgola(t) : "");
         fase_.innerHTML = `3️⃣ Leggi le cifre${L.decimale ? " e ricorda la virgola" : ""}. Quanto fa?`; ops.hidden = false;
       }
     };
@@ -693,7 +695,7 @@
       const g = ev.target.closest("[data-col]");
       if (!g || c.classList.contains("risolto")) return;
       const i = +g.dataset.col;
-      if (fase === 1 && i === i0) { fase = 2; Suono.giusto(); disegna(); leggi(`Bene! Riempio con gli zeri fino alle unità.`); }
+      if (fase === 1 && i === i0) { fase = 2; Suono.giusto(); disegna(); Voce.parla("Bene! Ora scegli fino a quale casella leggere.", null, { scritte: false }); }
       else if (fase === 2 && i === t) { fase = 3; Suono.giusto(); disegna(); }
       else { e.suggerimento = fase === 1 ? `Cerca la casella ${e.da}.` : `Cerca la casella ${e.a}: leggi fino a lì.`; esito.ko(g); }
     });

@@ -146,7 +146,7 @@
         vite--; t.classList.add("no"); disegna(); esito.ko();
         if (vite === 0) {
           c.querySelector(".parola-nascosta").innerHTML = [...parola].map((x) => `<span class="casella-l rivelata">${x === " " ? "" : x}</span>`).join("");
-          Voce.parla(`La parola era ${parola.toLowerCase()}. Riproviamo!`);
+          Voce.parla(`La parola era ${parola.toLowerCase()}. Riproviamo!`, null, { scritte: false });
           setTimeout(reset, 3500);
         }
       }

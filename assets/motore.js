@@ -97,7 +97,8 @@
     radice.addEventListener("click", (ev) => {
       const b = ev.target.closest("button");
       if (!b) return;
-      if (b.dataset.leggi) leggi(b.dataset.leggi);
+      // Negli esercizi la voce legge senza il riquadro al centro, che coprirebbe le risposte.
+      if (b.dataset.leggi) Voce.parla(b.dataset.leggi, null, b.closest(".esercizio") ? { scritte: false } : {});
       if (b.classList.contains("carta-scopri")) { b.classList.toggle("girata"); if (b.classList.contains("girata")) leggi(Figura.dividi(b.dataset.retro).testo); }
       if (b.hasAttribute("data-svela")) { const r = b.nextElementSibling; r.hidden = false; b.hidden = true; leggi(r.textContent); }
       if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
