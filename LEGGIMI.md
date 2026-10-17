@@ -44,6 +44,7 @@ Si va avanti con le frecce sullo schermo, con le frecce della tastiera o con un 
 - Il formato è in `assets/verifica.js` (tipi: scelta, vero_falso, completa, collega, ordina, calcolo, conta, classifica, risposta, disegna).
 - `domande_facilitate` è la versione per BES/DSA. Il pulsante "Soluzioni" mostra le risposte in rosso (copia dell'insegnante).
 - Si creano nell'area insegnante, scheda "📝 Crea una verifica".
+- **Verifica online** (`verifica.html?file=…&modo=online`, pulsante "💻 Online, con correzione"): le stesse domande diventano interattive (crocette, V/F, caselle da scrivere, tendine per collega e classifica, numeri per ordina/calcolo/conta). "✅ Correggi" colora in verde/rosso, mostra la risposta giusta, il punteggio, le stelle e il livello. Le parole scritte valgono anche senza accenti e maiuscole (e basta la prima parola: "membrana" per "membrana cellulare"). `risposta` la corregge la maestra, `disegna` si fa su carta. Codice: `assets/verifica-online.js`.
 
 ## Giochi, storia e album
 Giochi (campo `tipo` negli esercizi): `memory` (coppie), `bucato` (testo con [parole] e distrattori), `crucipuzzle` (parole), `indovina` (parola, indizio), `intruso` (elementi, intruso), `acchiappa` (giusti, sbagliati, quanti), `mescolata` (parola, sillabe con "-").
