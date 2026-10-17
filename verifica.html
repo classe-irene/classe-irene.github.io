@@ -14,6 +14,7 @@
 <script src="assets/emoji-elenco.js"></script>
 <script src="assets/comune.js"></script>
 <script src="assets/verifica.js"></script>
+<script src="assets/verifica-online.js"></script>
 </head>
 <body class="pagina-verifica">
 <main class="contenitore">
@@ -21,6 +22,10 @@
     <div class="v-gruppo" role="group" aria-label="Versione">
       <button class="btn" data-versione="standard">📄 Standard</button>
       <button class="btn bianco" data-versione="facilitata">🌈 Facilitata (BES/DSA)</button>
+    </div>
+    <div class="v-gruppo" role="group" aria-label="Modo">
+      <button class="btn" data-modo="carta">🖨️ Su carta</button>
+      <button class="btn bianco" data-modo="online">💻 Online, con correzione</button>
     </div>
     <div class="v-gruppo">
       <button class="btn bianco" data-cambia="maiuscolo">🔠 MAIUSCOLO</button>
@@ -56,18 +61,28 @@
     const comandi = document.getElementById("comandi");
     comandi.hidden = false;
     if (!ha.facilitata) comandi.querySelector('[data-versione="facilitata"]').title = "Questa verifica non ha la versione facilitata: uso caratteri grandi e maiuscolo.";
+    let modo = p.modo === "online" ? "online" : "carta";
     function mostra() {
-      radice.innerHTML = Verifica.disegna(v, { versione });
+      radice.innerHTML = modo === "online" ? VerificaOnline.disegna(v, { versione }) : Verifica.disegna(v, { versione });
+      comandi.querySelectorAll("[data-modo]").forEach((b) => b.classList.toggle("bianco", b.dataset.modo !== modo));
+      document.body.classList.toggle("online", modo === "online");
       comandi.querySelectorAll("[data-versione]").forEach((b) => b.classList.toggle("bianco", b.dataset.versione !== versione));
       // La versione facilitata è sempre più leggibile: caratteri grandi.
       document.body.classList.toggle("facilitata", versione === "facilitata");
-      if (document.body.classList.contains("modifica")) radice.querySelector(".foglio").contentEditable = "true";
+      if (modo === "carta" && document.body.classList.contains("modifica")) radice.querySelector(".foglio").contentEditable = "true";
     }
     mostra();
+    VerificaOnline.attiva(radice);
+    radice.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-vo]");
+      if (b?.dataset.vo === "correggi") VerificaOnline.correggi(radice, v, { versione });
+      if (b?.dataset.vo === "ancora") { mostra(); scrollTo({ top: 0, behavior: "smooth" }); }
+    });
     comandi.addEventListener("click", (ev) => {
       const b = ev.target.closest("button");
       if (!b) return;
       if (b.dataset.versione) { versione = b.dataset.versione; mostra(); }
+      if (b.dataset.modo) { modo = b.dataset.modo; mostra(); }
       if (b.dataset.cambia) {
         const on = document.body.classList.toggle(b.dataset.cambia);
         b.classList.toggle("bianco", !on);
