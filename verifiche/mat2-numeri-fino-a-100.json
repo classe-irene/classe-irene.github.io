@@ -4,28 +4,28 @@
   "materia": "matematica",
   "classe": 2,
   "obiettivi": [
-    "leggere e scrivere i numeri fino a 100",
+    "contare, leggere e scrivere i numeri fino a 100",
     "riconoscere decine e unità",
     "confrontare e ordinare i numeri",
-    "eseguire addizioni e sottrazioni"
+    "trovare il numero prima e dopo"
   ],
-  "consegna": "Leggi bene ogni domanda. Hai tutto il tempo che ti serve.",
+  "consegna": "Leggi con calma ogni domanda. Hai tutto il tempo che ti serve.",
   "domande": [
     {
       "tipo": "conta",
-      "immagine": "🍎",
-      "testo": "Conta le mele.",
-      "figura": "🍎",
+      "immagine": "🍬",
+      "testo": "Conta le caramelle di Pina.",
+      "figura": "🍬",
       "numero": 14
     },
     {
       "tipo": "scelta",
-      "immagine": "🧱",
+      "immagine": "📦",
       "testo": "Nel numero 47, quante decine ci sono?",
       "opzioni": [
-        "4",
-        "7",
-        "47"
+        "📦 4",
+        "📦 7",
+        "📦 47"
       ],
       "corretta": 0
     },
@@ -33,27 +33,34 @@
       "tipo": "completa",
       "immagine": "✏️",
       "testo": "Completa.",
-      "frase": "35 = ___ decine e ___ unità",
+      "frase": "35 = ___ decine e ___ unità. Prima di 60 c'è ___. Dopo 79 c'è ___.",
       "soluzioni": [
         "3",
-        "5"
+        "5",
+        "59",
+        "80"
       ]
     },
     {
       "tipo": "vero_falso",
       "immagine": "⚖️",
+      "testo": "Vero o falso?",
       "affermazioni": [
         {
-          "testo": "58 è maggiore di 85",
+          "testo": "58 è più grande di 85.",
           "vero": false
         },
         {
-          "testo": "40 viene dopo 39",
+          "testo": "40 viene dopo 39.",
           "vero": true
         },
         {
-          "testo": "100 è uguale a 10 decine",
+          "testo": "100 è uguale a 10 decine.",
           "vero": true
+        },
+        {
+          "testo": "Nel numero 26 il 6 vale 6 decine.",
+          "vero": false
         }
       ]
     },
@@ -62,11 +69,11 @@
       "immagine": "🪜",
       "testo": "Metti in ordine dal più piccolo al più grande.",
       "elementi": [
-        "12",
-        "29",
-        "56",
-        "73",
-        "91"
+        "🍬 12",
+        "🍬 29",
+        "🍬 56",
+        "🍬 73",
+        "🍬 91"
       ]
     },
     {
@@ -89,55 +96,99 @@
         [
           "15",
           "quindici"
+        ],
+        [
+          "43",
+          "quarantatré"
         ]
       ]
     },
     {
       "tipo": "calcolo",
-      "immagine": "➕",
-      "testo": "Esegui i calcoli.",
+      "immagine": "🧱",
+      "testo": "Componi il numero: decine più unità.",
       "operazioni": [
         {
-          "testo": "23 + 14",
-          "risultato": 37
+          "testo": "30 + 5",
+          "risultato": 35
         },
         {
-          "testo": "40 + 30",
+          "testo": "60 + 8",
+          "risultato": 68
+        },
+        {
+          "testo": "90 + 9",
+          "risultato": 99
+        },
+        {
+          "testo": "70 + 0",
           "risultato": 70
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🐊",
+      "testo": "Più piccolo o più grande di 50? Scrivi ogni numero nella colonna giusta.",
+      "categorie": [
+        "🐭 Meno di 50",
+        "🐘 Più di 50"
+      ],
+      "elementi": [
+        {
+          "testo": "🍬 27",
+          "categoria": "🐭 Meno di 50"
         },
         {
-          "testo": "68 − 25",
-          "risultato": 43
+          "testo": "🍬 49",
+          "categoria": "🐭 Meno di 50"
         },
         {
-          "testo": "90 − 50",
-          "risultato": 40
+          "testo": "🍬 8",
+          "categoria": "🐭 Meno di 50"
+        },
+        {
+          "testo": "🍬 61",
+          "categoria": "🐘 Più di 50"
+        },
+        {
+          "testo": "🍬 94",
+          "categoria": "🐘 Più di 50"
+        },
+        {
+          "testo": "🍬 52",
+          "categoria": "🐘 Più di 50"
         }
       ]
     },
     {
       "tipo": "risposta",
-      "immagine": "🚌",
-      "testo": "Sul pulmino ci sono 32 bambini. Salgono 15 bambini. Quanti bambini ci sono adesso? Scrivi l'operazione e la risposta.",
+      "immagine": "👩‍🍳",
+      "testo": "Pina ha 4 pacchi da 10 caramelle e 6 caramelle sciolte. Quante caramelle ha? Spiega come hai fatto.",
       "righe": 3,
-      "soluzione": "32 + 15 = 47. Adesso ci sono 47 bambini."
+      "soluzione": "4 decine e 6 unità: 46 caramelle. 10, 20, 30, 40 e poi 41, 42, 43, 44, 45, 46."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il numero 35 con barrette da 10 e cubetti da 1."
     }
   ],
   "domande_facilitate": [
     {
       "tipo": "conta",
-      "immagine": "🍎",
-      "testo": "Conta le mele.",
-      "figura": "🍎",
+      "immagine": "🍬",
+      "testo": "Conta le caramelle.",
+      "figura": "🍬",
       "numero": 8
     },
     {
       "tipo": "scelta",
-      "immagine": "🧱",
+      "immagine": "📦",
       "testo": "Quante decine ci sono in 40?",
       "opzioni": [
-        "4",
-        "40"
+        "📦 4",
+        "📦 40"
       ],
       "corretta": 0
     },
@@ -149,18 +200,24 @@
       "soluzioni": [
         "2",
         "3"
+      ],
+      "parole": [
+        "2",
+        "3",
+        "5"
       ]
     },
     {
       "tipo": "vero_falso",
       "immagine": "⚖️",
+      "testo": "Vero o falso?",
       "affermazioni": [
         {
-          "testo": "20 viene dopo 19",
+          "testo": "20 viene dopo 19.",
           "vero": true
         },
         {
-          "testo": "5 è maggiore di 50",
+          "testo": "5 è più grande di 50.",
           "vero": false
         }
       ]
@@ -170,36 +227,36 @@
       "immagine": "🪜",
       "testo": "Dal più piccolo al più grande.",
       "elementi": [
-        "10",
-        "20",
-        "30"
+        "🍬 10",
+        "🍬 20",
+        "🍬 30"
       ]
     },
     {
       "tipo": "calcolo",
-      "immagine": "➕",
-      "testo": "Esegui i calcoli.",
+      "immagine": "🧱",
+      "testo": "Componi il numero.",
       "operazioni": [
         {
-          "testo": "20 + 10",
-          "risultato": 30
+          "testo": "20 + 3",
+          "risultato": 23
         },
         {
-          "testo": "15 + 3",
+          "testo": "40 + 5",
+          "risultato": 45
+        },
+        {
+          "testo": "10 + 8",
           "risultato": 18
-        },
-        {
-          "testo": "30 − 10",
-          "risultato": 20
         }
       ]
     },
     {
       "tipo": "risposta",
-      "immagine": "🚌",
-      "testo": "Ci sono 10 bambini. Salgono 5 bambini. Quanti sono adesso?",
+      "immagine": "👩‍🍳",
+      "testo": "Pina ha 2 pacchi da 10 caramelle e 3 caramelle sciolte. Quante caramelle ha?",
       "righe": 2,
-      "soluzione": "10 + 5 = 15"
+      "soluzione": "2 decine e 3 unità: 23 caramelle."
     }
   ]
 }

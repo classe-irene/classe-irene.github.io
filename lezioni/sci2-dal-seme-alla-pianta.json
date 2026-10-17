@@ -4,36 +4,31 @@
   "materia": "scienze",
   "classe": 2,
   "introduzione": "Un seme piccolo piccolo diventa una pianta. Come fa?",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao bambini! Sono Tina, la contadina.\nHo un orto pieno di piante.\nOggi ho un sacchetto di semi da piantare!",
+    "immagini": ["🫘 semi", "🌱 piantine", "🥕 orto"],
+    "missione": "Aiutate Tina a far nascere le piantine. Alla fine vincete la figurina del germoglio!"
+  },
+  "premio": "🌱",
+  "parole_chiave": ["🫘 seme", "🌱 germoglio", "👇 radice", "👆 fusto", "🍃 foglia", "🌸 fiore", "🫛 frutto"],
   "sezioni": [
     {
       "titolo": "🫘 Il seme",
       "immagine": "🫘",
-      "testo": "Il seme è piccolo.\nDentro c'è una piantina che dorme.",
-      "immagini": [
-        "🫘 fagiolo",
-        "🌰 castagna",
-        "🥜 arachide"
-      ],
+      "testo": "Il seme è piccolo.\nDentro c'è una piantina che dorme.\nCi sono semi di tante forme.",
+      "immagini": ["🫘 fagiolo", "🌰 castagna", "🥜 arachide"],
       "pensa": {
         "domanda": "Dove trovi i semi a casa?",
         "risposta": "Nella frutta! Nella mela, nell'arancia, nell'anguria… e nei fagioli."
       }
     },
     {
-      "titolo": "💧 Che cosa serve?",
+      "titolo": "💧 Il seme si sveglia",
       "immagine": "💧",
-      "testo": "Per svegliarsi, il seme ha bisogno di acqua, aria e un po' di caldo.",
-      "immagini": [
-        "💧 acqua",
-        "🌬️ aria",
-        "🌡️ caldo"
-      ],
-      "curiosita": "Quando il seme si apre e nasce la piantina, si dice che germoglia. 🌱"
-    },
-    {
-      "titolo": "🎬 Il seme germoglia",
-      "immagine": "🎬",
-      "testo": "Guarda il video: che cosa esce per prima?",
+      "testo": "Per svegliarsi, il seme ha bisogno di tre cose:\nacqua, aria e un po' di caldo.\nAllora il seme germoglia.\nGuarda il video: che cosa esce per prima?",
+      "immagini": ["💧 acqua", "🌬️ aria", "🌡️ caldo", "🌱 germoglio"],
+      "curiosita": "Quando il seme si apre e nasce la piantina, si dice che germoglia. 🌱",
       "animazione": {
         "tipo": "scena",
         "scena": "seme",
@@ -45,43 +40,21 @@
       "titolo": "🌿 Le parti della pianta",
       "immagine": "🌿",
       "testo": "La radice va giù e beve l'acqua.\nIl fusto va su e tiene la pianta.\nLe foglie prendono la luce.",
-      "immagini": [
-        "👇 radice",
-        "👆 fusto",
-        "🍃 foglie"
-      ],
+      "immagini": ["👇 radice", "👆 fusto", "🍃 foglie"],
       "scopri": [
-        {
-          "fronte": "❓ 👇 Radice",
-          "retro": "Va giù, nella terra. Beve l'acqua."
-        },
-        {
-          "fronte": "❓ 👆 Fusto",
-          "retro": "Va su, verso la luce. Tiene su la pianta."
-        },
-        {
-          "fronte": "❓ 🍃 Foglie",
-          "retro": "Prendono la luce del sole."
-        }
+        { "fronte": "👇 Radice", "retro": "💧 Va giù, nella terra. Beve l'acqua." },
+        { "fronte": "👆 Fusto", "retro": "☀️ Va su, verso la luce. Tiene su la pianta." },
+        { "fronte": "🍃 Foglie", "retro": "🌞 Prendono la luce del sole." }
       ]
     },
     {
       "titolo": "🧪 Il fagiolo nel barattolo",
       "immagine": "🧪",
-      "testo": "Facciamo nascere un fagiolo in classe!",
-      "immagini": [
-        "🫘 fagiolo",
-        "🫙 barattolo",
-        "🧻 carta"
-      ],
+      "testo": "Facciamo nascere un fagiolo in classe!\nCi servono un fagiolo, un barattolo e la carta.",
+      "immagini": ["🫘 fagiolo", "🫙 barattolo", "🧻 carta"],
       "esperimento": {
         "titolo": "Proviamo in classe: il fagiolo nel barattolo",
-        "materiali": [
-          "🫘 fagioli secchi",
-          "🫙 barattolo di vetro",
-          "🧻 carta assorbente",
-          "💧 acqua"
-        ],
+        "materiali": ["🫘 fagioli secchi", "🫙 barattolo di vetro", "🧻 carta assorbente", "💧 acqua"],
         "passi": [
           "🧻 Bagna la carta e mettila nel barattolo.",
           "🫘 Metti il fagiolo tra la carta e il vetro.",
@@ -96,239 +69,56 @@
       "titolo": "🌸 Fiori, frutti e semi nuovi",
       "immagine": "🌸",
       "testo": "La pianta cresce e fa i fiori.\nDal fiore nasce il frutto.\nNel frutto ci sono semi nuovi!",
-      "immagini": [
-        "🌸 fiore",
-        "🫛 frutto",
-        "🫘 semi nuovi"
-      ],
+      "immagini": ["🌸 fiore", "🫛 frutto", "🫘 semi nuovi"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il viaggio ricomincia",
+        "passi": [
+          { "figure": "🌱 → 🪴", "testo": "La piantina cresce." },
+          { "figure": "🪴 → 🌸", "testo": "La pianta fa i fiori." },
+          { "figure": "🌸 → 🫛", "testo": "Dal fiore nasce il frutto." },
+          { "figure": "🫛 → 🫘", "testo": "Nel frutto ci sono semi nuovi!" },
+          { "figure": "🫘 → 🌱", "testo": "Il seme nuovo germoglia: il viaggio ricomincia." }
+        ]
+      },
       "pensa": {
         "domanda": "Che cosa succede se piantiamo i semi nuovi?",
         "risposta": "Nascono altre piante! Il viaggio ricomincia."
       }
     }
   ],
-  "parole_chiave": [
-    "🫘 seme",
-    "🌱 germoglio",
-    "👇 radice",
-    "👆 fusto",
-    "🍃 foglia",
-    "🌸 fiore",
-    "🫛 frutto"
-  ],
   "esercizi": [
-    {
-      "tipo": "scelta",
-      "immagine": "🫘",
-      "domanda": "Che cosa c'è dentro il seme?",
-      "opzioni": [
-        "🌱 Una piantina",
-        "🪨 Un sasso",
-        "💧 L'acqua"
-      ],
-      "corretta": 0,
-      "spiegazione": "Nel seme dorme una piccola pianta."
-    },
-    {
-      "tipo": "ordina",
-      "immagine": "🪜",
-      "domanda": "Metti in ordine: come nasce la pianta?",
-      "elementi": [
-        "🫘 Il seme",
-        "🌱 Il germoglio",
-        "🪴 La piantina",
-        "🌸 La pianta con i fiori"
-      ]
-    },
-    {
-      "tipo": "vero_falso",
-      "immagine": "👇",
-      "affermazione": "La radice va verso il cielo.",
-      "corretta": false,
-      "spiegazione": "La radice va giù, nella terra."
-    },
-    {
-      "tipo": "abbina",
-      "immagine": "🔗",
-      "domanda": "Unisci la parte a quello che fa.",
-      "coppie": [
-        [
-          "👇 Radice",
-          "💧 beve l'acqua"
-        ],
-        [
-          "👆 Fusto",
-          "🌿 tiene su la pianta"
-        ],
-        [
-          "🍃 Foglie",
-          "☀️ prendono la luce"
-        ]
-      ]
-    },
-    {
-      "tipo": "categorie",
-      "immagine": "⚖️",
-      "domanda": "Che cosa serve al seme per germogliare?",
-      "categorie": [
-        "✅ Serve",
-        "❌ Non serve"
-      ],
-      "elementi": [
-        {
-          "testo": "💧 acqua",
-          "categoria": "✅ Serve"
-        },
-        {
-          "testo": "🌬️ aria",
-          "categoria": "✅ Serve"
-        },
-        {
-          "testo": "🌡️ caldo",
-          "categoria": "✅ Serve"
-        },
-        {
-          "testo": "🍬 caramelle",
-          "categoria": "❌ Non serve"
-        },
-        {
-          "testo": "📺 televisione",
-          "categoria": "❌ Non serve"
-        },
-        {
-          "testo": "🧸 orsetto",
-          "categoria": "❌ Non serve"
-        }
-      ]
-    },
-    {
-      "tipo": "scelta",
-      "immagine": "🎬",
-      "domanda": "Che cosa esce per prima dal seme?",
-      "opzioni": [
-        "👇 La radice",
-        "🌸 Il fiore",
-        "🫛 Il frutto"
-      ],
-      "corretta": 0,
-      "spiegazione": "Prima la radice, poi il fusto."
-    },
-    {
-      "tipo": "acchiappa",
-      "immagine": "🐹",
-      "domanda": "Acchiappa solo i semi!",
-      "giusti": [
-        "🫘 fagiolo",
-        "🌰 castagna",
-        "🥜 arachide",
-        "🫛 piselli"
-      ],
-      "sbagliati": [
-        "🪨 sasso",
-        "🧸 orsetto",
-        "⚽ pallone",
-        "🔑 chiave",
-        "🧦 calzino"
-      ],
-      "quanti": 4
-    },
-    {
-      "tipo": "completa",
-      "immagine": "💧",
-      "domanda": "Completa.",
-      "testo": "Per germogliare il seme ha bisogno di [acqua].",
-      "distrattori": [
-        "sabbia"
-      ]
-    },
-    {
-      "tipo": "memory",
-      "immagine": "🧠",
-      "domanda": "Memory: trova la figura e il suo nome.",
-      "coppie": [
-        [
-          "🫘",
-          "seme"
-        ],
-        [
-          "🌱",
-          "germoglio"
-        ],
-        [
-          "🌸",
-          "fiore"
-        ],
-        [
-          "🫛",
-          "frutto"
-        ]
-      ]
-    },
-    {
-      "tipo": "mescolata",
-      "immagine": "🔤",
-      "domanda": "Rimetti in ordine le sillabe.",
-      "parola": "RA-DI-CE",
-      "indizio": "👇 Va giù, nella terra"
-    },
-    {
-      "tipo": "vero_falso",
-      "immagine": "🌸",
-      "affermazione": "Dal fiore nasce il frutto.",
-      "corretta": true,
-      "spiegazione": "Sì! E nel frutto ci sono i semi nuovi."
-    },
-    {
-      "tipo": "scelta",
-      "immagine": "🏜️",
-      "domanda": "Il seme è all'asciutto, senza acqua. Che cosa succede?",
-      "opzioni": [
-        "🌱 Germoglia subito",
-        "😴 Resta a dormire"
-      ],
-      "corretta": 1,
-      "spiegazione": "Senza acqua il seme non si sveglia."
-    },
-    {
-      "tipo": "intruso",
-      "immagine": "🔍",
-      "domanda": "Chi non è una parte della pianta?",
-      "elementi": [
-        "👇 radice",
-        "👆 fusto",
-        "🍃 foglia",
-        "🪨 sasso"
-      ],
-      "intruso": 3,
-      "spiegazione": "Il sasso non è una parte della pianta."
-    },
-    {
-      "tipo": "bucato",
-      "immagine": "👨‍🌾",
-      "domanda": "Completa il testo bucato di nonno Gino.",
-      "testo": "Il seme beve l'[acqua] e si apre.\nPrima esce la [radice], che va giù.\nPoi esce il [fusto], che va su.",
-      "distrattori": [
-        "fiore",
-        "sasso"
-      ]
-    }
+    { "tipo": "scelta", "immagine": "🫘", "domanda": "Che cosa c'è dentro il seme?", "opzioni": ["🌱 Una piantina", "🪨 Un sasso", "💧 L'acqua"], "corretta": 0, "spiegazione": "Nel seme dorme una piccola pianta." },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Metti in ordine: come nasce la pianta?", "elementi": ["🫘 Il seme", "🌱 Il germoglio", "🪴 La piantina", "🌸 La pianta con i fiori"] },
+    { "tipo": "vero_falso", "immagine": "👇", "affermazione": "La radice va verso il cielo.", "corretta": false, "spiegazione": "La radice va giù, nella terra." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci la parte a quello che fa.", "coppie": [["👇 Radice", "💧 beve l'acqua"], ["👆 Fusto", "🌿 tiene su la pianta"], ["🍃 Foglie", "☀️ prendono la luce"]] },
+    { "tipo": "categorie", "immagine": "⚖️", "domanda": "Che cosa serve al seme per germogliare?", "categorie": ["✅ Serve", "❌ Non serve"], "elementi": [{ "testo": "💧 acqua", "categoria": "✅ Serve" }, { "testo": "🌬️ aria", "categoria": "✅ Serve" }, { "testo": "🌡️ caldo", "categoria": "✅ Serve" }, { "testo": "🍬 caramelle", "categoria": "❌ Non serve" }, { "testo": "📺 televisione", "categoria": "❌ Non serve" }, { "testo": "🧸 orsetto", "categoria": "❌ Non serve" }] },
+    { "tipo": "scelta", "immagine": "🎬", "domanda": "Che cosa esce per prima dal seme?", "opzioni": ["👇 La radice", "🌸 Il fiore", "🫛 Il frutto"], "corretta": 0, "spiegazione": "Prima la radice, poi il fusto." },
+    { "tipo": "acchiappa", "immagine": "🐹", "domanda": "Acchiappa solo i semi!", "giusti": ["🫘 fagiolo", "🌰 castagna", "🥜 arachide", "🫛 piselli"], "sbagliati": ["🪨 sasso", "🧸 orsetto", "⚽ pallone", "🔑 chiave", "🧦 calzino"], "quanti": 4 },
+    { "tipo": "completa", "immagine": "💧", "domanda": "Completa.", "testo": "Per germogliare il seme ha bisogno di [acqua].", "distrattori": ["sabbia"] },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova la figura e la sua frase.", "coppie": [["🫘 seme", "😴 dentro dorme la piantina"], ["🌱 germoglio", "🌤️ la piantina appena nata"], ["🌸 fiore", "🌈 colorato e profumato"], ["🫛 frutto", "🫘 ha dentro i semi"]] },
+    { "tipo": "mescolata", "immagine": "🔤", "domanda": "Rimetti in ordine le sillabe.", "parola": "RA-DI-CE", "indizio": "👇 Va giù, nella terra" },
+    { "tipo": "vero_falso", "immagine": "🌸", "affermazione": "Dal fiore nasce il frutto.", "corretta": true, "spiegazione": "Sì! E nel frutto ci sono i semi nuovi." },
+    { "tipo": "scelta", "immagine": "🏜️", "domanda": "Il seme è all'asciutto, senza acqua. Che cosa succede?", "opzioni": ["🌱 Germoglia subito", "😴 Resta a dormire"], "corretta": 1, "spiegazione": "Senza acqua il seme non si sveglia." },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi non è una parte della pianta?", "elementi": ["👇 radice", "👆 fusto", "🍃 foglia", "🪨 sasso"], "intruso": 3, "spiegazione": "Il sasso non è una parte della pianta." },
+    { "tipo": "bucato", "immagine": "👩‍🌾", "domanda": "Completa il testo bucato di Tina.", "testo": "Il seme beve l'[acqua] e si apre.\nPrima esce la [radice], che va giù.\nPoi esce il [fusto], che va su.", "distrattori": ["fiore", "sasso"] },
+    { "tipo": "scelta", "immagine": "👆", "domanda": "Che cosa fa il fusto?", "opzioni": ["👆 Tiene su la pianta", "💧 Beve l'acqua nella terra", "🌸 Fa il profumo"], "corretta": 0, "spiegazione": "Il fusto va su, verso la luce, e tiene su la pianta." },
+    { "tipo": "vero_falso", "immagine": "🏜️", "affermazione": "Il seme germoglia anche senza acqua.", "corretta": false, "spiegazione": "No: senza acqua il seme resta a dormire." },
+    { "tipo": "categorie", "immagine": "🌿", "domanda": "Sotto la terra o sopra la terra?", "categorie": ["⬇️ Sotto la terra", "⬆️ Sopra la terra"], "elementi": [{ "testo": "👇 radice", "categoria": "⬇️ Sotto la terra" }, { "testo": "🫘 seme piantato", "categoria": "⬇️ Sotto la terra" }, { "testo": "👆 fusto", "categoria": "⬆️ Sopra la terra" }, { "testo": "🍃 foglie", "categoria": "⬆️ Sopra la terra" }, { "testo": "🌸 fiore", "categoria": "⬆️ Sopra la terra" }, { "testo": "🫛 frutto", "categoria": "⬆️ Sopra la terra" }] },
+    { "tipo": "ordina", "immagine": "🫙", "domanda": "Il fagiolo nel barattolo: metti in ordine.", "elementi": ["🧻 bagno la carta", "🫘 metto il fagiolo", "💧 ogni giorno do un po' d'acqua", "👇 esce la radice"] },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci: che cosa succede dopo?", "coppie": [["🫘 il seme beve", "🌱 germoglia"], ["🌸 il fiore", "🫛 diventa frutto"], ["🫛 il frutto", "🫘 ha i semi nuovi"]] },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi non nasce da un seme? Trova l'intruso.", "elementi": ["🌻 girasole", "🍅 pomodoro", "🫘 fagiolo", "🪨 sasso"], "intruso": 3, "spiegazione": "Il sasso non è vivo: non nasce da un seme." },
+    { "tipo": "crucipuzzle", "immagine": "🔎", "domanda": "Crucipuzzle: trova le parti della pianta.", "parole": ["🫘 seme", "👇 radice", "👆 fusto", "🍃 foglia", "🌸 fiore"] },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "SEME", "indizio": "🫘 Dentro dorme una piccola pianta" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "GERMOGLIO", "indizio": "🌱 La piantina appena nata dal seme" }
   ],
-  "storia": {
-    "personaggio": "👨‍🌾",
-    "testo": "Ciao bambini! Sono nonno Gino.\nHo un orto pieno di piante.\nOggi ho un sacchetto di semi da piantare!",
-    "immagini": [
-      "🫘 semi",
-      "🌱 piantine",
-      "🥕 orto"
-    ],
-    "missione": "Aiutate nonno Gino a far nascere le piantine. Alla fine vincete la figurina del germoglio!"
-  },
-  "premio": "🌱",
   "ricorda": [
     "🫘 Nel seme dorme una piccola pianta.",
     "💧 Per germogliare servono acqua, aria e caldo.",
     "👇 Prima esce la radice: va giù.",
     "👆 Poi esce il fusto: va su, verso la luce.",
     "🌸 Dal fiore nasce il frutto, con i semi nuovi."
-  ]
+  ],
+  "verifica": "verifiche/sci2-dal-seme-alla-pianta.json"
 }

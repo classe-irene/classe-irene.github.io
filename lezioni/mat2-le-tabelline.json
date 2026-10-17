@@ -1,0 +1,481 @@
+{
+  "titolo": "Le tabelline",
+  "emoji": "🎶",
+  "materia": "matematica",
+  "classe": 2,
+  "introduzione": "Dalla tabellina del 2 a quella del 10: cantiamole con Viola!",
+  "storia": {
+    "personaggio": "👩‍🎤",
+    "testo": "Ciao bambini! Sono Viola, la cantante.\nIo canto le tabelline come canzoni.\nChi le canta tante volte, le ricorda per sempre!",
+    "immagini": [
+      "🎤 microfono",
+      "🎶 canzone",
+      "✖️ tabelline"
+    ],
+    "missione": "Cantate e giocate con Viola le tabelline dal 2 al 10. Alla fine vincete la figurina del microfono!"
+  },
+  "premio": "🎤",
+  "parole_chiave": [
+    "🎶 tabellina",
+    "✖️ per",
+    "🐸 salti uguali",
+    "🖐️ tabellina del 5",
+    "🔟 tabellina del 10",
+    "🔄 scambio",
+    "🟰 prodotto"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🎶 Che cos'è una tabellina",
+      "immagine": "🐸",
+      "testo": "Una tabellina è una fila di moltiplicazioni.\nLa rana salta di 2 in 2: 2, 4, 6, 8, 10.\nÈ la tabellina del 2: 1 × 2, 2 × 2, 3 × 2…",
+      "immagini": [
+        "🐸 rana",
+        "🦘 salti da 2",
+        "🎶 2, 4, 6, 8, 10"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la tabellina del 2",
+        "passi": [
+          {
+            "figure": "🐸 2️⃣",
+            "testo": "La rana salta di 2 in 2. Primo salto: 2. 1 × 2 = 2."
+          },
+          {
+            "figure": "🐸 4️⃣",
+            "testo": "Secondo salto: 4. 2 × 2 = 4."
+          },
+          {
+            "figure": "🐸 6️⃣",
+            "testo": "Terzo salto: 6. 3 × 2 = 6."
+          },
+          {
+            "figure": "🐸 8️⃣",
+            "testo": "Quarto salto: 8. 4 × 2 = 8."
+          },
+          {
+            "figure": "🐸 🔟",
+            "testo": "Quinto salto: 10. 5 × 2 = 10."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🖐️ Le tabelline del 5 e del 10",
+      "immagine": "🖐️",
+      "testo": "Ogni mano ha 5 dita: 5, 10, 15, 20…\nNella tabellina del 5 i numeri finiscono con 0 o con 5.\nNella tabellina del 10 basta aggiungere uno 0: 10, 20, 30…",
+      "immagini": [
+        "🖐️ 5 dita",
+        "🖐️🖐️ 10 dita",
+        "🔟 10, 20, 30"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la tabellina del 5",
+        "passi": [
+          {
+            "figure": "🖐️",
+            "testo": "1 mano: 5 dita. 1 × 5 = 5."
+          },
+          {
+            "figure": "🖐️ 🖐️",
+            "testo": "2 mani: 10 dita. 2 × 5 = 10."
+          },
+          {
+            "figure": "🖐️ 🖐️ 🖐️",
+            "testo": "3 mani: 15 dita. 3 × 5 = 15."
+          },
+          {
+            "figure": "🖐️ 🖐️ 🖐️ 🖐️",
+            "testo": "4 mani: 20 dita. 4 × 5 = 20."
+          },
+          {
+            "figure": "🔟 → 2️⃣ 0️⃣",
+            "testo": "Tabellina del 10: 2 × 10 = 20. Basta aggiungere uno 0!"
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "☘️ Le tabelline del 3 e del 4",
+      "immagine": "☘️",
+      "testo": "Il trifoglio ha 3 foglie: 3, 6, 9, 12…\nL'automobile ha 4 ruote: 4, 8, 12, 16…\nConta sempre lo stesso numero di salti.",
+      "immagini": [
+        "☘️ 3 foglie",
+        "🎶 3, 6, 9, 12",
+        "🚗 4 ruote",
+        "🎶 4, 8, 12, 16"
+      ],
+      "scopri": [
+        {
+          "fronte": "☘️ 2 trifogli",
+          "retro": "☘️ 2 × 3 = 6 foglie"
+        },
+        {
+          "fronte": "🚗 3 automobili",
+          "retro": "🛞 3 × 4 = 12 ruote"
+        },
+        {
+          "fronte": "☘️ 4 trifogli",
+          "retro": "☘️ 4 × 3 = 12 foglie"
+        }
+      ]
+    },
+    {
+      "titolo": "🐞 Dal 6 al 9",
+      "immagine": "🐞",
+      "testo": "La coccinella ha 6 zampe: 6, 12, 18…\nLa settimana ha 7 giorni: 7, 14, 21…\nIl ragno ha 8 zampe: 8, 16, 24…\nLa tabellina del 9: 9, 18, 27…",
+      "immagini": [
+        "🐞 6 zampe",
+        "📅 7 giorni",
+        "🕷️ 8 zampe",
+        "🎶 9, 18, 27"
+      ],
+      "pensa": {
+        "domanda": "Quante zampe hanno 2 ragni?",
+        "risposta": "2 × 8 = 16 zampe. Cioè 8 + 8 = 16."
+      }
+    },
+    {
+      "titolo": "🔄 I trucchi delle tabelline",
+      "immagine": "🔄",
+      "testo": "Se scambio i numeri, il prodotto non cambia: 2 × 7 = 7 × 2.\nOgni numero per 1 resta uguale: 7 × 1 = 7.\nOgni numero per 10 prende uno 0: 7 × 10 = 70.",
+      "immagini": [
+        "🔄 2 × 7 = 7 × 2",
+        "1️⃣ 7 × 1 = 7",
+        "🔟 7 × 10 = 70"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 6 × 3",
+          "retro": "🔄 È come 3 × 6: fa 18!"
+        },
+        {
+          "fronte": "❓ 9 × 1",
+          "retro": "1️⃣ Per 1 resta uguale: 9!"
+        },
+        {
+          "fronte": "❓ 4 × 10",
+          "retro": "🔟 Aggiungo uno 0: 40!"
+        }
+      ]
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "ordina",
+      "immagine": "🐸",
+      "domanda": "Metti in ordine la tabellina del 2.",
+      "elementi": [
+        "🐸 2",
+        "🐸 4",
+        "🐸 6",
+        "🐸 8",
+        "🐸 10"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🖐️",
+      "domanda": "Che cosa viene dopo: 5, 10, 15, …?",
+      "opzioni": [
+        "🖐️ 20",
+        "🖐️ 16",
+        "🖐️ 25"
+      ],
+      "corretta": 0,
+      "spiegazione": "Nella tabellina del 5 aggiungo sempre 5: 15 + 5 = 20."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🚗",
+      "domanda": "Ci sono 2 automobili. Quante ruote? Contale.",
+      "oggetto": "🛞",
+      "numero": 8,
+      "spiegazione": "2 × 4 = 8 ruote."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔟",
+      "affermazione": "I numeri della tabellina del 10 finiscono sempre con 0.",
+      "corretta": true,
+      "spiegazione": "Sì! 10, 20, 30, 40…"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la moltiplicazione al prodotto.",
+      "coppie": [
+        [
+          "🖐️ 2 × 5",
+          "🎯 10"
+        ],
+        [
+          "🐸 3 × 2",
+          "🎯 6"
+        ],
+        [
+          "🔟 4 × 10",
+          "🎯 40"
+        ],
+        [
+          "☘️ 3 × 3",
+          "🎯 9"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "☘️",
+      "domanda": "Completa la tabellina del 3.",
+      "testo": "3, 6, [9], 12, [15], 18.",
+      "distrattori": [
+        "10",
+        "14"
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🦘",
+      "domanda": "Il canguro fa 4 salti da 4. Dove arriva? Tocca il numero.",
+      "min": 0,
+      "max": 20,
+      "passo": 1,
+      "corretta": 16
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la moltiplicazione e il prodotto.",
+      "coppie": [
+        [
+          "✖️ 6 × 2",
+          "🎶 12"
+        ],
+        [
+          "✖️ 7 × 5",
+          "🎶 35"
+        ],
+        [
+          "✖️ 8 × 10",
+          "🎶 80"
+        ],
+        [
+          "✖️ 9 × 3",
+          "🎶 27"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "In quale tabellina c'è questo numero?",
+      "categorie": [
+        "🐸 Tabellina del 2",
+        "🖐️ Tabellina del 5"
+      ],
+      "elementi": [
+        {
+          "testo": "🔢 4",
+          "categoria": "🐸 Tabellina del 2"
+        },
+        {
+          "testo": "🔢 8",
+          "categoria": "🐸 Tabellina del 2"
+        },
+        {
+          "testo": "🔢 14",
+          "categoria": "🐸 Tabellina del 2"
+        },
+        {
+          "testo": "🔢 15",
+          "categoria": "🖐️ Tabellina del 5"
+        },
+        {
+          "testo": "🔢 25",
+          "categoria": "🖐️ Tabellina del 5"
+        },
+        {
+          "testo": "🔢 35",
+          "categoria": "🖐️ Tabellina del 5"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🕷️",
+      "domanda": "Il ragno ha 8 zampe. Quante zampe hanno 2 ragni?",
+      "opzioni": [
+        "🕷️ 16",
+        "🕷️ 10",
+        "🕷️ 82"
+      ],
+      "corretta": 0,
+      "spiegazione": "2 × 8 = 16 zampe."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "6 × 3 e 3 × 6 fanno lo stesso.",
+      "corretta": true,
+      "spiegazione": "Sì! Tutti e due fanno 18."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è nella tabellina del 3?",
+      "elementi": [
+        "☘️ 9",
+        "☘️ 12",
+        "☘️ 16",
+        "☘️ 21"
+      ],
+      "intruso": 2,
+      "spiegazione": "16 è nella tabellina del 4 e dell'8, non del 3."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa i numeri della tabellina del 4!",
+      "giusti": [
+        "🚗 12",
+        "🚗 16",
+        "🚗 20",
+        "🚗 24",
+        "🚗 28",
+        "🚗 32"
+      ],
+      "sbagliati": [
+        "🚗 10",
+        "🚗 14",
+        "🚗 18",
+        "🚗 22",
+        "🚗 26",
+        "🚗 30"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🔟",
+      "domanda": "Completa la tabellina del 10.",
+      "testo": "10, 20, [30], 40, [50], 60.",
+      "distrattori": [
+        "35",
+        "70"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📅",
+      "domanda": "La settimana ha 7 giorni. Quanti giorni ci sono in 2 settimane?",
+      "opzioni": [
+        "📅 14",
+        "📅 9",
+        "📅 72"
+      ],
+      "corretta": 0,
+      "spiegazione": "2 × 7 = 14 giorni."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci ogni cosa al suo numero.",
+      "coppie": [
+        [
+          "🐞 coccinella",
+          "🦵 6 zampe"
+        ],
+        [
+          "🕷️ ragno",
+          "🦵 8 zampe"
+        ],
+        [
+          "🚗 automobile",
+          "🛞 4 ruote"
+        ],
+        [
+          "🖐️ mano",
+          "☝️ 5 dita"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "1️⃣",
+      "domanda": "Quanto fa 7 × 1?",
+      "opzioni": [
+        "🎯 7",
+        "🎯 1",
+        "🎯 8"
+      ],
+      "corretta": 0,
+      "spiegazione": "Ogni numero per 1 resta uguale."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔟",
+      "affermazione": "9 × 10 = 90.",
+      "corretta": true,
+      "spiegazione": "Sì! Per 10 aggiungo uno 0."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🎤",
+      "domanda": "Completa il testo bucato di Viola.",
+      "testo": "Nella tabellina del [5] i numeri finiscono con 0 o con 5.\nNella tabellina del [10] si aggiunge uno 0.\nSe scambio i numeri, il prodotto è [uguale].",
+      "distrattori": [
+        "3",
+        "diverso"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✖️",
+      "domanda": "Quale moltiplicazione fa 24?",
+      "opzioni": [
+        "✖️ 6 × 4",
+        "✖️ 5 × 4",
+        "✖️ 6 × 5"
+      ],
+      "corretta": 0,
+      "spiegazione": "6 × 4 = 24. 5 × 4 = 20 e 6 × 5 = 30."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole delle tabelline.",
+      "parole": [
+        "🎶 tabellina",
+        "🔁 volte",
+        "🔟 dieci",
+        "🖐️ cinque"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "TA-BEL-LI-NA",
+      "indizio": "🎶 Una fila di moltiplicazioni, come una canzone"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PRODOTTO",
+      "indizio": "🟰 Il risultato della moltiplicazione"
+    }
+  ],
+  "ricorda": [
+    "🎶 La tabellina è una fila di moltiplicazioni: si conta sempre dello stesso numero.",
+    "🖐️ Nella tabellina del 5 i numeri finiscono con 0 o con 5.",
+    "🔟 Nella tabellina del 10 si aggiunge uno 0.",
+    "🔄 Se scambio i numeri, il prodotto non cambia.",
+    "1️⃣ Ogni numero per 1 resta uguale."
+  ],
+  "verifica": "verifiche/mat2-le-tabelline.json"
+}

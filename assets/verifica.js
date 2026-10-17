@@ -65,7 +65,7 @@
 
   const DISEGNA = {
     scelta: (d) => `<p class="consegna-p">Colora il cerchio della risposta giusta.</p>
-      <div class="v-opzioni">${d.opzioni.map((o, i) => `<div class="v-opzione"><span class="cerchio${i === d.corretta ? " giusto" : ""}"></span>${ric(o)}</div>`).join("")}</div>`,
+      <div class="v-opzioni">${mescolaFisso(d.opzioni.map((o, i) => ({ o, i })), d.testo + "op").map(({ o, i }) => `<div class="v-opzione"><span class="cerchio${i === d.corretta ? " giusto" : ""}"></span>${ric(o)}</div>`).join("")}</div>`,
     vero_falso: (d) => `<p class="consegna-p">Fai una crocetta: V se è vero, F se è falso.</p>
       <table class="v-vf">${d.affermazioni.map((a) => `<tr><td>${ric(a.testo)}</td><td>${casella(a.vero ? sol("X") : "")} V</td><td>${casella(a.vero ? "" : sol("X"))} F</td></tr>`).join("")}</table>`,
     completa: (d, ver) => {

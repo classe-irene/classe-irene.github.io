@@ -1,0 +1,507 @@
+{
+  "titolo": "I cinque sensi",
+  "emoji": "👀",
+  "materia": "scienze",
+  "classe": 1,
+  "introduzione": "Con i cinque sensi scopriamo il mondo.",
+  "storia": {
+    "personaggio": "👧",
+    "testo": "Ciao, sono Sofia!\nOggi vado al parco.\nMangio un gelato buonissimo!",
+    "immagini": [
+      "👧 Sofia",
+      "🌳 parco",
+      "🍦 gelato"
+    ],
+    "missione": "Scopri con Sofia i cinque sensi. Alla fine vinci la figurina degli occhi!"
+  },
+  "premio": "👀",
+  "parole_chiave": [
+    "👀 vista",
+    "👂 udito",
+    "👃 olfatto",
+    "👅 gusto",
+    "✋ tatto"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🖐️ I cinque sensi",
+      "immagine": "🖐️",
+      "testo": "Abbiamo cinque sensi.\nCon gli occhi vedo.\nCon le orecchie sento.\nCon il naso annuso.\nCon la lingua assaggio.\nCon le mani tocco.",
+      "immagini": [
+        "👀 occhi",
+        "👂 orecchie",
+        "👃 naso",
+        "👅 lingua",
+        "✋ mani"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i cinque sensi",
+        "passi": [
+          {
+            "figure": "👀",
+            "testo": "Con gli occhi vedo."
+          },
+          {
+            "figure": "👂",
+            "testo": "Con le orecchie sento."
+          },
+          {
+            "figure": "👃",
+            "testo": "Con il naso annuso."
+          },
+          {
+            "figure": "👅",
+            "testo": "Con la lingua assaggio."
+          },
+          {
+            "figure": "✋",
+            "testo": "Con le mani tocco."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "👀 Vista e udito",
+      "immagine": "👀",
+      "testo": "Con gli occhi vedo i colori.\nCon le orecchie sento i suoni.\nIl tamburo fa un suono forte.\nLa campana fa din don.",
+      "immagini": [
+        "🌈 colori",
+        "👂 suoni",
+        "🥁 tamburo",
+        "🔔 campana"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "vista e udito",
+        "passi": [
+          {
+            "figure": "👀 → 🌈",
+            "testo": "Gli occhi vedono i colori."
+          },
+          {
+            "figure": "👂 → 🎵",
+            "testo": "Le orecchie sentono i suoni."
+          },
+          {
+            "figure": "🥁",
+            "testo": "Il tamburo fa un suono forte."
+          },
+          {
+            "figure": "🔔",
+            "testo": "La campana fa din don."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Chiudi gli occhi. Che cosa senti?",
+        "risposta": "Le voci dei compagni, i passi, il vento… Le orecchie sentono anche a occhi chiusi!"
+      }
+    },
+    {
+      "titolo": "👃 Olfatto e gusto",
+      "immagine": "👃",
+      "testo": "Con il naso sento gli odori.\nIl fiore ha un buon profumo.\nCon la lingua sento i sapori.\nIl miele è dolce.\nIl limone è aspro.",
+      "immagini": [
+        "👃 naso",
+        "🌸 fiore",
+        "👅 lingua",
+        "🍯 miele",
+        "🍋 limone"
+      ],
+      "scopri": [
+        {
+          "fronte": "🍯 Dolce",
+          "retro": "🍬 Come il miele e le caramelle."
+        },
+        {
+          "fronte": "🥨 Salato",
+          "retro": "🍟 Come le patatine."
+        },
+        {
+          "fronte": "🍋 Aspro",
+          "retro": "😖 Come il limone."
+        }
+      ]
+    },
+    {
+      "titolo": "✋ Il tatto",
+      "immagine": "✋",
+      "testo": "Con le mani tocco le cose.\nLa mela è liscia.\nIl sasso è ruvido.\nIl tè è caldo.\nIl ghiaccio è freddo.",
+      "immagini": [
+        "✋ mani",
+        "🍎 liscio",
+        "🪨 ruvido",
+        "☕ caldo",
+        "🧊 freddo"
+      ],
+      "esperimento": {
+        "titolo": "📦 La scatola misteriosa",
+        "materiali": [
+          "📦 una scatola",
+          "🧸 un peluche",
+          "🪨 un sasso",
+          "🧽 una spugna"
+        ],
+        "passi": [
+          "🙈 Chiudi gli occhi.",
+          "✋ Tocca un oggetto nella scatola.",
+          "🗣️ Di' che cosa è."
+        ],
+        "domanda": "Quale senso hai usato?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "👀",
+      "domanda": "Con che cosa vedi?",
+      "opzioni": [
+        "👀 occhi",
+        "👂 orecchie",
+        "👃 naso"
+      ],
+      "corretta": 0,
+      "spiegazione": "Con gli occhi vedo."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👂",
+      "domanda": "Con che cosa senti i suoni?",
+      "opzioni": [
+        "👃 naso",
+        "👂 orecchie",
+        "✋ mani"
+      ],
+      "corretta": 1,
+      "spiegazione": "Con le orecchie sento i suoni."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👃",
+      "affermazione": "Con il naso sento gli odori.",
+      "corretta": true,
+      "spiegazione": "Sì! Il naso annusa."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👂",
+      "affermazione": "Con le orecchie vedo i colori.",
+      "corretta": false,
+      "spiegazione": "No: i colori li vedo con gli occhi."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🌸",
+      "domanda": "Quanti fiori da annusare?",
+      "oggetto": "🌸",
+      "numero": 6,
+      "spiegazione": "Sono 6 fiori!"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'organo a cosa fa.",
+      "coppie": [
+        [
+          "👀 occhi",
+          "🌈 vedo"
+        ],
+        [
+          "👂 orecchie",
+          "🎵 sento"
+        ],
+        [
+          "👃 naso",
+          "🌸 annuso"
+        ],
+        [
+          "👅 lingua",
+          "🍦 assaggio"
+        ],
+        [
+          "✋ mani",
+          "🧸 tocco"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍋",
+      "domanda": "Com'è il limone?",
+      "opzioni": [
+        "🍯 dolce",
+        "🍋 aspro",
+        "🧂 salato"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il limone è aspro!"
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Dolce o salato?",
+      "categorie": [
+        "🍯 Dolce",
+        "🧂 Salato"
+      ],
+      "elementi": [
+        {
+          "testo": "🍦 gelato",
+          "categoria": "🍯 Dolce"
+        },
+        {
+          "testo": "🍬 caramella",
+          "categoria": "🍯 Dolce"
+        },
+        {
+          "testo": "🍰 torta",
+          "categoria": "🍯 Dolce"
+        },
+        {
+          "testo": "🥨 salatino",
+          "categoria": "🧂 Salato"
+        },
+        {
+          "testo": "🍕 pizza",
+          "categoria": "🧂 Salato"
+        },
+        {
+          "testo": "🍟 patatine",
+          "categoria": "🧂 Salato"
+        }
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON fa rumore?",
+      "elementi": [
+        "🥁 tamburo",
+        "🔔 campana",
+        "🎺 tromba",
+        "🪨 sasso"
+      ],
+      "intruso": 3,
+      "spiegazione": "Il sasso sta zitto!"
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🎬",
+      "domanda": "Metti in ordine, come nel video.",
+      "elementi": [
+        "👀 vedo",
+        "👂 sento",
+        "👃 annuso",
+        "👅 assaggio",
+        "✋ tocco"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova l'organo e la cosa.",
+      "coppie": [
+        [
+          "👀 occhi",
+          "🌈 colori"
+        ],
+        [
+          "👂 orecchie",
+          "🎵 musica"
+        ],
+        [
+          "👃 naso",
+          "🌸 profumo"
+        ],
+        [
+          "👅 lingua",
+          "🍭 sapore"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✋",
+      "domanda": "Con che cosa senti se è caldo?",
+      "opzioni": [
+        "👀 occhi",
+        "👂 orecchie",
+        "✋ mani"
+      ],
+      "corretta": 2,
+      "spiegazione": "Con la pelle delle mani sento caldo e freddo."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Liscio o ruvido?",
+      "categorie": [
+        "🍎 Liscio",
+        "🪨 Ruvido"
+      ],
+      "elementi": [
+        {
+          "testo": "🍎 mela",
+          "categoria": "🍎 Liscio"
+        },
+        {
+          "testo": "🎈 palloncino",
+          "categoria": "🍎 Liscio"
+        },
+        {
+          "testo": "🥄 cucchiaio",
+          "categoria": "🍎 Liscio"
+        },
+        {
+          "testo": "🪨 sasso",
+          "categoria": "🪨 Ruvido"
+        },
+        {
+          "testo": "🪵 tronco",
+          "categoria": "🪨 Ruvido"
+        },
+        {
+          "testo": "🍍 ananas",
+          "categoria": "🪨 Ruvido"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "☕",
+      "affermazione": "Con la mano sento che il tè è caldo.",
+      "corretta": true,
+      "spiegazione": "Sì! Il tatto sente caldo e freddo."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Con gli [occhi] vedo. Con il [naso] annuso.",
+      "distrattori": [
+        "piedi",
+        "capelli"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥁",
+      "domanda": "Chi fa un suono forte?",
+      "opzioni": [
+        "🪶 piuma",
+        "🐜 formica",
+        "🥁 tamburo"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il tamburo fa BUM BUM!"
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le cose che hanno un profumo!",
+      "giusti": [
+        "🌸 fiore",
+        "🍕 pizza",
+        "🍓 fragola",
+        "🌹 rosa"
+      ],
+      "sbagliati": [
+        "🌈 arcobaleno",
+        "☁️ nuvola",
+        "🌙 luna",
+        "⭐ stella"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la cosa al senso giusto.",
+      "coppie": [
+        [
+          "🌈 arcobaleno",
+          "👀 vista"
+        ],
+        [
+          "🎵 musica",
+          "👂 udito"
+        ],
+        [
+          "🌸 profumo",
+          "👃 olfatto"
+        ],
+        [
+          "🍦 gelato",
+          "👅 gusto"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un senso?",
+      "elementi": [
+        "👀 vista",
+        "👂 udito",
+        "🏃‍♀️ corsa",
+        "👅 gusto"
+      ],
+      "intruso": 2,
+      "spiegazione": "Correre non è un senso."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "👀 occhi",
+        "👃 naso",
+        "👅 lingua",
+        "✋ mani"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di Sofia.",
+      "testo": "Con la [lingua] sento i sapori.\nIl miele è [dolce].\nCon le [mani] tocco.",
+      "distrattori": [
+        "piedi",
+        "salato"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "LIN-GUA",
+      "indizio": "👅 Sente i sapori"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "OCCHI",
+      "indizio": "👀 Servono per vedere"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "NASO",
+      "indizio": "👃 Sente gli odori"
+    }
+  ],
+  "ricorda": [
+    "🖐️ Abbiamo cinque sensi.",
+    "👀 Con gli occhi vedo.",
+    "👂 Con le orecchie sento.",
+    "👃 Con il naso annuso.",
+    "👅 Con la lingua assaggio.",
+    "✋ Con le mani tocco."
+  ],
+  "verifica": "verifiche/sci1-i-cinque-sensi.json"
+}

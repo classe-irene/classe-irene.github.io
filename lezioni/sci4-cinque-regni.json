@@ -4,11 +4,30 @@
   "materia": "scienze",
   "classe": 4,
   "introduzione": "Gli scienziati dividono i viventi in cinque gruppi. Si chiamano regni.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono l'esploratrice Lia!\nNel mio zaino ho una lente, un microscopio e un quaderno.\nVoglio mettere ogni essere vivente nella sua famiglia: il suo regno.",
+    "immagini": [
+      "🔍 lente",
+      "🔬 microscopio",
+      "📒 quaderno"
+    ],
+    "missione": "Esplorate con Lia i cinque regni dei viventi. Vincete la figurina della lente!"
+  },
+  "premio": "🔍",
+  "parole_chiave": [
+    "🦠 monere",
+    "💧 protisti",
+    "🍄 funghi",
+    "🌳 piante",
+    "🦁 animali",
+    "🌱 fotosintesi"
+  ],
   "sezioni": [
     {
-      "titolo": "Le monere",
+      "titolo": "🦠 Le monere",
       "immagine": "🦠",
-      "testo": "Sono i batteri. Sono piccolissimi.\nSi vedono solo con il microscopio.",
+      "testo": "Sono i batteri. Sono piccolissimi.\nSi vedono solo con il microscopio.\nAlcuni batteri sono buoni: fanno lo yogurt.",
       "immagini": [
         "🔬 microscopio",
         "🥛 yogurt"
@@ -20,34 +39,50 @@
       }
     },
     {
-      "titolo": "I protisti",
+      "titolo": "💧 I protisti",
       "immagine": "💧",
-      "testo": "Sono piccolissimi anche loro.\nVivono quasi tutti nell'acqua.",
+      "testo": "Sono piccolissimi anche loro.\nVivono quasi tutti nell'acqua.\nL'ameba è un protista: cambia sempre forma.",
       "immagini": [
         "🌊 acqua",
         "🦠 ameba"
+      ],
+      "scopri": [
+        {
+          "fronte": "🦠 Ameba",
+          "retro": "💧 Vive nell'acqua. Cambia forma."
+        },
+        {
+          "fronte": "🌊 Alghe piccole",
+          "retro": "☀️ Vivono nel mare. Usano la luce."
+        },
+        {
+          "fronte": "🔬 Microscopio",
+          "retro": "👀 Serve per vedere i protisti."
+        }
       ]
     },
     {
-      "titolo": "I funghi",
+      "titolo": "🍄 I funghi",
       "immagine": "🍄",
-      "testo": "I funghi non sono piante. Non sono verdi.\nAnche la muffa e il lievito sono funghi.",
+      "testo": "I funghi non sono piante. Non sono verdi.\nSi nutrono di foglie e resti morti.\nAnche la muffa e il lievito sono funghi.",
       "immagini": [
         "🍄 fungo",
-        "🍞 muffa del pane"
+        "🍂 foglie",
+        "🍞 muffa del pane",
+        "🍕 lievito"
       ],
       "scopri": [
         {
           "fronte": "🍄 Porcino",
-          "retro": "Fungo: cresce nel bosco."
+          "retro": "🌲 Fungo: cresce nel bosco."
         },
         {
           "fronte": "🍞 Muffa",
-          "retro": "Fungo piccolissimo: cresce sul pane vecchio."
+          "retro": "🔍 Fungo piccolissimo: cresce sul pane vecchio."
         },
         {
           "fronte": "🍕 Lievito",
-          "retro": "Fungo piccolissimo: fa gonfiare la pizza!"
+          "retro": "🎈 Fungo piccolissimo: fa gonfiare la pizza!"
         }
       ]
     },
@@ -89,14 +124,18 @@
       }
     },
     {
-      "titolo": "Le piante",
+      "titolo": "🌳 Le piante",
       "immagine": "🌳",
-      "testo": "Le piante fanno il cibo da sole con la luce del sole.\nCi regalano ossigeno.",
+      "testo": "Le piante fanno il cibo da sole con la luce del sole.\nCi regalano ossigeno.\nAlberi, fiori ed erba sono piante.",
       "immagini": [
         "☀️ luce",
         "🌳 albero",
         "🌻 fiore"
-      ]
+      ],
+      "pensa": {
+        "domanda": "Perché senza le piante noi non potremmo vivere?",
+        "risposta": "Perché le piante ci regalano l'ossigeno che respiriamo. E ci danno frutta e verdura da mangiare."
+      }
     },
     {
       "titolo": "🌱 Come mangia una pianta",
@@ -117,9 +156,9 @@
       }
     },
     {
-      "titolo": "Gli animali",
+      "titolo": "🦁 Gli animali",
       "immagine": "🦁",
-      "testo": "Gli animali mangiano altri viventi.\nQuasi tutti si muovono.",
+      "testo": "Gli animali mangiano altri viventi.\nQuasi tutti si muovono.\nIl leone, l'ape e il pesce sono animali.",
       "immagini": [
         "🦁 leone",
         "🐝 ape",
@@ -142,14 +181,6 @@
       }
     }
   ],
-  "parole_chiave": [
-    "🦠 monere",
-    "💧 protisti",
-    "🍄 funghi",
-    "🌳 piante",
-    "🦁 animali",
-    "🌱 fotosintesi"
-  ],
   "esercizi": [
     {
       "tipo": "categorie",
@@ -165,7 +196,7 @@
           "categoria": "🔬 Serve il microscopio"
         },
         {
-          "testo": "🦠 ameba",
+          "testo": "🌊 ameba",
           "categoria": "🔬 Serve il microscopio"
         },
         {
@@ -374,29 +405,131 @@
       "spiegazione": "Sì! La muffa è un fungo piccolissimo."
     },
     {
+      "tipo": "scelta",
+      "immagine": "🍄",
+      "domanda": "Di che cosa si nutrono i funghi?",
+      "opzioni": [
+        "🍂 di foglie e resti morti",
+        "☀️ di luce del sole",
+        "🧂 di sale"
+      ],
+      "corretta": 0,
+      "spiegazione": "I funghi non fanno la fotosintesi: si nutrono di resti morti."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🦁",
+      "affermazione": "Gli animali fanno il cibo da soli con la luce.",
+      "corretta": false,
+      "spiegazione": "No: gli animali mangiano altri viventi."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🍞",
+      "domanda": "Metti in ordine, come nel video del pane.",
+      "elementi": [
+        "🍞 il pane è fresco",
+        "💧 resta chiuso con l'umido",
+        "🔍 compaiono puntini verdi",
+        "🗑️ si butta via"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo i funghi!",
+      "giusti": [
+        "🍄 porcino",
+        "🍞 muffa",
+        "🍕 lievito"
+      ],
+      "sbagliati": [
+        "🌻 girasole",
+        "🐝 ape",
+        "🌵 cactus",
+        "🐟 pesce"
+      ],
+      "quanti": 3
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è una pianta?",
+      "elementi": [
+        "🌻 girasole",
+        "🌵 cactus",
+        "🐌 lumaca",
+        "🌳 quercia"
+      ],
+      "intruso": 2,
+      "spiegazione": "La lumaca è un animale."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "I [batteri] si vedono solo con il [microscopio].",
+      "distrattori": [
+        "funghi",
+        "occhiale"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il vivente al suo regno.",
+      "coppie": [
+        [
+          "🦠 batterio",
+          "🔬 Monere"
+        ],
+        [
+          "🌊 ameba",
+          "💧 Protisti"
+        ],
+        [
+          "🍕 lievito",
+          "🍄 Funghi"
+        ],
+        [
+          "🌻 girasole",
+          "🌳 Piante"
+        ],
+        [
+          "🐬 delfino",
+          "🦁 Animali"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "💧",
+      "affermazione": "I protisti vivono quasi tutti nell'acqua.",
+      "corretta": true,
+      "spiegazione": "Sì! Come l'ameba."
+    },
+    {
       "tipo": "indovina",
       "immagine": "🎈",
       "domanda": "Indovina la parola!",
       "parola": "FOTOSINTESI",
       "indizio": "🌱 Così la pianta fa il suo cibo"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "MUFFA",
+      "indizio": "🍞 Il fungo piccolissimo che cresce sul pane vecchio"
     }
   ],
-  "storia": {
-    "personaggio": "👩‍🔬",
-    "testo": "Ciao, sono l'esploratrice Lia!\nNel mio zaino ho una lente, un microscopio e un quaderno.\nVoglio mettere ogni essere vivente nella sua famiglia: il suo regno.",
-    "immagini": [
-      "🔍 lente",
-      "🔬 microscopio",
-      "📒 quaderno"
-    ],
-    "missione": "Esplorate con Lia i cinque regni dei viventi. Vincete la figurina della lente!"
-  },
-  "premio": "🔍",
   "ricorda": [
+    "🌍 I viventi sono divisi in cinque regni.",
     "🦠 Monere: i batteri, piccolissimi.",
     "💧 Protisti: piccolissimi, vivono nell'acqua.",
     "🍄 Funghi: non sono verdi, non fanno la fotosintesi.",
     "🌳 Piante: fanno il cibo con la luce e regalano ossigeno.",
     "🦁 Animali: mangiano altri viventi e quasi tutti si muovono."
-  ]
+  ],
+  "verifica": "verifiche/sci4-cinque-regni.json"
 }

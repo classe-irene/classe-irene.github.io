@@ -1,0 +1,32 @@
+{
+  "titolo": "Linee e confini",
+  "emoji": "〰️",
+  "materia": "matematica",
+  "classe": 2,
+  "obiettivi": [
+    "riconoscere linee rette, curve e spezzate",
+    "distinguere linee aperte e chiuse",
+    "riconoscere il confine, la regione interna e la regione esterna"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "scelta", "immagine": "⭕", "testo": "Una linea che torna al punto di partenza è…", "opzioni": ["⭕ chiusa", "🔓 aperta", "📏 retta"], "corretta": 0 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci la linea al suo nome.", "coppie": [["va dritta", "retta"], ["è morbida come un'onda", "curva"], ["fa le punte", "spezzata"]] },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Linea aperta o chiusa? Scrivi ogni cosa nella colonna giusta.", "categorie": ["🔓 Aperta", "⭕ Chiusa"], "elementi": [{ "testo": "serpente", "categoria": "🔓 Aperta" }, { "testo": "onda", "categoria": "🔓 Aperta" }, { "testo": "arcobaleno", "categoria": "🔓 Aperta" }, { "testo": "anello", "categoria": "⭕ Chiusa" }, { "testo": "ciambella", "categoria": "⭕ Chiusa" }, { "testo": "cornice", "categoria": "⭕ Chiusa" }] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Una linea aperta ha due punte libere.", "vero": true }, { "testo": "Con una linea aperta faccio un recinto chiuso.", "vero": false }, { "testo": "Il confine divide la regione interna da quella esterna.", "vero": true }, { "testo": "Le righe del campo sono il confine del campo.", "vero": true }] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa con le parole giuste.", "frase": "La linea chiusa si chiama ___. Dentro c'è la regione ___. Fuori c'è la regione ___.", "soluzioni": ["confine", "interna", "esterna"], "parole": ["confine", "interna", "esterna", "aperta"] },
+    { "tipo": "classifica", "immagine": "🏠", "testo": "I muri sono il confine della casa. Dentro o fuori?", "categorie": ["🏠 Regione interna", "🌳 Regione esterna"], "elementi": [{ "testo": "letto", "categoria": "🏠 Regione interna" }, { "testo": "divano", "categoria": "🏠 Regione interna" }, { "testo": "albero del giardino", "categoria": "🌳 Regione esterna" }, { "testo": "nuvola", "categoria": "🌳 Regione esterna" }] },
+    { "tipo": "scelta", "immagine": "🏟️", "testo": "Il pallone esce dalle righe del campo. Dov'è?", "opzioni": ["🌳 nella regione esterna", "🏟️ nella regione interna", "🚧 sul confine"], "corretta": 0 },
+    { "tipo": "collega", "immagine": "🧱", "testo": "Unisci il posto al suo confine.", "coppie": [["casa", "i muri"], ["acquario", "il vetro"], ["prato delle pecore", "il recinto"]] },
+    { "tipo": "risposta", "immagine": "🐑", "testo": "Perché per fare un recinto serve una linea chiusa? Scrivi una frase.", "righe": 3, "soluzione": "Perché con una linea chiusa le pecore restano dentro e non possono scappare." },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna una linea chiusa. Colora di rosso la regione interna e di blu la regione esterna." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "scelta", "immagine": "⭕", "testo": "L'anello è una linea…", "opzioni": ["⭕ chiusa", "🔓 aperta"], "corretta": 0 },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Aperta o chiusa?", "categorie": ["🔓 Aperta", "⭕ Chiusa"], "elementi": [{ "testo": "serpente", "categoria": "🔓 Aperta" }, { "testo": "onda", "categoria": "🔓 Aperta" }, { "testo": "anello", "categoria": "⭕ Chiusa" }, { "testo": "ciambella", "categoria": "⭕ Chiusa" }] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Con una linea chiusa faccio un recinto.", "vero": true }, { "testo": "Una linea aperta torna al punto di partenza.", "vero": false }] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa.", "frase": "La linea chiusa si chiama ___.", "soluzioni": ["confine"], "parole": ["confine", "retta"] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [["dentro il confine", "regione interna"], ["fuori dal confine", "regione esterna"]] },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna un recinto chiuso con dentro una pecora." }
+  ]
+}

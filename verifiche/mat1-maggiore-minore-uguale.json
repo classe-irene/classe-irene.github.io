@@ -1,0 +1,45 @@
+{
+  "titolo": "Maggiore, minore, uguale",
+  "emoji": "⚖️",
+  "materia": "matematica",
+  "classe": 1,
+  "obiettivi": [
+    "confrontare quantità facendo le coppie",
+    "riconoscere di più, di meno, tanti quanti",
+    "usare i segni >, < e =",
+    "ordinare i numeri fino a 20"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "scelta", "immagine": "🍎", "testo": "Dove ci sono più mele?", "opzioni": ["🍎🍎🍎 tre", "🍎🍎🍎🍎🍎🍎 sei", "🍎 una"], "corretta": 1 },
+    { "tipo": "scelta", "immagine": "🐰", "testo": "🐰🐰🐰🐰 e 🥕🥕. Chi sono di meno?", "opzioni": ["🐰 i conigli", "🥕 le carote", "🟰 tanti quanti"], "corretta": 1 },
+    { "tipo": "scelta", "immagine": "🟰", "testo": "🐦🐦🐦 e 🌰🌰🌰. Come sono?", "opzioni": ["🐦 più uccellini", "🌰 più semi", "🟰 tanti quanti"], "corretta": 2 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci il segno al suo nome.", "coppie": [[">", "🐘 maggiore"], ["<", "🐭 minore"], ["=", "🟰 uguale"]] },
+    { "tipo": "scelta", "immagine": "⚖️", "testo": "8 ? 3", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 0 },
+    { "tipo": "scelta", "immagine": "⚖️", "testo": "2 ? 6", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 1 },
+    { "tipo": "scelta", "immagine": "⚖️", "testo": "7 ? 7", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 2 },
+    { "tipo": "vero_falso", "immagine": "🐊", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "9 > 5", "vero": true },
+      { "testo": "12 < 4", "vero": false },
+      { "testo": "10 = 10", "vero": true }
+    ] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Dal più piccolo al più grande.", "elementi": ["🔢 1", "🔢 6", "🔢 10", "🔢 15"] },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Minore o maggiore di 10?", "categorie": ["🐭 minore di 10", "🐘 maggiore di 10"], "elementi": [
+      { "testo": "🔢 4", "categoria": "🐭 minore di 10" },
+      { "testo": "🔢 7", "categoria": "🐭 minore di 10" },
+      { "testo": "🔢 13", "categoria": "🐘 maggiore di 10" },
+      { "testo": "🔢 19", "categoria": "🐘 maggiore di 10" }
+    ] }
+  ],
+  "domande_facilitate": [
+    { "tipo": "scelta", "immagine": "🍎", "testo": "Dove ci sono più mele?", "opzioni": ["🍎 una", "🍎🍎🍎🍎 quattro"], "corretta": 1 },
+    { "tipo": "scelta", "immagine": "🟰", "testo": "🐦🐦 e 🌰🌰. Come sono?", "opzioni": ["🐦 più uccellini", "🟰 tanti quanti"], "corretta": 1 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [[">", "🐘 maggiore"], ["<", "🐭 minore"], ["=", "🟰 uguale"]] },
+    { "tipo": "scelta", "immagine": "⚖️", "testo": "5 ? 2", "opzioni": ["🐘 >", "🐭 <"], "corretta": 0 },
+    { "tipo": "vero_falso", "immagine": "🐊", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "6 > 1", "vero": true },
+      { "testo": "3 = 8", "vero": false }
+    ] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Dal più piccolo al più grande.", "elementi": ["🔢 2", "🔢 5", "🔢 9"] }
+  ]
+}

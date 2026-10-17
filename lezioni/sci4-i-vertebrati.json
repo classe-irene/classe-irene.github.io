@@ -1,0 +1,520 @@
+{
+  "titolo": "I vertebrati",
+  "emoji": "🐬",
+  "materia": "scienze",
+  "classe": 4,
+  "introduzione": "I vertebrati hanno la colonna vertebrale. Sono cinque gruppi: pesci, anfibi, rettili, uccelli e mammiferi.",
+  "storia": {
+    "personaggio": "👩‍⚕️",
+    "testo": "Ciao, sono Marta, la veterinaria!\nNel mio ambulatorio arrivano cani, gatti, pappagalli e tartarughe.\nTutti hanno le ossa e la colonna vertebrale.",
+    "immagini": [
+      "🐕 cane",
+      "🦜 pappagallo",
+      "🐢 tartaruga"
+    ],
+    "missione": "Aiutate Marta a riconoscere i cinque gruppi dei vertebrati. Vincete la figurina del delfino!"
+  },
+  "premio": "🐬",
+  "parole_chiave": [
+    "🦴 colonna vertebrale",
+    "🐟 pesci",
+    "🐸 anfibi",
+    "🦎 rettili",
+    "🐦 uccelli",
+    "🐄 mammiferi",
+    "🫁 polmoni",
+    "🐠 branchie"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🦴 La colonna vertebrale",
+      "immagine": "🦴",
+      "testo": "Tocca la tua schiena: senti tanti piccoli ossi.\nInsieme formano la colonna vertebrale.\nGli animali che ce l'hanno si chiamano vertebrati.\nHanno uno scheletro dentro il corpo.",
+      "immagini": [
+        "🦴 colonna vertebrale",
+        "💀 scheletro",
+        "🐕 cane"
+      ],
+      "scopri": [
+        {
+          "fronte": "🦴 Colonna vertebrale",
+          "retro": "🧱 Tanti ossi uno sopra l'altro, lungo la schiena."
+        },
+        {
+          "fronte": "💀 Scheletro",
+          "retro": "🏗️ Tutte le ossa insieme: sostengono il corpo."
+        },
+        {
+          "fronte": "🖐️ Cinque gruppi",
+          "retro": "🐟 🐸 🦎 🐦 🐄 Pesci, anfibi, rettili, uccelli, mammiferi."
+        }
+      ],
+      "pensa": {
+        "domanda": "A che cosa serve lo scheletro?",
+        "risposta": "Sostiene il corpo, come i pali di una tenda. E protegge le parti delicate, come il cervello e il cuore."
+      }
+    },
+    {
+      "titolo": "🐟 Pesci e anfibi",
+      "immagine": "🐟",
+      "testo": "I pesci vivono nell'acqua. Hanno le pinne e le squame.\nRespirano con le branchie.\nGli anfibi, come la rana, vivono in acqua e sulla terra.\nHanno la pelle liscia e bagnata.",
+      "immagini": [
+        "🐟 pesce",
+        "🐠 branchie",
+        "🐸 rana",
+        "💧 acqua"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dal girino alla rana",
+        "passi": [
+          {
+            "figure": "💧 🥚 🥚",
+            "testo": "La rana depone le uova nell'acqua."
+          },
+          {
+            "figure": "🥚 → 🐟",
+            "testo": "Dall'uovo nasce il girino. Sembra un pesciolino."
+          },
+          {
+            "figure": "🐟 🦵 🦵",
+            "testo": "Il girino cresce. Gli spuntano le zampe."
+          },
+          {
+            "figure": "🐸",
+            "testo": "La coda sparisce: ecco la rana!"
+          },
+          {
+            "figure": "🐸 → 🌿",
+            "testo": "Ora la rana può uscire dall'acqua e saltare sulla terra."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🦎 Rettili e uccelli",
+      "immagine": "🦎",
+      "testo": "I rettili hanno la pelle con le squame dure.\nSi scaldano al sole. Molti strisciano, come il serpente.\nGli uccelli hanno le piume, il becco e le ali.\nRettili e uccelli nascono da uova con il guscio.",
+      "immagini": [
+        "🦎 lucertola",
+        "🐍 serpente",
+        "🪶 piume",
+        "🐦 uccello",
+        "🥚 uovo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "nati da un uovo",
+        "passi": [
+          {
+            "figure": "🐢 🥚 🥚",
+            "testo": "La tartaruga è un rettile. Depone le uova nella sabbia."
+          },
+          {
+            "figure": "☀️ 🥚",
+            "testo": "Il sole scalda le uova."
+          },
+          {
+            "figure": "🥚 → 🐢",
+            "testo": "Dall'uovo esce una piccola tartaruga."
+          },
+          {
+            "figure": "🐦 🪺",
+            "testo": "L'uccello fa il nido e cova le uova."
+          },
+          {
+            "figure": "🥚 → 🐣 → 🐥",
+            "testo": "Il guscio si rompe ed esce il pulcino!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché la lucertola sta ferma al sole la mattina?",
+        "risposta": "Perché si scalda! I rettili hanno bisogno del calore del sole per muoversi bene."
+      }
+    },
+    {
+      "titolo": "🐄 I mammiferi",
+      "immagine": "🐄",
+      "testo": "I mammiferi hanno il corpo coperto di peli.\nQuasi tutti nascono dalla pancia della mamma.\nI piccoli bevono il latte della mamma.\nAnche noi siamo mammiferi!",
+      "immagini": [
+        "🐄 mucca",
+        "🐕 cane",
+        "🥛 latte",
+        "👧 bambina"
+      ],
+      "scopri": [
+        {
+          "fronte": "🐬 Delfino",
+          "retro": "🌊 Vive nel mare, ma è un mammifero: beve il latte."
+        },
+        {
+          "fronte": "🦇 Pipistrello",
+          "retro": "🌙 Vola, ma non è un uccello: è un mammifero."
+        },
+        {
+          "fronte": "🐋 Balena",
+          "retro": "🫁 Respira con i polmoni. Sale in superficie per l'aria."
+        }
+      ],
+      "pensa": {
+        "domanda": "Il delfino vive nel mare come i pesci. Perché non è un pesce?",
+        "risposta": "Perché respira con i polmoni e i piccoli bevono il latte della mamma: è un mammifero."
+      }
+    },
+    {
+      "titolo": "🫁 Branchie e polmoni",
+      "immagine": "🫁",
+      "testo": "Tutti gli animali hanno bisogno di ossigeno.\nI pesci lo prendono dall'acqua, con le branchie.\nGli altri vertebrati lo prendono dall'aria, con i polmoni.",
+      "immagini": [
+        "🐠 branchie",
+        "💧 acqua",
+        "🫁 polmoni",
+        "💨 aria"
+      ],
+      "scopri": [
+        {
+          "fronte": "🐠 Branchie",
+          "retro": "💧 Prendono l'ossigeno dall'acqua."
+        },
+        {
+          "fronte": "🫁 Polmoni",
+          "retro": "💨 Prendono l'ossigeno dall'aria."
+        }
+      ]
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🦴",
+      "domanda": "Che cosa hanno tutti i vertebrati?",
+      "opzioni": [
+        "🦴 la colonna vertebrale",
+        "🪶 le piume",
+        "🐟 le pinne"
+      ],
+      "corretta": 0,
+      "spiegazione": "Vertebrati vuol dire: con la colonna vertebrale."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐟",
+      "affermazione": "I pesci respirano con le branchie.",
+      "corretta": true,
+      "spiegazione": "Sì! Le branchie prendono l'ossigeno dall'acqua."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il gruppo a come è coperto il corpo.",
+      "coppie": [
+        [
+          "🐟 pesci",
+          "🐠 squame e pinne"
+        ],
+        [
+          "🐸 anfibi",
+          "💧 pelle liscia e bagnata"
+        ],
+        [
+          "🐦 uccelli",
+          "🪶 piume"
+        ],
+        [
+          "🐄 mammiferi",
+          "🧸 peli"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "A quale gruppo appartiene?",
+      "categorie": [
+        "🐟 Pesci",
+        "🐦 Uccelli",
+        "🐄 Mammiferi"
+      ],
+      "elementi": [
+        {
+          "testo": "🦈 squalo",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "🐠 pesce pagliaccio",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "🦅 aquila",
+          "categoria": "🐦 Uccelli"
+        },
+        {
+          "testo": "🐧 pinguino",
+          "categoria": "🐦 Uccelli"
+        },
+        {
+          "testo": "🐕 cane",
+          "categoria": "🐄 Mammiferi"
+        },
+        {
+          "testo": "🐬 delfino",
+          "categoria": "🐄 Mammiferi"
+        }
+      ],
+      "suggerimento": "Il pinguino ha le piume. Il delfino beve il latte."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐬",
+      "affermazione": "Il delfino è un pesce.",
+      "corretta": false,
+      "spiegazione": "No: respira con i polmoni e beve il latte. È un mammifero."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐸",
+      "domanda": "Metti in ordine: dal girino alla rana.",
+      "elementi": [
+        "🥚 uovo nell'acqua",
+        "🐟 girino",
+        "🦵 spuntano le zampe",
+        "🐸 rana"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🦎",
+      "domanda": "La lucertola ha le squame e si scalda al sole. Che cos'è?",
+      "opzioni": [
+        "🦎 un rettile",
+        "🐸 un anfibio",
+        "🐄 un mammifero"
+      ],
+      "corretta": 0,
+      "spiegazione": "La lucertola è un rettile."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "I pesci respirano con le [branchie]. I mammiferi respirano con i [polmoni].",
+      "distrattori": [
+        "pinne",
+        "piume"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: l'animale e il suo gruppo.",
+      "coppie": [
+        [
+          "🐍 serpente",
+          "🦎 rettile"
+        ],
+        [
+          "🐸 rana",
+          "💧 anfibio"
+        ],
+        [
+          "🦉 gufo",
+          "🪶 uccello"
+        ],
+        [
+          "🐄 mucca",
+          "🥛 mammifero"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un mammifero?",
+      "elementi": [
+        "🐕 cane",
+        "🐄 mucca",
+        "🐧 pinguino",
+        "🐋 balena"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il pinguino ha le piume: è un uccello."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥚",
+      "affermazione": "Gli uccelli nascono da uova con il guscio.",
+      "corretta": true,
+      "spiegazione": "Sì! La mamma cova le uova nel nido."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🫁",
+      "domanda": "Come respira?",
+      "categorie": [
+        "🐠 Con le branchie",
+        "🫁 Con i polmoni"
+      ],
+      "elementi": [
+        {
+          "testo": "🐟 trota",
+          "categoria": "🐠 Con le branchie"
+        },
+        {
+          "testo": "🦈 squalo",
+          "categoria": "🐠 Con le branchie"
+        },
+        {
+          "testo": "🐬 delfino",
+          "categoria": "🫁 Con i polmoni"
+        },
+        {
+          "testo": "🐦 passero",
+          "categoria": "🫁 Con i polmoni"
+        },
+        {
+          "testo": "🐕 cane",
+          "categoria": "🫁 Con i polmoni"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🦇",
+      "domanda": "Il pipistrello vola. Che cos'è?",
+      "opzioni": [
+        "🐄 un mammifero",
+        "🐦 un uccello",
+        "🦎 un rettile"
+      ],
+      "corretta": 0,
+      "spiegazione": "Ha i peli e beve il latte: è un mammifero."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova i cinque gruppi.",
+      "parole": [
+        "🐟 pesci",
+        "🐸 anfibi",
+        "🦎 rettili",
+        "🐦 uccelli",
+        "🐄 mammiferi"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'animale a dove nasce.",
+      "coppie": [
+        [
+          "🐣 pulcino",
+          "🥚 da un uovo con il guscio"
+        ],
+        [
+          "🐸 rana",
+          "💧 da un uovo nell'acqua"
+        ],
+        [
+          "🐶 cucciolo di cane",
+          "🤱 dalla pancia della mamma"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐸",
+      "affermazione": "La rana vive solo nell'acqua.",
+      "corretta": false,
+      "spiegazione": "No: vive in acqua e sulla terra. È un anfibio."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Gli uccelli hanno le [piume] e il [becco].",
+      "distrattori": [
+        "squame",
+        "peli"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo i rettili!",
+      "giusti": [
+        "🐍 serpente",
+        "🐢 tartaruga",
+        "🐊 coccodrillo",
+        "🦎 lucertola"
+      ],
+      "sbagliati": [
+        "🐸 rana",
+        "🐟 pesce",
+        "🐦 passero",
+        "🐕 cane"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON nasce da un uovo?",
+      "elementi": [
+        "🐢 tartaruga",
+        "🐦 passero",
+        "🐄 vitello",
+        "🐍 serpente"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il vitello nasce dalla pancia della mamma mucca."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥛",
+      "domanda": "Che cosa fanno tutti i piccoli dei mammiferi?",
+      "opzioni": [
+        "🥛 bevono il latte della mamma",
+        "🥚 escono da un uovo nell'acqua",
+        "🪶 mettono le piume"
+      ],
+      "corretta": 0,
+      "spiegazione": "Mammifero viene da mamma: i piccoli bevono il suo latte."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐦",
+      "domanda": "Metti in ordine: come nasce un uccellino.",
+      "elementi": [
+        "🪺 la mamma fa il nido",
+        "🥚 depone le uova",
+        "🐣 il guscio si rompe",
+        "🐥 esce il pulcino"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ANFIBIO",
+      "indizio": "🐸 Vive in acqua e sulla terra"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "MAMMIFERO",
+      "indizio": "🥛 Da piccolo beve il latte della mamma"
+    }
+  ],
+  "ricorda": [
+    "🦴 I vertebrati hanno la colonna vertebrale e lo scheletro dentro il corpo.",
+    "🐟 I pesci hanno pinne e squame. Respirano con le branchie.",
+    "🐸 Gli anfibi vivono in acqua e sulla terra. La rana nasce girino.",
+    "🦎 I rettili hanno le squame. 🐦 Gli uccelli hanno le piume. Nascono da uova con il guscio.",
+    "🐄 I mammiferi hanno i peli. I piccoli bevono il latte della mamma."
+  ],
+  "verifica": "verifiche/sci4-i-vertebrati.json"
+}

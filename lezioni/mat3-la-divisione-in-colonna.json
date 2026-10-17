@@ -1,0 +1,350 @@
+{
+  "titolo": "La divisione in colonna",
+  "emoji": "➗",
+  "materia": "matematica",
+  "classe": 3,
+  "introduzione": "Impariamo a fare la divisione in colonna con una cifra al divisore, anche con il resto.",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono nonna Rina!\nHo fatto tanti biscotti per i miei nipoti.\nVoglio darne a tutti lo stesso numero. Mi aiutate a dividerli?",
+    "immagini": [
+      "👵 nonna Rina",
+      "🍪 biscotti",
+      "🧒 nipoti"
+    ],
+    "missione": "Dividete i biscotti con nonna Rina. Alla fine vincete la figurina del biscotto!"
+  },
+  "premio": "🍪",
+  "parole_chiave": [
+    "➗ divisione",
+    "🍪 dividendo",
+    "🍽️ divisore",
+    "✅ quoziente",
+    "🧩 resto",
+    "🔍 prova"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🍽️ Dividere in parti uguali",
+      "immagine": "🍽️",
+      "testo": "Dividere vuol dire fare parti uguali.\nNonna Rina ha 12 biscotti e 3 piatti.\nMette un biscotto per piatto, a giro, finché finiscono.\nIn ogni piatto ci sono 4 biscotti: 12 : 3 = 4.",
+      "immagini": [
+        "➗ divisione",
+        "🍪 biscotti",
+        "🍽️ piatti",
+        "✅ quoziente"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "12 biscotti in 3 piatti",
+        "passi": [
+          { "figure": "🍪 🍪 🍪 🍪 🍪", "testo": "Nonna Rina ha 12 biscotti." },
+          { "figure": "🍽️ 🍽️ 🍽️", "testo": "Ha 3 piatti. Vuole fare parti uguali." },
+          { "figure": "🍪 → 🍽️", "testo": "Mette 1 biscotto in ogni piatto, a giro." },
+          { "figure": "🍪 🍪 🍪 🍪", "testo": "Alla fine in ogni piatto ci sono 4 biscotti." },
+          { "figure": "✅", "testo": "12 : 3 = 4." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Come controllo che 12 : 3 = 4 è giusto?",
+        "risposta": "Moltiplico: 4 × 3 = 12. Torna il numero di partenza!"
+      }
+    },
+    {
+      "titolo": "🏷️ I nomi della divisione",
+      "immagine": "🏷️",
+      "testo": "In 12 : 3 = 4 ogni numero ha un nome.\n12 è il dividendo: il numero che divido.\n3 è il divisore: il numero per cui divido.\n4 è il quoziente: il risultato.",
+      "immagini": [
+        "🍪 dividendo",
+        "🍽️ divisore",
+        "✅ quoziente"
+      ],
+      "scopri": [
+        { "fronte": "🍪 Dividendo", "retro": "🍪 Il numero che divido. Sta a sinistra." },
+        { "fronte": "🍽️ Divisore", "retro": "🍽️ Il numero per cui divido." },
+        { "fronte": "✅ Quoziente", "retro": "✅ Il risultato della divisione." },
+        { "fronte": "🧩 Resto", "retro": "🧩 Quello che avanza. È più piccolo del divisore." }
+      ]
+    },
+    {
+      "titolo": "✏️ La divisione in colonna",
+      "immagine": "✏️",
+      "testo": "Scrivo il dividendo a sinistra e il divisore a destra.\nComincio dalla prima cifra a sinistra del dividendo.\nMi chiedo: quante volte ci sta il divisore?\nScrivo il numero nel quoziente, moltiplico e sottraggo.\nPoi abbasso la cifra dopo e ricomincio.",
+      "immagini": [
+        "🍪 dividendo",
+        "🍽️ divisore",
+        "✖️ moltiplico",
+        "➖ sottraggo",
+        "⬇️ abbasso"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "84 : 4 passo passo",
+        "passi": [
+          { "figure": "8️⃣ 4️⃣ ➗ 4️⃣", "testo": "Faccio 84 : 4 in colonna." },
+          { "figure": "8️⃣ ➗ 4️⃣", "testo": "Guardo l'8. Il 4 nell'8 ci sta 2 volte." },
+          { "figure": "2️⃣ ✖️ 4️⃣", "testo": "2 × 4 = 8. 8 − 8 = 0. Non resta niente." },
+          { "figure": "⬇️ 4️⃣", "testo": "Abbasso il 4." },
+          { "figure": "4️⃣ ➗ 4️⃣", "testo": "Il 4 nel 4 ci sta 1 volta. 1 × 4 = 4. Resto 0." },
+          { "figure": "2️⃣ 1️⃣", "testo": "84 : 4 = 21." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Nella divisione in colonna comincio da destra o da sinistra?",
+        "risposta": "Da sinistra! È diversa dalle altre operazioni in colonna, che cominciano dalle unità."
+      }
+    },
+    {
+      "titolo": "🧩 La divisione con il resto",
+      "immagine": "🧩",
+      "testo": "A volte i biscotti non bastano per un giro in più.\nQuello che avanza si chiama resto.\nIl resto è sempre più piccolo del divisore.\n17 : 5 = 3 con resto 2.",
+      "immagini": [
+        "🍪 biscotti",
+        "🍽️ piatti",
+        "🧩 resto"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "17 biscotti in 5 piatti",
+        "passi": [
+          { "figure": "🍪 🍪 🍪 🍪 🍪", "testo": "Nonna Rina ha 17 biscotti e 5 piatti." },
+          { "figure": "🍽️ 🍽️ 🍽️ 🍽️ 🍽️", "testo": "Mette 3 biscotti in ogni piatto: 3 × 5 = 15." },
+          { "figure": "🍪 🍪", "testo": "Avanzano 2 biscotti: per un altro giro non bastano." },
+          { "figure": "🧩", "testo": "17 : 5 = 3 con resto 2." }
+        ]
+      }
+    },
+    {
+      "titolo": "🔍 La prova",
+      "immagine": "🔍",
+      "testo": "Con la prova controllo se la divisione è giusta.\nMoltiplico il quoziente per il divisore.\nSe c'è il resto, lo aggiungo.\nDeve venire il dividendo.\n84 : 4 = 21. Prova: 21 × 4 = 84.",
+      "immagini": [
+        "✅ quoziente",
+        "🍽️ divisore",
+        "🧩 resto",
+        "🍪 dividendo"
+      ],
+      "animazione": {
+        "tipo": "moltiplicazione",
+        "a": 21,
+        "b": 4,
+        "video": true,
+        "titolo": "la prova: 21 × 4"
+      },
+      "pensa": {
+        "domanda": "Fai la prova di 17 : 5 = 3 con resto 2.",
+        "risposta": "3 × 5 = 15. Poi 15 + 2 = 17. È giusta!"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "domanda": "Dividere vuol dire…",
+      "opzioni": ["🍽️ fare parti uguali", "➕ mettere tutto insieme", "🔁 ripetere tante volte"],
+      "corretta": 0,
+      "spiegazione": "Divido in parti uguali: lo stesso numero in ogni piatto."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍪",
+      "domanda": "Nonna Rina divide 15 biscotti in 3 piatti. Quanti biscotti in ogni piatto?",
+      "oggetto": "🍪",
+      "numero": 5,
+      "spiegazione": "15 : 3 = 5 biscotti."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🏷️",
+      "domanda": "12 : 3 = 4. Unisci il numero al suo nome.",
+      "coppie": [
+        ["🍪 12", "🏷️ dividendo"],
+        ["🍽️ 3", "🏷️ divisore"],
+        ["✅ 4", "🏷️ quoziente"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧩",
+      "affermazione": "Il resto è sempre più piccolo del divisore.",
+      "corretta": true,
+      "spiegazione": "Sì! Se fosse più grande, potrei fare un altro giro."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: la divisione e il suo risultato.",
+      "coppie": [
+        ["➗ 20 : 4", "✅ 5"],
+        ["➗ 18 : 3", "✅ 6"],
+        ["➗ 35 : 5", "✅ 7"],
+        ["➗ 16 : 2", "✅ 8"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "24 : 6 = [4]. 27 : 3 = [9].",
+      "distrattori": ["6", "8"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✏️",
+      "domanda": "Nella divisione in colonna da dove comincio?",
+      "opzioni": ["⬅️ dalla prima cifra a sinistra", "➡️ dalle unità, a destra", "🎲 da una cifra a caso"],
+      "corretta": 0,
+      "spiegazione": "Nella divisione comincio da sinistra, dalla cifra più grande."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi della divisione in colonna.",
+      "elementi": [
+        "👀 Guardo la prima cifra a sinistra",
+        "➗ Quante volte ci sta il divisore?",
+        "✖️ Moltiplico",
+        "➖ Sottraggo",
+        "⬇️ Abbasso la cifra dopo"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➗",
+      "affermazione": "84 : 4 = 21.",
+      "corretta": true,
+      "spiegazione": "Sì! Prova: 21 × 4 = 84."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "La divisione ha il resto?",
+      "categorie": ["✅ Senza resto", "🧩 Con il resto"],
+      "elementi": [
+        { "testo": "➗ 12 : 3", "categoria": "✅ Senza resto" },
+        { "testo": "➗ 20 : 5", "categoria": "✅ Senza resto" },
+        { "testo": "➗ 36 : 4", "categoria": "✅ Senza resto" },
+        { "testo": "➗ 13 : 2", "categoria": "🧩 Con il resto" },
+        { "testo": "➗ 17 : 5", "categoria": "🧩 Con il resto" },
+        { "testo": "➗ 25 : 4", "categoria": "🧩 Con il resto" }
+      ],
+      "suggerimento": "Pensa alle tabelline: il dividendo è nella tabellina del divisore?"
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "domanda": "Scrivi il quoziente e il resto.",
+      "testo": "17 : 5 = [3] con resto [2].",
+      "distrattori": ["4", "5"]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "🔍",
+      "domanda": "Fai la prova di 96 : 3 = 32. Calcola 32 × 3.",
+      "a": 32,
+      "b": 3,
+      "spiegazione": "32 × 3 = 96: la divisione è giusta!"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "➗",
+      "domanda": "Quanto fa 68 : 2?",
+      "opzioni": ["✅ 34", "✅ 36", "✅ 43"],
+      "corretta": 0,
+      "spiegazione": "6 : 2 = 3, 8 : 2 = 4. Fa 34."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova la divisione con il resto.",
+      "elementi": ["➗ 18 : 2", "➗ 21 : 3", "➗ 23 : 4", "➗ 40 : 5"],
+      "intruso": 2,
+      "spiegazione": "23 : 4 = 5 con resto 3."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🔍",
+      "domanda": "Fai la prova di 29 : 4 = 7 con resto 1.",
+      "testo": "7 × 4 = [28]. 28 + 1 = [29].",
+      "distrattori": ["32", "30"]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "🍪",
+      "domanda": "Fai la prova di 84 : 2 = 42. Calcola 42 × 2.",
+      "a": 42,
+      "b": 2,
+      "spiegazione": "42 × 2 = 84: la divisione è giusta!"
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo le divisioni giuste!",
+      "giusti": ["➗ 48 : 4 = 12", "➗ 66 : 3 = 22", "➗ 55 : 5 = 11", "➗ 86 : 2 = 43", "➗ 39 : 3 = 13"],
+      "sbagliati": ["➗ 44 : 4 = 10", "➗ 63 : 3 = 12", "➗ 50 : 5 = 5", "➗ 28 : 2 = 16", "➗ 99 : 3 = 30"],
+      "quanti": 5
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧩",
+      "affermazione": "25 : 4 = 6 con resto 5.",
+      "corretta": false,
+      "spiegazione": "No! Il resto 5 è più grande di 4. Giusto: 25 : 4 = 6 con resto 1."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👵",
+      "domanda": "Completa il testo bucato di nonna Rina.",
+      "testo": "Nella prova moltiplico il [quoziente] per il [divisore].\nPoi aggiungo il [resto].\nDeve venire il [dividendo].",
+      "distrattori": ["riporto", "prodotto"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧒",
+      "domanda": "Nonna Rina ha 26 biscotti per 4 nipoti. Quanti biscotti a ognuno? Quanti avanzano?",
+      "opzioni": ["🍪 6, avanzano 2", "🍪 5, avanzano 6", "🍪 7, avanzano 0"],
+      "corretta": 0,
+      "spiegazione": "6 × 4 = 24. Avanzano 26 − 24 = 2 biscotti."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della divisione.",
+      "parole": ["🍪 dividendo", "🍽️ divisore", "✅ quoziente", "🧩 resto", "🔍 prova"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "QUO-ZIEN-TE",
+      "indizio": "✅ Il risultato della divisione"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "RESTO",
+      "indizio": "🧩 Quello che avanza nella divisione"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DIVISORE",
+      "indizio": "🍽️ Il numero per cui divido"
+    }
+  ],
+  "ricorda": [
+    "🍽️ Dividere vuol dire fare parti uguali.",
+    "🏷️ Dividendo : divisore = quoziente.",
+    "✏️ Nella divisione in colonna comincio da sinistra.",
+    "🔁 Divido, moltiplico, sottraggo, abbasso la cifra dopo.",
+    "🧩 Il resto è sempre più piccolo del divisore.",
+    "🔍 Prova: quoziente × divisore + resto = dividendo."
+  ],
+  "verifica": "verifiche/mat3-la-divisione-in-colonna.json"
+}

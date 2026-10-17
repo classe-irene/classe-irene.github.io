@@ -1,0 +1,428 @@
+{
+  "titolo": "Piccoli problemi",
+  "emoji": "🧩",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Risolviamo piccoli problemi con i numeri.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Rita, la cuoca!\nIn cucina conto sempre tutto.\nUova, biscotti, fragole... mi aiutate?",
+    "immagini": [
+      "👩‍🍳 Rita",
+      "🥚 uova",
+      "🍓 fragole"
+    ],
+    "missione": "Risolvete i problemi di Rita. Alla fine vincete la figurina della torta!"
+  },
+  "premio": "🎂",
+  "parole_chiave": [
+    "🧩 problema",
+    "❓ domanda",
+    "🖍️ disegno",
+    "➕ più",
+    "➖ meno",
+    "✅ risposta"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🧩 Che cos'è un problema",
+      "immagine": "🧩",
+      "testo": "Un problema è una piccola storia.\nAlla fine c'è una domanda.\nCon i numeri trovo la risposta.",
+      "immagini": [
+        "📖 storia",
+        "❓ domanda",
+        "🔢 numeri",
+        "✅ risposta"
+      ],
+      "pensa": {
+        "domanda": "Rita ha 2 uova. Ne compra 1. Quante uova ha?",
+        "risposta": "3 uova! 2 + 1 = 3."
+      }
+    },
+    {
+      "titolo": "➕ Arrivano: aggiungo",
+      "immagine": "➕",
+      "testo": "Rita ha 3 fragole.\nNe arrivano altre 2.\nOra sono di più.\nFaccio 3 + 2 = 5.",
+      "immagini": [
+        "🍓 3 fragole",
+        "➕ ne arrivano 2",
+        "🍓 5 fragole"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "arrivano le fragole",
+        "passi": [
+          {
+            "figure": "🍓 🍓 🍓",
+            "testo": "Rita ha 3 fragole."
+          },
+          {
+            "figure": "➕ 🍓 🍓",
+            "testo": "Ne arrivano altre 2."
+          },
+          {
+            "figure": "🍓 🍓 🍓 🍓 🍓",
+            "testo": "Ora sono 5 fragole."
+          },
+          {
+            "figure": "3️⃣ ➕ 2️⃣ 🟰 5️⃣",
+            "testo": "3 più 2 uguale 5."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "➖ Vanno via: tolgo",
+      "immagine": "➖",
+      "testo": "Rita ha 6 biscotti.\nNe mangia 2.\nOra sono di meno.\nFaccio 6 − 2 = 4.",
+      "immagini": [
+        "🍪 6 biscotti",
+        "😋 ne mangia 2",
+        "🍪 4 biscotti"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Rita mangia i biscotti",
+        "passi": [
+          {
+            "figure": "🍪 🍪 🍪 🍪 🍪 🍪",
+            "testo": "Rita ha 6 biscotti."
+          },
+          {
+            "figure": "😋 🍪 🍪",
+            "testo": "Ne mangia 2."
+          },
+          {
+            "figure": "🍪 🍪 🍪 🍪",
+            "testo": "Restano 4 biscotti."
+          },
+          {
+            "figure": "6️⃣ ➖ 2️⃣ 🟰 4️⃣",
+            "testo": "6 meno 2 uguale 4."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "➕ Arrivano",
+          "retro": "➕ Aggiungo: più."
+        },
+        {
+          "fronte": "➖ Mangia",
+          "retro": "➖ Tolgo: meno."
+        },
+        {
+          "fronte": "➖ Regala",
+          "retro": "➖ Tolgo: meno."
+        },
+        {
+          "fronte": "➕ Compra",
+          "retro": "➕ Aggiungo: più."
+        }
+      ]
+    },
+    {
+      "titolo": "🪜 I passi del problema",
+      "immagine": "🪜",
+      "testo": "1. Ascolto la storia.\n2. Disegno le cose.\n3. Scelgo più o meno.\n4. Calcolo e rispondo.",
+      "immagini": [
+        "👂 ascolto",
+        "🖍️ disegno",
+        "➕ più o meno",
+        "✅ rispondo"
+      ],
+      "pensa": {
+        "domanda": "Rita ha 5 uova. Ne rompe 1. Più o meno?",
+        "risposta": "Meno! Le uova diventano di meno: 5 − 1 = 4."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🧩",
+      "domanda": "Alla fine del problema c'è…",
+      "opzioni": [
+        "❓ una domanda",
+        "🎵 una canzone"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il problema finisce con una domanda."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍓",
+      "domanda": "Rita ha 3 fragole. Ne arrivano 2. Conta le fragole.",
+      "oggetto": "🍓",
+      "numero": 5,
+      "spiegazione": "3 + 2 = 5 fragole."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍪",
+      "domanda": "Rita mangia dei biscotti. I biscotti sono…",
+      "opzioni": [
+        "➕ di più",
+        "➖ di meno"
+      ],
+      "corretta": 1,
+      "spiegazione": "Se mangia, i biscotti diminuiscono."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🥚",
+      "domanda": "Rita ha 5 uova. Ne rompe 1. Conta le uova rimaste.",
+      "oggetto": "🥚",
+      "numero": 4,
+      "spiegazione": "5 − 1 = 4 uova."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Più o meno?",
+      "categorie": [
+        "➕ Più",
+        "➖ Meno"
+      ],
+      "elementi": [
+        {
+          "testo": "🛒 compra",
+          "categoria": "➕ Più"
+        },
+        {
+          "testo": "🚶‍♀️ arrivano",
+          "categoria": "➕ Più"
+        },
+        {
+          "testo": "🎁 ricevo",
+          "categoria": "➕ Più"
+        },
+        {
+          "testo": "😋 mangia",
+          "categoria": "➖ Meno"
+        },
+        {
+          "testo": "🎈 vola via",
+          "categoria": "➖ Meno"
+        },
+        {
+          "testo": "🥚 si rompe",
+          "categoria": "➖ Meno"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐥",
+      "domanda": "Ci sono 4 pulcini. Ne arrivano 3. Quanti sono?",
+      "opzioni": [
+        "🐥 7",
+        "🐥 1",
+        "🐥 5"
+      ],
+      "corretta": 0,
+      "spiegazione": "4 + 3 = 7 pulcini."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🎈",
+      "affermazione": "Se un palloncino vola via, faccio più.",
+      "corretta": false,
+      "spiegazione": "No: il palloncino va via, faccio meno."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi.",
+      "elementi": [
+        "👂 Ascolto la storia",
+        "🖍️ Disegno le cose",
+        "➕ Scelgo più o meno",
+        "✅ Calcolo e rispondo"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "domanda": "Rita ha 8 mele. Ne usa 3 per la torta. Quante restano?",
+      "opzioni": [
+        "🍎 5",
+        "🍎 11",
+        "🍎 3"
+      ],
+      "corretta": 0,
+      "spiegazione": "8 − 3 = 5 mele."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la storia all'operazione.",
+      "coppie": [
+        [
+          "🍓 2 fragole, ne arrivano 2",
+          "➕ 2 + 2"
+        ],
+        [
+          "🍪 5 biscotti, ne mangia 1",
+          "➖ 5 − 1"
+        ],
+        [
+          "🥚 3 uova, ne compra 4",
+          "➕ 3 + 4"
+        ]
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🧁",
+      "domanda": "Rita fa 6 tortine. Poi ne fa altre 4. Conta le tortine.",
+      "oggetto": "🧁",
+      "numero": 10,
+      "spiegazione": "6 + 4 = 10 tortine."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Rita ha 7 uova. Ne rompe 2.",
+      "testo": "Faccio 7 − 2 = [5]. Restano [5] uova.",
+      "distrattori": [
+        "9",
+        "2"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🛒",
+      "affermazione": "Se Rita compra le uova, le uova aumentano.",
+      "corretta": true,
+      "spiegazione": "Sì! Compra: faccio più."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🐸",
+      "domanda": "Rita ha 9 fragole. Ne regala 4. Tocca il numero giusto.",
+      "min": 0,
+      "max": 10,
+      "passo": 1,
+      "corretta": 5
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la coppia.",
+      "coppie": [
+        [
+          "🛒 compra",
+          "➕ più"
+        ],
+        [
+          "😋 mangia",
+          "➖ meno"
+        ],
+        [
+          "❓ domanda",
+          "✅ risposta"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Quale parola NON vuol dire più?",
+      "elementi": [
+        "🛒 compra",
+        "🎁 riceve",
+        "😋 mangia",
+        "🚶‍♀️ arrivano"
+      ],
+      "intruso": 2,
+      "spiegazione": "Mangia vuol dire meno."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐦",
+      "domanda": "Sul ramo ci sono 10 uccellini. Ne volano via 5. Quanti restano?",
+      "opzioni": [
+        "🐦 15",
+        "🐦 5",
+        "🐦 10"
+      ],
+      "corretta": 1,
+      "spiegazione": "10 − 5 = 5 uccellini."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le parole del meno!",
+      "giusti": [
+        "😋 mangia",
+        "🎈 vola via",
+        "🎁 regala",
+        "🥚 si rompe"
+      ],
+      "sbagliati": [
+        "🛒 compra",
+        "🚶‍♀️ arrivano",
+        "🌱 crescono",
+        "🧁 prepara"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍓",
+      "domanda": "Rita ha 12 fragole. Ne arrivano 3. Quante sono?",
+      "opzioni": [
+        "🍓 9",
+        "🍓 15",
+        "🍓 13"
+      ],
+      "corretta": 1,
+      "spiegazione": "12 + 3 = 15 fragole."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🍳",
+      "domanda": "Completa le frasi di Rita.",
+      "testo": "Se le cose arrivano, faccio [più].\nSe le cose vanno via, faccio [meno].",
+      "distrattori": [
+        "uguale",
+        "niente"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "❓ domanda",
+        "➕ più",
+        "➖ meno",
+        "✅ risposta"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "PRO-BLE-MA",
+      "indizio": "🧩 Una storia con una domanda"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DOMANDA",
+      "indizio": "❓ La trovo alla fine del problema"
+    }
+  ],
+  "ricorda": [
+    "🧩 Il problema è una storia con una domanda.",
+    "🖍️ Disegno le cose per capire.",
+    "➕ Arrivano o compro: faccio più.",
+    "➖ Mangio o vanno via: faccio meno.",
+    "✅ Alla fine scrivo la risposta."
+  ],
+  "verifica": "verifiche/mat1-piccoli-problemi.json"
+}

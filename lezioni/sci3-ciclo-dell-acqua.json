@@ -4,46 +4,77 @@
   "materia": "scienze",
   "classe": 3,
   "introduzione": "Seguiamo una goccia d'acqua nel suo lungo viaggio.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Marta, la scienziata dell'acqua!\nIeri ho visto una pozzanghera. Oggi non c'è più!\nDove è andata la sua acqua? Scopriamolo insieme.",
+    "immagini": ["🌦️ pozzanghera", "☀️ sole", "💧 goccia"],
+    "missione": "Seguite con Marta il viaggio della goccia. Alla fine vincete la figurina della nuvola!"
+  },
+  "premio": "☁️",
+  "parole_chiave": [
+    "♨️ evaporazione",
+    "☁️ condensazione",
+    "🌧️ precipitazione",
+    "🏞️ scorrimento",
+    "🔄 ciclo",
+    "♨️ vapore"
+  ],
   "sezioni": [
     {
-      "titolo": "L'acqua sale",
+      "titolo": "☀️ L'acqua sale",
       "immagine": "☀️",
-      "testo": "Il sole scalda il mare.\nL'acqua diventa vapore e sale in cielo.\nQuesto si chiama evaporazione.",
-      "immagini": [
-        "🌊 mare",
-        "☀️ caldo",
-        "♨️ vapore"
-      ]
+      "testo": "Il sole scalda il mare.\nL'acqua diventa vapore e sale in cielo.\nQuesto si chiama evaporazione.\nIl vapore non si vede: è un gas.",
+      "immagini": ["🌊 mare", "☀️ caldo", "♨️ vapore"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "l'acqua sale",
+        "passi": [
+          { "figure": "🌊", "testo": "Ecco il mare, pieno d'acqua." },
+          { "figure": "☀️ → 🌊", "testo": "Il sole scalda l'acqua del mare." },
+          { "figure": "🌊 → ♨️", "testo": "L'acqua calda diventa vapore." },
+          { "figure": "♨️ → ☁️", "testo": "Il vapore sale in alto, verso il cielo." }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Il piatto al sole",
+        "materiali": ["🍽️ un piatto", "💧 un po' d'acqua", "☀️ il sole"],
+        "passi": ["Metti un po' d'acqua nel piatto.", "Lascia il piatto al sole.", "Guarda il piatto dopo qualche ora."],
+        "domanda": "Dove è andata l'acqua del piatto?"
+      }
     },
     {
-      "titolo": "Nascono le nuvole",
+      "titolo": "☁️ Nascono le nuvole",
       "immagine": "☁️",
-      "testo": "In alto fa freddo.\nIl vapore diventa tante goccioline: è una nuvola.\nQuesto si chiama condensazione."
+      "testo": "In alto fa freddo.\nIl vapore diventa tante goccioline: è una nuvola.\nQuesto si chiama condensazione.",
+      "immagini": ["🏔️ in alto", "🥶 freddo", "☁️ nuvola"],
+      "pensa": {
+        "domanda": "Perché sullo specchio del bagno compaiono le goccioline dopo la doccia?",
+        "risposta": "Il vapore caldo tocca lo specchio freddo e torna acqua: è la condensazione, come nelle nuvole."
+      }
     },
     {
-      "titolo": "Piove",
+      "titolo": "🌧️ Piove",
       "immagine": "🌧️",
-      "testo": "Le gocce diventano pesanti e cadono.\nSe fa molto freddo, cade la neve.\nQuesto si chiama precipitazione.",
-      "immagini": [
-        "🌧️ pioggia",
-        "❄️ neve"
+      "testo": "Le gocce diventano pesanti e cadono.\nSe fa molto freddo, cade la neve.\nA volte cade la grandine.\nQuesto si chiama precipitazione.",
+      "immagini": ["🌧️ pioggia", "❄️ neve", "🧊 grandine"],
+      "scopri": [
+        { "fronte": "🌧️ Pioggia", "retro": "💧 Gocce d'acqua che cadono." },
+        { "fronte": "❄️ Neve", "retro": "🥶 Acqua ghiacciata a fiocchi, quando fa molto freddo." },
+        { "fronte": "🧊 Grandine", "retro": "⚪ Palline di ghiaccio che cadono dal cielo." }
       ]
     },
     {
-      "titolo": "Si ricomincia",
+      "titolo": "🔄 Si ricomincia",
       "immagine": "🔄",
-      "testo": "L'acqua scorre nei fiumi e torna al mare.\nPoi il viaggio ricomincia!"
+      "testo": "L'acqua scorre nei fiumi e torna al mare.\nUn po' d'acqua entra nella terra.\nPoi il viaggio ricomincia!\nPer questo si chiama ciclo dell'acqua.",
+      "immagini": ["🏞️ fiume", "🌱 terra", "🌊 mare", "🔄 ciclo"]
     },
     {
       "titolo": "🎬 Il viaggio tutto intero",
       "immagine": "🎬",
       "testo": "Ora guardiamo tutto il viaggio della goccia, dall'inizio alla fine.",
-      "immagini": [
-        "🌊 mare",
-        "☁️ nuvola",
-        "🌧️ pioggia",
-        "🏞️ fiume"
-      ],
+      "immagini": ["🌊 mare", "☁️ nuvola", "🌧️ pioggia", "🏞️ fiume"],
       "curiosita": "L'acqua che bevi oggi potrebbe essere stata bevuta da un dinosauro, tantissimo tempo fa!",
       "animazione": {
         "tipo": "scena",
@@ -53,99 +84,56 @@
       }
     }
   ],
-  "parole_chiave": [
-    "♨️ evaporazione",
-    "☁️ condensazione",
-    "🌧️ precipitazione",
-    "🔄 ciclo"
-  ],
   "esercizi": [
     {
       "tipo": "scelta",
       "immagine": "🌊",
       "domanda": "Chi scalda l'acqua del mare?",
-      "opzioni": [
-        "🌙 la luna",
-        "☀️ il sole",
-        "🌬️ il vento"
-      ],
-      "corretta": 1
+      "opzioni": ["🌙 la luna", "☀️ il sole", "🌬️ il vento"],
+      "corretta": 1,
+      "spiegazione": "Il sole scalda l'acqua e la fa evaporare."
     },
     {
       "tipo": "vero_falso",
       "immagine": "♨️",
       "affermazione": "Il vapore sale verso il cielo.",
-      "corretta": true
+      "corretta": true,
+      "spiegazione": "Sì! Il vapore è leggero e sale in alto."
     },
     {
       "tipo": "ordina",
       "immagine": "🪜",
       "domanda": "Metti in ordine il viaggio della goccia.",
-      "elementi": [
-        "☀️ Il sole scalda",
-        "♨️ L'acqua sale",
-        "☁️ Si forma la nuvola",
-        "🌧️ Piove",
-        "🌊 Torna al mare"
-      ]
+      "elementi": ["☀️ Il sole scalda", "♨️ L'acqua sale", "☁️ Si forma la nuvola", "🌧️ Piove", "🌊 Torna al mare"]
     },
     {
       "tipo": "abbina",
       "immagine": "🔗",
       "domanda": "Unisci la parola al disegno giusto.",
       "coppie": [
-        [
-          "Evaporazione",
-          "♨️ l'acqua sale"
-        ],
-        [
-          "Condensazione",
-          "☁️ nasce la nuvola"
-        ],
-        [
-          "Precipitazione",
-          "🌧️ cade la pioggia"
-        ]
+        ["♨️ Evaporazione", "🌊 l'acqua sale"],
+        ["☁️ Condensazione", "🥶 nasce la nuvola"],
+        ["🌧️ Precipitazione", "☔ cade la pioggia"]
       ]
     },
     {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
-      "testo": "Quando fa freddo cade la [neve].",
-      "distrattori": [
-        "sabbia"
-      ]
+      "testo": "Quando fa molto freddo cade la [neve].",
+      "distrattori": ["sabbia"]
     },
     {
       "tipo": "categorie",
       "immagine": "🧺",
       "domanda": "Liquida o solida?",
-      "categorie": [
-        "💧 Liquida",
-        "🧊 Solida"
-      ],
+      "categorie": ["💧 Liquida", "🧊 Solida"],
       "elementi": [
-        {
-          "testo": "🌊 mare",
-          "categoria": "💧 Liquida"
-        },
-        {
-          "testo": "🌧️ pioggia",
-          "categoria": "💧 Liquida"
-        },
-        {
-          "testo": "🏞️ fiume",
-          "categoria": "💧 Liquida"
-        },
-        {
-          "testo": "❄️ neve",
-          "categoria": "🧊 Solida"
-        },
-        {
-          "testo": "🧊 ghiaccio",
-          "categoria": "🧊 Solida"
-        }
+        { "testo": "🌊 mare", "categoria": "💧 Liquida" },
+        { "testo": "🌧️ pioggia", "categoria": "💧 Liquida" },
+        { "testo": "🏞️ fiume", "categoria": "💧 Liquida" },
+        { "testo": "❄️ neve", "categoria": "🧊 Solida" },
+        { "testo": "🧊 ghiaccio", "categoria": "🧊 Solida" }
       ]
     },
     {
@@ -159,11 +147,7 @@
       "tipo": "scelta",
       "immagine": "🌦️",
       "domanda": "Dove va la pozzanghera quando torna il sole?",
-      "opzioni": [
-        "🐦 la bevono gli uccellini",
-        "♨️ diventa vapore",
-        "🧊 diventa ghiaccio"
-      ],
+      "opzioni": ["🐦 la bevono gli uccellini", "♨️ diventa vapore", "🧊 diventa ghiaccio"],
       "corretta": 1,
       "spiegazione": "Il caldo trasforma l'acqua in vapore."
     },
@@ -171,13 +155,131 @@
       "tipo": "scelta",
       "immagine": "☁️",
       "domanda": "Come si chiama quando il vapore diventa nuvola?",
-      "opzioni": [
-        "♨️ evaporazione",
-        "☁️ condensazione",
-        "🌧️ pioggia"
-      ],
+      "opzioni": ["♨️ evaporazione", "☁️ condensazione", "🌧️ pioggia"],
       "corretta": 1,
       "spiegazione": "In alto fa freddo e il vapore diventa goccioline: condensazione."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "☁️",
+      "affermazione": "Le nuvole sono fatte di tante goccioline d'acqua.",
+      "corretta": true,
+      "spiegazione": "Sì! Il vapore al freddo diventa goccioline."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏔️",
+      "domanda": "Com'è l'aria in alto, dove nascono le nuvole?",
+      "opzioni": ["🥶 fredda", "🔥 caldissima", "🌋 bollente"],
+      "corretta": 0,
+      "spiegazione": "In alto fa freddo: per questo il vapore diventa goccioline."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la parola e il suo disegno.",
+      "coppie": [
+        ["♨️ evaporazione", "☀️ sale"],
+        ["☁️ condensazione", "🥶 nuvola"],
+        ["🌧️ precipitazione", "☔ cade"],
+        ["🏞️ scorrimento", "🌊 al mare"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: che cosa NON cade dalle nuvole?",
+      "elementi": ["🌧️ pioggia", "❄️ neve", "🧊 grandine", "🍂 foglie"],
+      "intruso": 3,
+      "spiegazione": "Le foglie cadono dagli alberi, non dalle nuvole."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il sole scalda l'acqua e la fa [evaporare]. In alto il vapore forma le [nuvole].",
+      "distrattori": ["gelare", "montagne"]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le cose fatte d'acqua!",
+      "giusti": ["🌧️ pioggia", "❄️ neve", "☁️ nuvola", "🧊 ghiaccio"],
+      "sbagliati": ["🪨 sasso", "🌳 albero", "🔥 fuoco", "🏠 casa"],
+      "quanti": 4
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🏞️",
+      "affermazione": "L'acqua della pioggia scorre nei fiumi e torna al mare.",
+      "corretta": true,
+      "spiegazione": "Sì! Così il viaggio può ricominciare."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la causa a quello che succede.",
+      "coppie": [
+        ["☀️ il caldo", "♨️ l'acqua evapora"],
+        ["🥶 il freddo in alto", "☁️ nasce la nuvola"],
+        ["⚖️ gocce pesanti", "🌧️ piove"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪞",
+      "domanda": "Dopo la doccia lo specchio è bagnato. Perché?",
+      "opzioni": ["♨️ il vapore torna acqua", "🌧️ è piovuto in bagno", "🧽 l'ha lavato la mamma"],
+      "corretta": 0,
+      "spiegazione": "Il vapore tocca lo specchio freddo: è la condensazione."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole del viaggio.",
+      "parole": ["☁️ nuvola", "♨️ vapore", "🌧️ pioggia", "❄️ neve", "🌊 mare"]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🔬",
+      "domanda": "Completa il testo bucato di Marta.",
+      "testo": "Il [sole] scalda il mare.\nL'acqua diventa [vapore] e sale.\nIn alto si forma la [nuvola].\nLe gocce cadono: è la [pioggia].",
+      "distrattori": ["luna", "sabbia"]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine le parole del ciclo.",
+      "elementi": ["♨️ evaporazione", "☁️ condensazione", "🌧️ precipitazione", "🏞️ scorrimento"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "NU-VO-LA",
+      "indizio": "☁️ È fatta di goccioline e sta in cielo"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "VAPORE",
+      "indizio": "♨️ L'acqua che diventa gas e sale"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CICLO",
+      "indizio": "🔄 Un viaggio che ricomincia sempre"
     }
-  ]
+  ],
+  "ricorda": [
+    "♨️ Il sole scalda l'acqua: diventa vapore e sale. È l'evaporazione.",
+    "☁️ In alto fa freddo: il vapore diventa goccioline. È la condensazione.",
+    "🌧️ Le gocce pesanti cadono: pioggia, neve o grandine. È la precipitazione.",
+    "🏞️ L'acqua scorre nei fiumi e torna al mare.",
+    "🔄 Il viaggio ricomincia sempre: è il ciclo dell'acqua."
+  ],
+  "verifica": "verifiche/sci3-ciclo-dell-acqua.json"
 }

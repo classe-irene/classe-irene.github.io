@@ -1,0 +1,304 @@
+{
+  "titolo": "Vertebrati e invertebrati",
+  "emoji": "🐸",
+  "materia": "scienze",
+  "classe": 3,
+  "introduzione": "Impariamo a classificare gli animali: chi ha la colonna vertebrale e chi no.",
+  "storia": {
+    "personaggio": "👩‍⚕️",
+    "testo": "Ciao, sono Elena, la veterinaria!\nNel mio studio arrivano un cane, una rana e una lumaca.\nSono molto diversi. Come li metto in gruppi?",
+    "immagini": ["🐶 cane", "🐸 rana", "🐌 lumaca"],
+    "missione": "Aiutate Elena a mettere in ordine gli animali. Alla fine vincete la figurina della rana!"
+  },
+  "premio": "🐸",
+  "parole_chiave": [
+    "🦴 vertebrati",
+    "🐌 invertebrati",
+    "🗂️ classificare",
+    "🐄 mammiferi",
+    "🐦 uccelli",
+    "🐟 pesci",
+    "🦎 rettili",
+    "🐸 anfibi"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🗂️ Classificare gli animali",
+      "immagine": "🗂️",
+      "testo": "Classificare vuol dire mettere in gruppi.\nNello stesso gruppo vanno gli animali che si somigliano.\nLa prima domanda è: ha lo scheletro con la colonna vertebrale?\nSì: è un vertebrato. No: è un invertebrato.",
+      "immagini": ["🗂️ gruppi", "🦴 scheletro", "🐶 vertebrato", "🐌 invertebrato"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "due grandi gruppi",
+        "passi": [
+          { "figure": "🐶 🐸 🐌 🦋", "testo": "Ecco tanti animali diversi." },
+          { "figure": "🦴 ❓", "testo": "Domanda: ha la colonna vertebrale?" },
+          { "figure": "🐶 🐸", "testo": "Il cane e la rana sì: sono vertebrati." },
+          { "figure": "🐌 🦋", "testo": "La lumaca e la farfalla no: sono invertebrati." }
+        ]
+      }
+    },
+    {
+      "titolo": "🦴 I vertebrati",
+      "immagine": "🦴",
+      "testo": "I vertebrati hanno uno scheletro dentro il corpo.\nAl centro c'è la colonna vertebrale.\nSi dividono in cinque gruppi:\nmammiferi, uccelli, pesci, rettili e anfibi.",
+      "immagini": ["🐄 mammiferi", "🐦 uccelli", "🐟 pesci", "🦎 rettili", "🐸 anfibi"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i cinque gruppi dei vertebrati",
+        "passi": [
+          { "figure": "🐄 🍼", "testo": "I mammiferi hanno il pelo e bevono il latte della mamma." },
+          { "figure": "🐦 🪶 🥚", "testo": "Gli uccelli hanno le piume e nascono dalle uova." },
+          { "figure": "🐟 🌊", "testo": "I pesci hanno le squame e vivono nell'acqua." },
+          { "figure": "🦎 🐢 🐍", "testo": "I rettili hanno la pelle a squame e strisciano o camminano basso." },
+          { "figure": "🐸 💧 🌿", "testo": "Gli anfibi vivono un po' in acqua e un po' sulla terra." }
+        ]
+      },
+      "scopri": [
+        { "fronte": "🐄 Mammiferi", "retro": "🍼 Pelo. I piccoli bevono il latte della mamma." },
+        { "fronte": "🐦 Uccelli", "retro": "🪶 Piume, becco e ali. Nascono dalle uova." },
+        { "fronte": "🐟 Pesci", "retro": "🌊 Squame e pinne. Respirano con le branchie." },
+        { "fronte": "🐸 Anfibi", "retro": "💧 Pelle nuda e umida. Da piccoli vivono nell'acqua." }
+      ]
+    },
+    {
+      "titolo": "🐌 Gli invertebrati",
+      "immagine": "🐌",
+      "testo": "Gli invertebrati non hanno la colonna vertebrale.\nSono la maggior parte degli animali!\nAlcuni hanno il corpo molle, come il lombrico.\nAltri hanno una conchiglia, come la lumaca.\nAltri hanno una corazza, come il granchio e gli insetti.",
+      "immagini": ["🪱 lombrico", "🐌 lumaca", "🦀 granchio", "🐞 insetti"],
+      "scopri": [
+        { "fronte": "🐞 Insetti", "retro": "🦵 Sei zampe. Spesso hanno le ali." },
+        { "fronte": "🕷️ Ragni", "retro": "🕸️ Otto zampe. Fanno la ragnatela." },
+        { "fronte": "🐌 Molluschi", "retro": "🐚 Corpo molle, spesso con la conchiglia." },
+        { "fronte": "🪱 Vermi", "retro": "〰️ Corpo lungo e molle, senza zampe." }
+      ],
+      "pensa": {
+        "domanda": "La lumaca ha una conchiglia dura. Allora è un vertebrato?",
+        "risposta": "No: la conchiglia è fuori dal corpo. Dentro la lumaca non ha la colonna vertebrale: è un invertebrato."
+      }
+    },
+    {
+      "titolo": "🔍 Osserviamo da vicino",
+      "immagine": "🔍",
+      "testo": "Per classificare bisogna osservare bene.\nGuardo il corpo: pelo, piume, squame o pelle nuda?\nConto le zampe: sei, otto o nessuna?\nPoi scelgo il gruppo giusto.",
+      "immagini": ["🔍 osservo", "🪶 piume", "🦵 zampe", "🗂️ gruppo"],
+      "esperimento": {
+        "titolo": "Caccia agli invertebrati",
+        "materiali": ["🔍 una lente", "🫙 un barattolo con buchi nel tappo", "📓 un quaderno"],
+        "passi": ["Vai in giardino con la maestra.", "Cerca sotto i sassi e le foglie.", "Guarda gli animaletti con la lente.", "Conta le zampe e disegnali.", "Poi rimettili dove li hai trovati."],
+        "domanda": "Quanti animaletti hai trovato con sei zampe? E con otto?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🦴",
+      "domanda": "Che cosa hanno i vertebrati?",
+      "opzioni": ["🦴 la colonna vertebrale", "🐚 la conchiglia", "🪽 sempre le ali"],
+      "corretta": 0,
+      "spiegazione": "I vertebrati hanno lo scheletro con la colonna vertebrale."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Vertebrato o invertebrato?",
+      "categorie": ["🦴 Vertebrato", "🐌 Invertebrato"],
+      "elementi": [
+        { "testo": "🐶 cane", "categoria": "🦴 Vertebrato" },
+        { "testo": "🐟 pesce", "categoria": "🦴 Vertebrato" },
+        { "testo": "🐦 passero", "categoria": "🦴 Vertebrato" },
+        { "testo": "🐌 lumaca", "categoria": "🐌 Invertebrato" },
+        { "testo": "🦋 farfalla", "categoria": "🐌 Invertebrato" },
+        { "testo": "🪱 lombrico", "categoria": "🐌 Invertebrato" }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐌",
+      "affermazione": "Gli invertebrati non hanno la colonna vertebrale.",
+      "corretta": true,
+      "spiegazione": "Sì! In-vertebrati vuol dire senza vertebre."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il gruppo al suo corpo.",
+      "coppie": [
+        ["🐄 mammiferi", "🧸 pelo"],
+        ["🐦 uccelli", "🪶 piume"],
+        ["🐟 pesci", "🌊 squame e pinne"],
+        ["🐸 anfibi", "💧 pelle nuda e umida"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍼",
+      "domanda": "Quali animali bevono il latte della mamma da piccoli?",
+      "opzioni": ["🐄 i mammiferi", "🐟 i pesci", "🦎 i rettili"],
+      "corretta": 0,
+      "spiegazione": "I mammiferi allattano i loro piccoli."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Gli uccelli hanno le [piume]. I mammiferi hanno il [pelo].",
+      "distrattori": ["squame", "conchiglie"]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i mammiferi!",
+      "giusti": ["🐄 mucca", "🐶 cane", "🐬 delfino", "🐱 gatto"],
+      "sbagliati": ["🐦 passero", "🐟 pesce", "🐍 serpente", "🐸 rana"],
+      "quanti": 4
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐬",
+      "affermazione": "Il delfino vive in mare, ma è un mammifero.",
+      "corretta": true,
+      "spiegazione": "Sì! Il delfino respira aria e beve il latte della mamma."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🗂️",
+      "domanda": "In quale gruppo dei vertebrati?",
+      "categorie": ["🐦 Uccelli", "🦎 Rettili", "🐸 Anfibi"],
+      "elementi": [
+        { "testo": "🦅 aquila", "categoria": "🐦 Uccelli" },
+        { "testo": "🦆 anatra", "categoria": "🐦 Uccelli" },
+        { "testo": "🐢 tartaruga", "categoria": "🦎 Rettili" },
+        { "testo": "🐍 serpente", "categoria": "🦎 Rettili" },
+        { "testo": "🐸 rana", "categoria": "🐸 Anfibi" },
+        { "testo": "🐸 rospo", "categoria": "🐸 Anfibi" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐞",
+      "domanda": "Quante zampe hanno gli insetti?",
+      "opzioni": ["6️⃣ sei", "8️⃣ otto", "4️⃣ quattro"],
+      "corretta": 0,
+      "spiegazione": "Gli insetti hanno sei zampe. I ragni ne hanno otto."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova l'animale e il suo gruppo.",
+      "coppie": [
+        ["🐄 mucca", "🍼 mammifero"],
+        ["🦅 aquila", "🪶 uccello"],
+        ["🐢 tartaruga", "🦎 rettile"],
+        ["🕷️ ragno", "🕸️ invertebrato"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è un invertebrato?",
+      "elementi": ["🐌 lumaca", "🦋 farfalla", "🐱 gatto", "🦀 granchio"],
+      "intruso": 2,
+      "spiegazione": "Il gatto ha la colonna vertebrale: è un vertebrato."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐚",
+      "affermazione": "La lumaca è un vertebrato perché ha una conchiglia dura.",
+      "corretta": false,
+      "spiegazione": "No: la conchiglia è fuori. Dentro non ha la colonna vertebrale."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'invertebrato al suo gruppo.",
+      "coppie": [
+        ["🐜 formica", "🐞 insetti"],
+        ["🕷️ ragno", "🕸️ ragni"],
+        ["🐙 polpo", "🐚 molluschi"],
+        ["🪱 lombrico", "〰️ vermi"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Mettere in gruppi si dice [classificare]. Gli animali senza colonna vertebrale sono [invertebrati].",
+      "distrattori": ["mangiare", "mammiferi"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐸",
+      "domanda": "Il girino vive nell'acqua, la rana adulta anche sulla terra. Che animale è la rana?",
+      "opzioni": ["🐸 un anfibio", "🐟 un pesce", "🐦 un uccello"],
+      "corretta": 0,
+      "spiegazione": "Anfibio vuol dire che vive in due ambienti."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa gli insetti!",
+      "giusti": ["🐜 formica", "🐝 ape", "🦋 farfalla", "🐞 coccinella"],
+      "sbagliati": ["🕷️ ragno", "🐌 lumaca", "🪱 lombrico", "🐦 passero"],
+      "quanti": 4
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi per classificare.",
+      "elementi": ["🔍 osservo l'animale", "🦴 ha la colonna vertebrale?", "🪶 guardo il corpo e le zampe", "🗂️ scelgo il gruppo"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐧",
+      "affermazione": "Il pinguino non vola, ma è un uccello.",
+      "corretta": true,
+      "spiegazione": "Sì! Ha le piume, il becco e nasce da un uovo."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova i gruppi degli animali.",
+      "parole": ["🐟 pesci", "🐦 uccelli", "🦎 rettili", "🐸 anfibi", "🐞 insetti"]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍⚕️",
+      "domanda": "Completa il testo bucato di Elena.",
+      "testo": "Il cane ha la colonna vertebrale: è un [vertebrato].\nHa il pelo: è un [mammifero].\nLa lumaca non ha vertebre: è un [invertebrato].",
+      "distrattori": ["pesce", "uccello"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "MAM-MI-FE-RO",
+      "indizio": "🍼 Da piccolo beve il latte della mamma"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "VERTEBRATO",
+      "indizio": "🦴 Animale con la colonna vertebrale"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ANFIBIO",
+      "indizio": "🐸 Vive in acqua e sulla terra"
+    }
+  ],
+  "ricorda": [
+    "🗂️ Classificare vuol dire mettere in gruppi.",
+    "🦴 I vertebrati hanno la colonna vertebrale. 🐌 Gli invertebrati no.",
+    "🐄 I vertebrati sono: mammiferi, uccelli, pesci, rettili e anfibi.",
+    "🐞 Gli insetti hanno sei zampe. 🕷️ I ragni ne hanno otto.",
+    "🐚 Molluschi e vermi hanno il corpo molle."
+  ],
+  "verifica": "verifiche/sci3-vertebrati-e-invertebrati.json"
+}

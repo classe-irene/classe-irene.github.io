@@ -1,0 +1,267 @@
+{
+  "titolo": "Miscugli e soluzioni",
+  "emoji": "🥣",
+  "materia": "scienze",
+  "classe": 4,
+  "obiettivi": [
+    "riconoscere miscugli e soluzioni",
+    "distinguere sostanze solubili e insolubili",
+    "conoscere i modi per separare un miscuglio"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🥣",
+      "testo": "Un miscuglio è…",
+      "opzioni": [
+        "🥣 due o più cose mescolate",
+        "🧂 una cosa sola",
+        "🔥 una fiamma"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Si scioglie nell'acqua? Scrivi nella colonna giusta.",
+      "categorie": [
+        "✅ Solubile",
+        "🚫 Insolubile"
+      ],
+      "elementi": [
+        {
+          "testo": "sale",
+          "categoria": "✅ Solubile"
+        },
+        {
+          "testo": "zucchero",
+          "categoria": "✅ Solubile"
+        },
+        {
+          "testo": "miele",
+          "categoria": "✅ Solubile"
+        },
+        {
+          "testo": "sabbia",
+          "categoria": "🚫 Insolubile"
+        },
+        {
+          "testo": "olio",
+          "categoria": "🚫 Insolubile"
+        },
+        {
+          "testo": "sassolini",
+          "categoria": "🚫 Insolubile"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il sale si scioglie nell'acqua.",
+          "vero": true
+        },
+        {
+          "testo": "L'olio si scioglie nell'acqua.",
+          "vero": false
+        },
+        {
+          "testo": "La calamita attira il ferro.",
+          "vero": true
+        },
+        {
+          "testo": "Con il filtro separo il sale dall'acqua salata.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni strumento a che cosa separa.",
+      "coppie": [
+        [
+          "setaccio",
+          "i sassi dalla sabbia"
+        ],
+        [
+          "filtro",
+          "la sabbia dall'acqua"
+        ],
+        [
+          "calamita",
+          "i chiodi dalla sabbia"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Il sale nell'acqua si ___ e forma una ___ . Per ritrovare il sale faccio ___ l'acqua.",
+      "soluzioni": [
+        "scioglie",
+        "soluzione",
+        "evaporare"
+      ],
+      "parole": [
+        "scioglie",
+        "soluzione",
+        "evaporare",
+        "congelare"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "📄",
+      "testo": "La filtrazione. Metti in ordine.",
+      "elementi": [
+        "🏖️ ho un miscuglio di acqua e sabbia",
+        "📄 metto il filtro sul barattolo",
+        "🫗 verso il miscuglio nel filtro",
+        "💧 nel barattolo scende l'acqua pulita"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🧪",
+      "testo": "Unisci ogni miscuglio al modo per separarlo.",
+      "coppie": [
+        [
+          "acqua e sale",
+          "evaporazione"
+        ],
+        [
+          "acqua e sabbia",
+          "filtro"
+        ],
+        [
+          "sabbia e chiodi",
+          "calamita"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⏳",
+      "testo": "Lascio riposare acqua e sabbia. La sabbia va sul fondo. Come si chiama?",
+      "opzioni": [
+        "⏳ decantazione",
+        "☀️ evaporazione",
+        "🧊 fusione"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Il sale nell'acqua non si vede più. Come fai a sapere che c'è ancora? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché l'acqua è salata. E se faccio evaporare l'acqua, il sale resta nel piattino."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un bicchiere con acqua e olio. Dove sta l'olio?"
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🥣",
+      "testo": "Un miscuglio è…",
+      "opzioni": [
+        "🥣 cose mescolate",
+        "🧂 una cosa sola"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Si scioglie o no?",
+      "categorie": [
+        "✅ Si scioglie",
+        "🚫 Non si scioglie"
+      ],
+      "elementi": [
+        {
+          "testo": "sale",
+          "categoria": "✅ Si scioglie"
+        },
+        {
+          "testo": "zucchero",
+          "categoria": "✅ Si scioglie"
+        },
+        {
+          "testo": "sabbia",
+          "categoria": "🚫 Non si scioglie"
+        },
+        {
+          "testo": "olio",
+          "categoria": "🚫 Non si scioglie"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il sale si scioglie nell'acqua.",
+          "vero": true
+        },
+        {
+          "testo": "La calamita attira la sabbia.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "filtro",
+          "ferma la sabbia"
+        ],
+        [
+          "calamita",
+          "attira il ferro"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Acqua e sale formano una ___ .",
+      "soluzioni": [
+        "soluzione"
+      ],
+      "parole": [
+        "soluzione",
+        "pietra"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "testo": "Come ritrovo il sale nell'acqua?",
+      "opzioni": [
+        "☀️ faccio evaporare l'acqua",
+        "🧲 uso la calamita"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un miscuglio di sabbia e sassi."
+    }
+  ]
+}

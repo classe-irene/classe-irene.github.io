@@ -1,0 +1,469 @@
+{
+  "titolo": "Dividere in parti uguali",
+  "emoji": "🍕",
+  "materia": "matematica",
+  "classe": 2,
+  "introduzione": "Con Bea la pizzaiola impariamo a distribuire e a raggruppare in parti uguali.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao bambini! Sono Bea, la pizzaiola.\nOggi le mie amiche vengono a mangiare le pizzette.\nVoglio che ognuna ne abbia lo stesso numero!",
+    "immagini": [
+      "🍕 pizzette",
+      "👭 amiche",
+      "🍽️ piatti"
+    ],
+    "missione": "Aiutate Bea a dividere le pizzette in parti uguali. Alla fine vincete la figurina della pizza!"
+  },
+  "premio": "🍕",
+  "parole_chiave": [
+    "➗ divisione",
+    "✅ parti uguali",
+    "🤲 distribuire",
+    "🧺 raggruppare",
+    "➗ diviso",
+    "✖️ prova",
+    "🍬 avanzo"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🍕 Parti uguali",
+      "immagine": "🍕",
+      "testo": "Dividere vuol dire fare parti uguali.\nOgni parte ha lo stesso numero di cose.\n2 biscotti a Lia e 2 biscotti a Ada: sono parti uguali!",
+      "immagini": [
+        "➗ dividere",
+        "✅ parti uguali",
+        "🍪🍪 2 a Lia",
+        "🍪🍪 2 a Ada"
+      ],
+      "pensa": {
+        "domanda": "Bea dà 3 biscotti a Lia e 1 biscotto a Ada. Sono parti uguali?",
+        "risposta": "No! Le parti devono avere lo stesso numero: 2 biscotti a Lia e 2 biscotti a Ada."
+      }
+    },
+    {
+      "titolo": "🤲 Distribuire",
+      "immagine": "🤲",
+      "testo": "Bea ha 4 pizzette e 2 amiche.\nNe dà una a ognuna, a turno, finché finiscono.\nOgni amica ha 2 pizzette.\nSi scrive 4 : 2 = 2. Si legge 4 diviso 2.",
+      "immagini": [
+        "🍕🍕🍕🍕 4 pizzette",
+        "👭 2 amiche",
+        "🤲 a turno",
+        "➗ 4 : 2 = 2"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "distribuire",
+        "passi": [
+          {
+            "figure": "🍕 🍕 🍕 🍕",
+            "testo": "Bea ha 4 pizzette."
+          },
+          {
+            "figure": "👧 👧",
+            "testo": "Le amiche sono 2."
+          },
+          {
+            "figure": "👧 🍕 👧 🍕",
+            "testo": "Bea dà una pizzetta a ognuna."
+          },
+          {
+            "figure": "👧 🍕 🍕",
+            "testo": "Poi un'altra: ogni amica ha 2 pizzette."
+          },
+          {
+            "figure": "4️⃣ ➗ 2️⃣ 🟰 2️⃣",
+            "testo": "4 : 2 = 2. Il segno : si legge diviso."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🧺 Raggruppare",
+      "immagine": "🧺",
+      "testo": "Bea ha 6 uova.\nLe mette nei cestini: 3 uova in ogni cestino.\nServono 2 cestini.\nAnche questo è dividere: 6 : 3 = 2.",
+      "immagini": [
+        "🥚 6 uova",
+        "🧺 3 in ogni cestino",
+        "🧺🧺 2 cestini",
+        "➗ 6 : 3 = 2"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "raggruppare",
+        "passi": [
+          {
+            "figure": "6️⃣ 🥚",
+            "testo": "Bea ha 6 uova."
+          },
+          {
+            "figure": "🧺 🥚 🥚 🥚",
+            "testo": "Mette 3 uova in un cestino."
+          },
+          {
+            "figure": "🧺 🥚 🥚 🥚",
+            "testo": "Mette le altre 3 uova in un altro cestino."
+          },
+          {
+            "figure": "🧺 🧺",
+            "testo": "Servono 2 cestini."
+          },
+          {
+            "figure": "6️⃣ ➗ 3️⃣ 🟰 2️⃣",
+            "testo": "6 : 3 = 2."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "✖️ La prova con la moltiplicazione",
+      "immagine": "✖️",
+      "testo": "La divisione è il contrario della moltiplicazione.\n6 : 3 = 2. Prova: 2 × 3 = 6.\nSe torno al numero di partenza, è giusto!",
+      "immagini": [
+        "➗ 6 : 3 = 2",
+        "✖️ 2 × 3 = 6",
+        "✅ giusto"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 8 : 2",
+          "retro": "🍕 4, perché 4 × 2 = 8"
+        },
+        {
+          "fronte": "❓ 10 : 5",
+          "retro": "🖐️ 2, perché 2 × 5 = 10"
+        },
+        {
+          "fronte": "❓ 9 : 3",
+          "retro": "☘️ 3, perché 3 × 3 = 9"
+        }
+      ]
+    },
+    {
+      "titolo": "🍬 A volte avanza qualcosa",
+      "immagine": "🍬",
+      "testo": "Bea ha 7 caramelle e 2 amiche.\nOgni amica ne ha 3.\nAvanza 1 caramella: non si può dividere in parti uguali.",
+      "immagini": [
+        "🍬 7 caramelle",
+        "👭 2 amiche",
+        "🍬🍬🍬 3 a testa",
+        "🍬 1 avanza"
+      ],
+      "pensa": {
+        "domanda": "Bea ha 9 biscotti e 2 amiche. Quanti biscotti a testa? Quanti avanzano?",
+        "risposta": "4 biscotti a testa: 4 + 4 = 8. Avanza 1 biscotto."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "➗",
+      "domanda": "Dividere vuol dire…",
+      "opzioni": [
+        "🍕 fare parti uguali",
+        "➕ mettere insieme",
+        "✖️ ripetere"
+      ],
+      "corretta": 0,
+      "spiegazione": "Dividere vuol dire fare parti uguali."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍪",
+      "affermazione": "Ada ha 3 biscotti e Lia 1: sono parti uguali.",
+      "corretta": false,
+      "spiegazione": "No: 3 e 1 sono diversi. Parti uguali: 2 e 2."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍕",
+      "domanda": "Bea ha 6 pizzette e 2 amiche. Quante pizzette ha ognuna?",
+      "opzioni": [
+        "🍕 3",
+        "🍕 4",
+        "🍕 12"
+      ],
+      "corretta": 0,
+      "spiegazione": "6 : 2 = 3. Prova: 3 × 2 = 6."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍓",
+      "domanda": "Bea divide 10 fragole tra 2 amiche. Ecco le fragole di un'amica: quante sono?",
+      "oggetto": "🍓",
+      "numero": 5,
+      "spiegazione": "10 : 2 = 5 fragole a testa."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la divisione al risultato.",
+      "coppie": [
+        [
+          "🍪 8 : 2",
+          "🎯 4"
+        ],
+        [
+          "🍪 10 : 5",
+          "🎯 2"
+        ],
+        [
+          "🍪 9 : 3",
+          "🎯 3"
+        ],
+        [
+          "🍪 6 : 6",
+          "🎯 1"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➗",
+      "affermazione": "Il segno : si legge diviso.",
+      "corretta": true,
+      "spiegazione": "Sì! 4 : 2 si legge 4 diviso 2."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧺",
+      "domanda": "Completa.",
+      "testo": "Bea ha 6 uova. Mette 2 uova in ogni cestino. Servono [3] cestini. Si scrive 6 : [2] = 3.",
+      "distrattori": [
+        "4",
+        "12"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "Sono parti uguali?",
+      "categorie": [
+        "✅ Parti uguali",
+        "❌ Parti diverse"
+      ],
+      "elementi": [
+        {
+          "testo": "🍕 3 e 3",
+          "categoria": "✅ Parti uguali"
+        },
+        {
+          "testo": "🍕 5 e 5",
+          "categoria": "✅ Parti uguali"
+        },
+        {
+          "testo": "🍕 2, 2 e 2",
+          "categoria": "✅ Parti uguali"
+        },
+        {
+          "testo": "🍕 4 e 2",
+          "categoria": "❌ Parti diverse"
+        },
+        {
+          "testo": "🍕 1 e 5",
+          "categoria": "❌ Parti diverse"
+        },
+        {
+          "testo": "🍕 3, 2 e 1",
+          "categoria": "❌ Parti diverse"
+        }
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la divisione e il suo risultato.",
+      "coppie": [
+        [
+          "➗ 4 : 2",
+          "🍕 2"
+        ],
+        [
+          "➗ 12 : 3",
+          "🍕 4"
+        ],
+        [
+          "➗ 15 : 5",
+          "🍕 3"
+        ],
+        [
+          "➗ 10 : 2",
+          "🍕 5"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine: come distribuisce Bea?",
+      "elementi": [
+        "🍕 Conto le pizzette",
+        "👭 Conto le amiche",
+        "🤲 Do una pizzetta a ognuna, a turno",
+        "✅ Conto quante ne ha ognuna"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✖️",
+      "domanda": "Quale moltiplicazione fa la prova di 8 : 2 = 4?",
+      "opzioni": [
+        "✖️ 4 × 2 = 8",
+        "✖️ 8 × 2 = 16",
+        "✖️ 4 × 4 = 16"
+      ],
+      "corretta": 0,
+      "spiegazione": "Risultato per divisore: 4 × 2 = 8. Torno al numero di partenza!"
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON fa 2?",
+      "elementi": [
+        "➗ 4 : 2",
+        "➗ 6 : 3",
+        "➗ 9 : 3",
+        "➗ 10 : 5"
+      ],
+      "intruso": 2,
+      "spiegazione": "9 : 3 fa 3!"
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa le divisioni che fanno 5!",
+      "giusti": [
+        "➗ 10 : 2",
+        "➗ 15 : 3",
+        "➗ 20 : 4",
+        "➗ 25 : 5",
+        "➗ 30 : 6",
+        "➗ 50 : 10"
+      ],
+      "sbagliati": [
+        "➗ 10 : 5",
+        "➗ 12 : 3",
+        "➗ 20 : 2",
+        "➗ 18 : 3",
+        "➗ 8 : 2",
+        "➗ 30 : 10"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa la prova.",
+      "testo": "12 : 3 = [4] perché 4 × 3 = [12].",
+      "distrattori": [
+        "9",
+        "36"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚽",
+      "domanda": "Ci sono 10 bambine. Fanno squadre da 5. Quante squadre?",
+      "opzioni": [
+        "⚽ 2",
+        "⚽ 5",
+        "⚽ 15"
+      ],
+      "corretta": 0,
+      "spiegazione": "Raggruppo di 5 in 5: 10 : 5 = 2 squadre."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il problema alla divisione.",
+      "coppie": [
+        [
+          "🍕 8 pizzette a 2 amiche",
+          "➗ 8 : 2"
+        ],
+        [
+          "🥚 9 uova, 3 in ogni cestino",
+          "➗ 9 : 3"
+        ],
+        [
+          "🍓 10 fragole a 5 bambine",
+          "➗ 10 : 5"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍬",
+      "affermazione": "Bea ha 7 caramelle e 2 amiche. Ognuna ne ha 3 e ne avanza 1.",
+      "corretta": true,
+      "spiegazione": "Sì! 3 + 3 = 6, e avanza 1 caramella."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "domanda": "Bea ha 12 biscotti e 4 piatti. Mette lo stesso numero in ogni piatto. Quanti biscotti per piatto?",
+      "opzioni": [
+        "🍪 3",
+        "🍪 4",
+        "🍪 8"
+      ],
+      "corretta": 0,
+      "spiegazione": "12 : 4 = 3. Prova: 3 × 4 = 12."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🐸",
+      "domanda": "La rana va da 0 a 8 con salti da 2. Quanti salti fa? Tocca il numero.",
+      "min": 0,
+      "max": 10,
+      "passo": 1,
+      "corretta": 4
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🍳",
+      "domanda": "Completa il testo bucato di Bea.",
+      "testo": "Dividere vuol dire fare parti [uguali].\nIl segno : si legge [diviso].\nPer la prova uso la [moltiplicazione].",
+      "distrattori": [
+        "diverse",
+        "addizione"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della divisione.",
+      "parole": [
+        "➗ diviso",
+        "🍕 parti",
+        "✅ uguali",
+        "🧺 gruppi"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "DI-VI-SIO-NE",
+      "indizio": "➗ L'operazione per fare parti uguali"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DISTRIBUIRE",
+      "indizio": "🤲 Dare una cosa a ognuno, a turno"
+    }
+  ],
+  "ricorda": [
+    "🍕 Dividere vuol dire fare parti uguali.",
+    "🤲 Distribuire: do una cosa a ognuno, a turno.",
+    "🧺 Raggruppare: faccio gruppi con lo stesso numero.",
+    "➗ Il segno : si legge diviso.",
+    "✖️ Per la prova uso la moltiplicazione.",
+    "🍬 A volte avanza qualcosa."
+  ],
+  "verifica": "verifiche/mat2-dividere-in-parti-uguali.json"
+}

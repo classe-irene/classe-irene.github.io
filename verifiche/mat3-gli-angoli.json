@@ -1,0 +1,241 @@
+{
+  "titolo": "Gli angoli",
+  "emoji": "📐",
+  "materia": "matematica",
+  "classe": 3,
+  "obiettivi": [
+    "riconoscere vertice e lati di un angolo",
+    "collegare l'angolo alla rotazione: quarto di giro, mezzo giro, giro",
+    "riconoscere angoli retti, acuti e ottusi"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "📐",
+      "testo": "Che cos'è un angolo?",
+      "opzioni": [
+        "📐 lo spazio tra due lati che partono dallo stesso punto",
+        "⚪ una linea curva chiusa",
+        "📏 una linea dritta sola"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il punto dove i lati si incontrano è il vertice.",
+          "vero": true
+        },
+        {
+          "testo": "L'angolo acuto è più grande dell'angolo retto.",
+          "vero": false
+        },
+        {
+          "testo": "Mezzo giro è un angolo piatto.",
+          "vero": true
+        },
+        {
+          "testo": "L'angolo del foglio è ottuso.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci il giro al suo angolo.",
+      "coppie": [
+        [
+          "un quarto di giro",
+          "angolo retto"
+        ],
+        [
+          "mezzo giro",
+          "angolo piatto"
+        ],
+        [
+          "un giro intero",
+          "angolo giro"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Che angolo è? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🍕 Acuto",
+        "🟦 Retto",
+        "🪭 Ottuso"
+      ],
+      "elementi": [
+        {
+          "testo": "la punta della pizza",
+          "categoria": "🍕 Acuto"
+        },
+        {
+          "testo": "l'angolo della porta",
+          "categoria": "🟦 Retto"
+        },
+        {
+          "testo": "l'angolo del quaderno",
+          "categoria": "🟦 Retto"
+        },
+        {
+          "testo": "il ventaglio aperto",
+          "categoria": "🪭 Ottuso"
+        },
+        {
+          "testo": "le forbici poco aperte",
+          "categoria": "🍕 Acuto"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Un angolo ha due ___ e un vertice. L'angolo più piccolo del retto si chiama ___. L'angolo più grande del retto si chiama ___.",
+      "soluzioni": [
+        "lati",
+        "acuto",
+        "ottuso"
+      ],
+      "parole": [
+        "lati",
+        "acuto",
+        "ottuso",
+        "cerchi"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dal più piccolo al più grande.",
+      "elementi": [
+        "angolo acuto",
+        "angolo retto",
+        "angolo ottuso",
+        "angolo piatto"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🟦",
+      "testo": "Il rettangolo ha tanti angoli retti quanti sono questi disegni. Quanti sono?",
+      "figura": "📐",
+      "numero": 4
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📐",
+      "testo": "Con quale strumento controllo se un angolo è retto?",
+      "opzioni": [
+        "📐 la squadra",
+        "⚖️ la bilancia",
+        "⏰ l'orologio"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Apri piano piano la porta della classe. Che angoli vedi tra la porta e il muro? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Prima un angolo acuto, poi un angolo retto, poi un angolo ottuso: l'angolo diventa sempre più grande."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un angolo retto, un angolo acuto e un angolo ottuso. Colora il vertice di rosso."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "📍",
+      "testo": "Il punto dove i lati si incontrano è…",
+      "opzioni": [
+        "📍 il vertice",
+        "📏 il lato"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "L'angolo del foglio è retto.",
+          "vero": true
+        },
+        {
+          "testo": "L'angolo acuto è largo.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "un quarto di giro",
+          "angolo retto"
+        ],
+        [
+          "mezzo giro",
+          "angolo piatto"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Acuto o ottuso?",
+      "categorie": [
+        "🍕 Acuto",
+        "🪭 Ottuso"
+      ],
+      "elementi": [
+        {
+          "testo": "punta della pizza",
+          "categoria": "🍕 Acuto"
+        },
+        {
+          "testo": "ventaglio aperto",
+          "categoria": "🪭 Ottuso"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "L'angolo stretto, più piccolo del retto, si chiama ___.",
+      "soluzioni": [
+        "acuto"
+      ],
+      "parole": [
+        "acuto",
+        "ottuso"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔺",
+      "testo": "Il triangolo ha tanti angoli quanti sono questi disegni. Quanti sono?",
+      "figura": "📐",
+      "numero": 3
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un angolo retto con la squadra."
+    }
+  ]
+}

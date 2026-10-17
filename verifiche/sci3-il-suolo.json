@@ -1,0 +1,141 @@
+{
+  "titolo": "Il suolo",
+  "emoji": "🪱",
+  "materia": "scienze",
+  "classe": 3,
+  "obiettivi": [
+    "sapere di che cosa è fatto il suolo",
+    "conoscere gli strati del suolo",
+    "riconoscere gli abitanti del suolo e il loro lavoro"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine gli strati del suolo, dall'alto in basso.",
+      "elementi": ["🍂 humus", "🟫 sottosuolo", "🪨 roccia"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍂",
+      "testo": "Di che cosa è fatto l'humus?",
+      "opzioni": ["🍂 resti di foglie e animali", "🧊 ghiaccio", "🧱 mattoni rotti"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Nel suolo ci sono anche acqua e aria.", "vero": true },
+        { "testo": "L'argilla lascia passare l'acqua velocemente.", "vero": false },
+        { "testo": "Il lombrico scava gallerie.", "vero": true },
+        { "testo": "In fondo, sotto il suolo, c'è la sabbia del mare.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni parola al suo significato.",
+      "coppie": [
+        ["sabbia", "l'acqua passa veloce"],
+        ["argilla", "trattiene l'acqua"],
+        ["humus", "nutre le piante"],
+        ["roccia", "dura, sta in fondo"]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Vivo o non vivo? Scrivi nella colonna giusta.",
+      "categorie": ["🌱 Vivo", "🪨 Non vivo"],
+      "elementi": [
+        { "testo": "lombrico", "categoria": "🌱 Vivo" },
+        { "testo": "formica", "categoria": "🌱 Vivo" },
+        { "testo": "fungo", "categoria": "🌱 Vivo" },
+        { "testo": "sabbia", "categoria": "🪨 Non vivo" },
+        { "testo": "sasso", "categoria": "🪨 Non vivo" },
+        { "testo": "argilla", "categoria": "🪨 Non vivo" }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Il ___ scava gallerie nel suolo. Così entrano aria e ___. Funghi e batteri trasformano le foglie in ___.",
+      "soluzioni": ["lombrico", "acqua", "humus"],
+      "parole": ["lombrico", "acqua", "humus", "pesce"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍄",
+      "testo": "Come si chiamano funghi e batteri che trasformano i resti in humus?",
+      "opzioni": ["🍄 decompositori", "🌱 produttori", "🦁 predatori"],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🍂",
+      "testo": "Metti in ordine: come nasce l'humus.",
+      "elementi": ["🍂 Le foglie cadono", "🍄 Funghi e batteri le mangiano", "🟫 Diventano humus", "🌱 L'humus nutre le piante"]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il lombrico è un amico delle piante? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché scava gallerie che fanno entrare aria e acqua e rende la terra più ricca."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna gli strati del suolo e scrivi i nomi: humus, sottosuolo, roccia. Aggiungi un lombrico."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine, dall'alto.",
+      "elementi": ["🍂 humus", "🟫 sottosuolo", "🪨 roccia"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪱",
+      "testo": "Chi scava gallerie nel suolo?",
+      "opzioni": ["🪱 il lombrico", "🐟 il pesce"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "L'humus nutre le piante.", "vero": true },
+        { "testo": "Nel suolo non vive nessuno.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["sabbia", "l'acqua passa"],
+        ["argilla", "trattiene l'acqua"],
+        ["humus", "nutre"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "In fondo, sotto il suolo, c'è la ___.",
+      "soluzioni": ["roccia"],
+      "parole": ["roccia", "nuvola"]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un lombrico nella terra."
+    }
+  ]
+}

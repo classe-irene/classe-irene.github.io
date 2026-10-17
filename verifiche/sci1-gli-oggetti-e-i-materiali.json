@@ -1,0 +1,236 @@
+{
+  "titolo": "Gli oggetti e i materiali",
+  "emoji": "🧸",
+  "materia": "scienze",
+  "classe": 1,
+  "obiettivi": [
+    "riconoscere legno, carta, plastica, metallo e vetro",
+    "dire di che materiale è fatto un oggetto"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🪑",
+      "testo": "Di che cosa è fatta la sedia?",
+      "opzioni": [
+        "🥛 vetro",
+        "🪵 legno",
+        "📄 carta"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci l'oggetto al materiale.",
+      "coppie": [
+        [
+          "sedia",
+          "🪵 legno"
+        ],
+        [
+          "quaderno",
+          "📄 carta"
+        ],
+        [
+          "forchetta",
+          "🔩 metallo"
+        ],
+        [
+          "bicchiere",
+          "🪟 vetro"
+        ],
+        [
+          "bottiglia",
+          "🧴 plastica"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Il legno viene dagli alberi.",
+          "vero": true
+        },
+        {
+          "testo": "Il vetro non si rompe mai.",
+          "vero": false
+        },
+        {
+          "testo": "La plastica è leggera.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Legno o metallo? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🪵 Legno",
+        "🔩 Metallo"
+      ],
+      "elementi": [
+        {
+          "testo": "✏️ matita",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "🚪 porta",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "🔑 chiave",
+          "categoria": "🔩 Metallo"
+        },
+        {
+          "testo": "🥄 cucchiaio",
+          "categoria": "🔩 Metallo"
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔑",
+      "testo": "Quante chiavi?",
+      "figura": "🔑",
+      "numero": 7
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👀",
+      "testo": "Quale materiale è trasparente?",
+      "opzioni": [
+        "🪟 vetro",
+        "🪵 legno",
+        "🔩 metallo"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: dall'albero al quaderno.",
+      "elementi": [
+        "🌳 albero",
+        "🪵 legno",
+        "📄 carta",
+        "📒 quaderno"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "La forchetta è di ___. Il quaderno è di ___.",
+      "soluzioni": [
+        "metallo",
+        "carta"
+      ],
+      "parole": [
+        "metallo",
+        "carta",
+        "vetro"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un oggetto di legno e un oggetto di metallo."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🪑",
+      "testo": "Di che cosa è fatta la sedia?",
+      "opzioni": [
+        "🪵 legno",
+        "🥛 vetro"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "quaderno",
+          "📄 carta"
+        ],
+        [
+          "forchetta",
+          "🔩 metallo"
+        ],
+        [
+          "bicchiere",
+          "🪟 vetro"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Il legno viene dagli alberi.",
+          "vero": true
+        },
+        {
+          "testo": "Il vetro non si rompe mai.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Legno o metallo?",
+      "categorie": [
+        "🪵 Legno",
+        "🔩 Metallo"
+      ],
+      "elementi": [
+        {
+          "testo": "✏️ matita",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "🔑 chiave",
+          "categoria": "🔩 Metallo"
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔑",
+      "testo": "Quante chiavi?",
+      "figura": "🔑",
+      "numero": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il quaderno è di ___.",
+      "soluzioni": [
+        "carta"
+      ],
+      "parole": [
+        "carta",
+        "vetro"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un oggetto di carta."
+    }
+  ]
+}

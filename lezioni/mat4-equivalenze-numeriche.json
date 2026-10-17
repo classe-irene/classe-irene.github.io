@@ -5,21 +5,29 @@
   "classe": 4,
   "introduzione": "Unità, decine, centinaia e migliaia: cambiamo il nome, ma la quantità resta uguale!",
   "storia": {
-    "personaggio": "👨‍🏭",
-    "testo": "Ciao! Sono Tito e lavoro nella fabbrica di cioccolatini.\nMetto 10 cioccolatini in una scatola, 10 scatole in una cassa e 10 casse su un camion.\nIl capo mi chiede: «Quante scatole ci sono in 3 casse?» Aiuto!",
+    "personaggio": "👩‍🏭",
+    "testo": "Ciao! Sono Tina e lavoro nella fabbrica di cioccolatini.\nMetto 10 cioccolatini in una scatola e 10 scatole in una cassa.\nLa mia capa chiede: «Quante scatole ci sono in 3 casse?» Aiuto!",
     "immagini": [
       "🍫 cioccolatini",
       "📦 scatole",
-      "🚚 camion"
+      "🗃️ casse"
     ],
-    "missione": "Aiutate Tito a contare scatole, casse e camion. Alla fine vincete la figurina del camion!"
+    "missione": "Aiutate Tina a contare scatole, casse e camion. Alla fine vincete la figurina del camion!"
   },
   "premio": "🚚",
+  "parole_chiave": [
+    "🍫 unità (u)",
+    "📦 decina (da)",
+    "🗃️ centinaio (h)",
+    "🚚 migliaio (k)",
+    "🔄 equivalenza",
+    "🧭 tabella"
+  ],
   "sezioni": [
     {
       "titolo": "🍫 Quattro nomi per contare",
       "immagine": "🏭",
-      "testo": "Nella fabbrica di Tito ogni cosa ha il suo nome.",
+      "testo": "Nella fabbrica di Tina ogni cosa ha il suo nome.\nu è l'unità: 1 cioccolatino.\nda è la decina: 1 scatola con 10 cioccolatini.\nh è il centinaio: 1 cassa con 100 cioccolatini.\nk è il migliaio: 1 camion con 1 000 cioccolatini.",
       "immagini": [
         "🍫 u = unità = 1",
         "📦 da = decina = 10",
@@ -48,7 +56,12 @@
     {
       "titolo": "📦 Ogni volta 10",
       "immagine": "🔟",
-      "testo": "Guarda il video: 10 di un tipo fanno 1 del tipo dopo.",
+      "testo": "Guarda il video.\n10 unità fanno 1 decina.\n10 decine fanno 1 centinaio.\n10 centinaia fanno 1 migliaio.",
+      "immagini": [
+        "🍫 10 u = 1 da",
+        "📦 10 da = 1 h",
+        "🗃️ 10 h = 1 k"
+      ],
       "animazione": {
         "tipo": "sequenza",
         "video": true,
@@ -60,7 +73,7 @@
           },
           {
             "figure": "🍫 → 📦",
-            "testo": "Tito li chiude in una scatola: 10 unità fanno 1 decina."
+            "testo": "Tina li chiude in una scatola: 10 unità fanno 1 decina."
           },
           {
             "figure": "📦 📦 📦 📦",
@@ -68,7 +81,7 @@
           },
           {
             "figure": "📦 → 🗃️",
-            "testo": "Tito le mette in una cassa: 10 decine fanno 1 centinaio."
+            "testo": "Tina le mette in una cassa: 10 decine fanno 1 centinaio."
           },
           {
             "figure": "🗃️ 🗃️ 🗃️ 🗃️",
@@ -79,20 +92,15 @@
             "testo": "Tutte sul camion: 10 centinaia fanno 1 migliaio."
           }
         ]
-      },
-      "immagini": [
-        "🍫×10 = 📦",
-        "📦×10 = 🗃️",
-        "🗃️×10 = 🚚"
-      ]
+      }
     },
     {
       "titolo": "🔄 Che cos'è un'equivalenza",
       "immagine": "⚖️",
-      "testo": "Cambio il nome, ma i cioccolatini sono sempre gli stessi.\n1 h = 10 da = 100 u.",
+      "testo": "Cambio il nome, ma i cioccolatini sono sempre gli stessi.\n1 cassa è 1 h.\nÈ uguale a 10 scatole: 10 da.\nÈ uguale a 100 cioccolatini: 100 u.",
       "immagini": [
         "🗃️ 1 h",
-        "📦📦📦📦📦📦📦📦📦📦 10 da",
+        "📦 10 da",
         "🍫 100 u"
       ],
       "pensa": {
@@ -103,7 +111,12 @@
     {
       "titolo": "⬇️ Verso le unità più piccole",
       "immagine": "🔍",
-      "testo": "Vado verso destra, verso le unità più piccole: aggiungo uno 0 per ogni salto.",
+      "testo": "Vado verso destra, verso le unità più piccole.\nAggiungo uno 0 per ogni salto.\n3 h = 30 da. 2 k = 2 000 u. 7 da = 70 u.",
+      "immagini": [
+        "🗃️ 3 h = 30 da",
+        "🚚 2 k = 2 000 u",
+        "📦 7 da = 70 u"
+      ],
       "animazione": {
         "tipo": "scena",
         "scena": "equivalenza",
@@ -112,22 +125,26 @@
         "a": "da",
         "video": true,
         "titolo": "3 h = ? da"
-      },
-      "immagini": [
-        "🗃️ 3 h = 30 da",
-        "🚚 2 k = 2 000 u",
-        "📦 7 da = 70 u"
-      ]
+      }
     },
     {
       "titolo": "⬆️ Verso le unità più grandi",
       "immagine": "🔭",
-      "testo": "Vado verso sinistra, verso le unità più grandi: tolgo uno 0 per ogni salto.\nFunziona quando il numero finisce con gli zeri giusti.",
+      "testo": "Vado verso sinistra, verso le unità più grandi.\nTolgo uno 0 per ogni salto.\n40 da = 4 h. 500 u = 5 h. 60 h = 6 k.",
       "immagini": [
         "📦 40 da = 4 h",
         "🍫 500 u = 5 h",
         "🗃️ 60 h = 6 k"
       ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "equivalenza",
+        "n": 500,
+        "da": "u",
+        "a": "h",
+        "video": true,
+        "titolo": "500 u = ? h"
+      },
       "esperimento": {
         "titolo": "Proviamo in classe: la fabbrica",
         "materiali": [
@@ -141,21 +158,12 @@
           "✏️ Scrivete alla lavagna: 1 h = 10 da = 100 u."
         ],
         "domanda": "Quanti bicchieri servono per 2 vaschette?"
-      },
-      "animazione": {
-        "tipo": "scena",
-        "scena": "equivalenza",
-        "n": 500,
-        "da": "u",
-        "a": "h",
-        "video": true,
-        "titolo": "500 u = ? h"
       }
     },
     {
       "titolo": "🧭 La tabella magica",
       "immagine": "🧭",
-      "testo": "Metto il numero nella tabella e conto i salti.",
+      "testo": "Metto il numero nella tabella: k, h, da, u.\nPoi conto i salti fino alla casella che cerco.",
       "immagini": [
         "🚚 k",
         "🗃️ h",
@@ -163,20 +171,6 @@
         "🍫 u"
       ],
       "curiosita": "Destra = più piccolo = aggiungo 0. Sinistra = più grande = tolgo 0.",
-      "scopri": [
-        {
-          "fronte": "❓ 4 h = ? u",
-          "retro": "2 salti a destra: 400 u"
-        },
-        {
-          "fronte": "❓ 80 da = ? h",
-          "retro": "1 salto a sinistra: 8 h"
-        },
-        {
-          "fronte": "❓ 3 k = ? h",
-          "retro": "1 salto a destra: 30 h"
-        }
-      ],
       "animazione": {
         "tipo": "scena",
         "scena": "equivalenza",
@@ -185,22 +179,22 @@
         "a": "u",
         "video": true,
         "titolo": "2 k = ? u"
-      }
+      },
+      "scopri": [
+        {
+          "fronte": "❓ 4 h = ? u",
+          "retro": "➡️ 2 salti a destra: 400 u"
+        },
+        {
+          "fronte": "❓ 80 da = ? h",
+          "retro": "⬅️ 1 salto a sinistra: 8 h"
+        },
+        {
+          "fronte": "❓ 3 k = ? h",
+          "retro": "➡️ 1 salto a destra: 30 h"
+        }
+      ]
     }
-  ],
-  "parole_chiave": [
-    "🍫 unità (u)",
-    "📦 decina (da)",
-    "🗃️ centinaio (h)",
-    "🚚 migliaio (k)",
-    "🔄 equivalenza"
-  ],
-  "ricorda": [
-    "🍫 1 da = 10 u",
-    "🗃️ 1 h = 10 da = 100 u",
-    "🚚 1 k = 10 h = 100 da = 1 000 u",
-    "➡️ Verso le unità più piccole aggiungo 0.",
-    "⬅️ Verso le unità più grandi tolgo 0."
   ],
   "esercizi": [
     {
@@ -208,12 +202,27 @@
       "immagine": "📦",
       "domanda": "1 decina quante unità sono?",
       "opzioni": [
-        "1",
-        "10",
-        "100"
+        "🍫 1",
+        "🍫 10",
+        "🍫 100"
       ],
       "corretta": 1,
       "spiegazione": "1 da = 10 u: 10 cioccolatini in una scatola."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "📦",
+      "domanda": "Conta le scatole. Quante decine sono?",
+      "oggetto": "📦",
+      "numero": 7,
+      "spiegazione": "7 scatole sono 7 da, cioè 70 cioccolatini."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🚚",
+      "affermazione": "1 k = 1 000 u",
+      "corretta": true,
+      "spiegazione": "Un migliaio sono mille unità."
     },
     {
       "tipo": "memory",
@@ -221,31 +230,43 @@
       "domanda": "Memory: trova le coppie uguali.",
       "coppie": [
         [
-          "1 da",
+          "📦 1 da",
           "🍫 10 u"
         ],
         [
-          "1 h",
+          "🗃️ 1 h",
           "📦 10 da"
         ],
         [
-          "1 k",
+          "🚚 1 k",
           "🗃️ 10 h"
         ],
         [
-          "2 da",
+          "📦 2 da",
           "🍫 20 u"
         ]
       ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dalla più piccola alla più grande.",
+      "elementi": [
+        "🍫 1 u",
+        "📦 1 da",
+        "🗃️ 1 h",
+        "🚚 1 k"
+      ],
+      "suggerimento": "Pensa a cioccolatino, scatola, cassa, camion!"
     },
     {
       "tipo": "scelta",
       "immagine": "🗃️",
       "domanda": "3 h = ? da",
       "opzioni": [
-        "3",
-        "30",
-        "300"
+        "📦 3",
+        "📦 30",
+        "📦 300"
       ],
       "corretta": 1,
       "spiegazione": "1 salto a destra: aggiungo uno 0. 3 h = 30 da."
@@ -265,30 +286,23 @@
       "domanda": "Unisci le quantità uguali.",
       "coppie": [
         [
-          "5 da",
-          "50 u"
+          "📦 5 da",
+          "🍫 50 u"
         ],
         [
-          "2 h",
-          "200 u"
+          "🗃️ 2 h",
+          "🍫 200 u"
         ],
         [
-          "4 k",
-          "40 h"
+          "🚚 4 k",
+          "🗃️ 40 h"
         ]
       ]
     },
     {
-      "tipo": "vero_falso",
-      "immagine": "🚚",
-      "affermazione": "1 k = 1 000 u",
-      "corretta": true,
-      "spiegazione": "Un migliaio sono mille unità."
-    },
-    {
       "tipo": "bucato",
-      "immagine": "👨‍🏭",
-      "domanda": "Completa il testo bucato di Tito.",
+      "immagine": "👩‍🏭",
+      "domanda": "Completa il testo bucato di Tina.",
       "testo": "10 cioccolatini fanno una [decina].\n10 scatole fanno un [centinaio].\n10 casse fanno un [migliaio].",
       "distrattori": [
         "unità",
@@ -300,12 +314,19 @@
       "immagine": "📦",
       "domanda": "40 da = ? h",
       "opzioni": [
-        "4",
-        "40",
-        "400"
+        "🗃️ 4",
+        "🗃️ 40",
+        "🗃️ 400"
       ],
       "corretta": 0,
       "spiegazione": "1 salto a sinistra: tolgo uno 0. 40 da = 4 h."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🗃️",
+      "affermazione": "50 da = 5 h",
+      "corretta": true,
+      "spiegazione": "Sì! 1 salto a sinistra: tolgo uno 0."
     },
     {
       "tipo": "equivalenza",
@@ -315,28 +336,6 @@
       "da": "da",
       "a": "h",
       "spiegazione": "1 salto a sinistra: 60 da = 6 h."
-    },
-    {
-      "tipo": "acchiappa",
-      "immagine": "🐹",
-      "domanda": "Acchiappa solo quelle uguali a 100 u!",
-      "giusti": [
-        "1 h",
-        "10 da",
-        "100 u",
-        "1 cassa",
-        "10 scatole",
-        "100 cioccolatini"
-      ],
-      "sbagliati": [
-        "1 da",
-        "10 u",
-        "1 k",
-        "100 da",
-        "10 h",
-        "1 000 u"
-      ],
-      "quanti": 5
     },
     {
       "tipo": "completa",
@@ -358,40 +357,63 @@
       ],
       "elementi": [
         {
-          "testo": "6 h = ? da",
+          "testo": "🗃️ 6 h = ? da",
           "categoria": "➡️ Aggiungo 0"
         },
         {
-          "testo": "9 da = ? u",
+          "testo": "📦 9 da = ? u",
           "categoria": "➡️ Aggiungo 0"
         },
         {
-          "testo": "3 k = ? u",
+          "testo": "🚚 3 k = ? u",
           "categoria": "➡️ Aggiungo 0"
         },
         {
-          "testo": "70 da = ? h",
+          "testo": "📦 70 da = ? h",
           "categoria": "⬅️ Tolgo 0"
         },
         {
-          "testo": "500 u = ? h",
+          "testo": "🍫 500 u = ? h",
           "categoria": "⬅️ Tolgo 0"
         },
         {
-          "testo": "20 h = ? k",
+          "testo": "🗃️ 20 h = ? k",
           "categoria": "⬅️ Tolgo 0"
         }
-      ]
+      ],
+      "suggerimento": "Verso le unità più piccole aggiungo 0. Verso le più grandi tolgo 0."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo quelle uguali a 100 u!",
+      "giusti": [
+        "🗃️ 1 h",
+        "📦 10 da",
+        "🍫 100 u",
+        "🗃️ 1 cassa",
+        "📦 10 scatole",
+        "🍫 100 cioccolatini"
+      ],
+      "sbagliati": [
+        "📦 1 da",
+        "🍫 10 u",
+        "🚚 1 k",
+        "📦 100 da",
+        "🗃️ 10 h",
+        "🍫 1 000 u"
+      ],
+      "quanti": 5
     },
     {
       "tipo": "intruso",
       "immagine": "🔍",
       "domanda": "Chi NON è uguale a 1 k?",
       "elementi": [
-        "10 h",
-        "100 da",
-        "1 000 u",
-        "100 h"
+        "🗃️ 10 h",
+        "📦 100 da",
+        "🍫 1 000 u",
+        "🗃️ 100 h"
       ],
       "intruso": 3,
       "spiegazione": "100 h = 10 k! 1 k è solo 10 h."
@@ -399,30 +421,11 @@
     {
       "tipo": "equivalenza",
       "immagine": "🚚",
-      "domanda": "Tito ha 2 camion pieni. Quante casse? 2 k = ? h",
+      "domanda": "Tina ha 2 camion pieni. Quante casse? 2 k = ? h",
       "n": 2,
       "da": "k",
       "a": "h",
       "spiegazione": "1 salto a destra: 2 k = 20 h."
-    },
-    {
-      "tipo": "ordina",
-      "immagine": "🪜",
-      "domanda": "Dalla più piccola alla più grande.",
-      "elementi": [
-        "1 u",
-        "1 da",
-        "1 h",
-        "1 k"
-      ],
-      "suggerimento": "Pensa a cioccolatino, scatola, cassa, camion!"
-    },
-    {
-      "tipo": "indovina",
-      "immagine": "🎈",
-      "domanda": "Indovina la parola!",
-      "parola": "CENTINAIO",
-      "indizio": "🗃️ Sono 10 decine"
     },
     {
       "tipo": "completa",
@@ -435,16 +438,37 @@
       ]
     },
     {
+      "tipo": "equivalenza",
+      "immagine": "🗃️",
+      "domanda": "Sposta il numero nella tabella: 30 h = ? k",
+      "n": 30,
+      "da": "h",
+      "a": "k",
+      "spiegazione": "1 salto a sinistra: 30 h = 3 k. Tre camion!"
+    },
+    {
       "tipo": "scelta",
       "immagine": "🚚",
-      "domanda": "Tito ha 2 k di cioccolatini. Quante casse (h) riempie?",
+      "domanda": "Tina ha 2 k di cioccolatini. Quante casse (h) riempie?",
       "opzioni": [
-        "2",
-        "20",
-        "200"
+        "🗃️ 2",
+        "🗃️ 20",
+        "🗃️ 200"
       ],
       "corretta": 1,
-      "spiegazione": "1 salto a destra: 2 k = 20 h. Tito carica 20 casse!"
+      "spiegazione": "1 salto a destra: 2 k = 20 h. Tina carica 20 casse!"
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della fabbrica.",
+      "parole": [
+        "🍫 unità",
+        "📦 decina",
+        "🗃️ centinaio",
+        "🚚 migliaio",
+        "0️⃣ zero"
+      ]
     },
     {
       "tipo": "mescolata",
@@ -452,6 +476,21 @@
       "domanda": "Rimetti in ordine le sillabe.",
       "parola": "E-QUI-VA-LEN-ZA",
       "indizio": "🔄 Stessa quantità, nome diverso"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CENTINAIO",
+      "indizio": "🗃️ Sono 10 decine"
     }
-  ]
+  ],
+  "ricorda": [
+    "🍫 1 da = 10 u",
+    "🗃️ 1 h = 10 da = 100 u",
+    "🚚 1 k = 10 h = 100 da = 1 000 u",
+    "➡️ Verso le unità più piccole aggiungo 0.",
+    "⬅️ Verso le unità più grandi tolgo 0."
+  ],
+  "verifica": "verifiche/mat4-equivalenze-numeriche.json"
 }

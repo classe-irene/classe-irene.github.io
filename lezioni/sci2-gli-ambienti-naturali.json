@@ -1,0 +1,497 @@
+{
+  "titolo": "Gli ambienti naturali",
+  "emoji": "🏞️",
+  "materia": "scienze",
+  "classe": 2,
+  "introduzione": "Visitiamo il bosco, il prato, il mare e la montagna: chi ci vive?",
+  "storia": {
+    "personaggio": "👩‍🎨",
+    "testo": "Ciao, sono Elena, la pittrice!\nOggi dipingo quattro quadri della natura.\nVieni con me a vedere chi abita in ogni posto.",
+    "immagini": [
+      "🎨 pittura",
+      "🖼️ quadro",
+      "🏞️ natura"
+    ],
+    "missione": "Visitate con Elena gli ambienti della natura. Alla fine vincete la figurina dell'albero!"
+  },
+  "premio": "🌳",
+  "parole_chiave": [
+    "🏞️ ambiente",
+    "🌳 bosco",
+    "🌼 prato",
+    "🌊 mare",
+    "🏔️ montagna",
+    "🏠 tana",
+    "🌱 piante",
+    "🐾 animali"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🏞️ Che cos'è un ambiente",
+      "immagine": "🏞️",
+      "testo": "L'ambiente è il posto dove vivono piante e animali.\nOgni ambiente è diverso.\nC'è il bosco, il prato, il mare e la montagna.\nOgni animale vive nell'ambiente giusto per lui.",
+      "immagini": [
+        "🏞️ ambiente",
+        "🌳 bosco",
+        "🌼 prato",
+        "🌊 mare",
+        "🏔️ montagna"
+      ],
+      "pensa": {
+        "domanda": "Un pesce può vivere nel prato?",
+        "risposta": "No! Il pesce ha bisogno dell'acqua per respirare. Vive nel mare, nei fiumi e nei laghi."
+      }
+    },
+    {
+      "titolo": "🌳 Il bosco e il prato",
+      "immagine": "🌳",
+      "testo": "Nel bosco ci sono tanti alberi alti.\nCi vivono lo scoiattolo, la volpe e il gufo.\nNel prato c'è l'erba con tanti fiori.\nCi vivono la farfalla, l'ape e il coniglio.",
+      "immagini": [
+        "🌳 alberi",
+        "🐿️ scoiattolo",
+        "🦊 volpe",
+        "🦉 gufo",
+        "🌼 fiori"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il bosco e il prato",
+        "passi": [
+          {
+            "figure": "🌳 🌳 🌲 🌳",
+            "testo": "Ecco il bosco: tanti alberi alti."
+          },
+          {
+            "figure": "🐿️ 🦊 🦉",
+            "testo": "Nel bosco vivono lo scoiattolo, la volpe e il gufo."
+          },
+          {
+            "figure": "🌼 🌷 🌼 🌷",
+            "testo": "Ecco il prato: erba e tanti fiori."
+          },
+          {
+            "figure": "🦋 🐝 🐰",
+            "testo": "Nel prato vivono la farfalla, l'ape e il coniglio."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🐿️ Scoiattolo",
+          "retro": "🌰 Vive sugli alberi del bosco e mangia le ghiande."
+        },
+        {
+          "fronte": "🦉 Gufo",
+          "retro": "🌙 Vive nel bosco ed esce di notte."
+        },
+        {
+          "fronte": "🐝 Ape",
+          "retro": "🌼 Vola nel prato e succhia il nettare dei fiori."
+        }
+      ]
+    },
+    {
+      "titolo": "🌊 Il mare",
+      "immagine": "🌊",
+      "testo": "Il mare è pieno di acqua salata.\nCi vivono i pesci, il polpo e il delfino.\nSulla spiaggia ci sono sabbia e conchiglie.\nC'è anche il granchio.",
+      "immagini": [
+        "🌊 mare",
+        "🐟 pesci",
+        "🐙 polpo",
+        "🐬 delfino",
+        "🐚 conchiglie",
+        "🦀 granchio"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il mare",
+        "passi": [
+          {
+            "figure": "🌊 🌊 🌊",
+            "testo": "Ecco il mare, con tanta acqua salata."
+          },
+          {
+            "figure": "🐟 🐙 🐬",
+            "testo": "Nel mare vivono i pesci, il polpo e il delfino."
+          },
+          {
+            "figure": "🏖️ 🐚 🦀",
+            "testo": "Sulla spiaggia ci sono conchiglie e granchi."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: l'acqua del mare è salata",
+        "materiali": [
+          "🥛 due bicchieri d'acqua",
+          "🧂 un cucchiaino di sale",
+          "🥄 cucchiaino"
+        ],
+        "passi": [
+          "🥛 Prepara due bicchieri d'acqua.",
+          "🧂 In un bicchiere metti il sale e mescola.",
+          "👅 Con la maestra assaggia una goccia di ogni bicchiere.",
+          "🤔 Quale sembra l'acqua del mare?"
+        ],
+        "domanda": "Che differenza senti tra i due bicchieri?"
+      }
+    },
+    {
+      "titolo": "🏔️ La montagna",
+      "immagine": "🏔️",
+      "testo": "In montagna ci sono rocce e boschi di abeti.\nIn alto fa freddo e d'inverno c'è la neve.\nCi vivono la marmotta, lo stambecco e l'aquila.",
+      "immagini": [
+        "🏔️ montagna",
+        "🌲 abeti",
+        "❄️ neve",
+        "🦫 marmotta",
+        "🐐 stambecco",
+        "🦅 aquila"
+      ],
+      "pensa": {
+        "domanda": "Perché dobbiamo rispettare gli ambienti?",
+        "risposta": "Perché sono la casa di piante e animali. Non lasciamo rifiuti e non rompiamo le piante."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🏞️",
+      "domanda": "Che cos'è un ambiente?",
+      "opzioni": [
+        "🏞️ il posto dove vivono piante e animali",
+        "🧸 un giocattolo",
+        "🍕 un cibo"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'ambiente è la casa di piante e animali."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐟",
+      "domanda": "Dove vive il pesce?",
+      "opzioni": [
+        "🌊 nel mare",
+        "🌼 nel prato",
+        "🏔️ sulla roccia"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il pesce vive nell'acqua."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐿️",
+      "affermazione": "Lo scoiattolo vive sugli alberi del bosco.",
+      "corretta": true,
+      "spiegazione": "Sì! E mangia ghiande e nocciole."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'animale al suo ambiente.",
+      "coppie": [
+        [
+          "🐬 delfino",
+          "🌊 mare"
+        ],
+        [
+          "🦉 gufo",
+          "🌳 bosco"
+        ],
+        [
+          "🦋 farfalla",
+          "🌼 prato"
+        ],
+        [
+          "🐐 stambecco",
+          "🏔️ montagna"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Dove vive?",
+      "categorie": [
+        "🌊 Mare",
+        "🌳 Bosco"
+      ],
+      "elementi": [
+        {
+          "testo": "🐙 polpo",
+          "categoria": "🌊 Mare"
+        },
+        {
+          "testo": "🦀 granchio",
+          "categoria": "🌊 Mare"
+        },
+        {
+          "testo": "🐬 delfino",
+          "categoria": "🌊 Mare"
+        },
+        {
+          "testo": "🦊 volpe",
+          "categoria": "🌳 Bosco"
+        },
+        {
+          "testo": "🐿️ scoiattolo",
+          "categoria": "🌳 Bosco"
+        },
+        {
+          "testo": "🦉 gufo",
+          "categoria": "🌳 Bosco"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌊",
+      "affermazione": "L'acqua del mare è dolce come quella del rubinetto.",
+      "corretta": false,
+      "spiegazione": "No: l'acqua del mare è salata."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏔️",
+      "domanda": "Com'è la montagna d'inverno, in alto?",
+      "opzioni": [
+        "❄️ fredda, con la neve",
+        "🔥 caldissima",
+        "🏖️ piena di sabbia"
+      ],
+      "corretta": 0,
+      "spiegazione": "In alto fa freddo e cade la neve."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON vive nel mare?",
+      "elementi": [
+        "🐟 pesce",
+        "🐙 polpo",
+        "🐿️ scoiattolo",
+        "🐬 delfino"
+      ],
+      "intruso": 2,
+      "spiegazione": "Lo scoiattolo vive nel bosco."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Nel [bosco] ci sono tanti alberi. Nel [prato] ci sono erba e fiori.",
+      "distrattori": [
+        "mare",
+        "sabbia"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Prato o montagna?",
+      "categorie": [
+        "🌼 Prato",
+        "🏔️ Montagna"
+      ],
+      "elementi": [
+        {
+          "testo": "🐝 ape",
+          "categoria": "🌼 Prato"
+        },
+        {
+          "testo": "🦋 farfalla",
+          "categoria": "🌼 Prato"
+        },
+        {
+          "testo": "🐞 coccinella",
+          "categoria": "🌼 Prato"
+        },
+        {
+          "testo": "🦫 marmotta",
+          "categoria": "🏔️ Montagna"
+        },
+        {
+          "testo": "🐐 stambecco",
+          "categoria": "🏔️ Montagna"
+        },
+        {
+          "testo": "🦅 aquila",
+          "categoria": "🏔️ Montagna"
+        }
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova l'animale e la sua casa.",
+      "coppie": [
+        [
+          "🐙 polpo",
+          "🌊 mare"
+        ],
+        [
+          "🦊 volpe",
+          "🌳 bosco"
+        ],
+        [
+          "🐝 ape",
+          "🌼 prato"
+        ],
+        [
+          "🦫 marmotta",
+          "🏔️ montagna"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐝",
+      "domanda": "Che cosa fa l'ape nel prato?",
+      "opzioni": [
+        "🌼 succhia il nettare dei fiori",
+        "🐟 mangia i pesci",
+        "🌲 taglia gli alberi"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'ape vola di fiore in fiore."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🦉",
+      "affermazione": "Il gufo esce di notte.",
+      "corretta": true,
+      "spiegazione": "Sì! Il gufo vede bene al buio."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: che cosa NON c'è sulla spiaggia?",
+      "elementi": [
+        "🐚 conchiglia",
+        "🦀 granchio",
+        "🏖️ sabbia",
+        "🌲 abete"
+      ],
+      "intruso": 3,
+      "spiegazione": "L'abete cresce in montagna."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo gli animali del mare!",
+      "giusti": [
+        "🐟 pesce",
+        "🐙 polpo",
+        "🐬 delfino",
+        "🦀 granchio"
+      ],
+      "sbagliati": [
+        "🦊 volpe",
+        "🐝 ape",
+        "🦫 marmotta",
+        "🐿️ scoiattolo"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "👩‍🎨",
+      "domanda": "Completa il testo di Elena.",
+      "testo": "Nel mare vive il [delfino]. In montagna vive la [marmotta]. Nel prato vola la [farfalla].",
+      "distrattori": [
+        "mucca",
+        "balena"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚯",
+      "domanda": "Faccio un picnic nel prato. Che cosa faccio con la carta?",
+      "opzioni": [
+        "🗑️ la porto via e la butto nel cestino",
+        "🌼 la lascio sull'erba",
+        "🌊 la butto nel fiume"
+      ],
+      "corretta": 0,
+      "spiegazione": "Rispettiamo l'ambiente: niente rifiuti nella natura!"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'ambiente a ciò che c'è.",
+      "coppie": [
+        [
+          "🌊 mare",
+          "🐚 conchiglie"
+        ],
+        [
+          "🏔️ montagna",
+          "🪨 rocce"
+        ],
+        [
+          "🌳 bosco",
+          "🍄 funghi"
+        ],
+        [
+          "🌼 prato",
+          "🌷 fiori"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐟",
+      "affermazione": "Il pesce può vivere nel prato.",
+      "corretta": false,
+      "spiegazione": "No: il pesce ha bisogno dell'acqua."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🏔️",
+      "domanda": "Saliamo sulla montagna: metti in ordine dal basso all'alto.",
+      "elementi": [
+        "🌼 il prato ai piedi della montagna",
+        "🌲 il bosco di abeti",
+        "🪨 le rocce",
+        "❄️ la cima con la neve"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova gli ambienti.",
+      "parole": [
+        "🌳 bosco",
+        "🌼 prato",
+        "🌊 mare",
+        "🏔️ montagna"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "BOSCO",
+      "indizio": "🌳 Un posto con tanti alberi"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "MARMOTTA",
+      "indizio": "🏔️ Vive in montagna e dorme d'inverno"
+    }
+  ],
+  "ricorda": [
+    "🏞️ L'ambiente è il posto dove vivono piante e animali.",
+    "🌳 Nel bosco ci sono tanti alberi: vivono lo scoiattolo e il gufo.",
+    "🌼 Nel prato ci sono erba e fiori: vivono l'ape e la farfalla.",
+    "🌊 Nel mare l'acqua è salata: vivono i pesci e il polpo.",
+    "🏔️ In montagna fa freddo: vivono la marmotta e lo stambecco.",
+    "🚯 Rispettiamo gli ambienti: sono la casa degli animali."
+  ],
+  "verifica": "verifiche/sci2-gli-ambienti-naturali.json"
+}

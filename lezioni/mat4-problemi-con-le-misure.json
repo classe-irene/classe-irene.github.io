@@ -1,0 +1,470 @@
+{
+  "titolo": "Problemi con le misure",
+  "emoji": "🧩",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Impariamo il peso lordo, il peso netto e la tara. Poi risolviamo i problemi di compravendita.",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao, sono Anna, la contadina!\nRaccolgo le mele e le metto nelle cassette.\nPoi le vendo al mercato. Mi aiutate a fare i conti?",
+    "immagini": [
+      "🍎 mele",
+      "📦 cassetta",
+      "🏪 mercato"
+    ],
+    "missione": "Risolvete i problemi con Anna. Alla fine vincete la figurina della cassetta di mele!"
+  },
+  "premio": "🧺",
+  "parole_chiave": [
+    "📦 peso lordo",
+    "🍎 peso netto",
+    "🧺 tara",
+    "🛒 spesa",
+    "💰 ricavo",
+    "📈 guadagno",
+    "📉 perdita"
+  ],
+  "sezioni": [
+    {
+      "titolo": "📦 Lordo, netto e tara",
+      "immagine": "📦",
+      "testo": "Il peso netto è il peso della merce da sola: le mele.\nLa tara è il peso del contenitore: la cassetta.\nIl peso lordo è il peso di tutto insieme: mele più cassetta.\nPeso lordo = peso netto + tara.",
+      "immagini": [
+        "🍎 peso netto",
+        "🧺 tara",
+        "📦 peso lordo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la cassetta di Anna",
+        "passi": [
+          {
+            "figure": "🧺",
+            "testo": "Anna pesa la cassetta vuota: 2 kg. È la tara."
+          },
+          {
+            "figure": "🍎 🍎 🍎",
+            "testo": "Pesa le mele da sole: 10 kg. È il peso netto."
+          },
+          {
+            "figure": "🍎 ➕ 🧺",
+            "testo": "Mette le mele nella cassetta."
+          },
+          {
+            "figure": "⚖️ 📦",
+            "testo": "Pesa tutto insieme: 10 + 2 = 12 kg. È il peso lordo."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🍎 Peso netto",
+          "retro": "🍎 Solo la merce."
+        },
+        {
+          "fronte": "🧺 Tara",
+          "retro": "🧺 Solo il contenitore."
+        },
+        {
+          "fronte": "📦 Peso lordo",
+          "retro": "📦 Merce e contenitore insieme."
+        }
+      ]
+    },
+    {
+      "titolo": "🧮 Calcolare lordo, netto e tara",
+      "immagine": "🧮",
+      "testo": "Per il peso lordo faccio un'addizione: netto + tara.\nPer il peso netto faccio una sottrazione: lordo − tara.\nPer la tara faccio una sottrazione: lordo − netto.\nGuarda il video: 36 kg di patate e un sacco di 8 kg.",
+      "immagini": [
+        "➕ netto + tara",
+        "➖ lordo − tara",
+        "➖ lordo − netto"
+      ],
+      "animazione": {
+        "tipo": "addizione",
+        "a": 36,
+        "b": 8
+      },
+      "pensa": {
+        "domanda": "Un barattolo di miele pesa 500 g in tutto. Il vetro pesa 200 g. Quanto pesa il miele?",
+        "risposta": "Il miele è il peso netto: lordo − tara. 500 − 200 = 300 g."
+      }
+    },
+    {
+      "titolo": "🏪 La compravendita",
+      "immagine": "🏪",
+      "testo": "Il negoziante compra la merce: quello che paga è la spesa.\nPoi la vende: quello che incassa è il ricavo.\nSe il ricavo è più grande della spesa, c'è un guadagno.\nGuadagno = ricavo − spesa.",
+      "immagini": [
+        "🛒 spesa",
+        "💰 ricavo",
+        "📈 guadagno"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Anna al mercato",
+        "passi": [
+          {
+            "figure": "🌱 🍎",
+            "testo": "Per coltivare le mele Anna spende 30 euro."
+          },
+          {
+            "figure": "🏪 🍎",
+            "testo": "Al mercato vende tutte le mele."
+          },
+          {
+            "figure": "💰",
+            "testo": "Incassa 50 euro: è il ricavo."
+          },
+          {
+            "figure": "➖",
+            "testo": "Calcola: 50 − 30 = 20 euro."
+          },
+          {
+            "figure": "📈 😊",
+            "testo": "Anna ha guadagnato 20 euro!"
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "📉 Guadagno o perdita?",
+      "immagine": "📉",
+      "testo": "A volte il ricavo è più piccolo della spesa.\nAllora c'è una perdita.\nPerdita = spesa − ricavo.\nSpesa = ricavo − guadagno.\nRicavo = spesa + guadagno.",
+      "immagini": [
+        "📈 guadagno",
+        "📉 perdita",
+        "🛒 spesa",
+        "💰 ricavo"
+      ],
+      "pensa": {
+        "domanda": "Una fioraia compra fiori per 40 euro. Ne vende per 35 euro. Guadagna o perde?",
+        "risposta": "Perde, perché il ricavo è più piccolo della spesa. 40 − 35 = 5 euro di perdita."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "domanda": "Che cos'è il peso netto?",
+      "opzioni": [
+        "🍎 il peso della merce da sola",
+        "🧺 il peso del contenitore",
+        "📦 il peso di tutto insieme"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il peso netto è solo la merce."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        [
+          "🍎 peso netto",
+          "🍎 solo la merce"
+        ],
+        [
+          "🧺 tara",
+          "🧺 solo il contenitore"
+        ],
+        [
+          "📦 peso lordo",
+          "📦 merce e contenitore"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📦",
+      "affermazione": "Peso lordo = peso netto + tara.",
+      "corretta": true,
+      "spiegazione": "Sì! Il lordo è tutto insieme."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "È peso netto o tara?",
+      "categorie": [
+        "🍎 Peso netto",
+        "🧺 Tara"
+      ],
+      "elementi": [
+        {
+          "testo": "🍯 il miele",
+          "categoria": "🍎 Peso netto"
+        },
+        {
+          "testo": "🍝 la pasta",
+          "categoria": "🍎 Peso netto"
+        },
+        {
+          "testo": "🥫 la latta dei pomodori",
+          "categoria": "🧺 Tara"
+        },
+        {
+          "testo": "🫙 il barattolo di vetro",
+          "categoria": "🧺 Tara"
+        },
+        {
+          "testo": "📦 la scatola",
+          "categoria": "🧺 Tara"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚖️",
+      "domanda": "Netto 10 kg, tara 2 kg. Quanto è il peso lordo?",
+      "opzioni": [
+        "✅ 12 kg",
+        "❌ 8 kg",
+        "❌ 20 kg"
+      ],
+      "corretta": 0,
+      "spiegazione": "Lordo = netto + tara: 10 + 2 = 12 kg."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍯",
+      "domanda": "Un vasetto di miele pesa 400 g in tutto. Il vetro pesa 150 g. Quanto pesa il miele?",
+      "opzioni": [
+        "✅ 250 g",
+        "❌ 550 g",
+        "❌ 150 g"
+      ],
+      "corretta": 0,
+      "spiegazione": "Netto = lordo − tara: 400 − 150 = 250 g."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Per trovare il peso netto faccio lordo [meno] tara. Per trovare il lordo faccio netto [più] tara.",
+      "distrattori": [
+        "per",
+        "diviso"
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📦",
+      "domanda": "Una cassa di arance pesa 15 kg in tutto. La cassa vuota pesa 3 kg. Quanti kg pesano le arance? Tocca il numero.",
+      "min": 0,
+      "max": 20,
+      "passo": 1,
+      "corretta": 12,
+      "spiegazione": "Netto = lordo − tara: 15 − 3 = 12 kg."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧺",
+      "affermazione": "La tara è sempre più pesante del peso lordo.",
+      "corretta": false,
+      "spiegazione": "No: il lordo è tutto insieme, quindi è sempre più pesante della tara."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la parola e la sua regola.",
+      "coppie": [
+        [
+          "📦 lordo",
+          "➕ netto + tara"
+        ],
+        [
+          "🍎 netto",
+          "➖ lordo − tara"
+        ],
+        [
+          "🧺 tara",
+          "➖ lordo − netto"
+        ],
+        [
+          "📈 guadagno",
+          "➖ ricavo − spesa"
+        ]
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🏪",
+      "domanda": "Unisci la parola della compravendita al suo significato.",
+      "coppie": [
+        [
+          "🛒 spesa",
+          "💸 i soldi che pago per comprare"
+        ],
+        [
+          "💰 ricavo",
+          "🪙 i soldi che incasso vendendo"
+        ],
+        [
+          "📈 guadagno",
+          "😊 il ricavo è più della spesa"
+        ],
+        [
+          "📉 perdita",
+          "😟 il ricavo è meno della spesa"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📈",
+      "domanda": "Anna spende 30 euro e ricava 45 euro. Quanto guadagna?",
+      "opzioni": [
+        "✅ 15 euro",
+        "❌ 75 euro",
+        "❌ 30 euro"
+      ],
+      "corretta": 0,
+      "spiegazione": "Guadagno = ricavo − spesa: 45 − 30 = 15 euro."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📉",
+      "affermazione": "Se il ricavo è più piccolo della spesa, c'è una perdita.",
+      "corretta": true,
+      "spiegazione": "Sì! Ho incassato meno di quello che ho speso."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "Guadagno o perdita?",
+      "categorie": [
+        "📈 Guadagno",
+        "📉 Perdita"
+      ],
+      "elementi": [
+        {
+          "testo": "🍎 spesa 20 €, ricavo 35 €",
+          "categoria": "📈 Guadagno"
+        },
+        {
+          "testo": "🌷 spesa 10 €, ricavo 18 €",
+          "categoria": "📈 Guadagno"
+        },
+        {
+          "testo": "🍞 spesa 40 €, ricavo 25 €",
+          "categoria": "📉 Perdita"
+        },
+        {
+          "testo": "🧀 spesa 50 €, ricavo 45 €",
+          "categoria": "📉 Perdita"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌷",
+      "domanda": "Una fioraia compra fiori per 60 euro. Li vende per 50 euro. Che cosa succede?",
+      "opzioni": [
+        "📉 perde 10 euro",
+        "📈 guadagna 10 euro",
+        "📈 guadagna 110 euro"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il ricavo è più piccolo: perdita = 60 − 50 = 10 euro."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Guadagno = [ricavo] − spesa. Perdita = [spesa] − ricavo.",
+      "distrattori": [
+        "tara",
+        "lordo"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi per risolvere un problema.",
+      "elementi": [
+        "📖 leggo bene il testo",
+        "🔍 trovo i dati",
+        "❓ trovo la domanda",
+        "🧮 scelgo l'operazione e calcolo",
+        "✍️ scrivo la risposta"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale parola NON è della compravendita?",
+      "elementi": [
+        "🛒 spesa",
+        "💰 ricavo",
+        "🧺 tara",
+        "📈 guadagno"
+      ],
+      "intruso": 2,
+      "spiegazione": "La tara è il peso del contenitore."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥚",
+      "domanda": "Anna compra 10 scatole di uova a 2 euro l'una. Quanto spende?",
+      "opzioni": [
+        "✅ 20 euro",
+        "❌ 12 euro",
+        "❌ 5 euro"
+      ],
+      "corretta": 0,
+      "spiegazione": "10 × 2 = 20 euro."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le cose che sono una tara!",
+      "giusti": [
+        "📦 la scatola",
+        "🫙 il barattolo",
+        "🧺 la cassetta"
+      ],
+      "sbagliati": [
+        "🍎 le mele",
+        "🍯 il miele",
+        "🍝 la pasta"
+      ],
+      "quanti": 3
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dei problemi.",
+      "parole": [
+        "🧺 tara",
+        "🍎 netto",
+        "📦 lordo",
+        "💰 ricavo",
+        "🛒 spesa"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "GUADAGNO",
+      "indizio": "📈 Quello che resta quando il ricavo è più della spesa"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "TARA",
+      "indizio": "🧺 Il peso del contenitore"
+    }
+  ],
+  "ricorda": [
+    "🍎 Peso netto: solo la merce. 🧺 Tara: solo il contenitore.",
+    "📦 Peso lordo = peso netto + tara.",
+    "➖ Peso netto = lordo − tara. Tara = lordo − netto.",
+    "📈 Guadagno = ricavo − spesa.",
+    "📉 Se il ricavo è più piccolo della spesa, c'è una perdita: spesa − ricavo."
+  ],
+  "verifica": "verifiche/mat4-problemi-con-le-misure.json"
+}

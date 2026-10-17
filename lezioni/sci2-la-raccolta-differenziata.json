@@ -1,0 +1,494 @@
+{
+  "titolo": "La raccolta differenziata",
+  "emoji": "♻️",
+  "materia": "scienze",
+  "classe": 2,
+  "introduzione": "Impariamo a dividere i rifiuti per rispettare l'ambiente.",
+  "storia": {
+    "personaggio": "👩‍🔧",
+    "testo": "Ciao, sono Anna, l'aggiustatutto!\nIo non butto via niente: aggiusto e riuso.\nOggi ti insegno dove vanno i rifiuti.",
+    "immagini": [
+      "🔧 aggiusto",
+      "🔄 riuso",
+      "🗑️ rifiuti"
+    ],
+    "missione": "Aiutate Anna a dividere i rifiuti. Alla fine vincete la figurina del riciclo!"
+  },
+  "premio": "♻️",
+  "parole_chiave": [
+    "🗑️ rifiuti",
+    "♻️ riciclare",
+    "📄 carta",
+    "🧴 plastica",
+    "🍾 vetro",
+    "🍌 umido",
+    "🥫 lattina",
+    "🔄 riusare"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🗑️ Che cosa sono i rifiuti",
+      "immagine": "🗑️",
+      "testo": "I rifiuti sono le cose che non usiamo più.\nOgni giorno ne facciamo tanti.\nSe li buttiamo nella natura, la sporcano.\nGli animali e le piante stanno male.",
+      "immagini": [
+        "🗑️ rifiuti",
+        "📅 ogni giorno",
+        "🏞️ natura",
+        "🐢 animali"
+      ],
+      "pensa": {
+        "domanda": "Che cosa succede se buttiamo una bottiglia di plastica nel mare?",
+        "risposta": "Il mare si sporca. La plastica resta lì per tanti anni e gli animali del mare possono farsi male."
+      }
+    },
+    {
+      "titolo": "♻️ Dividiamo i rifiuti",
+      "immagine": "♻️",
+      "testo": "Fare la raccolta differenziata vuol dire dividere i rifiuti.\nLa carta va con la carta.\nLa plastica va con la plastica.\nIl vetro va con il vetro.\nGli avanzi di cibo vanno nell'umido.",
+      "immagini": [
+        "♻️ differenziata",
+        "📄 carta",
+        "🧴 plastica",
+        "🍾 vetro",
+        "🍌 umido"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "ogni rifiuto al suo posto",
+        "passi": [
+          {
+            "figure": "📰 📦 → 📄",
+            "testo": "Il giornale e la scatola vanno nella carta."
+          },
+          {
+            "figure": "🧴 🥤 → 🗑️",
+            "testo": "Il flacone e il bicchiere di plastica vanno nella plastica."
+          },
+          {
+            "figure": "🍾 🫙 → 🗑️",
+            "testo": "La bottiglia e il barattolo di vetro vanno nel vetro."
+          },
+          {
+            "figure": "🍌 🍎 → 🪱",
+            "testo": "La buccia di banana e il torsolo vanno nell'umido."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "📄 Carta",
+          "retro": "📦 Giornali, quaderni vecchi, scatole di cartone."
+        },
+        {
+          "fronte": "🧴 Plastica",
+          "retro": "🥤 Bottiglie, flaconi, vaschette."
+        },
+        {
+          "fronte": "🍾 Vetro",
+          "retro": "🫙 Bottiglie e barattoli di vetro."
+        },
+        {
+          "fronte": "🍌 Umido",
+          "retro": "🍎 Bucce, torsoli, avanzi di cibo."
+        }
+      ]
+    },
+    {
+      "titolo": "🔄 Il rifiuto rinasce",
+      "immagine": "🔄",
+      "testo": "Riciclare vuol dire fare cose nuove con i rifiuti.\nCon la carta vecchia si fa carta nuova.\nCon la plastica si fanno nuovi oggetti.\nCon l'umido si fa il terriccio per le piante.",
+      "immagini": [
+        "♻️ riciclare",
+        "📄 carta nuova",
+        "🧸 nuovi oggetti",
+        "🪴 terriccio"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il riciclo",
+        "passi": [
+          {
+            "figure": "📰 → ♻️ → 📒",
+            "testo": "Il giornale vecchio diventa un quaderno nuovo."
+          },
+          {
+            "figure": "🧴 → ♻️ → 🪣",
+            "testo": "Il flacone di plastica diventa un secchiello."
+          },
+          {
+            "figure": "🍾 → ♻️ → 🫙",
+            "testo": "La bottiglia di vetro diventa un barattolo."
+          },
+          {
+            "figure": "🍌 → ♻️ → 🪴",
+            "testo": "Le bucce diventano terriccio per le piante."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: che cosa sparisce nella terra?",
+        "materiali": [
+          "🪴 due vasetti con la terra",
+          "🍌 una buccia di banana",
+          "🧴 un pezzetto di plastica",
+          "💧 un po' d'acqua"
+        ],
+        "passi": [
+          "🍌 Metti la buccia sotto la terra nel primo vasetto.",
+          "🧴 Metti la plastica sotto la terra nel secondo vasetto.",
+          "💧 Bagna un po' la terra ogni settimana.",
+          "📅 Dopo tre settimane scava con la maestra.",
+          "👀 Guarda: che cosa è rimasto?"
+        ],
+        "domanda": "La buccia è sparita. E la plastica?"
+      }
+    },
+    {
+      "titolo": "🌍 Anche io aiuto il pianeta",
+      "immagine": "🌍",
+      "testo": "Possiamo fare meno rifiuti.\nUsiamo la borraccia al posto delle bottiglie.\nRiusiamo le cose: un barattolo diventa un portamatite.\nE buttiamo ogni rifiuto al posto giusto.",
+      "immagini": [
+        "🌍 pianeta",
+        "🧃 borraccia",
+        "🫙 barattolo",
+        "✏️ portamatite"
+      ],
+      "pensa": {
+        "domanda": "Come puoi riusare una scatola di scarpe?",
+        "risposta": "Puoi farla diventare una casetta per i giocattoli, una scatola per le matite o un regalo!"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🗑️",
+      "domanda": "Che cosa sono i rifiuti?",
+      "opzioni": [
+        "🗑️ le cose che non usiamo più",
+        "🍕 il cibo da mangiare",
+        "🧸 i giocattoli nuovi"
+      ],
+      "corretta": 0,
+      "spiegazione": "I rifiuti sono le cose che buttiamo via."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌊",
+      "affermazione": "Possiamo buttare la plastica nel mare.",
+      "corretta": false,
+      "spiegazione": "No! La plastica sporca il mare e fa male agli animali."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📰",
+      "domanda": "Dove va il giornale vecchio?",
+      "opzioni": [
+        "📄 nella carta",
+        "🍾 nel vetro",
+        "🍌 nell'umido"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il giornale è fatto di carta."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍌",
+      "domanda": "Dove va la buccia di banana?",
+      "opzioni": [
+        "🍌 nell'umido",
+        "🧴 nella plastica",
+        "📄 nella carta"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gli avanzi di cibo vanno nell'umido."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Carta o plastica?",
+      "categorie": [
+        "📄 Carta",
+        "🧴 Plastica"
+      ],
+      "elementi": [
+        {
+          "testo": "📰 giornale",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "📦 scatola di cartone",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "📒 quaderno vecchio",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "🧴 flacone",
+          "categoria": "🧴 Plastica"
+        },
+        {
+          "testo": "🥤 bicchiere di plastica",
+          "categoria": "🧴 Plastica"
+        },
+        {
+          "testo": "🛍️ sacchetto di plastica",
+          "categoria": "🧴 Plastica"
+        }
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il rifiuto al suo posto.",
+      "coppie": [
+        [
+          "📦 scatola",
+          "📄 carta"
+        ],
+        [
+          "🧴 flacone",
+          "♻️ plastica"
+        ],
+        [
+          "🍾 bottiglia di vetro",
+          "🫙 vetro"
+        ],
+        [
+          "🍎 torsolo",
+          "🍌 umido"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "♻️",
+      "affermazione": "Riciclare vuol dire fare cose nuove con i rifiuti.",
+      "corretta": true,
+      "spiegazione": "Sì! Il rifiuto rinasce come un oggetto nuovo."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON va nel vetro?",
+      "elementi": [
+        "🍾 bottiglia di vetro",
+        "🫙 barattolo di vetro",
+        "📰 giornale",
+        "🍯 vasetto del miele"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il giornale va nella carta."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "La buccia va nell'[umido]. La bottiglia di vetro va nel [vetro].",
+      "distrattori": [
+        "mare",
+        "prato"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Vetro o umido?",
+      "categorie": [
+        "🍾 Vetro",
+        "🍌 Umido"
+      ],
+      "elementi": [
+        {
+          "testo": "🍾 bottiglia",
+          "categoria": "🍾 Vetro"
+        },
+        {
+          "testo": "🫙 barattolo",
+          "categoria": "🍾 Vetro"
+        },
+        {
+          "testo": "🍌 buccia di banana",
+          "categoria": "🍌 Umido"
+        },
+        {
+          "testo": "🍎 torsolo di mela",
+          "categoria": "🍌 Umido"
+        },
+        {
+          "testo": "🥚 guscio d'uovo",
+          "categoria": "🍌 Umido"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "domanda": "Metti in ordine: il viaggio del giornale.",
+      "elementi": [
+        "📰 leggo il giornale",
+        "📄 lo butto nella carta",
+        "🚛 il camion lo porta via",
+        "📒 diventa un quaderno nuovo"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il rifiuto e il suo posto.",
+      "coppie": [
+        [
+          "📰 giornale",
+          "📄 carta"
+        ],
+        [
+          "🧴 flacone",
+          "♻️ plastica"
+        ],
+        [
+          "🍾 bottiglia",
+          "🫙 vetro"
+        ],
+        [
+          "🍌 buccia",
+          "🪱 umido"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧃",
+      "domanda": "Come faccio meno rifiuti a scuola?",
+      "opzioni": [
+        "🧃 uso la borraccia",
+        "🥤 uso tanti bicchieri di plastica",
+        "📄 strappo i fogli puliti"
+      ],
+      "corretta": 0,
+      "spiegazione": "La borraccia si usa tante volte."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍌",
+      "affermazione": "Con l'umido si fa il terriccio per le piante.",
+      "corretta": true,
+      "spiegazione": "Sì! Le bucce diventano terra buona."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo i rifiuti dell'umido!",
+      "giusti": [
+        "🍌 buccia di banana",
+        "🍎 torsolo",
+        "🥚 guscio d'uovo",
+        "🍂 foglie secche"
+      ],
+      "sbagliati": [
+        "🧴 flacone",
+        "🍾 bottiglia di vetro",
+        "📰 giornale",
+        "🥫 lattina"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "👩‍🔧",
+      "domanda": "Completa il testo di Anna.",
+      "testo": "Con la carta vecchia si fa la [carta] nuova. Un barattolo può diventare un [portamatite].",
+      "distrattori": [
+        "sasso",
+        "panino"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON va nella carta?",
+      "elementi": [
+        "📦 scatola",
+        "📰 giornale",
+        "🍌 buccia",
+        "📒 quaderno vecchio"
+      ],
+      "intruso": 2,
+      "spiegazione": "La buccia va nell'umido."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci: che cosa diventa con il riciclo?",
+      "coppie": [
+        [
+          "📰 giornale vecchio",
+          "📒 quaderno nuovo"
+        ],
+        [
+          "🧴 flacone",
+          "🪣 secchiello"
+        ],
+        [
+          "🍌 bucce",
+          "🪴 terriccio"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫙",
+      "domanda": "Riusare vuol dire…",
+      "opzioni": [
+        "🔄 usare di nuovo una cosa",
+        "🗑️ buttare subito",
+        "🔥 bruciare"
+      ],
+      "corretta": 0,
+      "spiegazione": "Un barattolo vuoto può diventare un portamatite."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪴",
+      "affermazione": "La plastica sparisce nella terra in pochi giorni.",
+      "corretta": false,
+      "spiegazione": "No: la plastica resta nella terra per tantissimi anni."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole del riciclo.",
+      "parole": [
+        "📄 carta",
+        "🍾 vetro",
+        "🍌 umido",
+        "🧴 plastica"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "RICICLO",
+      "indizio": "♻️ Il rifiuto diventa una cosa nuova"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "BORRACCIA",
+      "indizio": "🧃 La uso tante volte per bere"
+    }
+  ],
+  "ricorda": [
+    "🗑️ I rifiuti sono le cose che non usiamo più.",
+    "♻️ La raccolta differenziata divide i rifiuti: carta, plastica, vetro, umido.",
+    "🍌 Gli avanzi di cibo vanno nell'umido e diventano terriccio.",
+    "🔄 Riciclare vuol dire fare cose nuove con i rifiuti.",
+    "🧃 Possiamo fare meno rifiuti: usiamo la borraccia e riusiamo le cose.",
+    "🌍 Così rispettiamo l'ambiente."
+  ],
+  "verifica": "verifiche/sci2-la-raccolta-differenziata.json"
+}

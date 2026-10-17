@@ -1,0 +1,260 @@
+{
+  "titolo": "Moltiplicazioni a due cifre",
+  "emoji": "✖️",
+  "materia": "matematica",
+  "classe": 4,
+  "obiettivi": [
+    "sapere che la moltiplicazione è un'addizione ripetuta",
+    "moltiplicare per 10",
+    "spezzare un numero per moltiplicare a mente",
+    "eseguire moltiplicazioni in colonna con due cifre al moltiplicatore",
+    "risolvere un problema con la moltiplicazione"
+  ],
+  "consegna": "Leggi con calma. Ricorda lo 0 segnaposto e il riporto.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍫",
+      "testo": "3 × 12 vuol dire…",
+      "opzioni": [
+        "➕ 12 + 12 + 12",
+        "➕ 3 + 12",
+        "➕ 3 + 3"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔟",
+      "testo": "Moltiplica per 10.",
+      "operazioni": [
+        {
+          "testo": "7 × 10",
+          "risultato": 70
+        },
+        {
+          "testo": "23 × 10",
+          "risultato": 230
+        },
+        {
+          "testo": "45 × 10",
+          "risultato": 450
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✂️",
+      "testo": "Spezza il numero e completa.",
+      "frase": "23 × 14 = 23 × 10 + 23 × ___ = 230 + ___ = ___",
+      "soluzioni": [
+        "4",
+        "92",
+        "322"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Per moltiplicare per 10 aggiungo uno 0.",
+          "vero": true
+        },
+        {
+          "testo": "Nella seconda riga scrivo prima lo 0 segnaposto.",
+          "vero": true
+        },
+        {
+          "testo": "6 × 4 = 24: scrivo 2 e porto 4.",
+          "vero": false
+        },
+        {
+          "testo": "12 × 10 = 1 200",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine i passi della moltiplicazione in colonna. Scrivi 1, 2, 3, 4.",
+      "elementi": [
+        "1️⃣ Moltiplico per le unità",
+        "0️⃣ Scrivo lo 0 segnaposto",
+        "🔟 Moltiplico per le decine",
+        "➕ Sommo i risultati"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la tabellina al risultato.",
+      "coppie": [
+        [
+          "6 × 7",
+          "42"
+        ],
+        [
+          "8 × 4",
+          "32"
+        ],
+        [
+          "9 × 6",
+          "54"
+        ],
+        [
+          "7 × 8",
+          "56"
+        ]
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "✏️",
+      "testo": "Esegui in colonna sul quaderno a quadretti.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "21 × 13",
+          "risultato": 273
+        },
+        {
+          "testo": "32 × 24",
+          "risultato": 768
+        },
+        {
+          "testo": "37 × 24",
+          "risultato": 888
+        },
+        {
+          "testo": "45 × 23",
+          "risultato": 1035
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🎒",
+      "testo": "Serve il riporto? Scrivi ogni calcolo nella colonna giusta.",
+      "categorie": [
+        "🎒 Con il riporto",
+        "✅ Senza riporto"
+      ],
+      "elementi": [
+        {
+          "testo": "36 × 4",
+          "categoria": "🎒 Con il riporto"
+        },
+        {
+          "testo": "27 × 3",
+          "categoria": "🎒 Con il riporto"
+        },
+        {
+          "testo": "21 × 3",
+          "categoria": "✅ Senza riporto"
+        },
+        {
+          "testo": "41 × 2",
+          "categoria": "✅ Senza riporto"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🚌",
+      "testo": "Un pullman ha 52 posti. Quanti posti ci sono in 12 pullman? Scrivi l'operazione e la risposta.",
+      "righe": 3,
+      "soluzione": "52 × 12 = 624. In 12 pullman ci sono 624 posti."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍫",
+      "testo": "3 × 4 vuol dire…",
+      "opzioni": [
+        "➕ 4 + 4 + 4",
+        "➕ 3 + 4"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔟",
+      "testo": "Per 10 aggiungo uno 0.",
+      "operazioni": [
+        {
+          "testo": "5 × 10",
+          "risultato": 50
+        },
+        {
+          "testo": "12 × 10",
+          "risultato": 120
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✂️",
+      "testo": "Spezzo il 13 in 10 e 3. Completa.",
+      "frase": "21 × 13 = 21 × 10 + 21 × ___",
+      "soluzioni": [
+        "3"
+      ],
+      "parole": [
+        "3",
+        "13"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "6 × 7",
+          "42"
+        ],
+        [
+          "8 × 4",
+          "32"
+        ],
+        [
+          "5 × 9",
+          "45"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "0️⃣",
+      "affermazioni": [
+        {
+          "testo": "Nella seconda riga scrivo prima lo 0 segnaposto.",
+          "vero": true
+        },
+        {
+          "testo": "Il riporto si scrive sotto il risultato.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "✏️",
+      "testo": "Esegui in colonna. Usa la tavola pitagorica.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "21 × 13",
+          "risultato": 273
+        },
+        {
+          "testo": "32 × 12",
+          "risultato": 384
+        }
+      ]
+    }
+  ]
+}

@@ -221,7 +221,7 @@ window.Voce = (() => {
     parla(testo, fine, opz = {}) {
       if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       // Le emoji non vanno lette ad alta voce.
-      const pulito = leggibile(String(testo).replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
+      const pulito = leggibile(String(testo).replace(/[0-9#*]\uFE0F?\u20E3/gu, "").replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
       ora = { pulito, fine, opz, pos: 0, pausa: false, comandi: opz.scritte !== false && pulito.split(" ").length >= 3 };
       dici(0);
     },
@@ -389,10 +389,11 @@ window.Sottotitoli = (() => {
    Ogni emoji diventa un'immagine 3D colorata (cartella assets/emoji).
    Se un testo comincia con un'emoji ("🍎 mela"), l'emoji diventa la figura dell'elemento. */
 window.Figura = (() => {
-  const EMO = "\\p{Extended_Pictographic}(?:\\uFE0F|\\u20E3|[\\u{1F3FB}-\\u{1F3FF}]|\\u200D\\p{Extended_Pictographic}\\uFE0F?)*";
+  // Anche i tasti con i numeri (1️⃣, #️⃣): diventano immagini come le altre emoji.
+  const EMO = "(?:[0-9#*]\\uFE0F?\\u20E3|\\p{Extended_Pictographic}(?:\\uFE0F|\\u20E3|[\\u{1F3FB}-\\u{1F3FF}]|\\u200D\\p{Extended_Pictographic}\\uFE0F?)*)";
   const RE_INIZIO = new RegExp(`^\\s*((?:${EMO}\\s*)+)`, "u");
   const RE_UNA = new RegExp(EMO, "gu");
-  const nomeFile = (e) => [...e].map((c) => c.codePointAt(0).toString(16)).join("-");
+  const nomeFile = (e) => [...e].map((c) => c.codePointAt(0).toString(16).padStart(4, "0")).join("-");
   // Disegni fatti a mano per le cose che non hanno un'emoji giusta (🧫 = cellula animale, 🥬 = cellula vegetale).
   const DISEGNI = { "🧫": "assets/disegni/cellula.svg", "🥬": "assets/disegni/cellula-vegetale.svg" };
   function file(emoji) {

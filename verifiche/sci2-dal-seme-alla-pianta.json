@@ -1,0 +1,32 @@
+{
+  "titolo": "Dal seme alla pianta",
+  "emoji": "🌱",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "sapere che nel seme c'è una piccola pianta",
+    "conoscere che cosa serve al seme per germogliare",
+    "riconoscere radice, fusto e foglie e il loro lavoro",
+    "conoscere il ciclo: fiore, frutto, semi nuovi"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "scelta", "immagine": "🫘", "testo": "Che cosa c'è dentro il seme?", "opzioni": ["🌱 una piccola pianta", "🪨 un sassolino", "💧 solo acqua"], "corretta": 0 },
+    { "tipo": "classifica", "immagine": "⚖️", "testo": "Che cosa serve al seme per germogliare? Scrivi nella colonna giusta.", "categorie": ["✅ Serve", "❌ Non serve"], "elementi": [{ "testo": "acqua", "categoria": "✅ Serve" }, { "testo": "aria", "categoria": "✅ Serve" }, { "testo": "caldo", "categoria": "✅ Serve" }, { "testo": "caramelle", "categoria": "❌ Non serve" }, { "testo": "giocattoli", "categoria": "❌ Non serve" }] },
+    { "tipo": "scelta", "immagine": "🎬", "testo": "Che cosa esce per prima dal seme?", "opzioni": ["👇 la radice", "🌸 il fiore", "🫛 il frutto"], "corretta": 0 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci ogni parte al suo lavoro.", "coppie": [["radice", "beve l'acqua"], ["fusto", "tiene su la pianta"], ["foglie", "prendono la luce"]] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "La radice va giù, nella terra.", "vero": true }, { "testo": "Il seme germoglia anche senza acqua.", "vero": false }, { "testo": "Dal fiore nasce il frutto.", "vero": true }, { "testo": "Il fusto va giù, sotto la terra.", "vero": false }] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Metti in ordine: come nasce e cresce la pianta?", "elementi": ["seme", "germoglio", "piantina", "pianta con i fiori", "frutto con i semi nuovi"] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa con le parole giuste.", "frase": "Prima esce la ___, che va giù. Poi esce il ___, che va su. Nel frutto ci sono i ___ nuovi.", "soluzioni": ["radice", "fusto", "semi"], "parole": ["radice", "fusto", "semi", "fiore"] },
+    { "tipo": "risposta", "immagine": "🏜️", "testo": "Tina lascia un seme all'asciutto, senza acqua. Che cosa succede? Perché?", "righe": 3, "soluzione": "Il seme non germoglia e resta a dormire, perché per svegliarsi ha bisogno di acqua." },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna una pianta e scrivi i nomi: radice, fusto, foglie, fiore." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "scelta", "immagine": "🫘", "testo": "Dentro il seme c'è…", "opzioni": ["🌱 una piccola pianta", "🪨 un sasso"], "corretta": 0 },
+    { "tipo": "classifica", "immagine": "⚖️", "testo": "Serve al seme?", "categorie": ["✅ Serve", "❌ Non serve"], "elementi": [{ "testo": "acqua", "categoria": "✅ Serve" }, { "testo": "aria", "categoria": "✅ Serve" }, { "testo": "caramelle", "categoria": "❌ Non serve" }] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [["radice", "va giù"], ["fusto", "va su"]] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Dal fiore nasce il frutto.", "vero": true }, { "testo": "La radice va verso il cielo.", "vero": false }] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa.", "frase": "Per germogliare il seme ha bisogno di ___.", "soluzioni": ["acqua"], "parole": ["acqua", "sabbia"] },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna un seme che germoglia, con la radice e il fusto." }
+  ]
+}

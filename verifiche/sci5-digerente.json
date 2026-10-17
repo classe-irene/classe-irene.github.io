@@ -1,0 +1,239 @@
+{
+  "titolo": "Apparato digerente",
+  "emoji": "🍎",
+  "materia": "scienze",
+  "classe": 5,
+  "obiettivi": [
+    "conoscere gli organi dell'apparato digerente e il loro ordine",
+    "sapere che cosa succede al cibo in bocca, nello stomaco e nell'intestino",
+    "conoscere le buone abitudini per un digerente in salute"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "ordina",
+      "immagine": "🍎",
+      "testo": "Metti in ordine il viaggio del cibo.",
+      "elementi": [
+        "bocca",
+        "esofago",
+        "stomaco",
+        "intestino tenue",
+        "intestino crasso"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "testo": "Perché il cibo deve diventare piccolissimo?",
+      "opzioni": [
+        "🩸 per passare nel sangue e arrivare alle cellule",
+        "🦷 per far crescere i denti",
+        "💨 per diventare aria"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🦷",
+      "testo": "Unisci ogni dente al suo lavoro.",
+      "coppie": [
+        [
+          "incisivi",
+          "tagliano"
+        ],
+        [
+          "canini",
+          "strappano"
+        ],
+        [
+          "molari",
+          "triturano"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La saliva bagna il cibo e lo rende morbido.",
+          "vero": true
+        },
+        {
+          "testo": "L'esofago è nella pancia e digerisce il cibo.",
+          "vero": false
+        },
+        {
+          "testo": "I villi sono nell'intestino tenue.",
+          "vero": true
+        },
+        {
+          "testo": "L'intestino crasso prende l'aria.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Dove succede? Scrivilo nella colonna giusta.",
+      "categorie": [
+        "👄 In bocca",
+        "🍽️ Nello stomaco",
+        "🌀 Nell'intestino"
+      ],
+      "elementi": [
+        {
+          "testo": "i denti masticano",
+          "categoria": "👄 In bocca"
+        },
+        {
+          "testo": "la saliva bagna",
+          "categoria": "👄 In bocca"
+        },
+        {
+          "testo": "i succhi gastrici sciolgono",
+          "categoria": "🍽️ Nello stomaco"
+        },
+        {
+          "testo": "i villi passano il cibo al sangue",
+          "categoria": "🌀 Nell'intestino"
+        },
+        {
+          "testo": "si formano le feci",
+          "categoria": "🌀 Nell'intestino"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "La ___ spinge giù il boccone. Lo ___ rimescola il cibo. Il ___ manda i succhi nell'intestino.",
+      "soluzioni": [
+        "lingua",
+        "stomaco",
+        "fegato"
+      ],
+      "parole": [
+        "lingua",
+        "stomaco",
+        "fegato",
+        "polmone"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔬",
+      "testo": "Che cosa fanno i villi?",
+      "opzioni": [
+        "🩸 passano le sostanze nutritive al sangue",
+        "🦷 masticano il cibo",
+        "🚽 producono la saliva"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪥",
+      "affermazioni": [
+        {
+          "testo": "Masticare bene aiuta la digestione.",
+          "vero": true
+        },
+        {
+          "testo": "Mangiare tante caramelle fa bene ai denti.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Che cosa succede al cibo nello stomaco? Scrivi una o due frasi.",
+      "righe": 3,
+      "soluzione": "Lo stomaco si muove e rimescola il cibo. I succhi gastrici lo sciolgono e diventa una pappa morbida."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna l'apparato digerente e scrivi i nomi: bocca, esofago, stomaco, intestino."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "ordina",
+      "immagine": "🍎",
+      "testo": "Metti in ordine il viaggio del cibo.",
+      "elementi": [
+        "bocca",
+        "stomaco",
+        "intestino"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👄",
+      "testo": "Il viaggio del cibo comincia…",
+      "opzioni": [
+        "👄 nella bocca",
+        "🌀 nell'intestino"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "denti",
+          "masticano"
+        ],
+        [
+          "stomaco",
+          "rimescola"
+        ],
+        [
+          "villi",
+          "sangue"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La saliva bagna il cibo.",
+          "vero": true
+        },
+        {
+          "testo": "Lo stomaco è nella testa.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "I ___ masticano il cibo. L'___ porta il cibo allo stomaco.",
+      "soluzioni": [
+        "denti",
+        "esofago"
+      ],
+      "parole": [
+        "denti",
+        "esofago",
+        "cuore"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna la bocca, lo stomaco e l'intestino."
+    }
+  ]
+}
