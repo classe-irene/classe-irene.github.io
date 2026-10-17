@@ -28,7 +28,7 @@
     try {
       let l;
       if (p.locale) l = Archivio.prendi(p.locale);
-      else if (p.file && /^lezioni\/[\w.-]+\.json$/.test(p.file)) l = await (await fetch(p.file)).json();
+      else if (p.file && /^lezioni\/[\w.-]+\.json$/.test(p.file)) l = await (await fetch(p.file, { cache: "no-cache" })).json();
       if (!l) return errore("Questa lezione non esiste o è stata salvata su un altro computer.");
       const e = Motore.valida(l);
       if (e.length) return errore(e.join(" "));
