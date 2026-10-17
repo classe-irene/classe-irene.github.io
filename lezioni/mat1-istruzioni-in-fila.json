@@ -191,16 +191,16 @@
       "domanda": "Unisci la freccia al comando.",
       "coppie": [
         [
-          "⬆️ freccia",
-          "🔼 vai su"
+          "⬆️ freccia su",
+          "🔼 Bip sale"
         ],
         [
-          "⬇️ freccia",
-          "🔽 vai giù"
+          "⬇️ freccia giù",
+          "🔽 Bip scende"
         ],
         [
-          "➡️ freccia",
-          "▶️ vai a destra"
+          "➡️ freccia destra",
+          "▶️ Bip va a destra"
         ]
       ]
     },

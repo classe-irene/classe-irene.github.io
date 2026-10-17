@@ -137,7 +137,7 @@
       "categorie": ["🫚 Radice", "🍃 Foglia", "🍎 Frutto"],
       "elementi": [
         { "testo": "🥕 carota", "categoria": "🫚 Radice" },
-        { "testo": "🫜 rapa", "categoria": "🫚 Radice" },
+        { "testo": "🍠 patata dolce", "categoria": "🫚 Radice" },
         { "testo": "🥬 lattuga", "categoria": "🍃 Foglia" },
         { "testo": "🌿 basilico", "categoria": "🍃 Foglia" },
         { "testo": "🍎 mela", "categoria": "🍎 Frutto" },
