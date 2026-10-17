@@ -1,0 +1,265 @@
+{
+  "titolo": "Dividere in parti uguali",
+  "emoji": "🍕",
+  "materia": "matematica",
+  "classe": 2,
+  "obiettivi": [
+    "capire che dividere vuol dire fare parti uguali",
+    "distribuire e raggruppare",
+    "scrivere la divisione con il segno :",
+    "fare la prova con la moltiplicazione"
+  ],
+  "consegna": "Leggi con calma. Se ti aiuta, disegna le cose e dividile.",
+  "domande": [
+    {
+      "tipo": "conta",
+      "immagine": "🥚",
+      "testo": "Conta le uova di Bea.",
+      "figura": "🥚",
+      "numero": 12
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧺",
+      "testo": "Bea mette le 12 uova nei cestini, 3 in ogni cestino. Quanti cestini servono?",
+      "opzioni": [
+        "🧺 4",
+        "🧺 3",
+        "🧺 9"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➗",
+      "testo": "Calcola. Se ti serve, pensa alla tabellina.",
+      "operazioni": [
+        {
+          "testo": "8 : 2",
+          "risultato": 4
+        },
+        {
+          "testo": "10 : 5",
+          "risultato": 2
+        },
+        {
+          "testo": "9 : 3",
+          "risultato": 3
+        },
+        {
+          "testo": "12 : 4",
+          "risultato": 3
+        },
+        {
+          "testo": "20 : 10",
+          "risultato": 2
+        },
+        {
+          "testo": "14 : 2",
+          "risultato": 7
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso?",
+      "affermazioni": [
+        {
+          "testo": "Il segno : si legge diviso.",
+          "vero": true
+        },
+        {
+          "testo": "6 : 2 = 3 perché 3 × 2 = 6.",
+          "vero": true
+        },
+        {
+          "testo": "Ada ha 4 caramelle e Lia 2: sono parti uguali.",
+          "vero": false
+        },
+        {
+          "testo": "10 : 2 = 8.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa la divisione e la prova.",
+      "frase": "15 : 3 = ___ perché ___ × 3 = 15.",
+      "soluzioni": [
+        "5",
+        "5"
+      ],
+      "parole": [
+        "5",
+        "3",
+        "12"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la divisione al risultato.",
+      "coppie": [
+        [
+          "6 : 2",
+          "3"
+        ],
+        [
+          "16 : 4",
+          "4"
+        ],
+        [
+          "10 : 10",
+          "1"
+        ],
+        [
+          "18 : 3",
+          "6"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🍕",
+      "testo": "Sono parti uguali? Scrivi nella colonna giusta.",
+      "categorie": [
+        "✅ Parti uguali",
+        "❌ Parti diverse"
+      ],
+      "elementi": [
+        {
+          "testo": "🍕 3 e 3",
+          "categoria": "✅ Parti uguali"
+        },
+        {
+          "testo": "🍕 4, 4 e 4",
+          "categoria": "✅ Parti uguali"
+        },
+        {
+          "testo": "🍕 5 e 2",
+          "categoria": "❌ Parti diverse"
+        },
+        {
+          "testo": "🍕 1, 3 e 2",
+          "categoria": "❌ Parti diverse"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: come si distribuisce?",
+      "elementi": [
+        "🍕 Conto le pizzette",
+        "👭 Conto le amiche",
+        "🤲 Do una pizzetta a ognuna, a turno",
+        "✅ Conto quante ne ha ognuna"
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🍬",
+      "testo": "Ci sono 20 caramelle e 5 bambine. Bea le divide in parti uguali. Quante caramelle ha ogni bambina? Scrivi la divisione e la risposta.",
+      "righe": 3,
+      "soluzione": "20 : 5 = 4. Ogni bambina ha 4 caramelle."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna 8 palline e dividile in 2 gruppi uguali. Scrivi la divisione."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "➗",
+      "testo": "Dividere vuol dire…",
+      "opzioni": [
+        "🍕 fare parti uguali",
+        "➕ mettere insieme"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🥚",
+      "testo": "Conta le uova.",
+      "figura": "🥚",
+      "numero": 6
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➗",
+      "testo": "Calcola.",
+      "operazioni": [
+        {
+          "testo": "6 : 2",
+          "risultato": 3
+        },
+        {
+          "testo": "8 : 4",
+          "risultato": 2
+        },
+        {
+          "testo": "10 : 5",
+          "risultato": 2
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso?",
+      "affermazioni": [
+        {
+          "testo": "3 e 3 sono parti uguali.",
+          "vero": true
+        },
+        {
+          "testo": "4 e 1 sono parti uguali.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "4 : 2",
+          "2"
+        ],
+        [
+          "9 : 3",
+          "3"
+        ],
+        [
+          "10 : 2",
+          "5"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "8 : 2 = ___",
+      "soluzioni": [
+        "4"
+      ],
+      "parole": [
+        "4",
+        "6"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna 6 palline in 2 gruppi uguali."
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "titolo": "Il perimetro dei poligoni",
+  "emoji": "🟩",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Il perimetro è la misura del contorno di una figura. Impariamo a calcolarlo nei triangoli e nei quadrilateri.",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao, sono Rosa, la contadina!\nNel mio orto voglio mettere una staccionata tutta intorno.\nQuanto legno mi serve? Dobbiamo misurare il contorno!",
+    "immagini": [
+      "🥕 orto",
+      "🪵 staccionata",
+      "📏 metro"
+    ],
+    "missione": "Misurate i contorni con Rosa. Alla fine vincete la figurina del metro!"
+  },
+  "premio": "📏",
+  "parole_chiave": [
+    "🟩 poligono",
+    "📏 lato",
+    "🔄 contorno",
+    "🧮 perimetro",
+    "🔺 triangolo",
+    "🟦 quadrato",
+    "📄 rettangolo",
+    "📐 centimetro"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔄 Che cos'è il perimetro",
+      "immagine": "🔄",
+      "testo": "Il poligono è una figura chiusa con i lati dritti.\nIl contorno è la linea che gira tutto intorno.\nIl perimetro è la misura del contorno.\nPer trovarlo, sommo le misure di tutti i lati.",
+      "immagini": [
+        "🟩 poligono",
+        "🔄 contorno",
+        "🧮 perimetro",
+        "➕ somma dei lati"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la formica fa il giro",
+        "passi": [
+          {
+            "figure": "🐜 🟩",
+            "testo": "Una formica parte da un angolo del campo."
+          },
+          {
+            "figure": "🐜 → 📏",
+            "testo": "Cammina lungo il primo lato."
+          },
+          {
+            "figure": "🐜 → 📏 📏 📏",
+            "testo": "Poi percorre il secondo, il terzo e il quarto lato."
+          },
+          {
+            "figure": "🐜 🏁",
+            "testo": "Torna al punto di partenza: ha fatto tutto il contorno."
+          },
+          {
+            "figure": "🧮",
+            "testo": "La strada che ha fatto è il perimetro."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Un cerchio ha il perimetro?",
+        "risposta": "Sì, ha un contorno! Ma non è un poligono, perché non ha i lati dritti. Il suo contorno si chiama circonferenza."
+      }
+    },
+    {
+      "titolo": "🔺 Il perimetro del triangolo",
+      "immagine": "🔺",
+      "testo": "Il triangolo ha 3 lati.\nSommo i 3 lati: ecco il perimetro.\nSe i lati sono 3 cm, 4 cm e 5 cm: 3 + 4 + 5 = 12 cm.\nSe il triangolo ha 3 lati uguali, moltiplico il lato per 3.",
+      "immagini": [
+        "🔺 triangolo",
+        "📏 3 lati",
+        "➕ 3 + 4 + 5",
+        "✅ 12 cm"
+      ],
+      "scopri": [
+        {
+          "fronte": "🔺 Equilatero",
+          "retro": "📏 3 lati uguali: lato × 3."
+        },
+        {
+          "fronte": "🔺 Isoscele",
+          "retro": "📏 2 lati uguali: sommo i 3 lati."
+        },
+        {
+          "fronte": "🔺 Scaleno",
+          "retro": "📏 3 lati diversi: sommo i 3 lati."
+        }
+      ]
+    },
+    {
+      "titolo": "🟦 Il perimetro dei quadrilateri",
+      "immagine": "🟦",
+      "testo": "Il quadrilatero ha 4 lati.\nIl quadrato ha 4 lati uguali: lato × 4.\nIl rettangolo ha 2 lati lunghi e 2 lati corti.\nPerimetro del rettangolo: lungo + corto + lungo + corto.\nGuarda il video: un quadrato con il lato di 12 cm.",
+      "immagini": [
+        "🟦 quadrato",
+        "📄 rettangolo",
+        "📏 lato",
+        "✖️ lato × 4"
+      ],
+      "animazione": {
+        "tipo": "moltiplicazione",
+        "a": 12,
+        "b": 4
+      },
+      "pensa": {
+        "domanda": "Un rettangolo ha i lati di 6 cm e 2 cm. Quanto è il perimetro?",
+        "risposta": "6 + 2 + 6 + 2 = 16 cm. Oppure (6 + 2) × 2 = 16 cm."
+      }
+    },
+    {
+      "titolo": "📐 Le unità di misura",
+      "immagine": "📐",
+      "testo": "Il perimetro è una lunghezza.\nLo misuro in centimetri, metri o chilometri.\nTutti i lati devono avere la stessa unità di misura.\nAlla fine scrivo sempre l'unità: 20 cm, 50 m.",
+      "immagini": [
+        "📐 centimetri",
+        "📏 metri",
+        "🛣️ chilometri"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la staccionata dell'orto",
+        "passi": [
+          {
+            "figure": "🥕 🥕 🥕",
+            "testo": "L'orto di Rosa è un rettangolo."
+          },
+          {
+            "figure": "📏",
+            "testo": "Il lato lungo misura 8 metri."
+          },
+          {
+            "figure": "📏",
+            "testo": "Il lato corto misura 5 metri."
+          },
+          {
+            "figure": "➕",
+            "testo": "Sommo: 8 + 5 + 8 + 5 = 26 metri."
+          },
+          {
+            "figure": "🪵 🪵 🪵",
+            "testo": "Rosa compra 26 metri di staccionata."
+          }
+        ]
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔄",
+      "domanda": "Che cos'è il perimetro?",
+      "opzioni": [
+        "🔄 la misura del contorno",
+        "🟩 lo spazio dentro la figura",
+        "📐 un angolo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il perimetro misura la linea che gira intorno alla figura."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➕",
+      "affermazione": "Per trovare il perimetro sommo le misure di tutti i lati.",
+      "corretta": true,
+      "spiegazione": "Sì! Il perimetro è la somma dei lati."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la figura al numero dei suoi lati.",
+      "coppie": [
+        [
+          "🔺 triangolo",
+          "3️⃣ 3 lati"
+        ],
+        [
+          "🟦 quadrato",
+          "4️⃣ 4 lati"
+        ],
+        [
+          "🏠 pentagono",
+          "5️⃣ 5 lati"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔺",
+      "domanda": "Un triangolo ha i lati di 3 cm, 4 cm e 5 cm. Qual è il perimetro?",
+      "opzioni": [
+        "✅ 12 cm",
+        "❌ 9 cm",
+        "❌ 60 cm"
+      ],
+      "corretta": 0,
+      "spiegazione": "3 + 4 + 5 = 12 cm."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🟦",
+      "domanda": "Un quadrato ha il lato di 5 cm. Qual è il perimetro?",
+      "opzioni": [
+        "✅ 20 cm",
+        "❌ 10 cm",
+        "❌ 25 cm"
+      ],
+      "corretta": 0,
+      "spiegazione": "5 × 4 = 20 cm. Il quadrato ha 4 lati uguali."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il perimetro del quadrato è lato × [4]. Il perimetro del triangolo equilatero è lato × [3].",
+      "distrattori": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Triangolo o quadrilatero?",
+      "categorie": [
+        "🔺 Triangolo",
+        "🟦 Quadrilatero"
+      ],
+      "elementi": [
+        {
+          "testo": "🔺 3 lati",
+          "categoria": "🔺 Triangolo"
+        },
+        {
+          "testo": "🔻 equilatero",
+          "categoria": "🔺 Triangolo"
+        },
+        {
+          "testo": "🟦 quadrato",
+          "categoria": "🟦 Quadrilatero"
+        },
+        {
+          "testo": "📄 rettangolo",
+          "categoria": "🟦 Quadrilatero"
+        },
+        {
+          "testo": "🔷 rombo",
+          "categoria": "🟦 Quadrilatero"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🟩",
+      "affermazione": "Il cerchio è un poligono.",
+      "corretta": false,
+      "spiegazione": "No: il poligono ha i lati dritti. Il cerchio non ha lati."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📄",
+      "domanda": "Un rettangolo ha i lati di 6 cm e 3 cm. Qual è il perimetro?",
+      "opzioni": [
+        "✅ 18 cm",
+        "❌ 9 cm",
+        "❌ 18 m"
+      ],
+      "corretta": 0,
+      "spiegazione": "6 + 3 + 6 + 3 = 18 cm."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi per calcolare il perimetro.",
+      "elementi": [
+        "👀 guardo la figura",
+        "📏 misuro ogni lato",
+        "➕ sommo i lati",
+        "✏️ scrivo l'unità di misura"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la figura e il suo perimetro.",
+      "coppie": [
+        [
+          "🟦 quadrato lato 3 cm",
+          "✅ 12 cm"
+        ],
+        [
+          "🔺 equilatero lato 5 cm",
+          "✅ 15 cm"
+        ],
+        [
+          "📄 rettangolo 4 cm e 1 cm",
+          "✅ 10 cm"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è un'unità di misura della lunghezza?",
+      "elementi": [
+        "📐 centimetro",
+        "📏 metro",
+        "⚖️ chilogrammo",
+        "🛣️ chilometro"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il chilogrammo misura il peso, non la lunghezza."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🪵",
+      "domanda": "Completa.",
+      "testo": "Rosa ha un orto quadrato con il lato di 7 m. Le serve una staccionata di [28] m.",
+      "distrattori": [
+        "14",
+        "49"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📏",
+      "affermazione": "Un quadrato con il lato di 10 cm ha il perimetro di 40 cm.",
+      "corretta": true,
+      "spiegazione": "Sì! 10 × 4 = 40 cm."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le figure che sono poligoni!",
+      "giusti": [
+        "🔺 triangolo",
+        "🟦 quadrato",
+        "🔷 rombo"
+      ],
+      "sbagliati": [
+        "⚪ cerchio",
+        "🥚 ovale",
+        "🌙 luna"
+      ],
+      "quanti": 3
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🖼️",
+      "domanda": "Una cornice rettangolare ha i lati di 20 cm e 15 cm. Quanto nastro serve per il contorno?",
+      "opzioni": [
+        "✅ 70 cm",
+        "❌ 35 cm",
+        "❌ 300 cm"
+      ],
+      "corretta": 0,
+      "spiegazione": "20 + 15 + 20 + 15 = 70 cm."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🐸",
+      "domanda": "Un triangolo equilatero ha il lato di 4 cm. Tocca il suo perimetro sulla linea.",
+      "min": 0,
+      "max": 20,
+      "passo": 2,
+      "corretta": 12,
+      "spiegazione": "4 × 3 = 12 cm."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤔",
+      "domanda": "Un quadrato ha il perimetro di 24 cm. Quanto misura il lato?",
+      "opzioni": [
+        "✅ 6 cm",
+        "❌ 4 cm",
+        "❌ 12 cm"
+      ],
+      "corretta": 0,
+      "spiegazione": "Divido il perimetro per 4: 24 : 4 = 6 cm."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il triangolo alla sua regola.",
+      "coppie": [
+        [
+          "🔺 equilatero",
+          "📏 3 lati uguali"
+        ],
+        [
+          "🔺 isoscele",
+          "📏 2 lati uguali"
+        ],
+        [
+          "🔺 scaleno",
+          "📏 3 lati diversi"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📄",
+      "affermazione": "Il rettangolo ha 4 lati tutti uguali.",
+      "corretta": false,
+      "spiegazione": "No: ha 2 lati lunghi e 2 lati corti."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole del perimetro.",
+      "parole": [
+        "📏 lato",
+        "🔄 contorno",
+        "🟦 quadrato",
+        "🟩 poligono"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PERIMETRO",
+      "indizio": "🔄 La misura del contorno di una figura"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "TRIANGOLO",
+      "indizio": "🔺 Il poligono con 3 lati"
+    }
+  ],
+  "ricorda": [
+    "🔄 Il perimetro è la misura del contorno di una figura.",
+    "➕ Per trovarlo sommo le misure di tutti i lati.",
+    "🔺 Triangolo equilatero: lato × 3.",
+    "🟦 Quadrato: lato × 4.",
+    "📄 Rettangolo: lungo + corto + lungo + corto.",
+    "📏 Alla fine scrivo sempre l'unità di misura."
+  ],
+  "verifica": "verifiche/mat4-perimetro.json"
+}

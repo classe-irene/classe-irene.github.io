@@ -1,0 +1,500 @@
+{
+  "titolo": "Sottrazioni in colonna",
+  "emoji": "➖",
+  "materia": "matematica",
+  "classe": 2,
+  "introduzione": "Togliamo i biscotti di Nonna Rosa: senza prestito e con il prestito!",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao bambini! Sono Nonna Rosa.\nHo cotto tanti biscotti e li tengo nelle scatole da 10.\nOggi li regalo ai miei nipoti: quanti ne restano?",
+    "immagini": [
+      "🍪 biscotti",
+      "📦 scatole",
+      "🎁 regalo"
+    ],
+    "missione": "Aiutate Nonna Rosa a contare i biscotti che restano. Alla fine vincete la figurina del biscotto!"
+  },
+  "premio": "🍪",
+  "parole_chiave": [
+    "➖ sottrazione",
+    "🍪 togliere",
+    "🟰 differenza",
+    "📦 decine",
+    "🍪 unità",
+    "🔓 prestito",
+    "✅ prova"
+  ],
+  "sezioni": [
+    {
+      "titolo": "➖ Togliere",
+      "immagine": "➖",
+      "testo": "Fare la sottrazione vuol dire togliere.\nNonna Rosa ha 5 biscotti. Ne mangia 2.\nRestano 3 biscotti: 5 − 2 = 3.\nIl risultato si chiama differenza.",
+      "immagini": [
+        "🍪🍪🍪🍪🍪 5",
+        "➖ meno",
+        "🍪🍪 2",
+        "🟰 resta",
+        "🍪🍪🍪 3"
+      ],
+      "pensa": {
+        "domanda": "Nonna Rosa ha 8 biscotti. Ne regala 3. Quanti biscotti restano?",
+        "risposta": "Restano 5 biscotti! 8 − 3 = 5."
+      }
+    },
+    {
+      "titolo": "📋 In colonna, senza prestito",
+      "immagine": "📋",
+      "testo": "Il numero più grande va sopra.\nDecine sotto le decine. Unità sotto le unità.\nSi parte dalle unità: 8 − 3 = 5.\nPoi le decine: 4 − 1 = 3. Quindi 48 − 13 = 35.",
+      "immagini": [
+        "📋 in colonna",
+        "📦 decine",
+        "🍪 unità",
+        "👉 si parte da destra"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "48 − 13",
+        "passi": [
+          {
+            "figure": "📋 ➖",
+            "testo": "Scrivo 48 − 13 in colonna: 48 sopra, 13 sotto."
+          },
+          {
+            "figure": "👉 🍪",
+            "testo": "Comincio da destra: dalle unità."
+          },
+          {
+            "figure": "8️⃣ ➖ 3️⃣ 🟰 5️⃣",
+            "testo": "Unità: 8 − 3 = 5."
+          },
+          {
+            "figure": "4️⃣ ➖ 1️⃣ 🟰 3️⃣",
+            "testo": "Decine: 4 − 1 = 3."
+          },
+          {
+            "figure": "✅ 3️⃣ 5️⃣",
+            "testo": "La differenza è 35."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🔓 Il prestito",
+      "immagine": "🔓",
+      "testo": "A volte sopra c'è una cifra più piccola.\n2 − 5 non si può fare!\nAllora apro una decina: diventa 10 unità.\nQuesto è il prestito.",
+      "immagini": [
+        "📦 1 decina",
+        "🔓 apro",
+        "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪 10 unità"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il prestito",
+        "passi": [
+          {
+            "figure": "📦 📦 📦 🍪 🍪",
+            "testo": "Nonna Rosa ha 3 scatole e 2 biscotti: 32."
+          },
+          {
+            "figure": "🍪 🍪 ❓",
+            "testo": "Deve togliere 5 biscotti, ma sciolti ne ha solo 2."
+          },
+          {
+            "figure": "📦 → 🔓",
+            "testo": "Allora apre una scatola."
+          },
+          {
+            "figure": "🔟 🍪",
+            "testo": "Dentro ci sono 10 biscotti: 10 unità."
+          },
+          {
+            "figure": "📦 📦 🔟 🍪 🍪",
+            "testo": "Ora ha 2 scatole e 10 + 2 = 12 biscotti sciolti."
+          },
+          {
+            "figure": "📦 📦 7️⃣ 🍪",
+            "testo": "Toglie 5 biscotti: 12 − 5 = 7. Restano 2 scatole e 7 biscotti: 27."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché apro una scatola di biscotti?",
+        "risposta": "Perché i biscotti sciolti non bastano. La scatola ha 10 biscotti: 1 decina diventa 10 unità."
+      }
+    },
+    {
+      "titolo": "🎬 Il prestito in colonna",
+      "immagine": "🎬",
+      "testo": "Guarda il video: 52 − 27.\nUnità: 2 − 7 non si può. Presto 1 decina.\nIl 5 delle decine diventa 4. Il 2 diventa 12.\n12 − 7 = 5. Poi 4 − 2 = 2. Fa 25!",
+      "immagini": [
+        "🔓 presto 1 decina",
+        "🍪 12 − 7 = 5",
+        "📦 4 − 2 = 2",
+        "✅ 25"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "52 − 27",
+        "passi": [
+          {
+            "figure": "2️⃣ ➖ 7️⃣ ❌",
+            "testo": "Unità: 2 − 7 non si può fare."
+          },
+          {
+            "figure": "5️⃣ → 4️⃣",
+            "testo": "Presto 1 decina: il 5 delle decine diventa 4."
+          },
+          {
+            "figure": "2️⃣ → 🔟 ➕ 2️⃣",
+            "testo": "Il 2 delle unità diventa 10 + 2 = 12."
+          },
+          {
+            "figure": "🔟 ➕ 2️⃣ ➖ 7️⃣",
+            "testo": "Ora faccio 12 − 7."
+          },
+          {
+            "figure": "🟰 5️⃣",
+            "testo": "Fa 5: scrivo 5 sotto le unità."
+          },
+          {
+            "figure": "4️⃣ ➖ 2️⃣ 🟰 2️⃣",
+            "testo": "Decine: 4 − 2 = 2. La differenza è 25."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "✅ La prova",
+      "immagine": "✅",
+      "testo": "Per controllare, faccio l'addizione.\n52 − 27 = 25.\nProva: 25 + 27 = 52. È giusto!",
+      "immagini": [
+        "➖ 52 − 27 = 25",
+        "➕ 25 + 27 = 52",
+        "✅ giusto"
+      ],
+      "scopri": [
+        {
+          "fronte": "❓ 65 − 23",
+          "retro": "✅ 42: senza prestito!"
+        },
+        {
+          "fronte": "❓ 40 − 18",
+          "retro": "🔓 22: 0 − 8 non si può, presto 1 decina!"
+        },
+        {
+          "fronte": "❓ 73 − 9",
+          "retro": "🔓 64: 13 − 9 = 4!"
+        }
+      ]
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "➖",
+      "domanda": "Fare la sottrazione vuol dire…",
+      "opzioni": [
+        "➖ togliere",
+        "➕ mettere insieme",
+        "✖️ ripetere"
+      ],
+      "corretta": 0,
+      "spiegazione": "Nella sottrazione togliamo."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "👵",
+      "domanda": "Nonna Rosa aveva 10 biscotti. Ne ha mangiati 4. Quanti biscotti restano?",
+      "oggetto": "🍪",
+      "numero": 6,
+      "spiegazione": "10 − 4 = 6 biscotti."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👉",
+      "domanda": "Da dove si comincia?",
+      "opzioni": [
+        "🍪 Dalle unità",
+        "📦 Dalle decine"
+      ],
+      "corretta": 0,
+      "spiegazione": "Si parte sempre dalle unità, a destra."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📋",
+      "affermazione": "Nella sottrazione in colonna il numero più grande va sopra.",
+      "corretta": true,
+      "spiegazione": "Sì! Si toglie il numero piccolo da quello grande."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la sottrazione al risultato.",
+      "coppie": [
+        [
+          "🍪 9 − 4",
+          "🎯 5"
+        ],
+        [
+          "🍪 15 − 5",
+          "🎯 10"
+        ],
+        [
+          "🍪 18 − 6",
+          "🎯 12"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa: 48 − 13.",
+      "testo": "Unità: 8 − 3 = [5]. Decine: 4 − 1 = [3]. Fa [35].",
+      "distrattori": [
+        "4",
+        "53"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "Guarda le unità: serve il prestito?",
+      "categorie": [
+        "✅ Senza prestito",
+        "🔓 Con il prestito"
+      ],
+      "elementi": [
+        {
+          "testo": "🍪 48 − 13",
+          "categoria": "✅ Senza prestito"
+        },
+        {
+          "testo": "🍪 76 − 25",
+          "categoria": "✅ Senza prestito"
+        },
+        {
+          "testo": "🍪 59 − 7",
+          "categoria": "✅ Senza prestito"
+        },
+        {
+          "testo": "🍪 32 − 5",
+          "categoria": "🔓 Con il prestito"
+        },
+        {
+          "testo": "🍪 52 − 27",
+          "categoria": "🔓 Con il prestito"
+        },
+        {
+          "testo": "🍪 41 − 16",
+          "categoria": "🔓 Con il prestito"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔓",
+      "affermazione": "In 32 − 5 serve il prestito.",
+      "corretta": true,
+      "spiegazione": "2 − 5 non si può: presto 1 decina."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi.",
+      "elementi": [
+        "📋 Scrivo i numeri in colonna",
+        "🍪 Tolgo le unità",
+        "🔓 Se non si può, faccio il prestito",
+        "📦 Tolgo le decine",
+        "✅ Leggo la differenza"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👵",
+      "domanda": "Nonna Rosa ha 47 biscotti. Ne regala 25. Quanti ne restano?",
+      "opzioni": [
+        "🍪 22",
+        "🍪 72",
+        "🍪 12"
+      ],
+      "corretta": 0,
+      "spiegazione": "7 − 5 = 2 e 4 − 2 = 2. Restano 22 biscotti."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la sottrazione e il suo risultato.",
+      "coppie": [
+        [
+          "➖ 50 − 20",
+          "🍪 30"
+        ],
+        [
+          "➖ 66 − 33",
+          "🍪 33"
+        ],
+        [
+          "➖ 25 − 5",
+          "🍪 20"
+        ],
+        [
+          "➖ 90 − 40",
+          "🍪 50"
+        ]
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔓",
+      "domanda": "Fai il prestito: apri 1 decina.",
+      "coppie": [
+        [
+          "🔓 32",
+          "📦 2 decine e 12 unità"
+        ],
+        [
+          "🔓 41",
+          "📦 3 decine e 11 unità"
+        ],
+        [
+          "🔓 50",
+          "📦 4 decine e 10 unità"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa: 52 − 27.",
+      "testo": "2 − 7 non si può. Presto [1] decina. 12 − 7 = [5]. 4 − 2 = [2]. Fa [25].",
+      "distrattori": [
+        "3",
+        "35"
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🦘",
+      "domanda": "Il canguro è sul 70. Salta indietro di 30. Dove arriva?",
+      "min": 0,
+      "max": 100,
+      "passo": 10,
+      "corretta": 40
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON ha bisogno del prestito?",
+      "elementi": [
+        "🍪 31 − 7",
+        "🍪 45 − 18",
+        "🍪 68 − 24",
+        "🍪 50 − 6"
+      ],
+      "intruso": 2,
+      "spiegazione": "8 − 4 = 4: niente prestito!"
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📦",
+      "affermazione": "In 64 − 21 serve il prestito.",
+      "corretta": false,
+      "spiegazione": "4 − 1 = 3: si può fare. Niente prestito!"
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa le sottrazioni che fanno 20!",
+      "giusti": [
+        "🍪 30 − 10",
+        "🍪 25 − 5",
+        "🍪 40 − 20",
+        "🍪 22 − 2",
+        "🍪 50 − 30",
+        "🍪 31 − 11"
+      ],
+      "sbagliati": [
+        "🍪 30 − 20",
+        "🍪 25 − 15",
+        "🍪 40 − 10",
+        "🍪 22 − 12",
+        "🍪 50 − 20",
+        "🍪 33 − 3"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✅",
+      "domanda": "52 − 27 = 25. Quale addizione fa la prova?",
+      "opzioni": [
+        "➕ 25 + 27 = 52",
+        "➕ 25 + 52 = 77",
+        "➕ 27 + 52 = 79"
+      ],
+      "corretta": 0,
+      "spiegazione": "Differenza più numero tolto: torno al numero di partenza."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👵",
+      "domanda": "Completa il testo bucato di Nonna Rosa.",
+      "testo": "Nella sottrazione si parte dalle [unità].\nSe sopra c'è una cifra più piccola, faccio il [prestito].\nApro una [decina]: diventa 10 unità.",
+      "distrattori": [
+        "riporto",
+        "centinaio"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍪",
+      "domanda": "Nonna Rosa ha 60 biscotti. I nipoti ne mangiano 24. Quanti biscotti restano?",
+      "opzioni": [
+        "🍪 36",
+        "🍪 44",
+        "🍪 46"
+      ],
+      "corretta": 0,
+      "spiegazione": "0 − 4 non si può: presto 1 decina. 10 − 4 = 6 e 5 − 2 = 3. Restano 36!"
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della sottrazione.",
+      "parole": [
+        "➖ meno",
+        "🔓 prestito",
+        "🟰 differenza",
+        "📦 decine"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "SOT-TRA-ZIO-NE",
+      "indizio": "➖ L'operazione per togliere"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PRESTITO",
+      "indizio": "🔓 Apro una decina e la cambio in 10 unità"
+    }
+  ],
+  "ricorda": [
+    "📋 Il numero più grande va sopra. Decine sotto le decine, unità sotto le unità.",
+    "👉 Si parte sempre dalle unità.",
+    "🔓 Se sopra c'è una cifra più piccola, faccio il prestito.",
+    "📦 Il prestito: 1 decina diventa 10 unità.",
+    "🟰 Il risultato si chiama differenza.",
+    "✅ Per la prova faccio l'addizione."
+  ],
+  "verifica": "verifiche/mat2-sottrazioni-in-colonna.json"
+}

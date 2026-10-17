@@ -1,0 +1,445 @@
+{
+  "titolo": "Il concetto di area",
+  "emoji": "🧱",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "L'area è la misura dello spazio dentro una figura. Impariamo a misurarla con i quadretti.",
+  "storia": {
+    "personaggio": "👩‍🎨",
+    "testo": "Ciao, sono Giulia, la pittrice!\nVoglio coprire il pavimento della mia stanza con le piastrelle.\nQuante piastrelle servono? Dobbiamo misurare lo spazio dentro!",
+    "immagini": [
+      "🎨 pittrice",
+      "🏠 stanza",
+      "🟦 piastrelle"
+    ],
+    "missione": "Piastrellate con Giulia. Alla fine vincete la figurina del pennello!"
+  },
+  "premio": "🖌️",
+  "parole_chiave": [
+    "🧱 area",
+    "🟩 superficie",
+    "🟦 quadretto",
+    "🔄 contorno",
+    "⚖️ equiestese",
+    "✂️ scomporre",
+    "📐 centimetro quadrato"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🟩 Che cos'è l'area",
+      "immagine": "🟩",
+      "testo": "Ogni figura ha un contorno e uno spazio dentro.\nLo spazio dentro si chiama superficie.\nL'area è la misura della superficie.\nIl perimetro misura il contorno, l'area misura lo spazio dentro.",
+      "immagini": [
+        "🔄 contorno",
+        "🟩 superficie",
+        "🧱 area"
+      ],
+      "scopri": [
+        {
+          "fronte": "🔄 Perimetro",
+          "retro": "🐜 La misura del contorno: dove cammina la formica."
+        },
+        {
+          "fronte": "🧱 Area",
+          "retro": "🎨 La misura dello spazio dentro: dove passo il colore."
+        },
+        {
+          "fronte": "🟩 Superficie",
+          "retro": "🏠 Lo spazio dentro la figura, come il pavimento."
+        }
+      ],
+      "pensa": {
+        "domanda": "Per colorare un disegno ti serve sapere il perimetro o l'area?",
+        "risposta": "L'area! Il colore copre lo spazio dentro la figura."
+      }
+    },
+    {
+      "titolo": "🟦 Misurare con i quadretti",
+      "immagine": "🟦",
+      "testo": "Per misurare l'area uso un quadretto come unità di misura.\nConto quanti quadretti coprono la figura.\nUn rettangolo con 3 file da 4 quadretti ha 12 quadretti.\nLa sua area è 12 quadretti.",
+      "immagini": [
+        "🟦 quadretto",
+        "🔢 conto",
+        "🧱 12 quadretti"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "le piastrelle di Giulia",
+        "passi": [
+          {
+            "figure": "🟦 🟦 🟦 🟦",
+            "testo": "Giulia mette la prima fila: 4 piastrelle."
+          },
+          {
+            "figure": "🟦 🟦 🟦 🟦",
+            "testo": "Poi la seconda fila: altre 4 piastrelle."
+          },
+          {
+            "figure": "🟦 🟦 🟦 🟦",
+            "testo": "Poi la terza fila: altre 4 piastrelle."
+          },
+          {
+            "figure": "✖️",
+            "testo": "3 file da 4: 3 × 4 = 12."
+          },
+          {
+            "figure": "🧱",
+            "testo": "L'area del pavimento è 12 piastrelle."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "⚖️ Figure equiestese",
+      "immagine": "⚖️",
+      "testo": "Due figure possono avere forma diversa ma la stessa area.\nSi chiamano figure equiestese.\nSe taglio una figura e sposto i pezzi, la forma cambia.\nL'area invece resta uguale.",
+      "immagini": [
+        "🟥 forma diversa",
+        "⚖️ stessa area",
+        "✂️ taglio",
+        "🧩 sposto i pezzi"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il quadrato diventa rettangolo",
+        "passi": [
+          {
+            "figure": "🟨 🟨 🟨 🟨",
+            "testo": "Ho un quadrato di 4 quadretti: 2 sopra e 2 sotto."
+          },
+          {
+            "figure": "✂️",
+            "testo": "Lo taglio a metà."
+          },
+          {
+            "figure": "🟨 🟨 → 🟨 🟨",
+            "testo": "Sposto i 2 quadretti di sotto accanto a quelli di sopra."
+          },
+          {
+            "figure": "🟨 🟨 🟨 🟨",
+            "testo": "Ora è un rettangolo lungo, ma ha ancora 4 quadretti."
+          },
+          {
+            "figure": "⚖️",
+            "testo": "Il quadrato e il rettangolo sono equiestesi."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Due figure equiestesi hanno anche lo stesso perimetro?",
+        "risposta": "Non sempre! Hanno la stessa area, ma il contorno può essere più lungo o più corto."
+      }
+    },
+    {
+      "titolo": "📐 Le unità di misura dell'area",
+      "immagine": "📐",
+      "testo": "Per non confonderci usiamo tutti lo stesso quadretto.\nIl centimetro quadrato è un quadretto con il lato di 1 cm.\nIl metro quadrato è un quadrato con il lato di 1 m.\nSi scrivono cm² e m².",
+      "immagini": [
+        "📐 centimetro quadrato",
+        "🟩 metro quadrato",
+        "📏 lato di 1 cm"
+      ],
+      "pensa": {
+        "domanda": "Per misurare il pavimento della classe uso i cm² o i m²?",
+        "risposta": "I m²: il pavimento è grande. I cm² vanno bene per un foglio o una figurina."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🧱",
+      "domanda": "Che cos'è l'area?",
+      "opzioni": [
+        "🟩 la misura dello spazio dentro la figura",
+        "🔄 la misura del contorno",
+        "📏 la misura di un lato"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'area misura la superficie, cioè lo spazio dentro."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "Il perimetro misura il contorno, l'area misura lo spazio dentro.",
+      "corretta": true,
+      "spiegazione": "Sì! Sono due misure diverse."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Mi serve il perimetro o l'area?",
+      "categorie": [
+        "🔄 Perimetro",
+        "🧱 Area"
+      ],
+      "elementi": [
+        {
+          "testo": "🪵 recintare un prato",
+          "categoria": "🔄 Perimetro"
+        },
+        {
+          "testo": "🎀 mettere il nastro intorno al regalo",
+          "categoria": "🔄 Perimetro"
+        },
+        {
+          "testo": "🟦 piastrellare il pavimento",
+          "categoria": "🧱 Area"
+        },
+        {
+          "testo": "🎨 colorare un disegno",
+          "categoria": "🧱 Area"
+        },
+        {
+          "testo": "🌱 seminare l'erba nel prato",
+          "categoria": "🧱 Area"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🟦",
+      "domanda": "Un rettangolo ha 2 file da 5 quadretti. Qual è la sua area?",
+      "opzioni": [
+        "✅ 10 quadretti",
+        "❌ 7 quadretti",
+        "❌ 14 quadretti"
+      ],
+      "corretta": 0,
+      "spiegazione": "2 file da 5: 2 × 5 = 10 quadretti."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Lo spazio dentro una figura si chiama [superficie]. La sua misura è l'[area].",
+      "distrattori": [
+        "contorno",
+        "perimetro"
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🟦",
+      "domanda": "Un pavimento ha 3 file da 3 piastrelle. Tocca l'area sulla linea.",
+      "min": 0,
+      "max": 12,
+      "passo": 1,
+      "corretta": 9,
+      "spiegazione": "3 × 3 = 9 piastrelle."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "Due figure equiestesi hanno la stessa area.",
+      "corretta": true,
+      "spiegazione": "Sì! Possono avere forma diversa, ma l'area è uguale."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        [
+          "🟩 superficie",
+          "🏠 lo spazio dentro"
+        ],
+        [
+          "🧱 area",
+          "🔢 la misura dello spazio dentro"
+        ],
+        [
+          "⚖️ equiestese",
+          "🟰 stessa area"
+        ],
+        [
+          "🔄 contorno",
+          "🐜 la linea intorno"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✂️",
+      "domanda": "Taglio un foglio e sposto i pezzi. Che cosa succede all'area?",
+      "opzioni": [
+        "⚖️ resta uguale",
+        "⬆️ diventa più grande",
+        "⬇️ diventa più piccola"
+      ],
+      "corretta": 0,
+      "spiegazione": "Non ho tolto né aggiunto niente: l'area è la stessa."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine, dall'area più piccola alla più grande.",
+      "elementi": [
+        "🖼️ figurina",
+        "📒 quaderno",
+        "🚪 porta",
+        "⚽ campo di calcio"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova le file di quadretti e l'area.",
+      "coppie": [
+        [
+          "🟦 2 file da 3",
+          "🧱 6 quadretti"
+        ],
+        [
+          "🟦 4 file da 4",
+          "🧱 16 quadretti"
+        ],
+        [
+          "🟦 3 file da 5",
+          "🧱 15 quadretti"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è un'unità di misura dell'area?",
+      "elementi": [
+        "📐 centimetro quadrato",
+        "🟩 metro quadrato",
+        "📏 metro",
+        "🟦 quadretto"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il metro misura una lunghezza, non una superficie."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📐",
+      "affermazione": "Il centimetro quadrato è un quadretto con il lato di 1 cm.",
+      "corretta": true,
+      "spiegazione": "Sì! Si scrive cm²."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏠",
+      "domanda": "Per misurare il pavimento di casa uso…",
+      "opzioni": [
+        "🟩 i metri quadrati",
+        "📐 i centimetri quadrati",
+        "⚖️ i chilogrammi"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il pavimento è grande: uso i metri quadrati, m²."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🟨",
+      "domanda": "Completa.",
+      "testo": "Un quadrato di 4 quadretti e un rettangolo di 4 quadretti sono [equiestesi]. Hanno la stessa [area].",
+      "distrattori": [
+        "uguali",
+        "forma"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le cose che si misurano con l'area!",
+      "giusti": [
+        "🟦 il pavimento",
+        "🌱 il prato da seminare",
+        "🖼️ la tela da dipingere"
+      ],
+      "sbagliati": [
+        "🪵 la staccionata",
+        "🎀 il nastro intorno",
+        "🐜 il giro della formica"
+      ],
+      "quanti": 3
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚖️",
+      "domanda": "La figura A ha 8 quadretti. La figura B ha 8 quadretti, ma è più lunga. Che cosa sono?",
+      "opzioni": [
+        "⚖️ equiestese",
+        "🟰 identiche",
+        "❌ diverse in tutto"
+      ],
+      "corretta": 0,
+      "spiegazione": "Hanno la stessa area ma forma diversa: sono equiestese."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "Due figure con la stessa area hanno sempre lo stesso perimetro.",
+      "corretta": false,
+      "spiegazione": "No: il contorno può cambiare anche se l'area è uguale."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🐸",
+      "domanda": "Giulia copre un tavolo con 4 file da 5 piastrelle. Tocca l'area sulla linea.",
+      "min": 0,
+      "max": 30,
+      "passo": 5,
+      "corretta": 20,
+      "spiegazione": "4 × 5 = 20 piastrelle."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dell'area.",
+      "parole": [
+        "🧱 area",
+        "🟦 quadretto",
+        "🟩 superficie",
+        "✂️ taglio"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto all'unità di misura giusta.",
+      "coppie": [
+        [
+          "🖼️ figurina",
+          "📐 cm²"
+        ],
+        [
+          "🏠 pavimento",
+          "🟩 m²"
+        ],
+        [
+          "🪵 staccionata",
+          "📏 m"
+        ]
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "AREA",
+      "indizio": "🧱 La misura dello spazio dentro una figura"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "EQUIESTESE",
+      "indizio": "⚖️ Figure con forma diversa ma stessa area"
+    }
+  ],
+  "ricorda": [
+    "🟩 La superficie è lo spazio dentro la figura.",
+    "🧱 L'area è la misura della superficie.",
+    "🟦 Per misurare l'area conto i quadretti che coprono la figura.",
+    "⚖️ Figure equiestese: forma diversa, stessa area.",
+    "📐 L'area si misura in centimetri quadrati (cm²) e metri quadrati (m²)."
+  ],
+  "verifica": "verifiche/mat4-area.json"
+}

@@ -1,0 +1,229 @@
+{
+  "titolo": "L'acqua",
+  "emoji": "💧",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "conoscere le proprietà dell'acqua",
+    "riconoscere l'acqua solida, liquida e gassosa",
+    "capire che il caldo e il freddo trasformano l'acqua"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "testo": "Com'è l'acqua pulita?",
+      "opzioni": [
+        "🔍 trasparente",
+        "🟥 rossa",
+        "🟫 marrone"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "L'acqua prende la forma del recipiente.",
+          "vero": true
+        },
+        {
+          "testo": "L'acqua pulita ha un odore forte.",
+          "vero": false
+        },
+        {
+          "testo": "Il ghiaccio è acqua solida.",
+          "vero": true
+        },
+        {
+          "testo": "Il freddo trasforma il ghiaccio in vapore.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni forma dell'acqua al suo stato.",
+      "coppie": [
+        [
+          "ghiaccio",
+          "solido"
+        ],
+        [
+          "acqua del rubinetto",
+          "liquido"
+        ],
+        [
+          "vapore",
+          "gas"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Solido, liquido o gas? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🧊 Solido",
+        "💧 Liquido",
+        "♨️ Gas"
+      ],
+      "elementi": [
+        {
+          "testo": "neve",
+          "categoria": "🧊 Solido"
+        },
+        {
+          "testo": "cubetto di ghiaccio",
+          "categoria": "🧊 Solido"
+        },
+        {
+          "testo": "pioggia",
+          "categoria": "💧 Liquido"
+        },
+        {
+          "testo": "acqua del mare",
+          "categoria": "💧 Liquido"
+        },
+        {
+          "testo": "vapore della pentola",
+          "categoria": "♨️ Gas"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Se scaldo il ghiaccio, diventa ___. Se scaldo tanto l'acqua, diventa ___. Nel freezer l'acqua diventa ___.",
+      "soluzioni": [
+        "acqua",
+        "vapore",
+        "ghiaccio"
+      ],
+      "parole": [
+        "acqua",
+        "vapore",
+        "ghiaccio",
+        "sasso"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "testo": "Metti in ordine il viaggio dell'acqua.",
+      "elementi": [
+        "Il sole scalda il mare.",
+        "Il vapore sale in cielo.",
+        "Nasce la nuvola.",
+        "Cade la pioggia."
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "💧",
+      "testo": "Conta le gocce d'acqua.",
+      "figura": "💧",
+      "numero": 9
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚰",
+      "testo": "Come risparmio l'acqua?",
+      "opzioni": [
+        "🚰 chiudo il rubinetto mentre lavo i denti",
+        "🚿 lascio la doccia sempre aperta",
+        "🌊 gioco con l'acqua del rubinetto"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il cubetto di ghiaccio al sole si scioglie? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché il sole lo scalda e il caldo trasforma il ghiaccio in acqua."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna l'acqua in tre modi: ghiaccio, acqua, vapore."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "testo": "L'acqua pulita è…",
+      "opzioni": [
+        "🔍 trasparente",
+        "🟥 rossa"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il ghiaccio è acqua solida.",
+          "vero": true
+        },
+        {
+          "testo": "L'acqua ha sempre la stessa forma.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "ghiaccio",
+          "solido"
+        ],
+        [
+          "acqua",
+          "liquido"
+        ],
+        [
+          "vapore",
+          "gas"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Al sole il ghiaccio diventa ___.",
+      "soluzioni": [
+        "acqua"
+      ],
+      "parole": [
+        "acqua",
+        "sasso"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "Il sole scalda il mare.",
+        "Nasce la nuvola.",
+        "Cade la pioggia."
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un cubetto di ghiaccio e una goccia d'acqua."
+    }
+  ]
+}

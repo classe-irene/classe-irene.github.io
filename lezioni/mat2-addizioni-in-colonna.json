@@ -4,11 +4,31 @@
   "materia": "matematica",
   "classe": 2,
   "introduzione": "Mettiamo insieme le mele di Marta: senza cambio e con il cambio!",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao bambini! Sono Marta, la contadina.\nNel mio frutteto ci sono tantissime mele.\nLe metto nelle cassette da 10.",
+    "immagini": [
+      "🍎 mele",
+      "📦 cassette",
+      "🚜 trattore"
+    ],
+    "missione": "Aiutate Marta a contare le mele con le addizioni in colonna. Alla fine vincete la figurina della mela!"
+  },
+  "premio": "🍎",
+  "parole_chiave": [
+    "➕ addizione",
+    "📋 in colonna",
+    "📦 decine",
+    "🍎 unità",
+    "🔁 cambio",
+    "⬆️ riporto",
+    "🟰 risultato"
+  ],
   "sezioni": [
     {
       "titolo": "🍎 Mettere insieme",
       "immagine": "🍎",
-      "testo": "Fare l'addizione vuol dire mettere insieme.",
+      "testo": "Fare l'addizione vuol dire mettere insieme.\n2 mele più 3 mele fanno 5 mele.",
       "immagini": [
         "🍎🍎 2",
         "➕ più",
@@ -22,33 +42,31 @@
       }
     },
     {
-      "titolo": "📋 In colonna",
+      "titolo": "📋 In colonna, senza cambio",
       "immagine": "📋",
-      "testo": "Scriviamo i numeri uno sotto l'altro.\nDecine sotto le decine.\nUnità sotto le unità.",
+      "testo": "Scriviamo i numeri uno sotto l'altro.\nDecine sotto le decine. Unità sotto le unità.\nSi parte sempre da destra: dalle unità.\nGuarda il video: 23 + 14.",
       "immagini": [
-        "📦 da = decine",
-        "🍎 u = unità"
+        "📋 in colonna",
+        "📦 decine",
+        "🍎 unità",
+        "👉 si parte da destra"
       ],
-      "curiosita": "Si parte sempre da destra: dalle unità! 👉"
-    },
-    {
-      "titolo": "🎬 Senza cambio",
-      "immagine": "🎬",
-      "testo": "Guarda il video: 23 + 14.",
       "animazione": {
         "tipo": "addizione",
         "a": 23,
         "b": 14,
         "video": true,
         "titolo": "23 + 14"
-      }
+      },
+      "curiosita": "Si parte sempre da destra: dalle unità! 👉"
     },
     {
       "titolo": "🔁 Il cambio",
       "immagine": "🔁",
-      "testo": "A volte le unità sono 10 o di più.\n10 unità diventano 1 decina!",
+      "testo": "A volte le unità sono 10 o di più.\nAllora facciamo il cambio.\n10 unità diventano 1 decina!",
       "immagini": [
-        "🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎 10 unità",
+        "🍎 10 unità",
+        "🔁 cambio",
         "📦 1 decina"
       ],
       "esperimento": {
@@ -64,18 +82,54 @@
           "🔢 Conta: 1 bicchiere e 2 tappi. Fa 12!"
         ],
         "domanda": "Quanti tappi sono rimasti fuori dal bicchiere?"
+      },
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il cambio",
+        "passi": [
+          {
+            "figure": "🍎 🍎 🍎 🍎 🍎",
+            "testo": "Marta ha tante mele sciolte."
+          },
+          {
+            "figure": "🔟 🍎",
+            "testo": "Ne conta 10: sono 10 unità."
+          },
+          {
+            "figure": "🍎 → 📦",
+            "testo": "Mette le 10 mele in una cassetta."
+          },
+          {
+            "figure": "📦",
+            "testo": "La cassetta piena è 1 decina."
+          },
+          {
+            "figure": "🔁 📦",
+            "testo": "10 unità fanno 1 decina: è il cambio!"
+          }
+        ]
       }
     },
     {
       "titolo": "🎬 Con il cambio",
       "immagine": "🎬",
-      "testo": "Guarda il video: 27 + 15.",
+      "testo": "Guarda il video: 27 + 15.\n7 + 5 fa 12 unità.\n10 unità diventano 1 decina.",
       "animazione": {
         "tipo": "addizione",
         "a": 27,
         "b": 15,
         "video": true,
         "titolo": "27 + 15"
+      },
+      "immagini": [
+        "🍎 7 + 5 = 12",
+        "🔁 cambio",
+        "📦 1 decina"
+      ],
+      "pensa": {
+        "domanda": "In 27 + 15, perché scrivo 2 e non 12 sotto le unità?",
+        "risposta": "Perché 12 unità sono 1 decina e 2 unità. Scrivo 2 e porto 1 tra le decine."
       }
     },
     {
@@ -102,13 +156,6 @@
         }
       ]
     }
-  ],
-  "parole_chiave": [
-    "➕ addizione",
-    "📦 decine",
-    "🍎 unità",
-    "🔁 cambio",
-    "⬆️ riporto"
   ],
   "esercizi": [
     {
@@ -151,6 +198,13 @@
     },
     {
       "tipo": "vero_falso",
+      "immagine": "🍎",
+      "affermazione": "In 32 + 15 c'è il cambio.",
+      "corretta": false,
+      "spiegazione": "2 + 5 = 7: meno di 10. Niente cambio!"
+    },
+    {
+      "tipo": "vero_falso",
       "immagine": "🔁",
       "affermazione": "In 7 + 5 c'è il cambio.",
       "corretta": true,
@@ -158,11 +212,11 @@
     },
     {
       "tipo": "addizione",
-      "immagine": "🔁",
-      "domanda": "Con il cambio: 27 + 18.",
-      "a": 27,
-      "b": 18,
-      "spiegazione": "7 + 8 = 15: scrivo 5 e porto 1. 1 + 2 + 1 = 4. Fa 45!"
+      "immagine": "🧺",
+      "domanda": "Calcola in colonna: 35 + 24.",
+      "a": 35,
+      "b": 24,
+      "spiegazione": "5 + 4 = 9 e 3 + 2 = 5. Fa 59!"
     },
     {
       "tipo": "categorie",
@@ -200,6 +254,33 @@
       ]
     },
     {
+      "tipo": "abbina",
+      "immagine": "🔁",
+      "domanda": "Fai il cambio: unisci le unità alle decine.",
+      "coppie": [
+        [
+          "🍎 13 unità",
+          "📦 1 decina e 3 unità"
+        ],
+        [
+          "🍎 10 unità",
+          "📦 1 decina e 0 unità"
+        ],
+        [
+          "🍎 16 unità",
+          "📦 1 decina e 6 unità"
+        ]
+      ]
+    },
+    {
+      "tipo": "addizione",
+      "immagine": "🔁",
+      "domanda": "Con il cambio: 27 + 18.",
+      "a": 27,
+      "b": 18,
+      "spiegazione": "7 + 8 = 15: scrivo 5 e porto 1. 1 + 2 + 1 = 4. Fa 45!"
+    },
+    {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
@@ -207,6 +288,72 @@
       "distrattori": [
         "3"
       ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa: 27 + 15.",
+      "testo": "7 + 5 = [12]. Scrivo [2] e porto [1].",
+      "distrattori": [
+        "3",
+        "5"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👩‍🌾",
+      "domanda": "Marta ha 34 mele. Ne raccoglie altre 25. Quante mele ha?",
+      "opzioni": [
+        "🍎 59",
+        "🍎 9",
+        "🍎 95"
+      ],
+      "corretta": 0,
+      "spiegazione": "34 + 25 = 59 mele."
+    },
+    {
+      "tipo": "addizione",
+      "immagine": "📦",
+      "domanda": "Calcola in colonna: 46 + 37.",
+      "a": 46,
+      "b": 37,
+      "spiegazione": "6 + 7 = 13: scrivo 3 e porto 1. 1 + 4 + 3 = 8. Fa 83!"
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi.",
+      "elementi": [
+        "📋 Scrivo i numeri in colonna",
+        "🍎 Sommo le unità",
+        "📦 Sommo le decine",
+        "✅ Leggo il risultato"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi non ha il cambio?",
+      "elementi": [
+        "🍎 17 + 5",
+        "🍎 28 + 6",
+        "🍎 34 + 15",
+        "🍎 9 + 9"
+      ],
+      "intruso": 2,
+      "spiegazione": "4 + 5 = 9: niente cambio!"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👩‍🌾",
+      "domanda": "Marta ha 38 mele rosse e 25 mele verdi. Quante mele ha?",
+      "opzioni": [
+        "🍎 63",
+        "🍎 53",
+        "🍎 513"
+      ],
+      "corretta": 0,
+      "spiegazione": "8 + 5 = 13: scrivo 3 e porto 1. 1 + 3 + 2 = 6. Fa 63!"
     },
     {
       "tipo": "acchiappa",
@@ -231,37 +378,6 @@
       "quanti": 5
     },
     {
-      "tipo": "addizione",
-      "immagine": "📦",
-      "domanda": "Calcola in colonna: 46 + 37.",
-      "a": 46,
-      "b": 37,
-      "spiegazione": "6 + 7 = 13: scrivo 3 e porto 1. 1 + 4 + 3 = 8. Fa 83!"
-    },
-    {
-      "tipo": "scelta",
-      "immagine": "👩‍🌾",
-      "domanda": "Marta ha 34 mele. Ne raccoglie altre 25. Quante mele ha?",
-      "opzioni": [
-        "59",
-        "9",
-        "95"
-      ],
-      "corretta": 0,
-      "spiegazione": "34 + 25 = 59 mele."
-    },
-    {
-      "tipo": "ordina",
-      "immagine": "🪜",
-      "domanda": "Metti in ordine i passi.",
-      "elementi": [
-        "📋 Scrivo i numeri in colonna",
-        "🍎 Sommo le unità",
-        "📦 Sommo le decine",
-        "✅ Leggo il risultato"
-      ]
-    },
-    {
       "tipo": "bucato",
       "immagine": "👩‍🌾",
       "domanda": "Completa il testo bucato di Marta.",
@@ -270,6 +386,14 @@
         "decine",
         "resto"
       ]
+    },
+    {
+      "tipo": "addizione",
+      "immagine": "🍏",
+      "domanda": "Con il cambio: 19 + 24.",
+      "a": 19,
+      "b": 24,
+      "spiegazione": "9 + 4 = 13: scrivo 3 e porto 1. 1 + 1 + 2 = 4. Fa 43!"
     },
     {
       "tipo": "addizione",
@@ -303,35 +427,37 @@
       ]
     },
     {
-      "tipo": "intruso",
-      "immagine": "🔍",
-      "domanda": "Chi non ha il cambio?",
-      "elementi": [
-        "🍎 17 + 5",
-        "🍎 28 + 6",
-        "🍎 34 + 15",
-        "🍎 9 + 9"
-      ],
-      "intruso": 2,
-      "spiegazione": "4 + 5 = 9: niente cambio!"
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dell'addizione.",
+      "parole": [
+        "➕ somma",
+        "🔁 cambio",
+        "⬆️ riporto",
+        "📦 decine"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "AD-DI-ZIO-NE",
+      "indizio": "➕ Mettere insieme due numeri"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "RIPORTO",
+      "indizio": "⬆️ Il numero piccolo sopra le decine"
     }
   ],
-  "storia": {
-    "personaggio": "👩‍🌾",
-    "testo": "Ciao bambini! Sono Marta, la contadina.\nNel mio frutteto ci sono tantissime mele.\nLe metto nelle cassette da 10.",
-    "immagini": [
-      "🍎 mele",
-      "📦 cassette",
-      "🚜 trattore"
-    ],
-    "missione": "Aiutate Marta a contare le mele con le addizioni in colonna. Alla fine vincete la figurina della mela!"
-  },
-  "premio": "🍎",
   "ricorda": [
     "📋 Decine sotto le decine, unità sotto le unità.",
     "👉 Si parte sempre dalle unità.",
     "🔁 10 unità fanno 1 decina: è il cambio.",
     "⬆️ Il riporto si scrive piccolo, sopra le decine.",
     "📦 Nelle decine, somma anche il riporto."
-  ]
+  ],
+  "verifica": "verifiche/mat2-addizioni-in-colonna.json"
 }

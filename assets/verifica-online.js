@@ -5,11 +5,17 @@
   const h = escapeHTML;
   const ric = (t) => Figura.ricco(t, "figura piccola");
   const norm = (t) => String(t ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^\w\s,.]/g, " ").replace(/\s+/g, " ").trim();
-  const numero = (t) => Number(String(t ?? "").replace(/\s/g, "").replace(",", "."));
+  // "2 000", "2.000" e "2000" sono lo stesso numero; la virgola è quella dei decimali.
+  const numero = (t) => { let s = String(t ?? "").replace(/\s/g, ""); if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, ""); return s === "" ? NaN : Number(s.replace(",", ".")); };
   // Una parola scritta è giusta se è uguale alla soluzione, o alla sua prima parola ("membrana" per "membrana cellulare").
   const parolaGiusta = (scritta, giusta) => {
     const a = norm(scritta), b = norm(giusta);
-    return !!a && (a === b || a === b.split(" ")[0]);
+    if (!a) return false;
+    if (a === b) return true;
+    // Numeri: "2000" e "2 000" valgono uguale; mai solo un pezzo del numero.
+    if (/^[\d\s.,]+$/.test(b)) return numero(a) === numero(b);
+    const prima = b.split(" ")[0];
+    return prima.length >= 4 && a === prima;
   };
   const valoreGiusto = (scritto, giusto) => {
     if (norm(scritto) === norm(giusto)) return true;
@@ -29,7 +35,7 @@
   const tendina = (k, voci) => `<select class="vo-campo" data-k="${k}"><option value="">…</option>${voci.map((v) => `<option value="${h(v.valore)}">${h(v.testo)}</option>`).join("")}</select>`;
 
   const DISEGNA = {
-    scelta: (d, i) => `<div class="v-opzioni vo-scelte">${d.opzioni.map((o, j) => `<button type="button" class="vo-scelta" data-k="q${i}" data-v="${j}"><span class="cerchio"></span>${ric(o)}</button>`).join("")}</div>`,
+    scelta: (d, i) => `<div class="v-opzioni vo-scelte">${mescolaFisso(d.opzioni.map((o, j) => ({ o, j })), d.testo + "op").map(({ o, j }) => `<button type="button" class="vo-scelta" data-k="q${i}" data-v="${j}"><span class="cerchio"></span>${ric(o)}</button>`).join("")}</div>`,
     vero_falso: (d, i) => `<table class="v-vf">${d.affermazioni.map((a, j) => `<tr data-riga="q${i}-${j}"><td>${ric(a.testo)}</td>
       <td><button type="button" class="vo-vf" data-k="q${i}-${j}" data-v="1">V</button></td><td><button type="button" class="vo-vf" data-k="q${i}-${j}" data-v="0">F</button></td></tr>`).join("")}</table>`,
     completa: (d, i) => {

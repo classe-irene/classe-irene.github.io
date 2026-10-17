@@ -1,0 +1,32 @@
+{
+  "titolo": "Le monete e l'euro",
+  "emoji": "💶",
+  "materia": "matematica",
+  "classe": 2,
+  "obiettivi": [
+    "riconoscere monete e banconote dell'euro",
+    "contare i soldi e trovare il totale",
+    "fare la spesa: calcolare quanto si paga e il resto"
+  ],
+  "consegna": "Leggi con calma. Puoi usare le dita o disegnare i soldi.",
+  "domande": [
+    { "tipo": "conta", "immagine": "🪙", "testo": "Ogni moneta vale 1 euro. Quanti euro sono?", "figura": "🪙", "numero": 12 },
+    { "tipo": "scelta", "immagine": "💵", "testo": "Una banconota da 5 euro vale come…", "opzioni": ["🪙 5 monete da 1 euro", "🪙 2 monete da 1 euro", "🟤 5 centesimi"], "corretta": 0 },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Moneta o banconota? Scrivi nella colonna giusta.", "categorie": ["🪙 Moneta", "💵 Banconota"], "elementi": [{ "testo": "1 euro", "categoria": "🪙 Moneta" }, { "testo": "2 euro", "categoria": "🪙 Moneta" }, { "testo": "50 centesimi", "categoria": "🪙 Moneta" }, { "testo": "5 euro", "categoria": "💵 Banconota" }, { "testo": "10 euro", "categoria": "💵 Banconota" }, { "testo": "50 euro", "categoria": "💵 Banconota" }] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "100 centesimi fanno 1 euro.", "vero": true }, { "testo": "Le banconote sono di metallo.", "vero": false }, { "testo": "Due banconote da 10 euro fanno 20 euro.", "vero": true }, { "testo": "Una moneta da 2 euro vale meno di una da 1 euro.", "vero": false }] },
+    { "tipo": "calcolo", "immagine": "🧮", "testo": "Quanti euro sono in tutto?", "operazioni": [{ "testo": "10 € + 5 €", "risultato": 15 }, { "testo": "20 € + 2 €", "risultato": 22 }, { "testo": "5 € + 5 € + 1 €", "risultato": 11 }] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Metti in ordine: dal soldo che vale meno a quello che vale di più.", "elementi": ["10 centesimi", "1 euro", "2 euro", "5 euro", "20 euro"] },
+    { "tipo": "collega", "immagine": "🏷️", "testo": "Unisci la spesa a quanto paghi.", "coppie": [["pane 2 € e latte 1 €", "3 €"], ["torta 12 € e biscotti 7 €", "19 €"], ["gelato 3 € e succo 1 €", "4 €"]] },
+    { "tipo": "completa", "immagine": "💰", "testo": "Calcola il resto.", "frase": "Il gelato costa 3 euro. Do 5 euro. Il resto è ___ euro. Il libro costa 8 euro. Do 10 euro. Il resto è ___ euro.", "soluzioni": ["2", "2"] },
+    { "tipo": "risposta", "immagine": "🛒", "testo": "Lalla vende il pane a 4 euro e i biscotti a 5 euro. Mamma compra pane e biscotti e paga con 10 euro. Quanto spende? Quanto è il resto?", "righe": 3, "soluzione": "4 + 5 = 9 euro. Il resto è 10 − 9 = 1 euro." },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna le monete e le banconote per avere 13 euro." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "conta", "immagine": "🪙", "testo": "Ogni moneta vale 1 euro. Quanti euro sono?", "figura": "🪙", "numero": 6 },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Moneta o banconota?", "categorie": ["🪙 Moneta", "💵 Banconota"], "elementi": [{ "testo": "1 euro", "categoria": "🪙 Moneta" }, { "testo": "2 euro", "categoria": "🪙 Moneta" }, { "testo": "5 euro", "categoria": "💵 Banconota" }, { "testo": "10 euro", "categoria": "💵 Banconota" }] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Le banconote sono di carta.", "vero": true }, { "testo": "2 monete da 1 euro fanno 5 euro.", "vero": false }] },
+    { "tipo": "calcolo", "immagine": "🧮", "testo": "Quanti euro sono?", "operazioni": [{ "testo": "2 € + 1 €", "risultato": 3 }, { "testo": "5 € + 5 €", "risultato": 10 }] },
+    { "tipo": "scelta", "immagine": "💰", "testo": "Il succo costa 1 euro. Do 2 euro. Il resto è…", "opzioni": ["🪙 1 euro", "🪙 3 euro"], "corretta": 0 },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna le monete per avere 5 euro." }
+  ]
+}

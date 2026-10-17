@@ -1,0 +1,293 @@
+{
+  "titolo": "I vertebrati",
+  "emoji": "🐬",
+  "materia": "scienze",
+  "classe": 4,
+  "obiettivi": [
+    "sapere che i vertebrati hanno la colonna vertebrale",
+    "riconoscere i cinque gruppi: pesci, anfibi, rettili, uccelli, mammiferi",
+    "conoscere come respirano e come nascono"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🦴",
+      "testo": "I vertebrati sono animali…",
+      "opzioni": [
+        "🦴 con la colonna vertebrale",
+        "🐚 con la conchiglia",
+        "🦵 con sei zampe"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Scrivi ogni animale nella colonna giusta.",
+      "categorie": [
+        "🐟 Pesci",
+        "🦎 Rettili",
+        "🐦 Uccelli",
+        "🐄 Mammiferi"
+      ],
+      "elementi": [
+        {
+          "testo": "trota",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "squalo",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "serpente",
+          "categoria": "🦎 Rettili"
+        },
+        {
+          "testo": "tartaruga",
+          "categoria": "🦎 Rettili"
+        },
+        {
+          "testo": "aquila",
+          "categoria": "🐦 Uccelli"
+        },
+        {
+          "testo": "pinguino",
+          "categoria": "🐦 Uccelli"
+        },
+        {
+          "testo": "gatto",
+          "categoria": "🐄 Mammiferi"
+        },
+        {
+          "testo": "delfino",
+          "categoria": "🐄 Mammiferi"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "I pesci respirano con le branchie.",
+          "vero": true
+        },
+        {
+          "testo": "La balena è un pesce.",
+          "vero": false
+        },
+        {
+          "testo": "La rana vive in acqua e sulla terra.",
+          "vero": true
+        },
+        {
+          "testo": "Gli uccelli hanno il corpo coperto di peli.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni gruppo a come è coperto il corpo.",
+      "coppie": [
+        [
+          "pesci",
+          "squame"
+        ],
+        [
+          "anfibi",
+          "pelle liscia e bagnata"
+        ],
+        [
+          "uccelli",
+          "piume"
+        ],
+        [
+          "mammiferi",
+          "peli"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "I pesci respirano con le ___ . Gli altri vertebrati respirano con i ___ . I piccoli dei mammiferi bevono il ___ .",
+      "soluzioni": [
+        "branchie",
+        "polmoni",
+        "latte"
+      ],
+      "parole": [
+        "branchie",
+        "polmoni",
+        "latte",
+        "pinne"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐸",
+      "testo": "Dal girino alla rana. Metti in ordine.",
+      "elementi": [
+        "🥚 uovo nell'acqua",
+        "🐟 girino con la coda",
+        "🦵 spuntano le zampe",
+        "🐸 rana"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🦇",
+      "testo": "Il pipistrello vola ma non è un uccello. Che cos'è?",
+      "opzioni": [
+        "🐄 un mammifero",
+        "🦎 un rettile",
+        "🐸 un anfibio"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🥚",
+      "testo": "Come nasce? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🥚 Da un uovo",
+        "🤱 Dalla pancia della mamma"
+      ],
+      "elementi": [
+        {
+          "testo": "gallina",
+          "categoria": "🥚 Da un uovo"
+        },
+        {
+          "testo": "lucertola",
+          "categoria": "🥚 Da un uovo"
+        },
+        {
+          "testo": "cane",
+          "categoria": "🤱 Dalla pancia della mamma"
+        },
+        {
+          "testo": "mucca",
+          "categoria": "🤱 Dalla pancia della mamma"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il delfino non è un pesce? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché respira con i polmoni e i piccoli bevono il latte della mamma: è un mammifero."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un animale per ogni gruppo: un pesce, una rana, una lucertola, un uccello, un mammifero."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🦴",
+      "testo": "I vertebrati hanno…",
+      "opzioni": [
+        "🦴 la colonna vertebrale",
+        "🐚 la conchiglia"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Pesce o uccello?",
+      "categorie": [
+        "🐟 Pesci",
+        "🐦 Uccelli"
+      ],
+      "elementi": [
+        {
+          "testo": "trota",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "squalo",
+          "categoria": "🐟 Pesci"
+        },
+        {
+          "testo": "passero",
+          "categoria": "🐦 Uccelli"
+        },
+        {
+          "testo": "aquila",
+          "categoria": "🐦 Uccelli"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Gli uccelli hanno le piume.",
+          "vero": true
+        },
+        {
+          "testo": "Il cane è un pesce.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "pesci",
+          "squame"
+        ],
+        [
+          "uccelli",
+          "piume"
+        ],
+        [
+          "mammiferi",
+          "peli"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "I pesci respirano con le ___ .",
+      "soluzioni": [
+        "branchie"
+      ],
+      "parole": [
+        "branchie",
+        "piume"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐸",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "🥚 uovo",
+        "🐟 girino",
+        "🐸 rana"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un pesce con le pinne."
+    }
+  ]
+}

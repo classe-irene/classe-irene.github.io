@@ -1,0 +1,271 @@
+{
+  "titolo": "Classificare gli animali",
+  "emoji": "🦁",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "classificare gli animali in base a ciò che mangiano",
+    "classificare gli animali in base a come nascono",
+    "classificare gli animali in base a come si muovono"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🗂️",
+      "testo": "Classificare vuol dire…",
+      "opzioni": [
+        "🗂️ mettere in gruppi",
+        "🎨 colorare",
+        "🏃 correre"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🍽️",
+      "testo": "Erbivoro o carnivoro? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🌿 Erbivoro",
+        "🥩 Carnivoro"
+      ],
+      "elementi": [
+        {
+          "testo": "mucca",
+          "categoria": "🌿 Erbivoro"
+        },
+        {
+          "testo": "coniglio",
+          "categoria": "🌿 Erbivoro"
+        },
+        {
+          "testo": "giraffa",
+          "categoria": "🌿 Erbivoro"
+        },
+        {
+          "testo": "leone",
+          "categoria": "🥩 Carnivoro"
+        },
+        {
+          "testo": "lupo",
+          "categoria": "🥩 Carnivoro"
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🥚",
+      "testo": "Come nasce? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🥚 Dall'uovo",
+        "🤰 Dalla pancia della mamma"
+      ],
+      "elementi": [
+        {
+          "testo": "gallina",
+          "categoria": "🥚 Dall'uovo"
+        },
+        {
+          "testo": "tartaruga",
+          "categoria": "🥚 Dall'uovo"
+        },
+        {
+          "testo": "pesce",
+          "categoria": "🥚 Dall'uovo"
+        },
+        {
+          "testo": "cane",
+          "categoria": "🤰 Dalla pancia della mamma"
+        },
+        {
+          "testo": "gatto",
+          "categoria": "🤰 Dalla pancia della mamma"
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci l'animale a come si muove.",
+      "coppie": [
+        [
+          "pesce",
+          "nuota"
+        ],
+        [
+          "aquila",
+          "vola"
+        ],
+        [
+          "serpente",
+          "striscia"
+        ],
+        [
+          "cavallo",
+          "corre"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "L'orso mangia un po' di tutto: è onnivoro.",
+          "vero": true
+        },
+        {
+          "testo": "Il cagnolino nasce da un uovo.",
+          "vero": false
+        },
+        {
+          "testo": "Il pesce nuota con le pinne.",
+          "vero": true
+        },
+        {
+          "testo": "La lumaca vola con le ali.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Chi mangia solo piante è ___. Chi mangia altri animali è ___. Chi mangia un po' di tutto è ___.",
+      "soluzioni": [
+        "erbivoro",
+        "carnivoro",
+        "onnivoro"
+      ],
+      "parole": [
+        "erbivoro",
+        "carnivoro",
+        "onnivoro"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐍",
+      "testo": "Il serpente…",
+      "opzioni": [
+        "〰️ striscia",
+        "🪶 vola",
+        "🐾 corre con le zampe"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐣",
+      "testo": "Metti in ordine: come nasce il pulcino.",
+      "elementi": [
+        "La gallina fa l'uovo.",
+        "La gallina cova l'uovo.",
+        "Il pulcino rompe il guscio."
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Il cane e il gatto possono stare nello stesso gruppo? Perché?",
+      "righe": 3,
+      "soluzione": "Sì, perché tutti e due camminano con quattro zampe e nascono dalla pancia della mamma."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un animale che vola, uno che nuota e uno che cammina."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🐄",
+      "testo": "La mucca mangia l'erba. È…",
+      "opzioni": [
+        "🌿 erbivora",
+        "🥩 carnivora"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🥚",
+      "testo": "Come nasce?",
+      "categorie": [
+        "🥚 Dall'uovo",
+        "🤰 Dalla pancia"
+      ],
+      "elementi": [
+        {
+          "testo": "gallina",
+          "categoria": "🥚 Dall'uovo"
+        },
+        {
+          "testo": "tartaruga",
+          "categoria": "🥚 Dall'uovo"
+        },
+        {
+          "testo": "cane",
+          "categoria": "🤰 Dalla pancia"
+        },
+        {
+          "testo": "gatto",
+          "categoria": "🤰 Dalla pancia"
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "pesce",
+          "nuota"
+        ],
+        [
+          "aquila",
+          "vola"
+        ],
+        [
+          "serpente",
+          "striscia"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il leone mangia la carne.",
+          "vero": true
+        },
+        {
+          "testo": "La lumaca vola.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Chi mangia solo piante è ___.",
+      "soluzioni": [
+        "erbivoro"
+      ],
+      "parole": [
+        "erbivoro",
+        "carnivoro"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un animale che vola."
+    }
+  ]
+}

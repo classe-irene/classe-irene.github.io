@@ -1,0 +1,268 @@
+{
+  "titolo": "Calore e temperatura",
+  "emoji": "🔥",
+  "materia": "scienze",
+  "classe": 4,
+  "obiettivi": [
+    "sapere che il calore passa dal caldo al freddo",
+    "usare il termometro e conoscere le temperature dell'acqua",
+    "riconoscere la dilatazione e i passaggi di stato",
+    "distinguere conduttori e isolanti"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔥",
+      "testo": "Il calore passa…",
+      "opzioni": [
+        "🔥 dalle cose calde a quelle fredde",
+        "🧊 dalle cose fredde a quelle calde",
+        "🤷 non passa mai"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il termometro misura la temperatura.",
+          "vero": true
+        },
+        {
+          "testo": "L'acqua bolle a 0 gradi.",
+          "vero": false
+        },
+        {
+          "testo": "Col caldo le cose si dilatano.",
+          "vero": true
+        },
+        {
+          "testo": "Il legno è un buon conduttore.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con i numeri giusti.",
+      "frase": "L'acqua diventa ghiaccio a ___ gradi. L'acqua bolle a ___ gradi. Il nostro corpo è a circa ___ gradi.",
+      "soluzioni": [
+        "0",
+        "100",
+        "37"
+      ],
+      "parole": [
+        "0",
+        "100",
+        "37",
+        "50"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni parola al suo significato.",
+      "coppie": [
+        [
+          "calore",
+          "energia che passa dal caldo al freddo"
+        ],
+        [
+          "temperatura",
+          "quanto è caldo o freddo"
+        ],
+        [
+          "dilatazione",
+          "col caldo le cose si allargano"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Conduttore o isolante? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🥄 Conduttori",
+        "🧤 Isolanti"
+      ],
+      "elementi": [
+        {
+          "testo": "ferro",
+          "categoria": "🥄 Conduttori"
+        },
+        {
+          "testo": "rame",
+          "categoria": "🥄 Conduttori"
+        },
+        {
+          "testo": "alluminio",
+          "categoria": "🥄 Conduttori"
+        },
+        {
+          "testo": "legno",
+          "categoria": "🧤 Isolanti"
+        },
+        {
+          "testo": "lana",
+          "categoria": "🧤 Isolanti"
+        },
+        {
+          "testo": "plastica",
+          "categoria": "🧤 Isolanti"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌡️",
+      "testo": "Metti in ordine dal più freddo al più caldo.",
+      "elementi": [
+        "🧊 ghiaccio",
+        "💧 acqua del rubinetto",
+        "🛁 acqua del bagnetto",
+        "♨️ acqua che bolle"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🧊",
+      "testo": "Unisci ogni cambiamento al suo nome.",
+      "coppie": [
+        [
+          "il ghiaccio diventa acqua",
+          "fusione"
+        ],
+        [
+          "l'acqua diventa vapore",
+          "evaporazione"
+        ],
+        [
+          "l'acqua diventa ghiaccio",
+          "solidificazione"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🛤️",
+      "testo": "Perché i binari del treno hanno dei piccoli spazi?",
+      "opzioni": [
+        "☀️ col caldo il ferro si allunga",
+        "🚂 per far respirare il treno",
+        "🌧️ per far scolare la pioggia"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il manico della pentola è di legno o di plastica? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché legno e plastica sono isolanti: non fanno passare il calore e così non ci bruciamo."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un termometro nell'acqua calda e uno nell'acqua fredda. Colora il liquido fino al punto giusto."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🌡️",
+      "testo": "Il termometro misura…",
+      "opzioni": [
+        "🌡️ la temperatura",
+        "📏 la lunghezza"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il calore passa dal caldo al freddo.",
+          "vero": true
+        },
+        {
+          "testo": "L'acqua bolle a 0 gradi.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "L'acqua diventa ghiaccio a ___ gradi.",
+      "soluzioni": [
+        "0"
+      ],
+      "parole": [
+        "0",
+        "100"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Conduttore o isolante?",
+      "categorie": [
+        "🥄 Conduttori",
+        "🧤 Isolanti"
+      ],
+      "elementi": [
+        {
+          "testo": "ferro",
+          "categoria": "🥄 Conduttori"
+        },
+        {
+          "testo": "padella",
+          "categoria": "🥄 Conduttori"
+        },
+        {
+          "testo": "legno",
+          "categoria": "🧤 Isolanti"
+        },
+        {
+          "testo": "lana",
+          "categoria": "🧤 Isolanti"
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "calore",
+          "dal caldo al freddo"
+        ],
+        [
+          "dilatazione",
+          "le cose si allargano"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌡️",
+      "testo": "Dal più freddo al più caldo.",
+      "elementi": [
+        "🧊 ghiaccio",
+        "💧 acqua",
+        "♨️ acqua che bolle"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una cosa calda e una cosa fredda."
+    }
+  ]
+}

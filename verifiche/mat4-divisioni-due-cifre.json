@@ -1,0 +1,270 @@
+{
+  "titolo": "Divisioni a due cifre",
+  "emoji": "➗",
+  "materia": "matematica",
+  "classe": 4,
+  "obiettivi": [
+    "sapere che dividere vuol dire fare gruppi uguali",
+    "conoscere dividendo, divisore, quoziente e resto",
+    "eseguire divisioni con il divisore di due cifre",
+    "fare la prova della divisione",
+    "risolvere un problema con la divisione"
+  ],
+  "consegna": "Leggi con calma. Dopo ogni divisione, fai la prova.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "testo": "Dividere vuol dire…",
+      "opzioni": [
+        "📦 fare gruppi uguali",
+        "➕ mettere tutto insieme",
+        "✖️ ripetere tante volte"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🏷️",
+      "testo": "Guarda 36 : 12 = 3. Unisci il numero al suo nome.",
+      "coppie": [
+        [
+          "36",
+          "dividendo"
+        ],
+        [
+          "12",
+          "divisore"
+        ],
+        [
+          "3",
+          "quoziente"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il resto è sempre più piccolo del divisore.",
+          "vero": true
+        },
+        {
+          "testo": "In 156 : 12 comincio dividendo solo il primo 1.",
+          "vero": false
+        },
+        {
+          "testo": "Per la prova moltiplico il quoziente per il divisore.",
+          "vero": true
+        },
+        {
+          "testo": "48 : 12 = 3",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➗",
+      "testo": "Calcola.",
+      "operazioni": [
+        {
+          "testo": "24 : 12",
+          "risultato": 2
+        },
+        {
+          "testo": "60 : 15",
+          "risultato": 4
+        },
+        {
+          "testo": "96 : 12",
+          "risultato": 8
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "✏️",
+      "testo": "Esegui in colonna sul quaderno a quadretti. Poi fai la prova.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "156 : 12",
+          "risultato": 13
+        },
+        {
+          "testo": "288 : 24",
+          "risultato": 12
+        },
+        {
+          "testo": "195 : 15",
+          "risultato": 13
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "testo": "Scrivi il quoziente e il resto.",
+      "frase": "100 : 12 = ___ con resto ___. 50 : 12 = ___ con resto ___.",
+      "soluzioni": [
+        "8",
+        "4",
+        "4",
+        "2"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✅",
+      "testo": "Completa la prova.",
+      "frase": "156 : 12 = 13. Prova: ___ × 12 = ___.",
+      "soluzioni": [
+        "13",
+        "156"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "La divisione ha il resto? Scrivila nella colonna giusta.",
+      "categorie": [
+        "✅ Senza resto",
+        "🧩 Con il resto"
+      ],
+      "elementi": [
+        {
+          "testo": "36 : 12",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "48 : 24",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "60 : 15",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "50 : 12",
+          "categoria": "🧩 Con il resto"
+        },
+        {
+          "testo": "70 : 20",
+          "categoria": "🧩 Con il resto"
+        },
+        {
+          "testo": "29 : 14",
+          "categoria": "🧩 Con il resto"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "👵",
+      "testo": "Nonna Lina ha 168 biscotti. Li mette in scatole da 12. Quante scatole riempie? Scrivi la divisione e la prova.",
+      "righe": 4,
+      "soluzione": "168 : 12 = 14. Riempie 14 scatole. Prova: 14 × 12 = 168."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "testo": "Dividere vuol dire…",
+      "opzioni": [
+        "📦 fare gruppi uguali",
+        "➕ mettere insieme"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🏷️",
+      "testo": "Guarda 36 : 12 = 3. Completa con le parole.",
+      "frase": "36 è il ___. 12 è il ___. 3 è il ___.",
+      "soluzioni": [
+        "dividendo",
+        "divisore",
+        "quoziente"
+      ],
+      "parole": [
+        "dividendo",
+        "divisore",
+        "quoziente"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➗",
+      "testo": "Calcola. Aiutati con la tabellina del 12: 12, 24, 36, 48.",
+      "operazioni": [
+        {
+          "testo": "24 : 12",
+          "risultato": 2
+        },
+        {
+          "testo": "36 : 12",
+          "risultato": 3
+        },
+        {
+          "testo": "48 : 12",
+          "risultato": 4
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✅",
+      "testo": "Fai la prova di 36 : 12 = 3.",
+      "frase": "3 × 12 = ___",
+      "soluzioni": [
+        "36"
+      ],
+      "parole": [
+        "36",
+        "24"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧩",
+      "affermazioni": [
+        {
+          "testo": "Il resto è quello che avanza.",
+          "vero": true
+        },
+        {
+          "testo": "Il resto può essere più grande del divisore.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "✏️",
+      "testo": "Esegui in colonna. Poi fai la prova.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "156 : 12",
+          "risultato": 13
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "testo": "Nonna Lina ha 50 biscotti e scatole da 12. Ne riempie 4.",
+      "frase": "Avanzano ___ biscotti: è il resto.",
+      "soluzioni": [
+        "2"
+      ],
+      "parole": [
+        "2",
+        "4"
+      ]
+    }
+  ]
+}

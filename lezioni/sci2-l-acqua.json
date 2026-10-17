@@ -1,0 +1,456 @@
+{
+  "titolo": "L'acqua",
+  "emoji": "💧",
+  "materia": "scienze",
+  "classe": 2,
+  "introduzione": "Scopriamo com'è fatta l'acqua e come si trasforma.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Marta, la scienziata!\nOggi ho un bicchiere d'acqua e un cubetto di ghiaccio.\nGuardiamo insieme che cosa succede.",
+    "immagini": [
+      "🥛 bicchiere",
+      "🧊 ghiaccio",
+      "👀 guardiamo"
+    ],
+    "missione": "Scoprite con Marta i segreti dell'acqua. Alla fine vincete la figurina della goccia!"
+  },
+  "premio": "💧",
+  "parole_chiave": [
+    "💧 acqua",
+    "🧊 ghiaccio",
+    "♨️ vapore",
+    "🫗 liquido",
+    "🔥 scaldare",
+    "❄️ raffreddare",
+    "☁️ nuvola",
+    "🌧️ pioggia"
+  ],
+  "sezioni": [
+    {
+      "titolo": "👀 Com'è l'acqua",
+      "immagine": "💧",
+      "testo": "L'acqua è un liquido.\nNon ha colore: è trasparente.\nNon ha odore e non ha sapore.\nNon ha una forma sua: prende la forma del recipiente.",
+      "immagini": [
+        "💧 acqua",
+        "🔍 trasparente",
+        "👃 senza odore",
+        "🥛 prende la forma"
+      ],
+      "scopri": [
+        {
+          "fronte": "🔍 Trasparente",
+          "retro": "👀 Si vede attraverso, come un vetro."
+        },
+        {
+          "fronte": "👃 Inodore",
+          "retro": "🚫 Non ha odore."
+        },
+        {
+          "fronte": "👅 Insapore",
+          "retro": "🚫 Non ha sapore."
+        },
+        {
+          "fronte": "🫗 Liquido",
+          "retro": "🥛 Scorre e prende la forma del recipiente."
+        }
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: la forma dell'acqua",
+        "materiali": [
+          "💧 acqua",
+          "🥛 bicchiere",
+          "🍶 bottiglia",
+          "🥣 ciotola"
+        ],
+        "passi": [
+          "🥛 Versa un po' d'acqua nel bicchiere.",
+          "👀 Guarda la forma dell'acqua.",
+          "🥣 Ora versa la stessa acqua nella ciotola.",
+          "🍶 Poi versala nella bottiglia.",
+          "✏️ Disegna l'acqua nei tre recipienti."
+        ],
+        "domanda": "L'acqua ha sempre la stessa forma?"
+      }
+    },
+    {
+      "titolo": "🧊 Ghiaccio, acqua, vapore",
+      "immagine": "🧊",
+      "testo": "L'acqua può essere solida: è il ghiaccio.\nPuò essere liquida: è l'acqua del rubinetto.\nPuò essere un gas: è il vapore.",
+      "immagini": [
+        "🧊 ghiaccio",
+        "🚰 rubinetto",
+        "♨️ vapore"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "stati",
+        "video": true,
+        "titolo": "solido, liquido e gas"
+      },
+      "pensa": {
+        "domanda": "Il ghiaccio e l'acqua sono la stessa cosa?",
+        "risposta": "Sì! Il ghiaccio è acqua diventata dura per il freddo."
+      }
+    },
+    {
+      "titolo": "🔥 Caldo e freddo trasformano l'acqua",
+      "immagine": "🔥",
+      "testo": "Se scaldo il ghiaccio, si scioglie e diventa acqua.\nSe scaldo tanto l'acqua, diventa vapore.\nSe metto l'acqua nel freezer, diventa ghiaccio.",
+      "immagini": [
+        "🧊 ghiaccio",
+        "💧 acqua",
+        "♨️ vapore",
+        "❄️ freezer"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "l'acqua si trasforma",
+        "passi": [
+          {
+            "figure": "🧊",
+            "testo": "Ecco un cubetto di ghiaccio."
+          },
+          {
+            "figure": "🧊 → ☀️ → 💧",
+            "testo": "Il sole lo scalda: si scioglie e diventa acqua."
+          },
+          {
+            "figure": "💧 → 🔥 → ♨️",
+            "testo": "Scaldo tanto l'acqua: diventa vapore."
+          },
+          {
+            "figure": "💧 → ❄️ → 🧊",
+            "testo": "Metto l'acqua al freddo: diventa ghiaccio."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: il cubetto che si scioglie",
+        "materiali": [
+          "🧊 due cubetti di ghiaccio",
+          "🍽️ due piattini",
+          "☀️ un posto al sole"
+        ],
+        "passi": [
+          "🍽️ Metti un cubetto su ogni piattino.",
+          "☀️ Metti un piattino al sole.",
+          "🌳 Metti l'altro piattino all'ombra.",
+          "⏰ Aspetta dieci minuti.",
+          "👀 Guarda: quale cubetto si è sciolto di più?"
+        ],
+        "domanda": "Perché il cubetto al sole si scioglie prima?"
+      }
+    },
+    {
+      "titolo": "☁️ Il viaggio dell'acqua",
+      "immagine": "☁️",
+      "testo": "Il sole scalda l'acqua del mare.\nL'acqua diventa vapore e sale in cielo.\nIn alto fa freddo: nascono le nuvole.\nDalle nuvole cade la pioggia.\nL'acqua torna al mare. È il ciclo dell'acqua.",
+      "immagini": [
+        "☀️ sole",
+        "🌊 mare",
+        "☁️ nuvola",
+        "🌧️ pioggia"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "ciclo_acqua",
+        "video": true,
+        "titolo": "il ciclo dell'acqua"
+      },
+      "pensa": {
+        "domanda": "Perché l'acqua è importante per noi?",
+        "risposta": "Perché senza acqua non possiamo vivere. Beviamo acqua, ci laviamo e le piante crescono. Non dobbiamo sprecarla!"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "domanda": "Com'è l'acqua?",
+      "opzioni": [
+        "🔍 trasparente",
+        "🟥 rossa",
+        "🟫 marrone"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'acqua non ha colore: è trasparente."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👃",
+      "affermazione": "L'acqua pulita ha un odore forte.",
+      "corretta": false,
+      "spiegazione": "No: l'acqua pulita non ha odore."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥛",
+      "affermazione": "L'acqua prende la forma del recipiente.",
+      "corretta": true,
+      "spiegazione": "Sì! È un liquido."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧊",
+      "domanda": "Il ghiaccio è acqua…",
+      "opzioni": [
+        "🧊 solida",
+        "💧 liquida",
+        "♨️ gassosa"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il ghiaccio è duro: è acqua solida."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci ogni forma dell'acqua al suo stato.",
+      "coppie": [
+        [
+          "🧊 ghiaccio",
+          "🪨 solido"
+        ],
+        [
+          "🚰 acqua del rubinetto",
+          "🫗 liquido"
+        ],
+        [
+          "♨️ vapore",
+          "💨 gas"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫗",
+      "domanda": "Verso l'acqua dal bicchiere alla ciotola. Che forma prende?",
+      "opzioni": [
+        "🥣 la forma della ciotola",
+        "🥛 la forma del bicchiere",
+        "⭐ la forma di una stella"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'acqua prende la forma del recipiente."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Solido, liquido o gas?",
+      "categorie": [
+        "🧊 Solido",
+        "💧 Liquido",
+        "♨️ Gas"
+      ],
+      "elementi": [
+        {
+          "testo": "🧊 cubetto di ghiaccio",
+          "categoria": "🧊 Solido"
+        },
+        {
+          "testo": "❄️ neve",
+          "categoria": "🧊 Solido"
+        },
+        {
+          "testo": "🌧️ pioggia",
+          "categoria": "💧 Liquido"
+        },
+        {
+          "testo": "🚰 acqua del rubinetto",
+          "categoria": "💧 Liquido"
+        },
+        {
+          "testo": "♨️ vapore della pentola",
+          "categoria": "♨️ Gas"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "domanda": "Il ghiacciolo sta al sole. Che cosa succede?",
+      "opzioni": [
+        "💧 si scioglie",
+        "🧊 diventa più duro",
+        "🎈 vola via"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il caldo scioglie il ghiaccio."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine: il cubetto al sole.",
+      "elementi": [
+        "🧊 cubetto di ghiaccio",
+        "☀️ il sole lo scalda",
+        "💧 diventa acqua"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Se scaldo il ghiaccio, diventa [acqua]. Se scaldo tanto l'acqua, diventa [vapore].",
+      "distrattori": [
+        "sasso",
+        "neve"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è fatto di acqua?",
+      "elementi": [
+        "🧊 ghiaccio",
+        "❄️ neve",
+        "🪨 sasso",
+        "🌧️ pioggia"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il sasso non è acqua."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "❄️",
+      "affermazione": "Nel freezer l'acqua diventa ghiaccio.",
+      "corretta": true,
+      "spiegazione": "Sì! Il freddo trasforma l'acqua in ghiaccio."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova le coppie.",
+      "coppie": [
+        [
+          "🧊 ghiaccio",
+          "🪨 solido"
+        ],
+        [
+          "💧 acqua",
+          "🫗 liquido"
+        ],
+        [
+          "♨️ vapore",
+          "💨 gas"
+        ],
+        [
+          "☁️ nuvola",
+          "🌧️ pioggia"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍲",
+      "domanda": "Che cosa esce dalla pentola che bolle?",
+      "opzioni": [
+        "♨️ il vapore",
+        "🧊 il ghiaccio",
+        "❄️ la neve"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'acqua calda diventa vapore."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "domanda": "Metti in ordine il viaggio dell'acqua.",
+      "elementi": [
+        "☀️ il sole scalda il mare",
+        "♨️ il vapore sale in cielo",
+        "☁️ nasce la nuvola",
+        "🌧️ cade la pioggia"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo le cose fatte di acqua!",
+      "giusti": [
+        "🧊 ghiaccio",
+        "❄️ neve",
+        "🌧️ pioggia",
+        "♨️ vapore"
+      ],
+      "sbagliati": [
+        "🪨 sasso",
+        "🧸 orsetto",
+        "✏️ matita",
+        "🍎 mela"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "domanda": "Completa il testo di Marta.",
+      "testo": "Il sole scalda il [mare].\nL'acqua sale in cielo e forma le [nuvole].\nDalle nuvole cade la [pioggia].",
+      "distrattori": [
+        "sasso",
+        "fuoco"
+      ],
+      "immagine": "👩‍🔬"
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🚿",
+      "affermazione": "Possiamo sprecare l'acqua quanto vogliamo.",
+      "corretta": false,
+      "spiegazione": "No! L'acqua è preziosa: chiudi il rubinetto."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪥",
+      "domanda": "Come risparmio l'acqua?",
+      "opzioni": [
+        "🚰 chiudo il rubinetto mentre lavo i denti",
+        "🚿 lascio la doccia aperta",
+        "🌊 gioco con l'acqua del rubinetto"
+      ],
+      "corretta": 0,
+      "spiegazione": "Chiudere il rubinetto non spreca acqua."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dell'acqua.",
+      "parole": [
+        "🧊 ghiaccio",
+        "♨️ vapore",
+        "☁️ nuvola",
+        "🌧️ pioggia"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "VAPORE",
+      "indizio": "♨️ Esce dalla pentola che bolle"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ACQUA",
+      "indizio": "💧 È trasparente e senza odore"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "GHIACCIO",
+      "indizio": "🧊 Acqua solida e fredda"
+    }
+  ],
+  "ricorda": [
+    "💧 L'acqua è trasparente, senza odore e senza sapore.",
+    "🥛 L'acqua è un liquido: prende la forma del recipiente.",
+    "🧊 L'acqua può essere ghiaccio, acqua o vapore.",
+    "🔥 Il caldo scioglie il ghiaccio. Il freddo fa il ghiaccio.",
+    "☁️ L'acqua fa sempre un viaggio: è il ciclo dell'acqua.",
+    "🚰 L'acqua è preziosa: non sprecarla!"
+  ],
+  "verifica": "verifiche/sci2-l-acqua.json"
+}

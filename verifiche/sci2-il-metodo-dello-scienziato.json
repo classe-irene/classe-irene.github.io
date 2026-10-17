@@ -1,0 +1,258 @@
+{
+  "titolo": "Il metodo dello scienziato",
+  "emoji": "🧪",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "osservare con i cinque sensi",
+    "conoscere i passi del metodo: domanda, ipotesi, esperimento, conclusione",
+    "fare un semplice esperimento: galleggia o affonda"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci il senso alla parte del corpo.",
+      "coppie": [
+        [
+          "vista",
+          "occhi"
+        ],
+        [
+          "udito",
+          "orecchie"
+        ],
+        [
+          "olfatto",
+          "naso"
+        ],
+        [
+          "tatto",
+          "mani"
+        ],
+        [
+          "gusto",
+          "lingua"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine i passi della scienziata.",
+      "elementi": [
+        "osservo",
+        "faccio una domanda",
+        "penso un'ipotesi",
+        "faccio l'esperimento",
+        "scrivo la conclusione"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💡",
+      "testo": "Che cos'è l'ipotesi?",
+      "opzioni": [
+        "💡 un'idea da controllare",
+        "🧪 una provetta",
+        "📒 un quaderno"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🥣",
+      "testo": "Galleggia o affonda? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🛟 Galleggia",
+        "⬇️ Affonda"
+      ],
+      "elementi": [
+        {
+          "testo": "tappo di sughero",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "foglia",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "mela",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "moneta",
+          "categoria": "⬇️ Affonda"
+        },
+        {
+          "testo": "sasso",
+          "categoria": "⬇️ Affonda"
+        },
+        {
+          "testo": "chiave",
+          "categoria": "⬇️ Affonda"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La scienziata prima di tutto osserva.",
+          "vero": true
+        },
+        {
+          "testo": "Posso assaggiare tutte le cose che trovo.",
+          "vero": false
+        },
+        {
+          "testo": "Con l'esperimento controllo l'ipotesi.",
+          "vero": true
+        },
+        {
+          "testo": "Se l'ipotesi è sbagliata, non ho imparato niente.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Prima ___. Poi faccio una ___. Alla fine scrivo la ___.",
+      "soluzioni": [
+        "osservo",
+        "domanda",
+        "conclusione"
+      ],
+      "parole": [
+        "osservo",
+        "domanda",
+        "conclusione",
+        "merenda"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👂",
+      "testo": "Con che cosa sento il suono della campanella?",
+      "opzioni": [
+        "👂 con le orecchie",
+        "👃 con il naso",
+        "👅 con la lingua"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧪",
+      "testo": "Perché facciamo l'esperimento?",
+      "opzioni": [
+        "🔍 per controllare l'ipotesi",
+        "😴 per riposare",
+        "🎨 per colorare"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Scegli un oggetto. Scrivi la tua ipotesi: galleggia o affonda? Perché?",
+      "righe": 3,
+      "soluzione": "Esempio: penso che la chiave affondi, perché è di metallo ed è pesante."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna la bacinella con un oggetto che galleggia e uno che affonda."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "vedo",
+          "occhi"
+        ],
+        [
+          "sento i suoni",
+          "orecchie"
+        ],
+        [
+          "sento gli odori",
+          "naso"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "osservo",
+        "faccio l'esperimento",
+        "scrivo la conclusione"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💡",
+      "testo": "L'ipotesi è…",
+      "opzioni": [
+        "💡 un'idea da controllare",
+        "🧪 una provetta"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🥣",
+      "testo": "Galleggia o affonda?",
+      "categorie": [
+        "🛟 Galleggia",
+        "⬇️ Affonda"
+      ],
+      "elementi": [
+        {
+          "testo": "sughero",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "foglia",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "moneta",
+          "categoria": "⬇️ Affonda"
+        },
+        {
+          "testo": "sasso",
+          "categoria": "⬇️ Affonda"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Con l'___ controllo l'ipotesi.",
+      "soluzioni": [
+        "esperimento"
+      ],
+      "parole": [
+        "esperimento",
+        "quaderno"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un oggetto che galleggia nell'acqua."
+    }
+  ]
+}

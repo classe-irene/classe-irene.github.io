@@ -1,0 +1,497 @@
+{
+  "titolo": "Divisioni a due cifre",
+  "emoji": "➗",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Dividere vuol dire fare gruppi uguali. Oggi dividiamo per un numero di due cifre e facciamo la prova.",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono nonna Lina!\nOggi ho sfornato tantissimi biscotti.\nLi metto in scatole da 12. Ma quante scatole mi servono?",
+    "immagini": [
+      "👵 nonna Lina",
+      "🍪 biscotti",
+      "📦 scatole"
+    ],
+    "missione": "Aiutate nonna Lina a riempire le scatole di biscotti. Alla fine vincete la figurina del biscotto!"
+  },
+  "premio": "🍪",
+  "parole_chiave": [
+    "➗ divisione",
+    "🍪 dividendo",
+    "📦 divisore",
+    "✅ quoziente",
+    "🧩 resto",
+    "🔍 prova"
+  ],
+  "sezioni": [
+    {
+      "titolo": "➗ Dividere è fare gruppi uguali",
+      "immagine": "📦",
+      "testo": "Nonna Lina ha 36 biscotti.\nLi mette in scatole da 12.\nQuante scatole riempie? 36 : 12 = 3.",
+      "immagini": [
+        "🍪 36 biscotti",
+        "📦 scatole da 12",
+        "✅ 3 scatole"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "36 biscotti in scatole da 12",
+        "passi": [
+          {
+            "figure": "👵 🍪",
+            "testo": "Nonna Lina ha 36 biscotti."
+          },
+          {
+            "figure": "🍪 → 📦",
+            "testo": "Mette 12 biscotti in ogni scatola."
+          },
+          {
+            "figure": "📦",
+            "testo": "Una scatola: 12 biscotti."
+          },
+          {
+            "figure": "📦 📦",
+            "testo": "Due scatole: 24 biscotti."
+          },
+          {
+            "figure": "📦 📦 📦",
+            "testo": "Tre scatole: 36 biscotti. Finiti!"
+          },
+          {
+            "figure": "✅",
+            "testo": "36 : 12 = 3. Nonna Lina riempie 3 scatole."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: le scatole",
+        "materiali": [
+          "🔴 48 tappi o fagioli",
+          "🥤 bicchieri"
+        ],
+        "passi": [
+          "🔴 Contate 48 tappi.",
+          "🥤 Mettete 12 tappi in ogni bicchiere.",
+          "👀 Contate i bicchieri pieni.",
+          "✏️ Scrivete alla lavagna: 48 : 12 = 4."
+        ],
+        "domanda": "E se i tappi fossero 50, quanti ne avanzerebbero?"
+      }
+    },
+    {
+      "titolo": "🏷️ I nomi della divisione",
+      "immagine": "🏷️",
+      "testo": "In 36 : 12 = 3 ogni numero ha un nome.\n36 è il dividendo: il numero che divido.\n12 è il divisore: il numero per cui divido.\n3 è il quoziente: il risultato.\nQuello che avanza si chiama resto.",
+      "immagini": [
+        "🍪 dividendo",
+        "📦 divisore",
+        "✅ quoziente",
+        "🧩 resto"
+      ],
+      "scopri": [
+        {
+          "fronte": "🍪 Dividendo",
+          "retro": "🍪 Il numero che divido: i biscotti."
+        },
+        {
+          "fronte": "📦 Divisore",
+          "retro": "📦 Il numero per cui divido: 12 in ogni scatola."
+        },
+        {
+          "fronte": "✅ Quoziente",
+          "retro": "✅ Il risultato: le scatole piene."
+        },
+        {
+          "fronte": "🧩 Resto",
+          "retro": "🧩 Quello che avanza."
+        }
+      ]
+    },
+    {
+      "titolo": "🔍 Il divisore ha due cifre",
+      "immagine": "🔍",
+      "testo": "Ora 156 : 12. Il divisore ha due cifre.\nGuardo le prime cifre: 1 è troppo piccolo, allora prendo 15.\nIl 12 nel 15 ci sta 1 volta. Resta 3.\nAbbasso il 6: ho 36. Il 12 nel 36 ci sta 3 volte.\n156 : 12 = 13.",
+      "immagini": [
+        "🔍 prendo 15",
+        "➖ resta 3",
+        "⬇️ abbasso il 6",
+        "✅ 156 : 12 = 13"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "156 : 12 passo passo",
+        "passi": [
+          {
+            "figure": "🍪 → 📦",
+            "testo": "156 biscotti in scatole da 12. Faccio 156 : 12."
+          },
+          {
+            "figure": "1️⃣ ➗ 1️⃣ 2️⃣",
+            "testo": "Guardo il primo 1: è più piccolo di 12. Il 12 non ci sta."
+          },
+          {
+            "figure": "1️⃣ 5️⃣ ➗ 1️⃣ 2️⃣",
+            "testo": "Allora prendo 15. Il 12 nel 15 ci sta 1 volta."
+          },
+          {
+            "figure": "1️⃣ 5️⃣ ➖ 1️⃣ 2️⃣",
+            "testo": "1 × 12 = 12. Poi 15 − 12 = 3. Resta 3."
+          },
+          {
+            "figure": "3️⃣ 6️⃣ ➗ 1️⃣ 2️⃣",
+            "testo": "Abbasso il 6: ho 36. Il 12 nel 36 ci sta 3 volte."
+          },
+          {
+            "figure": "1️⃣ 3️⃣ 📦",
+            "testo": "3 × 12 = 36, resto 0. 156 : 12 = 13 scatole!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché in 156 : 12 non comincio solo dal primo 1?",
+        "risposta": "Perché 1 è più piccolo di 12: il 12 nel 1 non ci sta. Allora prendo due cifre: 15."
+      }
+    },
+    {
+      "titolo": "✅ La prova",
+      "immagine": "✅",
+      "testo": "Per controllare faccio la prova.\nMoltiplico il quoziente per il divisore: 13 × 12.\nSe viene il dividendo, 156, la divisione è giusta!",
+      "immagini": [
+        "✅ 13 quoziente",
+        "📦 × 12 divisore",
+        "🍪 = 156 dividendo"
+      ],
+      "animazione": {
+        "tipo": "moltiplicazione",
+        "a": 13,
+        "b": 12,
+        "video": true,
+        "titolo": "la prova: 13 × 12"
+      }
+    },
+    {
+      "titolo": "🧩 Quando c'è il resto",
+      "immagine": "🧩",
+      "testo": "Ora 100 : 12. Il 12 nel 100 ci sta 8 volte: 8 × 12 = 96.\n100 − 96 = 4. Avanzano 4 biscotti: è il resto.\nIl resto è sempre più piccolo del divisore.\nProva: 8 × 12 + 4 = 100.",
+      "immagini": [
+        "📦 8 scatole",
+        "➖ 100 − 96 = 4",
+        "🧩 resto 4",
+        "✅ 8 × 12 + 4 = 100"
+      ],
+      "pensa": {
+        "domanda": "Nonna Lina ha 50 biscotti e scatole da 12. Quante scatole riempie? Quanti biscotti avanzano?",
+        "risposta": "Riempie 4 scatole: 4 × 12 = 48. Avanzano 2 biscotti: 50 − 48 = 2. Il resto è 2."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "Dividere vuol dire…",
+      "opzioni": [
+        "📦 fare gruppi uguali",
+        "➕ mettere tutto insieme",
+        "✖️ ripetere tante volte"
+      ],
+      "corretta": 0,
+      "spiegazione": "Divido in gruppi uguali: 12 biscotti in ogni scatola."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍪",
+      "domanda": "36 : 12 = ?",
+      "opzioni": [
+        "📦 3",
+        "📦 4",
+        "📦 24"
+      ],
+      "corretta": 0,
+      "spiegazione": "12 + 12 + 12 = 36: il 12 ci sta 3 volte."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🏷️",
+      "affermazione": "In 36 : 12 = 3 il divisore è 12.",
+      "corretta": true,
+      "spiegazione": "Sì! 12 è il numero per cui divido."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🏷️",
+      "domanda": "36 : 12 = 3. Unisci il numero al suo nome.",
+      "coppie": [
+        [
+          "🍪 36",
+          "🏷️ dividendo"
+        ],
+        [
+          "📦 12",
+          "🏷️ divisore"
+        ],
+        [
+          "✅ 3",
+          "🏷️ quoziente"
+        ]
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: la divisione e il suo risultato.",
+      "coppie": [
+        [
+          "➗ 24 : 12",
+          "✅ 2"
+        ],
+        [
+          "➗ 36 : 12",
+          "✅ 3"
+        ],
+        [
+          "➗ 48 : 12",
+          "✅ 4"
+        ],
+        [
+          "➗ 75 : 15",
+          "✅ 5"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✅",
+      "domanda": "Fai la prova di 36 : 12 = 3.",
+      "testo": "3 × 12 = [36]",
+      "distrattori": [
+        "24",
+        "48"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧩",
+      "affermazione": "Il resto è sempre più piccolo del divisore.",
+      "corretta": true,
+      "spiegazione": "Sì! Se fosse più grande, il divisore ci starebbe un'altra volta."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "domanda": "In 156 : 12, quali cifre guardo per prime?",
+      "opzioni": [
+        "🔍 15",
+        "🔍 1",
+        "🔍 156"
+      ],
+      "corretta": 0,
+      "spiegazione": "1 è più piccolo di 12. Prendo due cifre: 15."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi della divisione.",
+      "elementi": [
+        "👀 Guardo le prime cifre del dividendo",
+        "➗ Quante volte ci sta il divisore?",
+        "✖️ Moltiplico",
+        "➖ Sottraggo",
+        "⬇️ Abbasso la cifra dopo"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "La divisione ha il resto?",
+      "categorie": [
+        "✅ Senza resto",
+        "🧩 Con il resto"
+      ],
+      "elementi": [
+        {
+          "testo": "➗ 36 : 12",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "➗ 48 : 24",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "➗ 60 : 15",
+          "categoria": "✅ Senza resto"
+        },
+        {
+          "testo": "➗ 50 : 12",
+          "categoria": "🧩 Con il resto"
+        },
+        {
+          "testo": "➗ 70 : 20",
+          "categoria": "🧩 Con il resto"
+        },
+        {
+          "testo": "➗ 29 : 14",
+          "categoria": "🧩 Con il resto"
+        }
+      ],
+      "suggerimento": "Fai la prova: quoziente per divisore. Viene proprio il dividendo?"
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "✅",
+      "domanda": "Fai la prova di 156 : 12 = 13. Calcola 13 × 12.",
+      "a": 13,
+      "b": 12,
+      "spiegazione": "13 × 12 = 156: la divisione è giusta!"
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "domanda": "Nonna Lina ha 100 biscotti e scatole da 12.",
+      "testo": "100 : 12 = [8] con resto [4]",
+      "distrattori": [
+        "9",
+        "2"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova la divisione con il resto.",
+      "elementi": [
+        "➗ 24 : 12",
+        "➗ 45 : 15",
+        "➗ 50 : 12",
+        "➗ 60 : 20"
+      ],
+      "intruso": 2,
+      "spiegazione": "50 : 12 = 4 con resto 2."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👵",
+      "domanda": "Nonna Lina ha 96 biscotti. Li mette in scatole da 12. Quante scatole riempie?",
+      "opzioni": [
+        "📦 8",
+        "📦 6",
+        "📦 84"
+      ],
+      "corretta": 0,
+      "spiegazione": "96 : 12 = 8. Prova: 8 × 12 = 96."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la divisione alla sua prova.",
+      "coppie": [
+        [
+          "➗ 36 : 12 = 3",
+          "✖️ 3 × 12 = 36"
+        ],
+        [
+          "➗ 45 : 15 = 3",
+          "✖️ 3 × 15 = 45"
+        ],
+        [
+          "➗ 48 : 24 = 2",
+          "✖️ 2 × 24 = 48"
+        ]
+      ]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "✅",
+      "domanda": "Fai la prova di 288 : 24 = 12. Calcola 24 × 12.",
+      "a": 24,
+      "b": 12,
+      "spiegazione": "24 × 12 = 288: la divisione è giusta!"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "➗",
+      "domanda": "288 : 24 = ?",
+      "opzioni": [
+        "✅ 12",
+        "✅ 11",
+        "✅ 14"
+      ],
+      "corretta": 0,
+      "spiegazione": "24 nel 28 ci sta 1 volta, resta 4. Abbasso l'8: 48 : 24 = 2. Fa 12."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo le divisioni giuste!",
+      "giusti": [
+        "➗ 24 : 12 = 2",
+        "➗ 36 : 12 = 3",
+        "➗ 60 : 15 = 4",
+        "➗ 80 : 20 = 4",
+        "➗ 96 : 12 = 8"
+      ],
+      "sbagliati": [
+        "➗ 48 : 12 = 3",
+        "➗ 60 : 20 = 2",
+        "➗ 75 : 15 = 4",
+        "➗ 90 : 30 = 4",
+        "➗ 84 : 12 = 6"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "gelosia",
+      "immagine": "🪟",
+      "domanda": "Prova con la griglia: 195 : 15 = 13. Calcola 13 × 15.",
+      "a": 13,
+      "b": 15,
+      "suggerimento": "Guarda la tavola pitagorica.",
+      "spiegazione": "13 × 15 = 195: la divisione è giusta!"
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👵",
+      "domanda": "Completa il testo bucato di nonna Lina.",
+      "testo": "Nella prova moltiplico il [quoziente] per il [divisore].\nPoi aggiungo il [resto].\nDeve venire il [dividendo].",
+      "distrattori": [
+        "riporto",
+        "doppio"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della divisione.",
+      "parole": [
+        "🍪 dividendo",
+        "📦 divisore",
+        "✅ quoziente",
+        "🧩 resto",
+        "🔍 prova"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "QUO-ZIEN-TE",
+      "indizio": "✅ Il risultato della divisione"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DIVISORE",
+      "indizio": "📦 Il numero per cui divido"
+    }
+  ],
+  "ricorda": [
+    "➗ Dividere vuol dire fare gruppi uguali.",
+    "🏷️ Dividendo : divisore = quoziente. Quello che avanza è il resto.",
+    "🔍 Se la prima cifra è più piccola del divisore, prendo due cifre.",
+    "🧩 Il resto è sempre più piccolo del divisore.",
+    "✅ Prova: quoziente × divisore + resto = dividendo."
+  ],
+  "verifica": "verifiche/mat4-divisioni-due-cifre.json"
+}
