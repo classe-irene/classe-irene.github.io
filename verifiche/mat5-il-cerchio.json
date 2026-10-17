@@ -1,0 +1,158 @@
+{
+  "titolo": "Il cerchio",
+  "emoji": "⭕",
+  "materia": "matematica",
+  "classe": 5,
+  "obiettivi": [
+    "distinguere circonferenza e cerchio",
+    "riconoscere centro, raggio, diametro e arco",
+    "conoscere il rapporto tra raggio e diametro",
+    "calcolare la lunghezza della circonferenza e l'area del cerchio"
+  ],
+  "consegna": "Leggi con calma. Usa 3,14 per pi greco.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "⭕",
+      "testo": "Che cos'è la circonferenza?",
+      "opzioni": ["⭕ la linea curva del contorno", "🍕 lo spazio dentro", "📍 il punto in mezzo"],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni parola al suo significato.",
+      "coppie": [
+        ["centro", "il punto in mezzo"],
+        ["raggio", "dal centro alla circonferenza"],
+        ["diametro", "passa per il centro, lungo 2 raggi"],
+        ["arco", "un pezzo di circonferenza"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Il cerchio è la parte di piano dentro la circonferenza.", "vero": true },
+        { "testo": "Il diametro è la metà del raggio.", "vero": false },
+        { "testo": "Tutti i raggi di un cerchio sono lunghi uguale.", "vero": true },
+        { "testo": "Il cerchio ha tre vertici.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Per disegnare la circonferenza uso il ___. Il diametro è il ___ del raggio. Il giro è circa 3,14 volte il ___.",
+      "soluzioni": ["compasso", "doppio", "diametro"],
+      "parole": ["compasso", "doppio", "diametro", "righello"]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "📏",
+      "testo": "Trova il diametro o il raggio (in cm).",
+      "operazioni": [
+        { "testo": "raggio 4 cm → diametro", "risultato": 8 },
+        { "testo": "raggio 15 cm → diametro", "risultato": 30 },
+        { "testo": "diametro 12 cm → raggio", "risultato": 6 },
+        { "testo": "diametro 50 cm → raggio", "risultato": 25 }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🛞",
+      "testo": "Calcola la circonferenza (diametro × 3,14), in cm.",
+      "operazioni": [
+        { "testo": "diametro 10 cm", "risultato": "31,4" },
+        { "testo": "diametro 2 cm", "risultato": "6,28" },
+        { "testo": "diametro 100 cm", "risultato": 314 }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🍕",
+      "testo": "Calcola l'area del cerchio (raggio × raggio × 3,14), in cm².",
+      "operazioni": [
+        { "testo": "raggio 10 cm", "risultato": 314 },
+        { "testo": "raggio 1 cm", "risultato": "3,14" },
+        { "testo": "raggio 2 cm", "risultato": "12,56" }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Che cosa serve: la circonferenza o l'area? Scrivi nella colonna giusta.",
+      "categorie": ["⭕ Circonferenza", "🍕 Area"],
+      "elementi": [
+        { "testo": "il nastro intorno alla torta", "categoria": "⭕ Circonferenza" },
+        { "testo": "la recinzione di un'aiuola rotonda", "categoria": "⭕ Circonferenza" },
+        { "testo": "il pomodoro sopra la pizza", "categoria": "🍕 Area" },
+        { "testo": "la tovaglia per un tavolo rotondo", "categoria": "🍕 Area" }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🎂",
+      "testo": "Pina vuole mettere il nastro intorno a una torta. Il raggio della torta è 10 cm. Quanto nastro serve? Scrivi i calcoli e la risposta.",
+      "righe": 4,
+      "soluzione": "Diametro = 10 × 2 = 20 cm. Circonferenza = 20 × 3,14 = 62,8 cm. Servono 62,8 cm di nastro."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🧭",
+      "testo": "Con il compasso disegna una circonferenza con il raggio di 3 cm. Segna il centro, un raggio e un diametro."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "⭕",
+      "testo": "La circonferenza è…",
+      "opzioni": ["⭕ la linea del contorno", "🍕 lo spazio dentro"],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["centro", "il punto in mezzo"],
+        ["raggio", "dal centro al contorno"],
+        ["diametro", "lungo 2 raggi"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Il diametro è lungo come 2 raggi.", "vero": true },
+        { "testo": "Il cerchio ha gli angoli.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Per disegnare la circonferenza uso il ___.",
+      "soluzioni": ["compasso"],
+      "parole": ["compasso", "righello"]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "📏",
+      "testo": "Diametro = raggio × 2. Calcola il diametro in cm.",
+      "operazioni": [
+        { "testo": "raggio 3 cm → 3 × 2 =", "risultato": 6 },
+        { "testo": "raggio 5 cm → 5 × 2 =", "risultato": 10 }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🛞",
+      "testo": "Circonferenza = diametro × 3,14. Calcola in cm.",
+      "operazioni": [
+        { "testo": "diametro 10 cm → 10 × 3,14 =", "risultato": "31,4" }
+      ]
+    }
+  ]
+}

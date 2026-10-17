@@ -1,0 +1,252 @@
+{
+  "titolo": "Il Sistema solare",
+  "emoji": "🪐",
+  "materia": "scienze",
+  "classe": 5,
+  "obiettivi": [
+    "sapere che il Sole è una stella al centro del Sistema solare",
+    "conoscere gli otto pianeti in ordine",
+    "distinguere rotazione e rivoluzione della Terra",
+    "conoscere la Luna e le sue fasi"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "testo": "Che cos'è il Sole?",
+      "opzioni": [
+        "⭐ una stella",
+        "🪐 un pianeta",
+        "🌕 un satellite"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪐",
+      "testo": "Metti in ordine i pianeti, dal più vicino al Sole al più lontano.",
+      "elementi": [
+        "Mercurio",
+        "Venere",
+        "Terra",
+        "Marte",
+        "Giove",
+        "Saturno",
+        "Urano",
+        "Nettuno"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Pianeta roccioso o gigante di gas? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🪨 Roccioso",
+        "💨 Gigante di gas"
+      ],
+      "elementi": [
+        {
+          "testo": "Mercurio",
+          "categoria": "🪨 Roccioso"
+        },
+        {
+          "testo": "Terra",
+          "categoria": "🪨 Roccioso"
+        },
+        {
+          "testo": "Marte",
+          "categoria": "🪨 Roccioso"
+        },
+        {
+          "testo": "Giove",
+          "categoria": "💨 Gigante di gas"
+        },
+        {
+          "testo": "Saturno",
+          "categoria": "💨 Gigante di gas"
+        },
+        {
+          "testo": "Nettuno",
+          "categoria": "💨 Gigante di gas"
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni parola alla sua spiegazione.",
+      "coppie": [
+        [
+          "rotazione",
+          "la Terra gira su se stessa"
+        ],
+        [
+          "rivoluzione",
+          "la Terra gira intorno al Sole"
+        ],
+        [
+          "satellite",
+          "gira intorno a un pianeta"
+        ],
+        [
+          "orbita",
+          "la strada intorno al Sole"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Giove è il pianeta più grande.",
+          "vero": true
+        },
+        {
+          "testo": "La Luna fa luce da sola.",
+          "vero": false
+        },
+        {
+          "testo": "Saturno ha grandi anelli.",
+          "vero": true
+        },
+        {
+          "testo": "Il giorno e la notte dipendono dalla rivoluzione.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole o i numeri giusti.",
+      "frase": "La rotazione dura ___ ore. La rivoluzione dura ___ giorni. Con la rivoluzione cambiano le ___.",
+      "soluzioni": [
+        "24",
+        "365",
+        "stagioni"
+      ],
+      "parole": [
+        "24",
+        "365",
+        "stagioni",
+        "12"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌓",
+      "testo": "Metti in ordine le fasi della Luna.",
+      "elementi": [
+        "Luna nuova",
+        "primo quarto",
+        "Luna piena",
+        "ultimo quarto"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌍",
+      "testo": "Perché la Terra è un pianeta speciale?",
+      "opzioni": [
+        "💧 ha acqua liquida e vita",
+        "💍 ha gli anelli",
+        "🔥 fa luce da sola"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Se la Luna non fa luce, perché di notte la vediamo brillare? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché la Luna è illuminata dal Sole e riflette la sua luce."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il Sole al centro e la Terra che gira intorno. Scrivi rotazione e rivoluzione."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "testo": "Il Sole è…",
+      "opzioni": [
+        "⭐ una stella",
+        "🪐 un pianeta"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🪐",
+      "testo": "Quanti sono i pianeti? Contali.",
+      "figura": "🪐",
+      "numero": 8
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La Luna gira intorno alla Terra.",
+          "vero": true
+        },
+        {
+          "testo": "La Terra è il pianeta più grande.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "rotazione",
+          "24 ore"
+        ],
+        [
+          "rivoluzione",
+          "un anno"
+        ],
+        [
+          "Luna",
+          "satellite"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "La Terra gira su se stessa e fa il giorno e la ___.",
+      "soluzioni": [
+        "notte"
+      ],
+      "parole": [
+        "notte",
+        "estate"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌍",
+      "testo": "Metti in ordine: dal più vicino al Sole.",
+      "elementi": [
+        "Mercurio",
+        "Venere",
+        "Terra"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna la Luna piena e la Luna nuova."
+    }
+  ]
+}

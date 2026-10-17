@@ -1,0 +1,154 @@
+{
+  "titolo": "Area dei poligoni",
+  "emoji": "📐",
+  "materia": "matematica",
+  "classe": 5,
+  "obiettivi": [
+    "conoscere le formule dell'area di rettangolo, quadrato, parallelogramma, triangolo, rombo e trapezio",
+    "calcolare l'area dei poligoni",
+    "usare le unità di misura dell'area",
+    "risolvere problemi con l'area"
+  ],
+  "consegna": "Leggi con calma. Scrivi sempre l'unità di misura.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔺",
+      "testo": "Come si calcola l'area del triangolo?",
+      "opzioni": ["➗ base × altezza : 2", "✖️ base × altezza", "➕ base + altezza"],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni figura alla sua formula.",
+      "coppie": [
+        ["rettangolo", "base × altezza"],
+        ["quadrato", "lato × lato"],
+        ["triangolo", "base × altezza : 2"],
+        ["rombo", "diagonale × diagonale : 2"],
+        ["trapezio", "(B + b) × h : 2"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "L'area si misura in cm², m², km².", "vero": true },
+        { "testo": "Il parallelogramma ha l'area come il rettangolo con la stessa base e altezza.", "vero": true },
+        { "testo": "Il triangolo è il doppio del parallelogramma.", "vero": false },
+        { "testo": "Il trapezio ha una sola base.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Il rombo ha due ___. Il trapezio ha due ___. L'area misura lo spazio ___ la figura.",
+      "soluzioni": ["diagonali", "basi", "dentro"],
+      "parole": ["diagonali", "basi", "dentro", "fuori"]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🧮",
+      "testo": "Calcola l'area in cm².",
+      "operazioni": [
+        { "testo": "rettangolo: base 8 cm, altezza 5 cm", "risultato": 40 },
+        { "testo": "quadrato: lato 7 cm", "risultato": 49 },
+        { "testo": "triangolo: base 10 cm, altezza 4 cm", "risultato": 20 },
+        { "testo": "rombo: diagonali 6 cm e 4 cm", "risultato": 12 },
+        { "testo": "trapezio: basi 9 cm e 5 cm, altezza 4 cm", "risultato": 28 }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Nella formula c'è \"diviso 2\"? Scrivi nella colonna giusta.",
+      "categorie": ["➗ Con diviso 2", "✖️ Senza diviso 2"],
+      "elementi": [
+        { "testo": "triangolo", "categoria": "➗ Con diviso 2" },
+        { "testo": "rombo", "categoria": "➗ Con diviso 2" },
+        { "testo": "trapezio", "categoria": "➗ Con diviso 2" },
+        { "testo": "rettangolo", "categoria": "✖️ Senza diviso 2" },
+        { "testo": "quadrato", "categoria": "✖️ Senza diviso 2" },
+        { "testo": "parallelogramma", "categoria": "✖️ Senza diviso 2" }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dalla superficie più piccola alla più grande. Scrivi 1, 2, 3, 4.",
+      "elementi": ["un francobollo", "un quaderno", "il pavimento della classe", "una regione"]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🤔",
+      "testo": "Un rettangolo ha l'area di 48 cm² e la base di 8 cm. Quanto è l'altezza in cm?",
+      "operazioni": [
+        { "testo": "48 : 8 =", "risultato": 6 }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🌱",
+      "testo": "Ada vuole fare un'aiuola a forma di triangolo. La base è 12 m e l'altezza è 5 m. Quanti m² di erba servono? Scrivi i calcoli e la risposta.",
+      "righe": 4,
+      "soluzione": "12 × 5 = 60. 60 : 2 = 30. Servono 30 m² di erba."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Sul quaderno a quadretti disegna un rettangolo con base 6 quadretti e altezza 3 quadretti. Scrivi la sua area."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🟥",
+      "testo": "Area del rettangolo =",
+      "opzioni": ["✖️ base × altezza", "➕ base + altezza"],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["rettangolo", "base × altezza"],
+        ["quadrato", "lato × lato"],
+        ["triangolo", "base × altezza : 2"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "L'area si misura in cm².", "vero": true },
+        { "testo": "Il triangolo non ha \"diviso 2\" nella formula.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il rombo ha due ___.",
+      "soluzioni": ["diagonali"],
+      "parole": ["diagonali", "basi"]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🧮",
+      "testo": "Calcola l'area in cm².",
+      "operazioni": [
+        { "testo": "rettangolo: 5 × 3 =", "risultato": 15 },
+        { "testo": "quadrato: 4 × 4 =", "risultato": 16 },
+        { "testo": "triangolo: 6 × 4 : 2 =", "risultato": 12 }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Sul quaderno a quadretti disegna un quadrato di lato 3 quadretti. Conta i quadretti: è la sua area."
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "titolo": "Luce e suono",
+  "emoji": "🌈",
+  "materia": "scienze",
+  "classe": 5,
+  "introduzione": "Ogni giorno vediamo la luce e sentiamo i suoni. Scopriamo come nascono e come viaggiano.",
+  "storia": {
+    "personaggio": "👩‍🎤",
+    "testo": "Ciao, sono Viola, la cantante!\nSul palco ho le luci colorate e il microfono.\nOggi scopriamo come la luce arriva ai nostri occhi e la musica alle orecchie.",
+    "immagini": [
+      "🎤 microfono",
+      "💡 luci",
+      "🎵 musica"
+    ],
+    "missione": "Scoprite con Viola i segreti della luce e del suono. Alla fine vincete la figurina dell'arcobaleno!"
+  },
+  "premio": "🌈",
+  "parole_chiave": [
+    "☀️ fonte luminosa",
+    "➡️ linea retta",
+    "🌑 ombra",
+    "🪞 riflessione",
+    "🌈 colori della luce",
+    "〰️ vibrazione",
+    "🔊 suono",
+    "🗣️ eco"
+  ],
+  "sezioni": [
+    {
+      "titolo": "☀️ La luce",
+      "immagine": "☀️",
+      "testo": "Alcuni corpi fanno luce da soli: sono le fonti luminose.\nIl Sole, il fuoco e la lampadina sono fonti luminose.\nAltri corpi non hanno luce propria: sono illuminati.\nLa Luna non fa luce: è illuminata dal Sole.\nLa luce viaggia in linea retta.\nLa luce è velocissima: è la cosa più veloce che c'è!",
+      "immagini": [
+        "☀️ Sole",
+        "🔥 fuoco",
+        "💡 lampadina",
+        "🌕 Luna",
+        "➡️ linea retta"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il viaggio della luce",
+        "passi": [
+          {
+            "figure": "☀️",
+            "testo": "Il Sole è una fonte luminosa: fa luce da solo."
+          },
+          {
+            "figure": "☀️ → 🍎",
+            "testo": "La luce viaggia dritta e arriva sulla mela."
+          },
+          {
+            "figure": "🍎 → 👁️",
+            "testo": "La mela rimanda la luce verso il nostro occhio."
+          },
+          {
+            "figure": "👁️ → 🧠",
+            "testo": "L'occhio manda il messaggio al cervello: vediamo la mela!"
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "☀️ Fonte luminosa",
+          "retro": "💡 Fa luce da sola: Sole, fuoco, lampadina."
+        },
+        {
+          "fronte": "🌕 Corpo illuminato",
+          "retro": "☀️ Non ha luce sua: la riceve da una fonte."
+        },
+        {
+          "fronte": "➡️ Linea retta",
+          "retro": "📏 La luce va sempre dritta."
+        }
+      ]
+    },
+    {
+      "titolo": "🪟 Trasparenti, traslucidi, opachi",
+      "immagine": "🪟",
+      "testo": "I materiali trasparenti fanno passare tutta la luce: il vetro.\nI materiali traslucidi fanno passare un po' di luce: la carta velina.\nI materiali opachi non fanno passare la luce: il legno.\nDietro un corpo opaco si forma l'ombra.\nL'ombra è la zona dove la luce non arriva.",
+      "immagini": [
+        "🪟 vetro",
+        "🧻 carta velina",
+        "🪵 legno",
+        "🌑 ombra"
+      ],
+      "esperimento": {
+        "titolo": "🔦 Il teatro delle ombre",
+        "materiali": [
+          "🔦 una torcia",
+          "🧱 un muro chiaro",
+          "✋ le tue mani",
+          "🪟 un pezzo di vetro o plastica trasparente",
+          "📒 un quaderno"
+        ],
+        "passi": [
+          "🌙 Abbassa le tapparelle: la stanza deve essere buia.",
+          "🔦 Accendi la torcia verso il muro.",
+          "✋ Metti la mano davanti alla torcia: guarda l'ombra.",
+          "📒 Prova con il quaderno e poi con il vetro.",
+          "↔️ Avvicina e allontana la mano dalla torcia."
+        ],
+        "domanda": "Il vetro fa ombra? Che cosa succede all'ombra se avvicini la mano alla torcia?"
+      }
+    },
+    {
+      "titolo": "🪞 Riflessione e colori",
+      "immagine": "🪞",
+      "testo": "Quando la luce colpisce uno specchio, rimbalza.\nQuesto si chiama riflessione.\nLa luce bianca del Sole è fatta di sette colori.\nUn prisma di vetro la divide nei suoi colori.\nAnche le gocce di pioggia la dividono: nasce l'arcobaleno!",
+      "immagini": [
+        "🪞 specchio",
+        "☀️ luce bianca",
+        "💎 prisma",
+        "🌧️ pioggia",
+        "🌈 arcobaleno"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "come nasce l'arcobaleno",
+        "passi": [
+          {
+            "figure": "🌧️",
+            "testo": "Ha appena piovuto: nell'aria ci sono tante goccioline."
+          },
+          {
+            "figure": "☀️ → 💧",
+            "testo": "La luce bianca del Sole entra nelle gocce."
+          },
+          {
+            "figure": "💧 → 🌈",
+            "testo": "Le gocce dividono la luce nei suoi colori."
+          },
+          {
+            "figure": "🌈",
+            "testo": "Nel cielo compare l'arcobaleno, con sette colori."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🪞 Riflessione",
+          "retro": "🏀 La luce rimbalza sullo specchio, come una palla."
+        },
+        {
+          "fronte": "💎 Prisma",
+          "retro": "🌈 Un vetro che divide la luce bianca in colori."
+        },
+        {
+          "fronte": "🌈 Sette colori",
+          "retro": "🎨 Rosso, arancione, giallo, verde, azzurro, indaco, violetto."
+        }
+      ]
+    },
+    {
+      "titolo": "🔊 Il suono",
+      "immagine": "🔊",
+      "testo": "Il suono nasce quando un corpo vibra.\nVibrare vuol dire muoversi avanti e indietro, velocissimo.\nIl suono viaggia nell'aria, nell'acqua e nei solidi.\nNel vuoto il suono non viaggia: nello spazio c'è silenzio.\nIl suono è più lento della luce.\nPer questo prima vediamo il lampo e poi sentiamo il tuono.",
+      "immagini": [
+        "🥁 tamburo",
+        "〰️ vibrazione",
+        "💨 aria",
+        "🌌 spazio",
+        "⚡ lampo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dal tamburo all'orecchio",
+        "passi": [
+          {
+            "figure": "🥁",
+            "testo": "La bambina batte sul tamburo."
+          },
+          {
+            "figure": "🥁 〰️",
+            "testo": "La pelle del tamburo vibra."
+          },
+          {
+            "figure": "〰️ → 💨",
+            "testo": "La vibrazione passa all'aria."
+          },
+          {
+            "figure": "💨 → 👂",
+            "testo": "L'aria porta il suono fino all'orecchio."
+          },
+          {
+            "figure": "👂 → 🧠",
+            "testo": "Il cervello capisce: è un tamburo!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Durante un temporale, perché vediamo prima il lampo e poi sentiamo il tuono?",
+        "risposta": "Perché la luce è molto più veloce del suono. La luce del lampo arriva subito, il rumore del tuono arriva dopo."
+      }
+    },
+    {
+      "titolo": "👂 Come sono i suoni",
+      "immagine": "👂",
+      "testo": "I suoni possono essere forti o deboli.\nI suoni possono essere acuti, come il canto dell'uccellino.\nOppure gravi, come il tamburo grande.\nQuando il suono sbatte contro una montagna, torna indietro.\nCosì sentiamo di nuovo la nostra voce: è l'eco.\nI rumori troppo forti fanno male alle orecchie.",
+      "immagini": [
+        "🔊 forte",
+        "🔈 debole",
+        "🎶 acuto",
+        "🥁 grave",
+        "⛰️ eco"
+      ],
+      "esperimento": {
+        "titolo": "🥫 Il telefono con i barattoli",
+        "materiali": [
+          "🥫 due barattoli di plastica",
+          "🧵 uno spago lungo",
+          "📌 un chiodino (aiuta un adulto)"
+        ],
+        "passi": [
+          "📌 Con l'aiuto di un adulto, fai un buchino sul fondo dei barattoli.",
+          "🧵 Infila lo spago e fai un nodo dentro ogni barattolo.",
+          "↔️ Allontanatevi finché lo spago è tirato.",
+          "🗣️ Una parla nel barattolo, l'altra ascolta.",
+          "🤏 Ora prova con lo spago molle."
+        ],
+        "domanda": "Perché la voce si sente bene solo con lo spago tirato?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "domanda": "Quale di questi è una fonte luminosa?",
+      "opzioni": [
+        "☀️ il Sole",
+        "🌕 la Luna",
+        "🪞 lo specchio"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il Sole fa luce da solo. La Luna è illuminata dal Sole."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌕",
+      "affermazione": "La Luna fa luce da sola.",
+      "corretta": false,
+      "spiegazione": "No: la Luna riflette la luce del Sole."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➡️",
+      "affermazione": "La luce viaggia in linea retta.",
+      "corretta": true,
+      "spiegazione": "Sì! La luce va sempre dritta."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Fa luce da solo o è illuminato?",
+      "categorie": [
+        "💡 Fonte luminosa",
+        "🌕 Corpo illuminato"
+      ],
+      "elementi": [
+        {
+          "testo": "☀️ Sole",
+          "categoria": "💡 Fonte luminosa"
+        },
+        {
+          "testo": "🔥 fuoco",
+          "categoria": "💡 Fonte luminosa"
+        },
+        {
+          "testo": "🕯️ candela accesa",
+          "categoria": "💡 Fonte luminosa"
+        },
+        {
+          "testo": "🌕 Luna",
+          "categoria": "🌕 Corpo illuminato"
+        },
+        {
+          "testo": "🍎 mela",
+          "categoria": "🌕 Corpo illuminato"
+        },
+        {
+          "testo": "📕 libro",
+          "categoria": "🌕 Corpo illuminato"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "👁️",
+      "domanda": "Metti in ordine: come vediamo la mela? Come nel video.",
+      "elementi": [
+        "☀️ il Sole fa luce",
+        "🍎 la luce arriva sulla mela",
+        "👁️ la mela rimanda la luce all'occhio",
+        "🧠 il cervello capisce"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Come lascia passare la luce?",
+      "categorie": [
+        "🪟 Trasparente",
+        "🧻 Traslucido",
+        "🪵 Opaco"
+      ],
+      "elementi": [
+        {
+          "testo": "🪟 vetro della finestra",
+          "categoria": "🪟 Trasparente"
+        },
+        {
+          "testo": "💧 acqua limpida",
+          "categoria": "🪟 Trasparente"
+        },
+        {
+          "testo": "🧻 carta velina",
+          "categoria": "🧻 Traslucido"
+        },
+        {
+          "testo": "🎈 palloncino",
+          "categoria": "🧻 Traslucido"
+        },
+        {
+          "testo": "🪵 legno",
+          "categoria": "🪵 Opaco"
+        },
+        {
+          "testo": "🧱 mattone",
+          "categoria": "🪵 Opaco"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌑",
+      "domanda": "Che cos'è l'ombra?",
+      "opzioni": [
+        "🌑 la zona dove la luce non arriva",
+        "🌈 un colore della luce",
+        "🔦 una lampadina"
+      ],
+      "corretta": 0,
+      "spiegazione": "Dietro un corpo opaco la luce non passa: si forma l'ombra."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il vetro è [trasparente]. Il legno è [opaco]: dietro si forma l'ombra.",
+      "distrattori": [
+        "colorato",
+        "liquido"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪞",
+      "domanda": "Che cosa fa la luce quando colpisce uno specchio?",
+      "opzioni": [
+        "🪞 rimbalza",
+        "🕳️ sparisce",
+        "🧊 si congela"
+      ],
+      "corretta": 0,
+      "spiegazione": "Rimbalza: questa è la riflessione."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌈",
+      "domanda": "Metti in ordine i colori dell'arcobaleno.",
+      "elementi": [
+        "🔴 rosso",
+        "🟠 arancione",
+        "🟡 giallo",
+        "🟢 verde",
+        "🩵 azzurro",
+        "🔵 indaco",
+        "🟣 violetto"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🌈",
+      "domanda": "Di quanti colori è fatta la luce bianca? Conta.",
+      "oggetto": "🎨",
+      "numero": 7,
+      "spiegazione": "Sono 7: rosso, arancione, giallo, verde, azzurro, indaco e violetto."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "💎",
+      "affermazione": "Il prisma divide la luce bianca nei suoi colori.",
+      "corretta": true,
+      "spiegazione": "Sì! Come fanno le gocce di pioggia."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola alla sua spiegazione.",
+      "coppie": [
+        [
+          "🪞 riflessione",
+          "🏀 la luce rimbalza"
+        ],
+        [
+          "🌑 ombra",
+          "🚫 la luce non arriva"
+        ],
+        [
+          "〰️ vibrazione",
+          "↔️ muoversi avanti e indietro"
+        ],
+        [
+          "🗣️ eco",
+          "⛰️ il suono torna indietro"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥁",
+      "domanda": "Come nasce il suono?",
+      "opzioni": [
+        "〰️ da un corpo che vibra",
+        "☀️ dalla luce del Sole",
+        "🌑 dall'ombra"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il suono nasce quando un corpo vibra."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌌",
+      "affermazione": "Nello spazio, dove c'è il vuoto, il suono non viaggia.",
+      "corretta": true,
+      "spiegazione": "Sì! Il suono ha bisogno di aria, acqua o di un solido."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "👂",
+      "domanda": "Metti in ordine il viaggio del suono, come nel video.",
+      "elementi": [
+        "🥁 batto sul tamburo",
+        "〰️ il tamburo vibra",
+        "💨 l'aria porta il suono",
+        "👂 il suono arriva all'orecchio"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚡",
+      "domanda": "Nel temporale, che cosa arriva prima?",
+      "opzioni": [
+        "⚡ la luce del lampo",
+        "🔊 il rumore del tuono"
+      ],
+      "corretta": 0,
+      "spiegazione": "La luce è molto più veloce del suono."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il suono e com'è.",
+      "coppie": [
+        [
+          "🐦 canto dell'uccellino",
+          "🎶 acuto"
+        ],
+        [
+          "🥁 tamburo grande",
+          "🔉 grave"
+        ],
+        [
+          "🚨 sirena",
+          "🔊 forte"
+        ],
+        [
+          "🍃 foglie al vento",
+          "🔈 debole"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: dove il suono NON viaggia?",
+      "elementi": [
+        "💨 nell'aria",
+        "💧 nell'acqua",
+        "🌌 nel vuoto dello spazio",
+        "🪵 nel legno"
+      ],
+      "intruso": 2,
+      "spiegazione": "Nel vuoto non c'è niente che possa vibrare: c'è silenzio."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di Viola.",
+      "testo": "Il suono nasce quando un corpo [vibra].\nIl suono è più [lento] della luce.\nIl suono torna indietro dalla montagna: è l'[eco].",
+      "distrattori": [
+        "veloce",
+        "ombra"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le fonti luminose!",
+      "giusti": [
+        "☀️ Sole",
+        "💡 lampadina accesa",
+        "🔥 fuoco",
+        "🕯️ candela accesa"
+      ],
+      "sbagliati": [
+        "🌕 Luna",
+        "🪞 specchio",
+        "🍎 mela"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della luce e del suono.",
+      "parole": [
+        "🌑 ombra",
+        "🗣️ eco",
+        "🪞 specchio",
+        "💎 prisma",
+        "🔊 suono"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ARCOBALENO",
+      "indizio": "🌈 Compare in cielo dopo la pioggia, con sette colori"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "OPACO",
+      "indizio": "🪵 Un materiale che non fa passare la luce"
+    }
+  ],
+  "ricorda": [
+    "☀️ Le fonti luminose fanno luce da sole. La Luna è solo illuminata.",
+    "➡️ La luce viaggia in linea retta ed è velocissima.",
+    "🌑 Dietro un corpo opaco si forma l'ombra.",
+    "🌈 La luce bianca è fatta di sette colori.",
+    "〰️ Il suono nasce da un corpo che vibra. Nel vuoto non viaggia.",
+    "⚡ Il suono è più lento della luce: prima il lampo, poi il tuono."
+  ],
+  "verifica": "verifiche/sci5-luce-e-suono.json"
+}
