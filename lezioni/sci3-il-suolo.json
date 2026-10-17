@@ -7,7 +7,7 @@
   "storia": {
     "personaggio": "👩‍🌾",
     "testo": "Ciao, sono Rosa, la contadina!\nNel mio orto scavo una buca con la paletta.\nEsce un lombrico! Che cosa c'è sotto i nostri piedi?",
-    "immagini": ["👩‍🌾 orto", "🪏 paletta", "🪱 lombrico"],
+    "immagini": ["👩‍🌾 orto", "🕳️ buca", "🪱 lombrico"],
     "missione": "Scavate con Rosa nel suolo. Alla fine vincete la figurina del lombrico!"
   },
   "premio": "🪱",
