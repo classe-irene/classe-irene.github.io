@@ -1,0 +1,272 @@
+{
+  "titolo": "I numeri negativi",
+  "emoji": "🌡️",
+  "materia": "matematica",
+  "classe": 5,
+  "obiettivi": [
+    "leggere e scrivere i numeri negativi e positivi",
+    "collocare i numeri relativi sulla retta",
+    "confrontare e ordinare i numeri relativi",
+    "usare i numeri relativi con temperature e piani dell'ascensore"
+  ],
+  "consegna": "Leggi con calma. Aiutati con la retta: i negativi a sinistra dello zero, i positivi a destra.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "❄️",
+      "testo": "Ci sono 7 gradi sotto lo zero. Come si scrive?",
+      "opzioni": [
+        "🌡️ -7",
+        "🌡️ +7",
+        "🌡️ 70"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci il numero a come si legge.",
+      "coppie": [
+        [
+          "-4",
+          "meno quattro"
+        ],
+        [
+          "+4",
+          "più quattro"
+        ],
+        [
+          "-10",
+          "meno dieci"
+        ],
+        [
+          "0",
+          "zero"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Positivo o negativo? Scrivi ogni numero nella colonna giusta.",
+      "categorie": [
+        "➕ Positivo",
+        "➖ Negativo"
+      ],
+      "elementi": [
+        {
+          "testo": "+3",
+          "categoria": "➕ Positivo"
+        },
+        {
+          "testo": "+15",
+          "categoria": "➕ Positivo"
+        },
+        {
+          "testo": "+1",
+          "categoria": "➕ Positivo"
+        },
+        {
+          "testo": "-6",
+          "categoria": "➖ Negativo"
+        },
+        {
+          "testo": "-1",
+          "categoria": "➖ Negativo"
+        },
+        {
+          "testo": "-20",
+          "categoria": "➖ Negativo"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "📏",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Sulla retta lo ___ sta al centro. I numeri negativi stanno a ___. I numeri positivi stanno a ___.",
+      "soluzioni": [
+        "zero",
+        "sinistra",
+        "destra"
+      ],
+      "parole": [
+        "zero",
+        "sinistra",
+        "destra",
+        "sopra"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "-2 è più grande di -5.",
+          "vero": true
+        },
+        {
+          "testo": "Lo zero è un numero negativo.",
+          "vero": false
+        },
+        {
+          "testo": "-10 è più grande di +1.",
+          "vero": false
+        },
+        {
+          "testo": "-8 gradi è più freddo di -3 gradi.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dal più piccolo al più grande. Scrivi 1, 2, 3, 4, 5.",
+      "elementi": [
+        "🌡️ -9",
+        "🌡️ -4",
+        "🌡️ -1",
+        "🌡️ 0",
+        "🌡️ +6"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "testo": "Di mattina ci sono -3 gradi. A mezzogiorno la temperatura sale di 5 gradi. Quanti gradi ci sono a mezzogiorno?",
+      "opzioni": [
+        "🌡️ +2",
+        "🌡️ +8",
+        "🌡️ -8"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🛗",
+      "testo": "L'ascensore è al piano +1. Scende di 3 piani. A che piano arriva?",
+      "opzioni": [
+        "🅿️ -2",
+        "🏢 +2",
+        "🅿️ -4"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🌡️",
+      "testo": "Quanti gradi di differenza ci sono? Aiutati con la retta.",
+      "operazioni": [
+        {
+          "testo": "da -4 a +6",
+          "risultato": 10
+        },
+        {
+          "testo": "da -2 a +3",
+          "risultato": 5
+        },
+        {
+          "testo": "da -7 a 0",
+          "risultato": 7
+        }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una retta con i numeri da -5 a +5. Colora di blu i negativi e di rosso i positivi."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "❄️",
+      "testo": "3 gradi sotto lo zero si scrive…",
+      "opzioni": [
+        "🌡️ -3",
+        "🌡️ +3"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Positivo o negativo?",
+      "categorie": [
+        "➕ Positivo",
+        "➖ Negativo"
+      ],
+      "elementi": [
+        {
+          "testo": "+2",
+          "categoria": "➕ Positivo"
+        },
+        {
+          "testo": "+9",
+          "categoria": "➕ Positivo"
+        },
+        {
+          "testo": "-5",
+          "categoria": "➖ Negativo"
+        },
+        {
+          "testo": "-1",
+          "categoria": "➖ Negativo"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "📏",
+      "testo": "Completa.",
+      "frase": "Sulla retta i numeri negativi stanno a ___ dello zero.",
+      "soluzioni": [
+        "sinistra"
+      ],
+      "parole": [
+        "sinistra",
+        "destra"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "-2 è più grande di -5.",
+          "vero": true
+        },
+        {
+          "testo": "Lo zero è negativo.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Dal più piccolo al più grande. Scrivi 1, 2, 3.",
+      "elementi": [
+        "🌡️ -3",
+        "🌡️ 0",
+        "🌡️ +2"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🛗",
+      "testo": "L'ascensore è al piano 0. Scende di 1 piano. Dove arriva?",
+      "opzioni": [
+        "🅿️ -1",
+        "🏢 +1"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un termometro che segna -2 gradi."
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "titolo": "I solidi",
+  "emoji": "🧊",
+  "materia": "matematica",
+  "classe": 5,
+  "introduzione": "Dadi, scatole, lattine e palloni sono figure solide. Scopriamo facce, spigoli e vertici, gli sviluppi e come si misura il volume.",
+  "storia": {
+    "personaggio": "👩‍🎨",
+    "testo": "Ciao, sono Lola e costruisco scatole regalo!\nTaglio il cartone, lo piego e lo incollo.\nVoglio sapere quanti cioccolatini entrano in ogni scatola. Mi aiutate?",
+    "immagini": [
+      "📦 scatole regalo",
+      "✂️ taglio il cartone",
+      "🍫 cioccolatini"
+    ],
+    "missione": "Aiutate Lola a conoscere i solidi e a misurare il volume. Alla fine vincete la figurina del regalo!"
+  },
+  "premio": "🎁",
+  "parole_chiave": [
+    "🧊 solido",
+    "🟥 faccia",
+    "📏 spigolo",
+    "📍 vertice",
+    "✂️ sviluppo",
+    "🧱 volume",
+    "🎲 cm³"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🧊 Le figure solide",
+      "immagine": "🧊",
+      "testo": "Le figure piane sono piatte, come un disegno sul foglio.\nLe figure solide occupano spazio: hanno lunghezza, larghezza e altezza.\nI poliedri hanno tutte facce piatte: cubo, parallelepipedo, piramide, prisma.\nI solidi rotondi hanno una parte curva: cilindro, cono, sfera.",
+      "immagini": [
+        "🟥 figura piana",
+        "🧊 figura solida",
+        "📦 poliedri",
+        "⚽ solidi rotondi"
+      ],
+      "scopri": [
+        { "fronte": "🎲 Cubo", "retro": "🟥 6 facce quadrate, tutte uguali." },
+        { "fronte": "📦 Parallelepipedo", "retro": "🟧 6 facce rettangolari, come una scatola." },
+        { "fronte": "🥫 Cilindro", "retro": "⭕ 2 basi rotonde e una parte curva." },
+        { "fronte": "🍦 Cono", "retro": "📍 Una base rotonda e una punta." }
+      ],
+      "pensa": {
+        "domanda": "Un pallone può stare in piedi su un tavolo senza rotolare?",
+        "risposta": "No! La sfera è tutta curva: non ha facce piatte, per questo rotola."
+      }
+    },
+    {
+      "titolo": "📏 Facce, spigoli e vertici",
+      "immagine": "📏",
+      "testo": "Le facce sono le parti piatte del poliedro.\nGli spigoli sono le linee dove si incontrano due facce.\nI vertici sono le punte dove si incontrano gli spigoli.\nIl cubo ha 6 facce, 12 spigoli e 8 vertici.",
+      "immagini": [
+        "🟥 facce",
+        "📏 spigoli",
+        "📍 vertici",
+        "🎲 cubo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "contiamo sul dado",
+        "passi": [
+          { "figure": "🎲", "testo": "Lola prende un dado: è un cubo." },
+          { "figure": "🟥 🟥 🟥 🟥 🟥", "testo": "Conta le facce: sono 6 quadrati. Qui ne vedi 5, la sesta è sotto." },
+          { "figure": "📏 📏 📏", "testo": "Conta gli spigoli: 4 sopra, 4 sotto e 4 in piedi. Sono 12." },
+          { "figure": "📍 📍", "testo": "Conta i vertici: 4 sopra e 4 sotto. Sono 8." }
+        ]
+      }
+    },
+    {
+      "titolo": "✂️ Lo sviluppo",
+      "immagine": "✂️",
+      "testo": "Se apro una scatola e la stendo, ottengo lo sviluppo.\nLo sviluppo è una figura piana.\nLo sviluppo del cubo ha 6 quadrati.\nLo sviluppo del cilindro ha 2 cerchi e un rettangolo.",
+      "immagini": [
+        "📦 scatola",
+        "✂️ sviluppo",
+        "🟥 6 quadrati",
+        "🥫 cilindro"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "apro la scatola del cubo",
+        "passi": [
+          { "figure": "🎁", "testo": "Ecco una scatola a forma di cubo." },
+          { "figure": "✂️ 🎁", "testo": "Lola taglia lungo alcuni spigoli." },
+          { "figure": "🎁 → 🟥", "testo": "Apre la scatola e la stende sul tavolo." },
+          { "figure": "🟥 🟥 🟥 🟥", "testo": "Vede 4 quadrati in fila." },
+          { "figure": "🟥 🟥", "testo": "E altri 2 quadrati, sopra e sotto: in tutto 6 quadrati." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Che figure trovi nello sviluppo di una lattina?",
+        "risposta": "Due cerchi, il fondo e il coperchio, e un rettangolo che gira intorno."
+      }
+    },
+    {
+      "titolo": "🧱 Il volume",
+      "immagine": "🧱",
+      "testo": "Il volume è lo spazio che occupa un solido.\nSi misura con i cubetti: il centimetro cubo, cm³.\nNel parallelepipedo: lunghezza × larghezza × altezza.\nNel cubo: spigolo × spigolo × spigolo.",
+      "immagini": [
+        "🧱 volume",
+        "🎲 cm³",
+        "📦 parallelepipedo",
+        "🧊 cubo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i cioccolatini nella scatola",
+        "passi": [
+          { "figure": "🍫 🍫 🍫 🍫", "testo": "Nella prima fila Lola mette 4 cioccolatini." },
+          { "figure": "🍫 🍫 🍫", "testo": "Le file sono 3: 4 × 3 = 12. È il primo strato." },
+          { "figure": "📦 📦", "testo": "Gli strati sono 2: 12 × 2 = 24." },
+          { "figure": "🧱", "testo": "Volume = 4 × 3 × 2 = 24 cubetti." }
+        ]
+      },
+      "curiosita": "1 litro d'acqua sta proprio in un cubo con lo spigolo di 10 cm: 1000 cm³."
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🧊",
+      "domanda": "Quale di questi è un solido?",
+      "opzioni": ["🎲 un dado", "🟥 un quadrato disegnato", "➖ una linea"],
+      "corretta": 0,
+      "spiegazione": "Il dado occupa spazio: è un cubo, una figura solida."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🎲",
+      "affermazione": "Il cubo ha 6 facce.",
+      "corretta": true,
+      "spiegazione": "Sì! 6 facce quadrate, tutte uguali."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto al solido.",
+      "coppie": [
+        ["🎲 dado", "🧊 cubo"],
+        ["👟 scatola delle scarpe", "📦 parallelepipedo"],
+        ["🥫 lattina", "🥫 cilindro"],
+        ["⚽ pallone", "⚽ sfera"]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Poliedro o solido rotondo?",
+      "categorie": ["📦 Poliedro", "⚽ Solido rotondo"],
+      "elementi": [
+        { "testo": "🧊 cubo", "categoria": "📦 Poliedro" },
+        { "testo": "🔺 piramide", "categoria": "📦 Poliedro" },
+        { "testo": "📦 parallelepipedo", "categoria": "📦 Poliedro" },
+        { "testo": "🥫 cilindro", "categoria": "⚽ Solido rotondo" },
+        { "testo": "🍦 cono", "categoria": "⚽ Solido rotondo" },
+        { "testo": "⚽ sfera", "categoria": "⚽ Solido rotondo" }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "✂️",
+      "domanda": "Ecco i quadrati dello sviluppo del cubo. Quanti sono?",
+      "oggetto": "🟥",
+      "numero": 6,
+      "spiegazione": "Il cubo ha 6 facce: lo sviluppo ha 6 quadrati."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il cubo ha 6 [facce], 12 [spigoli] e 8 [vertici].",
+      "distrattori": ["lati", "angoli"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚽",
+      "affermazione": "La sfera ha gli spigoli.",
+      "corretta": false,
+      "spiegazione": "No: la sfera è tutta curva, non ha spigoli né vertici."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📏",
+      "domanda": "Quanti spigoli ha il cubo?",
+      "opzioni": ["📏 12", "📏 8", "📏 6"],
+      "corretta": 0,
+      "spiegazione": "4 sopra, 4 sotto e 4 in piedi: 12 spigoli."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è un poliedro?",
+      "elementi": ["🧊 cubo", "🔺 piramide", "🍦 cono", "📦 prisma"],
+      "intruso": 2,
+      "spiegazione": "Il cono ha una parte curva: è un solido rotondo."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il solido e il suo sviluppo.",
+      "coppie": [
+        ["🧊 cubo", "🟥 6 quadrati"],
+        ["🥫 cilindro", "⭕ 2 cerchi e un rettangolo"],
+        ["🔺 piramide quadrata", "🔺 1 quadrato e 4 triangoli"],
+        ["🍦 cono", "🍕 1 cerchio e un pezzo di cerchio"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧱",
+      "domanda": "Che cos'è il volume?",
+      "opzioni": ["🧱 lo spazio che occupa il solido", "🟥 la misura di una faccia", "🔄 la misura del contorno"],
+      "corretta": 0,
+      "spiegazione": "Il volume misura lo spazio occupato, in cm³."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i solidi che rotolano!",
+      "giusti": ["⚽ sfera", "🥫 cilindro", "🍦 cono"],
+      "sbagliati": ["🧊 cubo", "📦 parallelepipedo", "🔺 piramide"],
+      "quanti": 3
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📦",
+      "domanda": "Una scatola ha 4 cubetti in fila, 2 file e 1 strato. Tocca il volume sulla linea.",
+      "min": 0,
+      "max": 12,
+      "passo": 1,
+      "corretta": 8,
+      "spiegazione": "4 × 2 × 1 = 8 cubetti."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🎲",
+      "domanda": "Completa con l'unità di misura giusta.",
+      "testo": "Il volume si misura in [cm³]. L'area si misura in [cm²].",
+      "distrattori": ["cm", "kg"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧊",
+      "domanda": "Un cubo ha lo spigolo di 3 cm. Qual è il volume?",
+      "opzioni": ["🎲 27 cm³", "🎲 9 cm³", "🎲 18 cm³"],
+      "corretta": 0,
+      "spiegazione": "3 × 3 × 3 = 27 cm³."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine, dal volume più piccolo al più grande.",
+      "elementi": ["🎲 dado", "🧃 succo di frutta", "👟 scatola delle scarpe", "🚚 camion"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "✂️",
+      "affermazione": "Lo sviluppo di un solido è una figura piana.",
+      "corretta": true,
+      "spiegazione": "Sì! È il solido aperto e steso sul tavolo."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎁",
+      "domanda": "Una scatola è lunga 5 cm, larga 4 cm e alta 2 cm. Qual è il volume?",
+      "opzioni": ["🎲 40 cm³", "🎲 11 cm³", "🎲 20 cm³"],
+      "corretta": 0,
+      "spiegazione": "5 × 4 × 2 = 40 cm³."
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "🛢️",
+      "domanda": "Uno strato della vasca ha 35 cubetti. Gli strati sono 12. Quanti cubetti in tutto? 35 × 12",
+      "a": 35,
+      "b": 12,
+      "spiegazione": "35 × 12 = 420 cubetti. Il volume è 420 cm³."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il solido alla forma della sua base.",
+      "coppie": [
+        ["🥫 cilindro", "⭕ cerchio"],
+        ["🔺 piramide quadrata", "🟦 quadrato"],
+        ["📦 prisma triangolare", "🔺 triangolo"]
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dei solidi.",
+      "parole": ["🧊 cubo", "⚽ sfera", "🍦 cono", "📏 spigolo", "📍 vertice", "🧱 volume"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "PA-RAL-LE-LE-PI-PE-DO",
+      "indizio": "📦 Ha 6 facce rettangolari, come una scatola"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PIRAMIDE",
+      "indizio": "🔺 Ha una base e tante facce a triangolo che finiscono in una punta"
+    }
+  ],
+  "ricorda": [
+    "🧊 Le figure solide occupano spazio. I poliedri hanno facce piatte, i solidi rotondi una parte curva.",
+    "📏 Facce, spigoli e vertici: il cubo ha 6 facce, 12 spigoli e 8 vertici.",
+    "✂️ Lo sviluppo è il solido aperto e steso: è una figura piana.",
+    "🧱 Il volume è lo spazio che occupa un solido: si misura in cm³.",
+    "📦 Volume del parallelepipedo = lunghezza × larghezza × altezza."
+  ],
+  "verifica": "verifiche/mat5-i-solidi.json"
+}

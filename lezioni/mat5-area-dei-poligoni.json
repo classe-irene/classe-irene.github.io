@@ -1,0 +1,328 @@
+{
+  "titolo": "Area dei poligoni",
+  "emoji": "📐",
+  "materia": "matematica",
+  "classe": 5,
+  "introduzione": "L'area è la misura dello spazio dentro una figura. Impariamo le formule per calcolare l'area di triangoli e quadrilateri.",
+  "storia": {
+    "personaggio": "👷‍♀️",
+    "testo": "Ciao, sono Ada, l'architetta!\nSto progettando una piazza con aiuole di tante forme: rettangoli, triangoli, rombi.\nDevo sapere quanta erba serve per ogni aiuola. Mi aiutate?",
+    "immagini": [
+      "🏗️ piazza",
+      "🌳 aiuole",
+      "🌱 erba"
+    ],
+    "missione": "Aiutate Ada a calcolare l'area di ogni aiuola. Alla fine vincete la figurina della squadra!"
+  },
+  "premio": "📐",
+  "parole_chiave": [
+    "🧱 area",
+    "➡️ base",
+    "⬆️ altezza",
+    "🟥 rettangolo",
+    "🟦 quadrato",
+    "🔷 parallelogramma",
+    "🔺 triangolo",
+    "💎 rombo",
+    "🏠 trapezio",
+    "📐 cm²"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🟥 Il rettangolo e il quadrato",
+      "immagine": "🟥",
+      "testo": "L'area si misura in quadretti: cm², m².\nNel rettangolo conto le file di quadretti.\nArea del rettangolo = base × altezza.\nIl quadrato ha i lati uguali.\nArea del quadrato = lato × lato.",
+      "immagini": [
+        "📐 cm²",
+        "🟥 rettangolo",
+        "✖️ base × altezza",
+        "🟦 quadrato",
+        "✖️ lato × lato"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "l'aiuola rettangolare",
+        "passi": [
+          { "figure": "🟩 🟩 🟩 🟩 🟩", "testo": "La base dell'aiuola è lunga 5 metri: 5 quadretti da 1 m²." },
+          { "figure": "🟩 🟩 🟩", "testo": "L'altezza è 3 metri: ci sono 3 file." },
+          { "figure": "🟩 ✖️ 🟩", "testo": "3 file da 5 quadretti: 5 × 3 = 15." },
+          { "figure": "🌱", "testo": "L'area è 15 m². Ada compra l'erba per 15 m²." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Un quadrato ha il lato di 6 cm. Qual è la sua area?",
+        "risposta": "6 × 6 = 36 cm²."
+      }
+    },
+    {
+      "titolo": "🔷 Il parallelogramma",
+      "immagine": "🔷",
+      "testo": "Il parallelogramma ha i lati obliqui.\nTaglio un triangolo da una parte.\nLo sposto dall'altra parte: diventa un rettangolo!\nPer questo: area = base × altezza, come il rettangolo.",
+      "immagini": [
+        "🔷 parallelogramma",
+        "✂️ taglio",
+        "🧩 sposto",
+        "🟥 rettangolo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il parallelogramma diventa rettangolo",
+        "passi": [
+          { "figure": "🔷", "testo": "Ecco un parallelogramma. I suoi lati sono obliqui." },
+          { "figure": "✂️ 🔺", "testo": "Taglio un triangolo dal lato sinistro." },
+          { "figure": "🔺 → 🔷", "testo": "Sposto il triangolo sul lato destro." },
+          { "figure": "🟥", "testo": "Ora è un rettangolo con la stessa base e la stessa altezza." },
+          { "figure": "✖️", "testo": "Area del parallelogramma = base × altezza." }
+        ]
+      }
+    },
+    {
+      "titolo": "🔺 Il triangolo",
+      "immagine": "🔺",
+      "testo": "Due triangoli uguali formano un parallelogramma.\nQuindi un triangolo è la metà del parallelogramma.\nArea del triangolo = base × altezza : 2.\nEsempio: base 10 cm, altezza 6 cm. 10 × 6 : 2 = 30 cm².",
+      "immagini": [
+        "🔺 due triangoli",
+        "🔷 parallelogramma",
+        "🍕 la metà",
+        "✅ 30 cm²"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "due triangoli fanno un parallelogramma",
+        "passi": [
+          { "figure": "🔺 🔺", "testo": "Ho due triangoli uguali." },
+          { "figure": "🔺 → 🔷", "testo": "Li metto vicini: formano un parallelogramma." },
+          { "figure": "🔷 ✖️", "testo": "L'area del parallelogramma è base × altezza." },
+          { "figure": "🔺 ➗", "testo": "Un solo triangolo è la metà: divido per 2." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché nella formula del triangolo c'è \"diviso 2\"?",
+        "risposta": "Perché il triangolo è la metà di un parallelogramma con la stessa base e la stessa altezza."
+      }
+    },
+    {
+      "titolo": "💎 Il rombo e il trapezio",
+      "immagine": "💎",
+      "testo": "Il rombo ha due diagonali: la maggiore e la minore.\nArea del rombo = diagonale maggiore × diagonale minore : 2.\nIl trapezio ha due basi: la maggiore e la minore.\nArea del trapezio = (base maggiore + base minore) × altezza : 2.",
+      "immagini": [
+        "💎 rombo",
+        "✖️ diagonali",
+        "🏠 trapezio",
+        "➕ due basi"
+      ],
+      "scopri": [
+        { "fronte": "🟥 Rettangolo", "retro": "✖️ base × altezza" },
+        { "fronte": "🔺 Triangolo", "retro": "➗ base × altezza : 2" },
+        { "fronte": "💎 Rombo", "retro": "➗ diagonale × diagonale : 2" },
+        { "fronte": "🏠 Trapezio", "retro": "➕ (B + b) × h : 2" }
+      ],
+      "pensa": {
+        "domanda": "Un rombo ha le diagonali di 8 cm e 6 cm. Qual è la sua area?",
+        "risposta": "8 × 6 = 48. Poi 48 : 2 = 24 cm²."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🟥",
+      "domanda": "Come si calcola l'area del rettangolo?",
+      "opzioni": ["✖️ base × altezza", "➕ base + altezza", "➗ base : altezza"],
+      "corretta": 0,
+      "spiegazione": "Area del rettangolo = base × altezza."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🟦",
+      "affermazione": "L'area del quadrato è lato × lato.",
+      "corretta": true,
+      "spiegazione": "Sì! Il quadrato ha base e altezza uguali."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📏",
+      "affermazione": "L'area si misura in centimetri, cm.",
+      "corretta": false,
+      "spiegazione": "No: l'area si misura in centimetri quadrati, cm²."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la figura alla sua formula.",
+      "coppie": [
+        ["🟥 rettangolo", "✖️ base × altezza"],
+        ["🟦 quadrato", "✖️ lato × lato"],
+        ["🔺 triangolo", "➗ base × altezza : 2"],
+        ["💎 rombo", "➗ diagonale × diagonale : 2"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🟥",
+      "domanda": "Un rettangolo ha la base di 6 cm e l'altezza di 4 cm. Qual è l'area?",
+      "opzioni": ["📐 24 cm²", "📐 20 cm²", "📐 10 cm²"],
+      "corretta": 0,
+      "spiegazione": "6 × 4 = 24 cm²."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🟦",
+      "domanda": "Un quadrato ha il lato di 5 cm. Tocca la sua area sulla linea.",
+      "min": 0,
+      "max": 30,
+      "passo": 5,
+      "corretta": 25,
+      "spiegazione": "5 × 5 = 25 cm²."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "L'area del triangolo è base × altezza diviso [2]. Il parallelogramma ha l'area come il [rettangolo].",
+      "distrattori": ["3", "rombo"]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Nella formula c'è \"diviso 2\" oppure no?",
+      "categorie": ["➗ Con diviso 2", "✖️ Senza diviso 2"],
+      "elementi": [
+        { "testo": "🔺 triangolo", "categoria": "➗ Con diviso 2" },
+        { "testo": "💎 rombo", "categoria": "➗ Con diviso 2" },
+        { "testo": "🏠 trapezio", "categoria": "➗ Con diviso 2" },
+        { "testo": "🟥 rettangolo", "categoria": "✖️ Senza diviso 2" },
+        { "testo": "🟦 quadrato", "categoria": "✖️ Senza diviso 2" },
+        { "testo": "🔷 parallelogramma", "categoria": "✖️ Senza diviso 2" }
+      ]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "🌱",
+      "domanda": "Un prato è lungo 23 m e largo 14 m. Calcola l'area: 23 × 14.",
+      "a": 23,
+      "b": 14,
+      "spiegazione": "23 × 14 = 322. L'area del prato è 322 m²."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔺",
+      "domanda": "Un triangolo ha la base di 10 cm e l'altezza di 6 cm. Qual è l'area?",
+      "opzioni": ["📐 30 cm²", "📐 60 cm²", "📐 16 cm²"],
+      "corretta": 0,
+      "spiegazione": "10 × 6 = 60. Poi 60 : 2 = 30 cm²."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔷",
+      "affermazione": "Un parallelogramma e un rettangolo con la stessa base e la stessa altezza hanno la stessa area.",
+      "corretta": true,
+      "spiegazione": "Sì! Il parallelogramma si trasforma in un rettangolo."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la figura e la sua area.",
+      "coppie": [
+        ["🟥 rettangolo 5 × 3", "📐 15 cm²"],
+        ["🟦 quadrato di lato 4", "📐 16 cm²"],
+        ["🔺 triangolo 6 × 4 : 2", "📐 12 cm²"],
+        ["💎 rombo 8 × 5 : 2", "📐 20 cm²"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale figura NON ha \"diviso 2\" nella formula?",
+      "elementi": ["🔺 triangolo", "💎 rombo", "🏠 trapezio", "🟥 rettangolo"],
+      "intruso": 3,
+      "spiegazione": "L'area del rettangolo è solo base × altezza."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💎",
+      "domanda": "Un rombo ha le diagonali di 8 cm e 6 cm. Qual è l'area?",
+      "opzioni": ["📐 24 cm²", "📐 48 cm²", "📐 14 cm²"],
+      "corretta": 0,
+      "spiegazione": "8 × 6 = 48. Poi 48 : 2 = 24 cm²."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine, dall'area più piccola alla più grande.",
+      "elementi": ["🔺 triangolo 4 × 2 : 2", "🟦 quadrato di lato 3", "🟥 rettangolo 5 × 4", "💎 rombo 10 × 6 : 2"]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🏠",
+      "domanda": "Completa la regola del trapezio.",
+      "testo": "Sommo la base [maggiore] e la base [minore]. Moltiplico per l'[altezza] e divido per 2.",
+      "distrattori": ["diagonale", "lato"]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le figure con area 24 cm²!",
+      "giusti": ["🟥 rettangolo 6 × 4", "🔺 triangolo 8 × 6 : 2", "💎 rombo 12 × 4 : 2"],
+      "sbagliati": ["🟦 quadrato di lato 5", "🔺 triangolo 6 × 2 : 2", "🟥 rettangolo 10 × 3"],
+      "quanti": 3
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏠",
+      "domanda": "Un trapezio ha la base maggiore di 10 cm, la minore di 6 cm e l'altezza di 4 cm. Qual è l'area?",
+      "opzioni": ["📐 32 cm²", "📐 64 cm²", "📐 20 cm²"],
+      "corretta": 0,
+      "spiegazione": "10 + 6 = 16. 16 × 4 = 64. 64 : 2 = 32 cm²."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto all'unità di misura giusta.",
+      "coppie": [
+        ["🖼️ figurina", "📐 cm²"],
+        ["🏠 pavimento", "🟩 m²"],
+        ["🗺️ regione", "🌍 km²"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤔",
+      "domanda": "Un rettangolo ha l'area di 30 cm² e la base di 6 cm. Quanto è alto?",
+      "opzioni": ["⬆️ 5 cm", "⬆️ 24 cm", "⬆️ 36 cm"],
+      "corretta": 0,
+      "spiegazione": "Faccio l'operazione inversa: 30 : 6 = 5 cm."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dell'area.",
+      "parole": ["🧱 area", "➡️ base", "⬆️ altezza", "💎 rombo", "🏠 trapezio"]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "TRIANGOLO",
+      "indizio": "🔺 La sua area è base per altezza diviso 2"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DIAGONALE",
+      "indizio": "💎 Il rombo ne ha due: la maggiore e la minore"
+    }
+  ],
+  "ricorda": [
+    "🧱 L'area è la misura dello spazio dentro la figura: si misura in cm², m², km².",
+    "🟥 Rettangolo e parallelogramma: base × altezza. Quadrato: lato × lato.",
+    "🔺 Triangolo: base × altezza : 2.",
+    "💎 Rombo: diagonale maggiore × diagonale minore : 2.",
+    "🏠 Trapezio: (base maggiore + base minore) × altezza : 2."
+  ],
+  "verifica": "verifiche/mat5-area-dei-poligoni.json"
+}

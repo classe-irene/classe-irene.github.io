@@ -4,9 +4,9 @@
 (function () {
   const h = escapeHTML;
   const ric = (t) => Figura.ricco(t, "figura piccola");
-  const norm = (t) => String(t ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^\w\s,.]/g, " ").replace(/\s+/g, " ").trim();
+  const norm = (t) => String(t ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[−–]/g, "-").replace(/[^\w\s,.\-]/g, " ").replace(/\s+/g, " ").trim();
   // "2 000", "2.000" e "2000" sono lo stesso numero; la virgola è quella dei decimali.
-  const numero = (t) => { let s = String(t ?? "").replace(/\s/g, ""); if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, ""); return s === "" ? NaN : Number(s.replace(",", ".")); };
+  const numero = (t) => { let s = String(t ?? "").replace(/\s/g, "").replace(/[−–]/g, "-"); if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, ""); return s === "" ? NaN : Number(s.replace(",", ".")); };
   // Una parola scritta è giusta se è uguale alla soluzione, o alla sua prima parola ("membrana" per "membrana cellulare").
   const parolaGiusta = (scritta, giusta) => {
     const a = norm(scritta), b = norm(giusta);

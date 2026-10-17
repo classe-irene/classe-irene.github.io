@@ -1,0 +1,328 @@
+{
+  "titolo": "Il cerchio",
+  "emoji": "⭕",
+  "materia": "matematica",
+  "classe": 5,
+  "introduzione": "Ruote, monete, pizze: il cerchio è dappertutto. Scopriamo circonferenza, raggio e diametro, e impariamo a calcolare la lunghezza della circonferenza e l'area del cerchio.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Pina, la pizzaiola!\nLe mie pizze sono rotonde: sono dei cerchi.\nDevo mettere il bordo di formaggio intorno e il pomodoro sopra. Quanto me ne serve?",
+    "immagini": [
+      "🍕 pizza",
+      "⭕ cerchio",
+      "🧀 bordo di formaggio"
+    ],
+    "missione": "Aiutate Pina a misurare le sue pizze. Alla fine vincete la figurina della pizza!"
+  },
+  "premio": "🍕",
+  "parole_chiave": [
+    "⭕ circonferenza",
+    "🍕 cerchio",
+    "📍 centro",
+    "📏 raggio",
+    "↔️ diametro",
+    "🌀 arco",
+    "🔢 3,14",
+    "🧭 compasso"
+  ],
+  "sezioni": [
+    {
+      "titolo": "⭕ Cerchio e circonferenza",
+      "immagine": "⭕",
+      "testo": "La circonferenza è la linea curva chiusa: il contorno.\nIl cerchio è la parte di piano dentro la circonferenza.\nTutti i punti della circonferenza sono lontani uguale dal centro.\nPer disegnarla uso il compasso.",
+      "immagini": [
+        "⭕ circonferenza",
+        "🍕 cerchio",
+        "📍 centro",
+        "🧭 compasso"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "disegno con il compasso",
+        "passi": [
+          { "figure": "🧭 📍", "testo": "Punto il compasso sul centro." },
+          { "figure": "🧭 ↔️", "testo": "Apro il compasso: l'apertura è il raggio." },
+          { "figure": "🧭 🔄", "testo": "Giro la matita tutto intorno." },
+          { "figure": "⭕", "testo": "Ecco la circonferenza! Dentro c'è il cerchio." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Il bordo della pizza è la circonferenza o il cerchio?",
+        "risposta": "Il bordo è la circonferenza, cioè il contorno. Tutta la pizza è il cerchio."
+      }
+    },
+    {
+      "titolo": "📏 Raggio e diametro",
+      "immagine": "📏",
+      "testo": "Il raggio va dal centro alla circonferenza.\nIl diametro passa per il centro e va da una parte all'altra.\nIl diametro è lungo come due raggi.\nDiametro = raggio × 2. Raggio = diametro : 2.",
+      "immagini": [
+        "📏 raggio",
+        "↔️ diametro",
+        "✌️ due raggi",
+        "✖️ raggio × 2"
+      ],
+      "scopri": [
+        { "fronte": "📍 Centro", "retro": "📍 Il punto in mezzo al cerchio." },
+        { "fronte": "📏 Raggio", "retro": "📏 Va dal centro alla circonferenza." },
+        { "fronte": "↔️ Diametro", "retro": "↔️ Passa per il centro. È lungo 2 raggi." },
+        { "fronte": "🌀 Arco", "retro": "🌀 Un pezzo della circonferenza." }
+      ],
+      "pensa": {
+        "domanda": "Una pizza ha il diametro di 30 cm. Quanto è lungo il raggio?",
+        "risposta": "30 : 2 = 15 cm. Il raggio è la metà del diametro."
+      }
+    },
+    {
+      "titolo": "🔢 Il numero 3,14",
+      "immagine": "🔢",
+      "testo": "Misuro il giro di un piatto con un filo.\nPoi confronto il filo con il diametro.\nIl giro è lungo circa 3 diametri e un pezzetto.\nQuesto numero è 3,14. Si chiama pi greco.\nCirconferenza = diametro × 3,14.",
+      "immagini": [
+        "🧵 filo",
+        "↔️ diametro",
+        "🔢 3,14",
+        "⭕ circonferenza"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il giro del piatto",
+        "passi": [
+          { "figure": "🍽️ 🧵", "testo": "Pina mette un filo tutto intorno a un piatto." },
+          { "figure": "🧵 → 📏", "testo": "Apre il filo e lo stende dritto." },
+          { "figure": "↔️ ↔️ ↔️", "testo": "Nel filo entrano 3 diametri e avanza un pezzetto." },
+          { "figure": "🔢", "testo": "Il giro è sempre circa 3,14 volte il diametro." },
+          { "figure": "⭕", "testo": "Circonferenza = diametro × 3,14." }
+        ]
+      },
+      "curiosita": "Il numero pi greco ha infinite cifre dopo la virgola: 3,14159… A scuola usiamo 3,14."
+    },
+    {
+      "titolo": "🍕 L'area del cerchio",
+      "immagine": "🍕",
+      "testo": "L'area è lo spazio dentro il cerchio.\nArea del cerchio = raggio × raggio × 3,14.\nEsempio: il raggio è 10 cm.\n10 × 10 = 100. Poi 100 × 3,14 = 314 cm².",
+      "immagini": [
+        "🍕 area",
+        "📏 raggio × raggio",
+        "📏 raggio 10 cm",
+        "✅ 314 cm²"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il pomodoro sulla pizza",
+        "passi": [
+          { "figure": "🍕 📏", "testo": "La pizza di Pina ha il raggio di 10 cm." },
+          { "figure": "📏 ✖️ 📏", "testo": "Raggio per raggio: 10 × 10 = 100." },
+          { "figure": "✖️ 🔢", "testo": "Moltiplico per 3,14: 100 × 3,14 = 314." },
+          { "figure": "🍅 🍕", "testo": "Il pomodoro copre 314 cm²." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Per il bordo di formaggio serve la circonferenza o l'area?",
+        "risposta": "La circonferenza: il formaggio va sul contorno. Per il pomodoro sopra serve l'area."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "⭕",
+      "domanda": "Che cos'è la circonferenza?",
+      "opzioni": ["⭕ la linea del contorno", "🍕 lo spazio dentro", "📍 il punto in mezzo"],
+      "corretta": 0,
+      "spiegazione": "La circonferenza è la linea curva chiusa che fa da contorno."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍕",
+      "affermazione": "Il cerchio è la parte di piano dentro la circonferenza.",
+      "corretta": true,
+      "spiegazione": "Sì! La circonferenza è il contorno, il cerchio è tutto lo spazio dentro."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Ha la forma del cerchio oppure no?",
+      "categorie": ["⭕ Cerchio", "🔷 Non è un cerchio"],
+      "elementi": [
+        { "testo": "🍕 pizza", "categoria": "⭕ Cerchio" },
+        { "testo": "🪙 moneta", "categoria": "⭕ Cerchio" },
+        { "testo": "🛞 ruota", "categoria": "⭕ Cerchio" },
+        { "testo": "📱 telefono", "categoria": "🔷 Non è un cerchio" },
+        { "testo": "🚪 porta", "categoria": "🔷 Non è un cerchio" },
+        { "testo": "📐 squadra", "categoria": "🔷 Non è un cerchio" }
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        ["📍 centro", "📍 il punto in mezzo"],
+        ["📏 raggio", "➡️ dal centro al contorno"],
+        ["↔️ diametro", "↔️ da parte a parte, passa per il centro"],
+        ["⭕ circonferenza", "🔄 la linea del contorno"]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🧭",
+      "domanda": "Metti in ordine, come nel video: disegno con il compasso.",
+      "elementi": ["📍 punto sul centro", "↔️ apro come il raggio", "🔄 giro la matita", "⭕ ecco la circonferenza"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📏",
+      "domanda": "Il raggio è lungo 5 cm. Quanto è lungo il diametro?",
+      "opzioni": ["↔️ 10 cm", "↔️ 5 cm", "↔️ 2,5 cm"],
+      "corretta": 0,
+      "spiegazione": "Diametro = raggio × 2: 5 × 2 = 10 cm."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "↔️",
+      "domanda": "Il diametro è lungo 16 cm. Tocca la lunghezza del raggio.",
+      "min": 0,
+      "max": 20,
+      "passo": 1,
+      "corretta": 8,
+      "spiegazione": "Raggio = diametro : 2: 16 : 2 = 8 cm."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il diametro è il [doppio] del raggio. Il raggio è la [metà] del diametro.",
+      "distrattori": ["triplo", "terzo"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📏",
+      "affermazione": "Tutti i raggi dello stesso cerchio sono lunghi uguale.",
+      "corretta": true,
+      "spiegazione": "Sì! Tutti i punti della circonferenza sono lontani uguale dal centro."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il raggio e il suo diametro.",
+      "coppie": [
+        ["📏 raggio 3 cm", "↔️ diametro 6 cm"],
+        ["📏 raggio 7 cm", "↔️ diametro 14 cm"],
+        ["📏 raggio 10 cm", "↔️ diametro 20 cm"],
+        ["📏 raggio 25 cm", "↔️ diametro 50 cm"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è una parte del cerchio?",
+      "elementi": ["📏 raggio", "↔️ diametro", "📍 centro", "🔺 vertice"],
+      "intruso": 3,
+      "spiegazione": "Il cerchio non ha vertici: non ha angoli."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔢",
+      "domanda": "Il giro della circonferenza è circa…",
+      "opzioni": ["🔢 3,14 volte il diametro", "🔢 2 volte il diametro", "🔢 10 volte il diametro"],
+      "corretta": 0,
+      "spiegazione": "Il giro è sempre circa 3,14 volte il diametro: è il pi greco."
+    },
+    {
+      "tipo": "virgola",
+      "immagine": "🛞",
+      "domanda": "Una ruota ha il diametro di 10 cm. Circonferenza = 3,14 × 10. Sposta le cifre.",
+      "n": "3,14",
+      "op": "x",
+      "per": 10,
+      "spiegazione": "3,14 × 10 = 31,4. La circonferenza è 31,4 cm."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧀",
+      "affermazione": "Per il bordo di formaggio della pizza serve l'area.",
+      "corretta": false,
+      "spiegazione": "No: il bordo è il contorno, serve la circonferenza."
+    },
+    {
+      "tipo": "virgola",
+      "immagine": "🎪",
+      "domanda": "Il tendone del circo ha il diametro di 100 m. Circonferenza = 3,14 × 100. Sposta le cifre.",
+      "n": "3,14",
+      "op": "x",
+      "per": 100,
+      "spiegazione": "3,14 × 100 = 314. La circonferenza è 314 m."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le parole del cerchio!",
+      "giusti": ["📏 raggio", "↔️ diametro", "📍 centro", "🌀 arco"],
+      "sbagliati": ["🔺 vertice", "📐 angolo", "➖ spigolo"],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🍕",
+      "domanda": "Completa le formule.",
+      "testo": "Circonferenza = [diametro] × 3,14. Area del cerchio = raggio × [raggio] × 3,14.",
+      "distrattori": ["lato", "centro"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍕",
+      "domanda": "La pizza ha il raggio di 10 cm. Qual è la sua area?",
+      "opzioni": ["📐 314 cm²", "📐 31,4 cm²", "📐 62,8 cm²"],
+      "corretta": 0,
+      "spiegazione": "10 × 10 = 100. 100 × 3,14 = 314 cm²."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎂",
+      "domanda": "Pina mette un nastro intorno a una torta. Il diametro è 20 cm. Quanto nastro serve?",
+      "opzioni": ["🎀 62,8 cm", "🎀 40 cm", "🎀 314 cm"],
+      "corretta": 0,
+      "spiegazione": "Circonferenza = 20 × 3,14 = 62,8 cm."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Che cosa mi serve? Unisci.",
+      "coppie": [
+        ["🧀 il bordo della pizza", "⭕ circonferenza"],
+        ["🍅 il pomodoro sopra", "🍕 area"],
+        ["🧭 l'apertura del compasso", "📏 raggio"]
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole del cerchio.",
+      "parole": ["📏 raggio", "📍 centro", "↔️ diametro", "🌀 arco", "🍕 cerchio"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "CIR-CON-FE-REN-ZA",
+      "indizio": "⭕ La linea curva che fa da contorno al cerchio"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DIAMETRO",
+      "indizio": "↔️ Passa per il centro ed è lungo due raggi"
+    }
+  ],
+  "ricorda": [
+    "⭕ La circonferenza è la linea del contorno. Il cerchio è lo spazio dentro.",
+    "📏 Il raggio va dal centro alla circonferenza.",
+    "↔️ Il diametro passa per il centro ed è lungo due raggi: diametro = raggio × 2.",
+    "🔢 Circonferenza = diametro × 3,14.",
+    "🍕 Area del cerchio = raggio × raggio × 3,14."
+  ],
+  "verifica": "verifiche/mat5-il-cerchio.json"
+}
