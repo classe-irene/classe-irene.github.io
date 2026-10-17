@@ -1,0 +1,282 @@
+{
+  "titolo": "Alimentazione e salute",
+  "emoji": "🥗",
+  "materia": "scienze",
+  "classe": 5,
+  "obiettivi": [
+    "conoscere i nutrienti e a che cosa servono",
+    "leggere la piramide alimentare",
+    "riconoscere i pasti della giornata e le abitudini sane"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "testo": "Perché il nostro corpo ha bisogno di cibo?",
+      "opzioni": [
+        "⚡ per avere energia e crescere",
+        "😴 per dormire di più",
+        "🎨 per cambiare colore"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni nutriente a ciò che fa.",
+      "coppie": [
+        [
+          "carboidrati",
+          "danno energia subito"
+        ],
+        [
+          "proteine",
+          "fanno crescere i muscoli"
+        ],
+        [
+          "grassi",
+          "sono una riserva di energia"
+        ],
+        [
+          "vitamine",
+          "proteggono il corpo"
+        ],
+        [
+          "acqua",
+          "disseta il corpo"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Che nutriente ha di più questo cibo? Scrivilo nella colonna giusta.",
+      "categorie": [
+        "🍞 Carboidrati",
+        "🍗 Proteine",
+        "🥕 Vitamine"
+      ],
+      "elementi": [
+        {
+          "testo": "pasta",
+          "categoria": "🍞 Carboidrati"
+        },
+        {
+          "testo": "pane",
+          "categoria": "🍞 Carboidrati"
+        },
+        {
+          "testo": "pesce",
+          "categoria": "🍗 Proteine"
+        },
+        {
+          "testo": "uova",
+          "categoria": "🍗 Proteine"
+        },
+        {
+          "testo": "arancia",
+          "categoria": "🥕 Vitamine"
+        },
+        {
+          "testo": "carota",
+          "categoria": "🥕 Vitamine"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔺",
+      "testo": "Metti in ordine la piramide alimentare: dalla base alla cima.",
+      "elementi": [
+        "acqua, frutta e verdura",
+        "pane, pasta e riso",
+        "latte e formaggi",
+        "pesce, uova, legumi e carne",
+        "dolci"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "I dolci sono alla base della piramide alimentare.",
+          "vero": false
+        },
+        {
+          "testo": "La colazione è un pasto importante.",
+          "vero": true
+        },
+        {
+          "testo": "I legumi sono ricchi di proteine.",
+          "vero": true
+        },
+        {
+          "testo": "Dormire poco fa bene alla salute.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🕐",
+      "testo": "Metti in ordine i pasti della giornata.",
+      "elementi": [
+        "colazione",
+        "spuntino",
+        "pranzo",
+        "merenda",
+        "cena"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Pane, pasta e riso sono ricchi di ___. Un pasto con cibi diversi è ___. Ogni giorno bisogna bere tanta ___.",
+      "soluzioni": [
+        "carboidrati",
+        "equilibrato",
+        "acqua"
+      ],
+      "parole": [
+        "carboidrati",
+        "equilibrato",
+        "acqua",
+        "grassi"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "👍",
+      "testo": "Fa bene o fa male alla salute?",
+      "categorie": [
+        "👍 Fa bene",
+        "👎 Fa male"
+      ],
+      "elementi": [
+        {
+          "testo": "fare sport",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "lavarsi i denti",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "bere tante bibite zuccherate",
+          "categoria": "👎 Fa male"
+        },
+        {
+          "testo": "saltare la colazione",
+          "categoria": "👎 Fa male"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché i dolci sono in cima alla piramide alimentare? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché hanno tanto zucchero e grassi: vanno mangiati poco, solo ogni tanto."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un pranzo sano ed equilibrato e scrivi i nomi dei cibi."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "testo": "Il cibo ci dà…",
+      "opzioni": [
+        "⚡ energia",
+        "😴 sonno"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "carboidrati",
+          "energia"
+        ],
+        [
+          "proteine",
+          "crescere"
+        ],
+        [
+          "vitamine",
+          "proteggere"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔺",
+      "affermazioni": [
+        {
+          "testo": "Frutta e verdura vanno mangiate ogni giorno.",
+          "vero": true
+        },
+        {
+          "testo": "I dolci vanno mangiati ogni giorno.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🕐",
+      "testo": "Metti in ordine i pasti.",
+      "elementi": [
+        "colazione",
+        "pranzo",
+        "cena"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il primo pasto del giorno è la ___.",
+      "soluzioni": [
+        "colazione"
+      ],
+      "parole": [
+        "colazione",
+        "cena"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "👍",
+      "testo": "Fa bene o fa male?",
+      "categorie": [
+        "👍 Fa bene",
+        "👎 Fa male"
+      ],
+      "elementi": [
+        {
+          "testo": "fare sport",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "dormire poco",
+          "categoria": "👎 Fa male"
+        }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna tre cibi che fanno bene."
+    }
+  ]
+}
