@@ -82,9 +82,9 @@ window.CURRICOLO = {
       { id: "mat5-percentuali", emoji: "💯", titolo: "Le percentuali", descrizione: "Sconti, aumenti e frazioni.", lezione: "lezioni/mat5-le-percentuali.json" },
       { id: "mat5-aree", emoji: "📐", titolo: "Area dei poligoni", descrizione: "Formule per triangoli e quadrilateri.", lezione: "lezioni/mat5-area-dei-poligoni.json" },
       { id: "mat5-cerchio", emoji: "⭕", titolo: "Il cerchio", descrizione: "Circonferenza, raggio, diametro.", lezione: "lezioni/mat5-il-cerchio.json" },
-      { id: "mat5-solidi", emoji: "🧊", titolo: "I solidi", descrizione: "Sviluppi e volume." },
-      { id: "mat5-statistica", emoji: "📊", titolo: "Media, moda, mediana", descrizione: "Leggere e interpretare dati." },
-      { id: "mat5-espressioni", emoji: "🧠", titolo: "Le espressioni", descrizione: "Ordine delle operazioni e parentesi." },
+      { id: "mat5-solidi", emoji: "🧊", titolo: "I solidi", descrizione: "Sviluppi e volume.", lezione: "lezioni/mat5-i-solidi.json" },
+      { id: "mat5-statistica", emoji: "📊", titolo: "Media, moda, mediana", descrizione: "Leggere e interpretare dati.", lezione: "lezioni/mat5-media-moda-mediana.json" },
+      { id: "mat5-espressioni", emoji: "🧠", titolo: "Le espressioni", descrizione: "Ordine delle operazioni e parentesi.", lezione: "lezioni/mat5-le-espressioni.json" },
     ],
   },
   scienze: {
