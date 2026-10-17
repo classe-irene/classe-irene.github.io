@@ -76,9 +76,9 @@ window.CURRICOLO = {
     5: [
       { id: "mat5-milioni", emoji: "🌌", titolo: "Milioni e miliardi", descrizione: "Numeri grandissimi e potenze.", lezione: "lezioni/mat5-milioni.json" },
       { id: "mat5-potenze", emoji: "⚡", titolo: "Le potenze", descrizione: "Base, esponente e notazione.", lezione: "lezioni/mat5-potenze.json" },
-      { id: "mat5-multipli", emoji: "🔗", titolo: "Multipli, divisori e primi", descrizione: "Criteri di divisibilità." },
+      { id: "mat5-multipli", emoji: "🔗", titolo: "Multipli, divisori e primi", descrizione: "Criteri di divisibilità.", lezione: "lezioni/mat5-multipli.json" },
       { id: "mat5-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Decimi, centesimi, millesimi; per e diviso 10, 100, 1000.", lezione: "lezioni/mat5-numeri-decimali.json" },
-      { id: "mat5-relativi", emoji: "🌡️", titolo: "I numeri negativi", descrizione: "Temperature e retta dei numeri relativi." },
+      { id: "mat5-relativi", emoji: "🌡️", titolo: "I numeri negativi", descrizione: "Temperature e retta dei numeri relativi.", lezione: "lezioni/mat5-relativi.json" },
       { id: "mat5-percentuali", emoji: "💯", titolo: "Le percentuali", descrizione: "Sconti, aumenti e frazioni.", lezione: "lezioni/mat5-le-percentuali.json" },
       { id: "mat5-aree", emoji: "📐", titolo: "Area dei poligoni", descrizione: "Formule per triangoli e quadrilateri.", lezione: "lezioni/mat5-area-dei-poligoni.json" },
       { id: "mat5-cerchio", emoji: "⭕", titolo: "Il cerchio", descrizione: "Circonferenza, raggio, diametro.", lezione: "lezioni/mat5-il-cerchio.json" },
