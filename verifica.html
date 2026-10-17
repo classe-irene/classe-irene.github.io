@@ -45,7 +45,7 @@
     let v;
     try {
       if (p.locale) v = Verifica.Archivio.prendi(p.locale);
-      else if (p.file && /^verifiche\/[\w.-]+\.json$/.test(p.file)) v = await (await fetch(p.file)).json();
+      else if (p.file && /^verifiche\/[\w.-]+\.json$/.test(p.file)) v = await (await fetch(p.file, { cache: "no-cache" })).json();
     } catch { return errore("Non riesco a leggere il file della verifica."); }
     if (!v) return errore("Questa verifica non esiste o è stata salvata su un altro computer.");
     const e = Verifica.valida(v);
