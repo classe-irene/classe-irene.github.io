@@ -1,0 +1,543 @@
+{
+  "titolo": "Multipli, divisori e primi",
+  "emoji": "🔗",
+  "materia": "matematica",
+  "classe": 5,
+  "introduzione": "Scopriamo i multipli e i divisori di un numero, i trucchi per sapere se un numero si divide e i numeri primi.",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono Nonna Pia!\nHo sfornato 12 biscotti e li voglio mettere nelle scatole.\nIn quante scatole li posso dividere, senza che ne avanzi nessuno?",
+    "immagini": [
+      "👵 Nonna Pia",
+      "🍪 12 biscotti",
+      "📦 scatole"
+    ],
+    "missione": "Aiutate Nonna Pia con multipli e divisori. Alla fine vincete la figurina del biscotto!"
+  },
+  "premio": "🍪",
+  "parole_chiave": [
+    "🔗 multiplo",
+    "➗ divisore",
+    "✅ divisibile",
+    "🚫 resto",
+    "⭐ numero primo",
+    "🧱 numero composto",
+    "🔍 criterio"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔗 I multipli",
+      "immagine": "🔗",
+      "testo": "I multipli di 3 si trovano moltiplicando 3 per 1, 2, 3, 4…\nSono 3, 6, 9, 12, 15… È la tabellina del 3 che non finisce mai!\nI multipli di un numero sono infiniti.",
+      "immagini": [
+        "🧺 3",
+        "🧺 6",
+        "🧺 9",
+        "♾️ infiniti"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i multipli di 3",
+        "passi": [
+          {
+            "figure": "🧺",
+            "testo": "Un cestino con 3 biscotti: 3 × 1 = 3."
+          },
+          {
+            "figure": "🧺 🧺",
+            "testo": "Due cestini: 3 × 2 = 6."
+          },
+          {
+            "figure": "🧺 🧺 🧺",
+            "testo": "Tre cestini: 3 × 3 = 9."
+          },
+          {
+            "figure": "🧺 🧺 🧺 🧺",
+            "testo": "Quattro cestini: 3 × 4 = 12."
+          },
+          {
+            "figure": "🧺 → ♾️",
+            "testo": "Posso continuare sempre: i multipli di 3 sono infiniti."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "24 è un multiplo di 4?",
+        "risposta": "Sì! 4 × 6 = 24. 24 è nella tabellina del 4."
+      }
+    },
+    {
+      "titolo": "➗ I divisori",
+      "immagine": "➗",
+      "testo": "Un divisore divide un numero senza resto.\n12 : 3 = 4, il resto è 0. Allora 3 è un divisore di 12.\nI divisori di 12 sono: 1, 2, 3, 4, 6, 12.\n5 non è divisore di 12: avanzano 2 biscotti.",
+      "immagini": [
+        "🍪 12 biscotti",
+        "📦 3 scatole",
+        "🚫 resto 0"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "12 biscotti nelle scatole",
+        "passi": [
+          {
+            "figure": "📦 📦",
+            "testo": "12 biscotti in 2 scatole: 6 per scatola. Non avanza niente."
+          },
+          {
+            "figure": "📦 📦 📦",
+            "testo": "In 3 scatole: 4 per scatola. Non avanza niente."
+          },
+          {
+            "figure": "📦 📦 📦 📦",
+            "testo": "In 4 scatole: 3 per scatola. Non avanza niente."
+          },
+          {
+            "figure": "📦 📦 📦 📦 📦",
+            "testo": "In 5 scatole: 2 per scatola e avanzano 2 biscotti. 5 non è divisore di 12."
+          },
+          {
+            "figure": "2️⃣ 3️⃣ 4️⃣ → ✅",
+            "testo": "Allora 2, 3 e 4 sono divisori di 12. 5 no."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "➗ Divisore",
+          "retro": "✅ Divide il numero e il resto è 0."
+        },
+        {
+          "fronte": "🔗 Multiplo",
+          "retro": "✖️ Si ottiene moltiplicando: 12 è multiplo di 3."
+        },
+        {
+          "fronte": "1️⃣ Il numero 1",
+          "retro": "🔑 È divisore di tutti i numeri."
+        }
+      ]
+    },
+    {
+      "titolo": "🔍 I criteri di divisibilità",
+      "immagine": "🔍",
+      "testo": "I criteri sono trucchi per sapere se un numero si divide, senza fare la divisione.\nPer 2: l'ultima cifra è pari.\nPer 5: il numero finisce con 0 o con 5.\nPer 10: il numero finisce con 0.\nPer 3: la somma delle cifre è nella tabellina del 3. Per 9: è nella tabellina del 9.",
+      "immagini": [
+        "2️⃣ ultima cifra pari",
+        "5️⃣ finisce con 0 o 5",
+        "🔟 finisce con 0",
+        "3️⃣ somma delle cifre"
+      ],
+      "scopri": [
+        {
+          "fronte": "2️⃣ Per 2",
+          "retro": "🔚 Ultima cifra 0, 2, 4, 6, 8. Esempio: 58."
+        },
+        {
+          "fronte": "5️⃣ Per 5",
+          "retro": "🔚 Finisce con 0 o 5. Esempio: 135."
+        },
+        {
+          "fronte": "🔟 Per 10",
+          "retro": "0️⃣ Finisce con 0. Esempio: 340."
+        },
+        {
+          "fronte": "3️⃣ Per 3",
+          "retro": "➕ 123: 1 + 2 + 3 = 6. 6 è nella tabellina del 3!"
+        }
+      ],
+      "pensa": {
+        "domanda": "459 è divisibile per 9?",
+        "risposta": "Sì! 4 + 5 + 9 = 18, e 18 è nella tabellina del 9."
+      }
+    },
+    {
+      "titolo": "⭐ I numeri primi",
+      "immagine": "⭐",
+      "testo": "Un numero primo ha solo due divisori: 1 e sé stesso.\n7 è primo: si divide solo per 1 e per 7.\nI primi fino a 20 sono: 2, 3, 5, 7, 11, 13, 17, 19.\nI numeri con più di due divisori sono composti: 12 è composto.\nIl numero 1 non è primo e non è composto.",
+      "immagini": [
+        "⭐ 7 primo",
+        "🧱 12 composto",
+        "1️⃣ 1 né primo né composto"
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: il crivello di Eratostene",
+        "materiali": [
+          "📄 una tabella con i numeri da 1 a 50",
+          "🖍️ pastelli di quattro colori",
+          "✏️ una matita"
+        ],
+        "passi": [
+          "1️⃣ Cancella il numero 1.",
+          "2️⃣ Cerchia il 2. Colora tutti gli altri multipli di 2.",
+          "3️⃣ Cerchia il 3. Colora gli altri multipli di 3. Poi fai lo stesso con 5 e 7.",
+          "⭐ I numeri cerchiati e quelli rimasti bianchi sono i numeri primi!"
+        ],
+        "domanda": "Quanti numeri primi avete trovato da 1 a 50?"
+      },
+      "curiosita": "Eratostene era uno scienziato greco di tanto tempo fa. Il crivello è come un setaccio: fa passare solo i numeri primi."
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔗",
+      "domanda": "Quale numero è un multiplo di 3?",
+      "opzioni": [
+        "🔢 12",
+        "🔢 10",
+        "🔢 7"
+      ],
+      "corretta": 0,
+      "spiegazione": "3 × 4 = 12. 12 è nella tabellina del 3."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i multipli di 4, dal più piccolo.",
+      "elementi": [
+        "🔢 4",
+        "🔢 8",
+        "🔢 12",
+        "🔢 16"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "👵",
+      "domanda": "Nonna Pia fa 5 sacchetti da 3 biscotti. Quanti biscotti in tutto?",
+      "oggetto": "🍪",
+      "numero": 15,
+      "spiegazione": "3 × 5 = 15: 15 è multiplo di 3 e di 5."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔗",
+      "affermazione": "20 è un multiplo di 5.",
+      "corretta": true,
+      "spiegazione": "Sì! 5 × 4 = 20."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Multiplo di 2 oppure no?",
+      "categorie": [
+        "✅ Multiplo di 2",
+        "🚫 Non è multiplo di 2"
+      ],
+      "elementi": [
+        {
+          "testo": "🔢 14",
+          "categoria": "✅ Multiplo di 2"
+        },
+        {
+          "testo": "🔢 30",
+          "categoria": "✅ Multiplo di 2"
+        },
+        {
+          "testo": "🔢 8",
+          "categoria": "✅ Multiplo di 2"
+        },
+        {
+          "testo": "🔢 9",
+          "categoria": "🚫 Non è multiplo di 2"
+        },
+        {
+          "testo": "🔢 15",
+          "categoria": "🚫 Non è multiplo di 2"
+        },
+        {
+          "testo": "🔢 21",
+          "categoria": "🚫 Non è multiplo di 2"
+        }
+      ],
+      "suggerimento": "I multipli di 2 sono i numeri pari."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i multipli di 6!",
+      "giusti": [
+        "🔢 6",
+        "🔢 12",
+        "🔢 18",
+        "🔢 24",
+        "🔢 30"
+      ],
+      "sbagliati": [
+        "🔢 8",
+        "🔢 10",
+        "🔢 15",
+        "🔢 20",
+        "🔢 9"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "➗",
+      "domanda": "Quale numero NON è divisore di 12?",
+      "opzioni": [
+        "🔢 5",
+        "🔢 4",
+        "🔢 6"
+      ],
+      "corretta": 0,
+      "spiegazione": "12 : 5 = 2 con resto 2. Il resto non è 0."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il numero e tutti i suoi divisori.",
+      "coppie": [
+        [
+          "🔢 6",
+          "➗ 1, 2, 3, 6"
+        ],
+        [
+          "🔢 7",
+          "➗ 1, 7"
+        ],
+        [
+          "🔢 9",
+          "➗ 1, 3, 9"
+        ],
+        [
+          "🔢 4",
+          "➗ 1, 2, 4"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "1️⃣",
+      "affermazione": "Ogni numero si può dividere per 1.",
+      "corretta": true,
+      "spiegazione": "Sì! 1 è divisore di tutti i numeri."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "15 : 3 = [5] con resto 0. Allora 3 è un [divisore] di 15.",
+      "distrattori": [
+        "multiplo",
+        "4"
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔍",
+      "domanda": "Unisci ogni criterio al suo trucco.",
+      "coppie": [
+        [
+          "2️⃣ per 2",
+          "🔚 l'ultima cifra è pari"
+        ],
+        [
+          "5️⃣ per 5",
+          "🔚 finisce con 0 o 5"
+        ],
+        [
+          "🔟 per 10",
+          "0️⃣ finisce con 0"
+        ],
+        [
+          "3️⃣ per 3",
+          "➕ la somma delle cifre è nella tabellina del 3"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔟",
+      "domanda": "Quale numero è divisibile per 10?",
+      "opzioni": [
+        "🔢 340",
+        "🔢 305",
+        "🔢 43"
+      ],
+      "corretta": 0,
+      "spiegazione": "340 finisce con 0."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "5️⃣",
+      "domanda": "Divisibile per 5 oppure no?",
+      "categorie": [
+        "✅ Divisibile per 5",
+        "🚫 Non divisibile per 5"
+      ],
+      "elementi": [
+        {
+          "testo": "🔢 25",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "🔢 70",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "🔢 135",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "🔢 52",
+          "categoria": "🚫 Non divisibile per 5"
+        },
+        {
+          "testo": "🔢 78",
+          "categoria": "🚫 Non divisibile per 5"
+        },
+        {
+          "testo": "🔢 101",
+          "categoria": "🚫 Non divisibile per 5"
+        }
+      ],
+      "suggerimento": "Guarda l'ultima cifra: 0 o 5?"
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "2️⃣",
+      "domanda": "Chi NON è divisibile per 2?",
+      "elementi": [
+        "🔢 46",
+        "🔢 88",
+        "🔢 57",
+        "🔢 120"
+      ],
+      "intruso": 2,
+      "spiegazione": "57 finisce con 7: è dispari."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "3️⃣",
+      "domanda": "Quale numero è divisibile per 3? Somma le cifre!",
+      "opzioni": [
+        "🔢 123",
+        "🔢 124",
+        "🔢 125"
+      ],
+      "corretta": 0,
+      "spiegazione": "1 + 2 + 3 = 6. 6 è nella tabellina del 3."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "9️⃣",
+      "domanda": "Completa con il criterio del 9.",
+      "testo": "In 459 la somma delle cifre è [18]. 18 è nella tabellina del 9: 459 è divisibile per [9].",
+      "distrattori": [
+        "14",
+        "4"
+      ]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "✖️",
+      "domanda": "Calcola 13 × 12. Il risultato è un multiplo di 13 e di 12!",
+      "a": 13,
+      "b": 12,
+      "spiegazione": "13 × 12 = 156."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⭐",
+      "domanda": "Quanti divisori ha un numero primo?",
+      "opzioni": [
+        "2️⃣ 2: l'1 e sé stesso",
+        "1️⃣ 1",
+        "3️⃣ 3"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il numero primo si divide solo per 1 e per sé stesso."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "1️⃣",
+      "affermazione": "1 è un numero primo.",
+      "corretta": false,
+      "spiegazione": "No! 1 ha un solo divisore: non è primo e non è composto."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⭐",
+      "domanda": "Primo o composto?",
+      "categorie": [
+        "⭐ Primo",
+        "🧱 Composto"
+      ],
+      "elementi": [
+        {
+          "testo": "🔢 2",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "🔢 7",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "🔢 13",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "🔢 9",
+          "categoria": "🧱 Composto"
+        },
+        {
+          "testo": "🔢 15",
+          "categoria": "🧱 Composto"
+        },
+        {
+          "testo": "🔢 21",
+          "categoria": "🧱 Composto"
+        }
+      ],
+      "suggerimento": "Cerca un divisore diverso da 1 e dal numero."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👵",
+      "domanda": "Completa il testo bucato di Nonna Pia.",
+      "testo": "12 biscotti stanno bene in 3 scatole: 3 è un [divisore] di 12.\n12 è un [multiplo] di 3.\n7 si divide solo per 1 e per 7: è un numero [primo].",
+      "distrattori": [
+        "composto",
+        "resto"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole di oggi.",
+      "parole": [
+        "🔗 multiplo",
+        "➗ divisore",
+        "⭐ primo",
+        "🚫 resto",
+        "🔍 criterio"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "MUL-TI-PLO",
+      "indizio": "🔗 12 lo è di 3, perché 3 × 4 = 12"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PRIMO",
+      "indizio": "⭐ Un numero con solo due divisori: 1 e sé stesso"
+    }
+  ],
+  "ricorda": [
+    "🔗 I multipli di un numero si trovano moltiplicando: sono infiniti.",
+    "➗ Un divisore divide il numero con resto 0.",
+    "🔍 Per 2: ultima cifra pari. Per 5: finisce con 0 o 5. Per 10: finisce con 0.",
+    "3️⃣ Per 3 e per 9: sommo le cifre e guardo la tabellina.",
+    "⭐ Un numero primo ha solo due divisori: 1 e sé stesso.",
+    "1️⃣ Il numero 1 non è primo e non è composto."
+  ],
+  "verifica": "verifiche/mat5-multipli.json"
+}
