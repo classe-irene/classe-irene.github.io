@@ -1,0 +1,435 @@
+{
+  "titolo": "Istruzioni in fila",
+  "emoji": "🤖",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Diamo comandi in ordine, come a un robot.",
+  "storia": {
+    "personaggio": "👩‍🔧",
+    "testo": "Ciao, sono Ada, l'inventrice!\nHo costruito un robot: si chiama Bip.\nBip fa solo quello che gli diciamo, in ordine.",
+    "immagini": [
+      "👩‍🔧 Ada",
+      "🤖 robot Bip",
+      "➡️ comandi"
+    ],
+    "missione": "Aiutate Ada a guidare Bip. Alla fine vincete la figurina del robot!"
+  },
+  "premio": "🤖",
+  "parole_chiave": [
+    "📋 istruzioni",
+    "🪜 in ordine",
+    "🤖 robot",
+    "➡️ comando",
+    "1️⃣ prima",
+    "2️⃣ dopo",
+    "🔁 ripeto"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🪜 Prima e dopo",
+      "immagine": "🪜",
+      "testo": "Per lavare le mani ci sono passi.\nPrima apro l'acqua.\nPoi uso il sapone.\nAlla fine mi asciugo.",
+      "immagini": [
+        "🚿 acqua",
+        "🧼 sapone",
+        "🧻 asciugo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "lavo le mani",
+        "passi": [
+          {
+            "figure": "🚿 💧",
+            "testo": "Prima apro l'acqua."
+          },
+          {
+            "figure": "🧼 👐",
+            "testo": "Poi uso il sapone."
+          },
+          {
+            "figure": "💧 👐",
+            "testo": "Sciacquo le mani."
+          },
+          {
+            "figure": "🧻 👐",
+            "testo": "Alla fine mi asciugo."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Posso asciugarmi prima di lavare le mani?",
+        "risposta": "No! L'ordine è importante: prima lavo, poi asciugo."
+      }
+    },
+    {
+      "titolo": "🤖 I comandi per Bip",
+      "immagine": "🤖",
+      "testo": "Bip capisce le frecce.\n⬆️ vuol dire: vai su.\n⬇️ vuol dire: vai giù.\n⬅️ e ➡️: vai di lato.",
+      "immagini": [
+        "🤖 Bip",
+        "⬆️ su",
+        "⬇️ giù",
+        "⬅️ sinistra",
+        "➡️ destra"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Bip va alla mela",
+        "passi": [
+          {
+            "figure": "🤖 ⬜ ⬜ 🍎",
+            "testo": "Bip vuole la mela."
+          },
+          {
+            "figure": "⬜ 🤖 ⬜ 🍎",
+            "testo": "Comando ➡️: un passo."
+          },
+          {
+            "figure": "⬜ ⬜ 🤖 🍎",
+            "testo": "Comando ➡️: un altro passo."
+          },
+          {
+            "figure": "⬜ ⬜ ⬜ 🤖",
+            "testo": "Comando ➡️: ecco la mela!"
+          },
+          {
+            "figure": "➡️ ➡️ ➡️",
+            "testo": "Tre frecce: 3 passi."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "⬆️ Freccia su",
+          "retro": "🤖 Bip va su."
+        },
+        {
+          "fronte": "⬇️ Freccia giù",
+          "retro": "🤖 Bip va giù."
+        },
+        {
+          "fronte": "➡️ Freccia destra",
+          "retro": "🤖 Bip va a destra."
+        }
+      ]
+    },
+    {
+      "titolo": "🔁 Le sequenze",
+      "immagine": "🔁",
+      "testo": "Guarda: 🔴 🔵 🔴 🔵.\nRosso, blu, rosso, blu.\nSi ripete sempre uguale.\nDopo viene il rosso!",
+      "immagini": [
+        "🔴 rosso",
+        "🔵 blu",
+        "🔁 si ripete"
+      ],
+      "pensa": {
+        "domanda": "🍎 🍌 🍎 🍌 ... Che cosa viene dopo?",
+        "risposta": "La mela! Mela, banana, mela, banana, mela."
+      }
+    },
+    {
+      "titolo": "❌ Se sbaglio ordine",
+      "immagine": "❌",
+      "testo": "Se cambio l'ordine, va male.\nPrima metto le calze.\nPoi metto le scarpe.\nAl contrario non si può!",
+      "immagini": [
+        "🧦 calze",
+        "👟 scarpe",
+        "❌ al contrario no"
+      ],
+      "pensa": {
+        "domanda": "Prima la pasta nel piatto o prima cuocerla?",
+        "risposta": "Prima la cuocio, poi la metto nel piatto!"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "ordina",
+      "immagine": "🧼",
+      "domanda": "Metti in ordine: lavo le mani.",
+      "elementi": [
+        "🚿 apro l'acqua",
+        "🧼 uso il sapone",
+        "🧻 mi asciugo"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤖",
+      "domanda": "Bip deve andare su. Quale freccia?",
+      "opzioni": [
+        "⬆️ su",
+        "⬇️ giù",
+        "➡️ destra"
+      ],
+      "corretta": 0,
+      "spiegazione": "La freccia su: ⬆️."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👟",
+      "affermazione": "Metto prima le scarpe e poi le calze.",
+      "corretta": false,
+      "spiegazione": "No: prima le calze, poi le scarpe."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔁",
+      "domanda": "🔴 🔵 🔴 🔵 ... Che cosa viene dopo?",
+      "opzioni": [
+        "🔴 rosso",
+        "🟢 verde"
+      ],
+      "corretta": 0,
+      "spiegazione": "Rosso, blu, rosso, blu, rosso!"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la freccia al comando.",
+      "coppie": [
+        [
+          "⬆️ freccia",
+          "🔼 vai su"
+        ],
+        [
+          "⬇️ freccia",
+          "🔽 vai giù"
+        ],
+        [
+          "➡️ freccia",
+          "▶️ vai a destra"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🦷",
+      "domanda": "Metti in ordine: lavo i denti.",
+      "elementi": [
+        "🪥 prendo lo spazzolino",
+        "🦷 lavo i denti",
+        "💧 sciacquo la bocca"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🤖",
+      "domanda": "Bip fa un passo per ogni freccia. Quanti passi?",
+      "oggetto": "➡️",
+      "numero": 4,
+      "spiegazione": "4 frecce: 4 passi."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "domanda": "🍎 🍌 🍎 🍌 🍎 ... Che cosa viene dopo?",
+      "opzioni": [
+        "🍎 mela",
+        "🍌 banana",
+        "🍓 fragola"
+      ],
+      "corretta": 1,
+      "spiegazione": "Dopo la mela viene la banana."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🤖",
+      "affermazione": "Il robot fa i comandi in ordine.",
+      "corretta": true,
+      "spiegazione": "Sì! Uno dopo l'altro."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: prima e dopo.",
+      "coppie": [
+        [
+          "🧦 prima le calze",
+          "👟 poi le scarpe"
+        ],
+        [
+          "🥚 prima rompo l'uovo",
+          "🍳 poi lo cuocio"
+        ],
+        [
+          "🌱 prima il seme",
+          "🌻 poi il fiore"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi rompe la sequenza?",
+      "elementi": [
+        "⭐ stella",
+        "🌙 luna",
+        "⭐ stella",
+        "🌙 luna",
+        "🍎 mela"
+      ],
+      "intruso": 4,
+      "spiegazione": "Dopo la luna doveva venire la stella."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤖",
+      "domanda": "🤖 ⬜ 🍎 Bip vuole la mela. Quante frecce ➡️?",
+      "opzioni": [
+        "➡️ 2",
+        "➡️ 1",
+        "➡️ 3"
+      ],
+      "corretta": 0,
+      "spiegazione": "Un passo sul quadretto, uno sulla mela: 2."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌱",
+      "domanda": "Metti in ordine: pianto un seme.",
+      "elementi": [
+        "🕳️ faccio una buca",
+        "🌰 metto il seme",
+        "💧 do l'acqua",
+        "🌱 nasce la piantina"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "[Prima] apro l'acqua. [Poi] uso il sapone.",
+      "distrattori": [
+        "Mai",
+        "Sotto"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Si fa prima o dopo?",
+      "categorie": [
+        "1️⃣ Prima",
+        "2️⃣ Dopo"
+      ],
+      "elementi": [
+        {
+          "testo": "🧦 calze",
+          "categoria": "1️⃣ Prima"
+        },
+        {
+          "testo": "🚿 lavo le mani",
+          "categoria": "1️⃣ Prima"
+        },
+        {
+          "testo": "🥚 rompo l'uovo",
+          "categoria": "1️⃣ Prima"
+        },
+        {
+          "testo": "👟 scarpe",
+          "categoria": "2️⃣ Dopo"
+        },
+        {
+          "testo": "🧻 asciugo le mani",
+          "categoria": "2️⃣ Dopo"
+        },
+        {
+          "testo": "🍳 cuocio l'uovo",
+          "categoria": "2️⃣ Dopo"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔁",
+      "domanda": "🟥 🟥 🔵 🟥 🟥 🔵 ... Che cosa viene dopo?",
+      "opzioni": [
+        "🔵 cerchio blu",
+        "🟥 quadrato rosso"
+      ],
+      "corretta": 1,
+      "spiegazione": "Quadrato, quadrato, cerchio: si ricomincia dal quadrato."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⬇️",
+      "affermazione": "La freccia ⬇️ vuol dire: vai su.",
+      "corretta": false,
+      "spiegazione": "No: ⬇️ vuol dire giù."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le frecce!",
+      "giusti": [
+        "⬆️ su",
+        "⬇️ giù",
+        "⬅️ sinistra",
+        "➡️ destra"
+      ],
+      "sbagliati": [
+        "🍎 mela",
+        "⭐ stella",
+        "🔵 cerchio",
+        "🐱 gatto"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🍝",
+      "domanda": "Metti in ordine: Ada fa la pasta.",
+      "elementi": [
+        "💧 metto l'acqua",
+        "🔥 accendo il fuoco",
+        "🍝 cuocio la pasta",
+        "🍽️ la metto nel piatto"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🔧",
+      "domanda": "Completa le frasi di Ada.",
+      "testo": "Bip fa i comandi in [ordine].\nLa freccia ⬆️ vuol dire [su].",
+      "distrattori": [
+        "giù",
+        "disordine"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "🤖 robot",
+        "1️⃣ prima",
+        "2️⃣ dopo",
+        "🪜 ordine"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "RO-BOT",
+      "indizio": "🤖 Bip è un…"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "FRECCIA",
+      "indizio": "➡️ Dice a Bip dove andare"
+    }
+  ],
+  "ricorda": [
+    "📋 Le istruzioni si fanno in ordine.",
+    "1️⃣ Prima una cosa, 2️⃣ poi l'altra.",
+    "🤖 Il robot segue i comandi.",
+    "➡️ Ogni freccia è un passo.",
+    "🔁 Una sequenza si ripete uguale."
+  ],
+  "verifica": "verifiche/mat1-istruzioni-in-fila.json"
+}

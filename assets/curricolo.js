@@ -24,11 +24,11 @@ window.RIFERIMENTO = function (classe) {
 window.CURRICOLO = {
   matematica: {
     1: [
-      { id: "mat1-insiemi", emoji: "🧺", titolo: "Classificare e raggruppare", descrizione: "Insiemi, uguale e diverso, di più e di meno." },
+      { id: "mat1-insiemi", emoji: "🧺", titolo: "Classificare e raggruppare", descrizione: "Insiemi, uguale e diverso, di più e di meno.", lezione: "lezioni/mat1-classificare-e-raggruppare.json" },
       { id: "mat1-numeri20", emoji: "🔢", titolo: "I numeri fino a 20", descrizione: "Contare, leggere, scrivere e ordinare i numeri.", lezione: "lezioni/mat1-numeri-fino-a-20.json" },
-      { id: "mat1-confronto", emoji: "⚖️", titolo: "Maggiore, minore, uguale", descrizione: "Confrontare quantità e numeri con > < =." },
-      { id: "mat1-decina", emoji: "🔟", titolo: "La decina", descrizione: "Raggruppare per dieci: decine e unità." },
-      { id: "mat1-addizione", emoji: "➕", titolo: "L'addizione", descrizione: "Aggiungere e unire, sulla linea dei numeri." },
+      { id: "mat1-confronto", emoji: "⚖️", titolo: "Maggiore, minore, uguale", descrizione: "Confrontare quantità e numeri con > < =.", lezione: "lezioni/mat1-maggiore-minore-uguale.json" },
+      { id: "mat1-decina", emoji: "🔟", titolo: "La decina", descrizione: "Raggruppare per dieci: decine e unità.", lezione: "lezioni/mat1-la-decina.json" },
+      { id: "mat1-addizione", emoji: "➕", titolo: "L'addizione", descrizione: "Aggiungere e unire, sulla linea dei numeri.", lezione: "lezioni/mat1-l-addizione.json" },
       { id: "mat1-sottrazione", emoji: "➖", titolo: "La sottrazione", descrizione: "Togliere e trovare la differenza." },
       { id: "mat1-spazio", emoji: "🧭", titolo: "Sopra, sotto, destra, sinistra", descrizione: "Orientarsi nello spazio e sul foglio." },
       { id: "mat1-forme", emoji: "🔺", titolo: "Le forme intorno a noi", descrizione: "Cerchio, quadrato, triangolo, rettangolo." },
@@ -53,11 +53,11 @@ window.CURRICOLO = {
       { id: "mat3-divisione", emoji: "➗", titolo: "La divisione in colonna", descrizione: "Con una cifra al divisore, con il resto.", lezione: "lezioni/mat3-la-divisione-in-colonna.json" },
       { id: "mat3-frazioni", emoji: "🍰", titolo: "Le frazioni", descrizione: "L'intero diviso in parti uguali.", lezione: "lezioni/mat3-le-frazioni.json" },
       { id: "mat3-decimali", emoji: "🔸", titolo: "Decimi e centesimi", descrizione: "Primi numeri decimali.", lezione: "lezioni/mat3-decimi-e-centesimi.json" },
-      { id: "mat3-angoli", emoji: "📐", titolo: "Gli angoli", descrizione: "Retto, acuto, ottuso." },
-      { id: "mat3-poligoni", emoji: "⬠", titolo: "I poligoni", descrizione: "Lati, vertici e perimetro." },
-      { id: "mat3-misure", emoji: "📏", titolo: "Le misure di lunghezza", descrizione: "Metro, multipli e sottomultipli." },
-      { id: "mat3-dati", emoji: "📊", titolo: "Indagini e grafici", descrizione: "Raccogliere dati e fare istogrammi." },
-      { id: "mat3-problemi", emoji: "🧩", titolo: "Problemi con due domande", descrizione: "Dati, domanda, operazioni." },
+      { id: "mat3-angoli", emoji: "📐", titolo: "Gli angoli", descrizione: "Retto, acuto, ottuso.", lezione: "lezioni/mat3-gli-angoli.json" },
+      { id: "mat3-poligoni", emoji: "🔷", titolo: "I poligoni", descrizione: "Lati, vertici e perimetro.", lezione: "lezioni/mat3-i-poligoni.json" },
+      { id: "mat3-misure", emoji: "📏", titolo: "Le misure di lunghezza", descrizione: "Metro, multipli e sottomultipli.", lezione: "lezioni/mat3-le-misure-di-lunghezza.json" },
+      { id: "mat3-dati", emoji: "📊", titolo: "Indagini e grafici", descrizione: "Raccogliere dati e fare istogrammi.", lezione: "lezioni/mat3-indagini-e-grafici.json" },
+      { id: "mat3-problemi", emoji: "🧩", titolo: "Problemi con due domande", descrizione: "Dati, domanda, operazioni.", lezione: "lezioni/mat3-problemi-con-due-domande.json" },
     ],
     4: [
       { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri.", lezione: "lezioni/mat4-grandi-numeri.json" },
