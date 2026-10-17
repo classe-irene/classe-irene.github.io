@@ -1,0 +1,248 @@
+{
+  "titolo": "Problemi con due domande",
+  "emoji": "🧩",
+  "materia": "matematica",
+  "classe": 3,
+  "obiettivi": [
+    "riconoscere dati e domanda di un problema",
+    "scegliere l'operazione giusta",
+    "risolvere problemi con due domande",
+    "scrivere la risposta"
+  ],
+  "consegna": "Leggi con calma. Sottolinea i dati e la domanda.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔢",
+      "testo": "I dati di un problema sono…",
+      "opzioni": [
+        "🔢 i numeri che conosco",
+        "❓ quello che devo trovare",
+        "✍️ la frase finale"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la parola all'operazione.",
+      "coppie": [
+        [
+          "in tutto",
+          "addizione"
+        ],
+        [
+          "restano",
+          "sottrazione"
+        ],
+        [
+          "ogni scatola",
+          "moltiplicazione"
+        ],
+        [
+          "in parti uguali",
+          "divisione"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La domanda dice che cosa devo trovare.",
+          "vero": true
+        },
+        {
+          "testo": "Nel problema con due domande, la prima risposta serve per la seconda.",
+          "vero": true
+        },
+        {
+          "testo": "\"Restano\" vuol dire fare un'addizione.",
+          "vero": false
+        },
+        {
+          "testo": "La risposta si scrive all'inizio del problema.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine i passi.",
+      "elementi": [
+        "leggo bene il testo",
+        "sottolineo dati e domanda",
+        "faccio l'operazione",
+        "scrivo la risposta"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Addizione o sottrazione? Scrivi nella colonna giusta.",
+      "categorie": [
+        "➕ Addizione",
+        "➖ Sottrazione"
+      ],
+      "elementi": [
+        {
+          "testo": "in tutto",
+          "categoria": "➕ Addizione"
+        },
+        {
+          "testo": "restano",
+          "categoria": "➖ Sottrazione"
+        },
+        {
+          "testo": "ne aggiunge",
+          "categoria": "➕ Addizione"
+        },
+        {
+          "testo": "ne vende",
+          "categoria": "➖ Sottrazione"
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🍪",
+      "testo": "Chiara fa 35 biscotti al mattino e 27 al pomeriggio. Poi ne vende 40.",
+      "operazioni": [
+        {
+          "testo": "Quanti biscotti fa in tutto? 35 + 27",
+          "risultato": 62
+        },
+        {
+          "testo": "Quanti biscotti restano? 62 − 40",
+          "risultato": 22
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🎂",
+      "testo": "Chiara fa 4 torte ogni giorno, per 6 giorni. Ne vende 15.",
+      "operazioni": [
+        {
+          "testo": "Quante torte fa? 4 × 6",
+          "risultato": 24
+        },
+        {
+          "testo": "Quante torte restano? 24 − 15",
+          "risultato": 9
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "I numeri che conosco sono i ___. Alla fine scrivo la ___.",
+      "soluzioni": [
+        "dati",
+        "risposta"
+      ],
+      "parole": [
+        "dati",
+        "risposta",
+        "colori"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍬",
+      "testo": "Chiara divide 18 caramelle in 3 sacchetti uguali. Quale operazione fa?",
+      "opzioni": [
+        "➗ 18 : 3",
+        "➕ 18 + 3",
+        "✖️ 18 × 3"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🧁",
+      "testo": "Chiara ha 3 vassoi con 9 dolci ciascuno. Ne regala 12. Quanti dolci ha in tutto? Quanti ne restano? Scrivi le operazioni e la risposta.",
+      "righe": 4,
+      "soluzione": "3 × 9 = 27 dolci in tutto. 27 − 12 = 15. Restano 15 dolci."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "❓",
+      "testo": "La domanda dice…",
+      "opzioni": [
+        "❓ che cosa devo trovare",
+        "🔢 i numeri che conosco"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "in tutto",
+          "addizione"
+        ],
+        [
+          "restano",
+          "sottrazione"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "I dati sono i numeri che conosco.",
+          "vero": true
+        },
+        {
+          "testo": "\"Restano\" vuol dire fare un'addizione.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍪",
+      "testo": "Chiara ha questi biscotti. Quanti sono?",
+      "figura": "🍪",
+      "numero": 8
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🍪",
+      "testo": "Chiara fa 10 biscotti e poi altri 5. Ne mangia 3.",
+      "operazioni": [
+        {
+          "testo": "In tutto: 10 + 5",
+          "risultato": 15
+        },
+        {
+          "testo": "Restano: 15 − 3",
+          "risultato": 12
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Alla fine del problema scrivo la ___.",
+      "soluzioni": [
+        "risposta"
+      ],
+      "parole": [
+        "risposta",
+        "domanda"
+      ]
+    }
+  ]
+}
