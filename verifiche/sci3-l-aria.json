@@ -1,0 +1,141 @@
+{
+  "titolo": "L'aria",
+  "emoji": "🌬️",
+  "materia": "scienze",
+  "classe": 3,
+  "obiettivi": [
+    "conoscere le proprietà dell'aria",
+    "capire come si muovono aria calda e aria fredda",
+    "sapere che cos'è il vento e a che cosa serve l'aria"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "L'aria occupa spazio.", "vero": true },
+        { "testo": "L'aria ha un colore blu.", "vero": false },
+        { "testo": "Anche l'aria ha un peso.", "vero": true },
+        { "testo": "L'aria fredda sale verso l'alto.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💨",
+      "testo": "Che cos'è il vento?",
+      "opzioni": ["💨 aria che si muove", "☁️ una nuvola grande", "🌧️ pioggia forte"],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni frase alla sua fine.",
+      "coppie": [
+        ["L'aria calda", "sale"],
+        ["L'aria fredda", "scende"],
+        ["Il vento", "spinge le vele"],
+        ["Nell'aria c'è", "l'ossigeno"]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: come nasce il vento.",
+      "elementi": ["☀️ Il sole scalda l'aria", "🔥 L'aria calda sale", "❄️ Arriva l'aria fredda", "💨 L'aria si muove: è il vento"]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Soffio nel palloncino e si ___. L'aria occupa ___. L'aria calda è leggera e ___.",
+      "soluzioni": ["gonfia", "spazio", "sale"],
+      "parole": ["gonfia", "spazio", "sale", "scende"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎈",
+      "testo": "Perché la mongolfiera vola?",
+      "opzioni": ["🔥 l'aria calda dentro è leggera", "🧲 una calamita la tira", "❄️ dentro c'è aria fredda"],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Sporca l'aria o la tiene pulita?",
+      "categorie": ["🏭 Sporca l'aria", "🌳 Tiene l'aria pulita"],
+      "elementi": [
+        { "testo": "fumo delle fabbriche", "categoria": "🏭 Sporca l'aria" },
+        { "testo": "gas delle auto", "categoria": "🏭 Sporca l'aria" },
+        { "testo": "piantare alberi", "categoria": "🌳 Tiene l'aria pulita" },
+        { "testo": "andare in bicicletta", "categoria": "🌳 Tiene l'aria pulita" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫙",
+      "testo": "Spingi un bicchiere capovolto nell'acqua. Il fazzoletto dentro resta asciutto. Perché?",
+      "opzioni": ["🌬️ l'aria occupa lo spazio", "🧊 l'acqua è ghiacciata", "🪄 è una magia"],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché senza aria non possiamo vivere? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché nell'aria c'è l'ossigeno: persone, animali e piante lo respirano."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna tre cose che il vento fa muovere."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "💨",
+      "testo": "Il vento è…",
+      "opzioni": ["💨 aria che si muove", "🌧️ pioggia"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "L'aria occupa spazio.", "vero": true },
+        { "testo": "L'aria si vede bene.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["aria calda", "sale"],
+        ["aria fredda", "scende"],
+        ["vento", "aquilone"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Nell'aria c'è l'___ che respiriamo.",
+      "soluzioni": ["ossigeno"],
+      "parole": ["ossigeno", "zucchero"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎈",
+      "testo": "Soffio nel palloncino. Che cosa succede?",
+      "opzioni": ["🎈 si gonfia", "🧊 diventa ghiaccio"],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un aquilone che vola nel vento."
+    }
+  ]
+}

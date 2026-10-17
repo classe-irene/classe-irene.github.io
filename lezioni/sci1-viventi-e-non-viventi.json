@@ -1,0 +1,441 @@
+{
+  "titolo": "Viventi e non viventi",
+  "emoji": "🌱",
+  "materia": "scienze",
+  "classe": 1,
+  "introduzione": "Che cosa nasce, cresce e si riproduce?",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono nonna Rosa!\nNel mio cortile ci sono le galline.\nC'è anche un grande sasso.",
+    "immagini": [
+      "👵 nonna Rosa",
+      "🐔 galline",
+      "🪨 sasso"
+    ],
+    "missione": "Scopri con nonna Rosa chi è vivente. Alla fine vinci la figurina del pulcino!"
+  },
+  "premio": "🐣",
+  "parole_chiave": [
+    "🌱 vivente",
+    "🪨 non vivente",
+    "🐣 nasce",
+    "📏 cresce",
+    "🍽️ si nutre"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🐣 I viventi",
+      "immagine": "🐣",
+      "testo": "I viventi nascono.\nPoi crescono.\nMangiano e bevono.\nFanno i piccoli.\nAlla fine muoiono.",
+      "immagini": [
+        "🐣 nascono",
+        "📏 crescono",
+        "🍽️ mangiano",
+        "🐥 piccoli"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la vita della gallina",
+        "passi": [
+          {
+            "figure": "🥚 → 🐣",
+            "testo": "Il pulcino nasce dall'uovo."
+          },
+          {
+            "figure": "🐥 → 🐔",
+            "testo": "Il pulcino cresce."
+          },
+          {
+            "figure": "🐔 🌽",
+            "testo": "La gallina mangia il mais."
+          },
+          {
+            "figure": "🐔 🥚",
+            "testo": "La gallina fa l'uovo: nascerà un pulcino."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🌻 Anche le piante sono vive",
+      "immagine": "🌻",
+      "testo": "Anche le piante sono viventi.\nNascono da un seme.\nCrescono e bevono acqua.\nFanno nuovi semi.",
+      "immagini": [
+        "🌻 piante",
+        "🫘 seme",
+        "💧 acqua",
+        "🌰 nuovi semi"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "seme",
+        "video": true,
+        "titolo": "dal seme alla pianta"
+      }
+    },
+    {
+      "titolo": "🪨 I non viventi",
+      "immagine": "🪨",
+      "testo": "Il sasso non nasce.\nNon cresce.\nNon mangia e non beve.\nIl sasso è un non vivente.\nAnche i giocattoli sono non viventi.",
+      "immagini": [
+        "🪨 sasso",
+        "🧸 giocattoli"
+      ],
+      "scopri": [
+        {
+          "fronte": "🪨 Sasso",
+          "retro": "❌ Non vivente: non cresce."
+        },
+        {
+          "fronte": "🐱 Gatto",
+          "retro": "✅ Vivente: nasce e cresce."
+        },
+        {
+          "fronte": "🌳 Albero",
+          "retro": "✅ Vivente: cresce e beve."
+        },
+        {
+          "fronte": "🚗 Macchina",
+          "retro": "❌ Non vivente: non nasce."
+        }
+      ]
+    },
+    {
+      "titolo": "🔍 Vivente o no?",
+      "immagine": "🔍",
+      "testo": "Fai una domanda: nasce? cresce?\nSe sì, è un vivente.\nSe no, è un non vivente.",
+      "immagini": [
+        "🔍 domanda",
+        "✅ vivente",
+        "❌ non vivente"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "vivente o no?",
+        "passi": [
+          {
+            "figure": "🐶 ✅",
+            "testo": "Il cane nasce e cresce: è vivente."
+          },
+          {
+            "figure": "🌷 ✅",
+            "testo": "Il fiore nasce e cresce: è vivente."
+          },
+          {
+            "figure": "🧸 ❌",
+            "testo": "L'orsetto non cresce: è non vivente."
+          },
+          {
+            "figure": "🪨 ❌",
+            "testo": "Il sasso non cresce: è non vivente."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Il robot si muove. È un vivente?",
+        "risposta": "No! Il robot non nasce e non cresce. È una macchina."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "domanda": "Chi è vivente?",
+      "opzioni": [
+        "🐱 gatto",
+        "🪨 sasso",
+        "🧸 orsetto"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il gatto nasce, cresce e mangia."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "domanda": "Chi NON è vivente?",
+      "opzioni": [
+        "🌳 albero",
+        "🐟 pesce",
+        "🚗 macchina"
+      ],
+      "corretta": 2,
+      "spiegazione": "La macchina non nasce e non cresce."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌻",
+      "affermazione": "Le piante sono viventi.",
+      "corretta": true,
+      "spiegazione": "Sì! Nascono, crescono e bevono."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪨",
+      "affermazione": "Il sasso cresce.",
+      "corretta": false,
+      "spiegazione": "No: il sasso non cresce."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🐥",
+      "domanda": "Quanti pulcini?",
+      "oggetto": "🐥",
+      "numero": 7,
+      "spiegazione": "Sono 7 pulcini!"
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Vivente o non vivente?",
+      "categorie": [
+        "✅ Vivente",
+        "❌ Non vivente"
+      ],
+      "elementi": [
+        {
+          "testo": "🐶 cane",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🌷 fiore",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🐦 uccellino",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🪨 sasso",
+          "categoria": "❌ Non vivente"
+        },
+        {
+          "testo": "⚽ palla",
+          "categoria": "❌ Non vivente"
+        },
+        {
+          "testo": "🪑 sedia",
+          "categoria": "❌ Non vivente"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine: la vita della gallina.",
+      "elementi": [
+        "🥚 uovo",
+        "🐣 nasce",
+        "🐥 pulcino",
+        "🐔 gallina"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è vivente?",
+      "elementi": [
+        "🐸 rana",
+        "🌵 cactus",
+        "🦋 farfalla",
+        "🎈 palloncino"
+      ],
+      "intruso": 3,
+      "spiegazione": "Il palloncino non nasce e non cresce."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il piccolo al grande.",
+      "coppie": [
+        [
+          "🐣 pulcino",
+          "🐔 gallina"
+        ],
+        [
+          "🌱 piantina",
+          "🌳 albero"
+        ],
+        [
+          "🐛 bruco",
+          "🦋 farfalla"
+        ],
+        [
+          "👶 bimba",
+          "👩 donna"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "domanda": "Che cosa serve alla pianta?",
+      "opzioni": [
+        "🍬 caramelle",
+        "💧 acqua",
+        "🧸 giocattoli"
+      ],
+      "corretta": 1,
+      "spiegazione": "La pianta beve l'acqua."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: da dove nasce?",
+      "coppie": [
+        [
+          "🫘 seme",
+          "🌻 girasole"
+        ],
+        [
+          "🥚 uovo",
+          "🐣 pulcino"
+        ],
+        [
+          "🐛 bruco",
+          "🦋 farfalla"
+        ]
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i viventi!",
+      "giusti": [
+        "🐶 cane",
+        "🐱 gatto",
+        "🌷 fiore",
+        "🌳 albero",
+        "🐞 coccinella"
+      ],
+      "sbagliati": [
+        "🪨 sasso",
+        "🧸 orsetto",
+        "🚗 macchina",
+        "🪑 sedia",
+        "⚽ palla"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🤖",
+      "affermazione": "Il robot è un vivente.",
+      "corretta": false,
+      "spiegazione": "No: il robot è una macchina, non cresce."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "I viventi [nascono] e [crescono].",
+      "distrattori": [
+        "volano",
+        "cantano"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dal seme alla pianta.",
+      "elementi": [
+        "🫘 seme",
+        "🌱 germoglio",
+        "🌿 piantina",
+        "🌻 pianta con il fiore"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "domanda": "Chi mangia?",
+      "opzioni": [
+        "🪨 sasso",
+        "🚲 bici",
+        "🐰 coniglio"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il coniglio mangia: è vivente."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐶",
+      "affermazione": "Il cane nasce, cresce e mangia.",
+      "corretta": true,
+      "spiegazione": "Sì! Il cane è un vivente."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi è vivente?",
+      "elementi": [
+        "🪨 sasso",
+        "🧸 orsetto",
+        "🐢 tartaruga",
+        "🪑 sedia"
+      ],
+      "intruso": 2,
+      "spiegazione": "La tartaruga è viva: nasce e cresce."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🌷",
+      "domanda": "Quanti fiori?",
+      "oggetto": "🌷",
+      "numero": 8,
+      "spiegazione": "Sono 8 fiori!"
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "🐱 gatto",
+        "🌳 albero",
+        "🪨 sasso",
+        "🫘 seme",
+        "🌷 fiore"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di nonna Rosa.",
+      "testo": "Il gatto è un [vivente].\nIl sasso non [cresce].\nLa pianta beve l'[acqua].",
+      "distrattori": [
+        "latte",
+        "corre"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "SAS-SO",
+      "indizio": "🪨 Non è vivente"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "SEME",
+      "indizio": "🫘 Da qui nasce la pianta"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PULCINO",
+      "indizio": "🐣 Nasce dall'uovo"
+    }
+  ],
+  "ricorda": [
+    "🐣 I viventi nascono, crescono e mangiano.",
+    "🐥 I viventi fanno i piccoli.",
+    "🌻 Anche le piante sono viventi.",
+    "🪨 Il sasso è un non vivente: non cresce.",
+    "🧸 Anche i giocattoli sono non viventi."
+  ],
+  "verifica": "verifiche/sci1-viventi-e-non-viventi.json"
+}

@@ -1,0 +1,478 @@
+{
+  "titolo": "Gli oggetti e i materiali",
+  "emoji": "🧸",
+  "materia": "scienze",
+  "classe": 1,
+  "introduzione": "Ogni oggetto è fatto di un materiale.",
+  "storia": {
+    "personaggio": "👩‍🔧",
+    "testo": "Ciao, sono Bea!\nNel mio laboratorio costruisco oggetti.\nOggi faccio una sedia di legno.",
+    "immagini": [
+      "👩‍🔧 Bea",
+      "🔨 laboratorio",
+      "🪑 sedia"
+    ],
+    "missione": "Scopri con Bea i materiali. Alla fine vinci la figurina del martello!"
+  },
+  "premio": "🔨",
+  "parole_chiave": [
+    "🪵 legno",
+    "📄 carta",
+    "🧴 plastica",
+    "🔩 metallo",
+    "🪟 vetro"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🧸 Gli oggetti",
+      "immagine": "🧸",
+      "testo": "Gli oggetti sono cose.\nLi fanno le persone.\nOgni oggetto è fatto di un materiale.",
+      "immagini": [
+        "🧸 oggetti",
+        "👩‍🔧 persone",
+        "🧱 materiale"
+      ],
+      "pensa": {
+        "domanda": "Di che cosa è fatta la tua sedia?",
+        "risposta": "Di legno, di plastica o di metallo! Toccala e guarda."
+      }
+    },
+    {
+      "titolo": "🪵 Legno e carta",
+      "immagine": "🪵",
+      "testo": "Il legno viene dagli alberi.\nCon il legno si fa la sedia.\nAnche la carta viene dagli alberi.\nCon la carta si fa il quaderno.",
+      "immagini": [
+        "🪵 legno",
+        "🌳 alberi",
+        "🪑 sedia",
+        "📄 carta",
+        "📒 quaderno"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "legno e carta",
+        "passi": [
+          {
+            "figure": "🌳 → 🪵",
+            "testo": "Dall'albero viene il legno."
+          },
+          {
+            "figure": "🪵 → 🪑",
+            "testo": "Con il legno si fa la sedia."
+          },
+          {
+            "figure": "🌳 → 📄",
+            "testo": "Dall'albero viene anche la carta."
+          },
+          {
+            "figure": "📄 → 📒",
+            "testo": "Con la carta si fa il quaderno."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🧴 Plastica, metallo e vetro",
+      "immagine": "🧴",
+      "testo": "La bottiglia è di plastica.\nLa forchetta è di metallo.\nIl bicchiere è di vetro.\nAttenzione: il vetro si rompe!",
+      "immagini": [
+        "🧴 bottiglia",
+        "🍴 forchetta",
+        "🥛 bicchiere",
+        "💥 si rompe"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "plastica, metallo e vetro",
+        "passi": [
+          {
+            "figure": "🧴",
+            "testo": "La bottiglia è di plastica."
+          },
+          {
+            "figure": "🍴",
+            "testo": "La forchetta è di metallo."
+          },
+          {
+            "figure": "🥛",
+            "testo": "Il bicchiere è di vetro."
+          },
+          {
+            "figure": "🥛 → 💥",
+            "testo": "Attenzione: il vetro si rompe!"
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🧴 Plastica",
+          "retro": "🪶 È leggera."
+        },
+        {
+          "fronte": "🔩 Metallo",
+          "retro": "💪 È duro e freddo."
+        },
+        {
+          "fronte": "🪟 Vetro",
+          "retro": "👀 È trasparente: ci vedi attraverso."
+        }
+      ]
+    },
+    {
+      "titolo": "✋ Tocca e scopri",
+      "immagine": "✋",
+      "testo": "Tocca gli oggetti.\nIl metallo è freddo.\nIl legno è più caldo.\nLa carta si piega.",
+      "immagini": [
+        "✋ tocca",
+        "🥄 metallo",
+        "✏️ legno",
+        "📄 carta"
+      ],
+      "esperimento": {
+        "titolo": "🔍 Di che cosa è fatto?",
+        "materiali": [
+          "🥄 un cucchiaio",
+          "✏️ una matita",
+          "📄 un foglio",
+          "🧴 una bottiglia"
+        ],
+        "passi": [
+          "✋ Tocca ogni oggetto.",
+          "🤔 È duro o morbido? Caldo o freddo?",
+          "🧺 Metti insieme le cose dello stesso materiale."
+        ],
+        "domanda": "Quale oggetto è più freddo?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🪑",
+      "domanda": "Di che cosa è fatta la sedia?",
+      "opzioni": [
+        "🪵 legno",
+        "🥛 vetro",
+        "📄 carta"
+      ],
+      "corretta": 0,
+      "spiegazione": "Questa sedia è di legno."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📒",
+      "domanda": "Di che cosa è fatto il quaderno?",
+      "opzioni": [
+        "🔩 metallo",
+        "📄 carta",
+        "🥛 vetro"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il quaderno è di carta."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌳",
+      "affermazione": "Il legno viene dagli alberi.",
+      "corretta": true,
+      "spiegazione": "Sì! Il legno viene dagli alberi."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥛",
+      "affermazione": "Il vetro non si rompe mai.",
+      "corretta": false,
+      "spiegazione": "No: il vetro si rompe. Attenzione!"
+    },
+    {
+      "tipo": "conta",
+      "immagine": "✏️",
+      "domanda": "Quante matite?",
+      "oggetto": "✏️",
+      "numero": 6,
+      "spiegazione": "Sono 6 matite!"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto al materiale.",
+      "coppie": [
+        [
+          "🪑 sedia",
+          "🪵 legno"
+        ],
+        [
+          "📒 quaderno",
+          "📄 carta"
+        ],
+        [
+          "🍴 forchetta",
+          "🔩 metallo"
+        ],
+        [
+          "🥛 bicchiere",
+          "🪟 vetro"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Legno o metallo?",
+      "categorie": [
+        "🪵 Legno",
+        "🔩 Metallo"
+      ],
+      "elementi": [
+        {
+          "testo": "🪑 sedia",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "✏️ matita",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "🚪 porta",
+          "categoria": "🪵 Legno"
+        },
+        {
+          "testo": "🔑 chiave",
+          "categoria": "🔩 Metallo"
+        },
+        {
+          "testo": "🍴 forchetta",
+          "categoria": "🔩 Metallo"
+        },
+        {
+          "testo": "🥄 cucchiaio",
+          "categoria": "🔩 Metallo"
+        }
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è di carta?",
+      "elementi": [
+        "📒 quaderno",
+        "📰 giornale",
+        "📖 libro",
+        "🔑 chiave"
+      ],
+      "intruso": 3,
+      "spiegazione": "La chiave è di metallo."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dall'albero al quaderno.",
+      "elementi": [
+        "🌳 albero",
+        "🪵 legno",
+        "📄 carta",
+        "📒 quaderno"
+      ]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: l'oggetto e il suo materiale.",
+      "coppie": [
+        [
+          "🪣 secchiello",
+          "🧴 plastica"
+        ],
+        [
+          "🥛 bicchiere",
+          "🪟 vetro"
+        ],
+        [
+          "📖 libro",
+          "📄 carta"
+        ],
+        [
+          "🔑 chiave",
+          "🔩 metallo"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👀",
+      "domanda": "Quale materiale è trasparente?",
+      "opzioni": [
+        "🪵 legno",
+        "🔩 metallo",
+        "🪟 vetro"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il vetro è trasparente: ci vedi attraverso."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa gli oggetti di metallo!",
+      "giusti": [
+        "🔑 chiave",
+        "🍴 forchetta",
+        "🥄 cucchiaio",
+        "🪙 moneta",
+        "📎 graffetta"
+      ],
+      "sbagliati": [
+        "📒 quaderno",
+        "🪑 sedia",
+        "🧸 orsetto",
+        "🥛 bicchiere",
+        "📄 foglio"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧴",
+      "affermazione": "La plastica è leggera.",
+      "corretta": true,
+      "spiegazione": "Sì! La bottiglia di plastica è leggera."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "La forchetta è di [metallo]. Il bicchiere è di [vetro].",
+      "distrattori": [
+        "carta",
+        "legno"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Carta o plastica?",
+      "categorie": [
+        "📄 Carta",
+        "🧴 Plastica"
+      ],
+      "elementi": [
+        {
+          "testo": "📰 giornale",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "📖 libro",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "✉️ busta",
+          "categoria": "📄 Carta"
+        },
+        {
+          "testo": "🪣 secchiello",
+          "categoria": "🧴 Plastica"
+        },
+        {
+          "testo": "🧴 flacone",
+          "categoria": "🧴 Plastica"
+        },
+        {
+          "testo": "🪥 spazzolino",
+          "categoria": "🧴 Plastica"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💥",
+      "domanda": "Che cosa si rompe se cade?",
+      "opzioni": [
+        "🧸 orsetto",
+        "🥛 bicchiere di vetro",
+        "📄 foglio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il vetro si rompe!"
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è di legno?",
+      "elementi": [
+        "🪑 sedia",
+        "✏️ matita",
+        "🚪 porta",
+        "🔑 chiave"
+      ],
+      "intruso": 3,
+      "spiegazione": "La chiave è di metallo."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔩",
+      "affermazione": "Il metallo è morbido come un cuscino.",
+      "corretta": false,
+      "spiegazione": "No: il metallo è duro."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔑",
+      "domanda": "Quante chiavi?",
+      "oggetto": "🔑",
+      "numero": 5,
+      "spiegazione": "Sono 5 chiavi!"
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "🪵 legno",
+        "📄 carta",
+        "🪟 vetro",
+        "🔩 metallo",
+        "🧴 plastica"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di Bea.",
+      "testo": "La sedia è di [legno].\nIl quaderno è di [carta].\nLa bottiglia è di [plastica].",
+      "distrattori": [
+        "vetro",
+        "metallo"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "VE-TRO",
+      "indizio": "🪟 È trasparente e si rompe"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "LEGNO",
+      "indizio": "🌳 Viene dagli alberi"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CARTA",
+      "indizio": "📒 Con lei si fanno i quaderni"
+    }
+  ],
+  "ricorda": [
+    "🧸 Ogni oggetto è fatto di un materiale.",
+    "🪵 Il legno viene dagli alberi.",
+    "📄 Anche la carta viene dagli alberi.",
+    "🔩 Il metallo è duro e freddo.",
+    "🪟 Il vetro è trasparente e si rompe.",
+    "🧴 La plastica è leggera."
+  ],
+  "verifica": "verifiche/sci1-gli-oggetti-e-i-materiali.json"
+}

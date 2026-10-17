@@ -1,0 +1,232 @@
+{
+  "titolo": "Il mio corpo",
+  "emoji": "🧍",
+  "materia": "scienze",
+  "classe": 1,
+  "obiettivi": [
+    "riconoscere e nominare le parti del corpo",
+    "sapere come il corpo si muove"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🙂",
+      "testo": "Dove sono gli occhi?",
+      "opzioni": [
+        "🦵 sulle gambe",
+        "🙂 sulla testa",
+        "✋ sulle mani"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: dall'alto al basso.",
+      "elementi": [
+        "🙂 testa",
+        "👕 busto",
+        "🦵 gambe",
+        "🦶 piedi"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Ho due piedi.",
+          "vero": true
+        },
+        {
+          "testo": "Il naso è sulla pancia.",
+          "vero": false
+        },
+        {
+          "testo": "Una mano ha cinque dita.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la parte a cosa fa.",
+      "coppie": [
+        [
+          "occhi",
+          "🌈 guardano"
+        ],
+        [
+          "gambe",
+          "🏃‍♀️ corrono"
+        ],
+        [
+          "bocca",
+          "🍎 mangia"
+        ],
+        [
+          "orecchie",
+          "🎵 ascoltano"
+        ]
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "☝️",
+      "testo": "Quante dita?",
+      "figura": "☝️",
+      "numero": 10
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Dove lo metti? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🙂 In testa",
+        "🦶 Ai piedi"
+      ],
+      "elementi": [
+        {
+          "testo": "🧢 cappello",
+          "categoria": "🙂 In testa"
+        },
+        {
+          "testo": "🎀 fiocco",
+          "categoria": "🙂 In testa"
+        },
+        {
+          "testo": "👟 scarpe",
+          "categoria": "🦶 Ai piedi"
+        },
+        {
+          "testo": "🧦 calzini",
+          "categoria": "🦶 Ai piedi"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚽",
+      "testo": "Con che cosa calci la palla?",
+      "opzioni": [
+        "🦶 piede",
+        "👂 orecchio",
+        "👃 naso"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Ho due ___. Con le ___ corro.",
+      "soluzioni": [
+        "mani",
+        "gambe"
+      ],
+      "parole": [
+        "mani",
+        "gambe",
+        "orecchie"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il tuo corpo: testa, busto, braccia e gambe."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🙂",
+      "testo": "Dove sono gli occhi?",
+      "opzioni": [
+        "🙂 sulla testa",
+        "🦵 sulle gambe"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Ho due piedi.",
+          "vero": true
+        },
+        {
+          "testo": "Il naso è sulla pancia.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "occhi",
+          "🌈 guardano"
+        ],
+        [
+          "gambe",
+          "🏃‍♀️ corrono"
+        ],
+        [
+          "bocca",
+          "🍎 mangia"
+        ]
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "☝️",
+      "testo": "Quante dita?",
+      "figura": "☝️",
+      "numero": 5
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Dove lo metti?",
+      "categorie": [
+        "🙂 In testa",
+        "🦶 Ai piedi"
+      ],
+      "elementi": [
+        {
+          "testo": "🧢 cappello",
+          "categoria": "🙂 In testa"
+        },
+        {
+          "testo": "👟 scarpe",
+          "categoria": "🦶 Ai piedi"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Con le ___ corro.",
+      "soluzioni": [
+        "gambe"
+      ],
+      "parole": [
+        "gambe",
+        "orecchie"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna la tua faccia: occhi, naso e bocca."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "titolo": "Le frazioni",
+  "emoji": "🍰",
+  "materia": "matematica",
+  "classe": 3,
+  "obiettivi": [
+    "dividere l'intero in parti uguali",
+    "riconoscere numeratore e denominatore",
+    "leggere e scrivere una frazione",
+    "trovare la frazione complementare"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔪",
+      "testo": "Per fare una frazione, come taglio l'intero?",
+      "opzioni": ["🔪 in parti uguali", "🍕 in parti diverse", "🎲 a caso"],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole.",
+      "frase": "Il numero sopra la linea è il ___. Il numero sotto la linea è il ___.",
+      "soluzioni": ["numeratore", "denominatore"],
+      "parole": ["numeratore", "denominatore", "intero"]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🍕",
+      "testo": "Guarda la frazione 3/8 e completa.",
+      "frase": "Taglio l'intero in ___ parti uguali. Ne prendo ___.",
+      "soluzioni": ["8", "3"]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la frazione a come si legge.",
+      "coppie": [
+        ["1/2", "un mezzo"],
+        ["1/3", "un terzo"],
+        ["3/4", "tre quarti"],
+        ["2/5", "due quinti"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "In 2/7 il denominatore è 7.", "vero": true },
+        { "testo": "1/4 è un'unità frazionaria.", "vero": true },
+        { "testo": "3/3 è meno dell'intero.", "vero": false },
+        { "testo": "1/2 e 2/4 valgono uguale.", "vero": true }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🤝",
+      "testo": "Quanto manca per fare l'intero? Scrivi il numeratore.",
+      "frase": "1/4 + ___/4 = l'intero. 2/5 + ___/5 = l'intero. 5/8 + ___/8 = l'intero.",
+      "soluzioni": ["3", "3", "3"]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "È un'unità frazionaria?",
+      "categorie": ["🧩 Sì", "🍕 No"],
+      "elementi": [
+        { "testo": "1/3", "categoria": "🧩 Sì" },
+        { "testo": "1/6", "categoria": "🧩 Sì" },
+        { "testo": "1/10", "categoria": "🧩 Sì" },
+        { "testo": "2/3", "categoria": "🍕 No" },
+        { "testo": "4/5", "categoria": "🍕 No" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍫",
+      "testo": "Tina mangia 2/6 della cioccolata. Quanta ne resta?",
+      "opzioni": ["🍫 4/6", "🍫 2/6", "🍫 6/6"],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una torta tagliata in 4 parti uguali. Colora 3/4. Scrivi la frazione che resta bianca."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔪",
+      "testo": "Per fare una frazione taglio in parti…",
+      "opzioni": ["🔪 uguali", "🍕 diverse"],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il numero sotto la linea è il ___.",
+      "soluzioni": ["denominatore"],
+      "parole": ["denominatore", "numeratore"]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🍕",
+      "testo": "Guarda 3/4 e completa.",
+      "frase": "Taglio in ___ parti. Ne prendo ___.",
+      "soluzioni": ["4", "3"],
+      "parole": ["4", "3"]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["1/2", "un mezzo"],
+        ["1/4", "un quarto"],
+        ["3/4", "tre quarti"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "In 2/5 il numeratore è 2.", "vero": true },
+        { "testo": "4/4 è meno dell'intero.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍕",
+      "testo": "Mangio 1/4 della pizza. Quanta ne resta?",
+      "opzioni": ["🍕 3/4", "🍕 1/4"],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una pizza tagliata in 2 parti uguali. Colora 1/2."
+    }
+  ]
+}

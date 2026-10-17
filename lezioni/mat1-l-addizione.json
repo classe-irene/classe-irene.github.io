@@ -1,0 +1,157 @@
+{
+  "titolo": "L'addizione",
+  "emoji": "➕",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Aggiungiamo e uniamo: impariamo il segno +.",
+  "storia": {
+    "personaggio": "👩‍🚀",
+    "testo": "Ciao, sono Luna, l'astronauta!\nRaccolgo le stelle nel cielo.\nOgni volta ne aggiungo un po'.",
+    "immagini": [
+      "👩‍🚀 Luna",
+      "🌙 cielo",
+      "⭐ stelle"
+    ],
+    "missione": "Raccogliete le stelle con Luna. Alla fine vincete la figurina della stella!"
+  },
+  "premio": "⭐",
+  "parole_chiave": [
+    "➕ più",
+    "🟰 uguale",
+    "🧺 unire",
+    "🎁 aggiungere",
+    "🔢 risultato",
+    "🐸 salti"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🧺 Unire",
+      "immagine": "🧺",
+      "testo": "Luna ha 2 stelle in una mano.\nNe ha 3 nell'altra mano.\nLe mette tutte insieme.\nOra ha 5 stelle.",
+      "immagini": [
+        "⭐ 2 stelle",
+        "🌟 3 stelle",
+        "🧺 insieme",
+        "🔢 5"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "uniamo le stelle",
+        "passi": [
+          { "figure": "⭐ ⭐", "testo": "Ecco 2 stelle." },
+          { "figure": "⭐ ⭐ ⭐", "testo": "Ecco altre 3 stelle." },
+          { "figure": "⭐ ⭐ ⭐ ⭐ ⭐", "testo": "Insieme fanno 5 stelle." },
+          { "figure": "2 + 3 = 5", "testo": "Si scrive: 2 più 3 uguale 5." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Hai 1 caramella. La nonna te ne dà 1. Quante ne hai?",
+        "risposta": "2 caramelle! 1 + 1 = 2."
+      }
+    },
+    {
+      "titolo": "🎁 Aggiungere",
+      "immagine": "🎁",
+      "testo": "Nel cesto ci sono 4 mele.\nLuna ne aggiunge 2.\nAdesso le mele sono 6.\n4 + 2 = 6.",
+      "immagini": [
+        "🧺 cesto",
+        "🍎 4 mele",
+        "🎁 aggiungo 2",
+        "🔢 6"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "aggiungiamo le mele",
+        "passi": [
+          { "figure": "🧺 🍎 🍎 🍎 🍎", "testo": "Nel cesto ci sono 4 mele." },
+          { "figure": "➕ 🍎 🍎", "testo": "Luna aggiunge 2 mele." },
+          { "figure": "4 + 2 = 6", "testo": "Ora sono 6 mele: 4 più 2 uguale 6." }
+        ]
+      },
+      "scopri": [
+        { "fronte": "➕ +", "retro": "➕ Si legge: più." },
+        { "fronte": "🟰 =", "retro": "🟰 Si legge: uguale." },
+        { "fronte": "🔢 Il risultato", "retro": "🎯 Il numero dopo il segno =." }
+      ]
+    },
+    {
+      "titolo": "🐸 Sulla linea dei numeri",
+      "immagine": "🐸",
+      "testo": "La rana parte dal 3.\nFa 4 salti in avanti.\nArriva al 7.\n3 + 4 = 7.",
+      "immagini": [
+        "🐸 rana",
+        "🔢 3",
+        "➡️ 4 salti",
+        "🎯 7"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la rana salta avanti",
+        "passi": [
+          { "figure": "🐸 3", "testo": "La rana parte dal 3." },
+          { "figure": "3 → 4 → 5", "testo": "Salta: 4, 5." },
+          { "figure": "5 → 6 → 7", "testo": "Salta ancora: 6, 7." },
+          { "figure": "3 + 4 = 7", "testo": "4 salti avanti: 3 più 4 uguale 7." }
+        ]
+      },
+      "pensa": {
+        "domanda": "La rana è sul 5 e fa 0 salti. Dove arriva?",
+        "risposta": "Resta sul 5! 5 + 0 = 5."
+      }
+    },
+    {
+      "titolo": "🔄 Scambio i numeri",
+      "immagine": "🔄",
+      "testo": "2 + 5 fa 7.\nAnche 5 + 2 fa 7.\nSe scambio i numeri, il risultato non cambia.",
+      "immagini": [
+        "🔢 2 + 5",
+        "🔄 scambio",
+        "🔢 5 + 2",
+        "🟰 7"
+      ]
+    }
+  ],
+  "esercizi": [
+    { "tipo": "conta", "immagine": "⭐", "domanda": "⭐⭐ e ⭐⭐⭐. Quante stelle in tutto?", "oggetto": "⭐", "numero": 5, "spiegazione": "2 + 3 = 5." },
+    { "tipo": "scelta", "immagine": "🍎", "domanda": "🍎🍎 + 🍎 = ?", "opzioni": ["🍎 2", "🍎 3", "🍎 4"], "corretta": 1, "spiegazione": "2 + 1 = 3." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il segno al suo nome.", "coppie": [["➕ +", "➕ più"], ["🟰 =", "🟰 uguale"]] },
+    { "tipo": "scelta", "immagine": "🐶", "domanda": "🐶🐶🐶 + 🐶🐶 = ?", "opzioni": ["🐶 5", "🐶 4", "🐶 6"], "corretta": 0, "spiegazione": "3 + 2 = 5." },
+    { "tipo": "vero_falso", "immagine": "➕", "affermazione": "Quando aggiungo, le cose diventano di più.", "corretta": true, "spiegazione": "Sì! Con il + il numero cresce." },
+    { "tipo": "conta", "immagine": "🎈", "domanda": "🎈🎈🎈🎈 e 🎈🎈🎈. Quanti palloncini?", "oggetto": "🎈", "numero": 7, "spiegazione": "4 + 3 = 7." },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "La rana è sul 2. Fa 3 salti. Dove arriva?", "min": 0, "max": 10, "passo": 1, "corretta": 5 },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova l'addizione e il risultato.", "coppie": [["➕ 1 + 1", "🟰 2"], ["➕ 2 + 2", "🟰 4"], ["➕ 3 + 3", "🟰 6"], ["➕ 4 + 4", "🟰 8"]] },
+    { "tipo": "scelta", "immagine": "🧺", "domanda": "4 + 4 = ?", "opzioni": ["🔢 7", "🔢 8", "🔢 9"], "corretta": 1, "spiegazione": "4 + 4 = 8." },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "3 + 3 = [6]. 5 + 1 = [6]. 2 + 7 = [9].", "distrattori": ["8", "5"] },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "La rana è sul 6. Fa 4 salti. Dove arriva?", "min": 0, "max": 10, "passo": 1, "corretta": 10 },
+    { "tipo": "vero_falso", "immagine": "🔄", "affermazione": "2 + 5 e 5 + 2 fanno lo stesso.", "corretta": true, "spiegazione": "Sì! Fanno tutti e due 7." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci l'addizione al risultato.", "coppie": [["➕ 5 + 5", "🟰 10"], ["➕ 6 + 1", "🟰 7"], ["➕ 2 + 1", "🟰 3"]] },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Fa 5 o fa 10?", "categorie": ["🖐️ fa 5", "🙌 fa 10"], "elementi": [
+      { "testo": "➕ 3 + 2", "categoria": "🖐️ fa 5" },
+      { "testo": "➕ 4 + 1", "categoria": "🖐️ fa 5" },
+      { "testo": "➕ 5 + 0", "categoria": "🖐️ fa 5" },
+      { "testo": "➕ 6 + 4", "categoria": "🙌 fa 10" },
+      { "testo": "➕ 7 + 3", "categoria": "🙌 fa 10" },
+      { "testo": "➕ 8 + 2", "categoria": "🙌 fa 10" }
+    ] },
+    { "tipo": "vero_falso", "immagine": "🐸", "affermazione": "5 + 0 = 6", "corretta": false, "spiegazione": "No: con 0 salti resto sul 5. 5 + 0 = 5." },
+    { "tipo": "acchiappa", "immagine": "🎯", "domanda": "Acchiappa le addizioni che fanno 6!", "giusti": ["➕ 3 + 3", "➕ 4 + 2", "➕ 5 + 1"], "sbagliati": ["➕ 2 + 2", "➕ 4 + 4", "➕ 1 + 1"] },
+    { "tipo": "scelta", "immagine": "👩‍🚀", "domanda": "Luna ha 6 stelle. Ne trova 3. Quante ne ha?", "opzioni": ["⭐ 8", "⭐ 9", "⭐ 3"], "corretta": 1, "spiegazione": "6 + 3 = 9." },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "12 + 5 = ? Tocca il risultato.", "min": 10, "max": 20, "passo": 1, "corretta": 17 },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi NON fa 8?", "elementi": ["➕ 4 + 4", "➕ 6 + 2", "➕ 5 + 2", "➕ 7 + 1"], "intruso": 2, "spiegazione": "5 + 2 fa 7." },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "10 + 3 = [13]. 10 + 8 = [18].", "distrattori": ["11", "108"] },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal risultato più piccolo al più grande.", "elementi": ["➕ 1 + 1", "➕ 2 + 2", "➕ 3 + 3", "➕ 5 + 5"] },
+    { "tipo": "mescolata", "immagine": "🧩", "domanda": "Metti in ordine le sillabe.", "parola": "AD-DI-ZIO-NE", "indizio": "➕ Unire e aggiungere" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "UNIRE", "indizio": "🧺 Mettere insieme" }
+  ],
+  "ricorda": [
+    "🧺 Unire e aggiungere: è l'addizione.",
+    "➕ Il segno + si legge più.",
+    "🟰 Il segno = si legge uguale.",
+    "🐸 Sulla linea vado avanti.",
+    "🔄 Se scambio i numeri, il risultato non cambia."
+  ],
+  "verifica": "verifiche/mat1-l-addizione.json"
+}

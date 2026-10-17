@@ -1,0 +1,155 @@
+{
+  "titolo": "Maggiore, minore, uguale",
+  "emoji": "⚖️",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Scopriamo chi è più grande e chi è più piccolo.",
+  "storia": {
+    "personaggio": "👧",
+    "testo": "Ciao, sono Sofia!\nHo un amico coccodrillo, si chiama Coco.\nCoco mangia sempre il numero più grande!",
+    "immagini": [
+      "👧 Sofia",
+      "🐊 Coco",
+      "🔢 numeri"
+    ],
+    "missione": "Confrontate i numeri con Sofia e Coco. Alla fine vincete la figurina del coccodrillo!"
+  },
+  "premio": "🐊",
+  "parole_chiave": [
+    "🐘 maggiore",
+    "🐭 minore",
+    "🟰 uguale",
+    "⚖️ confrontare",
+    "🐊 coccodrillo",
+    "🔗 coppie"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔗 Di più o di meno?",
+      "immagine": "🔗",
+      "testo": "Per confrontare, faccio le coppie.\nUn piatto e un biscotto.\nChi resta da solo è di più.",
+      "immagini": [
+        "🔗 coppie",
+        "🍽️ piatti",
+        "🍪 biscotti",
+        "🐘 di più"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "facciamo le coppie",
+        "passi": [
+          { "figure": "🍽️ 🍽️ 🍽️", "testo": "Ecco tre piatti." },
+          { "figure": "🍪 🍪 🍪 🍪", "testo": "Ecco quattro biscotti." },
+          { "figure": "🍽️ → 🍪", "testo": "Su ogni piatto metto un biscotto." },
+          { "figure": "🍪", "testo": "Un biscotto resta fuori. I biscotti sono di più!" }
+        ]
+      },
+      "pensa": {
+        "domanda": "3 bambini e 3 sedie. Chi è di più?",
+        "risposta": "Nessuno! Sono tanti quanti."
+      }
+    },
+    {
+      "titolo": "🐊 La bocca del coccodrillo",
+      "immagine": "🐊",
+      "testo": "Coco apre la bocca verso il più grande.\n5 > 3 si legge: 5 è maggiore di 3.\n3 < 5 si legge: 3 è minore di 5.",
+      "immagini": [
+        "🐊 Coco",
+        "🐘 maggiore",
+        "🐭 minore"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Coco mangia il più grande",
+        "passi": [
+          { "figure": "5 🐊 3", "testo": "Coco guarda il 5 e il 3." },
+          { "figure": "5 > 3", "testo": "Apre la bocca verso il 5: 5 è maggiore di 3." },
+          { "figure": "2 < 7", "testo": "Ora apre la bocca verso il 7: 2 è minore di 7." },
+          { "figure": "4 = 4", "testo": "4 e 4 sono uguali. Coco chiude la bocca: è uguale." }
+        ]
+      },
+      "scopri": [
+        { "fronte": "🐘 >", "retro": "🐘 Si legge: maggiore di." },
+        { "fronte": "🐭 <", "retro": "🐭 Si legge: minore di." },
+        { "fronte": "🟰 =", "retro": "🟰 Si legge: uguale a." }
+      ]
+    },
+    {
+      "titolo": "🟰 Tanti quanti",
+      "immagine": "🟰",
+      "testo": "Se nessuno resta da solo, sono uguali.\nSi scrive con il segno =.\n6 = 6 si legge: 6 è uguale a 6.",
+      "immagini": [
+        "🟰 uguale",
+        "🐦 uccellini",
+        "🌰 semi"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "tanti quanti",
+        "passi": [
+          { "figure": "🐦 🐦 🐦", "testo": "Tre uccellini." },
+          { "figure": "🌰 🌰 🌰", "testo": "Tre semi." },
+          { "figure": "🐦 → 🌰", "testo": "Ogni uccellino prende un seme." },
+          { "figure": "3 = 3", "testo": "Nessuno resta da solo: 3 è uguale a 3." }
+        ]
+      }
+    },
+    {
+      "titolo": "🪜 Sulla linea dei numeri",
+      "immagine": "🪜",
+      "testo": "Sulla linea i numeri vanno in fila.\nPiù vai avanti, più il numero è grande.\nIl 9 è dopo il 4: 9 > 4.",
+      "immagini": [
+        "🪜 in fila",
+        "➡️ avanti",
+        "🐘 più grande"
+      ],
+      "pensa": {
+        "domanda": "Chi è più grande, 12 o 8?",
+        "risposta": "12! Sulla linea viene dopo l'8."
+      }
+    }
+  ],
+  "esercizi": [
+    { "tipo": "scelta", "immagine": "🍎", "domanda": "Dove ci sono più mele?", "opzioni": ["🍎🍎 due mele", "🍎🍎🍎🍎🍎 cinque mele"], "corretta": 1, "spiegazione": "5 mele sono di più di 2." },
+    { "tipo": "scelta", "immagine": "🐟", "domanda": "Dove ci sono meno pesci?", "opzioni": ["🐟🐟🐟🐟 quattro pesci", "🐟 un pesce"], "corretta": 1, "spiegazione": "Un pesce è di meno." },
+    { "tipo": "conta", "immagine": "🐞", "domanda": "Quante coccinelle?", "oggetto": "🐞", "numero": 7, "spiegazione": "Sono 7!" },
+    { "tipo": "scelta", "immagine": "🍽️", "domanda": "🐰🐰🐰 e 🥕🥕🥕. Come sono?", "opzioni": ["🐰 più conigli", "🥕 più carote", "🟰 tanti quanti"], "corretta": 2, "spiegazione": "Ogni coniglio ha la sua carota." },
+    { "tipo": "vero_falso", "immagine": "🐊", "affermazione": "🐊 Coco mangia sempre il numero più grande.", "corretta": true, "spiegazione": "Sì! La bocca è aperta verso il più grande." },
+    { "tipo": "scelta", "immagine": "🐊", "domanda": "Chi mangia Coco: 8 o 3?", "opzioni": ["🔢 8", "🔢 3"], "corretta": 0, "spiegazione": "8 è maggiore di 3." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il segno al suo nome.", "coppie": [["🐘 >", "🐘 maggiore"], ["🐭 <", "🐭 minore"], ["🟰 =", "🟰 uguale"]] },
+    { "tipo": "scelta", "immagine": "⚖️", "domanda": "6 ? 2. Che segno metti?", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 0, "spiegazione": "6 è maggiore di 2: 6 > 2." },
+    { "tipo": "scelta", "immagine": "⚖️", "domanda": "4 ? 9. Che segno metti?", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 1, "spiegazione": "4 è minore di 9: 4 < 9." },
+    { "tipo": "scelta", "immagine": "⚖️", "domanda": "5 ? 5. Che segno metti?", "opzioni": ["🐘 >", "🐭 <", "🟰 ="], "corretta": 2, "spiegazione": "5 è uguale a 5." },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova il segno e il suo nome.", "coppie": [["🐘 >", "🐘 maggiore"], ["🐭 <", "🐭 minore"], ["🟰 =", "🟰 uguale"]] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazione": "7 > 10", "corretta": false, "spiegazione": "No: 7 è minore di 10. 7 < 10." },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Maggiore o minore di 10?", "categorie": ["🐭 minore di 10", "🐘 maggiore di 10"], "elementi": [
+      { "testo": "🔢 3", "categoria": "🐭 minore di 10" },
+      { "testo": "🔢 8", "categoria": "🐭 minore di 10" },
+      { "testo": "🔢 5", "categoria": "🐭 minore di 10" },
+      { "testo": "🔢 14", "categoria": "🐘 maggiore di 10" },
+      { "testo": "🔢 11", "categoria": "🐘 maggiore di 10" },
+      { "testo": "🔢 18", "categoria": "🐘 maggiore di 10" }
+    ] },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "Tocca il numero più grande di 6 e più piccolo di 8.", "min": 0, "max": 10, "passo": 1, "corretta": 7 },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo al più grande.", "elementi": ["🔢 2", "🔢 5", "🔢 9", "🔢 13"] },
+    { "tipo": "vero_falso", "immagine": "🟰", "affermazione": "12 = 12", "corretta": true, "spiegazione": "Sì! 12 è uguale a 12." },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "Tra 9 e 4 il maggiore è [9]. Tra 3 e 8 il minore è [3].", "distrattori": ["4", "8"] },
+    { "tipo": "acchiappa", "immagine": "🎯", "domanda": "Acchiappa i numeri maggiori di 5!", "giusti": ["🔢 7", "🔢 9", "🔢 15"], "sbagliati": ["🔢 1", "🔢 3", "🔢 4"] },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi è minore di 5?", "elementi": ["🔢 8", "🔢 12", "🔢 2", "🔢 10"], "intruso": 2, "spiegazione": "2 è minore di 5." },
+    { "tipo": "scelta", "immagine": "🐘", "domanda": "Qual è il numero più grande?", "opzioni": ["🔢 15", "🔢 19", "🔢 11"], "corretta": 1, "spiegazione": "19 è il più grande." },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più grande al più piccolo.", "elementi": ["🔢 20", "🔢 14", "🔢 7", "🔢 1"] },
+    { "tipo": "mescolata", "immagine": "🧩", "domanda": "Metti in ordine le sillabe.", "parola": "MAG-GIO-RE", "indizio": "🐘 Il segno >" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "MINORE", "indizio": "🐭 Il segno <" }
+  ],
+  "ricorda": [
+    "🔗 Per confrontare faccio le coppie.",
+    "🐊 Coco mangia il numero più grande.",
+    "🐘 > si legge: maggiore di.",
+    "🐭 < si legge: minore di.",
+    "🟰 = si legge: uguale a."
+  ],
+  "verifica": "verifiche/mat1-maggiore-minore-uguale.json"
+}

@@ -1,0 +1,224 @@
+{
+  "titolo": "Le stagioni",
+  "emoji": "🍂",
+  "materia": "scienze",
+  "classe": 1,
+  "obiettivi": [
+    "conoscere le quattro stagioni e il loro ordine",
+    "riconoscere come cambia la natura in ogni stagione"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "⛄",
+      "testo": "Quando c'è la neve?",
+      "opzioni": [
+        "☀️ estate",
+        "🌸 primavera",
+        "❄️ inverno"
+      ],
+      "corretta": 2
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine le stagioni. Comincia dall'autunno.",
+      "elementi": [
+        "🍂 autunno",
+        "❄️ inverno",
+        "🌸 primavera",
+        "☀️ estate"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "In primavera nascono i fiori.",
+          "vero": true
+        },
+        {
+          "testo": "In estate fa tanto freddo.",
+          "vero": false
+        },
+        {
+          "testo": "In autunno cadono le foglie.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la stagione alla frutta.",
+      "coppie": [
+        [
+          "autunno",
+          "🍇 uva"
+        ],
+        [
+          "inverno",
+          "🍊 arance"
+        ],
+        [
+          "primavera",
+          "🍓 fragole"
+        ],
+        [
+          "estate",
+          "🍉 anguria"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Inverno o estate? Scrivi nella colonna giusta.",
+      "categorie": [
+        "❄️ Inverno",
+        "☀️ Estate"
+      ],
+      "elementi": [
+        {
+          "testo": "🧣 sciarpa",
+          "categoria": "❄️ Inverno"
+        },
+        {
+          "testo": "🧤 guanti",
+          "categoria": "❄️ Inverno"
+        },
+        {
+          "testo": "🩳 pantaloncini",
+          "categoria": "☀️ Estate"
+        },
+        {
+          "testo": "🍦 gelato",
+          "categoria": "☀️ Estate"
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍂",
+      "testo": "Quante foglie?",
+      "figura": "🍂",
+      "numero": 9
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐦",
+      "testo": "Quando tornano le rondini?",
+      "opzioni": [
+        "🌸 primavera",
+        "❄️ inverno",
+        "🍂 autunno"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "In ___ fa freddo. In ___ fa caldo.",
+      "soluzioni": [
+        "inverno",
+        "estate"
+      ],
+      "parole": [
+        "inverno",
+        "estate",
+        "autunno"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un albero nella tua stagione preferita."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "⛄",
+      "testo": "Quando c'è la neve?",
+      "opzioni": [
+        "❄️ inverno",
+        "☀️ estate"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "🍂 autunno",
+        "❄️ inverno",
+        "🌸 primavera",
+        "☀️ estate"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "In primavera nascono i fiori.",
+          "vero": true
+        },
+        {
+          "testo": "In estate fa tanto freddo.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Inverno o estate?",
+      "categorie": [
+        "❄️ Inverno",
+        "☀️ Estate"
+      ],
+      "elementi": [
+        {
+          "testo": "🧣 sciarpa",
+          "categoria": "❄️ Inverno"
+        },
+        {
+          "testo": "🍦 gelato",
+          "categoria": "☀️ Estate"
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍂",
+      "testo": "Quante foglie?",
+      "figura": "🍂",
+      "numero": 5
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "In ___ fa caldo.",
+      "soluzioni": [
+        "estate"
+      ],
+      "parole": [
+        "estate",
+        "inverno"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna la neve dell'inverno."
+    }
+  ]
+}

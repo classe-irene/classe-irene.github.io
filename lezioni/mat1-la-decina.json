@@ -1,0 +1,152 @@
+{
+  "titolo": "La decina",
+  "emoji": "🔟",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Raggruppiamo per dieci: decine e unità.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Lia, la pasticciera!\nOggi ho fatto tanti biscotti.\nLi metto in scatole da dieci.",
+    "immagini": [
+      "👩‍🍳 Lia",
+      "🍪 biscotti",
+      "📦 scatole"
+    ],
+    "missione": "Riempite le scatole con Lia. Alla fine vincete la figurina della scatola!"
+  },
+  "premio": "📦",
+  "parole_chiave": [
+    "🔟 dieci",
+    "📦 decina",
+    "🍪 unità",
+    "🧺 raggruppare",
+    "🖐️ dita",
+    "🧮 abaco"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🖐️ Dieci dita",
+      "immagine": "🖐️",
+      "testo": "Guarda le tue mani.\nUna mano ha 5 dita.\nDue mani hanno 10 dita.\nDieci cose insieme fanno una decina.",
+      "immagini": [
+        "🖐️ 5 dita",
+        "🙌 10 dita",
+        "📦 1 decina"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "le dita delle mani",
+        "passi": [
+          { "figure": "🖐️", "testo": "Una mano: 5 dita." },
+          { "figure": "🖐️ 🖐️", "testo": "Due mani: 5 e 5 fanno 10." },
+          { "figure": "🙌 → 📦", "testo": "10 dita: una decina!" }
+        ]
+      },
+      "pensa": {
+        "domanda": "Quante mani servono per fare una decina di dita?",
+        "risposta": "Due mani!"
+      }
+    },
+    {
+      "titolo": "📦 La scatola da dieci",
+      "immagine": "📦",
+      "testo": "Lia conta i biscotti.\nQuando arriva a 10, chiude la scatola.\nLa scatola piena è una decina.\nUn biscotto da solo è una unità.",
+      "immagini": [
+        "🍪 biscotti",
+        "📦 1 decina",
+        "🍪 1 unità"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 10,
+        "video": true,
+        "titolo": "dieci unità fanno una decina"
+      },
+      "scopri": [
+        { "fronte": "📦 Decina", "retro": "🔟 Un gruppo di 10." },
+        { "fronte": "🍪 Unità", "retro": "☝️ Una cosa da sola." },
+        { "fronte": "🔟 10 unità", "retro": "📦 Fanno 1 decina!" }
+      ]
+    },
+    {
+      "titolo": "🧺 Decine e unità",
+      "immagine": "🧺",
+      "testo": "Lia ha 14 biscotti.\nNe mette 10 nella scatola.\nNe restano 4 fuori.\n14 è 1 decina e 4 unità.",
+      "immagini": [
+        "🍪 14 biscotti",
+        "📦 1 decina",
+        "🍪 4 unità"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 14,
+        "video": true,
+        "titolo": "costruiamo il 14"
+      },
+      "pensa": {
+        "domanda": "Lia ha 1 scatola e 6 biscotti fuori. Quanti biscotti ha?",
+        "risposta": "16 biscotti: 1 decina e 6 unità."
+      }
+    },
+    {
+      "titolo": "🧮 Da e u",
+      "immagine": "🧮",
+      "testo": "Le decine si scrivono a sinistra: da.\nLe unità si scrivono a destra: u.\nNel 17 la cifra 1 è la decina.\nLa cifra 7 sono le unità.",
+      "immagini": [
+        "📦 da",
+        "🍪 u",
+        "🔢 17"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 17,
+        "video": true,
+        "titolo": "il 17 sull'abaco"
+      }
+    }
+  ],
+  "esercizi": [
+    { "tipo": "conta", "immagine": "🍪", "domanda": "Quanti biscotti?", "oggetto": "🍪", "numero": 10, "spiegazione": "Sono 10: una decina!" },
+    { "tipo": "vero_falso", "immagine": "🙌", "affermazione": "Due mani hanno 10 dita.", "corretta": true, "spiegazione": "Sì! 5 e 5 fanno 10." },
+    { "tipo": "scelta", "immagine": "📦", "domanda": "Quante cose ci sono in una decina?", "opzioni": ["🔢 5", "🔢 10", "🔢 20"], "corretta": 1, "spiegazione": "Una decina è un gruppo di 10." },
+    { "tipo": "scelta", "immagine": "📦", "domanda": "Dove c'è una decina?", "opzioni": ["⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐ dieci stelle", "⭐⭐⭐⭐⭐⭐ sei stelle"], "corretta": 0, "spiegazione": "10 stelle fanno una decina." },
+    { "tipo": "conta", "immagine": "🍓", "domanda": "Quante fragole?", "oggetto": "🍓", "numero": 12, "spiegazione": "12: una decina e 2." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci la parola al suo disegno.", "coppie": [["📦 decina", "🔟 un gruppo di 10"], ["🍪 unità", "☝️ una cosa da sola"]] },
+    { "tipo": "costruisci", "immagine": "📦", "domanda": "Costruisci il 10.", "numero": 10, "spiegazione": "10 = 1 decina e 0 unità." },
+    { "tipo": "costruisci", "immagine": "📦", "domanda": "Costruisci il 13.", "numero": 13, "spiegazione": "13 = 1 decina e 3 unità." },
+    { "tipo": "scelta", "immagine": "🍪", "domanda": "📦 e 🍪🍪🍪🍪🍪. Quanti biscotti?", "opzioni": ["🔢 15", "🔢 5", "🔢 11"], "corretta": 0, "spiegazione": "1 decina e 5 unità: 15." },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova il numero e la scatola.", "coppie": [["🔢 11", "📦 1 decina e 🍪 1"], ["🔢 14", "📦 1 decina e 🍪 4"], ["🔢 18", "📦 1 decina e 🍪 8"], ["🔢 20", "📦📦 2 decine"]] },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "16 è [1] decina e [6] unità.", "distrattori": ["7"] },
+    { "tipo": "vero_falso", "immagine": "📦", "affermazione": "10 unità fanno 1 decina.", "corretta": true, "spiegazione": "Sì! 10 cose insieme sono una decina." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il numero a decine e unità.", "coppie": [["🔢 12", "📦 1 da e 🍪 2 u"], ["🔢 17", "📦 1 da e 🍪 7 u"], ["🔢 19", "📦 1 da e 🍪 9 u"]] },
+    { "tipo": "costruisci", "immagine": "🧮", "domanda": "Costruisci il 18.", "numero": 18, "spiegazione": "18 = 1 decina e 8 unità." },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "C'è una decina o no?", "categorie": ["📦 sì, c'è", "🍪 no, solo unità"], "elementi": [
+      { "testo": "🔢 13", "categoria": "📦 sì, c'è" },
+      { "testo": "🔢 10", "categoria": "📦 sì, c'è" },
+      { "testo": "🔢 19", "categoria": "📦 sì, c'è" },
+      { "testo": "🔢 4", "categoria": "🍪 no, solo unità" },
+      { "testo": "🔢 8", "categoria": "🍪 no, solo unità" },
+      { "testo": "🔢 6", "categoria": "🍪 no, solo unità" }
+    ] },
+    { "tipo": "vero_falso", "immagine": "🧮", "affermazione": "Nel 15 la cifra 5 è la decina.", "corretta": false, "spiegazione": "No: 1 è la decina, 5 sono le unità." },
+    { "tipo": "scelta", "immagine": "🧮", "domanda": "Nel 14, quante sono le unità?", "opzioni": ["🍪 4", "🍪 1", "🍪 14"], "corretta": 0, "spiegazione": "14 = 1 decina e 4 unità." },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "1 decina e 9 unità fanno [19]. 2 decine fanno [20].", "distrattori": ["10", "91"] },
+    { "tipo": "acchiappa", "immagine": "🎯", "domanda": "Acchiappa i numeri con una decina!", "giusti": ["🔢 11", "🔢 15", "🔢 17"], "sbagliati": ["🔢 2", "🔢 5", "🔢 9"] },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi NON è una decina?", "elementi": ["🙌 10 dita", "📦 10 biscotti", "🍎🍎🍎 3 mele", "🔟 dieci"], "intruso": 2, "spiegazione": "3 mele non fanno una decina." },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo al più grande.", "elementi": ["🍪 8 unità", "📦 1 decina", "📦 1 decina e 🍪 5", "📦📦 2 decine"] },
+    { "tipo": "mescolata", "immagine": "🧩", "domanda": "Metti in ordine le sillabe.", "parola": "DE-CI-NA", "indizio": "📦 Un gruppo di 10" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "DIECI", "indizio": "📦 Le cose in una decina" }
+  ],
+  "ricorda": [
+    "🔟 Dieci cose insieme fanno una decina.",
+    "🍪 Una cosa da sola è una unità.",
+    "📦 10 unità fanno 1 decina.",
+    "🧮 14 è 1 decina e 4 unità.",
+    "✏️ Le decine a sinistra, le unità a destra."
+  ],
+  "verifica": "verifiche/mat1-la-decina.json"
+}

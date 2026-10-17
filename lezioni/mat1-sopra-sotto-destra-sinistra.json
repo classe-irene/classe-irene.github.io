@@ -1,0 +1,462 @@
+{
+  "titolo": "Sopra, sotto, destra, sinistra",
+  "emoji": "🧭",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Dove sono le cose? Scopriamolo!",
+  "storia": {
+    "personaggio": "👧",
+    "testo": "Ciao, sono Sofia!\nHo una gattina che si nasconde sempre.\nMi aiutate a trovarla nella mia stanza?",
+    "immagini": [
+      "👧 Sofia",
+      "🐱 gattina",
+      "🏠 stanza"
+    ],
+    "missione": "Trovate la gattina con Sofia. Alla fine vincete la figurina della bussola!"
+  },
+  "premio": "🧭",
+  "parole_chiave": [
+    "⬆️ sopra",
+    "⬇️ sotto",
+    "📦 dentro",
+    "🚪 fuori",
+    "⬅️ sinistra",
+    "➡️ destra",
+    "👀 davanti",
+    "🔙 dietro"
+  ],
+  "sezioni": [
+    {
+      "titolo": "⬆️ Sopra e sotto",
+      "immagine": "⬆️",
+      "testo": "La gattina è sopra il letto.\nPoi va sotto il letto.\nSopra è in alto.\nSotto è in basso.",
+      "immagini": [
+        "🐱 gattina",
+        "🛏️ letto",
+        "⬆️ sopra",
+        "⬇️ sotto"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "sopra e sotto",
+        "passi": [
+          {
+            "figure": "🐱 ⬆️ 🛏️",
+            "testo": "La gattina è sopra il letto."
+          },
+          {
+            "figure": "🐱 → ⬇️",
+            "testo": "Ora salta giù."
+          },
+          {
+            "figure": "🛏️ ⬇️ 🐱",
+            "testo": "Ora è sotto il letto."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Dov'è il cielo: sopra o sotto di te?",
+        "risposta": "Il cielo è sopra di me! Il pavimento è sotto."
+      }
+    },
+    {
+      "titolo": "📦 Dentro e fuori",
+      "immagine": "📦",
+      "testo": "La gattina entra nella scatola.\nOra è dentro.\nPoi esce.\nOra è fuori.",
+      "immagini": [
+        "📦 scatola",
+        "🐱 dentro",
+        "🚪 fuori"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dentro e fuori",
+        "passi": [
+          {
+            "figure": "🐱 📦",
+            "testo": "Ecco la gattina e la scatola."
+          },
+          {
+            "figure": "🐱 → 📦",
+            "testo": "La gattina entra: è dentro."
+          },
+          {
+            "figure": "📦 → 🐱",
+            "testo": "La gattina esce: è fuori."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "📦 Dentro",
+          "retro": "🐱 Nella scatola."
+        },
+        {
+          "fronte": "🚪 Fuori",
+          "retro": "🌳 Non nella scatola."
+        },
+        {
+          "fronte": "👀 Davanti",
+          "retro": "👧 Lo vedo bene."
+        },
+        {
+          "fronte": "🔙 Dietro",
+          "retro": "🙈 È nascosto."
+        }
+      ]
+    },
+    {
+      "titolo": "✋ Destra e sinistra",
+      "immagine": "✋",
+      "testo": "Alza la mano che scrive.\nPer tanti bimbi è la destra.\nL'altra mano è la sinistra.\nSofia guarda a destra e a sinistra.",
+      "immagini": [
+        "✏️ mano che scrive",
+        "➡️ destra",
+        "⬅️ sinistra",
+        "👀 guardo"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "destra e sinistra",
+        "passi": [
+          {
+            "figure": "👧",
+            "testo": "Sofia è al centro."
+          },
+          {
+            "figure": "🐶 👧",
+            "testo": "Guarda: il cane è a sinistra."
+          },
+          {
+            "figure": "🐶 👧 🐱",
+            "testo": "La gattina è a destra."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Con quale mano saluti?",
+        "risposta": "Prova a dirlo: destra o sinistra? Guarda la mano che scrive!"
+      }
+    },
+    {
+      "titolo": "📄 Sul foglio",
+      "immagine": "📄",
+      "testo": "Anche il foglio ha i suoi posti.\nIn alto c'è il sole.\nIn basso c'è l'erba.\nIn mezzo c'è la casa.",
+      "immagini": [
+        "☀️ in alto",
+        "🏠 in mezzo",
+        "🌱 in basso"
+      ],
+      "pensa": {
+        "domanda": "Dove disegni il cielo sul foglio?",
+        "risposta": "In alto! La terra si disegna in basso."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🛏️",
+      "domanda": "La gattina è sul letto. Dov'è?",
+      "opzioni": [
+        "⬆️ sopra",
+        "⬇️ sotto"
+      ],
+      "corretta": 0,
+      "spiegazione": "È sopra il letto."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪑",
+      "domanda": "La palla è per terra, giù dalla sedia. Dov'è?",
+      "opzioni": [
+        "⬆️ sopra la sedia",
+        "⬇️ sotto la sedia"
+      ],
+      "corretta": 1,
+      "spiegazione": "È sotto la sedia."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "☀️",
+      "affermazione": "Il sole è sopra di noi.",
+      "corretta": true,
+      "spiegazione": "Sì! Il sole è in alto, nel cielo."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci le parole contrarie.",
+      "coppie": [
+        [
+          "⬆️ sopra",
+          "⬇️ sotto"
+        ],
+        [
+          "📦 dentro",
+          "🚪 fuori"
+        ],
+        [
+          "👀 davanti",
+          "🔙 dietro"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "Il gatto è nella scatola. Dov'è?",
+      "opzioni": [
+        "📦 dentro",
+        "🚪 fuori"
+      ],
+      "corretta": 0,
+      "spiegazione": "È dentro la scatola."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Sta in alto o in basso?",
+      "categorie": [
+        "⬆️ In alto",
+        "⬇️ In basso"
+      ],
+      "elementi": [
+        {
+          "testo": "☀️ sole",
+          "categoria": "⬆️ In alto"
+        },
+        {
+          "testo": "☁️ nuvola",
+          "categoria": "⬆️ In alto"
+        },
+        {
+          "testo": "🐦 uccello in volo",
+          "categoria": "⬆️ In alto"
+        },
+        {
+          "testo": "🌱 erba",
+          "categoria": "⬇️ In basso"
+        },
+        {
+          "testo": "🐌 lumaca",
+          "categoria": "⬇️ In basso"
+        },
+        {
+          "testo": "👟 scarpe",
+          "categoria": "⬇️ In basso"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐟",
+      "affermazione": "Il pesce nella boccia è fuori dall'acqua.",
+      "corretta": false,
+      "spiegazione": "No: il pesce è dentro l'acqua."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👧",
+      "domanda": "🐶 👧 🐱 Chi è a sinistra?",
+      "opzioni": [
+        "🐶 il cane",
+        "🐱 la gattina"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il cane è a sinistra."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👧",
+      "domanda": "🐶 👧 🐱 Chi è a destra?",
+      "opzioni": [
+        "🐶 il cane",
+        "🐱 la gattina"
+      ],
+      "corretta": 1,
+      "spiegazione": "La gattina è a destra."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la coppia.",
+      "coppie": [
+        [
+          "⬆️ su",
+          "☁️ sopra"
+        ],
+        [
+          "⬇️ giù",
+          "🌱 sotto"
+        ],
+        [
+          "🐱 nella scatola",
+          "📦 dentro"
+        ],
+        [
+          "🌳 dietro l'albero",
+          "🙈 nascosto"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON sta in alto?",
+      "elementi": [
+        "☀️ sole",
+        "🌙 luna",
+        "🐟 pesce",
+        "⭐ stella"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il pesce sta giù, nell'acqua."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il cielo è [sopra]. La terra è [sotto].",
+      "distrattori": [
+        "dentro",
+        "destra"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚗",
+      "domanda": "La macchina è nel garage. Dov'è?",
+      "opzioni": [
+        "📦 dentro",
+        "🚪 fuori"
+      ],
+      "corretta": 0,
+      "spiegazione": "È dentro il garage."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🙈",
+      "affermazione": "Se sei dietro l'albero, ti vedo bene.",
+      "corretta": false,
+      "spiegazione": "No: dietro sei nascosto."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dall'alto in basso.",
+      "elementi": [
+        "☀️ sole",
+        "🐦 uccello",
+        "🌳 albero",
+        "🌱 erba"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le cose che stanno in alto!",
+      "giusti": [
+        "☀️ sole",
+        "🌙 luna",
+        "☁️ nuvola",
+        "🪁 aquilone"
+      ],
+      "sbagliati": [
+        "🐌 lumaca",
+        "🌱 erba",
+        "👟 scarpa",
+        "🐟 pesce"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📄",
+      "domanda": "Sul foglio, dove disegni il cielo?",
+      "opzioni": [
+        "⬆️ in alto",
+        "⬇️ in basso",
+        "➡️ a destra"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il cielo va in alto."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🐱",
+      "domanda": "Dov'è la gattina?",
+      "coppie": [
+        [
+          "🛏️ sul letto",
+          "⬆️ sopra"
+        ],
+        [
+          "📦 nella scatola",
+          "📦 dentro"
+        ],
+        [
+          "🌳 dietro l'albero",
+          "🙈 nascosta"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "domanda": "🍎 🍌 🍓 Chi è in mezzo?",
+      "opzioni": [
+        "🍎 mela",
+        "🍌 banana",
+        "🍓 fragola"
+      ],
+      "corretta": 1,
+      "spiegazione": "La banana è in mezzo."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👧",
+      "domanda": "Completa le frasi di Sofia.",
+      "testo": "La gattina entra nella scatola: è [dentro].\nPoi esce: è [fuori].",
+      "distrattori": [
+        "sopra",
+        "destra"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "⬆️ sopra",
+        "⬇️ sotto",
+        "📦 dentro",
+        "🚪 fuori"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "DE-STRA",
+      "indizio": "➡️ La mano che scrive, per tanti bimbi"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "SOPRA",
+      "indizio": "⬆️ Il contrario di sotto"
+    }
+  ],
+  "ricorda": [
+    "⬆️ Sopra è in alto. Sotto è in basso.",
+    "📦 Dentro la scatola. Fuori dalla scatola.",
+    "👀 Davanti si vede. Dietro è nascosto.",
+    "➡️ Destra e sinistra sono due lati.",
+    "📄 Il foglio ha alto, basso e mezzo."
+  ],
+  "verifica": "verifiche/mat1-sopra-sotto-destra-sinistra.json"
+}

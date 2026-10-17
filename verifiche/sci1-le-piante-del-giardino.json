@@ -1,0 +1,223 @@
+{
+  "titolo": "Le piante del giardino",
+  "emoji": "🌻",
+  "materia": "scienze",
+  "classe": 1,
+  "obiettivi": [
+    "riconoscere radici, fusto, foglie e fiore",
+    "sapere che cosa serve alla pianta per vivere"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🫚",
+      "testo": "Dove sono le radici?",
+      "opzioni": [
+        "☁️ in cielo",
+        "🟫 sotto terra",
+        "🌸 sul fiore"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: dal basso all'alto.",
+      "elementi": [
+        "🫚 radici",
+        "🪵 fusto",
+        "🍃 foglie",
+        "🌸 fiore"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la parte al suo lavoro.",
+      "coppie": [
+        [
+          "radici",
+          "💧 bevono l'acqua"
+        ],
+        [
+          "fusto",
+          "🧍 tiene in piedi"
+        ],
+        [
+          "foglie",
+          "☀️ prendono la luce"
+        ],
+        [
+          "fiore",
+          "🍎 diventa frutto"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Le foglie sono verdi.",
+          "vero": true
+        },
+        {
+          "testo": "Le radici sono in cima alla pianta.",
+          "vero": false
+        },
+        {
+          "testo": "Il fusto dell'albero si chiama tronco.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🌷",
+      "testo": "Quanti fiori?",
+      "figura": "🌷",
+      "numero": 7
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Pianta piccola o grande? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🌱 Piccola",
+        "🌳 Grande"
+      ],
+      "elementi": [
+        {
+          "testo": "🌿 erba",
+          "categoria": "🌱 Piccola"
+        },
+        {
+          "testo": "🌷 tulipano",
+          "categoria": "🌱 Piccola"
+        },
+        {
+          "testo": "🌲 abete",
+          "categoria": "🌳 Grande"
+        },
+        {
+          "testo": "🌴 palma",
+          "categoria": "🌳 Grande"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "testo": "Che cosa beve la pianta?",
+      "opzioni": [
+        "💧 acqua",
+        "🥤 aranciata",
+        "🥛 latte"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Le ___ bevono l'acqua. Il ___ è colorato.",
+      "soluzioni": [
+        "radici",
+        "fiore"
+      ],
+      "parole": [
+        "radici",
+        "fiore",
+        "fusto"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna una pianta con radici, fusto, foglie e fiore."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🫚",
+      "testo": "Dove sono le radici?",
+      "opzioni": [
+        "🟫 sotto terra",
+        "☁️ in cielo"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dal basso.",
+      "elementi": [
+        "🫚 radici",
+        "🪵 fusto",
+        "🌸 fiore"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "radici",
+          "💧 acqua"
+        ],
+        [
+          "foglie",
+          "☀️ luce"
+        ],
+        [
+          "fiore",
+          "🍎 frutto"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Le foglie sono verdi.",
+          "vero": true
+        },
+        {
+          "testo": "Le radici sono in cima alla pianta.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🌷",
+      "testo": "Quanti fiori?",
+      "figura": "🌷",
+      "numero": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "La pianta beve l'___.",
+      "soluzioni": [
+        "acqua"
+      ],
+      "parole": [
+        "acqua",
+        "aranciata"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un fiore."
+    }
+  ]
+}

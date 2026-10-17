@@ -1,0 +1,490 @@
+{
+  "titolo": "Le misure di lunghezza",
+  "emoji": "📏",
+  "materia": "matematica",
+  "classe": 3,
+  "introduzione": "Scopriamo il metro, i suoi multipli e i suoi sottomultipli, e impariamo la tabella delle misure di lunghezza.",
+  "storia": {
+    "personaggio": "👩‍🔧",
+    "testo": "Ciao, sono Elena, la falegname!\nPer costruire tavoli e sedie misuro sempre il legno.\nOggi vi presento il mio amico metro e la sua famiglia.",
+    "immagini": [
+      "👩‍🔧 falegname",
+      "🪵 legno",
+      "📏 metro"
+    ],
+    "missione": "Misurate con Elena. Alla fine vincete la figurina del righello!"
+  },
+  "premio": "📏",
+  "parole_chiave": [
+    "📏 metro",
+    "🛣️ chilometro",
+    "🖐️ decimetro",
+    "✏️ centimetro",
+    "🐜 millimetro",
+    "📋 tabella",
+    "🔄 equivalenza"
+  ],
+  "sezioni": [
+    {
+      "titolo": "📏 Perché serve il metro",
+      "immagine": "📏",
+      "testo": "Elena misura il tavolo con la sua spanna: 6 spanne.\nLa sua bambina lo misura con la sua spanna: 9 spanne.\nLe spanne non sono tutte uguali!\nPer questo usiamo una misura uguale per tutti: il metro.\nIl metro si scrive m.",
+      "immagini": [
+        "🖐️ spanna",
+        "👧 bambina",
+        "📏 metro"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Elena misura il tavolo",
+        "passi": [
+          {
+            "figure": "🖐️ 🖐️ 🖐️",
+            "testo": "Elena misura il tavolo con la spanna: 6 spanne."
+          },
+          {
+            "figure": "👧 🖐️",
+            "testo": "La bambina ha la mano piccola: conta 9 spanne."
+          },
+          {
+            "figure": "🤔",
+            "testo": "Il tavolo è lo stesso, ma i numeri sono diversi!"
+          },
+          {
+            "figure": "📏",
+            "testo": "Con il metro la misura è uguale per tutti: il tavolo è lungo 1 m."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché le misure con le spanne cambiano da una persona all'altra?",
+        "risposta": "Perché le mani non sono tutte uguali: una mano piccola ha bisogno di più spanne. Il metro invece è uguale per tutti."
+      }
+    },
+    {
+      "titolo": "✏️ I sottomultipli del metro",
+      "immagine": "✏️",
+      "testo": "Per le cose piccole il metro è troppo lungo.\nAllora lo divido in parti più piccole: i sottomultipli.\nIl decimetro, dm: il metro diviso in 10 parti.\nIl centimetro, cm: il metro diviso in 100 parti.\nIl millimetro, mm: il metro diviso in 1000 parti.",
+      "immagini": [
+        "🖐️ decimetro",
+        "✏️ centimetro",
+        "🐜 millimetro"
+      ],
+      "scopri": [
+        {
+          "fronte": "🖐️ Decimetro dm",
+          "retro": "🖐️ 1 m = 10 dm. È lungo circa come una mano."
+        },
+        {
+          "fronte": "✏️ Centimetro cm",
+          "retro": "✏️ 1 m = 100 cm. È largo circa come un dito."
+        },
+        {
+          "fronte": "🐜 Millimetro mm",
+          "retro": "🐜 1 m = 1000 mm. È piccolo come una formica."
+        }
+      ]
+    },
+    {
+      "titolo": "🛣️ I multipli del metro",
+      "immagine": "🛣️",
+      "testo": "Per le strade lunghe il metro è troppo corto.\nAllora uso misure più grandi: i multipli.\nIl decametro, dam, vale 10 m.\nL'ettometro, hm, vale 100 m.\nIl chilometro, km, vale 1000 m.",
+      "immagini": [
+        "📏 decametro",
+        "🏟️ ettometro",
+        "🛣️ chilometro"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "Elena va a scuola",
+        "passi": [
+          {
+            "figure": "🏡",
+            "testo": "Elena parte da casa."
+          },
+          {
+            "figure": "📏 📏 📏",
+            "testo": "Ogni 10 metri fa un decametro."
+          },
+          {
+            "figure": "🏟️",
+            "testo": "Dopo 100 metri ha fatto un ettometro."
+          },
+          {
+            "figure": "🛣️ → 🏫",
+            "testo": "Dopo 1000 metri arriva a scuola: ha fatto 1 chilometro."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "📋 La tabella delle misure",
+      "immagine": "📋",
+      "testo": "Le misure di lunghezza stanno in una tabella su una riga.\nA sinistra c'è l'unità più grande:\nkm | hm | dam | m | dm | cm | mm\nOgni unità vale 10 volte quella alla sua destra.\nDa grande a piccola moltiplico: 3 m = 30 dm.\nDa piccola a grande divido: 200 cm = 2 m.",
+      "immagini": [
+        "🛣️ chilometro",
+        "📏 metro",
+        "🐜 millimetro",
+        "🔄 equivalenza"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "3 metri in decimetri",
+        "passi": [
+          {
+            "figure": "📏 📏 📏",
+            "testo": "Elena ha 3 metri di legno."
+          },
+          {
+            "figure": "📏 → 🖐️",
+            "testo": "Vuole i decimetri: va a destra di una casella."
+          },
+          {
+            "figure": "✖️",
+            "testo": "Moltiplica per 10: 3 × 10 = 30."
+          },
+          {
+            "figure": "🪵",
+            "testo": "3 m = 30 dm. Il legno è sempre lo stesso!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Quanti centimetri ci sono in 2 metri?",
+        "risposta": "200 centimetri: 1 m = 100 cm, quindi 2 m = 200 cm."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "📏",
+      "domanda": "Qual è l'unità di misura della lunghezza?",
+      "opzioni": [
+        "📏 il metro",
+        "⚖️ il chilogrammo",
+        "🧴 il litro"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il metro misura la lunghezza."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🖐️",
+      "affermazione": "Le spanne sono uguali per tutti.",
+      "corretta": false,
+      "spiegazione": "No: le mani sono diverse. Il metro invece è uguale per tutti."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la sigla al nome.",
+      "coppie": [
+        [
+          "🛣️ km",
+          "📝 chilometro"
+        ],
+        [
+          "📏 m",
+          "📝 metro"
+        ],
+        [
+          "✏️ cm",
+          "📝 centimetro"
+        ],
+        [
+          "🐜 mm",
+          "📝 millimetro"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "📋",
+      "domanda": "Metti in ordine la tabella: l'unità più grande a sinistra.",
+      "elementi": [
+        "🛣️ km",
+        "🏟️ hm",
+        "📏 dam",
+        "📏 m",
+        "🖐️ dm",
+        "✏️ cm",
+        "🐜 mm"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Multiplo o sottomultiplo del metro?",
+      "categorie": [
+        "🛣️ Multiplo",
+        "🐜 Sottomultiplo"
+      ],
+      "elementi": [
+        {
+          "testo": "🛣️ chilometro",
+          "categoria": "🛣️ Multiplo"
+        },
+        {
+          "testo": "🏟️ ettometro",
+          "categoria": "🛣️ Multiplo"
+        },
+        {
+          "testo": "📏 decametro",
+          "categoria": "🛣️ Multiplo"
+        },
+        {
+          "testo": "🖐️ decimetro",
+          "categoria": "🐜 Sottomultiplo"
+        },
+        {
+          "testo": "✏️ centimetro",
+          "categoria": "🐜 Sottomultiplo"
+        },
+        {
+          "testo": "🐜 millimetro",
+          "categoria": "🐜 Sottomultiplo"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "1 m = [10] dm. 1 m = [100] cm.",
+      "distrattori": [
+        "1000",
+        "5"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🛣️",
+      "affermazione": "1 km è uguale a 1000 m.",
+      "corretta": true,
+      "spiegazione": "Sì! Il chilometro vale mille metri."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐜",
+      "domanda": "Con quale misura misuro una formica?",
+      "opzioni": [
+        "🐜 millimetri",
+        "🛣️ chilometri",
+        "🏟️ ettometri"
+      ],
+      "corretta": 0,
+      "spiegazione": "La formica è piccolissima: uso i millimetri."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Questa linea è un righello. Tocca 7 cm.",
+      "min": 0,
+      "max": 10,
+      "passo": 1,
+      "corretta": 7,
+      "spiegazione": "Si parte sempre dallo zero!"
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova le misure uguali.",
+      "coppie": [
+        [
+          "📏 1 m",
+          "🖐️ 10 dm"
+        ],
+        [
+          "📏 2 m",
+          "✏️ 200 cm"
+        ],
+        [
+          "🖐️ 1 dm",
+          "✏️ 10 cm"
+        ],
+        [
+          "🛣️ 1 km",
+          "📏 1000 m"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON misura la lunghezza?",
+      "elementi": [
+        "📏 metro",
+        "✏️ centimetro",
+        "⚖️ grammo",
+        "🛣️ chilometro"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il grammo misura il peso."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Che misura uso?",
+      "categorie": [
+        "✏️ Centimetri",
+        "🛣️ Chilometri"
+      ],
+      "elementi": [
+        {
+          "testo": "✏️ la matita",
+          "categoria": "✏️ Centimetri"
+        },
+        {
+          "testo": "📘 il quaderno",
+          "categoria": "✏️ Centimetri"
+        },
+        {
+          "testo": "🍴 la forchetta",
+          "categoria": "✏️ Centimetri"
+        },
+        {
+          "testo": "🛣️ la strada fino al mare",
+          "categoria": "🛣️ Chilometri"
+        },
+        {
+          "testo": "🚂 il viaggio in treno",
+          "categoria": "🛣️ Chilometri"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔄",
+      "domanda": "3 m = ? dm",
+      "opzioni": [
+        "🖐️ 30 dm",
+        "🖐️ 3 dm",
+        "🖐️ 300 dm"
+      ],
+      "corretta": 0,
+      "spiegazione": "Da m a dm vado a destra di una casella: moltiplico per 10."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le misure uguali a 1 m!",
+      "giusti": [
+        "🖐️ 10 dm",
+        "✏️ 100 cm",
+        "🐜 1000 mm"
+      ],
+      "sbagliati": [
+        "🖐️ 100 dm",
+        "✏️ 10 cm",
+        "🐜 100 mm"
+      ],
+      "quanti": 3
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "✏️",
+      "affermazione": "Da un'unità piccola a una grande, divido.",
+      "corretta": true,
+      "spiegazione": "Sì! 200 cm : 100 = 2 m."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa le equivalenze.",
+      "testo": "4 m = [40] dm. 500 cm = [5] m.",
+      "distrattori": [
+        "400",
+        "50"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✏️",
+      "domanda": "Quanti cm sono 60 mm?",
+      "opzioni": [
+        "✏️ 6 cm",
+        "✏️ 60 cm",
+        "✏️ 600 cm"
+      ],
+      "corretta": 0,
+      "spiegazione": "Da mm a cm vado a sinistra di una casella: divido per 10."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine dalla più corta alla più lunga.",
+      "elementi": [
+        "🐜 1 mm",
+        "✏️ 1 cm",
+        "🖐️ 1 dm",
+        "📏 1 m",
+        "🛣️ 1 km"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🔧",
+      "domanda": "Completa il testo bucato di Elena.",
+      "testo": "Il metro si scrive [m].\nIl chilometro vale [1000] metri.\nNella tabella l'unità più grande sta a [sinistra].",
+      "distrattori": [
+        "destra",
+        "10"
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🪵",
+      "domanda": "Elena ha un'asse di 1 m. Ne taglia 4 dm. Quanti dm restano? Tocca il numero.",
+      "min": 0,
+      "max": 10,
+      "passo": 1,
+      "corretta": 6,
+      "spiegazione": "1 m = 10 dm. 10 − 4 = 6 dm."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole delle misure.",
+      "parole": [
+        "📏 metro",
+        "📋 tabella",
+        "📏 righello",
+        "🛣️ strada",
+        "🐜 milli"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "CEN-TI-ME-TRO",
+      "indizio": "✏️ La centesima parte del metro"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CHILOMETRO",
+      "indizio": "🛣️ Vale 1000 metri"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "RIGHELLO",
+      "indizio": "📏 Lo strumento per misurare sul quaderno"
+    }
+  ],
+  "ricorda": [
+    "📏 Il metro (m) è l'unità di misura della lunghezza: è uguale per tutti.",
+    "🛣️ I multipli: dam = 10 m, hm = 100 m, km = 1000 m.",
+    "🐜 I sottomultipli: 1 m = 10 dm = 100 cm = 1000 mm.",
+    "📋 La tabella su una riga: km | hm | dam | m | dm | cm | mm.",
+    "🔄 Da grande a piccola moltiplico. Da piccola a grande divido."
+  ],
+  "verifica": "verifiche/mat3-le-misure-di-lunghezza.json"
+}

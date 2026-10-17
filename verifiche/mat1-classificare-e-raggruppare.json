@@ -1,0 +1,53 @@
+{
+  "titolo": "Classificare e raggruppare",
+  "emoji": "🧺",
+  "materia": "matematica",
+  "classe": 1,
+  "obiettivi": [
+    "formare insiemi di cose che si somigliano",
+    "dare un nome a un insieme",
+    "riconoscere cose uguali e diverse",
+    "capire chi ha di più, di meno, tanti quanti"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "scelta", "immagine": "🍎", "testo": "Chi va con i frutti?", "opzioni": ["🍐 pera", "🐱 gatto", "⚽ pallone"], "corretta": 0 },
+    { "tipo": "scelta", "immagine": "🔍", "testo": "Chi non c'entra?", "opzioni": ["🐶 cane", "🚗 auto", "🐰 coniglio"], "corretta": 1 },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Frutti o animali?", "categorie": ["🍎 frutti", "🐶 animali"], "elementi": [
+      { "testo": "🍌 banana", "categoria": "🍎 frutti" },
+      { "testo": "🍓 fragola", "categoria": "🍎 frutti" },
+      { "testo": "🐱 gatto", "categoria": "🐶 animali" },
+      { "testo": "🐟 pesce", "categoria": "🐶 animali" }
+    ] },
+    { "tipo": "classifica", "immagine": "🎨", "testo": "Rosso o blu?", "categorie": ["🔴 rossi", "🔵 blu"], "elementi": [
+      { "testo": "🟥 quadrato", "categoria": "🔴 rossi" },
+      { "testo": "❤️ cuore", "categoria": "🔴 rossi" },
+      { "testo": "🟦 quadrato", "categoria": "🔵 blu" },
+      { "testo": "💙 cuore", "categoria": "🔵 blu" }
+    ] },
+    { "tipo": "vero_falso", "immagine": "🟰", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "🍎 🍎 Sono uguali.", "vero": true },
+      { "testo": "🐱 🐟 Sono uguali.", "vero": false },
+      { "testo": "🚗 🚲 Sono diversi.", "vero": true }
+    ] },
+    { "tipo": "collega", "immagine": "🏷️", "testo": "Unisci l'insieme al suo nome.", "coppie": [["mela, pera, banana", "🍎 frutti"], ["cane, gatto, coniglio", "🐾 animali"], ["auto, bici, treno", "🚗 mezzi"]] },
+    { "tipo": "scelta", "immagine": "🐰", "testo": "🐰🐰🐰 e 🥕🥕. Chi sono di più?", "opzioni": ["🐰 i conigli", "🥕 le carote", "🟰 tanti quanti"], "corretta": 0 },
+    { "tipo": "scelta", "immagine": "🐭", "testo": "🐦🐦 e 🌰🌰🌰🌰. Chi sono di meno?", "opzioni": ["🐦 gli uccellini", "🌰 i semi", "🟰 tanti quanti"], "corretta": 0 },
+    { "tipo": "scelta", "immagine": "🟰", "testo": "🍪🍪🍪 e 🥛🥛🥛. Come sono?", "opzioni": ["🍪 più biscotti", "🥛 più latte", "🟰 tanti quanti"], "corretta": 2 },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna un insieme di 3 fiori." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "scelta", "immagine": "🍎", "testo": "Chi va con i frutti?", "opzioni": ["🍐 pera", "🐱 gatto"], "corretta": 0 },
+    { "tipo": "scelta", "immagine": "🔍", "testo": "Chi non c'entra?", "opzioni": ["🐶 cane", "🚗 auto"], "corretta": 1 },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Frutti o animali?", "categorie": ["🍎 frutti", "🐶 animali"], "elementi": [
+      { "testo": "🍌 banana", "categoria": "🍎 frutti" },
+      { "testo": "🐱 gatto", "categoria": "🐶 animali" }
+    ] },
+    { "tipo": "vero_falso", "immagine": "🟰", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "🍎 🍎 Sono uguali.", "vero": true },
+      { "testo": "🐱 🐟 Sono uguali.", "vero": false }
+    ] },
+    { "tipo": "collega", "immagine": "🏷️", "testo": "Unisci.", "coppie": [["mela, pera", "🍎 frutti"], ["cane, gatto", "🐾 animali"]] },
+    { "tipo": "scelta", "immagine": "🐰", "testo": "🐰🐰🐰 e 🥕. Chi sono di più?", "opzioni": ["🐰 i conigli", "🥕 le carote"], "corretta": 0 }
+  ]
+}
