@@ -130,9 +130,9 @@ window.CURRICOLO = {
     ],
     5: [
       { id: "sci5-corpo", emoji: "🫀", titolo: "Il corpo umano", descrizione: "Organi, apparati e sistemi.", lezione: "lezioni/sci5-corpo-umano.json" },
-      { id: "sci5-digerente", emoji: "🍎", titolo: "Apparato digerente", descrizione: "Il viaggio del cibo." },
-      { id: "sci5-respiratorio", emoji: "🫁", titolo: "Respiratorio e circolatorio", descrizione: "Polmoni, cuore e sangue." },
-      { id: "sci5-nervoso", emoji: "🧠", titolo: "Il sistema nervoso", descrizione: "Cervello, nervi e sensi." },
+      { id: "sci5-digerente", emoji: "🍎", titolo: "Apparato digerente", descrizione: "Il viaggio del cibo.", lezione: "lezioni/sci5-digerente.json" },
+      { id: "sci5-respiratorio", emoji: "🫁", titolo: "Respiratorio e circolatorio", descrizione: "Polmoni, cuore e sangue.", lezione: "lezioni/sci5-respiratorio.json" },
+      { id: "sci5-nervoso", emoji: "🧠", titolo: "Il sistema nervoso", descrizione: "Cervello, nervi e sensi.", lezione: "lezioni/sci5-nervoso.json" },
       { id: "sci5-salute", emoji: "🥗", titolo: "Alimentazione e salute", descrizione: "La piramide alimentare e i corretti stili di vita." },
       { id: "sci5-energia", emoji: "⚡", titolo: "L'energia", descrizione: "Fonti rinnovabili e non rinnovabili." },
       { id: "sci5-luce", emoji: "🌈", titolo: "Luce e suono", descrizione: "Come viaggiano luce e suono." },
