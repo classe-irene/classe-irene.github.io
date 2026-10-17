@@ -95,3 +95,8 @@ Pagina a parte con solo equivalenze, un esercizio alla volta (anche in modalità
 ## Prove in stile INVALSI (invalsi.html)
 
 `invalsi.html` elenca le prove; `invalsi.html?file=invalsi/x.json` apre una prova. Domande D1, D2…, risposta con la crocetta sulla lettera (massimo 3 opzioni), nessuna correzione durante la prova, tempo facoltativo, risultati per ambito e soluzioni alla consegna. Tipi di domanda: `scelta` {opzioni, corretta}, `numero` {risposta, unita} con tastierino, `vf` {affermazioni:[{testo, vera}]}. Figure facoltative: `figure` (emoji separate da spazi), `pittogramma`, `grafico` (barre), `tabella`, `quadretti`, `rettangolo`. Per aggiungere una prova: un file in `invalsi/` e una riga in `PROVE` dentro `assets/invalsi.js`.
+
+## Lezione modello (prototipo: `lezioni/sci4-la-cellula.json`)
+Ogni lezione segue lo stesso schema: narratrice femminile con `storia` e `missione`, `premio`, `parole_chiave`, 3-5 sezioni (ognuna con `immagini` che seguono il testo e almeno un'attività: video, `scopri`, `pensa` o `esperimento`; almeno 2 video per lezione), 22-24 esercizi di tipi diversi, `ricorda` e `verifica` (`verifiche/<stesso nome>.json`, standard + facilitata, correggibile online).
+Video per qualunque argomento: `{"tipo":"sequenza","video":true,"titolo":"…","passi":[{"figure":"🌱 → 🌳","testo":"…"}]}`.
+Le emoji dei tasti numerici (1️⃣ … 🔟) diventano immagini come le altre.
