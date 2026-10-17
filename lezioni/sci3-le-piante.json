@@ -1,0 +1,278 @@
+{
+  "titolo": "Le piante",
+  "emoji": "🌿",
+  "materia": "scienze",
+  "classe": 3,
+  "introduzione": "Scopriamo le parti della pianta e come la pianta prepara il suo cibo.",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono nonna Gina!\nNel mio giardino ho fiori, alberi e un grande girasole.\nLe piante non mangiano come noi. Allora come fanno a crescere?",
+    "immagini": ["🌷 fiori", "🌳 alberi", "🌻 girasole"],
+    "missione": "Scoprite con nonna Gina il segreto delle piante. Alla fine vincete la figurina del girasole!"
+  },
+  "premio": "🌻",
+  "parole_chiave": [
+    "🫚 radice",
+    "🪵 fusto",
+    "🍃 foglia",
+    "🌸 fiore",
+    "🍎 frutto",
+    "🌰 seme",
+    "☀️ fotosintesi",
+    "🫁 ossigeno"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🌱 Le parti della pianta",
+      "immagine": "🌱",
+      "testo": "La pianta ha tante parti.\nLe radici stanno sotto terra.\nIl fusto sostiene la pianta.\nLe foglie sono verdi.\nMolte piante hanno anche fiori e frutti.",
+      "immagini": ["🫚 radici", "🪵 fusto", "🍃 foglie", "🌸 fiori", "🍎 frutti"],
+      "scopri": [
+        { "fronte": "🫚 Radice", "retro": "💧 Tiene ferma la pianta e beve l'acqua dal terreno." },
+        { "fronte": "🪵 Fusto", "retro": "⬆️ Sostiene la pianta e porta l'acqua alle foglie." },
+        { "fronte": "🍃 Foglia", "retro": "☀️ Prende la luce e prepara il cibo." },
+        { "fronte": "🌸 Fiore", "retro": "🍎 Da lui nascono il frutto e i semi." }
+      ]
+    },
+    {
+      "titolo": "☀️ Le foglie preparano il cibo",
+      "immagine": "☀️",
+      "testo": "Le radici bevono l'acqua.\nL'acqua sale nel fusto fino alle foglie.\nLe foglie prendono la luce del sole e un gas dall'aria.\nCosì preparano il cibo: uno zucchero.\nQuesto si chiama fotosintesi.",
+      "immagini": ["💧 acqua", "🪵 fusto", "☀️ luce", "🌬️ aria", "🍬 zucchero"],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "fotosintesi",
+        "video": true,
+        "titolo": "la fotosintesi"
+      }
+    },
+    {
+      "titolo": "🫁 Le piante ci regalano l'ossigeno",
+      "immagine": "🫁",
+      "testo": "Mentre preparano il cibo, le piante liberano ossigeno.\nNoi e gli animali respiriamo l'ossigeno.\nPer questo le piante sono preziose.\nUn bosco è un polmone verde!",
+      "immagini": ["🍃 foglie", "🫁 ossigeno", "🧒 noi", "🌳 bosco"],
+      "pensa": {
+        "domanda": "Perché una pianta chiusa al buio diventa gialla e muore?",
+        "risposta": "Perché senza luce le foglie non possono fare la fotosintesi: la pianta non ha cibo."
+      },
+      "esperimento": {
+        "titolo": "La pianta al buio",
+        "materiali": ["🪴 due piantine uguali", "📦 una scatola", "💧 acqua"],
+        "passi": ["Metti una piantina vicino alla finestra.", "Metti l'altra sotto la scatola, al buio.", "Dai la stessa acqua a tutte e due.", "Dopo una settimana guarda le foglie."],
+        "domanda": "Che colore hanno le foglie della pianta al buio?"
+      }
+    },
+    {
+      "titolo": "🌰 Dal seme alla pianta",
+      "immagine": "🌰",
+      "testo": "Dal fiore nasce il frutto.\nDentro il frutto ci sono i semi.\nIl seme va nella terra e beve l'acqua.\nEsce la radice, poi il fusto e le foglie.\nÈ nata una nuova pianta!",
+      "immagini": ["🌸 fiore", "🍎 frutto", "🌰 seme", "🌱 piantina"],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "seme",
+        "video": true,
+        "titolo": "dal seme alla pianta"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🫚",
+      "domanda": "Quale parte della pianta sta sotto terra?",
+      "opzioni": ["🫚 la radice", "🌸 il fiore", "🍃 la foglia"],
+      "corretta": 0,
+      "spiegazione": "Le radici stanno sotto terra e bevono l'acqua."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parte al suo lavoro.",
+      "coppie": [
+        ["🫚 radice", "💧 beve l'acqua"],
+        ["🪵 fusto", "⬆️ sostiene la pianta"],
+        ["🍃 foglia", "☀️ prepara il cibo"],
+        ["🌸 fiore", "🍎 diventa frutto"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍃",
+      "affermazione": "Le foglie preparano il cibo della pianta.",
+      "corretta": true,
+      "spiegazione": "Sì! È la fotosintesi."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine le parti, dal basso in alto.",
+      "elementi": ["🫚 radice", "🪵 fusto", "🍃 foglie", "🌸 fiore"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "☀️",
+      "domanda": "Che cosa serve alla foglia per fare la fotosintesi?",
+      "opzioni": ["☀️ luce, acqua e aria", "🍕 pizza e succo", "🌙 buio e freddo"],
+      "corretta": 0,
+      "spiegazione": "Con luce, acqua e un gas dell'aria la foglia fa lo zucchero."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le [radici] bevono l'acqua. Le [foglie] prendono la luce.",
+      "distrattori": ["pietre", "nuvole"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍽️",
+      "affermazione": "Le piante mangiano il cibo con la bocca, come noi.",
+      "corretta": false,
+      "spiegazione": "No: le piante preparano da sole il loro cibo nelle foglie."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Che cosa mangiamo della pianta?",
+      "categorie": ["🫚 Radice", "🍃 Foglia", "🍎 Frutto"],
+      "elementi": [
+        { "testo": "🥕 carota", "categoria": "🫚 Radice" },
+        { "testo": "🫜 rapa", "categoria": "🫚 Radice" },
+        { "testo": "🥬 lattuga", "categoria": "🍃 Foglia" },
+        { "testo": "🌿 basilico", "categoria": "🍃 Foglia" },
+        { "testo": "🍎 mela", "categoria": "🍎 Frutto" },
+        { "testo": "🍅 pomodoro", "categoria": "🍎 Frutto" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫁",
+      "domanda": "Che cosa regalano le piante all'aria?",
+      "opzioni": ["🫁 ossigeno", "💨 fumo", "🧂 sale"],
+      "corretta": 0,
+      "spiegazione": "Le piante liberano ossigeno: lo respiriamo noi."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la parte e il suo lavoro.",
+      "coppie": [
+        ["🫚 radice", "💧 beve"],
+        ["🪵 fusto", "⬆️ sostiene"],
+        ["🍃 foglia", "☀️ cibo"],
+        ["🌰 seme", "🌱 nuova pianta"]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌰",
+      "domanda": "Metti in ordine: dal seme alla pianta.",
+      "elementi": ["🌰 il seme va nella terra", "💧 il seme beve e si gonfia", "🫚 esce la radice", "🌱 escono fusto e foglie"]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: che cosa NON è una parte della pianta?",
+      "elementi": ["🫚 radice", "🪵 fusto", "🦴 osso", "🍃 foglia"],
+      "intruso": 2,
+      "spiegazione": "Le piante non hanno ossa!"
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪵",
+      "affermazione": "L'acqua sale nel fusto fino alle foglie.",
+      "corretta": true,
+      "spiegazione": "Sì! Il fusto è come una cannuccia."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Dal fiore nasce il [frutto]. Dentro il frutto ci sono i [semi].",
+      "distrattori": ["sassi", "rami"]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa quello che serve alla pianta per vivere!",
+      "giusti": ["☀️ luce", "💧 acqua", "🌬️ aria", "🟫 terra"],
+      "sbagliati": ["🍬 caramelle", "📺 televisione", "🧸 orsetto", "🥤 bibita"],
+      "quanti": 4
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "Una pianta resta al buio per molti giorni. Che cosa succede?",
+      "opzioni": ["🍂 diventa gialla e si ammala", "🌻 cresce più bella", "🌈 diventa colorata"],
+      "corretta": 0,
+      "spiegazione": "Senza luce non c'è fotosintesi: la pianta non ha cibo."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la pianta alla parte che mangiamo.",
+      "coppie": [
+        ["🥕 carota", "🫚 radice"],
+        ["🥬 lattuga", "🍃 foglia"],
+        ["🍐 pera", "🍎 frutto"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌳",
+      "affermazione": "Le piante sono esseri viventi: nascono, crescono e muoiono.",
+      "corretta": true,
+      "spiegazione": "Sì! Anche le piante sono vive."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parti della pianta.",
+      "parole": ["🫚 radice", "🪵 fusto", "🍃 foglia", "🌸 fiore", "🌰 seme"]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👵",
+      "domanda": "Completa il testo bucato di nonna Gina.",
+      "testo": "Le radici bevono l'[acqua].\nLe foglie prendono la [luce] del sole.\nCosì preparano il cibo: è la [fotosintesi].\nIntanto regalano l'[ossigeno].",
+      "distrattori": ["pizza", "fumo"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍃",
+      "domanda": "Perché le foglie sono verdi?",
+      "opzioni": ["☀️ per catturare la luce del sole", "🎨 perché qualcuno le colora", "🐸 per sembrare rane"],
+      "corretta": 0,
+      "spiegazione": "Il verde delle foglie cattura la luce."
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "RA-DI-CE",
+      "indizio": "🫚 Sta sotto terra e beve l'acqua"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "FOTOSINTESI",
+      "indizio": "☀️ Così la foglia prepara il suo cibo"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "FUSTO",
+      "indizio": "🪵 Sostiene la pianta e porta l'acqua"
+    }
+  ],
+  "ricorda": [
+    "🌱 La pianta ha radici, fusto e foglie. Molte hanno fiori e frutti.",
+    "🫚 Le radici bevono l'acqua. 🪵 Il fusto la porta alle foglie.",
+    "☀️ Con luce, acqua e aria le foglie preparano il cibo: è la fotosintesi.",
+    "🫁 Le piante liberano ossigeno: lo respiriamo noi.",
+    "🌸 Dal fiore nasce il frutto. 🌰 Dal seme nasce una nuova pianta."
+  ],
+  "verifica": "verifiche/sci3-le-piante.json"
+}

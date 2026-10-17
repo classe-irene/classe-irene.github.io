@@ -15,6 +15,14 @@
     "missione": "Aiutate Nina a leggere, confrontare e moltiplicare i numeri decimali. Alla fine vincete la figurina della torta!"
   },
   "premio": "🎂",
+  "parole_chiave": [
+    "🔸 virgola",
+    "🔢 parte intera",
+    "🍫 parte decimale",
+    "🟪 decimi",
+    "🟧 centesimi",
+    "🟩 millesimi"
+  ],
   "sezioni": [
     {
       "titolo": "🔸 Il numero con la virgola",
@@ -129,14 +137,6 @@
       }
     }
   ],
-  "parole_chiave": [
-    "🔸 virgola",
-    "🔢 parte intera",
-    "🍫 parte decimale",
-    "🟪 decimi",
-    "🟧 centesimi",
-    "🟩 millesimi"
-  ],
   "esercizi": [
     {
       "tipo": "scelta",
@@ -212,6 +212,25 @@
       ]
     },
     {
+      "tipo": "vero_falso",
+      "immagine": "🟪",
+      "affermazione": "In 4,7 il 7 vale 7 decimi.",
+      "corretta": true,
+      "spiegazione": "Sì! Il 7 è subito dopo la virgola: sono i decimi."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "✏️",
+      "domanda": "Come si scrive: 3 unità e 4 centesimi?",
+      "opzioni": [
+        "🔸 3,04",
+        "🔸 3,4",
+        "🔸 3,40"
+      ],
+      "corretta": 0,
+      "spiegazione": "Non ci sono decimi: metto 0 nei decimi. 3,04."
+    },
+    {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
@@ -250,6 +269,29 @@
         "🔸 0,5",
         "🔸 1,2"
       ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Tocca 1,4 sulla linea.",
+      "min": 1,
+      "max": 2,
+      "passo": 0.1,
+      "corretta": 1.4,
+      "spiegazione": "1,4 è 4 passi dopo l'1."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Quale numero NON è uguale a 0,5?",
+      "elementi": [
+        "🔸 0,5",
+        "🔸 0,50",
+        "🔸 0,05",
+        "🔸 0,500"
+      ],
+      "intruso": 2,
+      "spiegazione": "0,05 sono 5 centesimi. Gli altri sono 5 decimi."
     },
     {
       "tipo": "virgola",
@@ -298,6 +340,15 @@
       "spiegazione": "1,25 × 100 = 125 litri."
     },
     {
+      "tipo": "virgola",
+      "immagine": "🧈",
+      "domanda": "Nina ha 0,375 kg di burro per ogni torta. Fa 1000 torte! Sposta le cifre: 0,375 × 1000",
+      "n": "0,375",
+      "op": "x",
+      "per": 1000,
+      "spiegazione": "0,375 × 1000 = 375 kg di burro."
+    },
+    {
       "tipo": "acchiappa",
       "immagine": "🎯",
       "domanda": "Acchiappa i numeri più grandi di 1!",
@@ -326,6 +377,35 @@
       "spiegazione": "0,80 × 10 = 8. Le cifre vanno a sinistra di un posto."
     },
     {
+      "tipo": "bucato",
+      "immagine": "👩‍🍳",
+      "domanda": "Completa il testo bucato di Nina.",
+      "testo": "Prima della virgola c'è la parte [intera].\nDopo la virgola ci sono i [decimi], poi i centesimi.\nSe moltiplico per 10, le cifre vanno a [sinistra].",
+      "distrattori": [
+        "destra",
+        "millesimi"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dei decimali.",
+      "parole": [
+        "🔸 virgola",
+        "🟪 decimi",
+        "🟧 centesimi",
+        "🟩 millesimi",
+        "🍫 intero"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "DE-CI-MI",
+      "indizio": "🍫 Le 10 parti uguali di un intero"
+    },
+    {
       "tipo": "indovina",
       "immagine": "🎈",
       "domanda": "Indovina la parola!",
@@ -339,5 +419,6 @@
     "⚖️ Per confrontare: prima la parte intera, poi i decimi, poi i centesimi.",
     "⬅️ Per 10, 100, 1000: le cifre vanno a sinistra di 1, 2, 3 posti.",
     "➡️ Diviso 10, 100, 1000: le cifre vanno a destra di 1, 2, 3 posti."
-  ]
+  ],
+  "verifica": "verifiche/mat5-numeri-decimali.json"
 }
