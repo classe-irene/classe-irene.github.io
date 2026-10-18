@@ -1236,3 +1236,6 @@ body.lim .giorno-esercizi .torna-giorni { display: none; }
 .lim-giorni { position: absolute; right: 120px; top: 50%; transform: translateY(-50%); border: 3px solid var(--tema, #3D6BE0); background: #fff; color: var(--tema, #3D6BE0); border-radius: 999px; padding: 10px 20px; font-family: inherit; font-weight: 800; font-size: 1.2rem; cursor: pointer; }
 .mappa.fittissima .sasso:not(.traguardo) { font-size: .56rem; letter-spacing: -.03em; }
 @media (max-width: 600px) { .freccia-su { width: 56px; height: 56px; font-size: 1.4rem; right: 10px; bottom: 14px; } .freccia-su span { font-size: .65rem; } }
+
+/* Pulsante dell'album nella home: dorato, si nota subito. */
+.btn.album-link { background: #FFC83D; color: #4B3200; }
