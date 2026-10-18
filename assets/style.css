@@ -1228,3 +1228,11 @@ body.lim .giorno-esercizi.corrente h3 { font-size: 4.5rem; }
 body.lim .giorno-esercizi.corrente p { font-size: 2rem; flex-basis: auto; }
 /* In LIM il nome dell'esercizio (con giorno e ora) sta sotto il sentiero, non dietro. */
 body.lim .esercizio.corrente > .num { top: 104px; font-size: 1.1rem; }
+.freccia-su { position: fixed; right: 18px; bottom: 22px; z-index: 46; display: grid; justify-items: center; gap: 0; width: 74px; height: 74px; border-radius: 50%; border: 0; background: var(--tema, #3D6BE0); color: #fff; font-family: inherit; font-weight: 800; font-size: 1.9rem; line-height: 1; box-shadow: 0 6px 16px rgba(0,0,0,.2); cursor: pointer; align-content: center; }
+.freccia-su span { font-size: .8rem; }
+.freccia-su[hidden] { display: none; }
+.giorno-esercizi .torna-giorni { margin-left: auto; }
+body.lim .giorno-esercizi .torna-giorni { display: none; }
+.lim-giorni { position: absolute; right: 120px; top: 50%; transform: translateY(-50%); border: 3px solid var(--tema, #3D6BE0); background: #fff; color: var(--tema, #3D6BE0); border-radius: 999px; padding: 10px 20px; font-family: inherit; font-weight: 800; font-size: 1.2rem; cursor: pointer; }
+.mappa.fittissima .sasso:not(.traguardo) { font-size: .56rem; letter-spacing: -.03em; }
+@media (max-width: 600px) { .freccia-su { width: 56px; height: 56px; font-size: 1.4rem; right: 10px; bottom: 14px; } .freccia-su span { font-size: .65rem; } }

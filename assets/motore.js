@@ -166,6 +166,7 @@
 
     radice.querySelectorAll(".anim-posto").forEach((p) => { try { Animazioni.crea(p, JSON.parse(p.dataset.anim)); } catch {} });
     disegnaEsercizi(l, radice);
+    frecciaSu(l, radice);
     try { window.Effetti?.avvia(l, radice); } catch (err) { console.warn(err); }
   }
 
@@ -237,14 +238,27 @@
       ${l.settimana.map((g, gi) => { const x = gg.find((y) => y.gi === gi); return `<button class="giorno" data-azione="vai-giorno" data-giorno="${gi}">
         <b>${h(g.giorno)}</b><span>${g.ore === 1 ? "1 ora" : `${g.ore} ore`}</span><small>esercizi ${x.da}–${x.a}</small></button>`; }).join("")}</div></div>`;
   }
+  // Freccia per tornare in alto (ai giorni della settimana, se ci sono): la pagina è lunga.
+  function frecciaSu(l, radice) {
+    const giorni = radice.querySelector(".settimana");
+    const b = document.createElement("button");
+    b.className = "freccia-su"; b.hidden = true;
+    b.innerHTML = giorni ? "⬆<span>Giorni</span>" : "⬆<span>Su</span>";
+    b.setAttribute("aria-label", giorni ? "Torna ai giorni della settimana" : "Torna in alto");
+    b.onclick = () => (giorni || radice).scrollIntoView({ behavior: "smooth", block: "start" });
+    document.body.append(b);
+    const aggiorna = () => { b.hidden = document.body.classList.contains("lim") || scrollY < innerHeight * 1.2; };
+    addEventListener("scroll", aggiorna, { passive: true }); aggiorna();
+    radice.addEventListener("click", (ev) => { if (ev.target.closest("[data-torna-giorni]")) b.click(); });
+  }
   function giornoHTML(x) {
     const g = x.g;
     return `<div class="giorno-esercizi" data-giorno="${x.gi}">${Figura.img("📅", "figura grande")}
-      <h3>${h(g.giorno)}</h3><p>${g.ore === 1 ? "1 ora" : `${g.ore} ore`} di matematica · esercizi da ${x.da} a ${x.a}</p></div>`;
+      <h3>${h(g.giorno)}</h3><button class="btn bianco piccolo torna-giorni" data-torna-giorni>⬆ Torna ai giorni</button><p>${g.ore === 1 ? "1 ora" : `${g.ore} ore`} di matematica · esercizi da ${x.da} a ${x.a}</p></div>`;
   }
   function mappaHTML(l) {
     const chi = l.storia?.personaggio || "🦉", premio = l.premio || "🏆";
-    return `<div class="mappa${l.esercizi.length > 24 ? " fitta" : ""}" aria-hidden="true"><div class="sentiero">
+    return `<div class="mappa${l.esercizi.length > 24 ? " fitta" : ""}${l.esercizi.length > 40 ? " fittissima" : ""}" aria-hidden="true"><div class="sentiero">
       ${l.esercizi.map((_, i) => `<span class="sasso" data-sasso="${i}">${i + 1}</span>`).join("")}
       <span class="sasso traguardo">${Figura.img(premio, "figura piccola")}</span></div>
       <span class="viaggiatore" style="--pos:0">${Figura.img(chi, "figura media")}</span></div>`;
@@ -275,7 +289,7 @@
         risolti++; punti.textContent = risolti;
         const mappa = radice.querySelector(".mappa");
         if (mappa) {
-          mappa.querySelector(`[data-sasso="${[...box.children].indexOf(el)}"]`)?.classList.add("fatto");
+          mappa.querySelector(`[data-sasso="${[...box.querySelectorAll(".esercizio")].indexOf(el)}"]`)?.classList.add("fatto");
           mappa.querySelector(".viaggiatore").style.setProperty("--pos", risolti / l.esercizi.length);
         }
         Suono.giusto();
@@ -525,6 +539,7 @@
     barra.innerHTML = `<button class="lim-freccia" data-lim="prec" aria-label="Indietro">◀</button>
       <span class="lim-conta"></span>
       <button class="lim-freccia" data-lim="succ" aria-label="Avanti">▶</button>
+      ${radice.querySelector(".settimana") ? `<button class="lim-giorni" data-lim="giorni">📅 Giorni</button>` : ""}
       <button class="lim-esci" data-lim="esci">✕ Esci</button>`;
     document.body.append(barra);
     const succ = barra.querySelector('[data-lim="succ"]');
@@ -556,6 +571,7 @@
       if (a === "prec") mostra(i - 1);
       if (a === "succ") mostra(i + 1);
       if (a === "esci") esci();
+      if (a === "giorni") mostra(0);
     });
     document.addEventListener("keydown", tasti);
     radice.addEventListener("risolto", () => mostra(i));
