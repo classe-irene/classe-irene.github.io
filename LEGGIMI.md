@@ -104,3 +104,4 @@ Le emoji dei tasti numerici (1️⃣ … 🔟) diventano immagini come le altre.
 ## La settimana (esercizi divisi per giorno)
 Campo facoltativo della lezione: `"settimana": [{ "giorno": "Lunedì", "ore": 2, "esercizi": 10 }, ...]` (gli esercizi, in ordine, devono essere in tutto quanti quelli della lezione).
 In alto compaiono i pulsanti dei giorni ("tocca il giorno di oggi"): portano al primo esercizio di quel giorno, anche in modalità LIM. Prima di ogni gruppo c'è il cartello del giorno; ogni esercizio dice giorno e ora ("Esercizio 6 · Lunedì, 2ª ora"), con le ore divise in parti uguali.
+Per tornare su: la freccia blu "⬆ Giorni" in basso a destra (compare scorrendo la pagina), il pulsante "⬆ Torna ai giorni" su ogni cartello e, in modalità LIM, "📅 Giorni" nella barra in basso. Nelle lezioni senza settimana la freccia dice "⬆ Su" e torna in cima.
