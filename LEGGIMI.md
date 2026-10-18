@@ -104,3 +104,14 @@ Le emoji dei tasti numerici (1️⃣ … 🔟) diventano immagini come le altre.
 ## La settimana (esercizi divisi per giorno)
 Campo facoltativo della lezione: `"settimana": [{ "giorno": "Lunedì", "ore": 2, "esercizi": 10 }, ...]` (gli esercizi, in ordine, devono essere in tutto quanti quelli della lezione).
 In alto compaiono i pulsanti dei giorni ("tocca il giorno di oggi"): portano al primo esercizio di quel giorno, anche in modalità LIM. Prima di ogni gruppo c'è il cartello del giorno; ogni esercizio dice giorno e ora ("Esercizio 6 · Lunedì, 2ª ora"), con le ore divise in parti uguali.
+
+## Scomporre, comporre, confrontare (classe 4ª)
+Stessa tabella hk dak uk h da u, numeri fino a 999 999. Gli 0 segnaposto sono in arancione.
+- Video `{"tipo":"scena","scena":"scomponi","n":7254}`: le cifre entrano dall'ultima a destra, poi quanto vale ognuna e la somma (7 254 = 7 000 + 200 + 50 + 4).
+- Video `{"tipo":"scena","scena":"componi","n":62507}`: dai pezzi (6 dak 2 uk 5 h 7 u) al numero, con lo 0 segnaposto e il numero in lettere.
+- Video `{"tipo":"scena","scena":"confronto","a":4352,"b":4318}`: i due numeri uno sotto l'altro; conta le cifre oppure confronta casella per casella da sinistra.
+- Video `{"tipo":"scena","scena":"fila","numeri":[4000,400,40000]}`: ordine crescente e decrescente come una scala.
+- Esercizio `componi` {n, lettere?, mescola?}: il bambino scrive le cifre con il tastierino, casella per casella (anche lo 0); con `lettere` poi sceglie il numero scritto in lettere.
+- Esercizio `scomponi` {n}: per ogni cifra sceglie quanto vale (es. 4 → 4 000).
+- Esercizio `confronta` {a, b, uguale?}: tasti < minore e > maggiore (= solo se i numeri sono uguali o con `uguale`); se sbaglia, la tabella illumina la casella che decide.
+- La voce legge "<" come "è minore di", ">" come "è maggiore di", "+" come "più".

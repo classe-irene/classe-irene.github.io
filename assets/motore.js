@@ -1,8 +1,8 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, colora_frazione, leggi_frazione.
+// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, colora_frazione, leggi_frazione, componi, scomponi, confronta.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "costruisci", "equivalenza", "leggi_tabella", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "costruisci", "equivalenza", "leggi_tabella", "componi", "scomponi", "confronta", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -49,6 +49,8 @@
       if (e.tipo === "costruisci" && !(Number.isInteger(e.numero) && e.numero >= 1 && e.numero <= 100)) errori.push(`${n}: serve "numero" da 1 a 100.`);
       if (e.tipo === "equivalenza" && !(Number.isInteger(e.n) && e.n > 0 && ["k", "h", "da", "u"].includes(e.da) && ["k", "h", "da", "u"].includes(e.a) && Number.isInteger(Animazioni.calcolaEquivalenza(e.n, e.da, e.a)))) errori.push(`${n}: servono "n", "da" e "a" (k, h, da, u) con risultato intero.`);
       if (e.tipo === "leggi_tabella" && !(Number.isInteger(e.n) && e.n > 0 && e.n < 1000 && ["hk", "dak", "uk", "h", "da", "u"].includes(e.da) && ["hk", "dak", "uk", "h", "da", "u"].includes(e.a) && e.da !== e.a)) errori.push(`${n}: servono "n" (fino a 999), "da" e "a" diversi (hk, dak, uk, h, da, u).`);
+      if ((e.tipo === "componi" || e.tipo === "scomponi") && !(Number.isInteger(e.n) && e.n >= 1 && e.n <= 999999)) errori.push(`${n}: serve "n", un numero intero da 1 a 999 999.`);
+      if (e.tipo === "confronta" && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 0 && e.b >= 0 && e.a <= 999999 && e.b <= 999999)) errori.push(`${n}: servono "a" e "b", numeri interi fino a 999 999.`);
       if ((e.tipo === "colora_frazione" || e.tipo === "leggi_frazione") && !(Number.isInteger(e.d) && Number.isInteger(e.n) && e.d >= 2 && e.d <= 10 && e.n >= 1 && e.n < (e.tipo === "colora_frazione" ? e.d + 1 : e.d))) errori.push(`${n}: servono "n" e "d" (d da 2 a 10, n più piccolo di d).`);
       if (e.tipo === "virgola" && !(["x", ":"].includes(e.op) && [10, 100, 1000].includes(+e.per) && Animazioni.calcolaVirgola(e.n, e.op, +e.per))) errori.push(`${n}: servono "n" (es. "2,35"), "op" ("x" o ":") e "per" (10, 100 o 1000); il numero e il risultato devono stare nella tabella h da u , d c m.`);
       if (e.tipo === "retta" && !(Number.isFinite(e.min) && Number.isFinite(e.max) && Number.isFinite(e.corretta))) errori.push(`${n}: servono min, max e corretta.`);
@@ -489,6 +491,12 @@
     Animazioni.esercizioEquivalenza(e, c, esito, domanda(e.domanda || `Sposta il numero nella tabella: ${e.n} ${e.da} = ? ${e.a}`, e));
   ESERCIZI.leggi_tabella = (e, c, esito) =>
     Animazioni.esercizioLeggiTabella(e, c, esito, domanda(e.domanda || `Quante ${e.a} sono ${e.n} ${e.da}? Usa la tabella.`, e));
+  ESERCIZI.componi = (e, c, esito) =>
+    Animazioni.esercizioComponi(e, c, esito, domanda(e.domanda || "Componi il numero: scrivi le cifre nella tabella.", e));
+  ESERCIZI.scomponi = (e, c, esito) =>
+    Animazioni.esercizioScomponi(e, c, esito, domanda(e.domanda || `Scomponi il numero ${String(e.n).replace(/\B(?=(\d{3})+(?!\d))/g, " ")}: quanto vale ogni cifra?`, e));
+  ESERCIZI.confronta = (e, c, esito) =>
+    Animazioni.esercizioConfronta(e, c, esito, domanda(e.domanda || "Scegli il segno giusto.", e));
   ESERCIZI.colora_frazione = (e, c, esito) =>
     Animazioni.esercizioColoraFrazione(e, c, esito, domanda(e.domanda || `Colora ${e.n}/${e.d} della ${e.forma === "cioccolata" ? "tavoletta" : "pizza"}.`, e));
   ESERCIZI.leggi_frazione = (e, c, esito) =>

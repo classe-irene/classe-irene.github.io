@@ -907,6 +907,281 @@
     });
   }
 
+  /* ---------- Scomporre, comporre e confrontare i numeri (classe 4ª) ----------
+     Stessa tabella hk dak uk h da u. Le cifre entrano partendo dall'ultima a destra (le unità);
+     ogni cifra vale tanto quanto dice la sua casella; lo 0 tiene il posto vuoto (segnaposto). */
+  const cifreIn6 = (n) => { const s = String(n), c = Array(6).fill(""); [...s].forEach((ch, k) => { c[6 - s.length + k] = ch; }); return c; };
+  const valoreIn6 = (d, i) => migliaia(String(d * 10 ** (5 - i)));
+  const parti6 = (c) => c.map((x, i) => (x && x !== "0" ? { d: x, i } : null)).filter(Boolean);
+  const L_UNITA = ["", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici", "diciassette", "diciotto", "diciannove"];
+  const L_DECINE = ["", "", "venti", "trenta", "quaranta", "cinquanta", "sessanta", "settanta", "ottanta", "novanta"];
+  function centinaiaInLettere(n) {
+    const c = Math.floor(n / 100), r = n % 100;
+    let s = c ? (c === 1 ? "cento" : L_UNITA[c] + "cento") : "", t;
+    if (r < 20) t = L_UNITA[r];
+    else { const d = Math.floor(r / 10), u = r % 10; t = L_DECINE[d]; if (u === 1 || u === 8) t = t.slice(0, -1); t += L_UNITA[u]; }
+    if (s && t.startsWith("ottant")) s = s.slice(0, -1); // centottanta
+    return s + t;
+  }
+  // 27315 -> "ventisettemilatrecentoquindici"
+  function inLettere(n) {
+    if (!n) return "zero";
+    const k = Math.floor(n / 1000), r = n % 1000;
+    const mila = !k ? "" : k === 1 ? "mille" : centinaiaInLettere(k).replace(/uno$/, "un") + "mila";
+    const s = mila + centinaiaInLettere(r);
+    return s.length > 3 && s.endsWith("tre") ? s.slice(0, -3) + "tré" : s;
+  }
+  // La tabella spostata in basso, per lasciare posto al numero sopra.
+  const tabellaGiu = (dy, opz) => `<g transform="translate(0 ${dy})">${tabella6SVG(opz)}</g>`;
+  const zeriSegnaposto = (c, dy) => c.map((x, i) => (x === "0" ? `<text x="${X6(i)}" y="${160 + dy}" class="t6-cifra segnaposto">0</text>` : "")).join("");
+  // Tabella con le cifre: gli 0 segnaposto in arancione.
+  const tabCifre = (c, dy, evid = -1) => tabellaGiu(dy, { evid, cifre: c.map((x) => (x === "0" ? "" : x)) }) + zeriSegnaposto(c, dy);
+
+  function scenaScomponi(anim) {
+    const n = Math.max(1, Math.min(999999, Math.floor(+anim.n) || 8692));
+    const c = cifreIn6(n), prima = c.findIndex((x) => x !== ""), N = migliaia(String(n));
+    const pezzi = [{ da: 0, svg: `<text x="320" y="54" class="sc-numero-grande">${N}</text>` }], passi = [];
+    pezzi.push({ da: 0, a: 0, svg: tabellaGiu(70) });
+    passi.push(`Ecco il numero ${N}. Quanto vale ogni cifra? Mettiamo il numero nella tabella.`);
+    let k = 1;
+    for (let i = 5; i >= prima; i--, k++) {
+      pezzi.push({ da: k, a: k, svg: tabCifre(c.map((x, j) => (j >= i ? x : "")), 70, i) });
+      passi.push(i === 5 ? `Parto dall'ultima cifra a destra: la cifra ${c[i]} va nella casella delle unità.` : `La cifra ${c[i]} va nella casella ${COL6[i].s}.`);
+    }
+    const righe = [];
+    const lista = () => righe.map((r, j) => `<text x="${j < 3 ? 170 : 470}" y="${298 + (j % 3) * 38}" class="sc-riga" fill="${r.zero ? "#9AA3B2" : COL6[r.i].c}">${r.testo}</text>`).join("");
+    for (let i = prima; i <= 5; i++, k++) {
+      const d = +c[i], zero = d === 0, U = COL6[i];
+      righe.push({ i, zero, testo: zero ? `0 ${U.s} = 0` : `${d} ${U.s} = ${valoreIn6(d, i)}` });
+      pezzi.push({ da: k, a: k, svg: tabCifre(c, 70, i) + lista() });
+      passi.push(zero ? `La cifra 0 è nella casella ${U.s}: non ci sono ${U.nome}. Lo 0 tiene il posto vuoto.`
+        : `La cifra ${d} è nella casella ${U.s}: vale ${valoreIn6(d, i)}.`);
+    }
+    const somma = parti6(c).map((p) => valoreIn6(+p.d, p.i)).join(" + ");
+    pezzi.push({ da: k, svg: tabCifre(c, 70) + lista() + `<text x="320" y="428" class="sc-somma">${N} = ${somma}</text>` });
+    passi.push(`Ecco il numero scomposto: ${N} = ${somma}.`);
+    return { viewBox: "0 0 640 450", pezzi, passi };
+  }
+
+  function scenaComponi(anim) {
+    const n = Math.max(1, Math.min(999999, Math.floor(+anim.n) || 27315));
+    const c = cifreIn6(n), prima = c.findIndex((x) => x !== ""), N = migliaia(String(n)), parti = parti6(c);
+    const testoParti = parti.map((p) => `${p.d} ${COL6[p.i].s}`).join(" ");
+    const intestazione = (att) => `<text x="320" y="52" class="sc-parti">${parti.map((p) => `<tspan fill="${COL6[p.i].c}" ${p.i === att ? 'class="attiva"' : ""}>${p.d} ${COL6[p.i].s}</tspan>`).join("<tspan> </tspan>")}</text>`;
+    const pezzi = [], passi = [];
+    pezzi.push({ da: 0, a: 0, svg: intestazione(-1) + tabellaGiu(70) });
+    passi.push(`Ora facciamo il contrario: componiamo il numero. Abbiamo ${testoParti}.`);
+    const scritte = Array(6).fill("");
+    let k = 1;
+    parti.forEach((p) => {
+      scritte[p.i] = p.d;
+      pezzi.push({ da: k, a: k, svg: intestazione(p.i) + tabellaGiu(70, { evid: p.i, cifre: [...scritte] }) });
+      passi.push(`${p.d} ${COL6[p.i].s}: scrivo ${p.d} nella casella ${COL6[p.i].s}.`); k++;
+    });
+    const vuote = c.some((x, i) => x === "0" && i >= prima);
+    if (vuote) {
+      pezzi.push({ da: k, svg: intestazione(-1) + tabCifre(c, 70) });
+      const nomi = c.map((x, i) => (x === "0" && i >= prima ? COL6[i].nome : null)).filter(Boolean);
+      passi.push(`Nelle ${nomi.join(" e nelle ")} non c'è niente. Non lascio la casella vuota: ci scrivo 0. Lo 0 è il segnaposto, tiene il posto.`); k++;
+    } else pezzi.push({ da: k, svg: intestazione(-1) + tabellaGiu(70, { cifre: [...scritte] }) });
+    const lettere = inLettere(n);
+    pezzi.push({ da: k, svg: `<text x="320" y="318" class="sc-somma">Il numero è ${N}</text><text x="320" y="368" class="sc-lettere" ${lettere.length > 34 ? 'textLength="600" lengthAdjust="spacingAndGlyphs"' : ""}>${lettere}</text>` });
+    passi.push(`Il numero è ${N}. In lettere si scrive ${lettere}.`);
+    return { viewBox: "0 0 640 390", pezzi, passi };
+  }
+
+  // Due numeri nella tabella, uno sotto l'altro: unità sotto unità.
+  function tabella2SVG(ca, cb, { evid = [], fatte = [] } = {}) {
+    let svg = `<rect x="20" y="6" width="298" height="28" rx="8" class="t6-classe"/><text x="169" y="26" class="t6-classe-t">MIGLIAIA</text>
+      <rect x="322" y="6" width="298" height="28" rx="8" class="t6-classe semplici"/><text x="471" y="26" class="t6-classe-t">UNITÀ SEMPLICI</text>`;
+    COL6.forEach((x, i) => {
+      const acc = evid.includes(i);
+      svg += `<rect x="${X6(i) - 48}" y="40" width="96" height="46" rx="10" fill="${x.c}" opacity="${acc ? 1 : .22}"/>
+        <text x="${X6(i)}" y="72" class="t6-sigla" fill="${acc ? "#fff" : x.c}">${x.s}</text>`;
+      [[ca, 92], [cb, 168]].forEach(([cc, y]) => {
+        svg += `<rect x="${X6(i) - 48}" y="${y}" width="96" height="70" rx="10" class="t6-casella ${acc ? "accesa" : ""}" ${acc ? `stroke="${x.c}"` : ""}/>`;
+        if (cc[i]) svg += `<text x="${X6(i)}" y="${y + 54}" class="t6-cifra due ${fatte.includes(i) ? "spenta" : ""}">${cc[i]}</text>`;
+      });
+    });
+    return svg;
+  }
+  // Perché un numero è maggiore o minore: { testo, evid } con le caselle da guardare.
+  function confronto(a, b) {
+    const A = migliaia(String(a)), B = migliaia(String(b)), sa = String(a), sb = String(b);
+    const segno = a < b ? "<" : a > b ? ">" : "=", parola = a < b ? "minore" : a > b ? "maggiore" : "uguale";
+    if (sa.length !== sb.length) {
+      const [lungo, corto] = sa.length > sb.length ? [sa, sb] : [sb, sa];
+      const evid = Array.from({ length: lungo.length - corto.length }, (_, j) => 6 - lungo.length + j);
+      return { segno, parola, evid, cifre: true, testo: `${migliaia(lungo)} ha ${lungo.length} cifre, ${migliaia(corto)} ne ha ${corto.length}. È maggiore il numero con più cifre.` };
+    }
+    const ca = cifreIn6(a), cb = cifreIn6(b), prima = 6 - sa.length;
+    const i = ca.findIndex((x, j) => j >= prima && x !== cb[j]);
+    if (i < 0) return { segno, parola, evid: [], uguali: Array.from({ length: 6 - prima }, (_, j) => prima + j), testo: `${A} e ${B} hanno tutte le cifre uguali: sono uguali.` };
+    const x = ca[i], y = cb[i], s = COL6[i].s;
+    return { segno, parola, evid: [i], uguali: Array.from({ length: i - prima }, (_, j) => prima + j),
+      testo: i === prima ? `Hanno lo stesso numero di cifre. Guardo la prima cifra: ${x} è ${+x > +y ? "maggiore" : "minore"} di ${y}.`
+        : `Le cifre prima della casella ${s} sono uguali. Nella casella ${s}: ${x} è ${+x > +y ? "maggiore" : "minore"} di ${y}.` };
+  }
+  const segnoSVG = (s) => ({ "<": "&lt;", ">": "&gt;", "=": "=" }[s]);
+  function scenaConfronto(anim) {
+    const a = Math.max(0, Math.min(999999, Math.floor(+anim.a) || 0)), b = Math.max(0, Math.min(999999, Math.floor(+anim.b) || 0));
+    const A = migliaia(String(a)), B = migliaia(String(b)), ca = cifreIn6(a), cb = cifreIn6(b), sa = String(a), sb = String(b);
+    const C = confronto(a, b);
+    const pezzi = [], passi = [];
+    pezzi.push({ da: 0, a: 0, svg: tabella2SVG(ca, cb) });
+    passi.push(`Confrontiamo ${A} e ${B}. Li metto nella tabella, uno sotto l'altro: le unità sotto le unità.`);
+    let k = 1;
+    if (sa.length !== sb.length) {
+      pezzi.push({ da: k, a: k, svg: tabella2SVG(ca, cb, { evid: C.evid }) });
+      passi.push(`Conto le cifre. ${C.testo}`); k++;
+    } else {
+      const prima = 6 - sa.length;
+      for (let i = prima; i < 6; i++, k++) {
+        const x = ca[i], y = cb[i], s = COL6[i].s;
+        pezzi.push({ da: k, a: k, svg: tabella2SVG(ca, cb, { evid: [i], fatte: Array.from({ length: i - prima }, (_, j) => prima + j) }) });
+        if (i === prima) passi.push(`Hanno lo stesso numero di cifre. Allora guardo la prima cifra a sinistra, nella casella ${s}: ${x} e ${y}.${x === y ? " Sono uguali: vado avanti." : ""}`);
+        else passi.push(`Nella casella ${s}: ${x} e ${y}.${x === y ? " Sono uguali: vado avanti." : ""}`);
+        if (x !== y) { passi[passi.length - 1] += ` ${x} è ${+x > +y ? "maggiore" : "minore"} di ${y}!`; k++; break; }
+      }
+    }
+    pezzi.push({ da: k, svg: tabella2SVG(ca, cb, { evid: C.evid }) + `<text x="320" y="306" class="sc-confronto"><tspan>${A}</tspan><tspan class="sc-segno" dx="18">${segnoSVG(C.segno)}</tspan><tspan dx="18">${B}</tspan></text><text x="320" y="352" class="sc-lettere">${A} è ${C.parola}${C.segno === "=" ? " a" : " di"} ${B}</text>` });
+    passi.push(C.segno === "=" ? `${A} è uguale a ${B}.` : `Quindi ${A} è ${C.parola} di ${B}. La punta del segno guarda il numero più piccolo.`);
+    return { viewBox: "0 0 640 370", pezzi, passi };
+  }
+
+  // Numeri in fila: disordine, cifre contate, scala crescente e scala decrescente.
+  function scenaFila(anim) {
+    const nn = (anim.numeri || [4000, 400, 40000]).map((x) => Math.floor(+x)).filter((x) => x >= 0 && x <= 999999).slice(0, 5);
+    const L = nn.length, W = 600 / L;
+    const carta = (x, y, n, cls = "") => `<g class="sc-entra"><rect x="${x - W * 0.42}" y="${y}" width="${W * 0.84}" height="58" rx="12" class="sc-carta ${cls}"/><text x="${x}" y="${y + 40}" class="sc-carta-t">${migliaia(String(n))}</text></g>`;
+    const cresc = [...nn].sort((p, q) => p - q), decr = [...cresc].reverse();
+    // La freccia passa sotto le carte, come il corrimano della scala.
+    const scala = (lista, sale) => `<path d="M${W * 0.1} ${sale ? 308 : 308 - (L - 1) * 44} L${600 - W * 0.1} ${sale ? 308 - (L - 1) * 44 : 308}" class="sc-freccia sequenza"/>`
+      + lista.map((n, i) => carta(W * i + W / 2, sale ? 230 - i * 44 : 230 - (L - 1 - i) * 44, n)).join("");
+    const elenco = (l) => l.map((n) => migliaia(String(n))).join(", ");
+    const pezzi = [
+      { da: 0, a: 1, svg: nn.map((n, i) => carta(W * i + W / 2, 130, n)).join("") },
+      { da: 1, a: 1, svg: nn.map((n, i) => `<text x="${W * i + W / 2}" y="230" class="sc-cifre">${String(n).length} cifre</text>`).join("") },
+      { da: 2, a: 2, svg: scala(cresc, true) },
+      { da: 3, a: 3, svg: scala(decr, false) }];
+    const passi = [`Ecco dei numeri in disordine: ${elenco(nn)}.`,
+      "Conto le cifre di ogni numero: chi ha meno cifre è più piccolo.",
+      `Ordine crescente, dal più piccolo al più grande, come una scala che sale: ${elenco(cresc)}.`,
+      `Ordine decrescente, dal più grande al più piccolo, come una scala che scende: ${elenco(decr)}.`];
+    return { viewBox: "0 0 600 320", pezzi, passi };
+  }
+
+  /* ---------- Esercizio "componi": il bambino scrive le cifre nella tabella (anche lo 0 segnaposto) ---------- */
+  function esercizioComponi(e, c, esito, intestazione) {
+    const n = +e.n, ci = cifreIn6(n), prima = ci.findIndex((x) => x !== ""), N = migliaia(String(n));
+    const parti = parti6(ci), ordine = e.mescola ? mescola(parti) : parti;
+    const scritte = Array(6).fill("");
+    let i = prima, fase = 1;
+    const lettere = inLettere(n);
+    // Altri numeri con le stesse cifre scambiate: si distinguono solo leggendo bene.
+    const simili = [];
+    for (let x = 0; x < String(n).length && simili.length < 6; x++) for (let y = x + 1; y < String(n).length; y++) {
+      const s = [...String(n)]; [s[x], s[y]] = [s[y], s[x]];
+      if (s[0] !== "0" && +s.join("") !== n && !simili.includes(+s.join(""))) simili.push(+s.join(""));
+    }
+    const opzioni = mescola([lettere, ...mescola(simili).slice(0, 2).map(inLettere)]);
+    c.innerHTML = intestazione + `<div class="componi">
+      <div class="cp-parti">${ordine.map((p) => `<span class="cp-parte" data-i="${p.i}" style="--c:${COL6[p.i].c}">${p.d} ${COL6[p.i].s}</span>`).join("")}</div>
+      <p class="lt-fase"></p>
+      <svg viewBox="0 0 640 190" class="lt-tabella"></svg>
+      <div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}</div>
+      <div class="cp-numero" hidden></div>
+      <div class="lt-opzioni cp-lettere" hidden>${opzioni.map((o) => `<button class="opzione" data-o="${o}">${o}</button>`).join("")}</div></div>`;
+    const svg = c.querySelector(".lt-tabella"), fase_ = c.querySelector(".lt-fase"), tasti = c.querySelector(".tastierino");
+    const numero = c.querySelector(".cp-numero"), ops = c.querySelector(".cp-lettere");
+    const disegna = () => {
+      c.querySelectorAll(".cp-parte").forEach((x) => { x.classList.toggle("attiva", +x.dataset.i === i); x.classList.toggle("fatta", scritte[+x.dataset.i] !== ""); });
+      if (fase === 1) {
+        svg.innerHTML = tabCifre(scritte, 0, i);
+        const U = COL6[i];
+        fase_.innerHTML = ci[i] === "0" ? `Casella <b>${U.s}</b>: nelle parti in alto non c'è. Che cosa scrivi?` : `Casella <b>${U.s}</b>: quante ${U.nome}? Guarda in alto e tocca la cifra.`;
+      } else svg.innerHTML = tabCifre(scritte, 0);
+    };
+    disegna();
+    tasti.addEventListener("click", (ev) => {
+      const t = ev.target.closest(".tasto");
+      if (!t || fase !== 1 || c.classList.contains("risolto")) return;
+      if (t.dataset.d === ci[i]) {
+        scritte[i] = ci[i]; i++; esito.bene?.(t);
+        if (i > 5) {
+          fase = 2; tasti.hidden = true; numero.hidden = false; disegna();
+          numero.innerHTML = `Il numero è <b>${N}</b>`;
+          if (e.lettere) { fase_.innerHTML = "Ora scegli: come si scrive in lettere?"; ops.hidden = false; Suono.giusto(); }
+          else { fase_.textContent = ""; esito.ok(); }
+        } else { Suono.giusto(); disegna(); }
+      } else {
+        e.suggerimento = ci[i] === "0" ? "Questa casella è vuota: scrivi 0, il segnaposto!" : `Cerca in alto le ${COL6[i].nome} (${COL6[i].s}).`;
+        esito.ko(t);
+      }
+    });
+    ops.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-o]");
+      if (!b || c.classList.contains("risolto")) return;
+      if (b.dataset.o === lettere) { b.classList.add("giusta"); esito.ok(); }
+      else { e.suggerimento = `Leggi piano: ${N}.`; esito.ko(b); }
+    });
+  }
+
+  /* ---------- Esercizio "scomponi": quanto vale ogni cifra? ---------- */
+  function esercizioScomponi(e, c, esito, intestazione) {
+    const n = +e.n, ci = cifreIn6(n), N = migliaia(String(n)), parti = parti6(ci);
+    let k = 0;
+    const fatte = [];
+    c.innerHTML = intestazione + `<div class="leggi-tab">
+      <div class="eq-domanda sp-riga">${N} = <span class="sp-somma">?</span></div>
+      <svg viewBox="0 0 640 190" class="lt-tabella"></svg>
+      <p class="lt-fase"></p>
+      <div class="lt-opzioni"></div></div>`;
+    const svg = c.querySelector(".lt-tabella"), fase_ = c.querySelector(".lt-fase"), ops = c.querySelector(".lt-opzioni"), somma = c.querySelector(".sp-somma");
+    const disegna = () => {
+      const p = parti[k], d = +p.d, U = COL6[p.i];
+      svg.innerHTML = tabCifre(ci, 0, p.i);
+      fase_.innerHTML = `La cifra <b>${d}</b> è nella casella <b>${U.s}</b>. Quanto vale?`;
+      const v = d * 10 ** (5 - p.i), altri = v >= 100000 ? [v / 10, v / 100] : v < 10 ? [v * 10, v * 100] : [v * 10, v / 10];
+      ops.innerHTML = mescola([v, ...altri]).map((x) => `<button class="opzione" data-v="${x}">${migliaia(String(x))}</button>`).join("");
+    };
+    disegna();
+    ops.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-v]");
+      if (!b || c.classList.contains("risolto")) return;
+      const p = parti[k], v = +p.d * 10 ** (5 - p.i);
+      if (+b.dataset.v === v) {
+        fatte.push(migliaia(String(v))); k++; esito.bene?.(b);
+        somma.textContent = fatte.join(" + ") + (k < parti.length ? " + …" : "");
+        if (k >= parti.length) { ops.innerHTML = ""; fase_.textContent = ""; svg.innerHTML = tabCifre(ci, 0); esito.ok(); }
+        else { Suono.giusto(); disegna(); }
+      } else {
+        const zeri = 5 - p.i;
+        e.suggerimento = zeri ? `Dopo la casella ${COL6[p.i].s} ci sono ${zeri} ${zeri === 1 ? "casella" : "caselle"}: scrivi ${p.d} e ${zeri === 1 ? "uno zero" : zeri + " zeri"}.` : "Le unità valgono proprio quella cifra.";
+        esito.ko(b);
+      }
+    });
+  }
+
+  /* ---------- Esercizio "confronta": > oppure < ---------- */
+  function esercizioConfronta(e, c, esito, intestazione) {
+    const a = +e.a, b = +e.b, A = migliaia(String(a)), B = migliaia(String(b)), C = confronto(a, b);
+    const tasti = [["<", "minore"], [">", "maggiore"], ...(a === b || e.uguale ? [["=", "uguale"]] : [])];
+    c.innerHTML = intestazione + `<div class="confronta">
+      <div class="cf-riga"><span class="cf-num">${A}</span><span class="cf-segno">?</span><span class="cf-num">${B}</span></div>
+      <div class="cf-tasti">${tasti.map(([s, p]) => `<button class="opzione cf-tasto" data-s="${s}"><b>${escapeHTML(s)}</b> ${p}</button>`).join("")}</div>
+      <svg viewBox="0 0 640 245" class="lt-tabella cf-tabella"></svg></div>`;
+    const svg = c.querySelector(".cf-tabella"), segno = c.querySelector(".cf-segno");
+    svg.innerHTML = tabella2SVG(cifreIn6(a), cifreIn6(b));
+    if (!e.spiegazione) e.spiegazione = `${A} ${C.segno} ${B}. ${C.testo}`;
+    c.querySelector(".cf-tasti").addEventListener("click", (ev) => {
+      const t = ev.target.closest("[data-s]");
+      if (!t || c.classList.contains("risolto")) return;
+      if (t.dataset.s === C.segno) { t.classList.add("giusta"); segno.textContent = C.segno; segno.classList.add("fatto"); svg.innerHTML = tabella2SVG(cifreIn6(a), cifreIn6(b), { evid: C.evid }); esito.ok(); }
+      else { svg.innerHTML = tabella2SVG(cifreIn6(a), cifreIn6(b), { evid: C.evid, fatte: C.uguali || [] }); e.suggerimento = C.testo; esito.ko(t); }
+    });
+  }
+
   /* ---------- Numeri decimali: tabella h da u , d c m (classe 5ª) ----------
      Un numero è { D: cifre senza virgola, p: quante cifre stanno prima della virgola }.
      × 10, 100, 1000: le cifre si spostano verso sinistra; : 10, 100, 1000 verso destra.
@@ -1331,7 +1606,7 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti };
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti, scomponi: scenaScomponi, componi: scenaComponi, confronto: scenaConfronto, fila: scenaFila };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
@@ -1529,5 +1804,5 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

@@ -204,7 +204,8 @@ window.Voce = (() => {
     .replace(/\b([Qq]uant[ei]) (hk|dak|uk|h|da|u)\b(?![àèéìòù'])/g, (m, q, s) => `${q} ${SIGLE[s][1]}`)
     .replace(/\b(hk|dak|uk)\b/g, (m, s) => SIGLE[s][1])
     .replace(/(^|[^\d\/])(\d{1,2})\/(\d{1,2})(?![\d\/])/g, (m, p, n, d) => (FRAZ[d] ? `${p}${n === "1" ? "un" : n} ${FRAZ[d][n === "1" ? 0 : 1]}` : m))
-    .replace(/ = /g, " uguale a ");
+    .replace(/ = /g, " uguale a ")
+    .replace(/ < /g, " è minore di ").replace(/ > /g, " è maggiore di ").replace(/ \+ /g, " più ");
   const leggibile = (t) => sigle(t.replace(/(\d)[ \u00a0\u202f.](?=\d{3}(?!\d))/g, "$1")).replace(/(^|[^\d,.])1 ([a-zàèéìòù]+)/gi, (tutto, prima, parola) =>
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
 
