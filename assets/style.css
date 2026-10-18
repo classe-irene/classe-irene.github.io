@@ -868,6 +868,43 @@ body.lim .compagno { bottom: 124px; }
 .lt-opzioni { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .lt-opzioni[hidden] { display: none; }
 body.lim .lt-tabella { max-height: 40vh; }
+/* ---------- Scomporre, comporre, confrontare (classe 4ª) ---------- */
+.sc-numero-grande { font: 800 52px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.sc-riga { font: 800 26px "Baloo 2", sans-serif; text-anchor: middle; }
+.sc-somma { font: 800 32px "Baloo 2", sans-serif; text-anchor: middle; fill: #1F9D66; }
+.sc-lettere { font: 800 26px "Nunito", sans-serif; text-anchor: middle; fill: #6B4FC8; }
+.sc-parti { font: 800 38px "Baloo 2", sans-serif; text-anchor: middle; }
+.sc-parti .attiva { text-decoration: underline; font-size: 46px; }
+.sc-confronto { font: 800 48px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.sc-segno { fill: #E0533D; font-size: 60px; }
+.t6-cifra.segnaposto { fill: #F2994A; }
+.sc-carta { fill: #fff; stroke: #8B5CF6; stroke-width: 4; }
+.sc-carta-t { font: 800 28px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.sc-cifre { font: 800 22px "Nunito", sans-serif; text-anchor: middle; fill: #E0533D; }
+.t6-cifra.due { font-size: 50px; }
+.componi { display: grid; gap: 10px; justify-items: center; }
+.cp-parti { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.cp-parte { font: 800 1.9rem "Baloo 2", sans-serif; color: var(--c); background: #fff; border: 3px solid var(--c); border-radius: 14px; padding: 2px 16px; }
+.cp-parte.attiva { background: var(--c); color: #fff; transform: scale(1.08); }
+.cp-parte.fatta { opacity: .45; }
+.cp-numero { font: 800 2.2rem "Baloo 2", sans-serif; }
+.cp-numero b { color: #1F9D66; }
+.componi .tastierino[hidden], .cp-numero[hidden] { display: none; }
+.sp-riga { text-align: center; }
+.sp-somma { color: #1F9D66; }
+.confronta { display: grid; gap: 14px; justify-items: center; }
+.cf-riga { display: flex; align-items: center; gap: 22px; font: 800 2.8rem "Baloo 2", sans-serif; }
+.cf-segno { display: inline-grid; place-items: center; width: 74px; height: 74px; border-radius: 50%; border: 4px dashed #C9CED6; color: #9AA3B2; }
+.cf-segno.fatto { border: 4px solid #E0533D; color: #E0533D; background: #FFF3EF; }
+.cf-tasti { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.cf-tasto b { font-size: 2rem; margin-right: 6px; color: #E0533D; }
+.cf-tabella { width: min(100%, 560px); }
+@media (max-width: 560px) { .cf-riga { font-size: 2rem; gap: 10px; } .cf-segno { width: 54px; height: 54px; } .cp-parte { font-size: 1.4rem; } }
+body.lim .cf-riga { font-size: 4rem; }
+body.lim .cf-segno { width: 100px; height: 100px; }
+body.lim .cp-parte { font-size: 2.4rem; }
+body.lim .cf-tabella { max-height: 30vh; }
+
 html, body { overflow-x: clip; }
 @media (max-width: 700px) {
   .sentiero { gap: 2px; }

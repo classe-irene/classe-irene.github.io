@@ -61,6 +61,8 @@ window.CURRICOLO = {
     ],
     4: [
       { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri.", lezione: "lezioni/mat4-grandi-numeri.json" },
+      { id: "mat4-scomporre", emoji: "🧩", titolo: "Scomporre e comporre", descrizione: "Quanto vale ogni cifra; lo 0 segnaposto.", lezione: "lezioni/mat4-scomporre-e-comporre.json" },
+      { id: "mat4-confronto", emoji: "🐊", titolo: "Il confronto tra numeri", descrizione: "Maggiore, minore, uguale; crescente e decrescente.", lezione: "lezioni/mat4-confronto-tra-numeri.json" },
       { id: "mat4-equivalenze", emoji: "🔄", titolo: "Le equivalenze con i numeri", descrizione: "Unità, decine, centinaia e migliaia.", lezione: "lezioni/mat4-equivalenze-numeriche.json" },
       { id: "mat4-relazione", emoji: "⚖️", titolo: "La relazione di equivalenza", descrizione: "Tabella hk, dak, uk, h, da, u e virgola.", lezione: "lezioni/mat4-relazione-di-equivalenza.json" },
       { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime.", lezione: "lezioni/mat4-moltiplicazioni-due-cifre.json" },
