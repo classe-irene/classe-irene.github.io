@@ -18,6 +18,8 @@
     if (!l.titolo) errori.push("Manca il titolo.");
     if (!Array.isArray(l.sezioni) || !l.sezioni.length) errori.push("Mancano le sezioni della spiegazione.");
     if (!Array.isArray(l.esercizi) || !l.esercizi.length) errori.push("Mancano gli esercizi.");
+    if (l.settimana !== undefined && !(Array.isArray(l.settimana) && l.settimana.every((g) => g.giorno && Number.isInteger(g.ore) && g.ore >= 1 && Number.isInteger(g.esercizi) && g.esercizi >= 1)
+      && l.settimana.reduce((t, g) => t + g.esercizi, 0) === (l.esercizi || []).length)) errori.push('"settimana": ogni giorno vuole giorno, ore ed esercizi, e gli esercizi devono essere in tutto quanti quelli della lezione.');
     (l.sezioni || []).forEach((s, i) => {
       const an = s.animazione;
       if (!an) return;
@@ -66,6 +68,7 @@
         <div class="etichetta" style="background:var(--tema-chiaro);color:var(--tema)">${h(materia.nome)}${l.classe ? ` · classe ${h(l.classe)}ª` : ""}</div>
         <h1>${h(l.titolo)}</h1>
         ${l.introduzione ? `<p>${h(l.introduzione)}</p>` : ""}
+        ${settimanaHTML(l)}
       </div>
       <div class="barra-lezione">
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
@@ -115,6 +118,12 @@
       const a = b.dataset.azione;
       if (a === "leggi-tutto") leggiLezione(b);
       if (a === "scritte") { Sottotitoli.attivo = !Sottotitoli.attivo; b.textContent = `💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}`; }
+      if (a === "vai-giorno") {
+        const g = radice.querySelector(`.giorno-esercizi[data-giorno="${b.dataset.giorno}"]`);
+        if (document.body.classList.contains("lim")) radice.dispatchEvent(new CustomEvent("lim-vai", { detail: g }));
+        // Salto subito e poi ricontrollo: le figure che si caricano lungo la strada spostano la pagina.
+        else if (g) { g.scrollIntoView({ block: "start" }); [300, 900].forEach((t) => setTimeout(() => g.scrollIntoView({ behavior: "smooth", block: "start" }), t)); }
+      }
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "vai-quaderno") { const q = radice.querySelector(".quaderno"); if (document.body.classList.contains("lim")) apriQuaderno(l.quaderno); else q?.scrollIntoView({ behavior: "smooth", block: "start" }); }
       if (a === "apri-quaderno") apriQuaderno(l.quaderno);
@@ -208,6 +217,29 @@
       <ol class="passi-esp">${(x.passi || []).map((p) => `<li><button class="passo-esp">${Figura.ricco(p, "figura piccola")}</button></li>`).join("")}</ol>
       ${x.domanda ? `<p class="esp-domanda">🤔 ${h(x.domanda)}</p>` : ""}</div>`;
   }
+  /* ---------- La settimana: gli esercizi divisi per giorno e per ora di matematica ---------- */
+  // Per ogni esercizio: il giorno (indice) e l'ora dentro il giorno, con le ore divise in parti uguali.
+  function giornate(l) {
+    if (!Array.isArray(l.settimana)) return [];
+    const fuori = [];
+    let k = 0;
+    l.settimana.forEach((g, gi) => {
+      for (let j = 0; j < g.esercizi; j++) fuori[k++] = { gi, g, primo: j === 0, da: k - j, a: k - j + g.esercizi - 1, ora: Math.floor((j * g.ore) / g.esercizi) + 1 };
+    });
+    return fuori;
+  }
+  function settimanaHTML(l) {
+    const gg = giornate(l);
+    if (!gg.length) return "";
+    return `<div class="settimana"><p class="settimana-titolo">📅 Gli esercizi della settimana: tocca il giorno di oggi</p><div class="settimana-giorni">
+      ${l.settimana.map((g, gi) => { const x = gg.find((y) => y.gi === gi); return `<button class="giorno" data-azione="vai-giorno" data-giorno="${gi}">
+        <b>${h(g.giorno)}</b><span>${g.ore === 1 ? "1 ora" : `${g.ore} ore`}</span><small>esercizi ${x.da}–${x.a}</small></button>`; }).join("")}</div></div>`;
+  }
+  function giornoHTML(x) {
+    const g = x.g;
+    return `<div class="giorno-esercizi" data-giorno="${x.gi}">${Figura.img("📅", "figura grande")}
+      <h3>${h(g.giorno)}</h3><p>${g.ore === 1 ? "1 ora" : `${g.ore} ore`} di matematica · esercizi da ${x.da} a ${x.a}</p></div>`;
+  }
   function mappaHTML(l) {
     const chi = l.storia?.personaggio || "🦉", premio = l.premio || "🏆";
     return `<div class="mappa${l.esercizi.length > 24 ? " fitta" : ""}" aria-hidden="true"><div class="sentiero">
@@ -271,10 +303,13 @@
       if (!document.body.classList.contains("lim")) fine.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
+    const gg = giornate(l);
     l.esercizi.forEach((e, i) => {
+      const x = gg[i];
+      if (x?.primo) box.insertAdjacentHTML("beforeend", giornoHTML(x));
       const el = document.createElement("div");
       el.className = "esercizio";
-      el.innerHTML = `<span class="num">Esercizio ${i + 1}</span><div class="corpo"></div><div class="spiegazione"></div>`;
+      el.innerHTML = `<span class="num">Esercizio ${i + 1}${x ? ` · ${h(x.g.giorno)}${x.g.ore > 1 ? `, ${x.ora}ª ora` : ""}` : ""}</span><div class="corpo"></div><div class="spiegazione"></div>`;
       box.append(el);
       const corpo = el.querySelector(".corpo");
       const sbaglia = (nodo) => {
@@ -474,7 +509,7 @@
     if (document.body.classList.contains("lim")) return;
     document.body.classList.add("lim");
     document.documentElement.requestFullscreen?.().catch(() => {});
-    const pagine = () => [radice.querySelector(".lezione-testa"), ...radice.querySelectorAll(".scheda, .esercizio, [data-fine]")]
+    const pagine = () => [radice.querySelector(".lezione-testa"), ...radice.querySelectorAll(".scheda, .giorno-esercizi, .esercizio, [data-fine]")]
       .filter((p) => p && !p.hidden);
     let i = 0;
     const barra = document.createElement("div");
@@ -516,6 +551,7 @@
     });
     document.addEventListener("keydown", tasti);
     radice.addEventListener("risolto", () => mostra(i));
+    radice.addEventListener("lim-vai", (ev) => { const k = pagine().indexOf(ev.detail); if (k >= 0) mostra(k); });
     radice.addEventListener("finita", () => setTimeout(() => mostra(pagine().length - 1), 1200));
     mostra(0);
   }
