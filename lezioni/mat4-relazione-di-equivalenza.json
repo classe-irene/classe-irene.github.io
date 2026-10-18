@@ -167,6 +167,28 @@
     "titolo": "Ricopiare sul quaderno",
     "testo": "Ecco la pagina da ricopiare sul quaderno: il titolo, la tabella, le due regole e le cinque equivalenze. Scrivi con calma e usa i colori!"
   },
+  "settimana": [
+    {
+      "giorno": "Lunedì",
+      "ore": 2,
+      "esercizi": 10
+    },
+    {
+      "giorno": "Mercoledì",
+      "ore": 1,
+      "esercizi": 5
+    },
+    {
+      "giorno": "Giovedì",
+      "ore": 2,
+      "esercizi": 10
+    },
+    {
+      "giorno": "Venerdì",
+      "ore": 2,
+      "esercizi": 10
+    }
+  ],
   "esercizi": [
     {
       "tipo": "ordina",

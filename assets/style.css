@@ -277,7 +277,7 @@ button { touch-action: manipulation; }
 body.lim { font-size: 25px; }
 body.lim .testata, body.lim .piede, body.lim .barra-lezione, body.lim #esercizi { display: none; }
 body.lim .contenitore { max-width: 1500px; }
-body.lim .lezione-testa, body.lim .scheda, body.lim .esercizio, body.lim [data-fine] { display: none; }
+body.lim .lezione-testa, body.lim .scheda, body.lim .giorno-esercizi, body.lim .esercizio, body.lim [data-fine] { display: none; }
 body.lim .corrente {
   display: flex !important; flex-direction: column; justify-content: center;
   min-height: calc(100vh - 150px); margin: 16px 0 120px; animation: compari .35s;
@@ -1167,3 +1167,27 @@ body.lim.palestra .fine.corrente { min-height: 0; padding: 20px; }
 .galleria .gruppo-figure .figura.media { width: 40px; height: 40px; }
 @media (max-width: 600px) { .galleria .gruppo-figure { max-width: 150px; } .galleria .gruppo-figure .figura.media { width: 26px; height: 26px; } }
 .bottoni-verifica { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* La settimana: esercizi divisi per giorno (campo "settimana" della lezione). */
+.settimana { margin: 18px auto 0; max-width: 1000px; }
+.settimana-titolo { font-weight: 800; margin: 0 0 10px; }
+.settimana-giorni { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.settimana .giorno { display: grid; gap: 2px; justify-items: center; min-width: 150px; padding: 12px 18px; border-radius: 18px; border: 3px solid var(--tema, #3D6BE0); background: #fff; cursor: pointer; font: inherit; color: inherit; }
+.settimana .giorno b { font-size: 1.3rem; }
+.settimana .giorno small { color: #6b6b7b; font-weight: 700; }
+.settimana .giorno:hover { background: var(--tema-chiaro, #EEF3FF); }
+.giorno-esercizi { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 34px 0 22px; padding: 16px 22px; border-radius: var(--raggio, 22px); background: var(--giallo-chiaro, #FFF3D6); scroll-margin-top: 16px; }
+.giorno-esercizi h3 { margin: 0; font-size: 1.8rem; }
+.giorno-esercizi p { margin: 0; font-weight: 700; flex-basis: 100%; }
+.giorno-esercizi .figura { width: 64px; height: 64px; }
+body.lim .settimana { max-width: none; }
+body.lim .settimana-giorni { flex-wrap: nowrap; }
+body.lim .settimana .giorno { min-width: 220px; padding: 18px 26px; }
+body.lim .settimana .giorno b { font-size: 2rem; }
+body.lim .settimana-titolo { font-size: 1.5rem; }
+body.lim .giorno-esercizi.corrente { align-items: center; text-align: center; background: var(--giallo-chiaro, #FFF3D6); }
+body.lim .giorno-esercizi.corrente .figura { width: 180px; height: 180px; }
+body.lim .giorno-esercizi.corrente h3 { font-size: 4.5rem; }
+body.lim .giorno-esercizi.corrente p { font-size: 2rem; flex-basis: auto; }
+/* In LIM il nome dell'esercizio (con giorno e ora) sta sotto il sentiero, non dietro. */
+body.lim .esercizio.corrente > .num { top: 104px; font-size: 1.1rem; }
