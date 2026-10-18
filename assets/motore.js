@@ -210,7 +210,7 @@
   }
   function mappaHTML(l) {
     const chi = l.storia?.personaggio || "🦉", premio = l.premio || "🏆";
-    return `<div class="mappa" aria-hidden="true"><div class="sentiero">
+    return `<div class="mappa${l.esercizi.length > 24 ? " fitta" : ""}" aria-hidden="true"><div class="sentiero">
       ${l.esercizi.map((_, i) => `<span class="sasso" data-sasso="${i}">${i + 1}</span>`).join("")}
       <span class="sasso traguardo">${Figura.img(premio, "figura piccola")}</span></div>
       <span class="viaggiatore" style="--pos:0">${Figura.img(chi, "figura media")}</span></div>`;
