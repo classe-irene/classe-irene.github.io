@@ -206,6 +206,29 @@
       ]
     },
     {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova le coppie che valgono uguale.",
+      "coppie": [
+        [
+          "🟥 1 dak",
+          "🟦 10 uk"
+        ],
+        [
+          "🟦 1 uk",
+          "🟩 10 h"
+        ],
+        [
+          "🟩 1 h",
+          "🟥 10 da"
+        ],
+        [
+          "🟥 1 da",
+          "🟦 10 u"
+        ]
+      ]
+    },
+    {
       "tipo": "vero_falso",
       "immagine": "🔟",
       "affermazione": "Ogni casella vale 10 volte quella alla sua destra.",
@@ -220,6 +243,15 @@
       "da": "dak",
       "a": "u",
       "spiegazione": "Leggo fino alle unità: 3 dak = 30 000 u."
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante u sono 6 h? Usa la tabella.",
+      "n": 6,
+      "da": "h",
+      "a": "u",
+      "spiegazione": "Leggo fino alle unità: 6 h = 600 u."
     },
     {
       "tipo": "leggi_tabella",
@@ -257,6 +289,25 @@
       "da": "uk",
       "a": "da",
       "spiegazione": "7 uk = 700 da."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "7 h = [700] u\n7 h = [70] da",
+      "distrattori": [
+        "7 000",
+        "7"
+      ]
+    },
+    {
+      "tipo": "leggi_tabella",
+      "immagine": "🗂️",
+      "domanda": "Quante uk sono 4 hk? Usa la tabella.",
+      "n": 4,
+      "da": "hk",
+      "a": "uk",
+      "spiegazione": "Leggo fino a uk: 4 hk = 400 uk."
     },
     {
       "tipo": "abbina",
@@ -303,6 +354,42 @@
       "quanti": 5
     },
     {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "È uguale a 2 dak?",
+      "categorie": [
+        "✅ Sì, è uguale",
+        "❌ No, non è uguale"
+      ],
+      "elementi": [
+        {
+          "testo": "🟦 20 uk",
+          "categoria": "✅ Sì, è uguale"
+        },
+        {
+          "testo": "🟩 200 h",
+          "categoria": "✅ Sì, è uguale"
+        },
+        {
+          "testo": "🟦 20 000 u",
+          "categoria": "✅ Sì, è uguale"
+        },
+        {
+          "testo": "🟦 200 u",
+          "categoria": "❌ No, non è uguale"
+        },
+        {
+          "testo": "🟦 2 uk",
+          "categoria": "❌ No, non è uguale"
+        },
+        {
+          "testo": "🟥 20 da",
+          "categoria": "❌ No, non è uguale"
+        }
+      ],
+      "suggerimento": "Metti il 2 nella casella dak e leggi fino alla casella giusta."
+    },
+    {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
@@ -336,11 +423,44 @@
       "spiegazione": "20 da sono solo 200 unità!"
     },
     {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è uguale a 4 h?",
+      "elementi": [
+        "🟦 400 u",
+        "🟥 40 da",
+        "🟦 0,4 uk",
+        "🟥 4 da"
+      ],
+      "intruso": 3,
+      "spiegazione": "4 da sono solo 40 unità!"
+    },
+    {
       "tipo": "vero_falso",
       "immagine": "⚖️",
       "affermazione": "4 h = 4 000 u",
       "corretta": false,
       "spiegazione": "4 h = 400 u. 4 000 u sono 4 uk."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "6 dak = 60 uk",
+      "corretta": true,
+      "spiegazione": "Sì! Metto il 6 in dak e leggo fino a uk: 60."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine, dal più piccolo al più grande.",
+      "elementi": [
+        "🟦 5 u",
+        "🟥 5 da",
+        "🟩 5 h",
+        "🟦 5 uk",
+        "🟥 5 dak"
+      ],
+      "suggerimento": "La cifra è sempre 5: guarda la casella!"
     },
     {
       "tipo": "leggi_tabella",
@@ -389,6 +509,15 @@
     },
     {
       "tipo": "leggi_tabella",
+      "immagine": "🔴",
+      "domanda": "Attenzione alla virgola! Quante h sono 25 da? Usa la tabella.",
+      "n": 25,
+      "da": "da",
+      "a": "h",
+      "spiegazione": "Leggo fino a h e metto la virgola: 25 da = 2,5 h."
+    },
+    {
+      "tipo": "leggi_tabella",
       "immagine": "🗂️",
       "domanda": "Quante uk sono 45 h? Usa la tabella.",
       "n": 45,
@@ -409,6 +538,41 @@
       "spiegazione": "3 dak = 300 h: trecento centinaia di libri!"
     },
     {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "Ada mette i libri in scatole da 10. Ha 4 uk di libri. Quante scatole le servono?",
+      "opzioni": [
+        "📦 40",
+        "📦 400",
+        "📦 4 000"
+      ],
+      "corretta": 1,
+      "spiegazione": "Una scatola da 10 è una decina: 4 uk = 400 da. Servono 400 scatole!"
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci le scritture che valgono uguale.",
+      "coppie": [
+        [
+          "🟩 3 h",
+          "🟥 30 da"
+        ],
+        [
+          "🟦 9 uk",
+          "🟩 90 h"
+        ],
+        [
+          "🟥 2 dak",
+          "🟦 20 uk"
+        ],
+        [
+          "🟦 8 u",
+          "🟥 0,8 da"
+        ]
+      ]
+    },
+    {
       "tipo": "completa",
       "immagine": "✏️",
       "domanda": "Completa.",
@@ -417,6 +581,25 @@
         "500",
         "0,06"
       ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo le scritture uguali a 5 uk!",
+      "giusti": [
+        "⚖️ 5 000 u",
+        "⚖️ 500 da",
+        "⚖️ 50 h",
+        "⚖️ 0,5 dak"
+      ],
+      "sbagliati": [
+        "⚖️ 500 u",
+        "⚖️ 50 da",
+        "⚖️ 5 h",
+        "⚖️ 5 dak",
+        "⚖️ 50 000 u"
+      ],
+      "quanti": 4
     },
     {
       "tipo": "scelta",

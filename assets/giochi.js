@@ -19,7 +19,8 @@
       const b = ev.target.closest(".carta-memory");
       if (!b || blocco || b.classList.contains("girata")) return;
       b.classList.add("girata");
-      leggi(parolaDi(carte[+b.dataset.k].t));
+      // solo la voce: le scritte coprirebbero le carte
+      Voce.parla(parolaDi(carte[+b.dataset.k].t), null, { scritte: false });
       if (!prima) { prima = b; return; }
       tentativi++; c.querySelector("[data-tentativi]").textContent = tentativi;
       const a = carte[+prima.dataset.k], z = carte[+b.dataset.k];
