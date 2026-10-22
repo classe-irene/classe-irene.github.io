@@ -27,7 +27,7 @@
   const mie = Archivio.tutte().filter((l) => l.materia === materia && +l.classe === c);
 
   const scheda = (a) => a.lezione
-    ? `<a class="argomento pronta" href="lezione.html?file=${encodeURIComponent(a.lezione)}">${Figura.img(a.emoji, "figura media")}<h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p><span class="stato">▶ Lezione pronta</span></a>`
+    ? `<a class="argomento pronta${a.evidenza ? " in-evidenza" : ""}" href="lezione.html?file=${encodeURIComponent(a.lezione)}">${a.evidenza ? '<span class="nastro-evidenza">⭐ In evidenza</span>' : ""}${Figura.img(a.emoji, a.evidenza ? "figura grande" : "figura media")}<h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p><span class="stato">▶ Lezione pronta</span></a>`
     : `<div class="argomento">${Figura.img(a.emoji, "figura media")}<h3>${escapeHTML(a.titolo)}</h3><p>${escapeHTML(a.descrizione)}</p>
         <div class="azioni"><a class="btn piccolo bianco" href="area-insegnante.html?materia=${materia}&classe=${c}&argomento=${encodeURIComponent(a.titolo)}">🔒 Crea in 5 minuti</a></div></div>`;
 

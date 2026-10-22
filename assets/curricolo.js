@@ -2,6 +2,7 @@
 // Riferimento: classi prime dal 2026/27 -> Nuove Indicazioni Nazionali (D.M. 2025);
 // classi 2ª-5ª -> Indicazioni Nazionali 2012, fino al passaggio graduale.
 // Per collegare una lezione pronta basta aggiungere `lezione: "lezioni/nome-file.json"`.
+// Con `evidenza: true` la scheda compare in grande, con il nastro "In evidenza".
 
 window.SITO = {
   nome: "La classe di Irene",
@@ -60,13 +61,14 @@ window.CURRICOLO = {
       { id: "mat3-problemi", emoji: "🧩", titolo: "Problemi con due domande", descrizione: "Dati, domanda, operazioni.", lezione: "lezioni/mat3-problemi-con-due-domande.json" },
     ],
     4: [
+      { id: "mat4-divisioni-una", emoji: "➗", titolo: "Divisioni a una cifra", descrizione: "La filastrocca della divisione: cappellino, tabellina, resto e ascensore.", lezione: "lezioni/mat4-divisioni-una-cifra.json", evidenza: true },
+      { id: "mat4-divisioni", emoji: "➗", titolo: "Divisioni a due cifre", descrizione: "Divisore a due cifre e prova.", lezione: "lezioni/mat4-divisioni-due-cifre.json" },
       { id: "mat4-grandi", emoji: "🚀", titolo: "I grandi numeri", descrizione: "Migliaia e classi di numeri.", lezione: "lezioni/mat4-grandi-numeri.json" },
       { id: "mat4-scomporre", emoji: "🧩", titolo: "Scomporre e comporre", descrizione: "Quanto vale ogni cifra; lo 0 segnaposto.", lezione: "lezioni/mat4-scomporre-e-comporre.json" },
       { id: "mat4-confronto", emoji: "🐊", titolo: "Il confronto tra numeri", descrizione: "Maggiore, minore, uguale; crescente e decrescente.", lezione: "lezioni/mat4-confronto-tra-numeri.json" },
       { id: "mat4-equivalenze", emoji: "🔄", titolo: "Le equivalenze con i numeri", descrizione: "Unità, decine, centinaia e migliaia.", lezione: "lezioni/mat4-equivalenze-numeriche.json" },
       { id: "mat4-relazione", emoji: "⚖️", titolo: "La relazione di equivalenza", descrizione: "Tabella hk, dak, uk, h, da, u e virgola.", lezione: "lezioni/mat4-relazione-di-equivalenza.json" },
       { id: "mat4-moltiplicazioni", emoji: "✖️", titolo: "Moltiplicazioni a due cifre", descrizione: "Calcolo in colonna e stime.", lezione: "lezioni/mat4-moltiplicazioni-due-cifre.json" },
-      { id: "mat4-divisioni", emoji: "➗", titolo: "Divisioni a due cifre", descrizione: "Divisore a due cifre e prova.", lezione: "lezioni/mat4-divisioni-due-cifre.json" },
       { id: "mat4-frazioni", emoji: "🍕", titolo: "Frazioni proprie e improprie", descrizione: "Frazioni equivalenti e complementari.", lezione: "lezioni/mat4-frazioni.json" },
       { id: "mat4-decimali", emoji: "🔸", titolo: "I numeri decimali", descrizione: "Operazioni con i decimali.", lezione: "lezioni/mat4-numeri-decimali.json" },
       { id: "mat4-perimetro", emoji: "🟩", titolo: "Perimetro dei poligoni", descrizione: "Triangoli e quadrilateri.", lezione: "lezioni/mat4-perimetro.json" },

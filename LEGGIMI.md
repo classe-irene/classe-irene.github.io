@@ -123,3 +123,7 @@ Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: �
 - Video in una sezione: `"animazione": { "tipo": "divisione", "a": 156, "b": 12, "video": true, "titolo": "156 : 12" }`. Di lato: la tabellina del divisore (giusti in verde, "troppo" in rosso) e la lavagnetta con moltiplicazione e sottrazione; alla fine la prova.
 - Esercizio `{ "tipo": "divisione", "a": 168, "b": 12 }`: il bambino tocca l'ultima cifra del cappellino, scrive quoziente e resto con il tastierino e tocca la cifra che scende. La tabellina del divisore è sempre in vista (strumento compensativo per DSA); se sbaglia, i suggerimenti dicono perché ("2 × 12 = 24: è troppo!").
 - Limiti: dividendo fino a 9999, divisore da 2 a 99, dividendo non più piccolo del divisore. Lezione: `lezioni/mat4-divisioni-due-cifre.json`.
+- Lezione `lezioni/mat4-divisioni-una-cifra.json` (divisore di una cifra), prima della 4ª.
+
+## Lezione in evidenza
+In `assets/curricolo.js` un argomento con `evidenza: true` compare in grande, con il nastro "⭐ In evidenza", nella pagina della classe e nella home.

@@ -20,6 +20,7 @@
     <div>
       <h1>Impariamo giocando! 🎈</h1>
       <p>Lezioni colorate ed esercizi interattivi di Matematica e Scienze, dalla classe prima alla quinta.</p>
+      <div id="in-evidenza"></div>
       <p class="nota" style="margin:22px 0 10px;font-weight:800">Le nostre classi quest'anno</p>
       <div class="scorciatoie" id="scorciatoie"></div>
       <p style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn album-link" href="album.html">🏆 Le nostre figurine</a>
@@ -57,6 +58,11 @@
   const evid = SITO.classiInEvidenza || [];
   document.getElementById("scorciatoie").innerHTML = evid.flatMap((c) => ["matematica", "scienze"].map((m) =>
     `<a class="btn ${m === "scienze" ? "verde" : ""}" href="sezione.html?materia=${m}&classe=${c}">${MATERIE[m].icona} ${MATERIE[m].nome} ${c}ª</a>`)).join("");
+  // Le lezioni con `evidenza: true` in curricolo.js: in grande, subito sotto il titolo.
+  document.getElementById("in-evidenza").innerHTML = Object.entries(CURRICOLO).flatMap(([m, classi]) => Object.entries(classi).flatMap(([c, args]) =>
+    args.filter((a) => a.evidenza && a.lezione).map((a) => `<a class="home-evidenza" href="lezione.html?file=${encodeURIComponent(a.lezione)}">
+      <span class="nastro-evidenza">⭐ In evidenza</span>${Figura.img(a.emoji, "figura media")}
+      <span><b>${escapeHTML(a.titolo)}</b><small>${MATERIE[m].nome} · classe ${c}ª · ${escapeHTML(a.descrizione)}</small></span></a>`))).join("");
   document.querySelectorAll(".classi").forEach((box) => {
     const m = box.dataset.materia;
     box.innerHTML = [1, 2, 3, 4, 5].map((c) =>
