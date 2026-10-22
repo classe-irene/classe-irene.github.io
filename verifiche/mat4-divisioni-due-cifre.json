@@ -102,19 +102,19 @@
     {
       "tipo": "calcolo",
       "immagine": "➗",
-      "testo": "Calcola.",
+      "testo": "Calcola. Il divisore ha una cifra.",
       "operazioni": [
         {
-          "testo": "24 : 12",
-          "risultato": 2
+          "testo": "84 : 4",
+          "risultato": 21
         },
         {
-          "testo": "60 : 15",
-          "risultato": 4
+          "testo": "96 : 4",
+          "risultato": 24
         },
         {
-          "testo": "96 : 12",
-          "risultato": 8
+          "testo": "156 : 6",
+          "risultato": 26
         }
       ]
     },
@@ -228,6 +228,21 @@
         "dividendo",
         "divisore",
         "quoziente"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "☝️",
+      "testo": "Calcola. Il divisore ha una cifra: usa la tabellina del 4.",
+      "operazioni": [
+        {
+          "testo": "84 : 4",
+          "risultato": 21
+        },
+        {
+          "testo": "96 : 4",
+          "risultato": 24
+        }
       ]
     },
     {

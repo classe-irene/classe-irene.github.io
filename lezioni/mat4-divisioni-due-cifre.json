@@ -7,99 +7,376 @@
   "storia": {
     "personaggio": "👩‍🍳",
     "testo": "Ciao! Sono Gaia, la pasticcera.\nPer la festa della scuola ho fatto 156 pasticcini.\nLi devo mettere nelle scatole: 12 in ogni scatola.\nQuante scatole mi servono? Io ho un trucco: una filastrocca!",
-    "immagini": ["🧁 pasticcini", "📦 scatole", "🎉 festa"],
+    "immagini": [
+      "🧁 pasticcini",
+      "📦 scatole",
+      "🎉 festa"
+    ],
     "missione": "Imparate con Gaia la filastrocca della divisione e riempite tutte le scatole. Alla fine vincete la figurina della torta!"
   },
   "premio": "🎂",
-  "parole_chiave": ["🧁 dividendo", "📦 divisore", "✅ quoziente", "🧩 resto", "👒 cappellino", "🛗 ascensore", "🎶 tabellina"],
+  "parole_chiave": [
+    "🧁 dividendo",
+    "📦 divisore",
+    "✅ quoziente",
+    "🧩 resto",
+    "👒 cappellino",
+    "🛗 ascensore",
+    "🎶 tabellina"
+  ],
   "sezioni": [
     {
       "titolo": "🎵 La filastrocca della divisione",
       "immagine": "🎶",
-      "testo": "Gaia ha una filastrocca. Dice cosa fare, passo dopo passo.\nAscoltala e ripetila con lei.\nOgni passo ha un disegno: il cappellino, la tabellina, il resto e l'ascensore.",
-      "immagini": ["👒 cappellino", "🎶 tabellina", "➖ resto", "🛗 ascensore"],
+      "testo": "Gaia ha una filastrocca. Dice cosa fare, passo dopo passo.\nAscoltala e guarda i numeri: si scrivono in colonna, verso dopo verso.\nCominciamo con un divisore facile, di una cifra: 96 : 4.",
+      "immagini": [
+        "👒 cappellino",
+        "🎶 tabellina",
+        "➖ resto",
+        "🛗 ascensore"
+      ],
       "animazione": {
-        "tipo": "sequenza", "video": true, "titolo": "la filastrocca della divisione",
-        "passi": [
-          { "figure": "👩‍🍳 🎤", "testo": "Ascolta la filastrocca della divisione!" },
-          { "figure": "😉 👒", "testo": "Guardo il divisore e faccio l'occhiolino: a una o due cifre metto il cappellino!" },
-          { "figure": "🎶 ✍️", "testo": "Recito forte la tabellina, scrivo il risultato sotto la linea." },
-          { "figure": "➖ 🐢", "testo": "Calcolo il resto, faccio la differenza, e vado avanti con un po' di pazienza." },
-          { "figure": "🛗 → 🔁", "testo": "Scende la cifra successiva in ascensore, e ricomincio a sfidare il divisore!" }
-        ]
+        "tipo": "divisione",
+        "a": 96,
+        "b": 4,
+        "video": true,
+        "titolo": "la filastrocca con i numeri: 96 : 4"
       },
       "scopri": [
-        { "fronte": "👒 Cappellino", "retro": "Copre le prime cifre del dividendo: tante quante il divisore." },
-        { "fronte": "🎶 Tabellina", "retro": "Trovo quante volte il divisore ci sta. Lo scrivo sotto la linea." },
-        { "fronte": "➖ Resto", "retro": "È quello che avanza. È sempre più piccolo del divisore." },
-        { "fronte": "🛗 Ascensore", "retro": "La cifra dopo scende accanto al resto. Poi ricomincio." }
+        {
+          "fronte": "👒 Cappellino",
+          "retro": "Copre le prime cifre del dividendo: tante quante il divisore."
+        },
+        {
+          "fronte": "🎶 Tabellina",
+          "retro": "Trovo quante volte il divisore ci sta. Lo scrivo sotto la linea."
+        },
+        {
+          "fronte": "➖ Resto",
+          "retro": "È quello che avanza. È sempre più piccolo del divisore."
+        },
+        {
+          "fronte": "🛗 Ascensore",
+          "retro": "La cifra dopo scende accanto al resto. Poi ricomincio."
+        }
       ]
     },
     {
       "titolo": "🏷️ I nomi della divisione",
       "immagine": "🏷️",
       "testo": "Gaia fa 50 : 12. Ha 50 pasticcini: è il dividendo.\nNe mette 12 in ogni scatola: 12 è il divisore.\nRiempie 4 scatole: 4 è il quoziente.\nAvanzano 2 pasticcini: 2 è il resto.",
-      "immagini": ["🧁 dividendo", "📦 divisore", "✅ quoziente", "🧩 resto"],
+      "immagini": [
+        "🧁 dividendo",
+        "📦 divisore",
+        "✅ quoziente",
+        "🧩 resto"
+      ],
       "animazione": {
-        "tipo": "sequenza", "video": true, "titolo": "50 pasticcini in scatole da 12",
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "50 pasticcini in scatole da 12",
         "passi": [
-          { "figure": "🧁 🧁 🧁", "testo": "Gaia ha 50 pasticcini. 50 è il dividendo." },
-          { "figure": "🧁 → 📦", "testo": "In ogni scatola ne mette 12. 12 è il divisore." },
-          { "figure": "📦 📦 📦 📦", "testo": "Riempie 4 scatole: 4 × 12 = 48. 4 è il quoziente." },
-          { "figure": "🧁 🧁", "testo": "Avanzano 2 pasticcini. 2 è il resto." },
-          { "figure": "✅", "testo": "50 : 12 = 4, con il resto di 2." }
+          {
+            "figure": "🧁 🧁 🧁",
+            "testo": "Gaia ha 50 pasticcini. 50 è il dividendo."
+          },
+          {
+            "figure": "🧁 → 📦",
+            "testo": "In ogni scatola ne mette 12. 12 è il divisore."
+          },
+          {
+            "figure": "📦 📦 📦 📦",
+            "testo": "Riempie 4 scatole: 4 × 12 = 48. 4 è il quoziente."
+          },
+          {
+            "figure": "🧁 🧁",
+            "testo": "Avanzano 2 pasticcini. 2 è il resto."
+          },
+          {
+            "figure": "✅",
+            "testo": "50 : 12 = 4, con il resto di 2."
+          }
         ]
       },
-      "pensa": { "domanda": "Secondo te, il resto può essere più grande del divisore?", "risposta": "No! Se avanzano 12 pasticcini o di più, Gaia riempie un'altra scatola. Il resto è sempre più piccolo del divisore." }
+      "pensa": {
+        "domanda": "Secondo te, il resto può essere più grande del divisore?",
+        "risposta": "No! Se avanzano 12 pasticcini o di più, Gaia riempie un'altra scatola. Il resto è sempre più piccolo del divisore."
+      }
     },
     {
-      "titolo": "👒 Passo passo: 156 : 12",
+      "titolo": "☝️ Il divisore con una cifra",
+      "immagine": "☝️",
+      "testo": "Gaia mette 156 pasticcini su vassoi da 4.\nFa 156 : 4. Il divisore ha una cifra sola: il cappellino copre una cifra.\nMa 1 è più piccolo di 4: il cappellino prende una cifra in più, 15.",
+      "immagini": [
+        "🧁 pasticcini",
+        "🍽️ vassoi",
+        "👒 cappellino"
+      ],
+      "animazione": {
+        "tipo": "divisione",
+        "a": 156,
+        "b": 4,
+        "video": true,
+        "titolo": "156 : 4, una cifra al divisore"
+      },
+      "pensa": {
+        "domanda": "Secondo te, in 84 : 4 su quante cifre va il cappellino?",
+        "risposta": "Su una cifra: l'8. Il 4 nell'8 ci sta 2 volte."
+      }
+    },
+    {
+      "titolo": "👒 Il divisore con due cifre: 156 : 12",
       "immagine": "👒",
-      "testo": "Ecco la divisione di Gaia: 156 : 12.\nIl divisore ha due cifre: il cappellino copre due cifre.\nGuarda il video. Le quattro parole della filastrocca si accendono a turno.",
-      "immagini": ["👒 cappellino", "🎶 tabellina", "🛗 ascensore"],
-      "animazione": { "tipo": "divisione", "a": 156, "b": 12, "video": true, "titolo": "156 : 12 con la filastrocca" }
+      "testo": "Ora Gaia mette i 156 pasticcini nelle scatole da 12.\nIl divisore ha due cifre: il cappellino copre due cifre, 15.\nGuarda il video e ripeti la filastrocca.",
+      "immagini": [
+        "👒 cappellino",
+        "🎶 tabellina",
+        "🛗 ascensore"
+      ],
+      "animazione": {
+        "tipo": "divisione",
+        "a": 156,
+        "b": 12,
+        "video": true,
+        "titolo": "156 : 12 con la filastrocca"
+      }
     },
     {
       "titolo": "🎩 Il cappellino su tre cifre",
       "immagine": "🎩",
       "testo": "A volte le prime due cifre non bastano.\nIn 125 : 25 provo con 12: è più piccolo di 25!\nAllora il cappellino prende una cifra in più: 125.",
-      "immagini": ["👒 cappellino", "🎶 tabellina"],
-      "animazione": { "tipo": "divisione", "a": 125, "b": 25, "video": true, "titolo": "125 : 25, il cappellino si allarga" },
-      "pensa": { "domanda": "Secondo te, in 96 : 32 su quante cifre va il cappellino?", "risposta": "Su due cifre: 96. Il 32 nel 96 ci sta 3 volte." }
+      "immagini": [
+        "👒 cappellino",
+        "🎶 tabellina"
+      ],
+      "animazione": {
+        "tipo": "divisione",
+        "a": 125,
+        "b": 25,
+        "video": true,
+        "titolo": "125 : 25, il cappellino si allarga"
+      },
+      "pensa": {
+        "domanda": "Secondo te, in 96 : 32 su quante cifre va il cappellino?",
+        "risposta": "Su due cifre: 96. Il 32 nel 96 ci sta 3 volte."
+      }
     },
     {
       "titolo": "🧩 Il resto e la prova",
       "immagine": "🧩",
       "testo": "Gaia ora ha 175 biscotti e scatole da 12.\nAlla fine avanzano 7 biscotti: è il resto.\nPoi fa la prova: quoziente per divisore, più il resto. Deve tornare il dividendo!",
-      "immagini": ["🍪 biscotti", "📦 scatole", "✅ prova"],
-      "animazione": { "tipo": "divisione", "a": 175, "b": 12, "video": true, "titolo": "175 : 12, con il resto" },
+      "immagini": [
+        "🍪 biscotti",
+        "📦 scatole",
+        "✅ prova"
+      ],
+      "animazione": {
+        "tipo": "divisione",
+        "a": 175,
+        "b": 12,
+        "video": true,
+        "titolo": "175 : 12, con il resto"
+      },
       "esperimento": {
         "titolo": "Proviamo in classe!",
-        "materiali": ["🧱 50 cubetti o tappi", "🥤 bicchieri di carta"],
-        "passi": ["🧱 Contate 50 cubetti.", "🥤 Mettete 12 cubetti in ogni bicchiere.", "🔢 Contate i bicchieri pieni.", "🧩 Contate i cubetti che avanzano."],
+        "materiali": [
+          "🧱 50 cubetti o tappi",
+          "🥤 bicchieri di carta"
+        ],
+        "passi": [
+          "🧱 Contate 50 cubetti.",
+          "🥤 Mettete 12 cubetti in ogni bicchiere.",
+          "🔢 Contate i bicchieri pieni.",
+          "🧩 Contate i cubetti che avanzano."
+        ],
         "domanda": "Quanti bicchieri pieni? Quanti cubetti avanzano? Scrivete la divisione alla lavagna."
       }
     }
   ],
   "esercizi": [
-    { "tipo": "scelta", "immagine": "📦", "domanda": "In 156 : 12, quale numero è il divisore?", "opzioni": ["📦 12", "🧁 156", "✅ 13"], "corretta": 0, "spiegazione": "Il divisore è 12: i pasticcini in ogni scatola." },
-    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: unisci la parola della filastrocca a quello che fa.", "coppie": [["👒 cappellino", "copre le prime cifre"], ["🎶 tabellina", "quante volte ci sta"], ["➖ resto", "quello che avanza"], ["🛗 ascensore", "la cifra che scende"]] },
-    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi NON è un nome della divisione?", "elementi": ["🧁 dividendo", "📦 divisore", "✅ quoziente", "➕ addendo"], "intruso": 3, "spiegazione": "L'addendo è un nome dell'addizione." },
-    { "tipo": "vero_falso", "immagine": "👒", "affermazione": "In 156 : 12 il cappellino copre il 15.", "corretta": true, "spiegazione": "Il 12 ha due cifre: il cappellino copre due cifre, cioè 15.", "suggerimento": "Conta le cifre del 12." },
-    { "tipo": "ordina", "immagine": "🎶", "domanda": "Metti in ordine i passi della filastrocca.", "elementi": ["👒 Metto il cappellino", "🎶 Recito la tabellina", "✍️ Scrivo sotto la linea", "➖ Calcolo il resto", "🛗 Scende la cifra in ascensore"] },
-    { "tipo": "bucato", "immagine": "📝", "domanda": "Completa la filastrocca.", "testo": "Guardo il divisore e faccio l'[occhiolino]: a una o due cifre metto il [cappellino]! Recito forte la [tabellina], scrivo il risultato sotto la [linea]. Scende la cifra in [ascensore].", "distrattori": ["cappotto", "calcolatrice"] },
-    { "tipo": "divisione", "immagine": "🧁", "domanda": "Gaia ha 96 pasticcini e scatole da 12. Calcola 96 : 12.", "a": 96, "b": 12, "spiegazione": "96 : 12 = 8. Gaia riempie 8 scatole." },
-    { "tipo": "categorie", "immagine": "👒", "domanda": "Il cappellino va su 2 cifre o su 3 cifre?", "categorie": ["👒 Su 2 cifre", "🎩 Su 3 cifre"], "elementi": [
-      { "testo": "156 : 12", "categoria": "👒 Su 2 cifre" }, { "testo": "348 : 12", "categoria": "👒 Su 2 cifre" }, { "testo": "960 : 32", "categoria": "👒 Su 2 cifre" },
-      { "testo": "125 : 25", "categoria": "🎩 Su 3 cifre" }, { "testo": "105 : 15", "categoria": "🎩 Su 3 cifre" }, { "testo": "189 : 21", "categoria": "🎩 Su 3 cifre" }],
-      "suggerimento": "Guarda le prime due cifre: se sono più piccole del divisore, il cappellino prende una cifra in più." },
-    { "tipo": "divisione", "immagine": "📦", "domanda": "Gaia ha 168 pasticcini. Calcola 168 : 12.", "a": 168, "b": 12, "spiegazione": "168 : 12 = 14. Servono 14 scatole." },
-    { "tipo": "acchiappa", "immagine": "🐹", "domanda": "Acchiappa solo le divisioni senza resto!", "giusti": ["24 : 12", "48 : 24", "60 : 15", "36 : 12"], "sbagliati": ["50 : 12", "70 : 20", "29 : 14", "40 : 15"], "quanti": 4 },
-    { "tipo": "divisione", "immagine": "🎩", "domanda": "Occhio al cappellino! Calcola 175 : 25.", "a": 175, "b": 25, "spiegazione": "17 è più piccolo di 25: il cappellino va su 175. 175 : 25 = 7." },
-    { "tipo": "divisione", "immagine": "🍪", "domanda": "Gaia ha 263 biscotti e sacchetti da 21. Calcola 263 : 21.", "a": 263, "b": 21, "spiegazione": "263 : 21 = 12, resto 11. Prova: 12 × 21 = 252, più 11 fa 263." }
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "domanda": "In 156 : 12, quale numero è il divisore?",
+      "opzioni": [
+        "📦 12",
+        "🧁 156",
+        "✅ 13"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il divisore è 12: i pasticcini in ogni scatola."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: unisci la parola della filastrocca a quello che fa.",
+      "coppie": [
+        [
+          "👒 cappellino",
+          "copre le prime cifre"
+        ],
+        [
+          "🎶 tabellina",
+          "quante volte ci sta"
+        ],
+        [
+          "➖ resto",
+          "quello che avanza"
+        ],
+        [
+          "🛗 ascensore",
+          "la cifra che scende"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un nome della divisione?",
+      "elementi": [
+        "🧁 dividendo",
+        "📦 divisore",
+        "✅ quoziente",
+        "➕ addendo"
+      ],
+      "intruso": 3,
+      "spiegazione": "L'addendo è un nome dell'addizione."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👒",
+      "affermazione": "In 156 : 12 il cappellino copre il 15.",
+      "corretta": true,
+      "spiegazione": "Il 12 ha due cifre: il cappellino copre due cifre, cioè 15.",
+      "suggerimento": "Conta le cifre del 12."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🎶",
+      "domanda": "Metti in ordine i passi della filastrocca.",
+      "elementi": [
+        "👒 Metto il cappellino",
+        "🎶 Recito la tabellina",
+        "✍️ Scrivo sotto la linea",
+        "➖ Calcolo il resto",
+        "🛗 Scende la cifra in ascensore"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "📝",
+      "domanda": "Completa la filastrocca.",
+      "testo": "Guardo il divisore e faccio l'[occhiolino]: a una o due cifre metto il [cappellino]! Recito forte la [tabellina], scrivo il risultato sotto la [linea]. Scende la cifra in [ascensore].",
+      "distrattori": [
+        "cappotto",
+        "calcolatrice"
+      ]
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "🍽️",
+      "domanda": "Una cifra al divisore! Calcola 84 : 4.",
+      "a": 84,
+      "b": 4,
+      "spiegazione": "84 : 4 = 21. Il cappellino copre solo l'8."
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "🧁",
+      "domanda": "Gaia ha 156 pasticcini e vassoi da 6. Calcola 156 : 6.",
+      "a": 156,
+      "b": 6,
+      "spiegazione": "1 è più piccolo di 6: il cappellino va su 15. 156 : 6 = 26."
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "🧁",
+      "domanda": "Gaia ha 96 pasticcini e scatole da 12. Calcola 96 : 12.",
+      "a": 96,
+      "b": 12,
+      "spiegazione": "96 : 12 = 8. Gaia riempie 8 scatole."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "👒",
+      "domanda": "Il cappellino va su 2 cifre o su 3 cifre?",
+      "categorie": [
+        "👒 Su 2 cifre",
+        "🎩 Su 3 cifre"
+      ],
+      "elementi": [
+        {
+          "testo": "156 : 12",
+          "categoria": "👒 Su 2 cifre"
+        },
+        {
+          "testo": "348 : 12",
+          "categoria": "👒 Su 2 cifre"
+        },
+        {
+          "testo": "960 : 32",
+          "categoria": "👒 Su 2 cifre"
+        },
+        {
+          "testo": "125 : 25",
+          "categoria": "🎩 Su 3 cifre"
+        },
+        {
+          "testo": "105 : 15",
+          "categoria": "🎩 Su 3 cifre"
+        },
+        {
+          "testo": "189 : 21",
+          "categoria": "🎩 Su 3 cifre"
+        }
+      ],
+      "suggerimento": "Guarda le prime due cifre: se sono più piccole del divisore, il cappellino prende una cifra in più."
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "📦",
+      "domanda": "Gaia ha 168 pasticcini. Calcola 168 : 12.",
+      "a": 168,
+      "b": 12,
+      "spiegazione": "168 : 12 = 14. Servono 14 scatole."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa solo le divisioni senza resto!",
+      "giusti": [
+        "24 : 12",
+        "48 : 24",
+        "60 : 15",
+        "36 : 12"
+      ],
+      "sbagliati": [
+        "50 : 12",
+        "70 : 20",
+        "29 : 14",
+        "40 : 15"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "🎩",
+      "domanda": "Occhio al cappellino! Calcola 175 : 25.",
+      "a": 175,
+      "b": 25,
+      "spiegazione": "17 è più piccolo di 25: il cappellino va su 175. 175 : 25 = 7."
+    },
+    {
+      "tipo": "divisione",
+      "immagine": "🍪",
+      "domanda": "Gaia ha 263 biscotti e sacchetti da 21. Calcola 263 : 21.",
+      "a": 263,
+      "b": 21,
+      "spiegazione": "263 : 21 = 12, resto 11. Prova: 12 × 21 = 252, più 11 fa 263."
+    }
   ],
   "ricorda": [
-    "👒 Il cappellino copre tante cifre quante il divisore. Se non basta, una in più.",
+    "👒 Il cappellino copre tante cifre quante il divisore: una o due. Se non basta, una in più.",
     "🎶 Con la tabellina trovo quante volte il divisore ci sta.",
     "➖ Il resto è sempre più piccolo del divisore.",
     "🛗 La cifra dopo scende in ascensore, e ricomincio.",

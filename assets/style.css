@@ -1289,6 +1289,8 @@ body.lim .giorno-esercizi .torna-giorni { display: none; }
   .div-lato { min-width: 0; flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .div-tab, .div-calc { font-size: .95rem; }
   .div-calc .div-riga { font-size: 1.2rem; }
+  .div-tab ol.lunga { grid-auto-flow: column; grid-template-rows: repeat(5, auto); column-gap: 10px; }
+  .div-tab { padding-bottom: 10px; }
   .div-griglia .cella.dx { padding: 0 2px; }
 }
 body.lim .div-fase { font-size: min(1.5rem, 2.6vh); } body.lim .div-fase .figura { width: min(44px, 4.2vh); height: min(44px, 4.2vh); }
@@ -1298,3 +1300,9 @@ body.lim .div-tab ol.lunga { grid-auto-flow: column; grid-template-rows: repeat(
 body.lim .div-calc .div-riga { font-size: min(2.2rem, 3.8vh); }
 body.lim .div-consegna { font-size: min(1.8rem, 3.2vh); }
 body.lim .div-cappello { height: min(40px, 3.8vh); }
+.div-strofa { max-width: 640px; text-align: center; padding: 8px 16px; border-radius: 16px; background: #FFF3CC; border: 3px dashed var(--giallo); font: 800 1.35rem "Baloo 2", sans-serif; color: #7A4B00; font-style: italic; animation: compari .5s; }
+.div-strofa .con-figura { display: inline-flex; align-items: center; gap: 10px; flex-direction: row; }
+.div-strofa .figura { width: 40px; height: 40px; flex: none; }
+@media (max-width: 600px) { .div-strofa { font-size: 1.05rem; padding: 6px 10px; } .div-strofa .figura { width: 30px; height: 30px; } }
+body.lim .div-strofa { font-size: min(1.9rem, 3.2vh); max-width: none; }
+body.lim .div-strofa .figura { width: min(52px, 5vh); height: min(52px, 5vh); }

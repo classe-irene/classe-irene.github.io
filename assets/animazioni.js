@@ -1655,6 +1655,8 @@
         for (let k = 0; k <= n; k++) applicaDiv(g, passi[k], k === n);
         evidenziaDiv(g, passi[n].evid);
         faseDiv(g, passi[n].fase);
+        const st = g.el.querySelector(".div-strofa");
+        st.hidden = false; st.innerHTML = Figura.ricco(passi[n].strofa, "figura");
         if (passi[n].finale) g.el.querySelector(".div-griglia").classList.add("finita");
       };
     } else if (tipo === "scena" || tipo === "sequenza" || tipo === "addizione") {
@@ -1690,7 +1692,7 @@
       didascalia.classList.remove("nuova"); void didascalia.offsetWidth; didascalia.classList.add("nuova");
       if (passi[n].finale) Suono.giusto();
       // Pause lunghe: i bambini hanno il tempo di guardare prima del passo successivo.
-      if (parla && voce.checked) Voce.parla(passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); }, { scritte: false });
+      if (parla && voce.checked) Voce.parla(passi[n].voce || passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); }, { scritte: false });
       else if (inCorso) timer = setTimeout(avanti, 4000);
     }
     function avanti() {
@@ -1849,31 +1851,50 @@
   const quanteCifre = (k) => ["", "una cifra", "due cifre", "tre cifre"][k];
   const volte = (q) => (q === 1 ? "1 volta" : `${q} volte`);
 
+  // I versi della filastrocca: ogni passo del video ne mostra uno sopra la colonna, mentre i numeri si scrivono.
+  const STROFE = {
+    titolo: "🎵 La filastrocca della divisione",
+    occhio: "😉 Guardo il divisore e faccio l'occhiolino…",
+    cappello: "👒 …a una o due cifre metto il cappellino!",
+    tabellina: "🎶 Recito forte la tabellina…",
+    linea: "✍️ …scrivo il risultato sotto la linea.",
+    resto: "➖ Calcolo il resto, faccio la differenza, e vado avanti con un po' di pazienza.",
+    ascensore: "🛗 Scende la cifra successiva in ascensore…",
+    ricomincio: "🔁 …e ricomincio a sfidare il divisore!",
+    fine: "🎉 Le cifre sono finite!",
+    prova: "✅ E ora la prova!",
+  };
   function passiDivisione(dv) {
     const { a, b, L, cap, giri } = dv;
     const capCelle = (f) => Array.from({ length: f + 1 }, (_, c) => `s-0-${c}`);
-    const P = [{ testo: `Facciamo ${a} : ${b}. Il dividendo è ${a}, il divisore è ${b}.`, fase: null, azioni: [], evid: ["s-0-*", "d-*"] }];
+    const Il = (n) => il(n)[0].toUpperCase() + il(n).slice(1);
+    const P = [];
+    const passo = (strofa, testo, fase, azioni, evid, extra = {}) => P.push({ strofa: STROFE[strofa], testo, fase, azioni, evid, ...extra });
+    passo("titolo", `Facciamo ${a} : ${b}. Il dividendo è ${a}, il divisore è ${b}.`, null, [], ["s-0-*", "d-*"]);
+    passo("occhio", `Il divisore è ${b}: ha ${quanteCifre(L)}.`, "cappello", [], ["d-*"]);
     if (cap.prova) {
-      P.push({ testo: `Guardo il divisore: ${b} ha ${quanteCifre(L)}. Provo il cappellino su ${cap.prova.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.prova.fine, ko: true }], evid: ["d-*", ...capCelle(cap.prova.fine)] });
-      P.push({ testo: `${cap.prova.val} è più piccolo di ${b}: non ci sta! Il cappellino prende una cifra in più: ${cap.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.fine }], evid: capCelle(cap.fine) });
-    } else P.push({ testo: `Guardo il divisore: ${b} ha ${quanteCifre(L)}. Metto il cappellino su ${quanteCifre(L)}: ${cap.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.fine }], evid: ["d-*", ...capCelle(cap.fine)] });
+      passo("cappello", `Provo il cappellino su ${cap.prova.val}. Ma ${cap.prova.val} è più piccolo di ${b}: non ci sta!`, "cappello", [{ t: "cap", fine: cap.prova.fine, ko: true }], capCelle(cap.prova.fine));
+      passo("cappello", `Il cappellino prende una cifra in più: ${cap.val}.`, "cappello", [{ t: "cap", fine: cap.fine }], capCelle(cap.fine));
+    } else passo("cappello", `Il cappellino copre ${quanteCifre(L)}: ${cap.val}.`, "cappello", [{ t: "cap", fine: cap.fine }], capCelle(cap.fine));
     giri.forEach((g, i) => {
       const multipli = Array.from({ length: g.q }, (_, k) => b * (k + 1));
-      const domanda = `${i ? "Ricomincio! " : ""}Quante volte ${il(b)} sta ${nel(g.val)}?`;
-      const recita = g.q ? ` Recito la tabellina del ${b}: ${multipli.join(", ")}.${g.q < 9 ? ` ${b * (g.q + 1)} è troppo!` : ""}` : ` ${b} è più grande di ${g.val}: non ci sta.`;
-      P.push({ testo: domanda + recita, fase: "tabellina", azioni: [{ t: "tab", val: g.val, q: g.q }, { t: "calc", righe: [] }], evid: [...g.celle, "d-*"] });
-      P.push({ testo: `${il(b)[0].toUpperCase() + il(b).slice(1)} ${nel(g.val)} ci sta ${volte(g.q)}. Scrivo ${g.q} sotto la linea.`, fase: "tabellina", azioni: [{ t: "q", col: i, val: g.q }], evid: [`q-${i}`] });
-      P.push({ testo: `Calcolo il resto: ${g.q} × ${b} = ${g.prodotto}, e ${g.val} − ${g.prodotto} = ${g.r}. Scrivo ${g.r}: è più piccolo di ${b}, va bene!`, fase: "resto",
-        azioni: [{ t: "calc", righe: [`${g.q} × ${b} = ${g.prodotto}`, `${g.val} − ${g.prodotto} = ${g.r}`] }, { t: "resto", g: i }], evid: g.celleResto });
+      const recita = g.q ? `${multipli.join(", ")}${g.q < 9 ? `, ${b * (g.q + 1)} è troppo!` : "."}` : `${b} è già troppo!`;
+      passo("tabellina", `Quante volte ${il(b)} sta ${nel(g.val)}? ${recita} Ci sta ${volte(g.q)}.`, "tabellina",
+        [{ t: "tab", val: g.val, q: g.q }, { t: "calc", righe: [] }], [...g.celle, "d-*"]);
+      passo("linea", `Scrivo ${g.q} sotto la linea.`, "tabellina", [{ t: "q", col: i, val: g.q }], [`q-${i}`]);
+      passo("resto", `${g.q} × ${b} = ${g.prodotto}. ${g.val} − ${g.prodotto} = ${g.r}. Scrivo ${g.r}: è più piccolo di ${b}.`, "resto",
+        [{ t: "calc", righe: [`${g.q} × ${b} = ${g.prodotto}`, `${g.val} − ${g.prodotto} = ${g.r}`] }, { t: "resto", g: i }], g.celleResto);
       if (g.scende) {
         const dopo = giri[i + 1];
-        P.push({ testo: `Scende ${il(g.scende.cifra)} in ascensore. Ora ho ${dopo.val}.`, fase: "ascensore", azioni: [{ t: "scende", g: i }, { t: "tab", val: null }, { t: "calc", righe: [] }], evid: dopo.celle });
+        passo("ascensore", `Scende ${il(g.scende.cifra)}: ora ho ${dopo.val}.`, "ascensore", [{ t: "scende", g: i }, { t: "tab", val: null }, { t: "calc", righe: [] }], dopo.celle);
+        passo("ricomincio", `Ora divido ${dopo.val} per ${b}.`, null, [], [...dopo.celle, "d-*"]);
       }
     });
     const ultimo = giri[giri.length - 1];
-    P.push({ testo: `Le cifre sono finite. ${a} : ${b} = ${dv.q}, con il resto di ${dv.r}.`, fase: null, azioni: [{ t: "tab", val: null }, { t: "calc", righe: [] }], evid: ["q-*", ...ultimo.celleResto] });
-    P.push({ testo: dv.r ? `La prova: ${dv.q} × ${b} = ${dv.q * b}, più ${dv.r} di resto fa ${a}. È giusta! 🎉` : `La prova: ${dv.q} × ${b} = ${a}. Torna il dividendo: è giusta! 🎉`,
-      fase: null, finale: true, azioni: [{ t: "calc", prova: true, righe: dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`] }], evid: ["q-*", "d-*", "s-0-*"] });
+    passo("fine", `${a} : ${b} = ${dv.q}, con il resto di ${dv.r}.`, null, [{ t: "tab", val: null }, { t: "calc", righe: [] }], ["q-*", ...ultimo.celleResto]);
+    passo("prova", dv.r ? `${dv.q} × ${b} = ${dv.q * b}, più ${dv.r} di resto fa ${a}. È giusta! 🎉` : `${dv.q} × ${b} = ${a}. Torna il dividendo: è giusta! 🎉`, null,
+      [{ t: "calc", prova: true, righe: dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`] }], ["q-*", "d-*", "s-0-*"], { finale: true });
+    P.forEach((x) => { x.voce = `${x.strofa.replace(/…/g, " ")}. ${x.testo}`; });
     return P;
   }
 
@@ -1883,7 +1904,7 @@
     const n = dv.D.length, R = dv.giri.length, m = Math.max(dv.L, R);
     const el = document.createElement("div");
     el.className = "div-tutto";
-    el.innerHTML = `<div class="div-fasi">${FASI_DIV.map(([f, e, t]) => `<span class="div-fase" data-fase="${f}">${Figura.img(e, "figura")}${t}</span>`).join("")}</div>
+    el.innerHTML = `<div class="div-strofa" hidden></div><div class="div-fasi">${FASI_DIV.map(([f, e, t]) => `<span class="div-fase" data-fase="${f}">${Figura.img(e, "figura")}${t}</span>`).join("")}</div>
       <div class="div-corpo"><div class="div-posto colonna-posto"><div class="colonna-griglia div-griglia"></div></div>
       <div class="div-lato"><div class="div-tab" hidden></div><div class="div-calc" hidden></div></div></div>`;
     const gr = el.querySelector(".div-griglia");
