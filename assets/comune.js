@@ -4,10 +4,10 @@
 const figuraEmoji = (f, cls) => `<img class="${cls}" src="assets/emoji/${f}.webp" alt="" draggable="false">`;
 window.MASCOTTE = `
 <div class="maestra-classe" role="img" aria-label="La maestra con i suoi bambini">
-  ${figuraEmoji("1f469-200d-1f3eb", "mc-maestra")}
+  <img class="mc-maestra" src="assets/disegni/maestra.svg" alt="" draggable="false">
   ${[["1f467-1f3fb", 1], ["1f466-1f3fd", 2], ["1f467-1f3fe", 3], ["1f466-1f3fc", 4], ["1f467", 5], ["1f466-1f3ff", 6]].map(([f, k]) => figuraEmoji(f, `mc-bimbo mc-b${k}`)).join("")}
 </div>`;
-window.LOGO = figuraEmoji("1f469-200d-1f3eb", "logo-maestra");
+window.LOGO = `<img class="logo-maestra" src="assets/disegni/maestra.svg" alt="" draggable="false">`;
 
 window.creaTestata = function (attivo) {
   document.querySelectorAll("header.testata, footer.piede").forEach((x) => x.remove());

@@ -1323,7 +1323,7 @@ body.lim .div-strofa .figura { width: min(52px, 5vh); height: min(52px, 5vh); }
 .maestra-classe { position: relative; aspect-ratio: 1 / 1; }
 .maestra-classe::before { content: ""; position: absolute; inset: 6% 4% 10%; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #FFF3CC, #FFE2A8 70%); }
 
-.mc-maestra { position: absolute; width: 56%; left: 22%; top: 6%; filter: drop-shadow(0 8px 6px rgba(0,0,0,.12)); }
+.mc-maestra { position: absolute; width: 52%; left: 24%; top: 4%; filter: drop-shadow(0 8px 6px rgba(0,0,0,.12)); }
 .mc-bimbo { position: absolute; width: 23%; filter: drop-shadow(0 5px 4px rgba(0,0,0,.12)); animation: saluta 2.8s ease-in-out infinite; transform-origin: bottom center; }
 .mc-b1 { left: 0%; top: 46%; } .mc-b2 { left: 12%; top: 66%; animation-delay: .4s; } .mc-b3 { left: 33%; top: 74%; animation-delay: .8s; }
 .mc-b4 { left: 54%; top: 72%; animation-delay: 1.2s; } .mc-b5 { left: 74%; top: 64%; animation-delay: 1.6s; } .mc-b6 { left: 81%; top: 44%; animation-delay: 2s; }
