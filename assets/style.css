@@ -1239,3 +1239,62 @@ body.lim .giorno-esercizi .torna-giorni { display: none; }
 
 /* Pulsante dell'album nella home: dorato, si nota subito. */
 .btn.album-link { background: #FFC83D; color: #4B3200; }
+
+/* ---------- Divisione in colonna con la filastrocca (👒 cappellino, 🎶 tabellina, ➖ resto, 🛗 ascensore) ---------- */
+.div-tutto { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.div-fasi { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.div-fase { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px 6px 8px; border-radius: 999px; background: #fff; border: 3px solid var(--bordo); font: 800 1.05rem "Baloo 2", sans-serif; color: var(--testo-tenue); opacity: .55; transition: all .3s; }
+.div-fase .figura { width: 34px; height: 34px; }
+.div-fase.accesa { opacity: 1; color: var(--testo); border-color: var(--giallo); background: var(--giallo-chiaro); transform: scale(1.12); box-shadow: 0 4px 0 rgba(0,0,0,.08); }
+.div-corpo { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: flex-start; }
+.div-griglia { row-gap: 2px; }
+.div-griglia .cella.dx { padding: 0 6px; }
+.div-griglia .cella.dx-primo { border-left: 4px solid var(--testo); border-radius: 0; }
+.div-griglia .cella.dx-sopra { border-bottom: 4px solid var(--testo); border-radius: 0; }
+.div-griglia .cella.dx-sopra.dx-primo { border-radius: 0; }
+.div-griglia .cella.scesa { position: relative; color: var(--testo-tenue); }
+.div-griglia .cella.scesa::after { content: "↓"; position: absolute; bottom: -.55em; right: 2px; font-size: .5em; color: var(--corallo); }
+.div-griglia .cella.in-ascensore { background: #DCEBFF; box-shadow: inset 0 0 0 3px var(--mat); position: relative; z-index: 2; }
+.div-griglia .cella.tocca { cursor: pointer; box-shadow: inset 0 0 0 3px var(--tema); background: var(--tema-chiaro); animation: lampeggia 1.2s infinite; }
+.div-griglia .cella.tocca.sbagliata { box-shadow: inset 0 0 0 3px var(--ko); background: var(--corallo-chiaro); animation: scuoti .35s; }
+.div-cappello { align-self: end; height: 30px; border: 4px solid var(--corallo); border-bottom: none; border-radius: 60% 60% 0 0 / 100% 100% 0 0; margin: 0 6px -6px; position: relative; display: grid; place-items: start center; }
+.div-cappello .figura { width: 34px; height: 34px; margin-top: -26px; }
+.div-cappello.ko { border-style: dashed; border-color: var(--ko); }
+.div-cappello.ko::after { content: "✗"; position: absolute; right: -6px; top: -22px; color: var(--ko); font: 800 1.4rem "Baloo 2", sans-serif; }
+.div-cappello.nuova { animation: cappello .6s; transform-origin: bottom center; }
+@keyframes cappello { from { transform: translateY(-30px) scale(.6); opacity: 0; } }
+.div-lato { display: flex; flex-direction: column; gap: 10px; min-width: 190px; }
+.div-tab, .div-calc { background: #fff; border: 3px solid var(--bordo); border-radius: 16px; padding: 8px 12px; font: 700 1.05rem "Baloo 2", sans-serif; }
+.div-tab > b, .div-calc > b { display: flex; align-items: center; gap: 6px; font-size: 1.05rem; color: var(--tema); }
+.div-tab .figura, .div-calc .figura { width: 26px; height: 26px; }
+.div-tab ol { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 2px; }
+.div-tab li { padding: 0 8px; border-radius: 8px; white-space: nowrap; animation: compari .4s backwards; }
+.div-tab li:nth-child(2) { animation-delay: .15s; } .div-tab li:nth-child(3) { animation-delay: .3s; } .div-tab li:nth-child(4) { animation-delay: .45s; }
+.div-tab li:nth-child(5) { animation-delay: .6s; } .div-tab li:nth-child(6) { animation-delay: .75s; } .div-tab li:nth-child(7) { animation-delay: .9s; }
+.div-tab li:nth-child(8) { animation-delay: 1.05s; } .div-tab li:nth-child(9) { animation-delay: 1.2s; }
+.div-tab li.ok { background: #E6F8EE; }
+.div-tab li.scelta { background: #C9F0D9; box-shadow: inset 0 0 0 2px var(--ok); }
+.div-tab li.troppo { background: var(--corallo-chiaro); color: var(--ko); text-decoration: line-through; text-decoration-thickness: 2px; }
+.div-calc .div-riga { font-size: 1.5rem; font-weight: 800; animation: compari .4s; }
+.div-calc.prova { border-color: var(--ok); background: #F0FBF4; }
+.div-es { display: flex; flex-direction: column; gap: 10px; }
+.div-consegna { margin: 0; text-align: center; font: 800 1.25rem "Baloo 2", sans-serif; color: var(--tema); min-height: 1.6em; }
+.tastierino.spento { opacity: .35; pointer-events: none; }
+.animazione.video .div-fase { background: #2C2842; border-color: #3E3858; color: #B8B3CC; }
+.animazione.video .div-fase.accesa { background: var(--giallo); border-color: var(--giallo); color: var(--testo); }
+@media (max-width: 600px) {
+  .div-fasi { display: grid; grid-template-columns: 1fr 1fr; }
+  .div-fase { font-size: .9rem; padding: 4px 10px 4px 6px; } .div-fase .figura { width: 26px; height: 26px; }
+  .div-fase.accesa { transform: scale(1.05); }
+  .div-lato { min-width: 0; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .div-tab, .div-calc { font-size: .95rem; }
+  .div-calc .div-riga { font-size: 1.2rem; }
+  .div-griglia .cella.dx { padding: 0 2px; }
+}
+body.lim .div-fase { font-size: min(1.5rem, 2.6vh); } body.lim .div-fase .figura { width: min(44px, 4.2vh); height: min(44px, 4.2vh); }
+body.lim .div-tab, body.lim .div-calc { font-size: min(1.45rem, 2.5vh); }
+body.lim .div-tab ol.lunga { grid-auto-flow: column; grid-template-rows: repeat(5, auto); column-gap: 8px; }
+.div-tab ol.ferma li { animation: none; }
+body.lim .div-calc .div-riga { font-size: min(2.2rem, 3.8vh); }
+body.lim .div-consegna { font-size: min(1.8rem, 3.2vh); }
+body.lim .div-cappello { height: min(40px, 3.8vh); }

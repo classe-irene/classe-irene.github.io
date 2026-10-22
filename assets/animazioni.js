@@ -1,6 +1,7 @@
 // Animazioni passo passo per le lezioni, sincronizzate con una frase (e la voce) per ogni passo.
 //   { "tipo": "moltiplicazione", "a": 23, "b": 14 }   moltiplicazione in colonna, con riporti
 //   { "tipo": "scomposizione",   "a": 23, "b": 14 }   il rettangolo diviso in quattro parti
+//   { "tipo": "divisione",       "a": 156, "b": 12 }  divisione in colonna con la filastrocca (cappellino, tabellina, resto, ascensore)
 // Contiene anche l'esercizio interattivo "colonna": il bambino scrive le cifre con un tastierino.
 
 (function () {
@@ -1645,6 +1646,17 @@
       const s = passiGelosia(a, b);
       passi = s.passi;
       disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
+    } else if (tipo === "divisione") {
+      const dv = calcolaDivisione(a, b);
+      passi = passiDivisione(dv);
+      disegna = (palco, n) => {
+        const g = grigliaDivisione(dv);
+        palco.replaceChildren(g.el);
+        for (let k = 0; k <= n; k++) applicaDiv(g, passi[k], k === n);
+        evidenziaDiv(g, passi[n].evid);
+        faseDiv(g, passi[n].fase);
+        if (passi[n].finale) g.el.querySelector(".div-griglia").classList.add("finita");
+      };
     } else if (tipo === "scena" || tipo === "sequenza" || tipo === "addizione") {
       const sc = tipo === "sequenza" ? scenaSequenza(anim) : tipo === "addizione" ? scenaAddizione(anim) : SCENE[anim.scena]?.(anim);
       if (!sc || !sc.passi.length) return;
@@ -1660,7 +1672,7 @@
         <p class="didascalia" aria-live="polite"></p>
         <div class="comandi">
           <button class="btn" data-anim="play">▶ Guarda</button>
-          ${tipo === "gelosia" || tipo === "moltiplicazione" ? '<button class="btn bianco" data-anim="tavola">📋 Tavola pitagorica</button>' : ""}
+          ${tipo === "gelosia" || tipo === "moltiplicazione" || tipo === "divisione" ? '<button class="btn bianco" data-anim="tavola">📋 Tavola pitagorica</button>' : ""}
           <button class="btn bianco" data-anim="passo">⏭ Un passo</button>
           <button class="btn bianco" data-anim="capo">↺ Da capo</button>
           <label class="con-voce"><input type="checkbox" data-anim="voce" checked> 🔊 Con la voce</label>
@@ -1804,5 +1816,252 @@
     });
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  /* ---------- Divisione in colonna con la filastrocca: 👒 cappellino, 🎶 tabellina, ➖ resto, 🛗 ascensore ----------
+     Dividendo a sinistra, divisore a destra sopra la linea, quoziente sotto la linea.
+     Sotto il dividendo si scrivono solo i resti: moltiplicazione e sottrazione si fanno a parte, nella lavagnetta. */
+  function calcolaDivisione(a, b) {
+    const D = cifre(a), L = String(b).length;
+    let fine = Math.min(L, D.length) - 1;
+    let val = Number(D.slice(0, fine + 1).join(""));
+    const cap = { fine, val, prova: null };
+    if (val < b && fine < D.length - 1) { cap.prova = { fine, val }; fine++; val = val * 10 + D[fine]; cap.fine = fine; cap.val = val; }
+    const giri = [];
+    for (;;) {
+      const i = giri.length, q = Math.floor(val / b), r = val - q * b;
+      // Le caselle dove si legge il numero da dividere: il primo sta sotto il cappellino, gli altri sono resto + cifra scesa.
+      const prima = i === 0 ? 0 : giri[i - 1].fine - String(giri[i - 1].r).length + 1;
+      const celle = [];
+      for (let c = prima; c <= fine; c++) celle.push(`s-${i}-${c}`);
+      const giro = { fine, val, q, prodotto: q * b, r, riga: i + 1, celle };
+      giro.celleResto = [...String(r)].map((_, k, t) => `s-${i + 1}-${fine - t.length + 1 + k}`);
+      giri.push(giro);
+      if (fine >= D.length - 1) break;
+      fine++;
+      giro.scende = { col: fine, cifra: D[fine] };
+      val = r * 10 + D[fine];
+    }
+    return { a, b, D, L, cap, giri, q: Math.floor(a / b), r: a % b };
+  }
+  // "il 12", "l'8", "nel 36", "nell'80": le parole cambiano davanti ai numeri che si leggono con una vocale.
+  const conVocale = (n) => String(n)[0] === "8" || n === 1 || n === 11;
+  const il = (n) => (conVocale(n) ? "l'" : "il ") + n;
+  const nel = (n) => (conVocale(n) ? "nell'" : "nel ") + n;
+  const quanteCifre = (k) => ["", "una cifra", "due cifre", "tre cifre"][k];
+  const volte = (q) => (q === 1 ? "1 volta" : `${q} volte`);
+
+  function passiDivisione(dv) {
+    const { a, b, L, cap, giri } = dv;
+    const capCelle = (f) => Array.from({ length: f + 1 }, (_, c) => `s-0-${c}`);
+    const P = [{ testo: `Facciamo ${a} : ${b}. Il dividendo è ${a}, il divisore è ${b}.`, fase: null, azioni: [], evid: ["s-0-*", "d-*"] }];
+    if (cap.prova) {
+      P.push({ testo: `Guardo il divisore: ${b} ha ${quanteCifre(L)}. Provo il cappellino su ${cap.prova.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.prova.fine, ko: true }], evid: ["d-*", ...capCelle(cap.prova.fine)] });
+      P.push({ testo: `${cap.prova.val} è più piccolo di ${b}: non ci sta! Il cappellino prende una cifra in più: ${cap.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.fine }], evid: capCelle(cap.fine) });
+    } else P.push({ testo: `Guardo il divisore: ${b} ha ${quanteCifre(L)}. Metto il cappellino su ${quanteCifre(L)}: ${cap.val}.`, fase: "cappello", azioni: [{ t: "cap", fine: cap.fine }], evid: ["d-*", ...capCelle(cap.fine)] });
+    giri.forEach((g, i) => {
+      const multipli = Array.from({ length: g.q }, (_, k) => b * (k + 1));
+      const domanda = `${i ? "Ricomincio! " : ""}Quante volte ${il(b)} sta ${nel(g.val)}?`;
+      const recita = g.q ? ` Recito la tabellina del ${b}: ${multipli.join(", ")}.${g.q < 9 ? ` ${b * (g.q + 1)} è troppo!` : ""}` : ` ${b} è più grande di ${g.val}: non ci sta.`;
+      P.push({ testo: domanda + recita, fase: "tabellina", azioni: [{ t: "tab", val: g.val, q: g.q }, { t: "calc", righe: [] }], evid: [...g.celle, "d-*"] });
+      P.push({ testo: `${il(b)[0].toUpperCase() + il(b).slice(1)} ${nel(g.val)} ci sta ${volte(g.q)}. Scrivo ${g.q} sotto la linea.`, fase: "tabellina", azioni: [{ t: "q", col: i, val: g.q }], evid: [`q-${i}`] });
+      P.push({ testo: `Calcolo il resto: ${g.q} × ${b} = ${g.prodotto}, e ${g.val} − ${g.prodotto} = ${g.r}. Scrivo ${g.r}: è più piccolo di ${b}, va bene!`, fase: "resto",
+        azioni: [{ t: "calc", righe: [`${g.q} × ${b} = ${g.prodotto}`, `${g.val} − ${g.prodotto} = ${g.r}`] }, { t: "resto", g: i }], evid: g.celleResto });
+      if (g.scende) {
+        const dopo = giri[i + 1];
+        P.push({ testo: `Scende ${il(g.scende.cifra)} in ascensore. Ora ho ${dopo.val}.`, fase: "ascensore", azioni: [{ t: "scende", g: i }, { t: "tab", val: null }, { t: "calc", righe: [] }], evid: dopo.celle });
+      }
+    });
+    const ultimo = giri[giri.length - 1];
+    P.push({ testo: `Le cifre sono finite. ${a} : ${b} = ${dv.q}, con il resto di ${dv.r}.`, fase: null, azioni: [{ t: "tab", val: null }, { t: "calc", righe: [] }], evid: ["q-*", ...ultimo.celleResto] });
+    P.push({ testo: dv.r ? `La prova: ${dv.q} × ${b} = ${dv.q * b}, più ${dv.r} di resto fa ${a}. È giusta! 🎉` : `La prova: ${dv.q} × ${b} = ${a}. Torna il dividendo: è giusta! 🎉`,
+      fase: null, finale: true, azioni: [{ t: "calc", prova: true, righe: dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`] }], evid: ["q-*", "d-*", "s-0-*"] });
+    return P;
+  }
+
+  const FASI_DIV = [["cappello", "👒", "Cappellino"], ["tabellina", "🎶", "Tabellina"], ["resto", "➖", "Resto"], ["ascensore", "🛗", "Ascensore"]];
+  // Disegno completo: le quattro fasi della filastrocca, la colonna e, di lato, tabellina e lavagnetta.
+  function grigliaDivisione(dv) {
+    const n = dv.D.length, R = dv.giri.length, m = Math.max(dv.L, R);
+    const el = document.createElement("div");
+    el.className = "div-tutto";
+    el.innerHTML = `<div class="div-fasi">${FASI_DIV.map(([f, e, t]) => `<span class="div-fase" data-fase="${f}">${Figura.img(e, "figura")}${t}</span>`).join("")}</div>
+      <div class="div-corpo"><div class="div-posto colonna-posto"><div class="colonna-griglia div-griglia"></div></div>
+      <div class="div-lato"><div class="div-tab" hidden></div><div class="div-calc" hidden></div></div></div>`;
+    const gr = el.querySelector(".div-griglia");
+    gr.style.gridTemplateColumns = `repeat(${n + m}, auto)`;
+    const celle = {};
+    const cella = (k, riga, col, testo = "", cls = "") => {
+      const c = document.createElement("div");
+      c.className = "cella " + cls;
+      c.style.gridRow = riga + 2; c.style.gridColumn = col + 1;
+      c.textContent = testo;
+      celle[k] = c; gr.append(c);
+      return c;
+    };
+    for (let r = 0; r <= R; r++) {
+      for (let c = 0; c < n; c++) cella(`s-${r}-${c}`, r, c, r === 0 ? dv.D[c] : "");
+      for (let c = 0; c < m; c++) {
+        const k = r === 0 ? `d-${c}` : r === 1 ? `q-${c}` : `x-${r}-${c}`;
+        cella(k, r, n + c, r === 0 ? String(dv.b)[c] || "" : "", `dx${c === 0 ? " dx-primo" : ""}${r === 0 ? " dx-sopra" : ""}`);
+      }
+    }
+    const cappello = document.createElement("div");
+    cappello.className = "div-cappello";
+    cappello.style.gridRow = 1;
+    cappello.innerHTML = Figura.img("👒", "figura");
+    cappello.hidden = true;
+    gr.prepend(cappello);
+    return { el, celle, cappello, dv, tab: el.querySelector(".div-tab"), calc: el.querySelector(".div-calc") };
+  }
+  function tabellinaHTML(b, val, q, tutte, rivela = true) {
+    const righe = tutte ? 9 : Math.min(q + 1, 9);
+    return `<b>${Figura.img("🎶", "figura")} Tabellina del ${b}</b><ol class="${righe > 5 ? "lunga" : ""}${tutte ? " ferma" : ""}">${Array.from({ length: righe }, (_, k) => {
+      const x = b * (k + 1), stato = val == null ? "" : x <= val ? (rivela && k + 1 === q ? " scelta" : " ok") : k === q ? " troppo" : "";
+      return `<li class="${stato}">${b} × ${k + 1} = <b>${x}</b>${stato === " troppo" ? " 🚫" : stato === " scelta" ? " ✅" : ""}</li>`;
+    }).join("")}</ol>`;
+  }
+  function calcHTML(righe, prova) {
+    return `<b>${Figura.img(prova ? "✅" : "📝", "figura")} ${prova ? "La prova" : "Lavagnetta"}</b>${righe.map((r) => `<div class="div-riga">${escapeHTML(r)}</div>`).join("")}`;
+  }
+  function scriviResto(g, giro, anima) {
+    const t = String(giro.r);
+    giro.celleResto.forEach((k, i) => { const c = g.celle[k]; c.textContent = t[i]; if (anima) c.classList.add("nuova"); });
+  }
+  function applicaDiv(g, p, anima) {
+    const dv = g.dv;
+    for (const az of p.azioni) {
+      if (az.t === "cap") {
+        g.cappello.hidden = false;
+        g.cappello.style.gridColumn = `1 / span ${az.fine + 1}`;
+        g.cappello.classList.toggle("ko", !!az.ko);
+        if (anima) { g.cappello.classList.remove("nuova"); void g.cappello.offsetWidth; g.cappello.classList.add("nuova"); }
+      }
+      if (az.t === "tab") { g.tab.hidden = az.val == null; if (az.val != null) g.tab.innerHTML = tabellinaHTML(dv.b, az.val, az.q); }
+      if (az.t === "calc") { g.calc.hidden = !az.righe.length; g.calc.classList.toggle("prova", !!az.prova); g.calc.innerHTML = calcHTML(az.righe, az.prova); }
+      if (az.t === "q") { const c = g.celle[`q-${az.col}`]; c.textContent = az.val; if (anima) c.classList.add("nuova"); }
+      if (az.t === "resto") scriviResto(g, dv.giri[az.g], anima);
+      if (az.t === "scende") scendi(g, dv.giri[az.g], anima);
+    }
+  }
+  // 🛗 La cifra scende in ascensore: parte dal dividendo e scivola giù accanto al resto.
+  function scendi(g, giro, anima) {
+    const src = g.celle[`s-0-${giro.scende.col}`], dst = g.celle[`s-${giro.riga}-${giro.scende.col}`];
+    src.classList.add("scesa");
+    dst.textContent = giro.scende.cifra;
+    if (!anima) return;
+    requestAnimationFrame(() => {
+      const dy = src.getBoundingClientRect().top - dst.getBoundingClientRect().top;
+      dst.classList.add("in-ascensore");
+      dst.animate?.([{ transform: `translateY(${dy}px)` }, { transform: `translateY(${dy}px)`, offset: 0.2 }, { transform: "none" }], { duration: 1400, easing: "ease-in-out" });
+      setTimeout(() => dst.classList.remove("in-ascensore"), 1800);
+    });
+  }
+  function evidenziaDiv(g, evid) {
+    Object.values(g.celle).forEach((c) => c.classList.remove("evid"));
+    for (const k of evid || []) {
+      if (k.endsWith("-*")) Object.entries(g.celle).forEach(([kk, c]) => { if (kk.startsWith(k.slice(0, -1)) && c.textContent) c.classList.add("evid"); });
+      else g.celle[k]?.classList.add("evid");
+    }
+  }
+  const faseDiv = (g, f) => g.el.querySelectorAll(".div-fase").forEach((x) => x.classList.toggle("accesa", x.dataset.fase === f));
+
+  /* ---------- Esercizio "divisione": il bambino segue la filastrocca ---------- */
+  function esercizioDivisione(e, c, esito, intestazione) {
+    const a = +e.a, b = +e.b;
+    const dv = calcolaDivisione(a, b);
+    const g = grigliaDivisione(dv);
+    // Le mosse, in ordine: tocca il cappellino, poi per ogni giro quoziente, resto (una cifra alla volta) e cifra che scende.
+    const mosse = [{ tipo: "cappello" }];
+    dv.giri.forEach((giro, i) => {
+      mosse.push({ tipo: "quoziente", giro: i, cella: `q-${i}`, val: giro.q });
+      [...String(giro.r)].forEach((d, k) => mosse.push({ tipo: "resto", giro: i, cella: giro.celleResto[k], val: +d, prima: k === 0 }));
+      if (giro.scende) mosse.push({ tipo: "scende", giro: i, col: giro.scende.col });
+    });
+    c.innerHTML = intestazione + `<div class="div-es"><p class="div-consegna"></p><div class="colonna-es div-es-corpo"></div></div>`;
+    const corpo = c.querySelector(".div-es-corpo"), consegna = c.querySelector(".div-consegna");
+    corpo.append(g.el);
+    corpo.insertAdjacentHTML("beforeend", `<div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}</div>`);
+    const tastierino = corpo.querySelector(".tastierino");
+    // La tabellina del divisore resta sempre in vista: è lo strumento compensativo per chi ha DSA.
+    const mostraTab = (val = null, q = 0) => { g.tab.hidden = false; g.tab.innerHTML = tabellinaHTML(b, val, q, true, false); };
+    mostraTab();
+    let k = 0;
+    const testi = {
+      cappello: () => `👒 Il divisore ${b} ha ${quanteCifre(dv.L)}. Tocca l'ultima cifra che va sotto il cappellino.`,
+      quoziente: (m) => `🎶 Quante volte ${il(b)} sta ${nel(dv.giri[m.giro].val)}? Scrivi il numero sotto la linea.`,
+      resto: (m) => { const gi = dv.giri[m.giro]; return `➖ Quanto resta? ${gi.val} − ${gi.prodotto} = ? Scrivi il resto${String(gi.r).length > 1 ? ", una cifra alla volta" : ""}.`; },
+      scende: () => "🛗 Tocca la cifra che scende in ascensore.",
+    };
+    function prepara() {
+      Object.values(g.celle).forEach((x) => x.classList.remove("attiva", "tocca"));
+      const m = mosse[k];
+      if (!m) return;
+      consegna.textContent = testi[m.tipo](m);
+      tastierino.classList.toggle("spento", m.tipo === "cappello" || m.tipo === "scende");
+      const fase = { cappello: "cappello", quoziente: "tabellina", resto: "resto", scende: "ascensore" }[m.tipo];
+      faseDiv(g, fase);
+      if (m.tipo === "cappello" || m.tipo === "scende") dv.D.forEach((_, col) => g.celle[`s-0-${col}`].classList.add("tocca"));
+      else g.celle[m.cella].classList.add("attiva");
+      if (m.tipo === "quoziente") { evidenziaDiv(g, [...dv.giri[m.giro].celle, "d-*"]); g.calc.hidden = true; }
+      if (m.tipo === "resto" && m.prima) {
+        const gi = dv.giri[m.giro];
+        g.calc.hidden = false; g.calc.classList.remove("prova");
+        g.calc.innerHTML = calcHTML([`${gi.q} × ${b} = ${gi.prodotto}`, `${gi.val} − ${gi.prodotto} = ?`]);
+        evidenziaDiv(g, gi.celle);
+      }
+    }
+    function avanti(nodo) {
+      esito.bene?.(nodo);
+      k++;
+      if (k >= mosse.length) {
+        Object.values(g.celle).forEach((x) => x.classList.remove("attiva", "tocca"));
+        faseDiv(g, null); tastierino.classList.add("spento");
+        g.calc.hidden = false; g.calc.classList.add("prova");
+        g.calc.innerHTML = calcHTML(dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`], true);
+        consegna.textContent = `✅ ${a} : ${b} = ${dv.q}, resto ${dv.r}.`;
+        evidenziaDiv(g, ["q-*", ...dv.giri[dv.giri.length - 1].celleResto]);
+        g.el.querySelector(".div-griglia").classList.add("finita");
+        e.spiegazione = e.spiegazione || `${a} : ${b} = ${dv.q}, con il resto di ${dv.r}.`;
+        esito.ok();
+      } else { Suono.giusto(); prepara(); }
+    }
+    c.addEventListener("click", (ev) => {
+      const m = mosse[k];
+      if (!m) return;
+      const cifra = ev.target.closest(".cella.tocca"), tasto = ev.target.closest(".tasto");
+      if (cifra || tasto) c.querySelectorAll(".sbagliata").forEach((x) => x.classList.remove("sbagliata"));
+      if (cifra && (m.tipo === "cappello" || m.tipo === "scende")) {
+        const col = +cifra.style.gridColumn.split(" ")[0] - 1;
+        if (m.tipo === "cappello") {
+          if (col === dv.cap.fine) { applicaDiv(g, { azioni: [{ t: "cap", fine: col }] }, true); evidenziaDiv(g, []); return avanti(cifra); }
+          const val = Number(dv.D.slice(0, col + 1).join(""));
+          e.suggerimento = col < dv.cap.fine
+            ? (val < b ? `${val} è più piccolo di ${b}: ${il(b)} non ci sta. Prendi una cifra in più.` : `Il cappellino copre tante cifre quante ne ha il divisore: ${quanteCifre(dv.L)}.`)
+            : `Troppe cifre! ${il(b)[0].toUpperCase() + il(b).slice(1)} ci sta già ${nel(dv.cap.val)}.`;
+          return esito.ko(cifra);
+        }
+        const gi = dv.giri[m.giro];
+        if (col === m.col) { scendi(g, gi, true); evidenziaDiv(g, dv.giri[m.giro + 1].celle); return avanti(cifra); }
+        e.suggerimento = col < m.col ? "Questa cifra l'hai già usata. Scende la cifra subito dopo." : "Scende la prima cifra che non hai ancora usato, quella subito dopo.";
+        return esito.ko(cifra);
+      }
+      if (!tasto || tastierino.classList.contains("spento")) return;
+      const d = +tasto.dataset.d;
+      if (d === m.val) {
+        const cl = g.celle[m.cella];
+        cl.textContent = d; cl.classList.add("nuova");
+        if (m.tipo === "quoziente") mostraTab();
+        return avanti(tasto);
+      }
+      const gi = dv.giri[m.giro];
+      if (m.tipo === "quoziente") {
+        mostraTab(gi.val, gi.q);
+        e.suggerimento = d * b > gi.val ? `${d} × ${b} = ${d * b}: è troppo! Prova con un numero più piccolo.`
+          : `${d} × ${b} = ${d * b}: avanzano ancora ${gi.val - d * b}, ${il(b)} ci sta ancora. Prova con un numero più grande.`;
+      } else e.suggerimento = `Fai la sottrazione ${gi.val} − ${gi.prodotto}: conta in avanti da ${gi.prodotto} fino a ${gi.val}.`;
+      esito.ko(tasto);
+    });
+    prepara();
+  }
+
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioDivisione, calcolaDivisione, passiDivisione, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

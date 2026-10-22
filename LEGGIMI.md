@@ -116,3 +116,9 @@ Stessa tabella hk dak uk h da u, numeri fino a 999 999. Gli 0 segnaposto sono in
 - Esercizio `scomponi` {n}: per ogni cifra sceglie quanto vale (es. 4 → 4 000).
 - Esercizio `confronta` {a, b, uguale?}: tasti < minore e > maggiore (= solo se i numeri sono uguali o con `uguale`); se sbaglia, la tabella illumina la casella che decide.
 - La voce legge "<" come "è minore di", ">" come "è maggiore di", "+" come "più".
+
+## Divisione in colonna con la filastrocca (classe 4ª)
+Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: 👒 **Cappellino** (copre tante cifre quante il divisore, una in più se non basta), 🎶 **Tabellina** (quante volte ci sta, si scrive sotto la linea), ➖ **Resto** (sotto il dividendo si scrive solo il resto), 🛗 **Ascensore** (la cifra dopo scende accanto al resto).
+- Video in una sezione: `"animazione": { "tipo": "divisione", "a": 156, "b": 12, "video": true, "titolo": "156 : 12" }`. Di lato: la tabellina del divisore (giusti in verde, "troppo" in rosso) e la lavagnetta con moltiplicazione e sottrazione; alla fine la prova.
+- Esercizio `{ "tipo": "divisione", "a": 168, "b": 12 }`: il bambino tocca l'ultima cifra del cappellino, scrive quoziente e resto con il tastierino e tocca la cifra che scende. La tabellina del divisore è sempre in vista (strumento compensativo per DSA); se sbaglia, i suggerimenti dicono perché ("2 × 12 = 24: è troppo!").
+- Limiti: dividendo fino a 9999, divisore da 2 a 99, dividendo non più piccolo del divisore. Lezione: `lezioni/mat4-divisioni-due-cifre.json`.
