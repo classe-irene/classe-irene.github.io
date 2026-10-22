@@ -142,7 +142,7 @@
   function creaCompagno(l) {
     compagno = document.createElement("button");
     compagno.className = "compagno"; compagno.type = "button"; compagno.setAttribute("aria-label", "Il personaggio della lezione");
-    compagno.innerHTML = `${Figura.img(l.storia?.personaggio || "🦉", "figura media")}<span class="nuvola" hidden></span>`;
+    compagno.innerHTML = `${Figura.img(l.storia?.personaggio || "👩‍🏫", "figura media")}<span class="nuvola" hidden></span>`;
     nuvola = compagno.querySelector(".nuvola");
     document.body.append(compagno);
     compagno.addEventListener("click", () => {

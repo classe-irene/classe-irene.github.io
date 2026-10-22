@@ -52,7 +52,7 @@ button { font: inherit; cursor: pointer; }
 .testata { padding: 18px 0; }
 .testata .contenitore { display: flex; align-items: center; gap: 14px; justify-content: space-between; flex-wrap: wrap; }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--testo); }
-.logo svg { width: 52px; height: 52px; }
+.logo .logo-maestra { width: 52px; height: 52px; }
 .logo span { font-family: "Baloo 2", sans-serif; font-size: 1.5rem; font-weight: 800; }
 .nav { display: flex; gap: 8px; flex-wrap: wrap; }
 .nav a {
@@ -1318,3 +1318,13 @@ body.lim .div-strofa .figura { width: min(52px, 5vh); height: min(52px, 5vh); }
 .home-evidenza:hover { transform: translateY(-3px); }
 .home-evidenza b { display: block; font: 800 1.5rem "Baloo 2", sans-serif; }
 .home-evidenza small { display: block; color: var(--testo-tenue); font-size: .95rem; }
+
+/* La mascotte della home: la maestra con i suoi bambini */
+.maestra-classe { position: relative; aspect-ratio: 1 / 1; }
+.maestra-classe::before { content: ""; position: absolute; inset: 6% 4% 10%; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #FFF3CC, #FFE2A8 70%); }
+
+.mc-maestra { position: absolute; width: 56%; left: 22%; top: 6%; filter: drop-shadow(0 8px 6px rgba(0,0,0,.12)); }
+.mc-bimbo { position: absolute; width: 23%; filter: drop-shadow(0 5px 4px rgba(0,0,0,.12)); animation: saluta 2.8s ease-in-out infinite; transform-origin: bottom center; }
+.mc-b1 { left: 0%; top: 46%; } .mc-b2 { left: 12%; top: 66%; animation-delay: .4s; } .mc-b3 { left: 33%; top: 74%; animation-delay: .8s; }
+.mc-b4 { left: 54%; top: 72%; animation-delay: 1.2s; } .mc-b5 { left: 74%; top: 64%; animation-delay: 1.6s; } .mc-b6 { left: 81%; top: 44%; animation-delay: 2s; }
+@keyframes saluta { 50% { transform: translateY(-6px) rotate(-4deg); } }

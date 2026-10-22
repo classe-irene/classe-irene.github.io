@@ -179,7 +179,7 @@
   function storiaHTML(l) {
     const st = l.storia;
     return `<section class="scheda storia"><div class="scheda-corpo">
-      <div class="fumetto-riga">${Figura.img(st.personaggio || "🦉", "figura gigante personaggio")}
+      <div class="fumetto-riga">${Figura.img(st.personaggio || "👩‍🏫", "figura gigante personaggio")}
         <div class="fumetto">${String(st.testo).split(/\n+/).map((p) => `<p>${h(p)}</p>`).join("")}</div></div>
       ${st.immagini?.length ? `<div class="galleria">${st.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
       ${st.missione ? `<div class="missione">🎯 <b>La missione:</b> ${h(st.missione)}</div>` : ""}
@@ -262,7 +262,7 @@
       <h3>${h(g.giorno)}</h3><button class="btn bianco piccolo torna-giorni" data-torna-giorni>⬆ Torna ai giorni</button><p>${g.ore === 1 ? "1 ora" : `${g.ore} ore`} di matematica · esercizi da ${x.da} a ${x.a}</p></div>`;
   }
   function mappaHTML(l) {
-    const chi = l.storia?.personaggio || "🦉", premio = l.premio || "🏆";
+    const chi = l.storia?.personaggio || "👩‍🏫", premio = l.premio || "🏆";
     return `<div class="mappa${l.esercizi.length > 24 ? " fitta" : ""}${l.esercizi.length > 40 ? " fittissima" : ""}" aria-hidden="true"><div class="sentiero">
       ${l.esercizi.map((_, i) => `<span class="sasso" data-sasso="${i}">${i + 1}</span>`).join("")}
       <span class="sasso traguardo">${Figura.img(premio, "figura piccola")}</span></div>

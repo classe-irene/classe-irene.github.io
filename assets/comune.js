@@ -1,28 +1,13 @@
 // Funzioni condivise da tutte le pagine: testata, mascotte, suoni, voce, archivio locale.
 
+// La mascotte: la maestra in mezzo ai suoi bambini (immagini 3D di assets/emoji).
+const figuraEmoji = (f, cls) => `<img class="${cls}" src="assets/emoji/${f}.webp" alt="" draggable="false">`;
 window.MASCOTTE = `
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gufetto, la mascotte">
-  <ellipse cx="100" cy="188" rx="58" ry="8" fill="#000" opacity=".08"/>
-  <path d="M48 70 L40 30 L75 55 Z" fill="#7A4FD6"/>
-  <path d="M152 70 L160 30 L125 55 Z" fill="#7A4FD6"/>
-  <ellipse cx="100" cy="112" rx="62" ry="72" fill="#8B5CF6"/>
-  <ellipse cx="100" cy="135" rx="40" ry="44" fill="#E9DDFF"/>
-  <path d="M80 125 q5 6 10 0 M95 140 q5 6 10 0 M110 125 q5 6 10 0 M88 155 q5 6 10 0 M103 155 q5 6 10 0" stroke="#C4B0F5" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <circle cx="74" cy="84" r="26" fill="#fff"/>
-  <circle cx="126" cy="84" r="26" fill="#fff"/>
-  <circle cx="78" cy="86" r="12" fill="#2B2A33"/>
-  <circle cx="122" cy="86" r="12" fill="#2B2A33"/>
-  <circle cx="82" cy="81" r="4" fill="#fff"/>
-  <circle cx="126" cy="81" r="4" fill="#fff"/>
-  <path d="M92 104 L100 118 L108 104 Z" fill="#FFC93C"/>
-  <ellipse cx="46" cy="120" rx="12" ry="30" fill="#7A4FD6" transform="rotate(15 46 120)"/>
-  <ellipse cx="154" cy="120" rx="12" ry="30" fill="#7A4FD6" transform="rotate(-15 154 120)"/>
-  <path d="M82 180 l-6 8 M88 181 l0 9 M118 180 l6 8 M112 181 l0 9" stroke="#FFC93C" stroke-width="5" stroke-linecap="round"/>
-  <rect x="50" y="46" width="100" height="10" rx="3" fill="#2B2A33"/>
-  <path d="M60 46 L100 28 L140 46 Z" fill="#2B2A33"/>
-  <path d="M140 50 q10 10 6 24" stroke="#FFC93C" stroke-width="3" fill="none"/>
-  <circle cx="146" cy="76" r="5" fill="#FFC93C"/>
-</svg>`;
+<div class="maestra-classe" role="img" aria-label="La maestra con i suoi bambini">
+  ${figuraEmoji("1f469-200d-1f3eb", "mc-maestra")}
+  ${[["1f467-1f3fb", 1], ["1f466-1f3fd", 2], ["1f467-1f3fe", 3], ["1f466-1f3fc", 4], ["1f467", 5], ["1f466-1f3ff", 6]].map(([f, k]) => figuraEmoji(f, `mc-bimbo mc-b${k}`)).join("")}
+</div>`;
+window.LOGO = figuraEmoji("1f469-200d-1f3eb", "logo-maestra");
 
 window.creaTestata = function (attivo) {
   document.querySelectorAll("header.testata, footer.piede").forEach((x) => x.remove());
@@ -30,7 +15,7 @@ window.creaTestata = function (attivo) {
   t.className = "testata";
   t.innerHTML = `
     <div class="contenitore">
-      <a class="logo" href="index.html">${MASCOTTE}<span>${SITO.nome}</span></a>
+      <a class="logo" href="index.html">${LOGO}<span>${SITO.nome}</span></a>
       <nav class="nav">
         <a href="index.html#matematica" class="${attivo === "matematica" ? "attivo" : ""}">🔢 Matematica</a>
         <a href="index.html#scienze" class="${attivo === "scienze" ? "attivo" : ""}">🔬 Scienze</a>

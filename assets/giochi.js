@@ -12,7 +12,7 @@
     const carte = mescola(e.coppie.flatMap((p, i) => [{ t: p[0], i }, { t: p[1], i }]));
     c.innerHTML = intestazione + `<p class="gioco-aiuto">Gira due carte. Se vanno insieme, restano scoperte.</p>
       <div class="memory" style="--col:${carte.length <= 8 ? 4 : carte.length <= 12 ? 4 : 5}">
-      ${carte.map((x, k) => `<button class="carta-memory" data-k="${k}"><span class="dorso">${Figura.img("🦉", "figura media")}</span><span class="faccia">${ric(x.t)}</span></button>`).join("")}</div>
+      ${carte.map((x, k) => `<button class="carta-memory" data-k="${k}"><span class="dorso">${Figura.img("👩‍🏫", "figura media")}</span><span class="faccia">${ric(x.t)}</span></button>`).join("")}</div>
       <p class="gioco-conto">Tentativi: <b data-tentativi>0</b></p>`;
     let prima = null, blocco = false, trovate = 0, tentativi = 0;
     c.querySelector(".memory").addEventListener("click", (ev) => {
