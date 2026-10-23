@@ -427,13 +427,20 @@
 
 
   /* ---------- 🙋 Vieni alla lavagna ----------
-     Tasto L (o il pulsantino 🙋 in basso a destra, nella modalità LIM): chiama SUBITO il primo nome dell'elenco,
-     grande sullo schermo e a voce: "Nome! Vieni alla lavagna!". Maiuscolo+L (o il pulsantino tenuto premuto): l'elenco dei nomi,
-     dove si aggiungono, si tolgono e con ⭐ si sceglie quello del tasto L. Con l'elenco aperto, i tasti 1–9 chiamano quel nome.
-     I nomi restano solo su questo computer (non vanno mai nel sito). */
+     Ogni bambino ha la sua lettera (es. a = Anna): premendola compare grande "Anna! Vieni alla lavagna!"
+     e la voce lo dice. Tasto L (o il pulsantino 🙋 in basso a destra, in modalità LIM): l'elenco, dove si aggiungono
+     e si tolgono i nomi e si sceglie la lettera. I nomi restano solo su questo computer (non vanno mai nel sito).
+     Per caricarli tutti insieme: un link con #nomi=a:Anna;t:Tommaso (la parte dopo # non arriva al sito). */
   const CHIAVE_NOMI = "classe-irene-nomi-lavagna";
-  const nomi = () => { try { return JSON.parse(localStorage.getItem(CHIAVE_NOMI)) || []; } catch { return []; } };
+  const RISERVATE = ["l", "p"];   // L = elenco, P = pausa della voce
+  const nomi = () => {
+    let n = [];
+    try { n = JSON.parse(localStorage.getItem(CHIAVE_NOMI)) || []; } catch {}
+    // elenco vecchio (solo nomi): ognuno prende la prima lettera libera del suo nome
+    return n.map((x) => typeof x === "string" ? { nome: x, tasto: "" } : x);
+  };
   const salvaNomi = (n) => { try { localStorage.setItem(CHIAVE_NOMI, JSON.stringify(n)); } catch {} };
+  const letteraLibera = (nome, n) => [...nome.toLowerCase().replace(/[^a-z]/g, ""), ..."abcdefghijkmnoqrstuvwxyz"].find((c) => !RISERVATE.includes(c) && !n.some((x) => x.tasto === c)) || "";
   function chiama(nome) {
     document.querySelector(".chiama-scelta")?.remove();
     document.querySelector(".chiama-grande")?.remove();
@@ -453,44 +460,60 @@
     const disegna = () => {
       const n = nomi();
       v.innerHTML = `<div class="cs-testa"><b>🙋 Chi viene alla lavagna?</b><button data-cs="chiudi" aria-label="Chiudi">✕</button></div>
-        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome${i ? "" : " primo"}"><button class="cs-stella" data-cs="primo" data-i="${i}" aria-label="${i ? `Metti ${h(x)} sul tasto L` : `${h(x)} è sul tasto L`}" title="${i ? "Metti sul tasto L" : "Sul tasto L"}">${i ? "☆" : "⭐"}</button><button data-cs="chiama" data-i="${i}">${i < 9 ? `<small>${i + 1}</small>` : ""}${h(x)}</button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x)}">×</button></span>`).join("")}</div>`
-          : `<p class="cs-vuoto">Scrivi qui sotto i nomi dei bambini. Restano solo su questo computer.</p>`}
-        <p class="cs-aiuto">⭐ = il nome del tasto <b>L</b>: lo chiama subito, senza aprire questo elenco.</p>
-        <form class="cs-aggiungi"><input name="nome" maxlength="24" placeholder="Nuovo nome" autocomplete="off"><button class="btn piccolo">＋ Aggiungi</button></form>`;
+        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome"><button data-cs="chiama" data-i="${i}"><kbd>${h((x.tasto || "?").toUpperCase())}</kbd>${h(x.nome)}</button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x.nome)}">×</button></span>`).join("")}</div>
+          <p class="cs-aiuto">Premi la lettera sulla tastiera: il bambino viene chiamato subito, anche con questo elenco chiuso.</p>`
+          : `<p class="cs-vuoto">Scrivi qui sotto i nomi dei bambini e la loro lettera. Restano solo su questo computer.</p>`}
+        <form class="cs-aggiungi"><input name="nome" maxlength="24" placeholder="Nome" autocomplete="off"><input name="tasto" class="cs-tasto" maxlength="1" placeholder="lettera" autocomplete="off" aria-label="Lettera"><button class="btn piccolo">＋ Aggiungi</button></form>`;
     };
     v.addEventListener("click", (e) => {
       const b = e.target.closest("[data-cs]"); if (!b) return;
       const n = nomi(), i = +b.dataset.i;
       if (b.dataset.cs === "chiudi") v.remove();
-      if (b.dataset.cs === "chiama") chiama(n[i]);
+      if (b.dataset.cs === "chiama") chiama(n[i].nome);
       if (b.dataset.cs === "togli") { n.splice(i, 1); salvaNomi(n); disegna(); }
-      if (b.dataset.cs === "primo") { n.unshift(...n.splice(i, 1)); salvaNomi(n); disegna(); }
     });
     v.addEventListener("submit", (e) => {
       e.preventDefault();
-      const x = v.querySelector("input").value.trim();
-      if (x) { const n = nomi(); if (!n.includes(x)) n.push(x); salvaNomi(n); }
-      disegna(); v.querySelector("input").focus();
+      const nome = v.querySelector('[name="nome"]').value.trim();
+      let t = v.querySelector('[name="tasto"]').value.trim().toLowerCase();
+      if (nome) {
+        const n = nomi().filter((x) => x.nome !== nome);
+        if (!/^[a-z]$/.test(t) || RISERVATE.includes(t)) t = letteraLibera(nome, n);
+        n.forEach((x) => { if (x.tasto === t) x.tasto = ""; });   // la lettera passa al nuovo nome
+        n.push({ nome, tasto: t }); salvaNomi(n);
+      }
+      disegna(); v.querySelector('[name="nome"]').focus();
     });
     disegna();
     document.body.append(v);
   }
+  // Link per caricare i nomi: ...#nomi=a:Anna;t:Tommaso. Poi la parte dopo # sparisce dall'indirizzo.
+  function nomiDalLink() {
+    const m = location.hash.match(/^#nomi=(.*)$/);
+    if (!m) return;
+    const n = decodeURIComponent(m[1]).split(";").map((x) => x.split(":")).filter(([t, nome]) => /^[a-z]$/i.test(t || "") && nome?.trim())
+      .map(([t, nome]) => ({ tasto: t.toLowerCase(), nome: nome.trim() })).filter((x) => !RISERVATE.includes(x.tasto));
+    history.replaceState(null, "", location.pathname + location.search);
+    if (!n.length) return;
+    salvaNomi(n);
+    const a = document.createElement("div");
+    a.className = "guida-striscia verde"; a.style.top = "20px";
+    a.textContent = `✅ ${n.length} nomi salvati su questo computer. Premi L per vederli.`;
+    document.body.append(a); setTimeout(() => a.remove(), 5000);
+  }
   document.addEventListener("keydown", (e) => {
-    if (e.ctrlKey || e.altKey || e.metaKey || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
-    if (e.key === "l" || e.key === "L") { e.preventDefault(); const n = nomi(); if (n.length && !e.shiftKey) chiama(n[0]); else sceltaNome(); }
-    else if (document.querySelector(".chiama-scelta") && /^[1-9]$/.test(e.key) && nomi()[+e.key - 1]) { e.preventDefault(); chiama(nomi()[+e.key - 1]); }
-    else if (e.key === "Escape") { document.querySelector(".chiama-scelta")?.remove(); document.querySelector(".chiama-grande")?.remove(); }
+    if (e.ctrlKey || e.altKey || e.metaKey || e.repeat || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+    const k = e.key.toLowerCase();
+    if (k === "l") { e.preventDefault(); sceltaNome(); return; }
+    if (k === "escape") { document.querySelector(".chiama-scelta")?.remove(); document.querySelector(".chiama-grande")?.remove(); return; }
+    const x = /^[a-z]$/.test(k) && nomi().find((y) => y.tasto === k);
+    if (x) { e.preventDefault(); chiama(x.nome); }
   });
   const pulsantino = document.createElement("button");
   pulsantino.className = "chiama-btn"; pulsantino.type = "button"; pulsantino.textContent = "🙋";
   pulsantino.setAttribute("aria-label", "Chiama un bambino alla lavagna");
-  // Un tocco: chiama subito il nome del tasto L. Tenuto premuto: l'elenco dei nomi.
-  let premuto = null, lungo = false;
-  pulsantino.addEventListener("pointerdown", () => { lungo = false; premuto = setTimeout(() => { lungo = true; sceltaNome(); }, 600); });
-  ["pointerup", "pointerleave", "pointercancel"].forEach((t) => pulsantino.addEventListener(t, () => clearTimeout(premuto)));
-  pulsantino.addEventListener("contextmenu", (e) => e.preventDefault());
-  pulsantino.onclick = () => { if (lungo) return; const n = nomi(); n.length ? chiama(n[0]) : sceltaNome(); };
-  document.addEventListener("DOMContentLoaded", () => document.body.append(pulsantino));
+  pulsantino.onclick = sceltaNome;
+  document.addEventListener("DOMContentLoaded", () => { document.body.append(pulsantino); nomiDalLink(); });
 
   // Per ora (prova) solo nelle lezioni con il campo "copia".
   const per = (l) => !!l.copia;

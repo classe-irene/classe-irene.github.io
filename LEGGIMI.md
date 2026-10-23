@@ -139,4 +139,5 @@ Pulsante arancione "⏱️ Lezione guidata" (anche nella barra della modalità L
 - In 📝 Verifico la verifica online si apre dentro la lezione, così l'orologio resta in vista.
 
 ## Vieni alla lavagna
-In ogni lezione: tasto **L** (o un tocco sul pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM) chiama **subito** il nome con la ⭐: compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. **Maiuscolo + L** (o il pulsantino tenuto premuto) apre l'elenco: si aggiungono e tolgono i nomi (restano solo su quel computer, mai nel sito), ⭐ sceglie il nome del tasto L, i tasti 1–9 chiamano gli altri. Esc chiude.
+In ogni lezione ogni bambino ha la sua **lettera**: premendola sulla tastiera compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. **L** (o il pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM) apre l'elenco: si aggiungono nomi con la loro lettera, si tolgono, e toccando un nome lo si chiama. L e P non si possono usare (elenco e pausa della voce). Esc chiude.
+I nomi restano solo su quel computer, mai nel sito. Per caricarli tutti insieme si apre una volta un indirizzo della lezione con in fondo `#nomi=g:Nome;i:Altro nome` (la parte dopo # non viene mandata al sito e sparisce subito dall'indirizzo).

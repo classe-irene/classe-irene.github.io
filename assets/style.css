@@ -1618,3 +1618,5 @@ body.lim .voce-dock.basso:not(.spostato) { bottom: 118px; }
 body.lim .div-estesa .colonna-griglia .cella { width: min(84px, 6vh, calc(38vh / var(--righe))); height: min(84px, 6vh, calc(38vh / var(--righe))); font-size: min(3.2rem, 4.6vh, calc(28vh / var(--righe))); }
 body.lim .voce-dock.basso:not(.spostato) { left: 16px; bottom: 118px; transform: scale(var(--sc)); transform-origin: 0 100%; }
 body.lim .voce-dock.basso.via:not(.spostato) { transform: scale(calc(var(--sc) * .92)); }
+.cs-nome kbd { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; margin-right: 8px; border-radius: 6px; background: #fff; border: 2px solid #2B2A33; border-bottom-width: 4px; font: 800 .9rem "Nunito", sans-serif; }
+.cs-aggiungi .cs-tasto { flex: 0 0 92px; text-align: center; }
