@@ -22,6 +22,9 @@
     if (!Array.isArray(l.esercizi) || !l.esercizi.length) errori.push("Mancano gli esercizi.");
     if (l.settimana !== undefined && !(Array.isArray(l.settimana) && l.settimana.every((g) => g.giorno && Number.isInteger(g.ore) && g.ore >= 1 && Number.isInteger(g.esercizi) && g.esercizi >= 1)
       && l.settimana.reduce((t, g) => t + g.esercizi, 0) === (l.esercizi || []).length)) errori.push('"settimana": ogni giorno vuole giorno, ore ed esercizi, e gli esercizi devono essere in tutto quanti quelli della lezione.');
+    if (l.copia !== undefined && !(Array.isArray(l.copia.righe) && l.copia.righe.length >= 1 && l.copia.righe.length <= 6 && l.copia.righe.every((r) => typeof r === "string")
+      && (l.copia.divisione === undefined || Number.isInteger(l.copia.divisione.a) && Number.isInteger(l.copia.divisione.b) && l.copia.divisione.b >= 2 && l.copia.divisione.a >= l.copia.divisione.b && l.copia.divisione.a <= 9999)))
+      errori.push('"copia": servono da 1 a 6 righe ("righe") e, se c\'è, una divisione {a, b} con a fino a 9999 e b almeno 2.');
     (l.sezioni || []).forEach((s, i) => {
       const an = s.animazione;
       if (!an) return;
@@ -81,6 +84,7 @@
         <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
         <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
         ${l.quaderno ? `<button class="btn quaderno-link" data-azione="vai-quaderno">📒 ${h(l.quaderno.titolo || "Ricopiare sul quaderno")}</button>` : ""}
+        ${window.Guida?.per(l) ? `<button class="btn guida-btn" data-azione="guidata">⏱️ Lezione guidata</button>` : ""}
         <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
         <button class="btn bianco" data-azione="scritte">💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}</button>
         <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
@@ -105,9 +109,10 @@
         </section>`).join("")}
       ${l.ricorda?.length ? `<section class="scheda ricorda"><div class="scheda-corpo"><h2>📌 Ricordiamo<button class="leggi" data-leggi="${h(l.ricorda.map((x) => Figura.dividi(x).testo).join(". "))}">🔊 Leggi</button></h2>
         <ol class="ricorda-lista">${l.ricorda.map((x) => `<li>${Figura.ricco(x, "figura media")}</li>`).join("")}</ol></div><div class="scheda-figura">${Figura.img("📌", "figura grande")}</div></section>` : ""}
+      ${window.Guida?.per(l) ? Guida.copiaHTML(l) : ""}
       ${l.quaderno ? quadernoHTML(l.quaderno) : ""}
       ${l.parole_chiave?.length ? `<section class="scheda"><div class="scheda-corpo"><h2>Parole da ricordare</h2><div class="parole">${l.parole_chiave.map((p) => `<span class="parola">${Figura.ricco(p)}</span>`).join("")}</div></div><div class="scheda-figura">${Figura.img("🗝️", "figura grande")}</div></section>` : ""}
-      ${/^verifiche\/[\w.-]+\.json$/.test(l.verifica || "") ? `<section class="scheda"><div class="scheda-corpo"><h2>📝 La verifica</h2><p>Si può fare sullo schermo o sulla LIM, e il sito la corregge subito. Oppure si stampa: c'è anche la versione facilitata e, per l'insegnante, le soluzioni.</p><p class="bottoni-verifica"><a class="btn verde" href="verifica.html?file=${h(l.verifica)}&modo=online">💻 Fai la verifica online</a> <a class="btn bianco" href="verifica.html?file=${h(l.verifica)}">🖨️ Verifica da stampare</a></p></div><div class="scheda-figura">${Figura.img("📝", "figura grande")}</div></section>` : ""}
+      ${/^verifiche\/[\w.-]+\.json$/.test(l.verifica || "") ? `<section class="scheda scheda-verifica"><div class="scheda-corpo"><h2>📝 La verifica</h2><p>Si può fare sullo schermo o sulla LIM, e il sito la corregge subito. Oppure si stampa: c'è anche la versione facilitata e, per l'insegnante, le soluzioni.</p><p class="bottoni-verifica"><a class="btn verde" href="verifica.html?file=${h(l.verifica)}&modo=online">💻 Fai la verifica online</a> <a class="btn bianco" href="verifica.html?file=${h(l.verifica)}">🖨️ Verifica da stampare</a></p></div><div class="scheda-figura">${Figura.img("📝", "figura grande")}</div></section>` : ""}
       <h2 id="esercizi" style="text-align:center;margin-top:36px">🎯 Ora tocca a te!</h2>
       <div class="punteggio">⭐ <span data-punti>0</span> / ${l.esercizi.length}</div>
       ${mappaHTML(l)}
@@ -149,6 +154,7 @@
       if (a === "vai-quaderno") { const q = radice.querySelector(".quaderno"); if (document.body.classList.contains("lim")) apriQuaderno(l.quaderno); else q?.scrollIntoView({ behavior: "smooth", block: "start" }); }
       if (a === "apri-quaderno") apriQuaderno(l.quaderno);
       if (a === "lim") avviaLIM(radice);
+      if (a === "guidata") Guida.apri(l, radice);
       if (a === "velocita") {
         const nomi = Object.keys(Voce.VELOCITA), dopo = nomi[(nomi.indexOf(Voce.velocita()) + 1) % nomi.length];
         Voce.impostaVelocita(dopo); b.textContent = `🐢 Voce: ${dopo}`; Voce.parla("Leggo così.");
@@ -186,6 +192,7 @@
     filaDiv = l.filastrocca ? preparaFilastrocca(radice, l.filastrocca) : null;
     radice.querySelectorAll(".anim-posto").forEach((p) => { try { Animazioni.crea(p, JSON.parse(p.dataset.anim)); } catch {} });
     disegnaEsercizi(l, radice);
+    window.Guida?.prepara(l, radice);
     frecciaSu(l, radice);
     try { window.Effetti?.avvia(l, radice); } catch (err) { console.warn(err); }
   }
@@ -637,6 +644,7 @@
     barra.innerHTML = `<button class="lim-freccia" data-lim="prec" aria-label="Indietro">◀</button>
       <span class="lim-conta"></span>
       <button class="lim-freccia" data-lim="succ" aria-label="Avanti">▶</button>
+      ${radice.querySelector('[data-azione="guidata"]') ? `<button class="lim-guida" data-lim="guida">⏱️ Lezione guidata</button>` : ""}
       ${radice.querySelector(".settimana") ? `<button class="lim-giorni" data-lim="giorni">📅 Giorni</button>` : ""}
       <button class="lim-esci" data-lim="esci">✕ Esci</button>`;
     document.body.append(barra);
@@ -670,6 +678,7 @@
       if (a === "succ") mostra(i + 1);
       if (a === "esci") esci();
       if (a === "giorni") mostra(0);
+      if (a === "guida") radice.querySelector('[data-azione="guidata"]').click();
     });
     document.addEventListener("keydown", tasti);
     radice.addEventListener("risolto", () => mostra(i));

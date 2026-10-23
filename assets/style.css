@@ -1394,3 +1394,203 @@ body.lim .scheda.filastrocca.con-divisione.corrente .fila-insieme { margin: 4px 
   .scheda.filastrocca.con-divisione .fila-strofa { padding: 8px 10px; }
   .scheda.filastrocca.con-divisione .fila-verso { gap: 8px; padding: 4px; }
 }
+
+/* ---------- Lezione guidata: piano del giorno, scaletta delle fasi, orologio, semaforo, copia sul quaderno ---------- */
+.btn.guida-btn { background: #FF8A3D; color: #fff; }
+.guida-piano { position: fixed; inset: 0; z-index: 110; background: rgba(30, 29, 38, .6); display: grid; place-items: center; padding: 16px; }
+.gp-scatola { background: var(--carta); border-radius: 26px; width: min(780px, 100%); max-height: calc(100vh - 32px); overflow: auto; padding: 22px 24px; box-shadow: var(--ombra); animation: compari .3s; }
+.gp-scatola h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 6px; font-size: 2rem; }
+.gp-domanda { font-weight: 800; font-size: 1.2rem; margin: 6px 0 10px; }
+.gp-totali { display: flex; flex-wrap: wrap; gap: 10px; }
+.gp-tot { width: 86px; height: 86px; border-radius: 22px; border: 4px solid var(--bordo); background: #FFF8EC; font: 800 2rem "Baloo 2", sans-serif; color: var(--testo); display: grid; place-items: center; align-content: center; line-height: 1; cursor: pointer; }
+.gp-tot small { font: 700 .8rem "Nunito", sans-serif; }
+.gp-tot.scelto { background: var(--giallo); border-color: #E0A800; }
+.gp-fasi { list-style: none; padding: 0; margin: 16px 0 8px; display: grid; gap: 8px; }
+.gp-fasi li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; gap: 12px; align-items: center; background: #FFF8EC; border-radius: 18px; padding: 8px 14px; }
+.gp-fasi li.spenta, .gp-fasi li.manca { opacity: .45; }
+.gp-nome b { display: block; font: 800 1.4rem "Baloo 2", sans-serif; }
+.gp-nome small { color: var(--testo-tenue); font-weight: 700; }
+.gp-minuti { display: flex; align-items: center; gap: 8px; }
+.gp-minuti button { width: 52px; height: 52px; border-radius: 50%; border: 0; background: var(--tema); color: #fff; font: 800 1.8rem "Baloo 2", sans-serif; cursor: pointer; }
+.gp-minuti button:disabled { opacity: .3; }
+.gp-minuti span { min-width: 54px; text-align: center; font: 800 1.8rem "Baloo 2", sans-serif; line-height: 1; }
+.gp-minuti span small { display: block; font: 700 .75rem "Nunito", sans-serif; }
+.gp-salta { border: 0; background: none; font-weight: 800; color: var(--testo-tenue); text-decoration: underline; cursor: pointer; padding: 10px 4px; }
+.gp-totale { font-size: 1.3rem; text-align: right; margin: 8px 0; }
+.gp-tasti { display: flex; justify-content: flex-end; gap: 12px; flex-wrap: wrap; }
+.gp-via { font-size: 1.3rem; padding: 16px 28px; }
+@media (max-width: 600px) {
+  .gp-scatola { padding: 16px; } .gp-scatola h2 { font-size: 1.5rem; }
+  .gp-tot { width: 58px; height: 58px; font-size: 1.4rem; border-radius: 16px; }
+  .gp-fasi li { grid-template-columns: auto minmax(0, 1fr) auto; } .gp-salta { grid-column: 2 / -1; justify-self: end; padding: 0 4px; }
+  .gp-minuti button { width: 44px; height: 44px; } .gp-minuti span { min-width: 40px; font-size: 1.5rem; }
+  .gp-tasti .btn { flex: 1; }
+}
+
+body.guidata .contenitore { padding-top: 78px; }
+body.guidata.lim .corrente { min-height: calc(100vh - 240px); }
+.guida-scaletta { position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; gap: 8px; padding: 8px 12px; background: rgba(255, 255, 255, .96); box-shadow: 0 6px 24px rgba(43, 42, 51, .12); }
+.gs-fase { flex: 1 1 0; min-width: 0; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 10px; border: 3px solid transparent; border-radius: 16px; background: #F2EEE6; color: var(--testo); font-family: inherit; cursor: pointer; transition: flex-grow .3s, background .3s; }
+.gs-fase .figura { width: 40px; height: 40px; }
+.gs-fase b { font: 800 1.35rem "Baloo 2", sans-serif; white-space: nowrap; }
+.gs-fase small { font-weight: 800; color: var(--testo-tenue); white-space: nowrap; }
+.gs-fase.ora { flex-grow: 1.7; background: var(--giallo); border-color: #E0A800; box-shadow: 0 4px 0 #E0A800; }
+.gs-fase.ora small { color: var(--testo); }
+.gs-fase.fatta { background: var(--sci-chiaro); opacity: .75; }
+.gs-fase.fatta b::after { content: " ✓"; color: var(--ok); }
+.gs-barra { position: absolute; left: 0; bottom: 0; height: 6px; width: calc(var(--p, 0) * 100%); background: #E07B00; display: none; }
+.gs-fase.ora .gs-barra { display: block; }
+@media (max-width: 600px) {
+  body.guidata .contenitore { padding-top: 66px; }
+  .guida-scaletta { gap: 4px; padding: 6px; }
+  .gs-fase { flex-direction: column; gap: 0; padding: 4px 2px; border-radius: 12px; }
+  .gs-fase .figura { width: 26px; height: 26px; } .gs-fase b { font-size: .85rem; } .gs-fase small { display: none; }
+  .gs-fase.ora { flex-grow: 1.3; } .gs-fase.fatta b::after { content: ""; }
+}
+
+.guida-orologio { --p: 1; --col: var(--ok); position: fixed; top: 90px; right: 16px; z-index: 98; width: 210px; display: grid; justify-items: center; gap: 8px; padding: 0 12px 12px; background: var(--carta); border-radius: 24px; box-shadow: 0 10px 30px rgba(43, 42, 51, .25); }
+.go-maniglia { width: calc(100% + 24px); text-align: center; background: var(--giallo); border-radius: 24px 24px 0 0; font-weight: 800; font-size: .8rem; padding: 5px; cursor: grab; touch-action: none; user-select: none; }
+.go-quadrante { width: 170px; height: 170px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; display: grid; place-items: center; background: conic-gradient(var(--col) calc(var(--p) * 360deg), #EEE9E0 0); transition: background .3s; }
+.go-centro { width: 74%; height: 74%; border-radius: 50%; background: var(--carta); display: grid; place-items: center; align-content: center; gap: 0; line-height: 1.05; }
+.go-fig { width: 40px; height: 40px; }
+.go-tempo { font: 800 2.3rem "Baloo 2", sans-serif; font-variant-numeric: tabular-nums; }
+.go-nome { font-weight: 800; font-size: .85rem; color: var(--testo-tenue); }
+.guida-orologio.arancione { --col: #FF8A00; }
+.guida-orologio.rosso-fine { --col: var(--ko); }
+.guida-orologio.rosso-fine .go-quadrante { animation: pulsa 1s infinite; }
+.guida-orologio.in-pausa .go-tempo { animation: lampeggia 1.2s infinite; }
+@keyframes lampeggia { 50% { opacity: .25; } }
+.go-stelle { font-weight: 800; font-size: 1.2rem; }
+.go-tasti { display: flex; gap: 8px; }
+.go-tasti button { width: 54px; height: 54px; border-radius: 16px; border: 0; background: var(--tema); color: #fff; font: 800 1.4rem "Baloo 2", sans-serif; cursor: pointer; box-shadow: 0 4px 0 rgba(0, 0, 0, .18); }
+.go-semaforo { display: flex; gap: 10px; background: #2B2A33; border-radius: 30px; padding: 8px 12px; }
+.sem { width: 44px; height: 44px; border-radius: 50%; border: 3px solid rgba(255, 255, 255, .25); cursor: pointer; opacity: .3; padding: 0; }
+.sem.rosso { background: #FF3B3B; } .sem.giallo { background: #FFD84D; } .sem.verde { background: #3DDC97; }
+.sem.accesa { opacity: 1; border-color: #fff; box-shadow: 0 0 18px currentColor, 0 0 0 3px rgba(255, 255, 255, .4); }
+.sem.rosso.accesa { color: #FF3B3B; } .sem.giallo.accesa { color: #FFD84D; } .sem.verde.accesa { color: #3DDC97; }
+.go-fine { border: 0; background: none; font-weight: 800; color: var(--testo-tenue); cursor: pointer; padding: 2px 8px; }
+.guida-orologio.piccolo { width: 124px; }
+.guida-orologio.piccolo .go-quadrante { width: 100px; height: 100px; }
+.guida-orologio.piccolo .go-tempo { font-size: 1.5rem; }
+.guida-orologio.piccolo .go-fig, .guida-orologio.piccolo .go-nome, .guida-orologio.piccolo .go-tasti, .guida-orologio.piccolo .go-semaforo, .guida-orologio.piccolo .go-fine, .guida-orologio.piccolo .go-stelle { display: none; }
+@media (max-width: 600px) {
+  .guida-orologio { top: 72px; right: 8px; width: 150px; gap: 6px; padding: 0 8px 8px; }
+  .go-maniglia { width: calc(100% + 16px); font-size: .7rem; }
+  .go-quadrante { width: 112px; height: 112px; } .go-tempo { font-size: 1.6rem; } .go-fig { width: 26px; height: 26px; } .go-nome { font-size: .7rem; }
+  .go-tasti { gap: 5px; } .go-tasti button { width: 40px; height: 40px; font-size: 1.1rem; border-radius: 12px; }
+  .go-semaforo { gap: 6px; padding: 6px 8px; } .sem { width: 30px; height: 30px; }
+  .guida-orologio.piccolo { width: 96px; } .guida-orologio.piccolo .go-quadrante { width: 76px; height: 76px; } .guida-orologio.piccolo .go-tempo { font-size: 1.2rem; }
+}
+
+.guida-cartello { position: fixed; inset: 0; z-index: 105; background: rgba(30, 29, 38, .55); display: grid; place-items: center; padding: 16px; }
+.guida-cartello.breve { cursor: pointer; animation: compari .3s; }
+.gc-scatola { background: var(--carta); border-radius: 30px; padding: 28px 36px; text-align: center; width: min(760px, 100%); box-shadow: var(--ombra); animation: compari .3s; }
+.gc-titolo { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.gc-titolo b, .gc-grande b { font: 800 3.4rem "Baloo 2", sans-serif; line-height: 1.1; }
+.gc-scatola p { font-size: 1.6rem; font-weight: 700; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; }
+.gc-conto { width: 96px; height: 96px; margin: 8px auto !important; border-radius: 50%; background: var(--giallo); font: 800 3rem "Baloo 2", sans-serif !important; }
+.gc-tasti { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+.gc-tasti .btn { font-size: 1.3rem; padding: 16px 26px; }
+.gc-grande { display: grid; justify-items: center; gap: 6px; }
+.gc-grande small { font-size: 1.6rem; font-weight: 700; }
+.gc-min { font: 800 1.6rem "Baloo 2", sans-serif; background: var(--giallo-chiaro); border-radius: 999px; padding: 4px 18px; }
+@media (max-width: 600px) { .gc-scatola { padding: 20px 16px; } .gc-titolo b, .gc-grande b { font-size: 2.2rem; } .gc-scatola p, .gc-grande small { font-size: 1.15rem; } .gc-tasti .btn { flex: 1; font-size: 1.05rem; padding: 14px; } }
+
+.guida-rosso { position: fixed; inset: 0; z-index: 97; background: rgba(176, 18, 30, .94); color: #fff; display: grid; place-items: center; align-content: center; gap: 14px; text-align: center; cursor: pointer; animation: compari .25s; padding: 16px; }
+.gr-luce { width: 170px; height: 170px; border-radius: 50%; background: #FF3B3B; border: 10px solid #fff; box-shadow: 0 0 60px 20px rgba(255, 90, 90, .8); animation: pulsa 1.6s infinite; }
+.guida-rosso b { font: 800 clamp(3rem, 9vw, 6.5rem) "Baloo 2", sans-serif; line-height: 1; }
+.guida-rosso span { display: flex; align-items: center; gap: 14px; font: 800 clamp(1.6rem, 5vw, 3rem) "Baloo 2", sans-serif; }
+.guida-rosso small { font-weight: 700; opacity: .85; }
+.guida-striscia { position: fixed; top: 84px; left: 50%; transform: translateX(-50%); z-index: 96; display: flex; align-items: center; gap: 12px; border-radius: 999px; padding: 10px 28px; font: 800 2rem "Baloo 2", sans-serif; box-shadow: 0 10px 30px rgba(0, 0, 0, .2); white-space: nowrap; animation: compari .3s; pointer-events: none; }
+.guida-striscia .figura { width: 44px; height: 44px; }
+.guida-striscia.giallo { background: #FFD84D; } .guida-striscia.verde { background: #3DDC97; }
+@media (max-width: 600px) { .guida-striscia { top: 70px; font-size: 1.2rem; padding: 8px 16px; } .guida-striscia .figura { width: 28px; height: 28px; } }
+
+.guida-verifica { position: fixed; left: 0; right: 0; bottom: 0; top: 74px; z-index: 50; background: var(--carta); display: flex; flex-direction: column; }
+.gv-barra { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px; border-bottom: 2px solid var(--bordo); }
+.gv-barra b { display: flex; align-items: center; gap: 8px; font: 800 1.4rem "Baloo 2", sans-serif; }
+.gv-barra .figura { width: 34px; height: 34px; }
+.guida-verifica iframe { flex: 1; width: 100%; border: 0; }
+@media (max-width: 600px) { .guida-verifica { top: 62px; } }
+
+.lim-guida { position: absolute; left: 230px; border: 0; background: #FF8A3D; color: #fff; border-radius: 999px; font-weight: 800; font-size: 1rem; padding: 12px 18px; }
+body.guidata .lim-guida { display: none; }
+@media (max-width: 1100px) { .lim-guida { display: none; } }
+
+/* Copia sul quaderno: righe numerate a sinistra, il disegno della pagina a destra */
+.scheda.copia { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; background: linear-gradient(135deg, #FFFDF5, #FFFFFF); border: 4px solid #FF8A3D; }
+.copia-aiuto { font-weight: 700; color: var(--testo-tenue); margin: 0 0 8px; }
+.copia-righe { list-style: none; padding: 0; margin: 0; counter-reset: riga; }
+.copia-righe li { counter-increment: riga; position: relative; overflow: hidden; display: none; align-items: center; gap: 12px; font-size: 1.3rem; font-weight: 700; padding: 10px 14px 12px; margin: 8px 0; border-radius: 16px; background: #FFF8EC; border: 3px solid transparent; }
+.copia-righe li::before { content: counter(riga); flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--tema); color: #fff; display: grid; place-items: center; font: 800 1.5rem "Baloo 2", sans-serif; }
+.copia-righe li.vista { display: flex; }
+.copia-righe li.vista:not(.ora) { opacity: .6; }
+.copia-righe li.ora { background: var(--giallo-chiaro); border-color: var(--giallo); animation: compari .4s; }
+.copia-righe li.ora::after { content: "✏️"; margin-left: auto; font-size: 1.6rem; animation: pulsa 1.4s infinite; }
+.copia-barra { position: absolute; left: 0; bottom: 0; height: 5px; width: calc(var(--p, 0) * 100%); background: #E0A800; }
+.copia-tasti { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.copia-tasti .btn { font-size: 1.2rem; padding: 14px 24px; }
+.copia-foglio { display: grid; gap: 6px; }
+.cq-etichetta { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--testo-tenue); }
+.cq-etichetta .figura { width: 30px; height: 30px; }
+.cq-pagina { --q: 22px; --riga: #CFE0F5; background:
+    linear-gradient(90deg, transparent calc(var(--q) * 2), #F28B8B calc(var(--q) * 2), #F28B8B calc(var(--q) * 2 + 2px), transparent calc(var(--q) * 2 + 2px)),
+    linear-gradient(var(--riga) 1px, transparent 1px) 0 0 / var(--q) var(--q),
+    linear-gradient(90deg, var(--riga) 1px, transparent 1px) 0 0 / var(--q) var(--q), #fff;
+  padding: var(--q) var(--q) var(--q) calc(var(--q) * 3); border-radius: 6px; box-shadow: 0 8px 24px rgba(43, 42, 51, .15); transform: rotate(-.6deg); color: #1D3F91; }
+.cq-data { text-align: right; font: 600 calc(var(--q) * .7) "Fredoka", sans-serif; line-height: calc(var(--q) * 2); color: #555; }
+.cq-titolo { text-align: center; font: 700 calc(var(--q) * .95) "Fredoka", sans-serif; line-height: calc(var(--q) * 2); color: #C0392B; text-transform: uppercase; text-decoration: underline; text-underline-offset: 4px; }
+.cq-righe { list-style: none; padding: 0; margin: 0; }
+.cq-righe li { font: 500 calc(var(--q) * .72) "Fredoka", sans-serif; line-height: calc(var(--q) * 2); }
+.cq-righe li span { -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.cq-righe li:not(.vista) span { color: transparent; background: linear-gradient(transparent 55%, #DDD7CC 55%, #DDD7CC 72%, transparent 72%); }
+.cq-righe li.ora span { background: rgba(255, 216, 77, .45); border-radius: 4px; }
+.cq-esempio { margin-top: var(--q); transition: opacity .4s; }
+.cq-esempio:not(.vista) { opacity: .15; filter: grayscale(1); }
+.cq-div { display: grid; grid-auto-rows: var(--q); margin-left: var(--q); }
+.cq-cella { width: var(--q); height: var(--q); display: grid; place-items: center; font: 600 calc(var(--q) * .8) "Fredoka", sans-serif; line-height: 1; }
+.cq-sx { border-left: 2px solid #2B2A33; }
+.cq-sotto { border-bottom: 2px solid #2B2A33; }
+.cq-prova { font: 500 calc(var(--q) * .72) "Fredoka", sans-serif; line-height: calc(var(--q) * 2); }
+@media (max-width: 760px) { .scheda.copia { grid-template-columns: minmax(0, 1fr); } .cq-pagina { --q: 18px; } .copia-righe li { font-size: 1.1rem; } .copia-tasti .btn { flex: 1; } }
+body.lim .scheda.copia.corrente { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-content: center; align-items: center; gap: 30px; }
+body.lim .scheda.copia .copia-righe li { font-size: 1.7rem; }
+body.lim .scheda.copia .cq-pagina { --q: min(30px, 2.8vh); }
+body.lim .scheda.copia .copia-tasti .btn { font-size: 1.5rem; padding: 16px 30px; }
+@media (max-width: 760px) { body.lim .scheda.copia.corrente { grid-template-columns: minmax(0, 1fr); } body.lim .scheda.copia .copia-righe li { font-size: 1.1rem; } body.lim .scheda.copia .cq-pagina { --q: 18px; } }
+
+/* Vieni alla lavagna: pulsantino discreto (solo LIM), scelta del nome, chiamata grande */
+.chiama-btn { display: none; position: fixed; right: 14px; bottom: 120px; z-index: 47; width: 46px; height: 46px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .7); font-size: 1.4rem; opacity: .35; cursor: pointer; }
+.chiama-btn:hover, .chiama-btn:focus-visible { opacity: 1; }
+body.lim .chiama-btn { display: block; }
+.chiama-scelta { position: fixed; right: 16px; bottom: 120px; z-index: 108; width: min(420px, calc(100vw - 32px)); max-height: 70vh; overflow: auto; background: var(--carta); border-radius: 22px; box-shadow: 0 12px 40px rgba(0, 0, 0, .3); padding: 14px 16px; font-size: 18px; animation: compari .25s; }
+.cs-testa { display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; margin-bottom: 8px; }
+.cs-testa button { border: 0; background: none; font-size: 1.3rem; cursor: pointer; padding: 6px 10px; }
+.cs-nomi { display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-nome { display: inline-flex; align-items: stretch; background: var(--giallo-chiaro); border-radius: 14px; overflow: hidden; }
+.cs-nome button { border: 0; background: none; font: 800 1.2rem "Baloo 2", sans-serif; padding: 8px 12px; cursor: pointer; }
+.cs-nome small { font: 700 .75rem "Nunito", sans-serif; color: var(--testo-tenue); margin-right: 6px; }
+.cs-nome .cs-via { color: var(--testo-tenue); padding: 8px 10px; border-left: 2px solid rgba(0, 0, 0, .06); }
+.cs-vuoto { color: var(--testo-tenue); font-weight: 700; margin: 4px 0; }
+.cs-aggiungi { display: flex; gap: 8px; margin-top: 12px; }
+.cs-aggiungi input { flex: 1; min-width: 0; font: inherit; padding: 8px 12px; border: 2px solid var(--bordo); border-radius: 12px; }
+.chiama-grande { position: fixed; inset: 0; z-index: 109; display: grid; place-items: center; background: rgba(30, 29, 38, .45); cursor: pointer; padding: 16px; }
+.cg-scatola { background: linear-gradient(135deg, #FFF3CC, #FFFFFF); border: 6px solid var(--giallo); border-radius: 34px; padding: 26px 40px; text-align: center; display: grid; justify-items: center; gap: 6px; animation: compari .35s; max-width: 100%; }
+.cg-scatola b { font: 800 clamp(3rem, 10vw, 7rem) "Baloo 2", sans-serif; line-height: 1; color: #E0531F; word-break: break-word; }
+.cg-scatola span { display: flex; align-items: center; gap: 12px; font: 800 clamp(1.5rem, 5vw, 3.2rem) "Baloo 2", sans-serif; }
+.cg-scatola .figura.grande { width: clamp(60px, 10vw, 120px); height: auto; }
+.copia-righe .con-figura { display: flex; flex-direction: row; align-items: center; gap: 12px; text-align: left; }
+.copia-righe .figura, body.lim .copia-righe .figura.piccola { width: 52px; height: 52px; flex: none; }
+@media (max-width: 600px) {
+  .gp-fasi li { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "fig nome nome" "fig minuti salta"; row-gap: 4px; }
+  .gp-fasi li > .figura { grid-area: fig; width: 48px; height: 48px; }
+  .gp-nome { grid-area: nome; } .gp-minuti { grid-area: minuti; } .gp-salta { grid-area: salta; grid-column: auto; align-self: center; }
+  .cg-scatola { padding: 20px 16px; } .cg-scatola span { flex-wrap: wrap; justify-content: center; text-align: center; }
+}
+.guida-orologio.piccolo .go-maniglia { font-size: 0; } .guida-orologio.piccolo .go-maniglia::before { content: "⠿ ⠿"; font-size: .8rem; }
+@media (max-width: 600px) {
+  .copia-righe li { gap: 8px; padding: 8px 10px 10px; }
+  .copia-righe li::before { width: 34px; height: 34px; font-size: 1.1rem; }
+  .copia-righe li.ora::after { display: none; }
+  .copia-righe .figura, body.lim .copia-righe .figura.piccola { width: 34px; height: 34px; }
+}

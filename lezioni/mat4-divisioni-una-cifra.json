@@ -365,5 +365,19 @@
     "🛗 La cifra dopo scende in ascensore, e ricomincio.",
     "✅ La prova: quoziente × divisore + resto = dividendo."
   ],
+  "copia": {
+    "titolo": "La divisione in colonna",
+    "righe": [
+      "🏷️ Dividendo : divisore = quoziente, con il resto.",
+      "👒 Il cappellino copre una cifra. Se non basta, due.",
+      "🎶 Con la tabellina trovo quante volte ci sta.",
+      "➖ Il resto è più piccolo del divisore.",
+      "🛗 La cifra dopo scende in ascensore."
+    ],
+    "divisione": {
+      "a": 96,
+      "b": 4
+    }
+  },
   "verifica": "verifiche/mat4-divisioni-una-cifra.json"
 }

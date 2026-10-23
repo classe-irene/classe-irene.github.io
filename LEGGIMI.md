@@ -129,3 +129,14 @@ Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: �
 In `assets/curricolo.js` un argomento con `evidenza: true` compare in grande, con il nastro "⭐ In evidenza", nella pagina della classe e nella home.
 - Campo facoltativo della lezione `filastrocca`: `{ "titolo": "👑 ...", "strofe": [["😉 verso", "👒 verso"], ...] }`. Compare all'inizio, a colori e animata; il pulsante "🔊 Ascolta la filastrocca" la fa leggere alla voce verso per verso (si ferma toccandolo di nuovo). Usata in `mat4-divisioni-una-cifra`.
   - Con `"divisione": { "a": 156, "b": 4 }` accanto ai versi compare una divisione vera che fa un passo per ogni verso (chiavi predefinite: occhio, cappello, tabellina, linea, resto, —, ascensore, ricomincio; si cambiano con `"chiavi"`). Toccando un verso si vede il suo passo; ci sono anche "⏭ Un passo" e "↺ Da capo". Con l'ascolto, la voce dice il verso e poi spiega i numeri; finiti i versi, la divisione continua fino alla prova.
+
+## Lezione guidata (prova: `lezioni/mat4-divisioni-una-cifra.json`)
+Pulsante arancione "⏱️ Lezione guidata" (anche nella barra della modalità LIM). Codice: `assets/guida.js`.
+- **Piano di oggi**: si sceglie quanti minuti ci sono (30, 45, 60, 90, 120) e il sito li divide fra le fasi 👂 Ascolto, 👀 Guardo, ✍️ Copio, 🎯 Provo, 📝 Verifico; ogni fase si allunga o accorcia di un minuto (− +) o si salta. Il piano resta salvato su quel computer.
+- **Scaletta** in alto con la fase di adesso accesa (toccando una fase ci si va). **Orologio a torta** spostabile (maniglia gialla; toccandolo diventa piccolo): ⏸ pausa, +1 minuto, ⏭ fase dopo. A un minuto dalla fine diventa arancione e la voce lo dice; allo scadere suona la campanella e dopo 5 secondi si passa alla fase dopo ("➕ Ancora 1 minuto" per aspettare).
+- **Semaforo**: 🟢 al lavoro, 🟡 stiamo per finire, 🔴 schermo rosso "Penne giù! Occhi alla LIM" (si tocca per tornare al verde). A ogni fase nuova torna verde.
+- **Copia sul quaderno**: campo della lezione `"copia": { "titolo": "...", "righe": [fino a 6 frasi], "divisione": { "a": 96, "b": 4 } }`. Righe numerate che compaiono una alla volta (nella lezione guidata da sole, con il tempo diviso fra le righe, e la voce le legge), accanto al disegno della pagina del quaderno a quadretti (le righe ancora da scrivere sono grigie). Per ora la lezione guidata compare solo nelle lezioni con `copia`.
+- In 📝 Verifico la verifica online si apre dentro la lezione, così l'orologio resta in vista.
+
+## Vieni alla lavagna
+In ogni lezione: tasto **L** (o il pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM). Si aggiungono i nomi dei bambini (restano solo su quel computer, mai nel sito); toccando un nome, o premendo il suo numero 1–9, compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. Esc chiude.
