@@ -127,3 +127,4 @@ Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: �
 
 ## Lezione in evidenza
 In `assets/curricolo.js` un argomento con `evidenza: true` compare in grande, con il nastro "⭐ In evidenza", nella pagina della classe e nella home.
+- Campo facoltativo della lezione `filastrocca`: `{ "titolo": "👑 ...", "strofe": [["😉 verso", "👒 verso"], ...] }`. Compare all'inizio, a colori e animata; il pulsante "🔊 Ascolta la filastrocca" la fa leggere alla voce verso per verso (si ferma toccandolo di nuovo). Usata in `mat4-divisioni-una-cifra`.

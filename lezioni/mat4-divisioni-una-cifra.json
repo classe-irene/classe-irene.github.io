@@ -4,6 +4,27 @@
   "materia": "matematica",
   "classe": 4,
   "introduzione": "Una filastrocca magica ci aiuta a dividere. Il divisore ha una cifra sola: cominciamo da qui!",
+  "filastrocca": {
+    "titolo": "👑 La filastrocca della divisione",
+    "strofe": [
+      [
+        "😉 Guardo il divisore e faccio l'occhiolino:",
+        "👒 a una o due cifre metto il cappellino!"
+      ],
+      [
+        "🎶 Recito forte la tabellina,",
+        "✍️ scrivo il risultato sotto la linea."
+      ],
+      [
+        "➖ Calcolo il resto, faccio la differenza,",
+        "🐢 e vado avanti con un po' di pazienza."
+      ],
+      [
+        "🛗 Scende la cifra successiva in ascensore,",
+        "🔁 e ricomincio a sfidare il divisore!"
+      ]
+    ]
+  },
   "storia": {
     "personaggio": "👩‍🍳",
     "testo": "Ciao! Sono Gaia, la pasticcera.\nHo fatto tanti pasticcini per la festa della scuola.\nLi metto sui vassoi: 4 su ogni vassoio.\nQuanti vassoi mi servono? Io ho un trucco: una filastrocca!",

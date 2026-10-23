@@ -87,6 +87,7 @@
         <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
         <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
       </div>
+      ${l.filastrocca ? filastroccaHTML(l.filastrocca) : ""}
       ${l.storia ? storiaHTML(l) : ""}
       ${l.sezioni.map((s) => `
         <section class="scheda${s.animazione ? " con-animazione" : ""}">
@@ -121,6 +122,7 @@
       if (b.classList.contains("carta-scopri")) { b.classList.toggle("girata"); if (b.classList.contains("girata")) leggi(Figura.dividi(b.dataset.retro).testo); }
       if (b.hasAttribute("data-svela")) { const r = b.nextElementSibling; r.hidden = false; b.hidden = true; leggi(r.textContent); }
       if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
+      if (b.dataset.azione === "filastrocca") cantaFilastrocca(radice, l.filastrocca, b);
       if (b.dataset.azione === "storia") leggi(`${l.storia.testo} ${l.storia.missione || ""}`);
       const a = b.dataset.azione;
       if (a === "leggi-tutto") leggiLezione(b);
@@ -156,7 +158,7 @@
       document.addEventListener("voce-ferma", () => { if (mio !== lettura) return; delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); }, { once: true });
       const pezzi = [{ el: radice.querySelector(".lezione-testa"), t: `${l.titolo}. ${l.introduzione || ""}`, figura: l.emoji },
         ...(l.storia ? [{ el: radice.querySelector(".storia"), t: `${l.storia.testo} ${l.storia.missione || ""}`, figura: l.storia.personaggio }] : []),
-        ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}`, figura: l.sezioni[i].immagine }))];
+        ...[...radice.querySelectorAll("section.scheda:not(.storia):not(.ricorda):not(.filastrocca)")].slice(0, l.sezioni.length).map((el, i) => ({ el, t: `${l.sezioni[i].titolo}. ${l.sezioni[i].testo}`, figura: l.sezioni[i].immagine }))];
       const avanti = (k) => {
         radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura"));
         if (mio !== lettura || !btn.dataset.inCorso) return;
@@ -173,6 +175,38 @@
     disegnaEsercizi(l, radice);
     frecciaSu(l, radice);
     try { window.Effetti?.avvia(l, radice); } catch (err) { console.warn(err); }
+  }
+
+  /* ---------- Filastrocca all'inizio della lezione: tutto il testo, colorato e animato; la voce la legge solo se si chiede ----------
+     "filastrocca": { "titolo": "...", "strofe": [["😉 verso", "👒 verso"], ...] } */
+  function filastroccaHTML(f) {
+    let n = 0;
+    return `<section class="scheda filastrocca"><div class="scheda-corpo">
+      <h2>${Figura.ricco(f.titolo || "🎵 La filastrocca", "figura media")}</h2>
+      <div class="fila-strofe">${(f.strofe || []).map((st, s) => `<div class="fila-strofa fs${s % 4}">${st.map((v) => {
+        const { tutte, testo } = Figura.dividi(v);
+        return `<p class="fila-verso" data-v="${n}" style="--k:${n++}">${tutte.length ? Figura.img(tutte[0], "figura fila-fig") : ""}<span>${h(testo)}</span></p>`;
+      }).join("")}</div>`).join("")}</div>
+      <div class="fila-comandi"><button class="btn" data-azione="filastrocca">🔊 Ascolta la filastrocca</button>
+        <span class="nota">La voce parte solo se tocchi il pulsante.</span></div>
+    </div></section>`;
+  }
+  // Legge un verso alla volta e lo illumina; toccando di nuovo il pulsante si ferma.
+  function cantaFilastrocca(radice, f, btn) {
+    const sez = radice.querySelector(".filastrocca");
+    const versi = (f.strofe || []).flat().map((v) => Figura.dividi(v).testo);
+    const spegni = () => { sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.remove("canta")); sez.classList.remove("in-canto"); btn.textContent = "🔊 Ascolta la filastrocca"; delete btn.dataset.inCorso; };
+    if (btn.dataset.inCorso) { btn.dataset.giro = ""; speechSynthesis?.cancel?.(); return spegni(); }
+    const giro = String(Date.now()); btn.dataset.giro = giro; btn.dataset.inCorso = "1";
+    btn.textContent = "⏹ Ferma la filastrocca"; sez.classList.add("in-canto");
+    document.addEventListener("voce-ferma", () => { if (btn.dataset.giro === giro) { btn.dataset.giro = ""; spegni(); } }, { once: true });
+    const canta = (k) => {
+      if (btn.dataset.giro !== giro) return;
+      sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.toggle("canta", +x.dataset.v === k));
+      if (k >= versi.length) return spegni();
+      Voce.parla(versi[k], () => setTimeout(() => canta(k + 1), 350), { scritte: false });
+    };
+    canta(0);
   }
 
   /* ---------- Storia, missione, esperimenti, mappa e album ---------- */
