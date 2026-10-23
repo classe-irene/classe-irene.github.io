@@ -130,6 +130,7 @@
         const k = b.dataset.azione === "fila-capo" ? 0 : b.dataset.azione === "fila-passo" ? filaDiv.n + 1 : filaDiv.passoDelVerso(+b.dataset.v);
         if (k >= 0 && k < filaDiv.passi.length) {
           filaDiv.vai(k);
+          if (b.classList.contains("fila-verso")) mostraFilaDiv(radice.querySelector(".filastrocca"));
           accendiVerso(radice.querySelector(".filastrocca"), b.classList.contains("fila-verso") ? +b.dataset.v : filaDiv.versoDelPasso(k));
           if (k) Voce.parla(filaDiv.passi[k].voce || filaDiv.passi[k].testo, null, { scritte: false });
         }
@@ -225,6 +226,8 @@
     d.versoDelPasso = (k) => chiavi.indexOf(d.passi[k]?.chiave);
     return d;
   }
+  // Sul telefono la divisione sta sotto i versi: quando parte, la si porta in vista.
+  const mostraFilaDiv = (sez) => { if (innerWidth <= 900) sez.querySelector(".fila-div")?.scrollIntoView({ behavior: "smooth", block: "nearest" }); };
   const accendiVerso = (sez, v) => sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.toggle("canta", +x.dataset.v === v));
   // Legge un verso alla volta e lo illumina; con la divisione, dopo ogni verso mostra e spiega il suo passo.
   // Finiti i versi, la divisione continua fino alla fine, e si accende il verso di ogni passo. Toccando di nuovo il pulsante si ferma.
@@ -239,6 +242,7 @@
     const vivo = () => btn.dataset.giro === giro;
     const dopo = (fn) => () => { if (vivo()) setTimeout(fn, 400); };
     d?.vai(0);
+    if (d) mostraFilaDiv(sez);
     let ultimo = 0;
     const resto = (k) => {
       if (!vivo()) return;

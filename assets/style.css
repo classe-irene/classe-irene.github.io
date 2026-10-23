@@ -1367,7 +1367,7 @@ button.fila-verso:hover { background: rgba(255,255,255,.6); }
 .scheda .animazione.video .fila-didascalia { max-width: none; color: #3B2A00; background: #FFF4C2; border: 3px solid var(--giallo); border-radius: 16px; padding: 8px 14px; min-height: 0; }
 body.lim .scheda.filastrocca .fila-didascalia { font-size: min(1.7rem, 3vh); }
 .fila-comandi { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
-@media (max-width: 900px) { .scheda.filastrocca.con-divisione .fila-insieme { grid-template-columns: 1fr; } .fila-div { position: static; } }
+@media (max-width: 900px) { .scheda.filastrocca.con-divisione .fila-insieme { grid-template-columns: minmax(0, 1fr); } .fila-div { position: static; } }
 @media (max-width: 600px) { .fila-strofe { grid-template-columns: 1fr; } .fila-verso { font-size: 1.1rem; } .fila-verso .fila-fig { width: 40px; height: 40px; } }
 body.lim .scheda.filastrocca.corrente .fila-verso { font-size: min(2rem, 3.3vh); }
 body.lim .scheda.filastrocca.corrente .fila-verso .fila-fig { width: min(64px, 6vh); height: min(64px, 6vh); }
@@ -1385,4 +1385,12 @@ body.lim .scheda.filastrocca.con-divisione.corrente .fila-insieme { margin: 4px 
   body.lim .scheda.filastrocca.con-divisione.corrente .fila-strofa { padding: 6px 12px; }
   body.lim .scheda.filastrocca.con-divisione.corrente .fila-palco { padding: 4px; gap: 6px; }
   body.lim .scheda.filastrocca.con-divisione.corrente .fila-comandi .nota { display: none; }
+}
+/* Filastrocca con divisione sul telefono: niente bollini delle fasi (li dice già il verso illuminato), tutto dentro la scheda */
+@media (max-width: 600px) {
+  .scheda.filastrocca.con-divisione .div-fasi { display: none; }
+  .scheda.filastrocca.con-divisione .fila-palco { padding: 6px; }
+  .scheda.filastrocca.con-divisione .fila-palco > * { max-width: 100%; }
+  .scheda.filastrocca.con-divisione .fila-strofa { padding: 8px 10px; }
+  .scheda.filastrocca.con-divisione .fila-verso { gap: 8px; padding: 4px; }
 }
