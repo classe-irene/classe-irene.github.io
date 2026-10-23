@@ -1869,7 +1869,7 @@
     const capCelle = (f) => Array.from({ length: f + 1 }, (_, c) => `s-0-${c}`);
     const Il = (n) => il(n)[0].toUpperCase() + il(n).slice(1);
     const P = [];
-    const passo = (strofa, testo, fase, azioni, evid, extra = {}) => P.push({ strofa: STROFE[strofa], testo, fase, azioni, evid, ...extra });
+    const passo = (strofa, testo, fase, azioni, evid, extra = {}) => P.push({ chiave: strofa, strofa: STROFE[strofa], testo, fase, azioni, evid, ...extra });
     passo("titolo", `Facciamo ${a} : ${b}. Il dividendo è ${a}, il divisore è ${b}.`, null, [], ["s-0-*", "d-*"]);
     passo("occhio", `Il divisore è ${b}: ha ${quanteCifre(L)}.`, "cappello", [], ["d-*"]);
     if (cap.prova) {
@@ -1896,6 +1896,27 @@
       [{ t: "calc", prova: true, righe: dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`] }], ["q-*", "d-*", "s-0-*"], { finale: true });
     P.forEach((x) => { x.voce = `${x.strofa.replace(/…/g, " ")}. ${x.testo}`; });
     return P;
+  }
+
+  // La divisione che accompagna la filastrocca all'inizio della lezione: si mostra un passo alla volta, a comando.
+  function divisioneFilastrocca(posto, a, b) {
+    const dv = calcolaDivisione(a, b), passi = passiDivisione(dv);
+    const didascalia = document.createElement("p");
+    didascalia.className = "didascalia fila-didascalia";
+    let n = 0;
+    function vai(k) {
+      n = Math.max(0, Math.min(passi.length - 1, k));
+      const g = grigliaDivisione(dv);
+      posto.replaceChildren(g.el, didascalia);
+      for (let j = 0; j <= n; j++) applicaDiv(g, passi[j], j === n);
+      evidenziaDiv(g, passi[n].evid);
+      faseDiv(g, passi[n].fase);
+      if (passi[n].finale) g.el.querySelector(".div-griglia").classList.add("finita");
+      didascalia.textContent = passi[n].testo;
+      didascalia.classList.remove("nuova"); void didascalia.offsetWidth; didascalia.classList.add("nuova");
+    }
+    vai(0);
+    return { passi, vai, get n() { return n; }, indice: (chiave, da = 0) => passi.findIndex((p, i) => i >= da && p.chiave === chiave) };
   }
 
   const FASI_DIV = [["cappello", "👒", "Cappellino"], ["tabellina", "🎶", "Tabellina"], ["resto", "➖", "Resto"], ["ascensore", "🛗", "Ascensore"]];
@@ -2084,5 +2105,5 @@
     prepara();
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioDivisione, calcolaDivisione, passiDivisione, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioDivisione, divisioneFilastrocca, calcolaDivisione, passiDivisione, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();

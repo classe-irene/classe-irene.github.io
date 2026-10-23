@@ -114,6 +114,7 @@
       <div data-esercizi></div>
       <div class="fine" data-fine hidden></div>`;
 
+    let filaDiv = null;
     radice.addEventListener("click", (ev) => {
       const b = ev.target.closest("button");
       if (!b) return;
@@ -122,7 +123,17 @@
       if (b.classList.contains("carta-scopri")) { b.classList.toggle("girata"); if (b.classList.contains("girata")) leggi(Figura.dividi(b.dataset.retro).testo); }
       if (b.hasAttribute("data-svela")) { const r = b.nextElementSibling; r.hidden = false; b.hidden = true; leggi(r.textContent); }
       if (b.classList.contains("passo-esp")) b.classList.toggle("fatto");
-      if (b.dataset.azione === "filastrocca") cantaFilastrocca(radice, l.filastrocca, b);
+      if (b.dataset.azione === "filastrocca") cantaFilastrocca(radice, l.filastrocca, b, filaDiv);
+      if (filaDiv && ["fila-passo", "fila-capo"].includes(b.dataset.azione) || filaDiv && b.classList.contains("fila-verso")) {
+        const canto = radice.querySelector('[data-azione="filastrocca"]');
+        if (canto.dataset.inCorso) { canto.dataset.giro = ""; speechSynthesis?.cancel?.(); delete canto.dataset.inCorso; canto.textContent = "🔊 Ascolta la filastrocca"; radice.querySelector(".filastrocca").classList.remove("in-canto"); }
+        const k = b.dataset.azione === "fila-capo" ? 0 : b.dataset.azione === "fila-passo" ? filaDiv.n + 1 : filaDiv.passoDelVerso(+b.dataset.v);
+        if (k >= 0 && k < filaDiv.passi.length) {
+          filaDiv.vai(k);
+          accendiVerso(radice.querySelector(".filastrocca"), b.classList.contains("fila-verso") ? +b.dataset.v : filaDiv.versoDelPasso(k));
+          if (k) Voce.parla(filaDiv.passi[k].voce || filaDiv.passi[k].testo, null, { scritte: false });
+        }
+      }
       if (b.dataset.azione === "storia") leggi(`${l.storia.testo} ${l.storia.missione || ""}`);
       const a = b.dataset.azione;
       if (a === "leggi-tutto") leggiLezione(b);
@@ -171,6 +182,7 @@
       avanti(0);
     }
 
+    filaDiv = l.filastrocca ? preparaFilastrocca(radice, l.filastrocca) : null;
     radice.querySelectorAll(".anim-posto").forEach((p) => { try { Animazioni.crea(p, JSON.parse(p.dataset.anim)); } catch {} });
     disegnaEsercizi(l, radice);
     frecciaSu(l, radice);
@@ -178,33 +190,74 @@
   }
 
   /* ---------- Filastrocca all'inizio della lezione: tutto il testo, colorato e animato; la voce la legge solo se si chiede ----------
-     "filastrocca": { "titolo": "...", "strofe": [["😉 verso", "👒 verso"], ...] } */
+     "filastrocca": { "titolo": "...", "strofe": [["😉 verso", "👒 verso"], ...], "divisione": { "a": 96, "b": 4 },
+                      "chiavi": ["occhio", "cappello", ...] }   ← con "divisione", accanto ai versi una divisione vera fa un passo per ogni verso */
+  const CHIAVI_FILASTROCCA = ["occhio", "cappello", "tabellina", "linea", "resto", "", "ascensore", "ricomincio"];
   function filastroccaHTML(f) {
     let n = 0;
-    return `<section class="scheda filastrocca"><div class="scheda-corpo">
+    const div = f.divisione && Number.isInteger(f.divisione.a) && Number.isInteger(f.divisione.b);
+    return `<section class="scheda filastrocca${div ? " con-divisione" : ""}"><div class="scheda-corpo">
       <h2>${Figura.ricco(f.titolo || "🎵 La filastrocca", "figura media")}</h2>
-      <div class="fila-strofe">${(f.strofe || []).map((st, s) => `<div class="fila-strofa fs${s % 4}">${st.map((v) => {
+      <div class="fila-insieme"><div class="fila-sinistra"><div class="fila-strofe">${(f.strofe || []).map((st, s) => `<div class="fila-strofa fs${s % 4}">${st.map((v) => {
         const { tutte, testo } = Figura.dividi(v);
-        return `<p class="fila-verso" data-v="${n}" style="--k:${n++}">${tutte.length ? Figura.img(tutte[0], "figura fila-fig") : ""}<span>${h(testo)}</span></p>`;
+        return `<button type="button" class="fila-verso" data-v="${n}" style="--k:${n++}">${tutte.length ? Figura.img(tutte[0], "figura fila-fig") : ""}<span>${h(testo)}</span></button>`;
       }).join("")}</div>`).join("")}</div>
       <div class="fila-comandi"><button class="btn" data-azione="filastrocca">🔊 Ascolta la filastrocca</button>
-        <span class="nota">La voce parte solo se tocchi il pulsante.</span></div>
+        ${div ? `<button class="btn bianco" data-azione="fila-passo">⏭ Un passo</button><button class="btn bianco" data-azione="fila-capo">↺ Da capo</button>` : ""}
+        <span class="nota">La voce parte solo se tocchi il pulsante.${div ? " Tocca un verso per vedere il suo passo." : ""}</span></div>
+      </div>
+      ${div ? `<div class="fila-div animazione video"><div class="video-titolo">🎬 ${h(f.divisione.a)} : ${h(f.divisione.b)} con la filastrocca</div><div class="palco fila-palco"></div></div>` : ""}</div>
     </div></section>`;
   }
-  // Legge un verso alla volta e lo illumina; toccando di nuovo il pulsante si ferma.
-  function cantaFilastrocca(radice, f, btn) {
+  // La divisione accanto alla filastrocca (se c'è) e il legame verso → passo della divisione.
+  function preparaFilastrocca(radice, f) {
+    const posto = radice.querySelector(".fila-palco");
+    if (!posto) return null;
+    const d = Animazioni.divisioneFilastrocca(posto, +f.divisione.a, +f.divisione.b);
+    const chiavi = f.chiavi || CHIAVI_FILASTROCCA;
+    // verso → i passi di fila con la sua chiave (es. il cappellino che non ci sta e poi si allarga); passo → verso che lo racconta
+    d.passiDelVerso = (v) => {
+      const k = chiavi[v] ? d.indice(chiavi[v]) : -1, run = [];
+      for (let j = k; j >= 0 && j < d.passi.length && d.passi[j].chiave === chiavi[v]; j++) run.push(j);
+      return run;
+    };
+    d.passoDelVerso = (v) => d.passiDelVerso(v).at(-1) ?? -1;
+    d.versoDelPasso = (k) => chiavi.indexOf(d.passi[k]?.chiave);
+    return d;
+  }
+  const accendiVerso = (sez, v) => sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.toggle("canta", +x.dataset.v === v));
+  // Legge un verso alla volta e lo illumina; con la divisione, dopo ogni verso mostra e spiega il suo passo.
+  // Finiti i versi, la divisione continua fino alla fine, e si accende il verso di ogni passo. Toccando di nuovo il pulsante si ferma.
+  function cantaFilastrocca(radice, f, btn, d) {
     const sez = radice.querySelector(".filastrocca");
     const versi = (f.strofe || []).flat().map((v) => Figura.dividi(v).testo);
-    const spegni = () => { sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.remove("canta")); sez.classList.remove("in-canto"); btn.textContent = "🔊 Ascolta la filastrocca"; delete btn.dataset.inCorso; };
+    const spegni = () => { accendiVerso(sez, -1); sez.classList.remove("in-canto"); btn.textContent = "🔊 Ascolta la filastrocca"; delete btn.dataset.inCorso; };
     if (btn.dataset.inCorso) { btn.dataset.giro = ""; speechSynthesis?.cancel?.(); return spegni(); }
     const giro = String(Date.now()); btn.dataset.giro = giro; btn.dataset.inCorso = "1";
     btn.textContent = "⏹ Ferma la filastrocca"; sez.classList.add("in-canto");
     document.addEventListener("voce-ferma", () => { if (btn.dataset.giro === giro) { btn.dataset.giro = ""; spegni(); } }, { once: true });
-    const canta = (k) => {
-      if (btn.dataset.giro !== giro) return;
-      sez.querySelectorAll(".fila-verso").forEach((x) => x.classList.toggle("canta", +x.dataset.v === k));
-      if (k >= versi.length) return spegni();
-      Voce.parla(versi[k], () => setTimeout(() => canta(k + 1), 350), { scritte: false });
+    const vivo = () => btn.dataset.giro === giro;
+    const dopo = (fn) => () => { if (vivo()) setTimeout(fn, 400); };
+    d?.vai(0);
+    let ultimo = 0;
+    const resto = (k) => {
+      if (!vivo()) return;
+      if (!d || k >= d.passi.length) return spegni();
+      d.vai(k); accendiVerso(sez, d.versoDelPasso(k));
+      Voce.parla(d.passi[k].voce || d.passi[k].testo, dopo(() => resto(k + 1)), { scritte: false });
+    };
+    const canta = (v) => {
+      if (!vivo()) return;
+      if (v >= versi.length) return resto(ultimo + 1);
+      accendiVerso(sez, v);
+      const run = d ? d.passiDelVerso(v) : [];
+      const spiega = (i) => {
+        if (!vivo()) return;
+        if (i >= run.length) return canta(v + 1);
+        d.vai(run[i]); ultimo = Math.max(ultimo, run[i]);
+        Voce.parla(d.passi[run[i]].testo, dopo(() => spiega(i + 1)), { scritte: false });
+      };
+      Voce.parla(versi[v], dopo(() => spiega(0)), { scritte: false });
     };
     canta(0);
   }

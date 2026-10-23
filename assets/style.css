@@ -933,15 +933,15 @@ html, body { overflow-x: clip; }
 .st-parola { margin: 0 .1em; transform-origin: center bottom; }
 
 /* Telecomando della voce: pausa, riprendi, da capo, stop (sempre in vista mentre la voce parla) */
-.voce-dock { position: fixed; left: 50%; top: 50%; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translate(-50%, -50%);
+.voce-dock { --sc: .8; position: fixed; left: 50%; top: 50%; z-index: 92; width: min(980px, calc(100vw - 24px)); transform: translate(-50%, -50%) scale(var(--sc));
   display: flex; flex-direction: column; align-items: center; gap: 10px; pointer-events: none; transition: opacity .35s, transform .35s; }
 .voce-dock > * { pointer-events: auto; }
 /* le scritte non devono bloccare i tocchi sull'esercizio sotto: si tocca solo la ✕ */
 .voce-dock .sottotitoli { pointer-events: none; }
 .voce-dock .st-chiudi { pointer-events: auto; }
-.voce-dock.via { opacity: 0; transform: translate(-50%, -50%) scale(.92); }
-.voce-dock.spostato { transform: none; transition: opacity .35s; }
-.voce-dock.spostato.via { transform: scale(.92); }
+.voce-dock.via { opacity: 0; transform: translate(-50%, -50%) scale(calc(var(--sc) * .92)); }
+.voce-dock.spostato { transform: scale(var(--sc)); transform-origin: 0 0; transition: opacity .35s; }
+.voce-dock.spostato.via { transform: scale(calc(var(--sc) * .92)); }
 .voce-dock.trascino { transition: none; }
 .voce-dock.via > * { pointer-events: none; }
 
@@ -993,6 +993,9 @@ body.lim button.foglio img { width: auto; max-width: 100%; max-height: calc(100v
   font: 800 1rem "Nunito", sans-serif; cursor: grab; touch-action: none; user-select: none; box-shadow: 0 6px 16px rgba(43,42,51,.25); min-height: 44px; }
 .tc-maniglia:active, .voce-dock.trascino .tc-maniglia { cursor: grabbing; background: #FFB703; }
 .tc-presa { font-size: 1.4rem; line-height: 1; opacity: .7; }
+.tc-testa { display: flex; align-items: center; gap: 10px; }
+.tc-misura { width: 48px; height: 48px; border-radius: 50%; border: 3px solid #2B2A33; background: #FFC93C; font-size: 1.3rem; cursor: pointer; box-shadow: 0 6px 16px rgba(43,42,51,.25); }
+.tc-misura:disabled { opacity: .35; cursor: default; }
 .voce-dock.trascino .sottotitoli { box-shadow: 0 24px 60px rgba(43,42,51,.4); }
 
 /* Trascinamento delle carte nei box */
@@ -1351,9 +1354,35 @@ body.lim .div-strofa .figura { width: min(52px, 5vh); height: min(52px, 5vh); }
 .fila-verso.canta .fila-fig { animation: fila-salta .6s ease-in-out infinite; }
 @keyframes fila-salta { 50% { transform: translateY(-10px) scale(1.15); } }
 .scheda.filastrocca.in-canto .fila-verso:not(.canta) { opacity: .55; }
+button.fila-verso { width: 100%; background: none; border: 0; color: inherit; text-align: left; cursor: pointer; }
+button.fila-verso:hover { background: rgba(255,255,255,.6); }
+/* Filastrocca con la divisione accanto: i versi a sinistra, la divisione che cresce a destra */
+.scheda.filastrocca.con-divisione .fila-insieme { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 16px; align-items: start; margin: 10px 0 16px; }
+.scheda.filastrocca.con-divisione .fila-strofe { grid-template-columns: 1fr; gap: 10px; margin: 0; }
+.scheda.filastrocca.con-divisione .fila-verso { font-size: 1.15rem; margin: 3px 0; }
+.scheda.filastrocca.con-divisione .fila-verso .fila-fig { width: 42px; height: 42px; }
+.fila-sinistra .fila-comandi { margin-top: 12px; }
+.fila-div { position: sticky; top: 8px; margin: 0; }
+.fila-palco { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px; }
+.scheda .animazione.video .fila-didascalia { max-width: none; color: #3B2A00; background: #FFF4C2; border: 3px solid var(--giallo); border-radius: 16px; padding: 8px 14px; min-height: 0; }
+body.lim .scheda.filastrocca .fila-didascalia { font-size: min(1.7rem, 3vh); }
 .fila-comandi { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+@media (max-width: 900px) { .scheda.filastrocca.con-divisione .fila-insieme { grid-template-columns: 1fr; } .fila-div { position: static; } }
 @media (max-width: 600px) { .fila-strofe { grid-template-columns: 1fr; } .fila-verso { font-size: 1.1rem; } .fila-verso .fila-fig { width: 40px; height: 40px; } }
 body.lim .scheda.filastrocca.corrente .fila-verso { font-size: min(2rem, 3.3vh); }
 body.lim .scheda.filastrocca.corrente .fila-verso .fila-fig { width: min(64px, 6vh); height: min(64px, 6vh); }
 body.lim .scheda.filastrocca.corrente .fila-strofe { grid-template-columns: 1fr 1fr; }
+body.lim .scheda.filastrocca.con-divisione.corrente .fila-strofe { grid-template-columns: 1fr; gap: 6px; }
+body.lim .scheda.filastrocca.con-divisione.corrente .fila-verso { font-size: min(1.6rem, 2.6vh); margin: 1px 0; }
+body.lim .scheda.filastrocca.con-divisione.corrente .fila-verso .fila-fig { width: min(48px, 4.5vh); height: min(48px, 4.5vh); }
 body.lim .scheda.filastrocca.corrente h2 .con-figura { font-size: min(2.8rem, 4.6vh); }
+/* Filastrocca con divisione sulla LIM: i versi illuminati dicono già la fase, quindi niente bollini delle fasi; titolo più basso */
+body.lim .scheda.filastrocca.con-divisione.corrente .div-fasi { display: none; }
+body.lim .scheda.filastrocca.con-divisione.corrente h2 { margin: 0 0 4px; }
+body.lim .scheda.filastrocca.con-divisione.corrente .fila-insieme { margin: 4px 0 0; }
+@media (max-height: 850px) {
+  body.lim .scheda.filastrocca.con-divisione.corrente h2 .figura.media { width: 56px; height: 56px; }
+  body.lim .scheda.filastrocca.con-divisione.corrente .fila-strofa { padding: 6px 12px; }
+  body.lim .scheda.filastrocca.con-divisione.corrente .fila-palco { padding: 4px; gap: 6px; }
+  body.lim .scheda.filastrocca.con-divisione.corrente .fila-comandi .nota { display: none; }
+}

@@ -82,7 +82,9 @@ window.Telecomando = (() => {
   function crea() {
     if (dock) return dock;
     dock = document.createElement("div"); dock.className = "voce-dock via";
-    dock.innerHTML = `<div class="tc-maniglia" title="Trascina per spostare" aria-label="Maniglia: trascina per spostare"><span class="tc-presa">⠿</span> Trascinami <span class="tc-presa">⠿</span></div>
+    dock.innerHTML = `<div class="tc-testa"><button class="tc-misura" type="button" data-tc="meno" title="Più piccolo" aria-label="Più piccolo">➖</button>
+      <div class="tc-maniglia" title="Trascina per spostare" aria-label="Maniglia: trascina per spostare"><span class="tc-presa">⠿</span> Trascinami <span class="tc-presa">⠿</span></div>
+      <button class="tc-misura" type="button" data-tc="piu" title="Più grande" aria-label="Più grande">➕</button></div>
       <div class="telecomando" role="toolbar" aria-label="Comandi della voce">
       <span class="tc-onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
       <button class="tc-btn tc-pausa" type="button" data-tc="pausa"><span class="tc-ico">⏸</span><span class="tc-txt">Pausa</span></button>
@@ -92,13 +94,29 @@ window.Telecomando = (() => {
     dock.addEventListener("click", (e) => {
       const b = e.target.closest("[data-tc]"); if (!b) return;
       const a = b.dataset.tc;
-      if (a === "pausa") Voce.inPausa ? Voce.riprendi() : Voce.pausa();
+      if (a === "meno" || a === "piu") misura(dock, a === "piu" ? 1 : -1);
+      else if (a === "pausa") Voce.inPausa ? Voce.riprendi() : Voce.pausa();
       else if (a === "dacapo") Voce.daCapo();
       else Voce.ferma();
     });
     document.body.append(dock);
     trascina(dock, dock.querySelector(".tc-maniglia"));
+    misura(dock, 0);
     return dock;
+  }
+  // ➖ ➕: il riquadro diventa più piccolo o più grande; la misura resta su questo computer.
+  const MISURE = [.55, .65, .8, 1, 1.2], CHIAVE_MISURA = "classe-irene-voce-misura";
+  let quale = 2;
+  try { const m = +localStorage.getItem(CHIAVE_MISURA); if (localStorage.getItem(CHIAVE_MISURA) !== null && MISURE[m]) quale = m; } catch {}
+  function misura(d, passo) {
+    // la misura più grande è quella che sta ancora tutta nello schermo
+    const max = Math.max(0, MISURE.findLastIndex((s) => d.offsetWidth * s <= innerWidth - 8 && d.offsetHeight * s <= innerHeight - 8));
+    quale = Math.max(0, Math.min(max, quale + passo));
+    d.style.setProperty("--sc", MISURE[quale]);
+    d.querySelector('[data-tc="meno"]').disabled = quale === 0;
+    d.querySelector('[data-tc="piu"]').disabled = quale >= max;
+    if (passo) try { localStorage.setItem(CHIAVE_MISURA, quale); } catch {}
+    if (d.classList.contains("spostato")) { const r = d.getBoundingClientRect(); metti(d, r.left, r.top); }
   }
   // Maniglia: il riquadro si sposta col dito (LIM) o col mouse; la posizione resta su questo computer.
   const CHIAVE_POS = "classe-irene-scritte-pos";

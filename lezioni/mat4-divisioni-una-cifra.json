@@ -23,7 +23,11 @@
         "🛗 Scende la cifra successiva in ascensore,",
         "🔁 e ricomincio a sfidare il divisore!"
       ]
-    ]
+    ],
+    "divisione": {
+      "a": 156,
+      "b": 4
+    }
   },
   "storia": {
     "personaggio": "👩‍🍳",

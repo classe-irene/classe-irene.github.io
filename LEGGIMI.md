@@ -68,7 +68,7 @@ Codice: `Telecomando` e `Voce.pausa / riprendi / daCapo / ferma` in `assets/comu
 ## Pagina del quaderno da ricopiare
 Campo facoltativo della lezione: `"quaderno": { "immagine": "immagini/quaderno/....jpg", "titolo": "Ricopiare sul quaderno", "testo": "..." }`.
 Compare un pulsante arancione in alto e una scheda con la foto (dopo "Ricordiamo"); toccandola si apre a tutto schermo, con Ingrandisci e Stampa.
-Scritte e telecomando compaiono al centro dello schermo. La maniglia gialla "⠿ Trascinami ⠿" li sposta (dito sulla LIM o mouse); la posizione resta salvata su quel computer. Doppio tocco sulla maniglia: torna al centro.
+Scritte e telecomando compaiono al centro dello schermo. La maniglia gialla "⠿ Trascinami ⠿" li sposta (dito sulla LIM o mouse); la posizione resta salvata su quel computer. Doppio tocco sulla maniglia: torna al centro. I pulsanti ➖ e ➕ accanto alla maniglia lo rimpiccioliscono o ingrandiscono (mai oltre lo schermo); anche la misura resta salvata.
 
 ## Frazioni
 - Video `{"tipo":"scena","scena":"frazione","n":3,"d":4}` (anche `"forma":"cioccolata"`): intero, parti uguali, unità frazionaria, numeratore e denominatore, complementare. Con `n` più grande di `d` (fino a 2 interi) mostra la frazione impropria o apparente.
@@ -128,3 +128,4 @@ Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: �
 ## Lezione in evidenza
 In `assets/curricolo.js` un argomento con `evidenza: true` compare in grande, con il nastro "⭐ In evidenza", nella pagina della classe e nella home.
 - Campo facoltativo della lezione `filastrocca`: `{ "titolo": "👑 ...", "strofe": [["😉 verso", "👒 verso"], ...] }`. Compare all'inizio, a colori e animata; il pulsante "🔊 Ascolta la filastrocca" la fa leggere alla voce verso per verso (si ferma toccandolo di nuovo). Usata in `mat4-divisioni-una-cifra`.
+  - Con `"divisione": { "a": 156, "b": 4 }` accanto ai versi compare una divisione vera che fa un passo per ogni verso (chiavi predefinite: occhio, cappello, tabellina, linea, resto, —, ascensore, ricomincio; si cambiano con `"chiavi"`). Toccando un verso si vede il suo passo; ci sono anche "⏭ Un passo" e "↺ Da capo". Con l'ascolto, la voce dice il verso e poi spiega i numeri; finiti i versi, la divisione continua fino alla prova.
