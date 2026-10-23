@@ -1620,3 +1620,11 @@ body.lim .voce-dock.basso:not(.spostato) { left: 16px; bottom: 118px; transform:
 body.lim .voce-dock.basso.via:not(.spostato) { transform: scale(calc(var(--sc) * .92)); }
 .cs-nome kbd { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; margin-right: 8px; border-radius: 6px; background: #fff; border: 2px solid #2B2A33; border-bottom-width: 4px; font: 800 .9rem "Nunito", sans-serif; }
 .cs-aggiungi .cs-tasto { flex: 0 0 92px; text-align: center; }
+.cg-scatola .bambino-svg { width: clamp(140px, 22vh, 240px); height: auto; animation: saluta 1.2s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+@keyframes saluta { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+.cs-faccia { display: inline-block; width: 34px; height: 37px; margin-right: 6px; vertical-align: middle; }
+.cs-faccia .bambino-svg { width: 100%; height: 100%; }
+.cs-nome button[data-cs="chiama"] { display: inline-flex; align-items: center; }
+.cs-aggiungi { flex-wrap: wrap; }
+.cs-aggiungi select { font: inherit; font-size: .9rem; padding: 6px 8px; border: 2px solid var(--bordo); border-radius: 12px; background: #fff; }
+.chiama-scelta { width: min(520px, calc(100vw - 32px)); }
