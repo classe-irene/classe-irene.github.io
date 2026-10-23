@@ -1594,3 +1594,27 @@ body.lim .chiama-btn { display: block; }
   .copia-righe li.ora::after { display: none; }
   .copia-righe .figura, body.lim .copia-righe .figura.piccola { width: 34px; height: 34px; }
 }
+
+/* Divisione per esteso: prodotto sotto, linea, sottrazione cifra per cifra con il prestito */
+.div-estesa .div-griglia .cella { position: relative; }
+.div-estesa .div-griglia .cella.meno::before { content: "−"; position: absolute; left: -.5em; color: var(--corallo); font-weight: 800; }
+.div-estesa .div-griglia .cella.linea-sotto { border-bottom: 3px solid var(--testo); border-radius: 0; }
+.div-estesa .div-griglia .cella.prestato { color: var(--testo-tenue); text-decoration: line-through var(--corallo) 3px; }
+.div-estesa .div-griglia .cella.prestato::after { content: attr(data-dopo); position: absolute; top: -.5em; left: 0; font-size: .5em; color: var(--corallo); font-weight: 800; text-decoration: none; }
+.div-estesa .div-griglia .cella.preso::before { content: "1"; position: absolute; top: .05em; left: -.05em; font-size: .5em; color: var(--corallo); font-weight: 800; }
+.div-estesa .div-griglia { row-gap: 0; }
+.cq-cella { position: relative; }
+.cq-meno::before { content: "−"; position: absolute; left: -.45em; color: #C0392B; }
+.cq-linea { border-bottom: 2px solid #2B2A33; }
+/* Telecomando senza scritte (video, esercizi): in basso, per non coprire */
+.voce-dock.basso:not(.spostato) { top: auto; bottom: 24px; transform: translateX(-50%) scale(var(--sc)); transform-origin: 50% 100%; }
+.voce-dock.basso.via:not(.spostato) { transform: translateX(-50%) scale(calc(var(--sc) * .92)); }
+body.lim .voce-dock.basso:not(.spostato) { bottom: 118px; }
+.cs-nome .cs-stella { padding: 8px 4px 8px 10px; font-size: 1.1rem; color: var(--testo-tenue); }
+.cs-nome.primo { background: var(--giallo); }
+.cs-aiuto { font-size: .85rem; color: var(--testo-tenue); margin: 10px 0 0; }
+.voce-dock.basso .sottotitoli { display: none !important; }
+/* per esteso le righe sono di più: quadretti un po' più piccoli, così tutto sta nello schermo della LIM */
+body.lim .div-estesa .colonna-griglia .cella { width: min(84px, 6vh, calc(38vh / var(--righe))); height: min(84px, 6vh, calc(38vh / var(--righe))); font-size: min(3.2rem, 4.6vh, calc(28vh / var(--righe))); }
+body.lim .voce-dock.basso:not(.spostato) { left: 16px; bottom: 118px; transform: scale(var(--sc)); transform-origin: 0 100%; }
+body.lim .voce-dock.basso.via:not(.spostato) { transform: scale(calc(var(--sc) * .92)); }

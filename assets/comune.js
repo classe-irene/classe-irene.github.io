@@ -143,10 +143,12 @@ window.Telecomando = (() => {
     m.addEventListener("dblclick", () => { d.classList.remove("spostato"); d.style.left = d.style.top = ""; try { localStorage.removeItem(CHIAVE_POS); } catch {} });
     addEventListener("resize", () => { if (d.classList.contains("spostato")) { const r = d.getBoundingClientRect(); metti(d, r.left, r.top); } });
   }
-  function stato(s) {
+  // basso = solo i pulsanti (senza scritte): stanno in basso, così non coprono video ed esercizi.
+  function stato(s, basso) {
     clearTimeout(timer);
     if (s === "fermo") { if (dock) timer = setTimeout(() => dock.classList.add("via"), 1700); dock?.classList.remove("in-pausa"); return; }
     const d = crea();
+    if (basso !== undefined) d.classList.toggle("basso", basso);
     d.classList.remove("via");
     d.classList.toggle("in-pausa", s === "pausa");
     const b = d.querySelector(".tc-pausa");
@@ -228,19 +230,26 @@ window.Voce = (() => {
       if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       // Le emoji non vanno lette ad alta voce.
       const pulito = leggibile(String(testo).replace(/[0-9#*]\uFE0F?\u20E3/gu, "").replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
-      ora = { pulito, fine, opz, pos: 0, pausa: false, comandi: opz.scritte !== false && pulito.split(" ").length >= 3 };
+      ora = { pulito, fine, opz, pos: 0, pausa: false, comandi: pulito.split(" ").length >= 3 };
       dici(0);
     },
     // Telecomando: pausa, riprendi, da capo, stop. In pausa la voce si ferma davvero;
-    // quando riparte, ricomincia dall'inizio della frase interrotta (così il bambino non perde il filo).
+    // quando riparte, ricomincia dalla parola interrotta (stimata dal tempo se il computer non la dice).
     pausa() {
       if (!ora || ora.pausa) return;
       ora.pausa = true; giro++; clearTimeout(ora.timer);
       let pos = ora.confini ? ora.pos : ora.da + Math.round((performance.now() - (ora.t0 || performance.now())) / 1000 * 11 * (ora.rate || .72));
       pos = Math.min(Math.max(pos, ora.da), ora.pulito.length);
       const prima = ora.pulito.slice(0, pos);
-      const m = [...prima.matchAll(/[.!?]\s+/g)].pop();
-      ora.ripresa = m ? m.index + m[0].length : 0;
+      if (ora.confini) {
+        // Il computer dice a che parola è arrivato: si riparte proprio da lì.
+        const w = prima.search(/\S*$/);
+        ora.ripresa = w >= 0 ? w : pos;
+      } else {
+        // Senza questa informazione il punto si stima dal tempo: si riparte due parole prima, per sicurezza.
+        const parole = [...prima.matchAll(/\S+/g)];
+        ora.ripresa = parole.length > 2 ? parole[parole.length - 2].index : 0;
+      }
       speechSynthesis.cancel();
       Telecomando.stato("pausa");
     },
@@ -276,11 +285,13 @@ window.Voce = (() => {
     u.onend = finito; u.onerror = finito;
     o.timer = setTimeout(finito, 4000 + parte.length * 140);
     if (o.opz.scritte !== false) window.Sottotitoli?.mostra(parte, u, o.opz);
-    if (o.comandi) Telecomando.stato("parla");
+    if (o.comandi) Telecomando.stato("parla", o.opz.scritte === false);
     speechSynthesis.speak(u);
   }
 })();
 window.leggi = (t, fine) => Voce.parla(t, fine);
+// Quando si esce dalla pagina (o si chiude), la voce si ferma subito.
+["pagehide", "beforeunload"].forEach((e) => addEventListener(e, () => { try { speechSynthesis.cancel(); } catch {} }));
 
 /* ---------- Scritte a schermo mentre la voce parla ----------
    Le parole compaiono una alla volta, con caratteri allegri; la parola detta in quel momento si illumina.

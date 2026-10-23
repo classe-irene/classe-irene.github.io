@@ -26,22 +26,25 @@
     if (l.ricorda?.length) return { titolo: l.titolo, righe: l.ricorda.slice(0, 5) };
     return null;
   }
-  // La divisione in colonna come si scrive sul quaderno: una cifra per quadretto.
+  // La divisione in colonna come si scrive sul quaderno, per esteso: una cifra per quadretto, prodotto sotto e sottrazione.
   function divisioneQuaderno(a, b) {
-    const dv = Animazioni.calcolaDivisione(a, b), n = dv.D.length, R = dv.giri.length, m = Math.max(dv.L, R);
-    const celle = {};
+    const dv = Animazioni.estendi(Animazioni.calcolaDivisione(a, b)), n = dv.D.length, m = Math.max(dv.L, dv.giri.length);
+    const celle = {}, cls = {};
     dv.D.forEach((c, i) => { celle[`0-${i}`] = c; });
-    dv.giri.forEach((g, i) => {
-      const r = String(g.r);
-      [...r].forEach((c, k) => { celle[`${i + 1}-${g.fine - r.length + 1 + k}`] = c; });
-      if (g.scende) celle[`${i + 1}-${g.scende.col}`] = g.scende.cifra;
+    dv.giri.forEach((g) => {
+      const X = String(g.prodotto);
+      [...X].forEach((c, k) => { celle[`${g.rigaProdotto}-${g.fine - X.length + 1 + k}`] = c; });
+      cls[`${g.rigaProdotto}-${g.fine - X.length + 1}`] = " cq-meno";
+      for (let c = g.inizio; c <= g.fine; c++) cls[`${g.rigaProdotto}-${c}`] = (cls[`${g.rigaProdotto}-${c}`] || "") + " cq-linea";
+      g.colonne.forEach((c) => { if (c.scrivi || c.sotto == null && c.su) celle[`${g.riga}-${c.col}`] = c.val; });
+      if (g.scende) celle[`${g.riga}-${g.scende.col}`] = g.scende.cifra;
     });
     [...String(b)].forEach((c, k) => { celle[`0-${n + k}`] = c; });
     dv.giri.forEach((g, i) => { celle[`1-${n + i}`] = g.q; });
     let html = "";
-    for (let r = 0; r <= R; r++) for (let c = 0; c < n + m; c++) {
-      const cls = (c === n ? " cq-sx" : "") + (r === 0 && c >= n ? " cq-sotto" : "");
-      html += `<span class="cq-cella${cls}">${celle[`${r}-${c}`] ?? ""}</span>`;
+    for (let r = 0; r < dv.righe; r++) for (let c = 0; c < n + m; c++) {
+      const k = `${r}-${c}`;
+      html += `<span class="cq-cella${c === n ? " cq-sx" : ""}${r === 0 && c >= n ? " cq-sotto" : ""}${cls[k] || ""}">${celle[k] ?? ""}</span>`;
     }
     const prova = dv.r ? `${dv.q} × ${b} + ${dv.r} = ${a}` : `${dv.q} × ${b} = ${a}`;
     return `<div class="cq-div" style="grid-template-columns:repeat(${n + m}, var(--q))">${html}</div><div class="cq-prova">Prova: ${prova}</div>`;
@@ -424,8 +427,9 @@
 
 
   /* ---------- 🙋 Vieni alla lavagna ----------
-     Tasto L (o il pulsantino 🙋 in basso a destra, nella modalità LIM): si sceglie un nome e compare grande
-     "Nome! Vieni alla lavagna!", detto anche dalla voce. Con la scelta aperta, i tasti 1–9 chiamano subito quel nome.
+     Tasto L (o il pulsantino 🙋 in basso a destra, nella modalità LIM): chiama SUBITO il primo nome dell'elenco,
+     grande sullo schermo e a voce: "Nome! Vieni alla lavagna!". Maiuscolo+L (o il pulsantino tenuto premuto): l'elenco dei nomi,
+     dove si aggiungono, si tolgono e con ⭐ si sceglie quello del tasto L. Con l'elenco aperto, i tasti 1–9 chiamano quel nome.
      I nomi restano solo su questo computer (non vanno mai nel sito). */
   const CHIAVE_NOMI = "classe-irene-nomi-lavagna";
   const nomi = () => { try { return JSON.parse(localStorage.getItem(CHIAVE_NOMI)) || []; } catch { return []; } };
@@ -449,8 +453,9 @@
     const disegna = () => {
       const n = nomi();
       v.innerHTML = `<div class="cs-testa"><b>🙋 Chi viene alla lavagna?</b><button data-cs="chiudi" aria-label="Chiudi">✕</button></div>
-        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome"><button data-cs="chiama" data-i="${i}">${i < 9 ? `<small>${i + 1}</small>` : ""}${h(x)}</button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x)}">×</button></span>`).join("")}</div>`
+        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome${i ? "" : " primo"}"><button class="cs-stella" data-cs="primo" data-i="${i}" aria-label="${i ? `Metti ${h(x)} sul tasto L` : `${h(x)} è sul tasto L`}" title="${i ? "Metti sul tasto L" : "Sul tasto L"}">${i ? "☆" : "⭐"}</button><button data-cs="chiama" data-i="${i}">${i < 9 ? `<small>${i + 1}</small>` : ""}${h(x)}</button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x)}">×</button></span>`).join("")}</div>`
           : `<p class="cs-vuoto">Scrivi qui sotto i nomi dei bambini. Restano solo su questo computer.</p>`}
+        <p class="cs-aiuto">⭐ = il nome del tasto <b>L</b>: lo chiama subito, senza aprire questo elenco.</p>
         <form class="cs-aggiungi"><input name="nome" maxlength="24" placeholder="Nuovo nome" autocomplete="off"><button class="btn piccolo">＋ Aggiungi</button></form>`;
     };
     v.addEventListener("click", (e) => {
@@ -459,6 +464,7 @@
       if (b.dataset.cs === "chiudi") v.remove();
       if (b.dataset.cs === "chiama") chiama(n[i]);
       if (b.dataset.cs === "togli") { n.splice(i, 1); salvaNomi(n); disegna(); }
+      if (b.dataset.cs === "primo") { n.unshift(...n.splice(i, 1)); salvaNomi(n); disegna(); }
     });
     v.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -471,14 +477,19 @@
   }
   document.addEventListener("keydown", (e) => {
     if (e.ctrlKey || e.altKey || e.metaKey || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
-    if (e.key === "l" || e.key === "L") { e.preventDefault(); sceltaNome(); }
+    if (e.key === "l" || e.key === "L") { e.preventDefault(); const n = nomi(); if (n.length && !e.shiftKey) chiama(n[0]); else sceltaNome(); }
     else if (document.querySelector(".chiama-scelta") && /^[1-9]$/.test(e.key) && nomi()[+e.key - 1]) { e.preventDefault(); chiama(nomi()[+e.key - 1]); }
     else if (e.key === "Escape") { document.querySelector(".chiama-scelta")?.remove(); document.querySelector(".chiama-grande")?.remove(); }
   });
   const pulsantino = document.createElement("button");
   pulsantino.className = "chiama-btn"; pulsantino.type = "button"; pulsantino.textContent = "🙋";
   pulsantino.setAttribute("aria-label", "Chiama un bambino alla lavagna");
-  pulsantino.onclick = sceltaNome;
+  // Un tocco: chiama subito il nome del tasto L. Tenuto premuto: l'elenco dei nomi.
+  let premuto = null, lungo = false;
+  pulsantino.addEventListener("pointerdown", () => { lungo = false; premuto = setTimeout(() => { lungo = true; sceltaNome(); }, 600); });
+  ["pointerup", "pointerleave", "pointercancel"].forEach((t) => pulsantino.addEventListener(t, () => clearTimeout(premuto)));
+  pulsantino.addEventListener("contextmenu", (e) => e.preventDefault());
+  pulsantino.onclick = () => { if (lungo) return; const n = nomi(); n.length ? chiama(n[0]) : sceltaNome(); };
   document.addEventListener("DOMContentLoaded", () => document.body.append(pulsantino));
 
   // Per ora (prova) solo nelle lezioni con il campo "copia".

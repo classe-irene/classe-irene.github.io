@@ -62,7 +62,7 @@ Tabella hk dak uk h da u (relazione di equivalenza): esercizio `leggi_tabella` {
 
 ## Telecomando della voce
 Quando la voce legge (almeno 3 parole), in basso compaiono pulsanti grandi: **⏸ Pausa / ▶ Riprendi**, **🔁 Da capo**, **⏹ Stop**.
-La ripresa ricomincia dall'inizio della frase interrotta. Da tastiera: **P** pausa/riprendi, **Esc** stop.
+La ripresa riparte dalla parola interrotta (se il computer non lo dice, due parole prima). Il telecomando compare per ogni voce, anche nei video e negli esercizi: lì sta in basso, solo con i pulsanti. Uscendo dalla pagina la voce si ferma. Nei video "⏸ Pausa / ▶ Riprendi" fa lo stesso. Da tastiera: **P** pausa/riprendi, **Esc** stop.
 Codice: `Telecomando` e `Voce.pausa / riprendi / daCapo / ferma` in `assets/comune.js`. Lo Stop invia l'evento `voce-ferma` (ferma anche "Ascolta la lezione").
 
 ## Pagina del quaderno da ricopiare
@@ -120,7 +120,7 @@ Stessa tabella hk dak uk h da u, numeri fino a 999 999. Gli 0 segnaposto sono in
 ## Divisione in colonna con la filastrocca (classe 4ª)
 Le quattro parole della filastrocca guidano il calcolo e si accendono a turno: 👒 **Cappellino** (copre tante cifre quante il divisore, una in più se non basta), 🎶 **Tabellina** (quante volte ci sta, si scrive sotto la linea), ➖ **Resto** (sotto il dividendo si scrive solo il resto), 🛗 **Ascensore** (la cifra dopo scende accanto al resto).
 - Nel video, sopra la colonna, compare il verso della filastrocca di quel passo (la voce lo dice e poi spiega i numeri).
-- Video in una sezione: `"animazione": { "tipo": "divisione", "a": 156, "b": 12, "video": true, "titolo": "156 : 12" }`. Di lato: la tabellina del divisore (giusti in verde, "troppo" in rosso) e la lavagnetta con moltiplicazione e sottrazione; alla fine la prova.
+- Video in una sezione: `"animazione": { "tipo": "divisione", "a": 156, "b": 12, "video": true, "titolo": "156 : 12" }`. Nei video e nella filastrocca la divisione è **per esteso**: sotto il numero si scrive il prodotto, si tira la linea e si sottrae cifra per cifra da destra, con il prestito quando serve (cifra barrata e piccolo 1). Anche il disegno del quaderno della lezione guidata è per esteso. L'esercizio resta con i soli resti. Di lato: la tabellina del divisore (giusti in verde, "troppo" in rosso) e la lavagnetta con moltiplicazione e sottrazione; alla fine la prova.
 - Esercizio `{ "tipo": "divisione", "a": 168, "b": 12 }`: il bambino tocca l'ultima cifra del cappellino, scrive quoziente e resto con il tastierino e tocca la cifra che scende. La tabellina del divisore è sempre in vista (strumento compensativo per DSA); se sbaglia, i suggerimenti dicono perché ("2 × 12 = 24: è troppo!").
 - Limiti: dividendo fino a 9999, divisore da 2 a 99, dividendo non più piccolo del divisore. Lezione: `lezioni/mat4-divisioni-due-cifre.json`.
 - Lezione `lezioni/mat4-divisioni-una-cifra.json` (divisore di una cifra), prima della 4ª.
@@ -139,4 +139,4 @@ Pulsante arancione "⏱️ Lezione guidata" (anche nella barra della modalità L
 - In 📝 Verifico la verifica online si apre dentro la lezione, così l'orologio resta in vista.
 
 ## Vieni alla lavagna
-In ogni lezione: tasto **L** (o il pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM). Si aggiungono i nomi dei bambini (restano solo su quel computer, mai nel sito); toccando un nome, o premendo il suo numero 1–9, compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. Esc chiude.
+In ogni lezione: tasto **L** (o un tocco sul pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM) chiama **subito** il nome con la ⭐: compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. **Maiuscolo + L** (o il pulsantino tenuto premuto) apre l'elenco: si aggiungono e tolgono i nomi (restano solo su quel computer, mai nel sito), ⭐ sceglie il nome del tasto L, i tasti 1–9 chiamano gli altri. Esc chiude.

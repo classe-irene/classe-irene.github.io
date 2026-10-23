@@ -1647,8 +1647,8 @@
       passi = s.passi;
       disegna = (palco, n) => { palco.innerHTML = svgGelosia(s.g, passi[n]); };
     } else if (tipo === "divisione") {
-      const dv = calcolaDivisione(a, b);
-      passi = passiDivisione(dv);
+      const dv = estendi(calcolaDivisione(a, b));
+      passi = passiDivisioneEstesa(dv);
       disegna = (palco, n) => {
         const g = grigliaDivisione(dv);
         palco.replaceChildren(g.el);
@@ -1692,7 +1692,7 @@
       didascalia.classList.remove("nuova"); void didascalia.offsetWidth; didascalia.classList.add("nuova");
       if (passi[n].finale) Suono.giusto();
       // Pause lunghe: i bambini hanno il tempo di guardare prima del passo successivo.
-      if (parla && voce.checked) Voce.parla(passi[n].voce || passi[n].testo, () => { if (inCorso) timer = setTimeout(avanti, 1500); }, { scritte: false });
+      if (parla && voce.checked) Voce.parla(passi[n].voce || passi[n].testo, () => { if (inCorso && !sospeso) timer = setTimeout(avanti, 1500); }, { scritte: false });
       else if (inCorso) timer = setTimeout(avanti, 4000);
     }
     function avanti() {
@@ -1700,18 +1700,27 @@
       if (n >= passi.length - 1) return ferma();
       vai(n + 1, true);
     }
-    function ferma() { inCorso = false; clearTimeout(timer); play.textContent = "▶ Guarda"; }
+    let sospeso = false;
+    function ferma() { inCorso = sospeso = false; clearTimeout(timer); play.textContent = "▶ Guarda"; }
+    // ⏹ Stop del telecomando: anche il video si ferma.
+    document.addEventListener("voce-ferma", () => { if (inCorso) ferma(); });
     contenitore.addEventListener("click", (ev) => {
       const az = ev.target.closest("button")?.dataset.anim;
       if (!az) return;
       if (az === "play") {
-        if (inCorso) { ferma(); speechSynthesis?.cancel?.(); return; }
+        // ⏸ Pausa: la voce si ferma dove è arrivata; ▶ Riprendi: riparte da quel punto.
+        if (inCorso && !sospeso) { sospeso = true; clearTimeout(timer); Voce.pausa(); play.textContent = "▶ Riprendi"; return; }
+        if (sospeso) {
+          sospeso = false; play.textContent = "⏸ Pausa";
+          if (Voce.inPausa) Voce.riprendi(); else timer = setTimeout(avanti, 800);
+          return;
+        }
         inCorso = true; play.textContent = "⏸ Pausa";
         vai(n >= passi.length - 1 ? 0 : n, true);
       }
       if (az === "passo") { ferma(); vai(n + 1, true); }
       if (az === "tavola") apriTavola();
-      if (az === "capo") { ferma(); speechSynthesis?.cancel?.(); vai(0, false); }
+      if (az === "capo") { ferma(); Voce.ferma(); vai(0, false); }
     });
     vai(0, false);
   }
@@ -1846,8 +1855,8 @@
   }
   // "il 12", "l'8", "nel 36", "nell'80": le parole cambiano davanti ai numeri che si leggono con una vocale.
   const conVocale = (n) => String(n)[0] === "8" || n === 1 || n === 11;
-  const il = (n) => (conVocale(n) ? "l'" : "il ") + n;
-  const nel = (n) => (conVocale(n) ? "nell'" : "nel ") + n;
+  const il = (n) => (n === 0 ? "lo " : conVocale(n) ? "l'" : "il ") + n;
+  const nel = (n) => (n === 0 ? "nello " : conVocale(n) ? "nell'" : "nel ") + n;
   const quanteCifre = (k) => ["", "una cifra", "due cifre", "tre cifre"][k];
   const volte = (q) => (q === 1 ? "1 volta" : `${q} volte`);
 
@@ -1898,9 +1907,82 @@
     return P;
   }
 
+  /* ---------- Divisione per esteso (video e dimostrazioni) ----------
+     Sotto il numero da dividere si scrive il prodotto, si tira la linea e si sottrae cifra per cifra, da destra,
+     con il prestito quando serve. Righe: 0 = dividendo; per ogni giro i: 2i+1 = prodotto, 2i+2 = resto (+ cifra scesa). */
+  function estendi(dv) {
+    const riga = (k, r) => k.replace(/^s-\d+-/, `s-${r}-`);
+    const giri = dv.giri.map((g, i) => {
+      const inizio = +g.celle[0].split("-")[2];
+      const P = String(g.val).padStart(g.fine - inizio + 1, "0"), X = String(g.prodotto), R = String(g.r);
+      // Le colonne della sottrazione, da destra a sinistra
+      const colonne = [];
+      let prestito = 0;
+      for (let c = g.fine, k = 0; c >= inizio; c--, k++) {
+        const sopra = +P[P.length - 1 - k], sotto = k < X.length ? +X[X.length - 1 - k] : null;
+        const su = sopra - prestito;
+        const presto = sotto != null && su < sotto ? 1 : 0;
+        const val = su + presto * 10 - (sotto || 0);
+        colonne.push({ col: c, sopra, su, sotto, val, prestitoDato: prestito, prestitoPreso: presto, scrivi: k < R.length });
+        prestito = presto;
+      }
+      return { ...g, inizio, colonne, celle: g.celle.map((k) => riga(k, 2 * i)), celleResto: g.celleResto.map((k) => riga(k, 2 * i + 2)),
+        celleProdotto: [...X].map((_, k) => `s-${2 * i + 1}-${g.fine - X.length + 1 + k}`), rigaProdotto: 2 * i + 1, riga: 2 * i + 2 };
+    });
+    return { ...dv, giri, estesa: true, righe: 2 * dv.giri.length + 1 };
+  }
+  function passiDivisioneEstesa(dv) {
+    const { a, b, L, cap, giri } = dv;
+    const capCelle = (f) => Array.from({ length: f + 1 }, (_, c) => `s-0-${c}`);
+    const P = [];
+    const passo = (strofa, testo, fase, azioni, evid, extra = {}) => P.push({ chiave: strofa, strofa: STROFE[strofa], testo, fase, azioni, evid, ...extra });
+    passo("titolo", `Facciamo ${a} : ${b}. Il dividendo è ${a}, il divisore è ${b}.`, null, [], ["s-0-*", "d-*"]);
+    passo("occhio", `Il divisore è ${b}: ha ${quanteCifre(L)}.`, "cappello", [], ["d-*"]);
+    if (cap.prova) {
+      passo("cappello", `Provo il cappellino su ${cap.prova.val}. Ma ${cap.prova.val} è più piccolo di ${b}: non ci sta!`, "cappello", [{ t: "cap", fine: cap.prova.fine, ko: true }], capCelle(cap.prova.fine));
+      passo("cappello", `Il cappellino prende una cifra in più: ${cap.val}.`, "cappello", [{ t: "cap", fine: cap.fine }], capCelle(cap.fine));
+    } else passo("cappello", `Il cappellino copre ${quanteCifre(L)}: ${cap.val}.`, "cappello", [{ t: "cap", fine: cap.fine }], capCelle(cap.fine));
+    giri.forEach((g, i) => {
+      const multipli = Array.from({ length: g.q }, (_, k) => b * (k + 1));
+      const recita = g.q ? `${multipli.join(", ")}${g.q < 9 ? `, ${b * (g.q + 1)} è troppo!` : "."}` : `${b} è già troppo!`;
+      passo("tabellina", `Quante volte ${il(b)} sta ${nel(g.val)}? ${recita} Ci sta ${volte(g.q)}.`, "tabellina",
+        [{ t: "tab", val: g.val, q: g.q }, { t: "calc", righe: [] }], [...g.celle, "d-*"]);
+      passo("linea", `Scrivo ${g.q} sotto la linea.`, "tabellina", [{ t: "q", col: i, val: g.q }], [`q-${i}`]);
+      const molt = `${g.q} × ${b} = ${g.prodotto}`;
+      passo("resto", `${molt}. Scrivo ${g.prodotto} sotto ${il(g.val)}, una cifra sotto l'altra, e tiro la linea.`, "resto",
+        [{ t: "calc", righe: [molt] }, { t: "prod", g: i }], [...g.celle, ...g.celleProdotto, `q-${i}`, "d-*"]);
+      // Gli zeri davanti senza niente sotto (come nello "04") non hanno bisogno di un passo.
+      const utili = g.colonne.map((c, k) => k).filter((k) => !(g.colonne[k].sotto == null && !g.colonne[k].su && !g.colonne[k].prestitoDato));
+      g.colonne.forEach((c, k) => {
+        if (!utili.includes(k)) return;
+        const ultima = k === utili.at(-1);
+        let t = c.prestitoDato ? `${c.sopra} ha dato 1 in prestito: ora è ${c.su}. ` : "";
+        if (c.sotto == null) t += c.su ? `Sotto non c'è niente: scrivo ${c.su}.` : `Resta 0: lo zero davanti non si scrive.`;
+        else if (c.prestitoPreso) t += `${c.su} − ${c.sotto} non si può: prendo 1 in prestito dalla cifra vicina. ${c.su + 10} − ${c.sotto} = ${c.val}.`;
+        else t += `${c.su} − ${c.sotto} = ${c.val}.${!c.scrivi ? " Lo zero davanti non si scrive." : ""}`;
+        if (ultima) t += ` Il resto è ${g.r}: è più piccolo di ${b}.`;
+        const pr = g.rigaProdotto;
+        passo("resto", t, "resto", [{ t: "sottr", g: i, k }, ...(ultima ? [{ t: "calc", righe: [molt, `${g.val} − ${g.prodotto} = ${g.r}`] }] : [])],
+          [`s-${2 * i}-${c.col}`, `s-${pr}-${c.col}`, `s-${2 * i + 2}-${c.col}`, ...(c.prestitoPreso ? [`s-${2 * i}-${c.col - 1}`] : [])]);
+      });
+      if (g.scende) {
+        const dopo = giri[i + 1];
+        passo("ascensore", `Scende ${il(g.scende.cifra)}: ora ho ${dopo.val}.`, "ascensore", [{ t: "scende", g: i }, { t: "tab", val: null }, { t: "calc", righe: [] }], dopo.celle);
+        passo("ricomincio", `Ora divido ${dopo.val} per ${b}.`, null, [], [...dopo.celle, "d-*"]);
+      }
+    });
+    const ultimo = giri[giri.length - 1];
+    passo("fine", `${a} : ${b} = ${dv.q}, con il resto di ${dv.r}.`, null, [{ t: "tab", val: null }, { t: "calc", righe: [] }], ["q-*", ...ultimo.celleResto]);
+    passo("prova", dv.r ? `${dv.q} × ${b} = ${dv.q * b}, più ${dv.r} di resto fa ${a}. È giusta! 🎉` : `${dv.q} × ${b} = ${a}. Torna il dividendo: è giusta! 🎉`, null,
+      [{ t: "calc", prova: true, righe: dv.r ? [`${dv.q} × ${b} = ${dv.q * b}`, `${dv.q * b} + ${dv.r} = ${a}`] : [`${dv.q} × ${b} = ${a}`] }], ["q-*", "d-*", "s-0-*"], { finale: true });
+    // Il verso si dice solo al primo passo che lo racconta; i passi dopo, con lo stesso verso, dicono solo i numeri.
+    P.forEach((x, i) => { x.voce = i && P[i - 1].chiave === x.chiave ? x.testo : `${x.strofa.replace(/…/g, " ")}. ${x.testo}`; });
+    return P;
+  }
+
   // La divisione che accompagna la filastrocca all'inizio della lezione: si mostra un passo alla volta, a comando.
   function divisioneFilastrocca(posto, a, b) {
-    const dv = calcolaDivisione(a, b), passi = passiDivisione(dv);
+    const dv = estendi(calcolaDivisione(a, b)), passi = passiDivisioneEstesa(dv);
     const didascalia = document.createElement("p");
     didascalia.className = "didascalia fila-didascalia";
     let n = 0;
@@ -1922,9 +2004,10 @@
   const FASI_DIV = [["cappello", "👒", "Cappellino"], ["tabellina", "🎶", "Tabellina"], ["resto", "➖", "Resto"], ["ascensore", "🛗", "Ascensore"]];
   // Disegno completo: le quattro fasi della filastrocca, la colonna e, di lato, tabellina e lavagnetta.
   function grigliaDivisione(dv) {
-    const n = dv.D.length, R = dv.giri.length, m = Math.max(dv.L, R);
+    const n = dv.D.length, R = dv.giri.length, m = Math.max(dv.L, R), righe = dv.righe || R + 1;
     const el = document.createElement("div");
-    el.className = "div-tutto";
+    el.className = "div-tutto" + (dv.estesa ? " div-estesa" : "");
+    el.style.setProperty("--righe", righe);
     el.innerHTML = `<div class="div-strofa" hidden></div><div class="div-fasi">${FASI_DIV.map(([f, e, t]) => `<span class="div-fase" data-fase="${f}">${Figura.img(e, "figura")}${t}</span>`).join("")}</div>
       <div class="div-corpo"><div class="div-posto colonna-posto"><div class="colonna-griglia div-griglia"></div></div>
       <div class="div-lato"><div class="div-tab" hidden></div><div class="div-calc" hidden></div></div></div>`;
@@ -1939,7 +2022,7 @@
       celle[k] = c; gr.append(c);
       return c;
     };
-    for (let r = 0; r <= R; r++) {
+    for (let r = 0; r < righe; r++) {
       for (let c = 0; c < n; c++) cella(`s-${r}-${c}`, r, c, r === 0 ? dv.D[c] : "");
       for (let c = 0; c < m; c++) {
         const k = r === 0 ? `d-${c}` : r === 1 ? `q-${c}` : `x-${r}-${c}`;
@@ -1982,6 +2065,21 @@
       if (az.t === "q") { const c = g.celle[`q-${az.col}`]; c.textContent = az.val; if (anima) c.classList.add("nuova"); }
       if (az.t === "resto") scriviResto(g, dv.giri[az.g], anima);
       if (az.t === "scende") scendi(g, dv.giri[az.g], anima);
+      if (az.t === "prod") {
+        const giro = dv.giri[az.g], X = String(giro.prodotto);
+        giro.celleProdotto.forEach((k, i) => { const c = g.celle[k]; c.textContent = X[i]; if (anima) c.classList.add("nuova"); });
+        g.celle[giro.celleProdotto[0]].classList.add("meno");
+        for (let c = giro.inizio; c <= giro.fine; c++) g.celle[`s-${giro.rigaProdotto}-${c}`].classList.add("linea-sotto");
+      }
+      if (az.t === "sottr") {
+        const giro = dv.giri[az.g], col = giro.colonne[az.k];
+        if (col.scrivi || col.sotto == null && col.su) { const c = g.celle[`s-${giro.riga}-${col.col}`]; c.textContent = col.val; if (anima) c.classList.add("nuova"); }
+        if (col.prestitoPreso) {
+          g.celle[`s-${2 * az.g}-${col.col}`].classList.add("preso");
+          const v = g.celle[`s-${2 * az.g}-${col.col - 1}`];
+          v.classList.add("prestato"); v.dataset.dopo = +v.textContent - 1;
+        }
+      }
     }
   }
   // 🛗 La cifra scende in ascensore: parte dal dividendo e scivola giù accanto al resto.
@@ -2105,5 +2203,5 @@
     prepara();
   }
 
-  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioDivisione, divisioneFilastrocca, calcolaDivisione, passiDivisione, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
+  window.Animazioni = { SCENE: Object.keys(SCENE), crea, esercizioDivisione, divisioneFilastrocca, calcolaDivisione, passiDivisione, estendi, passiDivisioneEstesa, esercizioColoraFrazione, esercizioLeggiFrazione, esercizioAddizione, esercizioCostruisci, esercizioEquivalenza, calcolaEquivalenza, esercizioLeggiTabella, leggiTabella, esercizioComponi, esercizioScomponi, esercizioConfronta, inLettere, esercizioVirgola, calcolaVirgola, esercizioColonna, esercizioGelosia, passiMoltiplicazione, passiGelosia, apriTavola };
 })();
