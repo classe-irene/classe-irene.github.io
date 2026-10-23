@@ -446,9 +446,11 @@
   const CAPELLI = { biondi: ["#F6CF5C", "#D9A52E"], "castani chiari": ["#B98352", "#8E5D33"], "castani scuri": ["#6E4529", "#4E2F1B"], "castani più scuri": ["#4A2C19", "#2E1A0E"], neri: ["#3A3540", "#1C1A20"], rossi: ["#D9663A", "#A9441F"] };
   const PELLE = { chiara: ["#FCE0C8", "#E9B48F"], olivastra: ["#E8B98E", "#C98E5E"], scura: ["#A86B45", "#7A4A2C"], "molto scura": ["#7A4A2C", "#55311C"] };
   const MAGLIE = ["#4C7BE8", "#1FA36A", "#8B5CF6", "#FF8A3D", "#E5484D", "#14A3B8", "#F2B705", "#D9468F"];
+  // felpa di partenza: per i bambini blu, verde, arancione, azzurro o rosso; per le bambine tutti i colori. Con 🎨 si cambia.
+  const felpa = (x) => x.maglia || (x.sesso === "f" ? MAGLIE : ["#4C7BE8", "#1FA36A", "#FF8A3D", "#14A3B8", "#E5484D"])[(x.tasto || "a").charCodeAt(0) % (x.sesso === "f" ? 8 : 5)];
   function bambinoSVG(x) {
     const [c1, c2] = CAPELLI[x.capelli] || CAPELLI["castani scuri"], [p1, p2] = PELLE[x.pelle] || PELLE.chiara;
-    const maglia = x.maglia || MAGLIE[(x.tasto || "a").charCodeAt(0) % MAGLIE.length], f = x.sesso === "f", id = "b" + Math.random().toString(36).slice(2, 7);
+    const maglia = felpa(x), f = x.sesso === "f", id = "b" + Math.random().toString(36).slice(2, 7);
     return `<svg class="bambino-svg" viewBox="0 0 200 220" role="img" aria-hidden="true">
       <defs><radialGradient id="${id}p" cx="45%" cy="38%" r="65%"><stop offset="0" stop-color="${p1}"/><stop offset="1" stop-color="${p2}"/></radialGradient>
       <linearGradient id="${id}c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
@@ -490,7 +492,7 @@
     const disegna = () => {
       const n = nomi();
       v.innerHTML = `<div class="cs-testa"><b>🙋 Chi viene alla lavagna?</b><button data-cs="chiudi" aria-label="Chiudi">✕</button></div>
-        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome"><button data-cs="chiama" data-i="${i}">${x.sesso || x.capelli ? `<span class="cs-faccia">${bambinoSVG(x)}</span>` : ""}<kbd>${h((x.tasto || "?").toUpperCase())}</kbd>${h(x.nome)}</button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x.nome)}">×</button></span>`).join("")}</div>
+        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome"><button data-cs="chiama" data-i="${i}">${x.sesso || x.capelli ? `<span class="cs-faccia">${bambinoSVG(x)}</span>` : ""}<kbd>${h((x.tasto || "?").toUpperCase())}</kbd>${h(x.nome)}</button><button class="cs-colore" data-cs="colore" data-i="${i}" title="Cambia il colore della felpa" aria-label="Cambia il colore della felpa di ${h(x.nome)}"><i style="background:${felpa(x)}"></i></button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x.nome)}">×</button></span>`).join("")}</div>
           <p class="cs-aiuto">Premi la lettera sulla tastiera: il bambino viene chiamato subito, anche con questo elenco chiuso.</p>`
           : `<p class="cs-vuoto">Scrivi qui sotto i nomi dei bambini e la loro lettera. Restano solo su questo computer.</p>`}
         <form class="cs-aggiungi"><input name="nome" maxlength="24" placeholder="Nome" autocomplete="off"><input name="tasto" class="cs-tasto" maxlength="1" placeholder="lettera" autocomplete="off" aria-label="Lettera">
@@ -505,6 +507,8 @@
       if (b.dataset.cs === "chiudi") v.remove();
       if (b.dataset.cs === "chiama") chiama(n[i]);
       if (b.dataset.cs === "togli") { n.splice(i, 1); salvaNomi(n); disegna(); }
+      // 🎨 la felpa passa al colore dopo (resta salvato su questo computer)
+      if (b.dataset.cs === "colore") { const x = n[i], ora = felpa(x); x.maglia = MAGLIE[(MAGLIE.indexOf(ora) + 1) % MAGLIE.length]; salvaNomi(n); disegna(); }
     });
     v.addEventListener("submit", (e) => {
       e.preventDefault();

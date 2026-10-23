@@ -1628,3 +1628,5 @@ body.lim .voce-dock.basso.via:not(.spostato) { transform: scale(calc(var(--sc) *
 .cs-aggiungi { flex-wrap: wrap; }
 .cs-aggiungi select { font: inherit; font-size: .9rem; padding: 6px 8px; border: 2px solid var(--bordo); border-radius: 12px; background: #fff; }
 .chiama-scelta { width: min(520px, calc(100vw - 32px)); }
+.cs-nome .cs-colore { padding: 8px 6px; }
+.cs-colore i { display: block; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,0,0,.15); }
