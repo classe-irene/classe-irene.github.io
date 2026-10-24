@@ -127,3 +127,7 @@ body.online [data-cambia="soluzioni"], body.online [data-cambia="modifica"], bod
 .foglio.online { max-width: 1050px; --vf: 18pt; padding: 28px 36px; }
 @media (max-width: 600px) { .foglio.online { --vf: 14pt; padding: 18px 14px; } }
 .foglio.online .v-etichette img { max-width: min(460px, 100%); }
+
+/* Dentro la lezione guidata (verifica.html?...&dentro=1): solo le domande */
+body.dentro .testata, body.dentro #comandi, body.dentro .piede, body.dentro .sfondo-vivo { display: none !important; }
+body.dentro .contenitore { padding-top: 12px; }

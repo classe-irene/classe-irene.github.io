@@ -1461,23 +1461,19 @@ body.guidata.lim .corrente { min-height: calc(100vh - 240px); }
 .guida-orologio.in-pausa .go-tempo { animation: lampeggia 1.2s infinite; }
 @keyframes lampeggia { 50% { opacity: .25; } }
 .go-stelle { font-weight: 800; font-size: 1.2rem; }
-.go-tasti { display: flex; gap: 8px; }
-.go-tasti button { width: 54px; height: 54px; border-radius: 16px; border: 0; background: var(--tema); color: #fff; font: 800 1.4rem "Baloo 2", sans-serif; cursor: pointer; box-shadow: 0 4px 0 rgba(0, 0, 0, .18); }
 .go-semaforo { display: flex; gap: 10px; background: #2B2A33; border-radius: 30px; padding: 8px 12px; }
 .sem { width: 44px; height: 44px; border-radius: 50%; border: 3px solid rgba(255, 255, 255, .25); cursor: pointer; opacity: .3; padding: 0; }
 .sem.rosso { background: #FF3B3B; } .sem.giallo { background: #FFD84D; } .sem.verde { background: #3DDC97; }
 .sem.accesa { opacity: 1; border-color: #fff; box-shadow: 0 0 18px currentColor, 0 0 0 3px rgba(255, 255, 255, .4); }
 .sem.rosso.accesa { color: #FF3B3B; } .sem.giallo.accesa { color: #FFD84D; } .sem.verde.accesa { color: #3DDC97; }
-.go-fine { border: 0; background: none; font-weight: 800; color: var(--testo-tenue); cursor: pointer; padding: 2px 8px; }
 .guida-orologio.piccolo { width: 124px; }
 .guida-orologio.piccolo .go-quadrante { width: 100px; height: 100px; }
 .guida-orologio.piccolo .go-tempo { font-size: 1.5rem; }
-.guida-orologio.piccolo .go-fig, .guida-orologio.piccolo .go-nome, .guida-orologio.piccolo .go-tasti, .guida-orologio.piccolo .go-semaforo, .guida-orologio.piccolo .go-fine, .guida-orologio.piccolo .go-stelle { display: none; }
+.guida-orologio.piccolo .go-fig, .guida-orologio.piccolo .go-nome { display: none; }
 @media (max-width: 600px) {
   .guida-orologio { top: 72px; right: 8px; width: 150px; gap: 6px; padding: 0 8px 8px; }
   .go-maniglia { width: calc(100% + 16px); font-size: .7rem; }
   .go-quadrante { width: 112px; height: 112px; } .go-tempo { font-size: 1.6rem; } .go-fig { width: 26px; height: 26px; } .go-nome { font-size: .7rem; }
-  .go-tasti { gap: 5px; } .go-tasti button { width: 40px; height: 40px; font-size: 1.1rem; border-radius: 12px; }
   .go-semaforo { gap: 6px; padding: 6px 8px; } .sem { width: 30px; height: 30px; }
   .guida-orologio.piccolo { width: 96px; } .guida-orologio.piccolo .go-quadrante { width: 76px; height: 76px; } .guida-orologio.piccolo .go-tempo { font-size: 1.2rem; }
 }
@@ -1594,3 +1590,55 @@ body.lim .voce-dock.basso:not(.spostato) { bottom: 118px; }
 body.lim .div-estesa .colonna-griglia .cella { width: min(84px, 6vh, calc(38vh / var(--righe))); height: min(84px, 6vh, calc(38vh / var(--righe))); font-size: min(3.2rem, 4.6vh, calc(28vh / var(--righe))); }
 body.lim .voce-dock.basso:not(.spostato) { left: 16px; bottom: 118px; transform: scale(var(--sc)); transform-origin: 0 100%; }
 body.lim .voce-dock.basso.via:not(.spostato) { transform: scale(calc(var(--sc) * .92)); }
+
+/* ---------- Pagina semplice: un solo pulsante grande, il resto nel menu della maestra ---------- */
+.barra-lezione.semplice { flex-direction: column; align-items: center; gap: 8px; }
+.btn.comincia { font-size: 1.6rem; padding: 20px 44px; border-radius: 999px; box-shadow: 0 6px 0 #D96A1F, 0 12px 30px rgba(255, 138, 61, .35); animation: respira-btn 2.4s ease-in-out infinite; }
+@keyframes respira-btn { 50% { transform: scale(1.04); } }
+.comincia-aiuto { display: flex; align-items: center; gap: 8px; margin: 2px 0 0; font-weight: 800; color: var(--testo-tenue); }
+.comincia-aiuto .figura { width: 28px; height: 28px; }
+.menu-maestra-btn { margin-top: 6px; opacity: .8; font-size: .95rem; }
+.menu-maestra { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 880px; padding: 12px; border-radius: 22px; background: rgba(255, 255, 255, .9); box-shadow: var(--ombra); }
+.menu-maestra[hidden] { display: none; }
+.menu-maestra .btn { font-size: .95rem; padding: 10px 16px; }
+@media (max-width: 600px) { .btn.comincia { font-size: 1.3rem; padding: 16px 28px; } }
+@media (prefers-reduced-motion: reduce) { .btn.comincia { animation: none; } }
+
+/* ---------- Lezione guidata: il navigatore in basso (dove siamo, cosa fare, cosa viene dopo) ---------- */
+body.guidata .lim-barra, body.guidata .compagno, body.guidata .copia-tasti, body.guidata.lim .punteggio, body.guidata.lim .mappa { display: none; }
+body.guidata .contenitore { padding-bottom: calc(var(--gn-h, 110px) + 20px); }
+body.guidata .guida-verifica { bottom: var(--gn-h, 110px); }
+body.guidata.lim .voce-dock.basso:not(.spostato) { bottom: calc(var(--gn-h, 110px) + 12px); }
+.guida-navigatore { position: fixed; left: 0; right: 0; bottom: 0; z-index: 61; display: flex; align-items: center; gap: 14px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: #fff; border-top: 4px solid var(--giallo); box-shadow: 0 -8px 26px rgba(43, 42, 51, .14); }
+.gn-testo { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.gn-qui { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-weight: 800; color: var(--testo-tenue); font-size: .95rem; }
+.gn-qui .figura, .gn-dopo .figura { width: 22px; height: 22px; vertical-align: middle; }
+.gn-qui b { color: var(--testo); }
+.gn-fare { font: 800 1.7rem/1.15 "Baloo 2", sans-serif; color: var(--testo); }
+.gn-dopo { font-weight: 700; color: var(--testo-tenue); font-size: .95rem; }
+.gn-avanti { border: 0; border-radius: 999px; background: var(--ok); color: #fff; font: 800 1.6rem "Baloo 2", sans-serif; padding: 14px 30px; box-shadow: 0 5px 0 rgba(0, 0, 0, .18); cursor: pointer; white-space: nowrap; }
+.gn-avanti.pulsa { animation: pulsa 1.4s infinite; }
+.gn-indietro { width: 58px; height: 58px; flex: none; border-radius: 50%; border: 0; background: #EEE9E0; color: var(--testo); font-size: 1.4rem; cursor: pointer; }
+.gn-indietro:disabled { opacity: .3; }
+.gn-menu { border: 2px solid var(--bordo); background: #fff; border-radius: 14px; font-weight: 800; color: var(--testo-tenue); padding: 10px 12px; cursor: pointer; white-space: nowrap; }
+.guida-menu { position: fixed; right: 12px; bottom: calc(var(--gn-h, 110px) + 10px); z-index: 99; width: 310px; display: grid; gap: 8px; padding: 14px; background: var(--carta); border-radius: 22px; box-shadow: 0 14px 40px rgba(43, 42, 51, .3); animation: compari .2s; }
+.guida-menu[hidden] { display: none; }
+.gm-titolo { margin: 0; font-weight: 800; font-size: .85rem; color: var(--testo-tenue); text-transform: uppercase; letter-spacing: .04em; }
+.guida-menu .go-semaforo { justify-content: center; }
+.gm-riga { display: flex; gap: 8px; }
+.gm-riga .btn, .gm-largo { flex: 1; font-size: 1rem; padding: 10px 12px; }
+.gm-fine { color: var(--ko); }
+/* Il pulsante da toccare adesso si illumina */
+.guida-qui { position: relative; animation: guida-qui 1.3s ease-in-out infinite; outline: 5px solid #FF8A3D; outline-offset: 4px; z-index: 3; }
+.guida-qui::after { content: "👇 Tocca qui"; position: absolute; left: 50%; bottom: calc(100% + 12px); transform: translateX(-50%); background: #FF8A3D; color: #fff; font: 800 1rem "Nunito", sans-serif; white-space: nowrap; padding: 4px 12px; border-radius: 999px; pointer-events: none; }
+@keyframes guida-qui { 50% { outline-color: #FFD166; outline-offset: 8px; } }
+@media (max-width: 760px) {
+  .guida-navigatore { flex-wrap: wrap; gap: 8px 10px; padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)); }
+  .gn-testo { flex-basis: 100%; order: -1; }
+  .gn-fare { font-size: 1.15rem; } .gn-qui, .gn-dopo { font-size: .8rem; }
+  .gn-indietro { width: 48px; height: 48px; }
+  .gn-avanti { flex: 1; font-size: 1.25rem; padding: 10px 16px; }
+  .gn-menu { padding: 10px 8px; font-size: .85rem; }
+  .guida-menu { left: 10px; right: 10px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .guida-qui, .gn-avanti.pulsa { animation: none; } }

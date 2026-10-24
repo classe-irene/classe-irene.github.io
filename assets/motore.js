@@ -67,6 +67,27 @@
   }
 
   /* ---------- Spiegazione ---------- */
+  // I pulsanti della lezione. Nelle lezioni con la lezione guidata la barra è semplice: un solo pulsante grande
+  // ("▶ Comincia la lezione") e tutto il resto chiuso nel menu "Strumenti della maestra", per non confondere.
+  function bottoniLezione(l, guidata) {
+    return `<button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
+        <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
+        ${l.quaderno ? `<button class="btn quaderno-link" data-azione="vai-quaderno">📒 ${h(l.quaderno.titolo || "Ricopiare sul quaderno")}</button>` : ""}
+        ${guidata && window.Guida?.per(l) ? `<button class="btn guida-btn" data-azione="guidata">⏱️ Lezione guidata</button>` : ""}
+        <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
+        <button class="btn bianco" data-azione="scritte">💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}</button>
+        <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
+        <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
+        <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>`;
+  }
+  function barraSemplice(l) {
+    return `<div class="barra-lezione semplice">
+        <button class="btn guida-btn comincia" data-azione="guidata">▶ Comincia la lezione</button>
+        <p class="comincia-aiuto">${Figura.img("👉", "figura piccola")} Tocca qui: il sito ti guida passo per passo.</p>
+        <button class="btn bianco piccolo menu-maestra-btn" data-azione="menu-maestra" aria-expanded="false">☰ Strumenti della maestra</button>
+        <div class="menu-maestra" hidden>${bottoniLezione(l, false)}</div>
+      </div>`;
+  }
   function disegnaLezione(l, radice) {
     const materia = MATERIE[l.materia] || MATERIE.matematica;
     document.body.classList.toggle("scienze", l.materia === "scienze");
@@ -80,17 +101,7 @@
         ${l.introduzione ? `<p>${h(l.introduzione)}</p>` : ""}
         ${settimanaHTML(l)}
       </div>
-      <div class="barra-lezione">
-        <button class="btn bianco" data-azione="leggi-tutto">🔊 Ascolta la lezione</button>
-        <button class="btn bianco" data-azione="vai-esercizi">🎯 Vai agli esercizi</button>
-        ${l.quaderno ? `<button class="btn quaderno-link" data-azione="vai-quaderno">📒 ${h(l.quaderno.titolo || "Ricopiare sul quaderno")}</button>` : ""}
-        ${window.Guida?.per(l) ? `<button class="btn guida-btn" data-azione="guidata">⏱️ Lezione guidata</button>` : ""}
-        <button class="btn" data-azione="lim">🖥️ Modalità LIM</button>
-        <button class="btn bianco" data-azione="scritte">💬 Scritte: ${Sottotitoli.attivo ? "sì" : "no"}</button>
-        <button class="btn bianco" data-azione="velocita">🐢 Voce: ${Voce.velocita()}</button>
-        <button class="btn bianco" data-azione="suoni">🔔 Suoni: sì</button>
-        <button class="btn bianco" data-azione="maiuscolo">🔠 STAMPATO MAIUSCOLO</button>
-      </div>
+      ${window.Guida?.per(l) ? barraSemplice(l) : `<div class="barra-lezione">${bottoniLezione(l, true)}</div>`}
       ${l.filastrocca ? filastroccaHTML(l.filastrocca) : ""}
       ${l.storia ? storiaHTML(l) : ""}
       ${l.sezioni.map((s) => `
@@ -153,6 +164,8 @@
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "vai-quaderno") { const q = radice.querySelector(".quaderno"); if (document.body.classList.contains("lim")) apriQuaderno(l.quaderno); else q?.scrollIntoView({ behavior: "smooth", block: "start" }); }
       if (a === "apri-quaderno") apriQuaderno(l.quaderno);
+      if (a === "menu-maestra") { const m = radice.querySelector(".menu-maestra"); m.hidden = !m.hidden; b.setAttribute("aria-expanded", !m.hidden); }
+      else if (b.closest(".menu-maestra") && !["scritte", "velocita", "suoni", "maiuscolo"].includes(a) && !b.dataset.effetti) { radice.querySelector(".menu-maestra").hidden = true; radice.querySelector(".menu-maestra-btn")?.setAttribute("aria-expanded", "false"); }
       if (a === "lim") avviaLIM(radice);
       if (a === "guidata") Guida.apri(l, radice);
       if (a === "velocita") {

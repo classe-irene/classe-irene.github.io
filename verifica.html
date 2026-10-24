@@ -44,6 +44,8 @@
 <script>
   creaTestata();
   const p = parametri();
+  // Dentro la lezione guidata: solo le domande, senza testata e senza pulsanti.
+  if (p.dentro) document.body.classList.add("dentro");
   const radice = document.getElementById("radice");
   const errore = (msg) => radice.innerHTML = `<div class="scheda"><h2>😕 Verifica non trovata</h2><p>${escapeHTML(msg)}</p><a class="btn" href="area-insegnante.html">Vai all'area insegnante</a></div>`;
   (async () => {

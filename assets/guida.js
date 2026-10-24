@@ -6,6 +6,8 @@
      e si passa alla fase dopo (con "➕ 1 minuto" per aspettare ancora).
    - Semaforo di classe: 🟢 lavoro, 🟡 stiamo per finire, 🔴 penne giù e occhi alla LIM.
    - "Copia sul quaderno": poche righe numerate che compaiono una alla volta, accanto al disegno della pagina.
+   - In basso il navigatore: dove siamo (fase e scheda), cosa fare adesso (il pulsante da toccare si illumina),
+     cosa viene dopo, e un solo grande "Avanti". Pausa, minuti, semaforo e "Finisci" stanno nel menu "☰ Maestra".
    Campo facoltativo della lezione: "copia": { "titolo": "...", "righe": ["...", ...], "divisione": { "a": 96, "b": 4 } }
    Per ora la lezione guidata compare solo nelle lezioni che hanno "copia" (prova su mat4-divisioni-una-cifra). */
 (function () {
@@ -174,12 +176,82 @@
 
   /* ---------- La lezione guidata in corso ---------- */
   let G = null;
-  function pagina(radice, id) {
-    if (id === "ascolto") return radice.querySelector(".lezione-testa");
-    if (id === "guardo") return radice.querySelector("section.scheda:not(.filastrocca):not(.storia)");
-    if (id === "copio") return radice.querySelector(".scheda.copia");
-    if (id === "provo") return radice.querySelector(".giorno-esercizi, .esercizio");
-    if (id === "verifico") return radice.querySelector(".scheda-verifica");
+  // Ogni pagina della LIM appartiene a una fase.
+  function faseDi(p) {
+    const c = p.classList;
+    if (c.contains("lezione-testa") || c.contains("filastrocca") || c.contains("storia")) return "ascolto";
+    if (c.contains("copia") || c.contains("quaderno")) return "copio";
+    if (c.contains("scheda-verifica")) return "verifico";
+    if (c.contains("esercizio") || c.contains("giorno-esercizi") || p.hasAttribute("data-fine")) return "provo";
+    return "guardo";
+  }
+  const tuttePagine = (radice) => [radice.querySelector(".lezione-testa"), ...radice.querySelectorAll(".scheda, .giorno-esercizi, .esercizio, [data-fine]")].filter((p) => p && !p.hidden);
+  const pagineFase = (id) => tuttePagine(G.radice).filter((p) => faseDi(p) === id);
+  function mostraPagina(p) {
+    if (!p) return;
+    G.radice.dispatchEvent(new CustomEvent("lim-vai", { detail: p }));
+    aggiornaNav();
+  }
+  function avanti() {
+    const pp = pagineFase(G.fasi[G.k].id), j = pp.indexOf(G.radice.querySelector(".corrente"));
+    if (j >= 0 && j < pp.length - 1) mostraPagina(pp[j + 1]); else vaiFase(G.k + 1);
+  }
+  function indietro() {
+    const pp = pagineFase(G.fasi[G.k].id), j = pp.indexOf(G.radice.querySelector(".corrente"));
+    if (j > 0) mostraPagina(pp[j - 1]);
+    else if (G.k > 0) { vaiFase(G.k - 1); const qq = pagineFase(G.fasi[G.k].id); mostraPagina(qq[qq.length - 1]); }
+  }
+  function titoloDi(p) {
+    if (p.classList.contains("storia")) return "La storia";
+    if (p.classList.contains("esercizio")) return `Esercizio ${[...G.radice.querySelectorAll(".esercizio")].indexOf(p) + 1}`;
+    if (p.hasAttribute("data-fine")) return "La festa finale";
+    return (p.querySelector("h2, h3, h1")?.childNodes[0]?.textContent || "").trim();
+  }
+  // Cosa fare su questa pagina, e quale pulsante toccare.
+  function consiglio(p, fatto) {
+    const c = p.classList;
+    const q = (sel) => p.querySelector(sel);
+    if (c.contains("lezione-testa")) return { fare: "La maestra legge il titolo ad alta voce. Poi tocca Avanti." };
+    if (c.contains("filastrocca")) return fatto ? { fare: "Ascoltiamo la filastrocca fino alla fine. Poi Avanti." } : { fare: "Tocca 🔊 Ascolta la filastrocca.", qui: q('[data-azione="filastrocca"]') };
+    if (c.contains("storia")) return fatto ? { fare: "Ascoltiamo la storia. Poi Avanti." } : { fare: "Tocca 🔊 Ascolta la storia.", qui: q('[data-azione="storia"]') };
+    if (c.contains("copia")) return { fare: "Copiate sul quaderno la riga accesa. Le righe arrivano da sole." };
+    if (c.contains("quaderno")) return { fare: "Ricopiate la pagina sul quaderno, con calma." };
+    if (c.contains("scheda-verifica")) return { fare: "Ognuno risponde alle domande. Alla fine tocca ✅ Correggi." };
+    if (p.hasAttribute("data-fine")) return { fare: "Esercizi finiti! Bravi. Tocca Avanti." };
+    if (c.contains("esercizio")) {
+      const ee = [...G.radice.querySelectorAll(".esercizio")], n = ee.indexOf(p) + 1;
+      return c.contains("risolto") ? { fare: `✅ Giusto! Tocca Avanti per l'esercizio dopo.` } : { fare: `Esercizio ${n} di ${ee.length}: rispondete toccando la LIM.` };
+    }
+    if (q('[data-anim="play"]')) return fatto ? { fare: "Guardiamo il video fino alla fine. Poi Avanti." } : { fare: "Tocca ▶ Guarda: guardiamo il video insieme.", qui: q('[data-anim="play"]') };
+    if (q(".leggi")) return fatto ? { fare: "Ascoltiamo. Poi tocca Avanti." } : { fare: "Tocca 🔊 Leggi e ascoltate.", qui: q(".leggi") };
+    return { fare: "Guardiamo insieme. Poi tocca Avanti." };
+  }
+  // Il navigatore: dove siamo, cosa fare adesso, cosa viene dopo.
+  function aggiornaNav() {
+    if (!G || G.k < 0) return;
+    const f = G.fasi[G.k], pp = pagineFase(f.id), p = G.radice.querySelector(".corrente");
+    const j = pp.indexOf(p);
+    if (p !== G.pagina) { G.pagina = p; G.fatto = null; }
+    G.radice.querySelectorAll(".guida-qui").forEach((x) => x.classList.remove("guida-qui"));
+    const n = G.nav;
+    n.querySelector(".gn-qui").innerHTML = `📍 ${Figura.img(f.emoji, "figura")} <b>${f.nome}</b> · fase ${G.k + 1} di ${G.fasi.length}${pp.length > 1 && j >= 0 ? ` · pagina ${j + 1} di ${pp.length}` : ""}`;
+    const cons = p ? consiglio(p, G.fatto === p) : { fare: f.fare };
+    n.querySelector(".gn-fare").textContent = "👉 " + cons.fare;
+    if (cons.qui) cons.qui.classList.add("guida-qui");
+    const dopo = j >= 0 && j < pp.length - 1 ? pp[j + 1] : null, fase = G.fasi[G.k + 1];
+    n.querySelector(".gn-dopo").innerHTML = dopo ? `Dopo: ${h(titoloDi(dopo) || "la pagina seguente")}` : fase ? `Dopo: ${Figura.img(fase.emoji, "figura")} ${fase.nome}` : "Dopo: fine della lezione 🎉";
+    n.querySelector(".gn-avanti").textContent = dopo ? "Avanti ➡" : fase ? `${fase.nome} ➡` : "Fine ➡";
+    n.querySelector(".gn-avanti").classList.toggle("pulsa", !cons.qui && !(p?.classList.contains("esercizio") && !p.classList.contains("risolto")));
+    n.querySelector(".gn-indietro").disabled = j <= 0 && G.k === 0;
+    G.misura();
+  }
+  function apriMenu(si) {
+    G.menu.hidden = !si;
+    G.nav.querySelector(".gn-menu").setAttribute("aria-expanded", si);
+  }
+  function unMinuto() {
+    G.fineAt += 60000; G.durata += 60000; G.resta += 60000; G.avvisato = false;
+    G.orologio.classList.remove("arancione", "rosso-fine"); chiudiCartello();
   }
   const mmss = (ms) => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
   const occupata = () => "speechSynthesis" in window && speechSynthesis.speaking;
@@ -210,43 +282,78 @@
     orologio.className = "guida-orologio";
     orologio.innerHTML = `<div class="go-maniglia" title="Trascina per spostare">⠿ Trascinami ⠿</div>
       <button class="go-quadrante" data-go="piccolo" aria-label="Rimpicciolisci o ingrandisci l'orologio"><span class="go-centro">${Figura.img("👂", "figura go-fig")}<b class="go-tempo">0:00</b><small class="go-nome"></small></span></button>
-      <div class="go-stelle" hidden></div>
-      <div class="go-tasti"><button data-go="pausa" aria-label="Pausa">⏸</button><button data-go="piu" aria-label="Un minuto in più">+1</button><button data-go="avanti" aria-label="Fase dopo">⏭</button></div>
+      <div class="go-stelle" hidden></div>`;
+    // Il navigatore in basso: dove siamo, cosa fare adesso, cosa viene dopo, Avanti.
+    const nav = document.createElement("div");
+    nav.className = "guida-navigatore";
+    nav.innerHTML = `<button class="gn-indietro" data-gn="indietro" aria-label="Indietro">◀</button>
+      <div class="gn-testo"><span class="gn-qui"></span><b class="gn-fare"></b><small class="gn-dopo"></small></div>
+      <button class="gn-avanti" data-gn="avanti">Avanti ➡</button>
+      <button class="gn-menu" data-gn="menu" aria-expanded="false">☰ Maestra</button>`;
+    // Il menu della maestra: tutto ciò che non serve sempre.
+    const menu = document.createElement("div");
+    menu.className = "guida-menu"; menu.hidden = true;
+    menu.innerHTML = `<p class="gm-titolo">Semaforo della classe</p>
       <div class="go-semaforo" aria-label="Semaforo di classe">
         <button class="sem rosso" data-go="rosso" aria-label="Rosso: penne giù, occhi alla LIM"></button>
         <button class="sem giallo" data-go="giallo" aria-label="Giallo: stiamo per finire"></button>
         <button class="sem verde accesa" data-go="verde" aria-label="Verde: al lavoro"></button></div>
-      <button class="go-fine" data-go="fine">✕ Finisci</button>`;
-    document.body.append(scaletta, orologio);
+      <p class="gm-titolo">Orologio</p>
+      <div class="gm-riga"><button class="btn bianco" data-go="pausa">⏸ Ferma</button><button class="btn bianco" data-go="piu">+1 minuto</button></div>
+      <button class="btn bianco gm-largo" data-go="avanti">⏭ Salta alla fase dopo</button>
+      <button class="btn bianco gm-largo gm-fine" data-go="fine">✕ Finisci la lezione</button>`;
+    document.body.append(scaletta, orologio, nav, menu);
     spostabile(orologio, orologio.querySelector(".go-maniglia"));
-    // Sul telefono l'orologio parte piccolo (si apre toccandolo).
-    if (innerWidth <= 600) orologio.classList.add("piccolo");
-    G = { l, radice, fasi, scaletta, orologio, k: -1, pausa: false, copia: radice._copia, fatti: radice.querySelectorAll(".esercizio.risolto").length };
+    // L'orologio parte piccolo, per non coprire la lezione (toccandolo si ingrandisce).
+    orologio.classList.add("piccolo");
+    G = { l, radice, fasi, scaletta, orologio, nav, menu, k: -1, pausa: false, copia: radice._copia, fatti: radice.querySelectorAll(".esercizio.risolto").length };
     G.timer = setInterval(tick, 250);
     G.osserva = new MutationObserver(() => { if (G && !lim()) termina(); });
     G.osserva.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    G.risolto = () => { G.fatti = radice.querySelectorAll(".esercizio.risolto").length; };
+    G.risolto = () => { G.fatti = radice.querySelectorAll(".esercizio.risolto").length; setTimeout(aggiornaNav, 50); };
     radice.addEventListener("risolto", G.risolto);
     // Nella lezione guidata la verifica si apre qui dentro, così l'orologio non si perde.
     G.clicVerifica = (e) => { const a = e.target.closest('a[href*="modo=online"]'); if (a && G) { e.preventDefault(); apriVerifica(); } };
     radice.addEventListener("click", G.clicVerifica, true);
     scaletta.addEventListener("click", (e) => { const b = e.target.closest(".gs-fase"); if (b) vaiFase(+b.dataset.k); });
-    orologio.addEventListener("click", (e) => {
+    const comandi = (e) => {
       const a = e.target.closest("[data-go]")?.dataset.go;
+      if (!a) return;
+      if (a === "piccolo") return orologio.classList.toggle("piccolo");
+      apriMenu(false);
       if (a === "pausa") pausa(!G.pausa);
-      if (a === "piu") { G.fineAt += 60000; G.durata += 60000; G.resta += 60000; G.avvisato = false; orologio.classList.remove("arancione", "rosso-fine"); chiudiCartello(); }
+      if (a === "piu") unMinuto();
       if (a === "avanti") vaiFase(G.k + 1);
-      if (a === "piccolo") orologio.classList.toggle("piccolo");
       if (["rosso", "giallo", "verde"].includes(a)) semaforo(a);
       if (a === "fine") { if (confirm("Vuoi finire la lezione guidata?")) termina(); }
+    };
+    orologio.addEventListener("click", comandi);
+    menu.addEventListener("click", comandi);
+    nav.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-gn]")?.dataset.gn;
+      if (a === "avanti") { apriMenu(false); avanti(); }
+      if (a === "indietro") { apriMenu(false); indietro(); }
+      if (a === "menu") apriMenu(menu.hidden);
     });
+    // Le frecce della tastiera e i telecomandi da presentazione seguono il navigatore (restano nella fase).
+    G.tasti = (ev) => {
+      if (document.querySelector(".guida-cartello:not(.breve), .guida-piano, .quaderno-vista")) return;
+      if (["ArrowRight", "PageDown"].includes(ev.key)) { ev.preventDefault(); ev.stopPropagation(); avanti(); }
+      if (["ArrowLeft", "PageUp"].includes(ev.key)) { ev.preventDefault(); ev.stopPropagation(); indietro(); }
+    };
+    addEventListener("keydown", G.tasti, true);
+    // Il pulsante illuminato ("Tocca qui"), una volta toccato, lascia il posto ad "Avanti".
+    G.tocco = (e) => { const t = e.target.closest(".guida-qui"); if (t) { t.classList.remove("guida-qui"); G.fatto = G.pagina; aggiornaNav(); } };
+    radice.addEventListener("click", G.tocco);
+    G.misura = () => document.body.style.setProperty("--gn-h", nav.offsetHeight + "px");
+    addEventListener("resize", G.misura);
     vaiFase(0);
   }
   function pausa(si) {
     G.pausa = si;
     if (si) G.resta = G.fineAt - Date.now(); else G.fineAt = Date.now() + G.resta;
     G.orologio.classList.toggle("in-pausa", si);
-    G.orologio.querySelector('[data-go="pausa"]').textContent = si ? "▶" : "⏸";
+    G.menu.querySelector('[data-go="pausa"]').textContent = si ? "▶ Riparti" : "⏸ Ferma";
   }
   function vaiFase(k) {
     chiudiCartello();
@@ -262,12 +369,12 @@
     o.querySelector(".go-nome").textContent = f.nome;
     o.classList.remove("arancione", "rosso-fine");
     // Fase nuova: il semaforo torna verde (senza voce).
-    o.querySelectorAll(".sem").forEach((s) => s.classList.toggle("accesa", s.dataset.go === "verde"));
+    G.menu.querySelectorAll(".sem").forEach((s) => s.classList.toggle("accesa", s.dataset.go === "verde"));
     document.querySelector(".guida-rosso")?.remove(); document.querySelector(".guida-striscia")?.remove();
-    const p = pagina(G.radice, f.id);
-    if (p) G.radice.dispatchEvent(new CustomEvent("lim-vai", { detail: p }));
+    mostraPagina(pagineFase(f.id)[0]);
     if (f.id === "copio") G.copia?.vai(1);
     if (f.id === "verifico") apriVerifica(); else chiudiVerifica();
+    aggiornaNav();
     if (cambio) { cartelloFase(f); annuncia(`Ora: ${f.nome}. ${f.fare} Abbiamo ${f.min === 1 ? "un minuto" : `${f.min} minuti`}.`); }
     tick();
   }
@@ -282,6 +389,8 @@
     const st = o.querySelector(".go-stelle");
     st.hidden = f.id !== "provo";
     if (f.id === "provo") st.textContent = `⭐ ${G.fatti} / ${G.l.esercizi.length}`;
+    // La LIM può aver cambiato pagina da sola (es. alla fine degli esercizi): il navigatore la segue.
+    if (G.radice.querySelector(".corrente") !== G.pagina) aggiornaNav();
     if (G.pausa) return;
     // Un minuto alla fine (o metà del tempo, per le fasi brevi): orologio arancione e avviso.
     const soglia = Math.min(60000, G.durata / 2);
@@ -314,7 +423,7 @@
     c.addEventListener("click", (e) => {
       const a = e.target.closest("[data-gc]")?.dataset.gc;
       if (a === "vai") vaiFase(G.k + 1);
-      if (a === "piu") G.orologio.querySelector('[data-go="piu"]').click();
+      if (a === "piu") unMinuto();
     });
   }
   function cartello(html) {
@@ -360,7 +469,11 @@
     g.osserva.disconnect();
     g.radice.removeEventListener("risolto", g.risolto);
     g.radice.removeEventListener("click", g.clicVerifica, true);
-    g.scaletta.remove(); g.orologio.remove();
+    removeEventListener("keydown", g.tasti, true);
+    removeEventListener("resize", g.misura);
+    g.radice.removeEventListener("click", g.tocco);
+    g.radice.querySelectorAll(".guida-qui").forEach((x) => x.classList.remove("guida-qui"));
+    g.scaletta.remove(); g.orologio.remove(); g.nav.remove(); g.menu.remove();
     document.querySelector(".guida-rosso")?.remove(); document.querySelector(".guida-striscia")?.remove();
     document.body.classList.remove("guidata");
     G = null;
@@ -368,7 +481,7 @@
 
   /* ---------- Semaforo di classe ---------- */
   function semaforo(colore) {
-    G.orologio.querySelectorAll(".sem").forEach((s) => s.classList.toggle("accesa", s.dataset.go === colore));
+    G.menu.querySelectorAll(".sem").forEach((s) => s.classList.toggle("accesa", s.dataset.go === colore));
     document.querySelector(".guida-rosso")?.remove();
     document.querySelector(".guida-striscia")?.remove();
     if (colore === "rosso") {
@@ -393,9 +506,8 @@
     if (!G || document.querySelector(".guida-verifica") || !/^verifiche\/[\w.-]+\.json$/.test(G.l.verifica || "")) return;
     const v = document.createElement("div");
     v.className = "guida-verifica";
-    v.innerHTML = `<div class="gv-barra"><b>${Figura.img("📝", "figura")} La verifica</b><button class="btn bianco" data-gv="chiudi">✕ Chiudi la verifica</button></div>
-      <iframe src="verifica.html?file=${encodeURIComponent(G.l.verifica)}&modo=online" title="La verifica"></iframe>`;
-    v.querySelector('[data-gv="chiudi"]').onclick = chiudiVerifica;
+    // Niente barra in più: la scaletta dice già "Verifico", e il navigatore porta avanti o indietro.
+    v.innerHTML = `<iframe src="verifica.html?file=${encodeURIComponent(G.l.verifica)}&modo=online&dentro=1" title="La verifica"></iframe>`;
     document.body.append(v);
   }
   const chiudiVerifica = () => document.querySelector(".guida-verifica")?.remove();

@@ -261,7 +261,7 @@
   /* ---------- Avvio ---------- */
   function avvia(l, radice) {
     document.body.classList.toggle("effetti", attivi);
-    const barra = radice.querySelector(".barra-lezione");
+    const barra = radice.querySelector(".menu-maestra") || radice.querySelector(".barra-lezione");
     const b = document.createElement("button"); b.className = "btn bianco"; b.dataset.effetti = "";
     b.textContent = `✨ Effetti: ${attivi ? "sì" : "no"}`;
     b.onclick = () => { attivi = !attivi; try { localStorage.setItem(CHIAVE, attivi ? "si" : "no"); } catch {} b.textContent = `✨ Effetti: ${attivi ? "sì" : "no"}`; document.body.classList.toggle("effetti", attivi); };
