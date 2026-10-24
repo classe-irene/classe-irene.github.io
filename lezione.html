@@ -4,9 +4,7 @@
 <title>Lezione · La classe di Irene</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/caratteri/caratteri.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍🏫</text></svg>">
 <script src="assets/curricolo.js"></script>
@@ -29,7 +27,7 @@
     try {
       let l;
       if (p.locale) l = Archivio.prendi(p.locale);
-      else if (p.file && /^lezioni\/[\w.-]+\.json$/.test(p.file)) l = await (await fetch(p.file, { cache: "no-cache" })).json();
+      else if (p.file && /^lezioni\/[\w.-]+\.json$/.test(p.file)) l = await leggiJSON(p.file);
       if (!l) return errore("Questa lezione non esiste o è stata salvata su un altro computer.");
       const e = Motore.valida(l);
       if (e.length) return errore(e.join(" "));

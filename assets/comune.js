@@ -31,6 +31,12 @@ window.creaTestata = function (attivo) {
 };
 
 window.parametri = () => Object.fromEntries(new URLSearchParams(location.search));
+// Legge una lezione, verifica o prova. Nella cartella "senza internet" i file sono già
+// tutti dentro assets/pacchetto.js (aperti con doppio clic il browser non può leggerli).
+window.leggiJSON = async (file) => {
+  if (window.PACCHETTO && window.PACCHETTO[file]) return JSON.parse(JSON.stringify(window.PACCHETTO[file]));
+  return (await fetch(file, { cache: "no-cache" })).json();
+};
 
 window.escapeHTML = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -176,9 +182,12 @@ window.Voce = (() => {
   const PREFERITE = [/elsa.*natural/i, /isabella.*natural/i, /natural.*it/i, /google italiano/i, /alice/i, /federica/i, /elsa/i, /paola/i, /emma/i];
   const MASCHILI = /cosimo|diego|luca|giuseppe|benigno|marcello|rinaldi/i;
   let voci = [], ora = null, giro = 0;
-  const carica = () => { voci = ("speechSynthesis" in window) ? speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("it")) : []; };
+  // Senza internet le voci "online" (Natural di Edge, Google di Chrome) restano mute: allora uso solo quelle del computer.
+  const senzaRete = () => location.protocol === "file:" || navigator.onLine === false;
+  const carica = () => { voci = ("speechSynthesis" in window) ? speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("it") && (v.localService || !senzaRete())) : []; };
   carica();
   if ("speechSynthesis" in window) speechSynthesis.addEventListener?.("voiceschanged", carica);
+  addEventListener("online", carica); addEventListener("offline", carica);
   function scelta() {
     let nome = null;
     try { nome = localStorage.getItem(CHIAVE); } catch {}

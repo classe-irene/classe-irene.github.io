@@ -142,3 +142,7 @@ Pulsante arancione "⏱️ Lezione guidata" (anche nella barra della modalità L
 - Fasi delle pagine: 👂 Ascolto = titolo, filastrocca, storia; 👀 Guardo = le schede (anche Ricordiamo e Parole); ✍️ Copio = copia e quaderno; 🎯 Provo = esercizi; 📝 Verifico = verifica (con `&dentro=1` la verifica si vede senza testata e pulsanti).
 - **☰ Maestra** (in basso a destra) contiene semaforo, ⏸ Ferma / +1 minuto, ⏭ Salta alla fase dopo, ✕ Finisci la lezione. L'orologio parte piccolo (toccandolo si ingrandisce). Durante la lezione guidata il personaggio, il punteggio e la barra della LIM si nascondono.
 
+
+## Senza internet (PC della LIM)
+
+`node strumenti/pacchetto-offline.mjs <cartella>` prepara la cartella "La classe di Irene": si apre con doppio clic su "Apri le lezioni.html", senza internet e senza installare nulla. Lezioni, verifiche e prove INVALSI finiscono tutte in `sito/assets/pacchetto.js` (letto da `leggiJSON` in comune.js), i caratteri sono in `assets/caratteri/`, l'area insegnante non c'è. Senza rete la voce usa solo le voci installate sul computer (su Windows: Elsa).
