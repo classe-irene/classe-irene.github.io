@@ -300,6 +300,7 @@
         <button class="sem verde accesa" data-go="verde" aria-label="Verde: al lavoro"></button></div>
       <p class="gm-titolo">Orologio</p>
       <div class="gm-riga"><button class="btn bianco" data-go="pausa">⏸ Ferma</button><button class="btn bianco" data-go="piu">+1 minuto</button></div>
+      <button class="btn bianco gm-largo" data-go="lavagna">🙋 Vieni alla lavagna</button>
       <button class="btn bianco gm-largo" data-go="avanti">⏭ Salta alla fase dopo</button>
       <button class="btn bianco gm-largo gm-fine" data-go="fine">✕ Finisci la lezione</button>`;
     document.body.append(scaletta, orologio, nav, menu);
@@ -324,6 +325,7 @@
       if (a === "pausa") pausa(!G.pausa);
       if (a === "piu") unMinuto();
       if (a === "avanti") vaiFase(G.k + 1);
+      if (a === "lavagna") sceltaNome();
       if (["rosso", "giallo", "verde"].includes(a)) semaforo(a);
       if (a === "fine") { if (confirm("Vuoi finire la lezione guidata?")) termina(); }
     };
@@ -538,11 +540,138 @@
   function prepara(l, radice) { radice._copia = preparaCopia(l, radice); }
 
 
-  // Se su questo computer erano rimasti nomi salvati dalla vecchia funzione "Vieni alla lavagna", si cancellano.
-  try { localStorage.removeItem("classe-irene-nomi-lavagna"); } catch {}
+  /* ---------- 🙋 Vieni alla lavagna ----------
+     Ogni bambino ha la sua lettera (es. a = Anna): premendola compare grande "Anna! Vieni alla lavagna!"
+     e la voce lo dice. Tasto L (o il pulsantino 🙋 in basso a destra, in modalità LIM): l'elenco, dove si aggiungono
+     e si tolgono i nomi e si sceglie la lettera. I nomi restano solo su questo computer (non vanno mai nel sito).
+     Per caricarli tutti insieme: un link con #nomi=a:Anna:f:biondi:chiara;t:Tommaso:m:neri:scura (la parte dopo # non arriva al sito).
+     Ogni bambino ha il suo disegno: bambino o bambina, colore dei capelli e della pelle. */
+  const CHIAVE_NOMI = "classe-irene-nomi-lavagna";
+  const RISERVATE = ["l", "p"];   // L = elenco, P = pausa della voce
+  const nomi = () => {
+    let n = [];
+    try { n = JSON.parse(localStorage.getItem(CHIAVE_NOMI)) || []; } catch {}
+    // elenco vecchio (solo nomi): ognuno prende la prima lettera libera del suo nome
+    return n.map((x) => typeof x === "string" ? { nome: x, tasto: "" } : x);
+  };
+  const salvaNomi = (n) => { try { localStorage.setItem(CHIAVE_NOMI, JSON.stringify(n)); } catch {} };
+  const letteraLibera = (nome, n) => [...nome.toLowerCase().replace(/[^a-z]/g, ""), ..."abcdefghijkmnoqrstuvwxyz"].find((c) => !RISERVATE.includes(c) && !n.some((x) => x.tasto === c)) || "";
+  // Il disegno del bambino che viene alla lavagna: bambino o bambina, colore dei capelli e della pelle, mano alzata.
+  const CAPELLI = { biondi: ["#F6CF5C", "#D9A52E"], "castani chiari": ["#B98352", "#8E5D33"], "castani scuri": ["#6E4529", "#4E2F1B"], "castani più scuri": ["#4A2C19", "#2E1A0E"], neri: ["#3A3540", "#1C1A20"], rossi: ["#D9663A", "#A9441F"] };
+  const PELLE = { chiara: ["#FCE0C8", "#E9B48F"], olivastra: ["#E8B98E", "#C98E5E"], scura: ["#A86B45", "#7A4A2C"], "molto scura": ["#7A4A2C", "#55311C"] };
+  const MAGLIE = ["#4C7BE8", "#1FA36A", "#8B5CF6", "#FF8A3D", "#E5484D", "#14A3B8", "#F2B705", "#D9468F"];
+  // felpa di partenza: per i bambini blu, verde, arancione, azzurro o rosso; per le bambine tutti i colori. Con 🎨 si cambia.
+  const felpa = (x) => x.maglia || (x.sesso === "f" ? MAGLIE : ["#4C7BE8", "#1FA36A", "#FF8A3D", "#14A3B8", "#E5484D"])[(x.tasto || "a").charCodeAt(0) % (x.sesso === "f" ? 8 : 5)];
+  function bambinoSVG(x) {
+    const [c1, c2] = CAPELLI[x.capelli] || CAPELLI["castani scuri"], [p1, p2] = PELLE[x.pelle] || PELLE.chiara;
+    const maglia = felpa(x), f = x.sesso === "f", id = "b" + Math.random().toString(36).slice(2, 7);
+    return `<svg class="bambino-svg" viewBox="0 0 200 220" role="img" aria-hidden="true">
+      <defs><radialGradient id="${id}p" cx="45%" cy="38%" r="65%"><stop offset="0" stop-color="${p1}"/><stop offset="1" stop-color="${p2}"/></radialGradient>
+      <linearGradient id="${id}c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
+      ${f ? `<path d="M50 96 C44 44 74 26 100 26 C128 26 158 44 152 98 C150 128 158 150 146 162 L56 162 C44 150 52 128 50 96 Z" fill="url(#${id}c)"/>` : ""}
+      <path d="M150 168 C160 140 166 110 170 78" stroke="${maglia}" stroke-width="24" stroke-linecap="round" fill="none"/>
+      <circle cx="171" cy="64" r="17" fill="url(#${id}p)"/>
+      <path d="M40 220 C40 178 64 156 100 156 C136 156 160 178 160 220 Z" fill="${maglia}"/>
+      <path d="M90 136 L90 158 C94 164 106 164 110 158 L110 136 Z" fill="${p2}"/>
+      <ellipse cx="100" cy="104" rx="42" ry="45" fill="url(#${id}p)"/>
+      <ellipse cx="58" cy="108" rx="7" ry="10" fill="${p2}"/><ellipse cx="142" cy="108" rx="7" ry="10" fill="${p2}"/>
+      ${f ? `<path d="M56 96 C54 56 78 44 100 44 C124 44 148 56 146 96 C134 80 116 70 98 66 C88 80 72 90 56 96 Z" fill="url(#${id}c)"/>
+             <circle cx="146" cy="76" r="9" fill="#FF6B9A"/>`
+          : `<path d="M56 100 C50 56 76 42 100 42 C126 42 152 56 146 100 C142 86 136 78 128 74 C116 80 96 80 84 72 C74 78 64 86 56 100 Z" fill="url(#${id}c)"/>`}
+      <ellipse cx="84" cy="106" rx="6" ry="7.5" fill="#2B2A33"/><ellipse cx="116" cy="106" rx="6" ry="7.5" fill="#2B2A33"/>
+      <circle cx="86" cy="103" r="2.2" fill="#fff"/><circle cx="118" cy="103" r="2.2" fill="#fff"/>
+      <ellipse cx="74" cy="122" rx="8" ry="5" fill="#FF8E8E" opacity=".45"/><ellipse cx="126" cy="122" rx="8" ry="5" fill="#FF8E8E" opacity=".45"/>
+      <path d="M88 126 C94 134 106 134 112 126" stroke="#8A3B2E" stroke-width="4" stroke-linecap="round" fill="none"/>
+    </svg>`;
+  }
+  const figuraBambino = (x) => x?.sesso || x?.capelli || x?.pelle ? bambinoSVG(x) : Figura.img("🙋", "figura gigante");
+  function chiama(nome) {
+    document.querySelector(".chiama-scelta")?.remove();
+    document.querySelector(".chiama-grande")?.remove();
+    const c = document.createElement("div");
+    c.className = "chiama-grande";
+    const x = typeof nome === "object" ? nome : nomi().find((y) => y.nome === nome) || { nome };
+    nome = x.nome;
+    c.innerHTML = `<div class="cg-scatola">${figuraBambino(x)}<b>${h(nome)}!</b><span>Vieni alla lavagna! <img class="figura grande cg-maestra" src="assets/disegni/maestra.svg" alt=""></span></div>`;
+    c.addEventListener("click", () => c.remove());
+    document.body.append(c);
+    campanella(1, .12);
+    annuncia(`${nome}! Vieni alla lavagna!`);
+    setTimeout(() => c.remove(), 6000);
+  }
+  function sceltaNome() {
+    if (document.querySelector(".chiama-scelta")) return document.querySelector(".chiama-scelta").remove();
+    const v = document.createElement("div");
+    v.className = "chiama-scelta";
+    const disegna = () => {
+      const n = nomi();
+      v.innerHTML = `<div class="cs-testa"><b>🙋 Chi viene alla lavagna?</b><button data-cs="chiudi" aria-label="Chiudi">✕</button></div>
+        ${n.length ? `<div class="cs-nomi">${n.map((x, i) => `<span class="cs-nome"><button data-cs="chiama" data-i="${i}">${x.sesso || x.capelli ? `<span class="cs-faccia">${bambinoSVG(x)}</span>` : ""}<kbd>${h((x.tasto || "?").toUpperCase())}</kbd>${h(x.nome)}</button><button class="cs-colore" data-cs="colore" data-i="${i}" title="Cambia il colore della felpa" aria-label="Cambia il colore della felpa di ${h(x.nome)}"><i style="background:${felpa(x)}"></i></button><button class="cs-via" data-cs="togli" data-i="${i}" aria-label="Togli ${h(x.nome)}">×</button></span>`).join("")}</div>
+          <p class="cs-aiuto">Premi la lettera sulla tastiera: il bambino viene chiamato subito, anche con questo elenco chiuso.</p>`
+          : `<p class="cs-vuoto">Scrivi qui sotto i nomi dei bambini e la loro lettera. Restano solo su questo computer.</p>`}
+        <form class="cs-aggiungi"><input name="nome" maxlength="24" placeholder="Nome" autocomplete="off"><input name="tasto" class="cs-tasto" maxlength="1" placeholder="lettera" autocomplete="off" aria-label="Lettera">
+          <select name="sesso" aria-label="Bambino o bambina"><option value="m">bambino</option><option value="f">bambina</option></select>
+          <select name="capelli" aria-label="Capelli">${Object.keys(CAPELLI).map((k) => `<option>${k}</option>`).join("")}</select>
+          <select name="pelle" aria-label="Pelle">${Object.keys(PELLE).map((k) => `<option>${k}</option>`).join("")}</select>
+          <button class="btn piccolo">＋ Aggiungi</button></form>`;
+    };
+    v.addEventListener("click", (e) => {
+      const b = e.target.closest("[data-cs]"); if (!b) return;
+      const n = nomi(), i = +b.dataset.i;
+      if (b.dataset.cs === "chiudi") v.remove();
+      if (b.dataset.cs === "chiama") chiama(n[i]);
+      if (b.dataset.cs === "togli") { n.splice(i, 1); salvaNomi(n); disegna(); }
+      // 🎨 la felpa passa al colore dopo (resta salvato su questo computer)
+      if (b.dataset.cs === "colore") { const x = n[i], ora = felpa(x); x.maglia = MAGLIE[(MAGLIE.indexOf(ora) + 1) % MAGLIE.length]; salvaNomi(n); disegna(); }
+    });
+    v.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nome = v.querySelector('[name="nome"]').value.trim();
+      let t = v.querySelector('[name="tasto"]').value.trim().toLowerCase();
+      if (nome) {
+        const n = nomi().filter((x) => x.nome !== nome);
+        if (!/^[a-z]$/.test(t) || RISERVATE.includes(t)) t = letteraLibera(nome, n);
+        n.forEach((x) => { if (x.tasto === t) x.tasto = ""; });   // la lettera passa al nuovo nome
+        const val = (k) => v.querySelector(`[name="${k}"]`).value;
+        n.push({ nome, tasto: t, sesso: val("sesso"), capelli: val("capelli"), pelle: val("pelle") }); salvaNomi(n);
+      }
+      disegna(); v.querySelector('[name="nome"]').focus();
+    });
+    disegna();
+    document.body.append(v);
+  }
+  // Link per caricare i nomi: ...#nomi=a:Anna;t:Tommaso. Poi la parte dopo # sparisce dall'indirizzo.
+  function nomiDalLink() {
+    const m = location.hash.match(/^#nomi=(.*)$/);
+    if (!m) return;
+    // ogni bambino: lettera:nome:m|f:capelli:pelle (le ultime tre facoltative)
+    const n = decodeURIComponent(m[1]).split(";").map((x) => x.split(":")).filter(([t, nome]) => /^[a-z]$/i.test(t || "") && nome?.trim())
+      .map(([t, nome, sesso, capelli, pelle]) => ({ tasto: t.toLowerCase(), nome: nome.trim(), sesso: sesso === "f" ? "f" : "m",
+        capelli: CAPELLI[capelli] ? capelli : "castani scuri", pelle: PELLE[pelle] ? pelle : "chiara" })).filter((x) => !RISERVATE.includes(x.tasto));
+    history.replaceState(null, "", location.pathname + location.search);
+    if (!n.length) return;
+    salvaNomi(n);
+    const a = document.createElement("div");
+    a.className = "guida-striscia verde"; a.style.top = "20px";
+    a.textContent = `✅ ${n.length} nomi salvati su questo computer. Premi L per vederli.`;
+    document.body.append(a); setTimeout(() => a.remove(), 5000);
+  }
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey || e.altKey || e.metaKey || e.repeat || e.target.closest?.("input, textarea, select, [contenteditable]")) return;
+    const k = e.key.toLowerCase();
+    if (k === "l") { e.preventDefault(); sceltaNome(); return; }
+    if (k === "escape") { document.querySelector(".chiama-scelta")?.remove(); document.querySelector(".chiama-grande")?.remove(); return; }
+    const x = /^[a-z]$/.test(k) && nomi().find((y) => y.tasto === k);
+    if (x) { e.preventDefault(); chiama(x); }
+  });
+  const pulsantino = document.createElement("button");
+  pulsantino.className = "chiama-btn"; pulsantino.type = "button"; pulsantino.textContent = "🙋";
+  pulsantino.setAttribute("aria-label", "Chiama un bambino alla lavagna");
+  pulsantino.onclick = sceltaNome;
+  document.addEventListener("DOMContentLoaded", () => { document.body.append(pulsantino); nomiDalLink(); });
 
   // Per ora (prova) solo nelle lezioni con il campo "copia".
   const per = (l) => !!l.copia;
 
-  window.Guida = { FASI, per, copiaHTML, prepara, apri: (l, radice) => apri(l, radice), get attiva() { return !!G; } };
+  window.Guida = { FASI, per, chiama, sceltaNome, copiaHTML, prepara, apri: (l, radice) => apri(l, radice), get attiva() { return !!G; } };
 })();

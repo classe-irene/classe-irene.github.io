@@ -1555,12 +1555,34 @@ body.lim .scheda.copia .cq-pagina { --q: min(30px, 2.8vh); }
 body.lim .scheda.copia .copia-tasti .btn { font-size: 1.5rem; padding: 16px 30px; }
 @media (max-width: 760px) { body.lim .scheda.copia.corrente { grid-template-columns: minmax(0, 1fr); } body.lim .scheda.copia .copia-righe li { font-size: 1.1rem; } body.lim .scheda.copia .cq-pagina { --q: 18px; } }
 
+/* Vieni alla lavagna: pulsantino discreto (solo LIM), scelta del nome, chiamata grande */
+.chiama-btn { display: none; position: fixed; right: 14px; bottom: 120px; z-index: 47; width: 46px; height: 46px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, .7); font-size: 1.4rem; opacity: .35; cursor: pointer; }
+.chiama-btn:hover, .chiama-btn:focus-visible { opacity: 1; }
+body.lim .chiama-btn { display: block; }
+body.guidata .chiama-btn { display: none; }
+.chiama-scelta { position: fixed; right: 16px; bottom: 120px; z-index: 108; width: min(420px, calc(100vw - 32px)); max-height: 70vh; overflow: auto; background: var(--carta); border-radius: 22px; box-shadow: 0 12px 40px rgba(0, 0, 0, .3); padding: 14px 16px; font-size: 18px; animation: compari .25s; }
+.cs-testa { display: flex; justify-content: space-between; align-items: center; font-size: 1.15rem; margin-bottom: 8px; }
+.cs-testa button { border: 0; background: none; font-size: 1.3rem; cursor: pointer; padding: 6px 10px; }
+.cs-nomi { display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-nome { display: inline-flex; align-items: stretch; background: var(--giallo-chiaro); border-radius: 14px; overflow: hidden; }
+.cs-nome button { border: 0; background: none; font: 800 1.2rem "Baloo 2", sans-serif; padding: 8px 12px; cursor: pointer; }
+.cs-nome small { font: 700 .75rem "Nunito", sans-serif; color: var(--testo-tenue); margin-right: 6px; }
+.cs-nome .cs-via { color: var(--testo-tenue); padding: 8px 10px; border-left: 2px solid rgba(0, 0, 0, .06); }
+.cs-vuoto { color: var(--testo-tenue); font-weight: 700; margin: 4px 0; }
+.cs-aggiungi { display: flex; gap: 8px; margin-top: 12px; }
+.cs-aggiungi input { flex: 1; min-width: 0; font: inherit; padding: 8px 12px; border: 2px solid var(--bordo); border-radius: 12px; }
+.chiama-grande { position: fixed; inset: 0; z-index: 109; display: grid; place-items: center; background: rgba(30, 29, 38, .45); cursor: pointer; padding: 16px; }
+.cg-scatola { background: linear-gradient(135deg, #FFF3CC, #FFFFFF); border: 6px solid var(--giallo); border-radius: 34px; padding: 26px 40px; text-align: center; display: grid; justify-items: center; gap: 6px; animation: compari .35s; max-width: 100%; }
+.cg-scatola b { font: 800 clamp(3rem, 10vw, 7rem) "Baloo 2", sans-serif; line-height: 1; color: #E0531F; word-break: break-word; }
+.cg-scatola span { display: flex; align-items: center; gap: 12px; font: 800 clamp(1.5rem, 5vw, 3.2rem) "Baloo 2", sans-serif; }
+.cg-scatola .figura.grande { width: clamp(60px, 10vw, 120px); height: auto; }
 .copia-righe .con-figura { display: flex; flex-direction: row; align-items: center; gap: 12px; text-align: left; }
 .copia-righe .figura, body.lim .copia-righe .figura.piccola { width: 52px; height: 52px; flex: none; }
 @media (max-width: 600px) {
   .gp-fasi li { grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "fig nome nome" "fig minuti salta"; row-gap: 4px; }
   .gp-fasi li > .figura { grid-area: fig; width: 48px; height: 48px; }
   .gp-nome { grid-area: nome; } .gp-minuti { grid-area: minuti; } .gp-salta { grid-area: salta; grid-column: auto; align-self: center; }
+  .cg-scatola { padding: 20px 16px; } .cg-scatola span { flex-wrap: wrap; justify-content: center; text-align: center; }
 }
 .guida-orologio.piccolo .go-maniglia { font-size: 0; } .guida-orologio.piccolo .go-maniglia::before { content: "⠿ ⠿"; font-size: .8rem; }
 @media (max-width: 600px) {
@@ -1585,6 +1607,9 @@ body.lim .scheda.copia .copia-tasti .btn { font-size: 1.5rem; padding: 16px 30px
 .voce-dock.basso:not(.spostato) { top: auto; bottom: 24px; transform: translateX(-50%) scale(var(--sc)); transform-origin: 50% 100%; }
 .voce-dock.basso.via:not(.spostato) { transform: translateX(-50%) scale(calc(var(--sc) * .92)); }
 body.lim .voce-dock.basso:not(.spostato) { bottom: 118px; }
+.cs-nome .cs-stella { padding: 8px 4px 8px 10px; font-size: 1.1rem; color: var(--testo-tenue); }
+.cs-nome.primo { background: var(--giallo); }
+.cs-aiuto { font-size: .85rem; color: var(--testo-tenue); margin: 10px 0 0; }
 .voce-dock.basso .sottotitoli { display: none !important; }
 /* per esteso le righe sono di più: quadretti un po' più piccoli, così tutto sta nello schermo della LIM */
 body.lim .div-estesa .colonna-griglia .cella { width: min(84px, 6vh, calc(38vh / var(--righe))); height: min(84px, 6vh, calc(38vh / var(--righe))); font-size: min(3.2rem, 4.6vh, calc(28vh / var(--righe))); }
@@ -1642,3 +1667,15 @@ body.guidata.lim .voce-dock.basso:not(.spostato) { bottom: calc(var(--gn-h, 110p
   .guida-menu { left: 10px; right: 10px; width: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .guida-qui, .gn-avanti.pulsa { animation: none; } }
+.cs-nome kbd { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; margin-right: 8px; border-radius: 6px; background: #fff; border: 2px solid #2B2A33; border-bottom-width: 4px; font: 800 .9rem "Nunito", sans-serif; }
+.cs-aggiungi .cs-tasto { flex: 0 0 92px; text-align: center; }
+.cg-scatola .bambino-svg { width: clamp(140px, 22vh, 240px); height: auto; animation: saluta 1.2s ease-in-out infinite alternate; transform-origin: 50% 100%; }
+@keyframes saluta { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+.cs-faccia { display: inline-block; width: 34px; height: 37px; margin-right: 6px; vertical-align: middle; }
+.cs-faccia .bambino-svg { width: 100%; height: 100%; }
+.cs-nome button[data-cs="chiama"] { display: inline-flex; align-items: center; }
+.cs-aggiungi { flex-wrap: wrap; }
+.cs-aggiungi select { font: inherit; font-size: .9rem; padding: 6px 8px; border: 2px solid var(--bordo); border-radius: 12px; background: #fff; }
+.chiama-scelta { width: min(520px, calc(100vw - 32px)); }
+.cs-nome .cs-colore { padding: 8px 6px; }
+.cs-colore i { display: block; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,0,0,.15); }

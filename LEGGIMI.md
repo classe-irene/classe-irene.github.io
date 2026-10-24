@@ -146,3 +146,7 @@ Pulsante arancione "⏱️ Lezione guidata" (anche nella barra della modalità L
 ## Senza internet (PC della LIM)
 
 `node strumenti/pacchetto-offline.mjs <cartella>` prepara la cartella "La classe di Irene": si apre con doppio clic su "Apri le lezioni.html", senza internet e senza installare nulla. Lezioni, verifiche e prove INVALSI finiscono tutte in `sito/assets/pacchetto.js` (letto da `leggiJSON` in comune.js), i caratteri sono in `assets/caratteri/`, l'area insegnante non c'è. Senza rete la voce usa solo le voci installate sul computer (su Windows: Elsa).
+
+## Vieni alla lavagna
+In ogni lezione ogni bambino ha la sua **lettera**: premendola sulla tastiera compare grande "Nome! Vieni alla lavagna!" e la voce lo dice. **L** (o il pulsantino 🙋 quasi trasparente in basso a destra, in modalità LIM) apre l'elenco: si aggiungono nomi con la loro lettera, si tolgono, e toccando un nome lo si chiama. L e P non si possono usare (elenco e pausa della voce). Esc chiude.
+I nomi restano solo su quel computer, mai nel sito. Per caricarli tutti insieme si apre una volta un indirizzo della lezione con in fondo `#nomi=a:Anna:f:biondi:chiara;t:Tommaso:m:neri:scura` (lettera:nome:m o f:capelli:pelle; capelli biondi, castani chiari, castani scuri, castani più scuri, neri, rossi; pelle chiara, olivastra, scura, molto scura). Ogni bambino ha il suo disegno con la mano alzata (la parte dopo # non viene mandata al sito e sparisce subito dall'indirizzo).
