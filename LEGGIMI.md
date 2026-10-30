@@ -154,3 +154,7 @@ I nomi restano solo su quel computer, mai nel sito. Per caricarli tutti insieme 
 Nella home della cartella c'è "📂 Aggiungi una lezione da file" (assets/senza-internet.js): legge il .json scaricato dall'area insegnante e lo salva nell'archivio del PC. L'area insegnante è nella cartella, sempre con la password.
 
 Aggiornamenti piccoli: passando come secondo argomento il `versione.json` dell'ultima cartella consegnata (copia in `/mnt/project-files/classe-irene-archivio/ultima-versione.json`), lo script prepara anche "<cartella> - solo novità" con i soli file nuovi o cambiati; si estrae sopra la cartella che c'è già, sostituendo i file. In fondo alla home compare "📦 Versione senza internet del …".
+
+## Numeri in successione (4ª)
+- Esercizio `{ "tipo": "successione", "numeri": [234, 235, …], "mostra": [0, 1] }`: caselle in fila come nelle schede; le vuote si riempiono una alla volta col tastierino (✔ controlla, ⌫ cancella). Il suggerimento dice da quale numero partire e quanti salti fare. Facoltativi: `"colonne": 10` (tabella, per esempio da 4 901 a 5 000), `"colora": "pari"` o `"dispari"` (dopo, si toccano i numeri da colorare), `"mostra_regola": false` (nasconde "Regola: +2").
+- In una sezione `"foglio": { "immagine": "immagini/schede/….png", "titolo": "…" }` (anche più di uno, in un elenco): la scheda già pronta, che si apre a tutto schermo con Ingrandisci e Stampa. Le schede in PDF si trasformano in PNG con `pdftoppm -r 170`.

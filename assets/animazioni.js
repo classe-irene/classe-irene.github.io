@@ -1072,6 +1072,30 @@
     return { viewBox: "0 0 600 320", pezzi, passi };
   }
 
+  // La ranocchia salta di foglia in foglia secondo la regola (+1, +2, −10…): i numeri compaiono quando ci arriva.
+  function scenaSalti(anim) {
+    const nn = (anim.numeri || [989, 991, 993, 995]).map((x) => Math.floor(+x)).slice(0, 6);
+    const L = nn.length, W = 600 / L, Y = 230, d = nn[1] - nn[0];
+    const regola = d >= 0 ? `+${d}` : `−${-d}`;
+    const xi = (i) => W * i + W / 2;
+    const foglia = (i) => `<ellipse cx="${xi(i)}" cy="${Y}" rx="${W * 0.44}" ry="30" fill="#5DBB63" stroke="#2F7D32" stroke-width="3"/>`;
+    const numero = (i) => `<text x="${xi(i)}" y="${Y + 9}" text-anchor="middle" style="font:800 ${L > 5 ? 22 : 26}px Nunito,sans-serif;fill:#fff">${migliaia(String(nn[i]))}</text>`;
+    const ignoto = (i) => `<text x="${xi(i)}" y="${Y + 10}" text-anchor="middle" style="font:800 30px Nunito,sans-serif;fill:#E8F5E9">?</text>`;
+    const arco = (i) => `<g class="sc-entra"><path d="M${xi(i - 1)} ${Y - 34} Q${(xi(i - 1) + xi(i)) / 2} ${Y - 130} ${xi(i)} ${Y - 34}" fill="none" stroke="#FF8A3D" stroke-width="4" stroke-dasharray="8 7"/>
+      <text x="${(xi(i - 1) + xi(i)) / 2}" y="${Y - 92}" text-anchor="middle" style="font:800 24px 'Baloo 2',sans-serif;fill:#E2601B">${regola}</text></g>`;
+    const ultimo = L - 1;
+    const pezzi = [{ da: 0, a: ultimo + 1, svg: nn.map((_, i) => foglia(i)).join("") }];
+    nn.forEach((_, i) => {
+      if (i) pezzi.push({ da: 0, a: i - 1, svg: ignoto(i) }, { da: i, a: ultimo + 1, svg: arco(i) });
+      pezzi.push({ da: i, a: ultimo + 1, svg: `<g class="sc-entra">${numero(i)}</g>` });
+      pezzi.push({ da: i, a: i === ultimo ? ultimo + 1 : i, svg: `<g class="sc-entra">${fig("🐸", xi(i), Y - 62, Math.min(84, W * 0.8))}</g>` });
+    });
+    const sp = (n) => migliaia(String(n));
+    const passi = nn.map((n, i) => (i ? `${sp(nn[i - 1])} ${d >= 0 ? "più" : "meno"} ${Math.abs(d)} fa ${sp(n)}.` : `Rina parte da ${sp(n)}. La regola è ${regola}: ${d >= 0 ? "salta avanti" : "salta indietro"} di ${Math.abs(d)}.`));
+    passi.push(anim.fine || `Ecco la sequenza: ${nn.map(sp).join(", ")}.`);
+    return { viewBox: "0 0 600 320", pezzi, passi };
+  }
+
   /* ---------- Esercizio "componi": il bambino scrive le cifre nella tabella (anche lo 0 segnaposto) ---------- */
   function esercizioComponi(e, c, esito, intestazione) {
     const n = +e.n, ci = cifreIn6(n), prima = ci.findIndex((x) => x !== ""), N = migliaia(String(n));
@@ -1607,7 +1631,7 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti, scomponi: scenaScomponi, componi: scenaComponi, confronto: scenaConfronto, fila: scenaFila };
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti, scomponi: scenaScomponi, componi: scenaComponi, confronto: scenaConfronto, fila: scenaFila, salti: scenaSalti };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {

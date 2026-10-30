@@ -1,8 +1,8 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, divisione, colora_frazione, leggi_frazione, componi, scomponi, confronta.
+// Tipi di esercizio: successione, scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, divisione, colora_frazione, leggi_frazione, componi, scomponi, confronta.
 
 (function () {
-  const TIPI = ["scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "divisione", "costruisci", "equivalenza", "leggi_tabella", "componi", "scomponi", "confronta", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["successione", "scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "divisione", "costruisci", "equivalenza", "leggi_tabella", "componi", "scomponi", "confronta", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -50,6 +50,9 @@
       if (e.tipo === "ordina" && !(Array.isArray(e.elementi) && e.elementi.length >= 2)) errori.push(`${n}: servono almeno 2 elementi da ordinare.`);
       if (e.tipo === "completa" && !/\[[^\]]+\]/.test(e.testo || "")) errori.push(`${n}: il testo deve avere le parole da completare tra [parentesi quadre].`);
       if (e.tipo === "conta" && !(e.oggetto && Number.isInteger(e.numero))) errori.push(`${n}: servono "oggetto" e "numero".`);
+      if (e.tipo === "successione" && !(Array.isArray(e.numeri) && e.numeri.length >= 3 && e.numeri.every(Number.isInteger) && Array.isArray(e.mostra)
+        && e.mostra.length >= 1 && e.mostra.length < e.numeri.length && e.mostra.every((i) => Number.isInteger(i) && i >= 0 && i < e.numeri.length)
+        && (e.colora === undefined || ["pari", "dispari"].includes(e.colora)))) errori.push(`${n}: servono "numeri" (almeno 3) e "mostra" (le posizioni già scritte, da 0); "colora" può essere "pari" o "dispari".`);
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
       if (e.tipo === "divisione" && !divisioneValida(e)) errori.push(`${n}: servono "a" (dividendo fino a 9999) e "b" (divisore da 2 a 99), con a non più piccolo di b.`);
       if (e.tipo === "addizione" && !addizioneValida(e)) errori.push(`${n}: servono "a" e "b" con somma fino a 99.`);
@@ -111,6 +114,7 @@
             ${String(s.testo).split(/\n+/).map((p) => `<p>${Figura.frazioni(h(p))}</p>`).join("")}
             ${s.immagini?.length ? `<div class="galleria">${s.immagini.map((x) => `<figure>${Figura.ricco(x, "figura media")}</figure>`).join("")}</div>` : ""}
             ${s.animazione ? `<div class="anim-posto" data-anim="${h(JSON.stringify(s.animazione))}"></div>` : ""}
+            ${s.foglio ? fogliHTML(s.foglio) : ""}
             ${s.pensa ? `<div class="pensa"><b>🤔 ${h(s.pensa.domanda)}</b><button class="btn bianco piccolo" data-svela>👀 Scopri la risposta</button><p class="pensa-risposta" hidden>${h(s.pensa.risposta)}</p></div>` : ""}
             ${s.scopri?.length ? `<p class="gioco-aiuto">Tocca le carte per scoprire cosa c'è dietro!</p><div class="scopri">${s.scopri.map((x) => `<button class="carta-scopri" data-retro="${h(x.retro)}"><span class="fronte">${Figura.ricco(x.fronte, "figura grande")}</span><span class="retro">${Figura.ricco(x.retro, "figura media")}</span></button>`).join("")}</div>` : ""}
             ${s.esperimento ? esperimentoHTML(s.esperimento) : ""}
@@ -164,6 +168,7 @@
       if (a === "vai-esercizi") document.getElementById("esercizi").scrollIntoView({ behavior: "smooth" });
       if (a === "vai-quaderno") { const q = radice.querySelector(".quaderno"); if (document.body.classList.contains("lim")) apriQuaderno(l.quaderno); else q?.scrollIntoView({ behavior: "smooth", block: "start" }); }
       if (a === "apri-quaderno") apriQuaderno(l.quaderno);
+      if (b.dataset.foglio) apriQuaderno({ titolo: "La scheda", ...JSON.parse(b.dataset.foglio) });
       if (a === "menu-maestra") { const m = radice.querySelector(".menu-maestra"); m.hidden = !m.hidden; b.setAttribute("aria-expanded", !m.hidden); }
       else if (b.closest(".menu-maestra") && !["scritte", "velocita", "suoni", "maiuscolo"].includes(a) && !b.dataset.effetti) { radice.querySelector(".menu-maestra").hidden = true; radice.querySelector(".menu-maestra-btn")?.setAttribute("aria-expanded", "false"); }
       if (a === "lim") avviaLIM(radice);
@@ -310,6 +315,10 @@
       </button>
     </div></section>`;
   }
+  // Una scheda già pronta (foto o PDF trasformato in immagine) dentro una spiegazione: si apre a tutto schermo come il quaderno.
+  const fogliHTML = (f) => `<div class="foglio-scheda">${[].concat(f).map((x) => `<button class="foglio" type="button" data-foglio="${h(JSON.stringify(x))}" aria-label="Guarda la scheda in grande">
+      <span class="nastro n1"></span><span class="nastro n2"></span>
+      <img src="${h(x.immagine)}" alt="${h(x.titolo || "La scheda")}" loading="lazy"><span class="foglio-lente">🔍 Guarda in grande</span></button>`).join("")}</div>`;
   function apriQuaderno(q) {
     if (!q) return;
     const v = document.createElement("div");
@@ -573,6 +582,80 @@
           if (++n === risposte.length) esito.ok();
         } else esito.ko(b);
       });
+    },
+
+    // Numeri in fila (come nelle schede): le caselle vuote si riempiono col tastierino, una alla volta.
+    // Con "colonne" diventa una tabella (per esempio 10 × 10); con "colora" poi si toccano i numeri pari o dispari.
+    successione(e, c, esito) {
+      const N = e.numeri, scritto = N.map((_, i) => e.mostra.includes(i));
+      const sp = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      const passo = N[1] - N[0], regolare = N.every((n, i) => !i || n - N[i - 1] === passo);
+      const regola = regolare ? (passo > 0 ? `+${passo}` : `−${-passo}`) : "";
+      const daColorare = (n) => (e.colora === "pari" ? n % 2 === 0 : n % 2 === 1);
+      c.innerHTML = domanda(e.domanda || "Completa con i numeri mancanti.", e) +
+        `<div class="succ${e.colonne ? " con-tabella" : ""}">${regola && e.mostra_regola !== false ? `<p class="succ-regola">Regola: <b>${regola}</b> ${passo > 0 ? "📈" : "📉"}</p>` : ""}
+          <div class="succ-fila${e.colonne ? " tabella" : ""}" style="${e.colonne ? `--col:${e.colonne}` : ""}">${N.map((n, i) =>
+            `<button type="button" class="succ-casella${scritto[i] ? " data" : ""}" data-i="${i}">${scritto[i] ? sp(n) : ""}</button>`).join("")}</div>
+          <p class="succ-fase"></p>
+          <div class="succ-scrivi"><div class="succ-display" aria-live="polite"></div>
+            <div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}
+              <button class="tasto succ-canc" data-d="canc" aria-label="Cancella">⌫</button><button class="tasto succ-ok" data-d="ok" aria-label="Controlla">✔</button></div></div></div>`;
+      const caselle = [...c.querySelectorAll(".succ-casella")], fase = c.querySelector(".succ-fase");
+      const scrivi = c.querySelector(".succ-scrivi"), display = c.querySelector(".succ-display");
+      let attiva = -1, digitato = "", colorando = false;
+      const vicino = (i) => { for (let d = 1; d < N.length; d++) for (const j of [i - d, i + d]) if (scritto[j]) return j; return -1; };
+      const prossima = () => {
+        // Prima la casella vuota accanto a un numero già scritto, da sinistra.
+        const vuote = N.map((_, i) => i).filter((i) => !scritto[i]);
+        return vuote.find((i) => scritto[i - 1] || scritto[i + 1]) ?? vuote[0] ?? -1;
+      };
+      const evidenzia = () => {
+        caselle.forEach((x, i) => x.classList.toggle("attiva", i === attiva));
+        display.textContent = digitato ? sp(digitato) : "…";
+      };
+      const aggiungiColora = () => {
+        colorando = true; scrivi.hidden = true; attiva = -1; evidenzia();
+        fase.innerHTML = `Ora tocca tutti i numeri <b>${e.colora}</b>${e.colora === "pari" ? " (finiscono con 0, 2, 4, 6, 8)" : " (finiscono con 1, 3, 5, 7, 9)"}.`;
+        Suono.giusto();
+      };
+      const fine = () => { fase.textContent = ""; scrivi.hidden = true; esito.ok(); };
+      const avanti = () => {
+        attiva = prossima(); digitato = "";
+        if (attiva < 0) { evidenzia(); return e.colora ? aggiungiColora() : fine(); }
+        const j = vicino(attiva);
+        fase.innerHTML = j < 0 ? "Scrivi il numero nella casella accesa." : `Casella accesa: ${j < attiva ? "il numero prima" : "il numero dopo"} è <b>${sp(N[j])}</b>. Che numero va qui?`;
+        evidenzia();
+      };
+      c.addEventListener("click", (ev) => {
+        if (c.classList.contains("risolto")) return;
+        const cas = ev.target.closest(".succ-casella");
+        if (cas && colorando) {
+          const i = +cas.dataset.i;
+          if (cas.classList.contains("colorata")) return;
+          if (daColorare(N[i])) {
+            cas.classList.add("colorata"); esito.bene?.(cas); Suono.giusto();
+            if (caselle.every((x, k) => !daColorare(N[k]) || x.classList.contains("colorata"))) fine();
+          } else { e.suggerimento = `${sp(N[i])} è ${e.colora === "pari" ? "dispari" : "pari"}: guarda l'ultima cifra.`; esito.ko(cas); }
+          return;
+        }
+        if (cas && !scritto[+cas.dataset.i]) { attiva = +cas.dataset.i; digitato = ""; evidenzia(); return; }
+        const t = ev.target.closest(".tasto");
+        if (!t || attiva < 0) return;
+        if (t.dataset.d === "canc") { digitato = digitato.slice(0, -1); return evidenzia(); }
+        if (t.dataset.d !== "ok") { if (digitato.length < 7) digitato += t.dataset.d; return evidenzia(); }
+        if (!digitato) return;
+        if (+digitato === N[attiva]) {
+          scritto[attiva] = true; caselle[attiva].textContent = sp(N[attiva]); caselle[attiva].classList.add("giusta");
+          esito.bene?.(caselle[attiva]); Suono.giusto(); avanti();
+        } else {
+          const j = vicino(attiva), dist = j < 0 ? 0 : attiva - j;
+          // Dal numero vicino già scritto: avanti con la regola, oppure indietro con la regola al contrario.
+          const salti = Math.abs(dist), inverso = passo > 0 ? `−${passo}` : `+${-passo}`;
+          e.suggerimento = j < 0 || !regolare ? "Guarda i numeri vicini." : `Parti da ${sp(N[j])} e fai ${salti} ${salti === 1 ? "salto" : "salti"} di ${dist > 0 ? regola : inverso}.`;
+          digitato = ""; evidenzia(); esito.ko(caselle[attiva]);
+        }
+      });
+      avanti();
     },
 
     conta(e, c, esito) {

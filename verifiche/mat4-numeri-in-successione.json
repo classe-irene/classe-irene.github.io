@@ -1,0 +1,219 @@
+{
+ "titolo": "Numeri in successione",
+ "emoji": "🐸",
+ "materia": "matematica",
+ "classe": 4,
+ "obiettivi": [
+  "completare sequenze in ordine crescente e decrescente",
+  "riconoscere numeri pari e dispari",
+  "numerare secondo una regola (+2, +3, −10, −5)"
+ ],
+ "consegna": "Leggi con calma. Guarda il numero prima e il numero dopo.",
+ "domande": [
+  {
+   "tipo": "completa",
+   "immagine": "📈",
+   "testo": "Ordine crescente: completa.",
+   "frase": "2 345, 2 346, ___, ___, 2 349, ___",
+   "soluzioni": [
+    "2 347",
+    "2 348",
+    "2 350"
+   ]
+  },
+  {
+   "tipo": "completa",
+   "immagine": "📉",
+   "testo": "Ordine decrescente: completa.",
+   "frase": "5 002, 5 001, ___, ___, 4 998",
+   "soluzioni": [
+    "5 000",
+    "4 999"
+   ]
+  },
+  {
+   "tipo": "classifica",
+   "immagine": "🔢",
+   "testo": "Pari o dispari? Scrivi ogni numero nella colonna giusta.",
+   "categorie": [
+    "👯 pari",
+    "🧦 dispari"
+   ],
+   "elementi": [
+    {
+     "testo": "1 436",
+     "categoria": "👯 pari"
+    },
+    {
+     "testo": "7 273",
+     "categoria": "🧦 dispari"
+    },
+    {
+     "testo": "9 000",
+     "categoria": "👯 pari"
+    },
+    {
+     "testo": "6 351",
+     "categoria": "🧦 dispari"
+    },
+    {
+     "testo": "2 668",
+     "categoria": "👯 pari"
+    },
+    {
+     "testo": "158",
+     "categoria": "👯 pari"
+    }
+   ]
+  },
+  {
+   "tipo": "completa",
+   "immagine": "🎯",
+   "testo": "Numera con la regola +3.",
+   "frase": "4 998, 5 001, ___, ___, ___",
+   "soluzioni": [
+    "5 004",
+    "5 007",
+    "5 010"
+   ]
+  },
+  {
+   "tipo": "completa",
+   "immagine": "🎯",
+   "testo": "Numera con la regola −10.",
+   "frase": "3 450, 3 440, ___, ___, ___",
+   "soluzioni": [
+    "3 430",
+    "3 420",
+    "3 410"
+   ]
+  },
+  {
+   "tipo": "vero_falso",
+   "immagine": "♾️",
+   "affermazioni": [
+    {
+     "testo": "I numeri naturali sono infiniti.",
+     "vero": true
+    },
+    {
+     "testo": "Dopo 6 999 viene 7 000.",
+     "vero": true
+    },
+    {
+     "testo": "In ordine decrescente i numeri vanno dal minore al maggiore.",
+     "vero": false
+    },
+    {
+     "testo": "7 208 è un numero dispari.",
+     "vero": false
+    }
+   ]
+  },
+  {
+   "tipo": "scelta",
+   "immagine": "✏️",
+   "testo": "Come si scrive 6 097 in lettere?",
+   "opzioni": [
+    "seimilanovantasette",
+    "seimilanovecentosette",
+    "seimilasettantanove"
+   ],
+   "corretta": 0
+  },
+  {
+   "tipo": "risposta",
+   "immagine": "👩‍🏫",
+   "testo": "Qual è la regola di questa sequenza? 1 282, 1 277, 1 272, 1 267. Spiega.",
+   "righe": 3,
+   "soluzione": "La regola è −5: ogni numero ha 5 in meno del numero prima."
+  }
+ ],
+ "domande_facilitate": [
+  {
+   "tipo": "completa",
+   "immagine": "📈",
+   "testo": "Ordine crescente (+1): completa.",
+   "frase": "234, 235, ___, 237, ___",
+   "soluzioni": [
+    "236",
+    "238"
+   ]
+  },
+  {
+   "tipo": "completa",
+   "immagine": "📉",
+   "testo": "Ordine decrescente (−1): completa.",
+   "frase": "158, 157, ___, 155, ___",
+   "soluzioni": [
+    "156",
+    "154"
+   ]
+  },
+  {
+   "tipo": "classifica",
+   "immagine": "🔢",
+   "testo": "Pari o dispari? Guarda l'ultima cifra.",
+   "categorie": [
+    "👯 pari",
+    "🧦 dispari"
+   ],
+   "elementi": [
+    {
+     "testo": "236",
+     "categoria": "👯 pari"
+    },
+    {
+     "testo": "157",
+     "categoria": "🧦 dispari"
+    },
+    {
+     "testo": "1 438",
+     "categoria": "👯 pari"
+    },
+    {
+     "testo": "991",
+     "categoria": "🧦 dispari"
+    }
+   ]
+  },
+  {
+   "tipo": "completa",
+   "immagine": "🎯",
+   "testo": "Regola +2: completa.",
+   "frase": "7 204, 7 206, ___, ___",
+   "soluzioni": [
+    "7 208",
+    "7 210"
+   ]
+  },
+  {
+   "tipo": "vero_falso",
+   "immagine": "♾️",
+   "affermazioni": [
+    {
+     "testo": "I numeri naturali sono infiniti.",
+     "vero": true
+    },
+    {
+     "testo": "Dopo 999 viene 1 000.",
+     "vero": true
+    },
+    {
+     "testo": "235 è un numero pari.",
+     "vero": false
+    }
+   ]
+  },
+  {
+   "tipo": "scelta",
+   "immagine": "🎯",
+   "testo": "989, 991, 993… Qual è la regola?",
+   "opzioni": [
+    "+2",
+    "+1"
+   ],
+   "corretta": 0
+  }
+ ]
+}

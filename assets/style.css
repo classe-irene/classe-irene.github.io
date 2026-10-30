@@ -1679,3 +1679,35 @@ body.guidata.lim .voce-dock.basso:not(.spostato) { bottom: calc(var(--gn-h, 110p
 .chiama-scelta { width: min(520px, calc(100vw - 32px)); }
 .cs-nome .cs-colore { padding: 8px 6px; }
 .cs-colore i { display: block; width: 20px; height: 20px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(0,0,0,.15); }
+
+/* ---------- Esercizio "successione": numeri in fila o in tabella, come nelle schede ---------- */
+.succ { display: grid; justify-items: center; gap: 12px; }
+.succ-regola { margin: 0; font-weight: 800; font-size: 1.15rem; background: var(--giallo); padding: 4px 16px; border-radius: 999px; }
+.succ-fila { display: flex; flex-wrap: wrap; justify-content: center; border: 3px solid #2B2A33; border-radius: 10px; overflow: hidden; background: #fff; max-width: 100%; }
+.succ-fila.tabella { display: grid; grid-template-columns: repeat(var(--col), minmax(0, 1fr)); width: min(100%, 820px); }
+.succ-casella { flex: 0 0 auto; min-width: 84px; height: 58px; padding: 0 6px; border: 0; border-radius: 0; margin: 0; box-shadow: inset 0 0 0 1px #2B2A33; white-space: nowrap; text-align: center; background: #fff; font: 800 1.3rem "Nunito", sans-serif; color: var(--testo); cursor: pointer; }
+.succ-fila.tabella .succ-casella { min-width: 0; height: 44px; font-size: 1rem; padding: 0 2px; }
+.succ-casella.data { cursor: default; }
+.succ-casella.attiva { background: #FFF4CC; box-shadow: inset 0 0 0 4px #FF8A3D; animation: pulsa 1.4s infinite; }
+.succ-casella.giusta { color: var(--ok); }
+.succ-casella.colorata { background: #FFD166; }
+.succ-fase { margin: 0; font-weight: 700; text-align: center; min-height: 1.5em; }
+.succ-scrivi { display: grid; justify-items: center; gap: 10px; }
+.succ-scrivi[hidden] { display: none; }
+.succ-display { min-width: 180px; padding: 6px 18px; border-radius: 14px; border: 3px dashed #FF8A3D; background: #fff; font: 800 2rem "Baloo 2", sans-serif; text-align: center; }
+.succ .tastierino { grid-template-columns: repeat(6, 64px); }
+.succ-ok { background: var(--ok); color: #fff; }
+@media (max-width: 600px) { .succ-casella { min-width: 64px; height: 48px; font-size: 1.05rem; } .succ .tastierino { grid-template-columns: repeat(6, 48px); } .succ-fila.tabella .succ-casella { font-size: .5rem; height: 30px; } }
+body.lim .succ-casella { min-width: 120px; height: 80px; font-size: 1.9rem; }
+body.lim .succ-fila.tabella .succ-casella { min-width: 0; height: 52px; font-size: 1.25rem; }
+body.lim .succ .tastierino { grid-template-columns: repeat(6, 88px); }
+body.lim .succ-display { font-size: 2.6rem; }
+.foglio-scheda { display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; margin: 18px 0 30px; }
+.foglio-scheda button.foglio { width: min(440px, 100%); margin: 0 auto 10px; }
+body.lim .succ.con-tabella { grid-template-columns: auto auto; align-items: center; column-gap: 34px; }
+body.lim .succ.con-tabella .succ-regola { grid-column: 1 / -1; }
+body.lim .succ.con-tabella .succ-fila { grid-column: 1; grid-row: 2; width: min(1080px, 62vw); }
+body.lim .succ.con-tabella .succ-scrivi { grid-column: 2; grid-row: 2 / span 2; }
+body.lim .succ.con-tabella .succ-fase { grid-column: 1; grid-row: 3; }
+body.lim .succ.con-tabella .succ-fila.tabella .succ-casella { height: 46px; font-size: 1.15rem; }
+body.lim .succ.con-tabella .tastierino { grid-template-columns: repeat(3, 84px); }
