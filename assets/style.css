@@ -1711,3 +1711,32 @@ body.lim .succ.con-tabella .succ-scrivi { grid-column: 2; grid-row: 2 / span 2; 
 body.lim .succ.con-tabella .succ-fase { grid-column: 1; grid-row: 3; }
 body.lim .succ.con-tabella .succ-fila.tabella .succ-casella { height: 46px; font-size: 1.15rem; }
 body.lim .succ.con-tabella .tastierino { grid-template-columns: repeat(3, 84px); }
+
+/* Esercizio "testacoda": il trucco della testa e della coda (+1 con i 9) */
+.tc { display: grid; justify-items: center; gap: 12px; }
+.tc-conto { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.tc-num { display: flex; align-items: center; gap: 6px; }
+.tc-cifra { width: 64px; height: 80px; display: grid; place-items: center; border: 3px solid #2B2A33; border-radius: 12px; background: #fff; font: 800 2.4rem "Baloo 2", sans-serif; color: var(--testo); padding: 0; cursor: pointer; transition: background .3s, transform .3s; }
+.tc-cifra.sep { margin-left: 14px; }
+.tc-cifra.fantasma { border-style: dashed; color: #8a8597; }
+.tc-cifra.testa { background: #FFE2C7; border-color: #E2601B; color: #B4460E; }
+.tc-cifra.coda { background: #E9DDFF; border-color: #7B4FD6; color: #5A32B0; }
+.tc-cifra.nuova { animation: rimbalza .6s both; }
+.tc-cifra.zero { animation: rimbalza .5s both; background: #D8F5DD; border-color: var(--ok); color: var(--ok); }
+.tc-linea { width: 6px; align-self: stretch; margin: -8px 4px; border-radius: 3px; background: repeating-linear-gradient(#2B2A33 0 10px, transparent 10px 16px); }
+.tc-piu { font: 800 2.2rem "Baloo 2", sans-serif; }
+.tc-etichette { display: flex; gap: 14px; }
+.tc-etichette[hidden] { display: none; }
+.tc-et { display: grid; justify-items: center; padding: 4px 16px; border-radius: 12px; font-weight: 800; color: #fff; }
+.tc-et small { font-size: .85rem; }
+.tc-et.testa { background: #E2601B; }
+.tc-et.coda { background: #7B4FD6; }
+.tc .tastierino { grid-template-columns: repeat(6, 64px); }
+.tc-risultato { font: 800 2rem "Baloo 2", sans-serif; background: var(--giallo); padding: 6px 22px; border-radius: 16px; }
+.tc-risultato[hidden] { display: none; }
+@media (max-width: 600px) { .tc-cifra { width: 46px; height: 60px; font-size: 1.8rem; } .tc-cifra.sep { margin-left: 8px; } .tc .tastierino { grid-template-columns: repeat(6, 48px); } }
+body.lim .tc-cifra { width: 96px; height: 120px; font-size: 3.6rem; }
+body.lim .tc-piu, body.lim .tc-risultato { font-size: 3rem; }
+body.lim .tc-et { font-size: 1.4rem; }
+body.lim .tc .tastierino { grid-template-columns: repeat(6, 88px); }
+.tc-cifra[hidden] { display: none; }
