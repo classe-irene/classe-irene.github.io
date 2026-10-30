@@ -182,6 +182,11 @@ window.Voce = (() => {
   const PREFERITE = [/elsa.*natural/i, /isabella.*natural/i, /natural.*it/i, /google italiano/i, /alice/i, /federica/i, /elsa/i, /paola/i, /emma/i];
   const MASCHILI = /cosimo|diego|luca|giuseppe|benigno|marcello|rinaldi/i;
   let voci = [], ora = null, giro = 0;
+  // Versione senza internet: le frasi fisse delle lezioni sono già registrate con la voce "Paola" (cartella voce/).
+  // L'elenco sta in assets/voce-elenco.js; le frasi che non ci sono le legge la voce del computer.
+  const REG = new Set(window.VOCE_REGISTRATA?.frasi || []);
+  let registrate = REG.size > 0;
+  try { if (localStorage.getItem("classe-irene-registrata") === "no") registrate = false; } catch {}
   // Senza internet le voci "online" (Natural di Edge, Google di Chrome) restano mute: allora uso solo quelle del computer.
   const senzaRete = () => location.protocol === "file:" || navigator.onLine === false;
   const carica = () => { voci = ("speechSynthesis" in window) ? speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("it") && (v.localService || !senzaRete())) : []; };
@@ -226,7 +231,14 @@ window.Voce = (() => {
     NON_NOMI.test(parola) ? tutto : prima + articolo(parola) + parola);
 
   const Voce = {
-    leggibile,
+    leggibile, impronta, pulisci,
+    get registrate() { return REG.size > 0 && registrate; },
+    set registrate(v) { registrate = !!v; try { localStorage.setItem("classe-irene-registrata", v ? "si" : "no"); } catch {} },
+    haRegistrazione: (t) => REG.has(impronta(pulisci(t))),
+    // Sta parlando (con la registrazione o con la voce del computer)?
+    get occupata() { return !!ora && !ora.pausa || ("speechSynthesis" in window && speechSynthesis.speaking); },
+    // Zittisce tutto senza avvisare nessuno (per chi ferma da sé la sua lettura).
+    zitta() { giro++; if (ora) { clearTimeout(ora.timer); ora.audio?.pause(); } ora = null; try { speechSynthesis.cancel(); } catch {} Telecomando.stato("fermo"); },
     elenco: () => voci,
     scelta,
     imposta(nome) { try { localStorage.setItem(CHIAVE, nome); } catch {} },
@@ -236,16 +248,18 @@ window.Voce = (() => {
     // "fine" (facoltativa) viene chiamata quando la voce ha finito di parlare.
     // opz.scritte = false: niente scritte a schermo (per esempio nei video, che hanno già la loro didascalia).
     parla(testo, fine, opz = {}) {
-      if (!("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
-      // Le emoji non vanno lette ad alta voce.
-      const pulito = leggibile(String(testo).replace(/[0-9#*]\uFE0F?\u20E3/gu, "").replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
+      const pulito = pulisci(testo);
+      const k = Voce.registrate && impronta(pulito);
+      if (ora?.audio) ora.audio.pause();
+      if (!(k && REG.has(k)) && !("speechSynthesis" in window)) { if (fine) setTimeout(fine, 2500); return; }
       ora = { pulito, fine, opz, pos: 0, pausa: false, comandi: pulito.split(" ").length >= 3 };
-      dici(0);
+      if (k && REG.has(k)) suona(`voce/${k}.ogg`); else dici(0);
     },
     // Telecomando: pausa, riprendi, da capo, stop. In pausa la voce si ferma davvero;
     // quando riparte, ricomincia dalla parola interrotta (stimata dal tempo se il computer non la dice).
     pausa() {
       if (!ora || ora.pausa) return;
+      if (ora.audio) { ora.pausa = true; ora.audio.pause(); Telecomando.stato("pausa"); return; }
       ora.pausa = true; giro++; clearTimeout(ora.timer);
       let pos = ora.confini ? ora.pos : ora.da + Math.round((performance.now() - (ora.t0 || performance.now())) / 1000 * 11 * (ora.rate || .72));
       pos = Math.min(Math.max(pos, ora.da), ora.pulito.length);
@@ -262,10 +276,15 @@ window.Voce = (() => {
       speechSynthesis.cancel();
       Telecomando.stato("pausa");
     },
-    riprendi() { if (ora?.pausa) { ora.pausa = false; dici(ora.ripresa || 0); } },
-    daCapo() { if (ora) { ora.pausa = false; dici(0); } },
+    riprendi() {
+      if (!ora?.pausa) return;
+      ora.pausa = false;
+      if (ora.audio) { ora.audio.play().catch(() => {}); Telecomando.stato("parla", ora.opz.scritte === false); }
+      else dici(ora.ripresa || 0);
+    },
+    daCapo() { if (!ora) return; ora.pausa = false; if (ora.audio) { ora.audio.currentTime = 0; ora.audio.play().catch(() => {}); Telecomando.stato("parla", ora.opz.scritte === false); } else dici(0); },
     ferma() {
-      giro++; if (ora) clearTimeout(ora.timer); ora = null;
+      giro++; if (ora) { clearTimeout(ora.timer); ora.audio?.pause(); } ora = null;
       if ("speechSynthesis" in window) speechSynthesis.cancel();
       Telecomando.stato("fermo");
       document.dispatchEvent(new CustomEvent("voce-ferma"));
@@ -273,6 +292,49 @@ window.Voce = (() => {
     get inPausa() { return !!ora?.pausa; },
   };
   return Voce;
+  // Le emoji non vanno lette ad alta voce.
+  function pulisci(testo) {
+    return leggibile(String(testo).replace(/[0-9#*]\uFE0F?\u20E3/gu, "").replace(/\p{Extended_Pictographic}|️|‍/gu, "").replace(/\s+/g, " ").trim());
+  }
+  // Il nome del file della registrazione: un'impronta corta del testo (la stessa che usa strumenti/voce-registrata.mjs).
+  function impronta(t) {
+    let h1 = 0xdeadbeef, h2 = 0x41c6ce57;
+    for (let i = 0; i < t.length; i++) { const c = t.charCodeAt(i); h1 = Math.imul(h1 ^ c, 2654435761); h2 = Math.imul(h2 ^ c, 1597334677); }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return (h2 >>> 0).toString(16).padStart(8, "0") + (h1 >>> 0).toString(16).padStart(8, "0");
+  }
+  // La frase registrata: pausa e ripresa ripartono dal punto esatto; la velocità scelta vale anche qui.
+  // Se il file non si apre, legge la voce del computer.
+  function suona(src) {
+    const g = ++giro, o = ora;
+    try { speechSynthesis.cancel(); } catch {}
+    const a = o.audio = new Audio(src);
+    a.preservesPitch = true;
+    a.playbackRate = VELOCITA[Voce.velocita()] / VELOCITA.lenta;
+    // Per le scritte: gli stessi avvisi della voce del computer ("start", "end") e, in più, a che punto è ("tempo").
+    const u = new EventTarget(); u.registrata = true; u.rate = VELOCITA.lenta;
+    let partito = false, giraTempo = 0;
+    const finito = () => {
+      if (g !== giro) return;
+      giro++; clearInterval(giraTempo);
+      if (ora === o) ora = null;
+      Telecomando.stato("fermo");
+      u.dispatchEvent(new Event("end"));
+      if (o.fine) o.fine();
+    };
+    a.addEventListener("playing", () => {
+      if (g !== giro) return;
+      if (!partito) { partito = true; u.dispatchEvent(new Event("start")); }
+      clearInterval(giraTempo);
+      giraTempo = setInterval(() => { if (g !== giro) return clearInterval(giraTempo); if (a.duration) u.dispatchEvent(Object.assign(new Event("tempo"), { quota: a.currentTime / a.duration })); }, 80);
+    });
+    a.addEventListener("ended", finito);
+    a.addEventListener("error", () => { if (g !== giro) return; o.audio = null; dici(0); });
+    if (o.opz.scritte !== false) window.Sottotitoli?.mostra(o.pulito, u, o.opz);
+    if (o.comandi) Telecomando.stato("parla", o.opz.scritte === false);
+    a.play().catch((e) => { if (g === giro && e?.name !== "AbortError") { o.audio = null; dici(0); } });
+  }
   function dici(da) {
     const g = ++giro, o = ora;
     speechSynthesis.cancel();
@@ -300,7 +362,7 @@ window.Voce = (() => {
 })();
 window.leggi = (t, fine) => Voce.parla(t, fine);
 // Quando si esce dalla pagina (o si chiude), la voce si ferma subito.
-["pagehide", "beforeunload"].forEach((e) => addEventListener(e, () => { try { speechSynthesis.cancel(); } catch {} }));
+["pagehide", "beforeunload"].forEach((e) => addEventListener(e, () => { try { Voce.zitta(); } catch {} }));
 
 /* ---------- Scritte a schermo mentre la voce parla ----------
    Le parole compaiono una alla volta, con caratteri allegri; la parola detta in quel momento si illumina.
@@ -391,6 +453,14 @@ window.Sottotitoli = (() => {
       let i = parole.findIndex((m) => m.index + m[0].length > ev.charIndex); if (i < 0) i = parole.length - 1;
       evidenzia(i);
     });
+    // Registrazione: so a che punto è l'audio, e lo divido tra le parole in proporzione alla loro lunghezza.
+    if (u.registrata) {
+      const peso = parole.map((m) => 120 + m[0].length * 62 + (/[.,;:!?]$/.test(m[0]) ? 260 : 0));
+      const tot = peso.reduce((x, y) => x + y, 0), cumul = []; let s = 0;
+      for (const p of peso) { cumul.push(s / tot); s += p; }
+      usaConfini = true;
+      u.addEventListener("tempo", (ev) => { if (g !== giro) return; let i = cumul.findIndex((c) => c > ev.quota) - 1; if (i < 0) i = cumul.length - 1; evidenzia(Math.max(0, i)); });
+    }
     // Se il browser non dice a che parola è arrivato, stimo i tempi.
     const vel = u.rate || .8;
     let k = 0;

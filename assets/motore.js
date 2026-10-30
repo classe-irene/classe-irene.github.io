@@ -146,7 +146,7 @@
       if (b.dataset.azione === "filastrocca") cantaFilastrocca(radice, l.filastrocca, b, filaDiv);
       if (filaDiv && ["fila-passo", "fila-capo"].includes(b.dataset.azione) || filaDiv && b.classList.contains("fila-verso")) {
         const canto = radice.querySelector('[data-azione="filastrocca"]');
-        if (canto.dataset.inCorso) { canto.dataset.giro = ""; speechSynthesis?.cancel?.(); delete canto.dataset.inCorso; canto.textContent = "🔊 Ascolta la filastrocca"; radice.querySelector(".filastrocca").classList.remove("in-canto"); }
+        if (canto.dataset.inCorso) { canto.dataset.giro = ""; Voce.zitta(); delete canto.dataset.inCorso; canto.textContent = "🔊 Ascolta la filastrocca"; radice.querySelector(".filastrocca").classList.remove("in-canto"); }
         const k = b.dataset.azione === "fila-capo" ? 0 : b.dataset.azione === "fila-passo" ? filaDiv.n + 1 : filaDiv.passoDelVerso(+b.dataset.v);
         if (k >= 0 && k < filaDiv.passi.length) {
           filaDiv.vai(k);
@@ -188,7 +188,7 @@
     let lettura = 0;
     function leggiLezione(btn) {
       const mio = ++lettura;
-      if (btn.dataset.inCorso) { delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; speechSynthesis?.cancel(); radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); return; }
+      if (btn.dataset.inCorso) { delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; Voce.zitta(); radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); return; }
       btn.dataset.inCorso = "1"; btn.textContent = "⏹ Ferma la lettura";
       // Lo Stop del telecomando ferma anche la lettura di tutta la lezione.
       document.addEventListener("voce-ferma", () => { if (mio !== lettura) return; delete btn.dataset.inCorso; btn.textContent = "🔊 Ascolta la lezione"; radice.querySelectorAll(".in-lettura").forEach((x) => x.classList.remove("in-lettura")); }, { once: true });
@@ -260,7 +260,7 @@
     const sez = radice.querySelector(".filastrocca");
     const versi = (f.strofe || []).flat().map((v) => Figura.dividi(v).testo);
     const spegni = () => { accendiVerso(sez, -1); sez.classList.remove("in-canto"); btn.textContent = "🔊 Ascolta la filastrocca"; delete btn.dataset.inCorso; };
-    if (btn.dataset.inCorso) { btn.dataset.giro = ""; speechSynthesis?.cancel?.(); return spegni(); }
+    if (btn.dataset.inCorso) { btn.dataset.giro = ""; Voce.zitta(); return spegni(); }
     const giro = String(Date.now()); btn.dataset.giro = giro; btn.dataset.inCorso = "1";
     btn.textContent = "⏹ Ferma la filastrocca"; sez.classList.add("in-canto");
     document.addEventListener("voce-ferma", () => { if (btn.dataset.giro === giro) { btn.dataset.giro = ""; spegni(); } }, { once: true });

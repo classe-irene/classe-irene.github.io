@@ -254,7 +254,7 @@
     G.orologio.classList.remove("arancione", "rosso-fine"); chiudiCartello();
   }
   const mmss = (ms) => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
-  const occupata = () => "speechSynthesis" in window && speechSynthesis.speaking;
+  const occupata = () => Voce.occupata;
   const annuncia = (t) => Voce.parla(t, null, { scritte: false });
 
   // La campanella: due rintocchi (si spegne con "🔔 Suoni: no").
