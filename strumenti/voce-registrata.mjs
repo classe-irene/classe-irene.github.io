@@ -1,5 +1,5 @@
-// Registra in anticipo con la voce "Paola" le frasi fisse del sito (versione senza internet).
-// Uso: node strumenti/voce-registrata.mjs <frasi.json da raccogli-frasi.cjs> <cartella delle registrazioni> <it_IT-paola-medium.onnx>
+// Registra in anticipo con la voce "Sara" (o "Paola") le frasi fisse del sito (versione senza internet).
+// Uso: node strumenti/voce-registrata.mjs <frasi.json da raccogli-frasi.cjs> <cartella delle registrazioni> <kokoro-v1.0.onnx oppure it_IT-paola-medium.onnx>
 // Le frasi già registrate restano: si registrano solo quelle nuove. Poi pacchetto-offline.mjs --voce=<cartella> le mette nel pacchetto.
 import { readFileSync, writeFileSync, mkdtempSync } from "node:fs";
 import { execFileSync } from "node:child_process";
@@ -21,7 +21,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const elenco = JSON.parse(readFileSync(frasi, "utf8")).map((t) => [impronta(t), t]);
   const tmp = join(mkdtempSync(join(tmpdir(), "voce-")), "elenco.json");
   writeFileSync(tmp, JSON.stringify(elenco));
-  execFileSync("python3", [new URL("voce-paola.py", import.meta.url).pathname, modello, tmp, cartella], { stdio: "inherit" });
+  // Il modello Kokoro (kokoro-v1.0.onnx) registra con la voce "Sara", quello Piper con "Paola".
+  const script = /kokoro/i.test(modello) ? "voce-sara.py" : "voce-paola.py";
+  execFileSync("python3", [new URL(script, import.meta.url).pathname, modello, tmp, cartella], { stdio: "inherit" });
   // L'indice: impronta → testo, per sapere che cosa c'è in ogni file.
   writeFileSync(join(cartella, "indice.json"), JSON.stringify(Object.fromEntries(elenco), null, 1));
 }

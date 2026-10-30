@@ -5,7 +5,7 @@
 // Dentro ci sono "Apri le lezioni.html" (doppio clic) e la cartella "sito".
 // Le lezioni, le verifiche e le prove INVALSI vengono messe tutte in assets/pacchetto.js,
 // perché un sito aperto con doppio clic non può leggere i file .json.
-// Con --voce: le frasi registrate con la voce "Paola" (strumenti/voce-registrata.mjs) vanno nella cartella voce/
+// Con --voce: le frasi registrate con la voce "Sara" (strumenti/voce-registrata.mjs) vanno nella cartella voce/
 // e il loro elenco in assets/voce-elenco.js; il sito le suona al posto della voce del computer.
 import { execSync } from "node:child_process";
 import { mkdirSync, copyFileSync, readFileSync, writeFileSync, rmSync, existsSync, readdirSync } from "node:fs";
@@ -51,7 +51,7 @@ const registrate = [];
 if (voce) {
   mkdirSync(join(sito, "voce"), { recursive: true });
   for (const f of readdirSync(voce).filter((f) => /^[0-9a-f]{16}\.ogg$/.test(f))) { copyFileSync(join(voce, f), join(sito, "voce", f)); registrate.push(f.slice(0, 16)); }
-  writeFileSync(join(sito, "assets/voce-elenco.js"), `// Le frasi registrate con la voce "Paola" (Piper, rhasspy/piper-voices): i file sono in voce/<impronta>.ogg.\nwindow.VOCE_REGISTRATA = { frasi: ${JSON.stringify(registrate.sort())} };\n`);
+  writeFileSync(join(sito, "assets/voce-elenco.js"), `// Le frasi registrate con la voce "Sara" (Kokoro, if_sara): i file sono in voce/<impronta>.ogg.\nwindow.VOCE_REGISTRATA = { frasi: ${JSON.stringify(registrate.sort())} };\n`);
 }
 // L'elenco dei file con la loro "impronta": la volta dopo serve per capire che cosa è cambiato.
 const impronta = (f) => createHash("sha1").update(readFileSync(join(sito, f))).digest("hex");
