@@ -702,15 +702,17 @@
 
   /* Trascinamento con dito, penna o mouse (funziona anche sulla LIM). */
   function trascinabile(radice, selTessera, selBersaglio, rilascia) {
-    let fantasma = null, origine = null, sopra = null, dx = 0, dy = 0, mosso = false;
+    // Sulla LIM il dito trema sempre un po': il trascinamento parte solo dopo 10 pixel, altrimenti è un tocco.
+    let fantasma = null, origine = null, sopra = null, dx = 0, dy = 0, mosso = false, x0 = 0, y0 = 0;
     radice.addEventListener("pointerdown", (ev) => {
       const t = ev.target.closest(selTessera);
       if (!t || t.disabled || t.closest(".cesto")) return;
-      origine = t; mosso = false;
+      origine = t; mosso = false; x0 = ev.clientX; y0 = ev.clientY;
       const r = t.getBoundingClientRect(); dx = ev.clientX - r.left; dy = ev.clientY - r.top;
     });
     window.addEventListener("pointermove", (ev) => {
       if (!origine) return;
+      if (!fantasma && Math.hypot(ev.clientX - x0, ev.clientY - y0) < 10) return;
       if (!fantasma) {
         mosso = true;
         fantasma = origine.cloneNode(true);
@@ -725,7 +727,8 @@
     const fine = (annulla) => {
       if (fantasma) { fantasma.remove(); fantasma = null; }
       if (!annulla && origine && mosso && sopra) rilascia(origine, sopra);
-      if (origine && mosso) { origine.classList.remove("in-volo"); radice.addEventListener("click", (e) => { e.stopPropagation(); e.preventDefault(); }, { capture: true, once: true }); }
+      if (origine && mosso) { origine.classList.remove("in-volo"); const ferma = (e) => { e.stopPropagation(); e.preventDefault(); };
+        radice.addEventListener("click", ferma, { capture: true, once: true }); setTimeout(() => radice.removeEventListener("click", ferma, true), 400); }
       sopra?.classList.remove("bersaglio");
       origine = sopra = null;
     };

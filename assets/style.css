@@ -271,7 +271,7 @@ select:focus, textarea:focus, input:focus { outline: none; border-color: var(--v
 
 .piede { text-align: center; color: var(--testo-tenue); padding: 30px 16px 40px; font-size: .9rem; }
 
-button { touch-action: manipulation; }
+html, button { touch-action: manipulation; }
 
 /* ---------- Modalità LIM ---------- */
 body.lim { font-size: 25px; }
