@@ -16,8 +16,9 @@ if (!meta) { console.error("Indica la cartella di destinazione."); process.exit(
 if (existsSync(meta)) rmSync(meta, { recursive: true });
 const sito = join(meta, "sito");
 
-// Non servono senza internet: l'area insegnante (crea lezioni con l'intelligenza artificiale) e le note tecniche.
-const escludi = /^(area-insegnante\.html|LEGGIMI\.md|strumenti\/|\.nojekyll|robots\.txt|404\.html)/;
+// Non servono nella cartella: le note tecniche e i file per GitHub. L'area insegnante c'è (resta con la password):
+// a casa, con internet, si creano le lezioni e si portano sul PC della LIM con "📂 Aggiungi una lezione da file".
+const escludi = /^(LEGGIMI\.md|strumenti\/|\.nojekyll|robots\.txt|404\.html|assets\/senza-internet\.js)/;
 const file = execSync("git ls-files", { cwd: radice, encoding: "utf8" }).split("\n").filter((f) => f && !escludi.test(f));
 
 const dati = {};
@@ -26,7 +27,7 @@ for (const f of file) {
   if (/^(lezioni|verifiche|invalsi)\/[\w.-]+\.json$/.test(f)) dati[f] = JSON.parse(readFileSync(join(radice, f), "utf8"));
   if (f.endsWith(".html")) {
     const html = readFileSync(join(radice, f), "utf8")
-      .replace('<script src="assets/comune.js"></script>', '<script src="assets/pacchetto.js"></script>\n<script src="assets/comune.js"></script>');
+      .replace('<script src="assets/comune.js"></script>', '<script src="assets/pacchetto.js"></script>\n<script src="assets/comune.js"></script>\n<script src="assets/senza-internet.js"></script>');
     writeFileSync(join(sito, f), html);
   } else copyFileSync(join(radice, f), join(sito, f));
 }
@@ -35,11 +36,6 @@ const data = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "lo
 writeFileSync(join(sito, "assets/pacchetto.js"), `// Versione senza internet, preparata il ${data}.
 window.SENZA_INTERNET = ${JSON.stringify(data)};
 window.PACCHETTO = ${JSON.stringify(dati)};
-// L'area insegnante qui non c'è: nascondo i pulsanti che portano lì.
-document.head.insertAdjacentHTML("beforeend", '<style>a[href^="area-insegnante"], .banda-cinque { display: none !important; }</style>');
-// In fondo alla home si vede di che giorno è questa versione, per sapere se il PC è aggiornato.
-if (["/index.html", "/sito/"].some((x) => location.pathname.endsWith(x))) addEventListener("DOMContentLoaded", () =>
-  document.body.insertAdjacentHTML("beforeend", '<p style="text-align:center;color:#8a8597;font:700 .95rem Nunito,sans-serif;margin:24px 0">📦 Versione senza internet del ' + window.SENZA_INTERNET + '</p>'));
 `);
 
 writeFileSync(join(meta, "Apri le lezioni.html"), `<!doctype html>
@@ -49,7 +45,8 @@ writeFileSync(join(meta, "Apri le lezioni.html"), `<!doctype html>
 `);
 // L'elenco dei file con la loro "impronta": la volta dopo serve per capire che cosa è cambiato.
 const impronta = (f) => createHash("sha1").update(readFileSync(join(sito, f))).digest("hex");
-const tutti = [...file, "assets/pacchetto.js"];
+copyFileSync(join(radice, "assets/senza-internet.js"), join(sito, "assets/senza-internet.js"));
+const tutti = [...file, "assets/pacchetto.js", "assets/senza-internet.js"];
 const versione = { data, file: Object.fromEntries(tutti.map((f) => [f, impronta(f)])) };
 writeFileSync(join(sito, "versione.json"), JSON.stringify(versione, null, 1));
 
