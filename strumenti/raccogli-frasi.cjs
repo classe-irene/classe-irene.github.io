@@ -63,6 +63,7 @@ const prima = () => {
     let nuove = 0;
     for (const t of [...attr, ...dette]) if (t && !frasi.has(t)) { frasi.set(t, p); nuove++; }
     console.log(`${p}: ${nuove} frasi nuove`);
+    writeFileSync(uscita, JSON.stringify([...frasi.keys()], null, 1));
     await ctx.close();
   }
   // Le frasi scritte così come sono nel codice (avvisi, complimenti).
