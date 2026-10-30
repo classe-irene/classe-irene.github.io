@@ -182,7 +182,7 @@ window.Voce = (() => {
   const PREFERITE = [/elsa.*natural/i, /isabella.*natural/i, /natural.*it/i, /google italiano/i, /alice/i, /federica/i, /elsa/i, /paola/i, /emma/i];
   const MASCHILI = /cosimo|diego|luca|giuseppe|benigno|marcello|rinaldi/i;
   let voci = [], ora = null, giro = 0;
-  // Versione senza internet: le frasi fisse delle lezioni sono già registrate con la voce "Paola" (cartella voce/).
+  // Versione senza internet: le frasi fisse delle lezioni sono già registrate con la voce "Sara" (cartella voce/).
   // L'elenco sta in assets/voce-elenco.js; le frasi che non ci sono le legge la voce del computer.
   const REG = new Set(window.VOCE_REGISTRATA?.frasi || []);
   let registrate = REG.size > 0;
