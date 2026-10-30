@@ -1,8 +1,8 @@
 // Motore delle lezioni: trasforma una lezione in formato JSON in una pagina interattiva.
-// Tipi di esercizio: successione, scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, divisione, colora_frazione, leggi_frazione, componi, scomponi, confronta.
+// Tipi di esercizio: successione, testacoda, scelta, vero_falso, abbina, categorie, ordina, completa, conta, retta, colonna, gelosia, addizione, divisione, colora_frazione, leggi_frazione, componi, scomponi, confronta.
 
 (function () {
-  const TIPI = ["successione", "scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "divisione", "costruisci", "equivalenza", "leggi_tabella", "componi", "scomponi", "confronta", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
+  const TIPI = ["successione", "testacoda", "scelta", "vero_falso", "abbina", "categorie", "ordina", "completa", "conta", "retta", "colonna", "gelosia", "addizione", "divisione", "costruisci", "equivalenza", "leggi_tabella", "componi", "scomponi", "confronta", "virgola", "colora_frazione", "leggi_frazione", ...(window.Giochi?.TIPI || [])];
   const BRAVO = ["Fantastico! 🎉", "Esatto! ⭐", "Perfetto! 🌟", "Super! 🚀", "Giusto! 👏"];
   const RIPROVA = ["Quasi! Riprova 💪", "Ops, ritenta! 🙂", "Non ancora, prova di nuovo!"];
   const caso = (a) => a[Math.floor(Math.random() * a.length)];
@@ -53,6 +53,7 @@
       if (e.tipo === "successione" && !(Array.isArray(e.numeri) && e.numeri.length >= 3 && e.numeri.every(Number.isInteger) && Array.isArray(e.mostra)
         && e.mostra.length >= 1 && e.mostra.length < e.numeri.length && e.mostra.every((i) => Number.isInteger(i) && i >= 0 && i < e.numeri.length)
         && (e.colora === undefined || ["pari", "dispari"].includes(e.colora)))) errori.push(`${n}: servono "numeri" (almeno 3) e "mostra" (le posizioni già scritte, da 0); "colora" può essere "pari" o "dispari".`);
+      if (e.tipo === "testacoda" && !(Number.isInteger(e.n) && e.n >= 9 && e.n <= 999999 && e.n % 10 === 9)) errori.push(`${n}: serve "n", un numero intero che finisce con 9 (fino a 999 999).`);
       if ((e.tipo === "colonna" || e.tipo === "gelosia") && !(Number.isInteger(e.a) && Number.isInteger(e.b) && e.a >= 2 && e.a <= 999 && e.b >= 2 && e.b <= 99)) errori.push(`${n}: servono "a" (fino a 999) e "b" (fino a 99).`);
       if (e.tipo === "divisione" && !divisioneValida(e)) errori.push(`${n}: servono "a" (dividendo fino a 9999) e "b" (divisore da 2 a 99), con a non più piccolo di b.`);
       if (e.tipo === "addizione" && !addizioneValida(e)) errori.push(`${n}: servono "a" e "b" con somma fino a 99.`);
@@ -656,6 +657,78 @@
         }
       });
       avanti();
+    },
+
+    // Il trucco della testa e della coda per fare +1: tocca la coda di 9, fai crescere la testa, la coda diventa 0.
+    testacoda(e, c, esito) {
+      const s = String(e.n), sp = (x) => String(x).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      const lungCoda = s.length - s.replace(/9+$/, "").length, testa = +(s.slice(0, s.length - lungCoda) || 0);
+      const zeroDavanti = lungCoda === s.length;
+      c.innerHTML = domanda(e.domanda || `Usa il trucco: ${sp(e.n)} + 1`, e) +
+        `<div class="tc">
+          <div class="tc-conto"><span class="tc-num">${zeroDavanti ? `<button type="button" class="tc-cifra fantasma" data-i="-1" hidden>0</button>` : ""}${[...s].map((d, i) =>
+            `<button type="button" class="tc-cifra${i && (s.length - i) % 3 === 0 ? " sep" : ""}" data-i="${i}">${d}</button>`).join("")}</span><span class="tc-piu">+ 1</span></div>
+          <div class="tc-etichette" hidden><span class="tc-et testa">TESTA<small>+1</small></span><span class="tc-et coda">CODA<small>→ 0</small></span></div>
+          <p class="succ-fase tc-fase"></p>
+          <div class="succ-scrivi" hidden><div class="succ-display" aria-live="polite"></div>
+            <div class="tastierino">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((d) => `<button class="tasto" data-d="${d}">${d}</button>`).join("")}
+              <button class="tasto succ-canc" data-d="canc" aria-label="Cancella">⌫</button><button class="tasto succ-ok" data-d="ok" aria-label="Controlla">✔</button></div></div>
+          <div class="tc-risultato" hidden></div></div>`;
+      const cifre = [...c.querySelectorAll(".tc-cifra:not(.fantasma)")], fase_ = c.querySelector(".tc-fase");
+      const scrivi = c.querySelector(".succ-scrivi"), display = c.querySelector(".succ-display"), num = c.querySelector(".tc-num");
+      const inCoda = (i) => i >= s.length - lungCoda;
+      let fase = 1, digitato = "";
+      fase_.innerHTML = "Tocca la <b>CODA</b>: tutti i 9 attaccati, alla fine a destra.";
+      const dividi = () => {
+        fase = 2;
+        c.querySelector(".fantasma")?.removeAttribute("hidden");
+        c.querySelectorAll(".tc-cifra").forEach((x) => x.classList.toggle("testa", !inCoda(+x.dataset.i) || x.dataset.i === "-1"));
+        cifre[s.length - lungCoda].before(Object.assign(document.createElement("span"), { className: "tc-linea" }));
+        c.querySelector(".tc-etichette").hidden = false;
+        fase_.innerHTML = `${zeroDavanti ? "Davanti non c'è nulla: la testa è <b>0</b>! " : ""}La <b>TESTA</b> è <b>${sp(testa)}</b>. Fai +1: quanto diventa?`;
+        scrivi.hidden = false; display.textContent = "…"; Suono.giusto();
+      };
+      c.addEventListener("click", (ev) => {
+        if (c.classList.contains("risolto")) return;
+        const b = ev.target.closest(".tc-cifra");
+        if (b && fase === 1) {
+          const i = +b.dataset.i;
+          if (!inCoda(i)) {
+            e.suggerimento = s[i] === "9" ? "Questo 9 non è attaccato alla fine: la coda parte da destra." : `${s[i]} non è un 9: fa parte della testa.`;
+            return esito.ko(b);
+          }
+          b.classList.add("coda"); esito.bene?.(b);
+          if (cifre.every((x, k) => !inCoda(k) || x.classList.contains("coda"))) dividi(); else Suono.giusto();
+          return;
+        }
+        if (b && fase === 3 && b.classList.contains("coda") && b.textContent === "9") {
+          b.textContent = "0"; b.classList.add("zero"); esito.bene?.(b);
+          if (cifre.every((x, k) => !inCoda(k) || x.textContent === "0")) {
+            fase_.textContent = "";
+            const r = c.querySelector(".tc-risultato");
+            r.hidden = false; r.innerHTML = `${sp(e.n)} + 1 = <b>${sp(e.n + 1)}</b>`;
+            esito.ok();
+          } else Suono.giusto();
+          return;
+        }
+        const t = ev.target.closest(".tasto");
+        if (!t || fase !== 2) return;
+        if (t.dataset.d === "canc") digitato = digitato.slice(0, -1);
+        else if (t.dataset.d !== "ok") { if (digitato.length < 6) digitato += t.dataset.d; }
+        else if (digitato) {
+          if (+digitato === testa + 1) {
+            fase = 3; scrivi.hidden = true; esito.bene?.(display);
+            c.querySelector(".tc-piu").style.visibility = "hidden"; // il +1 è già andato nella testa
+            // La testa nuova prende il posto della vecchia (999 diventa 1000: una cifra in più).
+            c.querySelectorAll(".tc-cifra.testa").forEach((x) => x.remove());
+            num.prepend(...[...String(testa + 1)].map((d) => Object.assign(document.createElement("span"), { className: "tc-cifra testa nuova", textContent: d })));
+            fase_.innerHTML = "Bravo! Ora tocca ogni 9 della <b>CODA</b>: diventa <b>0</b>!";
+            Suono.giusto();
+          } else { e.suggerimento = `${sp(testa)} + 1 = ? Conta un numero in avanti.`; esito.ko(display); }
+          digitato = "";
+        }
+        display.textContent = digitato ? sp(digitato) : "…";
+      });
     },
 
     conta(e, c, esito) {

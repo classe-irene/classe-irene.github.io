@@ -24,7 +24,8 @@
   "♾️ infiniti",
   "🎯 regola",
   "👯 pari",
-  "🧦 dispari"
+  "🧦 dispari",
+  "🪄 testa e coda"
  ],
  "sezioni": [
   {
@@ -135,6 +136,31 @@
    "pensa": {
     "domanda": "Con la regola −5, che numero viene dopo 1 277?",
     "risposta": "1 272. Tolgo 5: le unità passano da 7 a 2."
+   }
+  },
+  {
+   "titolo": "🪄 Il trucco della testa e della coda",
+   "immagine": "🪄",
+   "testo": "Con un numero che finisce con 9, fare +1 è una piccola magia.\nDivido il numero in due parti: la TESTA e la CODA DI 9.\nLa coda sono tutti i 9 alla fine, a destra: diventano tutti 0.\nLa testa cresce di 1. Se davanti non c'è nulla, la testa è 0.\nCosì 39 + 1 fa 40, e 799 + 1 fa 800.",
+   "immagini": [
+    "🪄 magia",
+    "🧡 testa",
+    "💜 coda di 9"
+   ],
+   "animazione": {
+    "tipo": "scena",
+    "scena": "testacoda",
+    "n": 799,
+    "video": true,
+    "titolo": "799 + 1 con il trucco"
+   },
+   "foglio": {
+    "immagine": "immagini/schede/numeri-in-successione-4.png",
+    "titolo": "Il trucco vedico della testa e della coda"
+   },
+   "pensa": {
+    "domanda": "Quanto fa 9 999 + 1?",
+    "risposta": "10 000. La coda 9 999 diventa 0 000, la testa 0 diventa 1."
    }
   }
  ],
@@ -585,6 +611,62 @@
    "immagine": "🎯",
    "domanda": "Numera secondo la regola −5, partendo da 1 282.",
    "spiegazione": "Con −5 le unità vanno sempre 2, 7, 2, 7…"
+  },
+  {
+   "tipo": "testacoda",
+   "n": 39,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 39 + 1",
+   "spiegazione": "La coda 9 diventa 0, la testa 3 diventa 4: 40."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 29,
+   "immagine": "🪄",
+   "domanda": "Salto alla decina dopo: 29 + 1",
+   "spiegazione": "La testa 2 diventa 3, la coda 9 diventa 0: 30."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 99,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 99 + 1",
+   "spiegazione": "Davanti non c'è nulla: la testa è 0 e diventa 1. Risultato 100."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 799,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 799 + 1",
+   "spiegazione": "La coda è 99: diventa 00. La testa 7 diventa 8: 800."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 199,
+   "immagine": "🪄",
+   "domanda": "Attento al trabocchetto: 199 + 1",
+   "spiegazione": "Tutti e due i 9 sono nella coda: 200."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 2999,
+   "immagine": "🪄",
+   "domanda": "Attento al trabocchetto: 2 999 + 1",
+   "spiegazione": "La coda è 999, la testa 2 diventa 3: 3 000."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 54999,
+   "immagine": "👑",
+   "domanda": "Sfida! 54 999 + 1",
+   "spiegazione": "La testa 54 diventa 55, la coda 999 diventa 000: 55 000."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 9999,
+   "immagine": "👑",
+   "domanda": "Super sfida! 9 999 + 1",
+   "spiegazione": "Tutto è coda: la testa 0 diventa 1. Risultato 10 000!"
   }
  ],
  "ricorda": [
@@ -592,7 +674,8 @@
   "♾️ I numeri naturali sono infiniti: a ogni numero posso aggiungere 1.",
   "📈 Crescente: dal minore al maggiore. 📉 Decrescente: dal maggiore al minore.",
   "🎯 La regola dice di quanto salto: +2, +3, −10, −5…",
-  "👯 Pari: finisce con 0, 2, 4, 6, 8. 🧦 Dispari: finisce con 1, 3, 5, 7, 9."
+  "👯 Pari: finisce con 0, 2, 4, 6, 8. 🧦 Dispari: finisce con 1, 3, 5, 7, 9.",
+  "🪄 Trucco per fare +1: la coda di 9 diventa tutta 0, la testa cresce di 1."
  ],
  "verifica": "verifiche/mat4-numeri-in-successione.json"
 }

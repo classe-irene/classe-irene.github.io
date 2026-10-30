@@ -1096,6 +1096,42 @@
     return { viewBox: "0 0 600 320", pezzi, passi };
   }
 
+  // Il trucco della testa e della coda: n + 1 quando n finisce con 9.
+  function scenaTestaCoda(anim) {
+    const n = Math.floor(+anim.n) || 799, s = String(n);
+    const lc = s.length - s.replace(/9+$/, "").length, testa = +(s.slice(0, s.length - lc) || 0), nuova = String(testa + 1);
+    const vecchia = lc === s.length ? "0" : s.slice(0, s.length - lc), coda = s.slice(s.length - lc);
+    const lt = Math.max(vecchia.length, nuova.length), tot = lt + lc;
+    const W = Math.min(78, 500 / tot), H = W * 1.25, Y = 120, xl = 300 - (tot * W) / 2 + lt * W;
+    const cas = (x, d, fondo, bordo, colore, tratt = false) => `<rect x="${x + 4}" y="${Y}" width="${W - 8}" height="${H}" rx="10" fill="${fondo}" stroke="${bordo}" stroke-width="3"${tratt ? ' stroke-dasharray="7 5"' : ""}/>
+      <text x="${x + W / 2}" y="${Y + H * 0.72}" text-anchor="middle" style="font:800 ${W * 0.62}px 'Baloo 2',sans-serif;fill:${colore}">${d}</text>`;
+    const fila = (cifre, xdx, stile) => [...cifre].map((d, i) => cas(xdx - (cifre.length - i) * W, d, ...stile)).join("");
+    const bianca = ["#fff", "#2B2A33", "#2B2A33"], arancio = ["#FFE2C7", "#E2601B", "#B4460E"], viola = ["#E9DDFF", "#7B4FD6", "#5A32B0"], verde = ["#D8F5DD", "#2E9E48", "#2E9E48"];
+    const codaX = xl + 14;
+    const titolo = (t) => `<text x="300" y="60" text-anchor="middle" style="font:800 34px 'Baloo 2',sans-serif;fill:#2B2A33">${t}</text>`;
+    const etichetta = (x, t, col) => `<text x="${x}" y="${Y + H + 40}" text-anchor="middle" style="font:800 22px Nunito,sans-serif;fill:${col}">${t}</text>`;
+    const sp = (x) => migliaia(String(x));
+    const pezzi = [
+      { da: 0, a: 3, svg: titolo(`${sp(n)} + 1 = ?`) },
+      { da: 0, a: 0, svg: (lc === s.length ? "" : fila(vecchia, xl, bianca)) + fila(coda, codaX + lc * W, bianca) },
+      { da: 1, a: 1, svg: `<g class="sc-entra">${fila(vecchia, xl, arancio)}</g>` + fila(coda, codaX + lc * W, viola) },
+      { da: 1, a: 4, svg: `<line x1="${xl + 7}" y1="${Y - 18}" x2="${xl + 7}" y2="${Y + H + 18}" stroke="#2B2A33" stroke-width="5" stroke-dasharray="10 6"/>` },
+      { da: 1, a: 4, svg: etichetta(xl - (lt * W) / 2, "TESTA", "#E2601B") + etichetta(codaX + (lc * W) / 2, "CODA", "#7B4FD6") },
+      { da: 2, a: 4, svg: `<g class="sc-entra">${fila(nuova, xl, arancio)}</g>` },
+      { da: 2, a: 2, svg: fila(coda, codaX + lc * W, viola) },
+      { da: 3, a: 4, svg: `<g class="sc-entra">${fila("0".repeat(lc), codaX + lc * W, verde)}</g>` },
+      { da: 4, a: 4, svg: titolo(`${sp(n)} + 1 = ${sp(n + 1)} ✨`) },
+    ];
+    const passi = [
+      `Voglio fare ${sp(n)} più 1. Uso il trucco della testa e della coda!`,
+      `La coda sono i 9 alla fine: ${lc === 1 ? "un 9" : lc + " nove"}. ${lc === s.length ? "Davanti non c'è nulla: la testa è 0." : `La testa è ${sp(testa)}.`}`,
+      `La testa cresce di 1: ${sp(testa)} più 1 fa ${sp(testa + 1)}.`,
+      `La coda di 9 diventa tutta 0.`,
+      anim.fine || `${sp(n)} più 1 fa ${sp(n + 1)}. Magia!`,
+    ];
+    return { viewBox: "0 0 600 320", pezzi, passi };
+  }
+
   /* ---------- Esercizio "componi": il bambino scrive le cifre nella tabella (anche lo 0 segnaposto) ---------- */
   function esercizioComponi(e, c, esito, intestazione) {
     const n = +e.n, ci = cifreIn6(n), prima = ci.findIndex((x) => x !== ""), N = migliaia(String(n));
@@ -1631,7 +1667,7 @@
     });
   }
 
-  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti, scomponi: scenaScomponi, componi: scenaComponi, confronto: scenaConfronto, fila: scenaFila, salti: scenaSalti };
+  const SCENE = { stati: scenaStati, ciclo_acqua: scenaCicloAcqua, fotosintesi: scenaFotosintesi, seme: scenaSeme, corpo: scenaCorpo, cellula: scenaCellula, cellula_vegetale: scenaCellulaVegetale, foglia: scenaFoglia, dalla_cellula: scenaDallaCellula, numero: scenaNumero, equivalenza: scenaEquivalenza, tabella_valore: scenaTabellaValore, decimali: scenaDecimali, frazione: scenaFrazione, frazioni_equivalenti: scenaFrazioniEquivalenti, scomponi: scenaScomponi, componi: scenaComponi, confronto: scenaConfronto, fila: scenaFila, salti: scenaSalti, testacoda: scenaTestaCoda };
   function disegnaScena(palco, sc, n) {
     let svg = palco.querySelector("svg.scena");
     if (!svg) {
