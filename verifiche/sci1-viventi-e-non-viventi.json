@@ -1,0 +1,239 @@
+{
+  "titolo": "Viventi e non viventi",
+  "emoji": "🌱",
+  "materia": "scienze",
+  "classe": 1,
+  "obiettivi": [
+    "distinguere i viventi dai non viventi",
+    "sapere che i viventi nascono, crescono, si nutrono e fanno i piccoli"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "testo": "Chi è vivente?",
+      "opzioni": [
+        "🪨 sasso",
+        "🐱 gatto",
+        "🧸 orsetto"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Vivente o non vivente? Scrivi nella colonna giusta.",
+      "categorie": [
+        "✅ Vivente",
+        "❌ Non vivente"
+      ],
+      "elementi": [
+        {
+          "testo": "🐶 cane",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🌷 fiore",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🐦 uccellino",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🪨 sasso",
+          "categoria": "❌ Non vivente"
+        },
+        {
+          "testo": "⚽ palla",
+          "categoria": "❌ Non vivente"
+        },
+        {
+          "testo": "🪑 sedia",
+          "categoria": "❌ Non vivente"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Le piante sono viventi.",
+          "vero": true
+        },
+        {
+          "testo": "Il sasso cresce.",
+          "vero": false
+        },
+        {
+          "testo": "Il cane mangia.",
+          "vero": true
+        },
+        {
+          "testo": "Il robot è un vivente.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine: la vita della gallina.",
+      "elementi": [
+        "🥚 uovo",
+        "🐣 nasce",
+        "🐥 pulcino",
+        "🐔 gallina"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🐥",
+      "testo": "Quanti pulcini?",
+      "figura": "🐥",
+      "numero": 6
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci: chi nasce da qui?",
+      "coppie": [
+        [
+          "seme",
+          "🌻 pianta"
+        ],
+        [
+          "uovo",
+          "🐣 pulcino"
+        ],
+        [
+          "bruco",
+          "🦋 farfalla"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "testo": "Che cosa serve alla pianta?",
+      "opzioni": [
+        "🍬 caramelle",
+        "🧸 giocattoli",
+        "💧 acqua"
+      ],
+      "corretta": 2
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "I viventi ___ e ___.",
+      "soluzioni": [
+        "nascono",
+        "crescono"
+      ],
+      "parole": [
+        "nascono",
+        "crescono",
+        "volano"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un vivente e un non vivente."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "testo": "Chi è vivente?",
+      "opzioni": [
+        "🐱 gatto",
+        "🪨 sasso"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Vivente o non vivente?",
+      "categorie": [
+        "✅ Vivente",
+        "❌ Non vivente"
+      ],
+      "elementi": [
+        {
+          "testo": "🐶 cane",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🌷 fiore",
+          "categoria": "✅ Vivente"
+        },
+        {
+          "testo": "🪨 sasso",
+          "categoria": "❌ Non vivente"
+        },
+        {
+          "testo": "⚽ palla",
+          "categoria": "❌ Non vivente"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso? Fai una crocetta.",
+      "affermazioni": [
+        {
+          "testo": "Le piante sono viventi.",
+          "vero": true
+        },
+        {
+          "testo": "Il sasso cresce.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "🥚 uovo",
+        "🐣 pulcino",
+        "🐔 gallina"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🐥",
+      "testo": "Quanti pulcini?",
+      "figura": "🐥",
+      "numero": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "I viventi ___.",
+      "soluzioni": [
+        "crescono"
+      ],
+      "parole": [
+        "crescono",
+        "volano"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un animale vivente."
+    }
+  ]
+}

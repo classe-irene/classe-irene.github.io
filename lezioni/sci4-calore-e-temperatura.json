@@ -1,0 +1,536 @@
+{
+  "titolo": "Calore e temperatura",
+  "emoji": "🔥",
+  "materia": "scienze",
+  "classe": 4,
+  "introduzione": "Il calore passa dalle cose calde a quelle fredde. Il termometro misura la temperatura.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Chiara, la cuoca!\nNella mia cucina c'è il fuoco, il ghiaccio e la pentola che bolle.\nOggi scopriamo che cosa fa il calore.",
+    "immagini": [
+      "🔥 fuoco",
+      "🧊 ghiaccio",
+      "🍲 pentola"
+    ],
+    "missione": "Cucinate con Chiara e scoprite i segreti del calore. Vincete la figurina del termometro!"
+  },
+  "premio": "🌡️",
+  "parole_chiave": [
+    "🔥 calore",
+    "🌡️ temperatura",
+    "📏 gradi",
+    "🎈 dilatazione",
+    "🥄 conduttori",
+    "🧤 isolanti"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔥 Che cos'è il calore",
+      "immagine": "🔥",
+      "testo": "Il calore è energia.\nPassa sempre da una cosa calda a una cosa fredda.\nSe tieni una tazza calda, il calore passa alle tue mani.\nSe tieni un ghiacciolo, il calore delle mani passa al ghiacciolo.",
+      "immagini": [
+        "🔥 calore",
+        "☕ tazza calda",
+        "🙌 mani",
+        "🍦 ghiacciolo"
+      ],
+      "scopri": [
+        {
+          "fronte": "☀️ Sole",
+          "retro": "🔥 Ci manda calore e luce."
+        },
+        {
+          "fronte": "🔥 Fuoco",
+          "retro": "🍲 Scalda la pentola e il cibo."
+        },
+        {
+          "fronte": "🙌 Mani strofinate",
+          "retro": "✨ Anche lo strofinio fa calore. Prova!"
+        }
+      ],
+      "pensa": {
+        "domanda": "Il ghiaccio nella tua mano si scioglie. Perché?",
+        "risposta": "Perché il calore passa dalla mano, che è più calda, al ghiaccio, che è più freddo. Il ghiaccio si scalda e diventa acqua."
+      }
+    },
+    {
+      "titolo": "🌡️ Il termometro",
+      "immagine": "🌡️",
+      "testo": "La temperatura dice quanto una cosa è calda o fredda.\nSi misura con il termometro, in gradi.\nL'acqua diventa ghiaccio a 0 gradi.\nL'acqua bolle a 100 gradi.\nIl nostro corpo è a circa 37 gradi.",
+      "immagini": [
+        "🌡️ termometro",
+        "📏 gradi",
+        "🧊 ghiaccio",
+        "♨️ acqua che bolle"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il termometro sale e scende",
+        "passi": [
+          {
+            "figure": "🌡️",
+            "testo": "Nel termometro c'è un liquido rosso."
+          },
+          {
+            "figure": "🌡️ → ☕",
+            "testo": "Metto il termometro nella tisana calda."
+          },
+          {
+            "figure": "🔥 ⬆️",
+            "testo": "Il liquido si scalda e sale: la temperatura è alta."
+          },
+          {
+            "figure": "🌡️ → 🧊",
+            "testo": "Ora lo metto nell'acqua con il ghiaccio."
+          },
+          {
+            "figure": "❄️ ⬇️",
+            "testo": "Il liquido si raffredda e scende: la temperatura è bassa."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🤒 Termometro clinico",
+          "retro": "👩‍⚕️ Misura la febbre."
+        },
+        {
+          "fronte": "🏠 Termometro da stanza",
+          "retro": "🌡️ Misura la temperatura dell'aria."
+        }
+      ]
+    },
+    {
+      "titolo": "🎈 La dilatazione",
+      "immagine": "🎈",
+      "testo": "Quando si scaldano, le cose diventano un po' più grandi.\nQuesto si chiama dilatazione.\nQuando si raffreddano, diventano più piccole.\nPer questo i binari del treno hanno dei piccoli spazi.",
+      "immagini": [
+        "🎈 palloncino",
+        "🔥 caldo",
+        "❄️ freddo",
+        "🛤️ binari"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il palloncino si gonfia da solo",
+        "passi": [
+          {
+            "figure": "🍾 🎈",
+            "testo": "Metto un palloncino sgonfio sulla bocca di una bottiglia vuota."
+          },
+          {
+            "figure": "🍾 → ♨️",
+            "testo": "Metto la bottiglia nell'acqua calda."
+          },
+          {
+            "figure": "💨 ⬆️ 🎈",
+            "testo": "L'aria dentro si scalda, si allarga e gonfia il palloncino."
+          },
+          {
+            "figure": "🍾 → 🧊",
+            "testo": "Ora metto la bottiglia nell'acqua fredda."
+          },
+          {
+            "figure": "🎈 ⬇️",
+            "testo": "L'aria si raffredda, si restringe e il palloncino si sgonfia."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: il palloncino magico",
+        "materiali": [
+          "🍾 bottiglia di plastica vuota",
+          "🎈 palloncino",
+          "♨️ bacinella con acqua calda",
+          "🧊 bacinella con acqua fredda"
+        ],
+        "passi": [
+          "🎈 Infila il palloncino sulla bocca della bottiglia.",
+          "♨️ Con la maestra, metti la bottiglia nell'acqua calda.",
+          "👀 Guarda il palloncino.",
+          "🧊 Poi metti la bottiglia nell'acqua fredda.",
+          "✏️ Disegna che cosa succede."
+        ],
+        "domanda": "Perché il palloncino si gonfia nell'acqua calda?"
+      }
+    },
+    {
+      "titolo": "🧊 Il calore cambia lo stato",
+      "immagine": "🧊",
+      "testo": "Se scaldo il ghiaccio, diventa acqua: è la fusione.\nSe scaldo l'acqua, diventa vapore: è l'evaporazione.\nSe raffreddo il vapore, torna acqua.\nSe raffreddo l'acqua, diventa ghiaccio: è la solidificazione.",
+      "immagini": [
+        "🧊 ghiaccio",
+        "💧 acqua",
+        "☁️ vapore",
+        "❄️ freddo"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "stati",
+        "video": true,
+        "titolo": "solido, liquido, gas"
+      },
+      "pensa": {
+        "domanda": "Perché il gelato si scioglie d'estate?",
+        "risposta": "Perché l'aria è calda: il calore passa al gelato, che si scalda e diventa liquido. È la fusione."
+      }
+    },
+    {
+      "titolo": "🥄 Conduttori e isolanti",
+      "immagine": "🥄",
+      "testo": "Alcuni materiali fanno passare bene il calore: sono conduttori.\nI metalli sono buoni conduttori, come il cucchiaio di ferro.\nAltri materiali non fanno passare il calore: sono isolanti.\nIl legno, la plastica e la lana sono isolanti.",
+      "immagini": [
+        "🥄 cucchiaio di metallo",
+        "🪵 legno",
+        "🧶 lana",
+        "🧤 guanti"
+      ],
+      "scopri": [
+        {
+          "fronte": "🍳 Padella",
+          "retro": "🔥 È di metallo: si scalda subito."
+        },
+        {
+          "fronte": "🪵 Manico di legno",
+          "retro": "✋ Resta freddo: non ti bruci."
+        },
+        {
+          "fronte": "🧣 Sciarpa di lana",
+          "retro": "🧍‍♀️ Tiene dentro il calore del corpo."
+        }
+      ],
+      "pensa": {
+        "domanda": "Perché d'inverno ci mettiamo i maglioni di lana?",
+        "risposta": "La lana è un isolante: non lascia uscire il calore del nostro corpo. Così restiamo al caldo."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔥",
+      "domanda": "Dove va il calore?",
+      "opzioni": [
+        "🔥 dalla cosa calda alla cosa fredda",
+        "🧊 dalla cosa fredda alla cosa calda",
+        "🤷 sta sempre fermo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il calore passa sempre dal caldo al freddo."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌡️",
+      "affermazione": "Il termometro misura la temperatura.",
+      "corretta": true,
+      "spiegazione": "Sì! La misura in gradi."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Caldo o freddo?",
+      "categorie": [
+        "🔥 Caldo",
+        "❄️ Freddo"
+      ],
+      "elementi": [
+        {
+          "testo": "☕ tè bollente",
+          "categoria": "🔥 Caldo"
+        },
+        {
+          "testo": "🔥 fuoco",
+          "categoria": "🔥 Caldo"
+        },
+        {
+          "testo": "☀️ sole d'estate",
+          "categoria": "🔥 Caldo"
+        },
+        {
+          "testo": "🧊 ghiaccio",
+          "categoria": "❄️ Freddo"
+        },
+        {
+          "testo": "⛄ pupazzo di neve",
+          "categoria": "❄️ Freddo"
+        },
+        {
+          "testo": "🍦 gelato",
+          "categoria": "❄️ Freddo"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💧",
+      "domanda": "A quanti gradi l'acqua diventa ghiaccio?",
+      "opzioni": [
+        "0️⃣ a 0 gradi",
+        "🔟 a 10 gradi",
+        "💯 a 100 gradi"
+      ],
+      "corretta": 0,
+      "spiegazione": "A 0 gradi l'acqua gela."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "♨️",
+      "domanda": "A quanti gradi l'acqua bolle?",
+      "opzioni": [
+        "💯 a 100 gradi",
+        "0️⃣ a 0 gradi",
+        "🔟 a 10 gradi"
+      ],
+      "corretta": 0,
+      "spiegazione": "A 100 gradi l'acqua bolle e diventa vapore."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        [
+          "🔥 calore",
+          "⚡ energia che passa dal caldo al freddo"
+        ],
+        [
+          "🌡️ temperatura",
+          "📏 quanto è caldo o freddo"
+        ],
+        [
+          "🎈 dilatazione",
+          "↔️ col caldo le cose si allargano"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🎈",
+      "affermazione": "Col caldo le cose diventano un po' più piccole.",
+      "corretta": false,
+      "spiegazione": "No: col caldo si allargano. È la dilatazione."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌡️",
+      "domanda": "Dal più freddo al più caldo.",
+      "elementi": [
+        "🧊 ghiaccio",
+        "💧 acqua del rubinetto",
+        "🛁 acqua del bagnetto",
+        "♨️ acqua che bolle"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "La temperatura si misura con il [termometro], in [gradi].",
+      "distrattori": [
+        "righello",
+        "litri"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Conduttore o isolante?",
+      "categorie": [
+        "🥄 Conduttore",
+        "🧤 Isolante"
+      ],
+      "elementi": [
+        {
+          "testo": "🥄 cucchiaio di ferro",
+          "categoria": "🥄 Conduttore"
+        },
+        {
+          "testo": "🍳 padella",
+          "categoria": "🥄 Conduttore"
+        },
+        {
+          "testo": "🔑 chiave",
+          "categoria": "🥄 Conduttore"
+        },
+        {
+          "testo": "🪵 legno",
+          "categoria": "🧤 Isolante"
+        },
+        {
+          "testo": "🧶 lana",
+          "categoria": "🧤 Isolante"
+        },
+        {
+          "testo": "🧤 guanto da forno",
+          "categoria": "🧤 Isolante"
+        }
+      ],
+      "suggerimento": "I metalli sono conduttori."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il cambiamento e il suo nome.",
+      "coppie": [
+        [
+          "🧊 ghiaccio che diventa acqua",
+          "🫠 fusione"
+        ],
+        [
+          "💧 acqua che diventa vapore",
+          "☁️ evaporazione"
+        ],
+        [
+          "💧 acqua che diventa ghiaccio",
+          "❄️ solidificazione"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤒",
+      "domanda": "Qual è la temperatura del corpo quando stai bene?",
+      "opzioni": [
+        "🧍‍♀️ circa 37 gradi",
+        "🧊 circa 0 gradi",
+        "♨️ circa 100 gradi"
+      ],
+      "corretta": 0,
+      "spiegazione": "Se sale sopra 37, abbiamo la febbre."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥄",
+      "affermazione": "Il cucchiaio di metallo nella zuppa calda si scalda.",
+      "corretta": true,
+      "spiegazione": "Sì! Il metallo è un buon conduttore."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un isolante?",
+      "elementi": [
+        "🪵 legno",
+        "🧶 lana",
+        "🔩 ferro",
+        "🧸 stoffa"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il ferro è un metallo: è un conduttore."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🎈",
+      "domanda": "Metti in ordine l'esperimento del palloncino.",
+      "elementi": [
+        "🎈 il palloncino va sulla bottiglia",
+        "♨️ la bottiglia va nell'acqua calda",
+        "💨 l'aria si scalda e si allarga",
+        "🎈 il palloncino si gonfia"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "I [metalli] fanno passare il calore. La [lana] tiene caldo.",
+      "distrattori": [
+        "sassi",
+        "neve"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🛤️",
+      "domanda": "Perché i binari del treno hanno dei piccoli spazi?",
+      "opzioni": [
+        "☀️ col caldo i binari si allungano",
+        "🚂 per far passare l'aria al treno",
+        "🐜 per far passare le formiche"
+      ],
+      "corretta": 0,
+      "spiegazione": "D'estate il ferro si dilata: gli spazi servono per non farli piegare."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole del calore.",
+      "parole": [
+        "🔥 calore",
+        "📏 gradi",
+        "🧊 ghiaccio",
+        "☁️ vapore",
+        "🧶 lana",
+        "🔥 fuoco"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo i conduttori!",
+      "giusti": [
+        "🥄 cucchiaio",
+        "🍳 padella",
+        "🔑 chiave",
+        "🔩 bullone"
+      ],
+      "sbagliati": [
+        "🪵 legno",
+        "🧶 lana",
+        "🧸 stoffa",
+        "🧤 guanto"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "❄️",
+      "affermazione": "Se raffreddo l'acqua sotto 0 gradi, diventa ghiaccio.",
+      "corretta": true,
+      "spiegazione": "Sì! È la solidificazione."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto a che cosa fa.",
+      "coppie": [
+        [
+          "🌡️ termometro",
+          "📏 misura la temperatura"
+        ],
+        [
+          "🧤 guanto da forno",
+          "✋ non fa passare il calore"
+        ],
+        [
+          "🍳 padella",
+          "🔥 si scalda subito"
+        ]
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "TERMOMETRO",
+      "indizio": "🌡️ Misura la temperatura"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CALORE",
+      "indizio": "🔥 Passa dalle cose calde alle cose fredde"
+    }
+  ],
+  "ricorda": [
+    "🔥 Il calore passa sempre dalle cose calde a quelle fredde.",
+    "🌡️ Il termometro misura la temperatura in gradi.",
+    "💧 L'acqua gela a 0 gradi e bolle a 100 gradi.",
+    "🎈 Col caldo le cose si dilatano, col freddo si restringono.",
+    "🥄 I metalli sono conduttori. Legno, plastica e lana sono isolanti."
+  ],
+  "verifica": "verifiche/sci4-calore-e-temperatura.json"
+}

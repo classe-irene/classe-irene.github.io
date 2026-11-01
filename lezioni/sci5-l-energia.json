@@ -1,0 +1,511 @@
+{
+  "titolo": "L'energia",
+  "emoji": "⚡",
+  "materia": "scienze",
+  "classe": 5,
+  "introduzione": "Senza energia niente si muove, si scalda o si accende. Scopriamo le forme dell'energia e le sue fonti.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Elena, la scienziata dell'energia!\nLavoro in un parco con tante pale che girano al vento.\nOggi scopriamo insieme da dove arriva l'energia della lampadina.",
+    "immagini": [
+      "👩‍🔬 scienziata",
+      "🌬️ vento",
+      "💡 lampadina"
+    ],
+    "missione": "Scoprite con Elena le fonti di energia. Alla fine vincete la figurina del fulmine!"
+  },
+  "premio": "⚡",
+  "parole_chiave": [
+    "⚡ energia",
+    "🔄 trasformazione",
+    "♻️ fonte rinnovabile",
+    "🛢️ fonte non rinnovabile",
+    "☀️ energia solare",
+    "🌬️ energia eolica",
+    "💧 energia idroelettrica",
+    "🏭 combustibili fossili"
+  ],
+  "sezioni": [
+    {
+      "titolo": "⚡ Che cos'è l'energia",
+      "immagine": "⚡",
+      "testo": "L'energia è ciò che fa muovere, scaldare e illuminare le cose.\nL'energia ha tante forme.\nC'è l'energia del movimento: un pallone che rotola.\nC'è l'energia termica: il calore del fuoco.\nC'è l'energia luminosa: la luce del Sole.\nC'è l'energia elettrica: la corrente nei fili.\nC'è l'energia chimica: quella nel cibo e nella benzina.",
+      "immagini": [
+        "⚽ movimento",
+        "🔥 calore",
+        "☀️ luce",
+        "🔌 corrente elettrica",
+        "🍞 cibo"
+      ],
+      "scopri": [
+        {
+          "fronte": "⚽ Energia di movimento",
+          "retro": "🏃‍♀️ Ce l'ha tutto ciò che si muove."
+        },
+        {
+          "fronte": "🔥 Energia termica",
+          "retro": "🌡️ È il calore. Scalda le cose."
+        },
+        {
+          "fronte": "🔌 Energia elettrica",
+          "retro": "💡 Corre nei fili e accende le lampadine."
+        },
+        {
+          "fronte": "🍞 Energia chimica",
+          "retro": "🔋 È chiusa nel cibo, nella legna e nelle pile."
+        }
+      ]
+    },
+    {
+      "titolo": "🔄 L'energia si trasforma",
+      "immagine": "🔄",
+      "testo": "L'energia non si crea e non sparisce.\nL'energia cambia forma: si trasforma.\nLa lampadina trasforma l'energia elettrica in luce e calore.\nIl Sole dà energia alla pianta.\nNoi mangiamo la pianta e prendiamo la sua energia.\nCosì possiamo muoverci!",
+      "immagini": [
+        "🔄 trasformazione",
+        "💡 lampadina",
+        "☀️ Sole",
+        "🌱 pianta",
+        "🏃‍♀️ movimento"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il viaggio dell'energia del Sole",
+        "passi": [
+          {
+            "figure": "☀️",
+            "testo": "Il Sole manda energia luminosa."
+          },
+          {
+            "figure": "☀️ → 🌽",
+            "testo": "La pianta la usa per crescere, con la fotosintesi."
+          },
+          {
+            "figure": "🌽 → 👧",
+            "testo": "La bambina mangia la pannocchia: prende energia chimica."
+          },
+          {
+            "figure": "👧 → 🏃‍♀️",
+            "testo": "Il corpo la trasforma in energia di movimento."
+          },
+          {
+            "figure": "🏃‍♀️ → 🥵",
+            "testo": "Correndo, una parte diventa calore."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché dopo una corsa senti caldo?",
+        "risposta": "Perché il corpo trasforma l'energia del cibo in movimento. Una parte di questa energia diventa calore."
+      }
+    },
+    {
+      "titolo": "♻️ Le fonti rinnovabili",
+      "immagine": "♻️",
+      "testo": "Una fonte di energia è da dove prendiamo l'energia.\nLe fonti rinnovabili non finiscono mai.\nIl Sole: i pannelli solari fanno elettricità.\nIl vento: le pale eoliche girano e fanno elettricità.\nL'acqua: le dighe usano l'acqua che cade.\nIl calore della Terra: è l'energia geotermica.\nQueste fonti inquinano poco.",
+      "immagini": [
+        "☀️ Sole",
+        "🌬️ vento",
+        "💧 acqua",
+        "🌋 calore della Terra",
+        "🌳 aria pulita"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dal vento alla lampadina",
+        "passi": [
+          {
+            "figure": "🌬️",
+            "testo": "Il vento soffia forte."
+          },
+          {
+            "figure": "🌬️ → 🌀",
+            "testo": "Il vento fa girare le pale."
+          },
+          {
+            "figure": "🌀 → 🔌",
+            "testo": "Le pale girano e producono energia elettrica."
+          },
+          {
+            "figure": "🔌 → 🏠",
+            "testo": "I fili portano la corrente nelle case."
+          },
+          {
+            "figure": "🏠 → 💡",
+            "testo": "In casa si accende la lampadina."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "🌀 La girandola del vento",
+        "materiali": [
+          "📄 un foglio quadrato",
+          "✂️ le forbici",
+          "📌 una puntina",
+          "✏️ una matita con la gomma"
+        ],
+        "passi": [
+          "✂️ Taglia il foglio dagli angoli verso il centro, senza arrivare in fondo.",
+          "📄 Piega una punta sì e una no verso il centro.",
+          "📌 Fissa le punte al centro con la puntina, sulla gomma della matita.",
+          "🌬️ Soffia sulla girandola o mettila al vento."
+        ],
+        "domanda": "Che cosa fa girare la girandola? Che energia ha quando gira?"
+      }
+    },
+    {
+      "titolo": "🛢️ Le fonti non rinnovabili",
+      "immagine": "🛢️",
+      "testo": "Le fonti non rinnovabili prima o poi finiscono.\nSono il petrolio, il carbone e il gas naturale.\nSi chiamano combustibili fossili.\nSi sono formati sotto terra in milioni di anni.\nQuando bruciano fanno fumo e sporcano l'aria.",
+      "immagini": [
+        "🛢️ petrolio",
+        "🪨 carbone",
+        "🔥 gas naturale",
+        "⏳ milioni di anni",
+        "🏭 fumo"
+      ],
+      "pensa": {
+        "domanda": "Perché il petrolio è una fonte non rinnovabile?",
+        "risposta": "Perché per formarsi ci vogliono milioni di anni. Noi lo usiamo molto più in fretta, quindi un giorno finirà."
+      }
+    },
+    {
+      "titolo": "💡 Risparmiare energia",
+      "immagine": "💡",
+      "testo": "Anche noi possiamo aiutare il pianeta.\nSpegni la luce quando esci dalla stanza.\nNon lasciare la TV accesa se non la guardi.\nChiudi le finestre quando c'è il riscaldamento.\nVai a piedi o in bici quando puoi.",
+      "immagini": [
+        "💡 luce",
+        "📺 TV",
+        "🪟 finestre",
+        "🚲 bici"
+      ],
+      "scopri": [
+        {
+          "fronte": "💡 Spegni la luce",
+          "retro": "🔌 Usi meno energia elettrica."
+        },
+        {
+          "fronte": "🚲 Vai in bici",
+          "retro": "🌳 L'auto non brucia benzina e l'aria resta pulita."
+        },
+        {
+          "fronte": "🪟 Chiudi le finestre",
+          "retro": "🔥 Il calore resta in casa."
+        }
+      ]
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "⚡",
+      "domanda": "Che cos'è l'energia?",
+      "opzioni": [
+        "⚡ ciò che fa muovere, scaldare e illuminare",
+        "🪨 un tipo di sasso",
+        "🧪 un liquido colorato"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'energia fa muovere, scaldare e illuminare le cose."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔌",
+      "affermazione": "La corrente che corre nei fili è energia elettrica.",
+      "corretta": true,
+      "spiegazione": "Sì! L'energia elettrica accende lampadine e computer."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la forma di energia al suo esempio.",
+      "coppie": [
+        [
+          "⚽ di movimento",
+          "🏃‍♀️ una bambina che corre"
+        ],
+        [
+          "🔥 termica",
+          "🍳 il fuoco che scalda"
+        ],
+        [
+          "🔌 elettrica",
+          "💡 la lampadina accesa"
+        ],
+        [
+          "🍞 chimica",
+          "🔋 la pila"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💡",
+      "domanda": "In che cosa trasforma l'energia elettrica una lampadina?",
+      "opzioni": [
+        "💡 in luce e calore",
+        "💧 in acqua",
+        "🎵 in musica"
+      ],
+      "corretta": 0,
+      "spiegazione": "La lampadina fa luce e diventa anche calda."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "L'energia può sparire nel nulla.",
+      "corretta": false,
+      "spiegazione": "No: l'energia non sparisce, cambia solo forma."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "domanda": "Metti in ordine il viaggio dell'energia, come nel video.",
+      "elementi": [
+        "☀️ il Sole manda energia",
+        "🌽 la pianta cresce",
+        "👧 la bambina mangia",
+        "🏃‍♀️ la bambina corre"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Rinnovabile o non rinnovabile?",
+      "categorie": [
+        "♻️ Rinnovabile",
+        "🛢️ Non rinnovabile"
+      ],
+      "elementi": [
+        {
+          "testo": "☀️ Sole",
+          "categoria": "♻️ Rinnovabile"
+        },
+        {
+          "testo": "🌬️ vento",
+          "categoria": "♻️ Rinnovabile"
+        },
+        {
+          "testo": "💧 acqua che cade",
+          "categoria": "♻️ Rinnovabile"
+        },
+        {
+          "testo": "🛢️ petrolio",
+          "categoria": "🛢️ Non rinnovabile"
+        },
+        {
+          "testo": "🪨 carbone",
+          "categoria": "🛢️ Non rinnovabile"
+        },
+        {
+          "testo": "🔥 gas naturale",
+          "categoria": "🛢️ Non rinnovabile"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "♻️",
+      "domanda": "Che cosa vuol dire fonte rinnovabile?",
+      "opzioni": [
+        "♻️ non finisce mai",
+        "⏳ finisce presto",
+        "🏭 fa tanto fumo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Sole, vento e acqua ci sono sempre."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le pale eoliche usano il [vento]. I pannelli solari usano la luce del [Sole].",
+      "distrattori": [
+        "petrolio",
+        "carbone"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🛢️",
+      "affermazione": "Il petrolio si è formato sotto terra in milioni di anni.",
+      "corretta": true,
+      "spiegazione": "Sì! Per questo, quando finisce, non torna presto."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la fonte e la sua macchina.",
+      "coppie": [
+        [
+          "☀️ Sole",
+          "🔲 pannello solare"
+        ],
+        [
+          "🌬️ vento",
+          "🌀 pala eolica"
+        ],
+        [
+          "💧 acqua",
+          "🏞️ diga"
+        ],
+        [
+          "🌋 calore della Terra",
+          "♨️ centrale geotermica"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è una fonte rinnovabile?",
+      "elementi": [
+        "☀️ Sole",
+        "🌬️ vento",
+        "🪨 carbone",
+        "💧 acqua"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il carbone è un combustibile fossile: prima o poi finisce."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏭",
+      "domanda": "Che cosa succede quando bruciamo petrolio e carbone?",
+      "opzioni": [
+        "🏭 l'aria si sporca",
+        "🌸 nascono i fiori",
+        "🌈 compare l'arcobaleno"
+      ],
+      "corretta": 0,
+      "spiegazione": "Bruciando fanno fumo e inquinano l'aria."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le fonti rinnovabili!",
+      "giusti": [
+        "☀️ Sole",
+        "🌬️ vento",
+        "💧 acqua",
+        "🌋 calore della Terra"
+      ],
+      "sbagliati": [
+        "🛢️ petrolio",
+        "🪨 carbone",
+        "⛽ benzina"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "💡",
+      "domanda": "In casa di Elena ci sono tante lampadine accese. Quante sono? Contale.",
+      "oggetto": "💡",
+      "numero": 7,
+      "spiegazione": "Sono 7 lampadine: quanta energia elettrica!"
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Risparmi energia o la sprechi?",
+      "categorie": [
+        "👍 Risparmio",
+        "👎 Spreco"
+      ],
+      "elementi": [
+        {
+          "testo": "💡 spengo la luce quando esco",
+          "categoria": "👍 Risparmio"
+        },
+        {
+          "testo": "🚲 vado a scuola in bici",
+          "categoria": "👍 Risparmio"
+        },
+        {
+          "testo": "🪟 chiudo la finestra d'inverno",
+          "categoria": "👍 Risparmio"
+        },
+        {
+          "testo": "📺 lascio la TV accesa da sola",
+          "categoria": "👎 Spreco"
+        },
+        {
+          "testo": "🚿 faccio una doccia lunghissima",
+          "categoria": "👎 Spreco"
+        }
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di Elena.",
+      "testo": "Petrolio, carbone e gas sono combustibili [fossili].\nSono fonti non [rinnovabili].\nQuando bruciano [inquinano] l'aria.",
+      "distrattori": [
+        "puliti",
+        "infiniti"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌀",
+      "affermazione": "La girandola gira grazie all'energia del vento.",
+      "corretta": true,
+      "spiegazione": "Sì! Il vento ha energia di movimento."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔄",
+      "domanda": "Una pila accende una torcia. Che energia c'è nella pila?",
+      "opzioni": [
+        "🔋 energia chimica",
+        "🌬️ energia del vento",
+        "🌊 energia del mare"
+      ],
+      "corretta": 0,
+      "spiegazione": "Nella pila c'è energia chimica che diventa elettrica."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le fonti di energia.",
+      "parole": [
+        "☀️ sole",
+        "🌬️ vento",
+        "🛢️ petrolio",
+        "🪨 carbone",
+        "💧 acqua"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "E-NER-GI-A",
+      "indizio": "⚡ Fa muovere, scaldare e illuminare"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "EOLICA",
+      "indizio": "🌬️ L'energia che viene dal vento"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PETROLIO",
+      "indizio": "🛢️ Un combustibile fossile liquido e nero"
+    }
+  ],
+  "ricorda": [
+    "⚡ L'energia fa muovere, scaldare e illuminare le cose.",
+    "🔄 L'energia non sparisce: si trasforma da una forma all'altra.",
+    "♻️ Le fonti rinnovabili non finiscono: Sole, vento, acqua, calore della Terra.",
+    "🛢️ Le fonti non rinnovabili finiscono: petrolio, carbone e gas.",
+    "🏭 I combustibili fossili, quando bruciano, inquinano l'aria.",
+    "💡 Possiamo risparmiare energia ogni giorno."
+  ],
+  "verifica": "verifiche/sci5-l-energia.json"
+}

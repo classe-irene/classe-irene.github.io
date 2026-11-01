@@ -1,0 +1,32 @@
+{
+  "titolo": "Solidi, liquidi e gas",
+  "emoji": "🧊",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "riconoscere solidi, liquidi e gas",
+    "descrivere com'è un solido, un liquido e un gas",
+    "sapere che con il caldo e il freddo le cose cambiano stato"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Solido, liquido o gas? Scrivi ogni cosa nella colonna giusta.", "categorie": ["🪨 Solido", "💧 Liquido", "🎈 Gas"], "elementi": [{ "testo": "sasso", "categoria": "🪨 Solido" }, { "testo": "matita", "categoria": "🪨 Solido" }, { "testo": "latte", "categoria": "💧 Liquido" }, { "testo": "olio", "categoria": "💧 Liquido" }, { "testo": "aria", "categoria": "🎈 Gas" }, { "testo": "vapore", "categoria": "🎈 Gas" }] },
+    { "tipo": "scelta", "immagine": "🥛", "testo": "Un liquido…", "opzioni": ["🥛 prende la forma del contenitore", "🪨 ha sempre una forma sua", "🎈 riempie tutta la stanza"], "corretta": 0 },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Il sasso ha una forma sua.", "vero": true }, { "testo": "L'aria è un liquido.", "vero": false }, { "testo": "Il gas riempie tutto lo spazio.", "vero": true }, { "testo": "Il ghiaccio è acqua diventata solida.", "vero": true }] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci ogni cosa al suo stato.", "coppie": [["ghiaccio", "solido"], ["succo", "liquido"], ["vapore", "gas"]] },
+    { "tipo": "ordina", "immagine": "🔥", "testo": "Con il caldo il cubetto cambia. Metti in ordine.", "elementi": ["ghiaccio", "acqua", "vapore"] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa con le parole giuste.", "frase": "Con il freddo l'acqua diventa ___. Con il caldo l'acqua diventa ___. Il cioccolato al caldo diventa ___.", "soluzioni": ["ghiaccio", "vapore", "liquido"], "parole": ["ghiaccio", "vapore", "liquido", "sasso"] },
+    { "tipo": "scelta", "immagine": "🔍", "testo": "Nel solido le palline…", "opzioni": ["🧱 stanno strette strette", "🕊️ volano lontane", "🛝 scivolano"], "corretta": 0 },
+    { "tipo": "classifica", "immagine": "🌡️", "testo": "Succede con il caldo o con il freddo?", "categorie": ["🔥 Caldo", "❄️ Freddo"], "elementi": [{ "testo": "il ghiaccio si scioglie", "categoria": "🔥 Caldo" }, { "testo": "l'acqua bolle", "categoria": "🔥 Caldo" }, { "testo": "l'acqua diventa ghiaccio", "categoria": "❄️ Freddo" }, { "testo": "il cioccolato torna solido", "categoria": "❄️ Freddo" }] },
+    { "tipo": "risposta", "immagine": "🍶", "testo": "Metti una bottiglia \"vuota\" sott'acqua: escono le bolle. Perché?", "righe": 3, "soluzione": "Perché la bottiglia era piena d'aria. L'aria è un gas e non si vede." },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna una cosa solida, una cosa liquida e una cosa che contiene un gas." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Solido o liquido?", "categorie": ["🪨 Solido", "💧 Liquido"], "elementi": [{ "testo": "sasso", "categoria": "🪨 Solido" }, { "testo": "matita", "categoria": "🪨 Solido" }, { "testo": "latte", "categoria": "💧 Liquido" }, { "testo": "acqua", "categoria": "💧 Liquido" }] },
+    { "tipo": "scelta", "immagine": "🎈", "testo": "Nel palloncino c'è…", "opzioni": ["🎈 aria", "💧 acqua"], "corretta": 0 },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazioni": [{ "testo": "Il latte prende la forma del bicchiere.", "vero": true }, { "testo": "Il sasso è un liquido.", "vero": false }] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [["ghiaccio", "solido"], ["acqua", "liquido"], ["vapore", "gas"]] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa.", "frase": "Con il freddo l'acqua diventa ___.", "soluzioni": ["ghiaccio"], "parole": ["ghiaccio", "vapore"] },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna un cubetto di ghiaccio che si scioglie al sole." }
+  ]
+}

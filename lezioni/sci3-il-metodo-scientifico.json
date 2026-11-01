@@ -1,0 +1,287 @@
+{
+  "titolo": "Il metodo scientifico",
+  "emoji": "🔬",
+  "materia": "scienze",
+  "classe": 3,
+  "introduzione": "Impariamo a lavorare come le scienziate: domanda, ipotesi, esperimento, conclusione.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Sofia, la scienziata!\nSul davanzale ho due vasetti con due semi.\nUn seme è cresciuto, l'altro no. Perché? Indaghiamo insieme!",
+    "immagini": ["🪴 vasetti", "🌰 semi", "🔍 indagine"],
+    "missione": "Fate con Sofia tutti i passi della scienziata. Alla fine vincete la figurina della lente!"
+  },
+  "premio": "🔍",
+  "parole_chiave": [
+    "👀 osservare",
+    "❓ domanda",
+    "💡 ipotesi",
+    "🧪 esperimento",
+    "📝 risultati",
+    "✅ conclusione"
+  ],
+  "sezioni": [
+    {
+      "titolo": "👀 Osservo e faccio una domanda",
+      "immagine": "👀",
+      "testo": "La scienziata guarda bene le cose: osserva.\nUsa gli occhi, le orecchie, le mani e il naso.\nPoi nota qualcosa di strano.\nE si fa una domanda: perché succede?",
+      "immagini": ["👀 occhi", "👂 orecchie", "🖐️ mani", "❓ domanda"],
+      "scopri": [
+        { "fronte": "👀 Osservare", "retro": "🔍 Guardare con attenzione, usando i sensi." },
+        { "fronte": "❓ Domanda", "retro": "🤔 Che cosa voglio scoprire?" },
+        { "fronte": "👃 I sensi", "retro": "🖐️ Vista, udito, tatto, olfatto e gusto." }
+      ]
+    },
+    {
+      "titolo": "💡 Faccio un'ipotesi",
+      "immagine": "💡",
+      "testo": "L'ipotesi è una risposta possibile.\nÈ un'idea che non so ancora se è giusta.\nSofia pensa: forse il seme non cresce senza acqua.\nOra deve controllare!",
+      "immagini": ["💡 ipotesi", "🤔 idea", "💧 acqua"],
+      "pensa": {
+        "domanda": "Perché l'ipotesi non è ancora la risposta sicura?",
+        "risposta": "Perché è solo un'idea: per sapere se è giusta bisogna fare un esperimento."
+      }
+    },
+    {
+      "titolo": "🧪 Faccio l'esperimento",
+      "immagine": "🧪",
+      "testo": "Con l'esperimento controllo l'ipotesi.\nSofia prende due semi uguali.\nUn seme ha l'acqua, l'altro no.\nTutto il resto è uguale.\nOgni giorno guarda e scrive cosa vede.",
+      "immagini": ["🌰 due semi", "💧 acqua", "🚫 niente acqua", "📝 quaderno"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "l'esperimento dei semi",
+        "passi": [
+          { "figure": "🌰 🌰", "testo": "Sofia prende due semi uguali." },
+          { "figure": "🌰 💧", "testo": "Al primo seme dà l'acqua." },
+          { "figure": "🌰 🚫", "testo": "Al secondo seme non dà acqua." },
+          { "figure": "☀️ 📅", "testo": "Aspetta qualche giorno. Tutto il resto è uguale." },
+          { "figure": "🌱 🌰", "testo": "Il seme con l'acqua germoglia. L'altro no." }
+        ]
+      },
+      "esperimento": {
+        "titolo": "I fagioli nel cotone",
+        "materiali": ["🫙 due vasetti", "☁️ cotone", "🫘 quattro fagioli", "💧 acqua"],
+        "passi": ["Metti il cotone nei due vasetti.", "Metti due fagioli in ogni vasetto.", "Bagna il cotone di un solo vasetto.", "Metti i vasetti vicini, alla luce.", "Ogni giorno guarda e disegna."],
+        "domanda": "In quale vasetto germogliano i fagioli?"
+      }
+    },
+    {
+      "titolo": "✅ Scrivo la conclusione",
+      "immagine": "✅",
+      "testo": "Alla fine guardo i risultati.\nL'ipotesi era giusta o sbagliata?\nSofia scrive: senza acqua il seme non cresce.\nQuesta è la conclusione.\nSe l'ipotesi è sbagliata, ne provo un'altra!",
+      "immagini": ["📝 risultati", "✅ conclusione", "🔄 riprovo"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i passi della scienziata",
+        "passi": [
+          { "figure": "👀", "testo": "Primo: osservo." },
+          { "figure": "❓", "testo": "Secondo: faccio una domanda." },
+          { "figure": "💡", "testo": "Terzo: faccio un'ipotesi." },
+          { "figure": "🧪", "testo": "Quarto: faccio l'esperimento." },
+          { "figure": "📝 → ✅", "testo": "Quinto: guardo i risultati e scrivo la conclusione." }
+        ]
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "👀",
+      "domanda": "Che cosa fa per prima cosa la scienziata?",
+      "opzioni": ["👀 osserva", "✅ scrive la conclusione", "😴 dorme"],
+      "corretta": 0,
+      "spiegazione": "Prima si osserva con attenzione."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "💡",
+      "affermazione": "L'ipotesi è una risposta possibile, da controllare.",
+      "corretta": true,
+      "spiegazione": "Sì! È un'idea che controllo con l'esperimento."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il senso alla parte del corpo.",
+      "coppie": [
+        ["👁️ vista", "👀 occhi"],
+        ["🎵 udito", "👂 orecchie"],
+        ["🌸 olfatto", "👃 naso"],
+        ["🧸 tatto", "🖐️ mani"]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi della scienziata.",
+      "elementi": ["👀 osservo", "❓ faccio una domanda", "💡 faccio un'ipotesi", "🧪 faccio l'esperimento", "✅ scrivo la conclusione"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧪",
+      "domanda": "A che cosa serve l'esperimento?",
+      "opzioni": ["🧪 a controllare l'ipotesi", "🎨 a colorare", "🍰 a fare merenda"],
+      "corretta": 0,
+      "spiegazione": "Con l'esperimento vedo se l'ipotesi è giusta."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌰",
+      "affermazione": "Nell'esperimento di Sofia i due semi hanno tutto diverso.",
+      "corretta": false,
+      "spiegazione": "No: cambia solo l'acqua. Tutto il resto è uguale."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Prima faccio una [domanda]. Poi faccio un'[ipotesi].",
+      "distrattori": ["merenda", "torta"]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "È una domanda o un'ipotesi?",
+      "categorie": ["❓ Domanda", "💡 Ipotesi"],
+      "elementi": [
+        { "testo": "❓ Perché il seme non cresce?", "categoria": "❓ Domanda" },
+        { "testo": "❓ Che cosa serve alla pianta?", "categoria": "❓ Domanda" },
+        { "testo": "❓ Perché il ghiaccio si scioglie?", "categoria": "❓ Domanda" },
+        { "testo": "💧 Forse gli manca l'acqua.", "categoria": "💡 Ipotesi" },
+        { "testo": "☀️ Forse serve la luce.", "categoria": "💡 Ipotesi" },
+        { "testo": "🔥 Forse è per il caldo.", "categoria": "💡 Ipotesi" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "domanda": "Il seme con l'acqua germoglia, l'altro no. Qual è la conclusione?",
+      "opzioni": ["💧 il seme ha bisogno d'acqua", "🌙 il seme ha bisogno della luna", "🎵 il seme ha bisogno di musica"],
+      "corretta": 0,
+      "spiegazione": "Cambiava solo l'acqua: quindi serve l'acqua."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il passo e il suo disegno.",
+      "coppie": [
+        ["👀 osservo", "🔍 guardo bene"],
+        ["💡 ipotesi", "🤔 forse…"],
+        ["🧪 esperimento", "🫙 provo"],
+        ["✅ conclusione", "📝 scrivo"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: che cosa NON è un passo della scienziata?",
+      "elementi": ["👀 osservare", "💡 fare un'ipotesi", "🎲 tirare a indovinare", "🧪 fare l'esperimento"],
+      "intruso": 2,
+      "spiegazione": "La scienziata non tira a indovinare: controlla con l'esperimento."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "Se l'ipotesi è sbagliata, la scienziata ne prova un'altra.",
+      "corretta": true,
+      "spiegazione": "Sì! Anche gli errori aiutano a scoprire."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📝",
+      "domanda": "Perché Sofia scrive ogni giorno quello che vede?",
+      "opzioni": ["📝 per ricordare i risultati", "✏️ per fare i compiti di italiano", "🎨 per passare il tempo"],
+      "corretta": 0,
+      "spiegazione": "Scrivere aiuta a ricordare e a confrontare."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa gli strumenti della scienziata!",
+      "giusti": ["🔍 lente", "📏 righello", "📓 quaderno", "⏱️ cronometro"],
+      "sbagliati": ["🧸 orsetto", "⚽ pallone", "🍭 lecca lecca", "🎮 videogioco"],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Con l'[esperimento] controllo l'ipotesi. Alla fine scrivo la [conclusione].",
+      "distrattori": ["merenda", "favola"]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il passo alla frase di Sofia.",
+      "coppie": [
+        ["❓ domanda", "🤔 Perché il seme non cresce?"],
+        ["💡 ipotesi", "💧 Forse manca l'acqua."],
+        ["✅ conclusione", "🌱 Senza acqua non cresce."]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👅",
+      "affermazione": "Per osservare in laboratorio si può assaggiare tutto.",
+      "corretta": false,
+      "spiegazione": "No! Non si assaggia niente senza il permesso della maestra."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🫘",
+      "domanda": "Metti in ordine l'esperimento dei fagioli.",
+      "elementi": ["☁️ metto il cotone nei vasetti", "🫘 metto i fagioli", "💧 bagno un solo vasetto", "👀 ogni giorno guardo", "📝 scrivo cosa vedo"]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della scienziata.",
+      "parole": ["💡 ipotesi", "❓ domanda", "🔍 lente", "📝 dati", "🧪 prova"]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🔬",
+      "domanda": "Completa il testo bucato di Sofia.",
+      "testo": "Prima [osservo] con attenzione.\nPoi faccio una [domanda].\nPenso una risposta: è l'[ipotesi].\nLa controllo con l'[esperimento].",
+      "distrattori": ["dormo", "favola"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧊",
+      "domanda": "Ipotesi: il ghiaccio si scioglie prima al sole. Che esperimento fai?",
+      "opzioni": ["🧊 un cubetto al sole e uno all'ombra", "🧊 due cubetti nel freezer", "🍦 mangio un gelato"],
+      "corretta": 0,
+      "spiegazione": "Cambio solo una cosa: sole o ombra."
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "I-PO-TE-SI",
+      "indizio": "💡 Una risposta possibile da controllare"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ESPERIMENTO",
+      "indizio": "🧪 La prova che controlla l'ipotesi"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "OSSERVARE",
+      "indizio": "👀 Guardare con molta attenzione"
+    }
+  ],
+  "ricorda": [
+    "👀 La scienziata osserva con attenzione, usando i sensi.",
+    "❓ Poi fa una domanda: perché succede?",
+    "💡 L'ipotesi è una risposta possibile, da controllare.",
+    "🧪 Con l'esperimento controllo l'ipotesi: cambio una cosa sola.",
+    "✅ Guardo i risultati e scrivo la conclusione."
+  ],
+  "verifica": "verifiche/sci3-il-metodo-scientifico.json"
+}

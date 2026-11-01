@@ -1,0 +1,240 @@
+{
+  "titolo": "Il ciclo della vita",
+  "emoji": "🔄",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "distinguere gli esseri viventi dai non viventi",
+    "conoscere le fasi della vita: nascere, crescere, riprodursi, morire",
+    "riconoscere il ciclo della pianta e di un animale"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "testo": "Chi è un essere vivente?",
+      "opzioni": [
+        "🐱 il gatto",
+        "🪨 il sasso",
+        "🚗 la macchina"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Vivente o non vivente? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🌱 Vivente",
+        "🪨 Non vivente"
+      ],
+      "elementi": [
+        {
+          "testo": "albero",
+          "categoria": "🌱 Vivente"
+        },
+        {
+          "testo": "cane",
+          "categoria": "🌱 Vivente"
+        },
+        {
+          "testo": "bambina",
+          "categoria": "🌱 Vivente"
+        },
+        {
+          "testo": "sasso",
+          "categoria": "🪨 Non vivente"
+        },
+        {
+          "testo": "pallone",
+          "categoria": "🪨 Non vivente"
+        },
+        {
+          "testo": "matita",
+          "categoria": "🪨 Non vivente"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine le fasi della vita.",
+      "elementi": [
+        "nascere",
+        "crescere",
+        "riprodursi",
+        "morire"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La pianta nasce da un seme.",
+          "vero": true
+        },
+        {
+          "testo": "Il sasso cresce ogni giorno.",
+          "vero": false
+        },
+        {
+          "testo": "Dentro il frutto ci sono i semi.",
+          "vero": true
+        },
+        {
+          "testo": "Le persone non crescono.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🐔",
+      "testo": "Metti in ordine: dall'uovo alla gallina.",
+      "elementi": [
+        "uovo",
+        "pulcino che nasce",
+        "pulcino che cresce",
+        "gallina"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la mamma al suo piccolo.",
+      "coppie": [
+        [
+          "gallina",
+          "pulcino"
+        ],
+        [
+          "mucca",
+          "vitellino"
+        ],
+        [
+          "farfalla",
+          "bruco"
+        ],
+        [
+          "albero",
+          "piantina"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "La pianta nasce da un ___. Poi cresce e fa i ___. Dal fiore nasce il ___.",
+      "soluzioni": [
+        "seme",
+        "fiori",
+        "frutto"
+      ],
+      "parole": [
+        "seme",
+        "fiori",
+        "frutto",
+        "sasso"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐛",
+      "testo": "Il bruco cresce e diventa…",
+      "opzioni": [
+        "🦋 una farfalla",
+        "🐝 un'ape",
+        "🐦 un uccellino"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il sasso non è un essere vivente? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché il sasso non nasce, non mangia, non cresce e non fa dei piccoli."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il ciclo della pianta: seme, piantina, fiore, frutto."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "testo": "Chi è vivo?",
+      "opzioni": [
+        "🐱 il gatto",
+        "🪨 il sasso"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "La pianta nasce da un seme.",
+          "vero": true
+        },
+        {
+          "testo": "Il sasso cresce.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine.",
+      "elementi": [
+        "nascere",
+        "crescere",
+        "morire"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "gallina",
+          "pulcino"
+        ],
+        [
+          "farfalla",
+          "bruco"
+        ],
+        [
+          "albero",
+          "piantina"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Dall'uovo nasce il ___.",
+      "soluzioni": [
+        "pulcino"
+      ],
+      "parole": [
+        "pulcino",
+        "seme"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un seme e la pianta che nasce."
+    }
+  ]
+}

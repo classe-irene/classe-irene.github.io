@@ -1,0 +1,155 @@
+{
+  "titolo": "Dal fiore al frutto",
+  "emoji": "🌸",
+  "materia": "scienze",
+  "classe": 4,
+  "obiettivi": [
+    "riconoscere le parti del fiore",
+    "spiegare l'impollinazione",
+    "sapere come nascono il frutto e il seme",
+    "conoscere come viaggiano i semi e come germogliano"
+  ],
+  "consegna": "Leggi con calma. Guarda bene le figure.",
+  "domande": [
+    {
+      "tipo": "collega",
+      "immagine": "🌸",
+      "testo": "Unisci ogni parte del fiore a che cosa fa.",
+      "coppie": [
+        ["petali", "chiamano gli insetti"],
+        ["stami", "hanno il polline"],
+        ["pistillo", "diventa il frutto"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐝",
+      "testo": "Come si chiama il viaggio del polline da un fiore all'altro?",
+      "opzioni": ["🐝 impollinazione", "🌱 germinazione", "💧 evaporazione"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Le api portano il polline da un fiore all'altro.", "vero": true },
+        { "testo": "Il polline sta sui petali.", "vero": false },
+        { "testo": "Anche il vento può portare il polline.", "vero": true },
+        { "testo": "Il pomodoro non è un frutto.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🍎",
+      "testo": "Dal fiore al frutto. Metti in ordine.",
+      "elementi": [
+        "🌸 il fiore si apre",
+        "🐝 l'ape porta il polline",
+        "🍂 cadono i petali",
+        "🍎 cresce il frutto con i semi"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Dopo l'impollinazione la base del ___ si gonfia e diventa il ___ . Dentro ci sono i ___ .",
+      "soluzioni": ["pistillo", "frutto", "semi"],
+      "parole": ["pistillo", "frutto", "semi", "petali"]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Come viaggia il seme? Scrivi nella colonna giusta.",
+      "categorie": ["🌬️ con il vento", "🐿️ con gli animali", "🌊 con l'acqua"],
+      "elementi": [
+        { "testo": "soffione", "categoria": "🌬️ con il vento" },
+        { "testo": "seme d'acero", "categoria": "🌬️ con il vento" },
+        { "testo": "ghianda", "categoria": "🐿️ con gli animali" },
+        { "testo": "ciliegia", "categoria": "🐿️ con gli animali" },
+        { "testo": "cocco", "categoria": "🌊 con l'acqua" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "testo": "Il seme germoglia. Che cosa esce per prima?",
+      "opzioni": ["⬇️ la radice", "🌸 il fiore", "🍎 il frutto"],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌰",
+      "testo": "Dal seme alla pianta. Metti in ordine.",
+      "elementi": ["🌰 seme", "🌱 germoglio", "🌿 piantina", "🌸 pianta con i fiori"]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché tanti fiori hanno colori vivaci e un buon profumo? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Per chiamare gli insetti, che portano il polline da un fiore all'altro."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un fiore e scrivi i nomi: petali, stami, pistillo."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "collega",
+      "immagine": "🌸",
+      "testo": "Unisci.",
+      "coppie": [
+        ["petali", "colorati"],
+        ["polline", "polverina gialla"],
+        ["pistillo", "al centro"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐝",
+      "testo": "Chi porta il polline da un fiore all'altro?",
+      "opzioni": ["🐝 l'ape", "🐟 il pesce"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Dentro il frutto ci sono i semi.", "vero": true },
+        { "testo": "Il polline è blu.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🍎",
+      "testo": "Metti in ordine.",
+      "elementi": ["🌸 fiore", "🍏 frutto piccolo", "🍎 frutto maturo"]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Per germogliare il seme ha bisogno di ___ e di calore.",
+      "soluzioni": ["acqua"],
+      "parole": ["acqua", "sale"]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Come viaggia il seme?",
+      "categorie": ["🌬️ con il vento", "🐿️ con gli animali"],
+      "elementi": [
+        { "testo": "soffione", "categoria": "🌬️ con il vento" },
+        { "testo": "ghianda", "categoria": "🐿️ con gli animali" }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un fiore con i petali colorati."
+    }
+  ]
+}

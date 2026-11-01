@@ -1,0 +1,460 @@
+{
+  "titolo": "Le forme intorno a noi",
+  "emoji": "🔺",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Cerchiamo le forme intorno a noi!",
+  "storia": {
+    "personaggio": "👩‍🎨",
+    "testo": "Ciao, sono Greta, la pittrice!\nDipingo con le forme.\nCerchio, quadrato, triangolo e rettangolo: li trovate con me?",
+    "immagini": [
+      "👩‍🎨 Greta",
+      "🎨 colori",
+      "🔺 forme"
+    ],
+    "missione": "Trovate tutte le forme con Greta. Alla fine vincete la figurina della tavolozza!"
+  },
+  "premio": "🎨",
+  "parole_chiave": [
+    "🔵 cerchio",
+    "🟥 quadrato",
+    "🔺 triangolo",
+    "🚪 rettangolo",
+    "📏 lato",
+    "📍 punta"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔵 Il cerchio",
+      "immagine": "🔵",
+      "testo": "Il cerchio è tondo.\nNon ha punte.\nNon ha lati dritti.\nL'orologio è un cerchio.",
+      "immagini": [
+        "🔵 cerchio",
+        "❌ niente punte",
+        "🕒 orologio"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "cerchi intorno a noi",
+        "passi": [
+          {
+            "figure": "🔵",
+            "testo": "Questo è un cerchio. È tondo."
+          },
+          {
+            "figure": "🔵 → 🕒",
+            "testo": "L'orologio è un cerchio."
+          },
+          {
+            "figure": "🔵 → 🍪",
+            "testo": "Il biscotto è un cerchio."
+          },
+          {
+            "figure": "🔵 → 🍕",
+            "testo": "Anche la pizza intera è un cerchio."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Trovi un cerchio nella tua classe?",
+        "risposta": "Sì! L'orologio, un piatto, un tappo..."
+      }
+    },
+    {
+      "titolo": "🔺 Il triangolo",
+      "immagine": "🔺",
+      "testo": "Il triangolo ha 3 lati.\nHa 3 punte.\nLa tenda è un triangolo.\nAnche la fetta di pizza!",
+      "immagini": [
+        "🔺 triangolo",
+        "3️⃣ tre lati",
+        "⛺ tenda",
+        "🍕 fetta di pizza"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il triangolo",
+        "passi": [
+          {
+            "figure": "🔺",
+            "testo": "Questo è un triangolo."
+          },
+          {
+            "figure": "📏 📏 📏",
+            "testo": "Ha 3 lati."
+          },
+          {
+            "figure": "📍 📍 📍",
+            "testo": "Ha 3 punte."
+          },
+          {
+            "figure": "🔺 → ⛺",
+            "testo": "La tenda è un triangolo."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🔺 Triangolo",
+          "retro": "3️⃣ 3 lati e 3 punte."
+        },
+        {
+          "fronte": "⛺ Tenda",
+          "retro": "🔺 È un triangolo."
+        },
+        {
+          "fronte": "🍕 Fetta di pizza",
+          "retro": "🔺 È un triangolo."
+        }
+      ]
+    },
+    {
+      "titolo": "🟥 Il quadrato",
+      "immagine": "🟥",
+      "testo": "Il quadrato ha 4 lati.\nI lati sono tutti uguali.\nHa 4 punte.\nLa finestra è un quadrato.",
+      "immagini": [
+        "🟥 quadrato",
+        "4️⃣ quattro lati",
+        "🟰 tutti uguali",
+        "🪟 finestra"
+      ],
+      "scopri": [
+        {
+          "fronte": "🟥 Quadrato",
+          "retro": "4️⃣ 4 lati tutti uguali."
+        },
+        {
+          "fronte": "🪟 Finestra",
+          "retro": "🟥 È un quadrato."
+        },
+        {
+          "fronte": "🧇 Waffle",
+          "retro": "🟥 È un quadrato."
+        }
+      ]
+    },
+    {
+      "titolo": "🚪 Il rettangolo",
+      "immagine": "🚪",
+      "testo": "Anche il rettangolo ha 4 lati.\n2 lati sono lunghi.\n2 lati sono corti.\nLa porta è un rettangolo.",
+      "immagini": [
+        "🚪 rettangolo",
+        "📏 2 lati lunghi",
+        "✏️ 2 lati corti",
+        "📱 telefono"
+      ],
+      "pensa": {
+        "domanda": "Il quadrato e il rettangolo hanno 4 lati. Che differenza c'è?",
+        "risposta": "Nel quadrato i lati sono tutti uguali. Nel rettangolo 2 sono lunghi e 2 sono corti."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🕒",
+      "domanda": "Che forma ha l'orologio?",
+      "opzioni": [
+        "🔵 cerchio",
+        "🔺 triangolo"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'orologio è tondo: un cerchio."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔺",
+      "domanda": "Quanti triangoli?",
+      "oggetto": "🔺",
+      "numero": 5,
+      "spiegazione": "Sono 5 triangoli."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⛺",
+      "domanda": "Che forma ha la tenda?",
+      "opzioni": [
+        "🟥 quadrato",
+        "🔺 triangolo",
+        "🔵 cerchio"
+      ],
+      "corretta": 1,
+      "spiegazione": "La tenda è un triangolo."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la cosa alla forma.",
+      "coppie": [
+        [
+          "🍪 biscotto",
+          "🔵 cerchio"
+        ],
+        [
+          "⛺ tenda",
+          "🔺 triangolo"
+        ],
+        [
+          "🪟 finestra",
+          "🟥 quadrato"
+        ],
+        [
+          "🚪 porta",
+          "🚪 rettangolo"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔵",
+      "affermazione": "Il cerchio ha 3 punte.",
+      "corretta": false,
+      "spiegazione": "No: il cerchio è tondo, non ha punte."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🔵",
+      "domanda": "Quanti cerchi?",
+      "oggetto": "🔵",
+      "numero": 8,
+      "spiegazione": "Sono 8 cerchi."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Tondo o con le punte?",
+      "categorie": [
+        "🔵 Tondo",
+        "🔺 Con le punte"
+      ],
+      "elementi": [
+        {
+          "testo": "🕒 orologio",
+          "categoria": "🔵 Tondo"
+        },
+        {
+          "testo": "🍪 biscotto",
+          "categoria": "🔵 Tondo"
+        },
+        {
+          "testo": "🍩 ciambella",
+          "categoria": "🔵 Tondo"
+        },
+        {
+          "testo": "⛺ tenda",
+          "categoria": "🔺 Con le punte"
+        },
+        {
+          "testo": "🪟 finestra",
+          "categoria": "🔺 Con le punte"
+        },
+        {
+          "testo": "🚪 porta",
+          "categoria": "🔺 Con le punte"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔺",
+      "domanda": "Quanti lati ha il triangolo?",
+      "opzioni": [
+        "3️⃣ tre",
+        "4️⃣ quattro",
+        "2️⃣ due"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il triangolo ha 3 lati."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🟥",
+      "affermazione": "Il quadrato ha 4 lati uguali.",
+      "corretta": true,
+      "spiegazione": "Sì! 4 lati tutti uguali."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la coppia.",
+      "coppie": [
+        [
+          "🔵 cerchio",
+          "🕒 orologio"
+        ],
+        [
+          "🔺 triangolo",
+          "⛺ tenda"
+        ],
+        [
+          "🟥 quadrato",
+          "🪟 finestra"
+        ],
+        [
+          "🚪 rettangolo",
+          "📱 telefono"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un cerchio?",
+      "elementi": [
+        "🕒 orologio",
+        "🍪 biscotto",
+        "⛺ tenda",
+        "🍩 ciambella"
+      ],
+      "intruso": 2,
+      "spiegazione": "La tenda è un triangolo."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚪",
+      "domanda": "Che forma ha la porta?",
+      "opzioni": [
+        "🔵 cerchio",
+        "🔺 triangolo",
+        "🚪 rettangolo"
+      ],
+      "corretta": 2,
+      "spiegazione": "2 lati lunghi e 2 corti: è un rettangolo."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🟥",
+      "domanda": "Quanti quadrati?",
+      "oggetto": "🟥",
+      "numero": 6,
+      "spiegazione": "Sono 6 quadrati."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il triangolo ha [3] lati. Il quadrato ha [4] lati.",
+      "distrattori": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍕",
+      "affermazione": "La fetta di pizza è un triangolo.",
+      "corretta": true,
+      "spiegazione": "Sì! Ha 3 punte."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i triangoli!",
+      "giusti": [
+        "🔺 triangolo",
+        "⛺ tenda",
+        "🍕 fetta di pizza",
+        "🔻 triangolo giù"
+      ],
+      "sbagliati": [
+        "🔵 cerchio",
+        "🟥 quadrato",
+        "🕒 orologio",
+        "🍪 biscotto"
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Quadrato o rettangolo?",
+      "categorie": [
+        "🟥 Quadrato",
+        "🚪 Rettangolo"
+      ],
+      "elementi": [
+        {
+          "testo": "🪟 finestra",
+          "categoria": "🟥 Quadrato"
+        },
+        {
+          "testo": "🧇 waffle",
+          "categoria": "🟥 Quadrato"
+        },
+        {
+          "testo": "🚪 porta",
+          "categoria": "🚪 Rettangolo"
+        },
+        {
+          "testo": "📱 telefono",
+          "categoria": "🚪 Rettangolo"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔵",
+      "domanda": "Quale forma non ha punte?",
+      "opzioni": [
+        "🔺 triangolo",
+        "🔵 cerchio",
+        "🟥 quadrato"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il cerchio è tondo."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dalla forma con meno lati a quella con più lati.",
+      "elementi": [
+        "🔵 cerchio: 0 lati",
+        "🔺 triangolo: 3 lati",
+        "🟥 quadrato: 4 lati"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🎨",
+      "domanda": "Completa le frasi di Greta.",
+      "testo": "Il [cerchio] è tondo.\nIl [triangolo] ha 3 punte.",
+      "distrattori": [
+        "quadrato",
+        "rettangolo"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le forme.",
+      "parole": [
+        "🔵 cerchio",
+        "🟥 quadrato",
+        "🔺 triangolo",
+        "📏 lato"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "CER-CHIO",
+      "indizio": "🔵 La forma tonda"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "QUADRATO",
+      "indizio": "🟥 4 lati tutti uguali"
+    }
+  ],
+  "ricorda": [
+    "🔵 Il cerchio è tondo, senza punte.",
+    "🔺 Il triangolo ha 3 lati e 3 punte.",
+    "🟥 Il quadrato ha 4 lati uguali.",
+    "🚪 Il rettangolo ha 2 lati lunghi e 2 corti.",
+    "👀 Le forme sono intorno a noi."
+  ],
+  "verifica": "verifiche/mat1-le-forme.json"
+}

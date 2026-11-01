@@ -1,0 +1,274 @@
+{
+  "titolo": "La relazione di equivalenza",
+  "emoji": "⚖️",
+  "materia": "matematica",
+  "classe": 4,
+  "obiettivi": [
+    "conoscere la tabella hk, dak, uk, h, da, u",
+    "sapere che ogni casella vale 10 volte quella alla sua destra",
+    "trovare scritture equivalenti con la tabella",
+    "usare la virgola quando la casella cercata è più a sinistra"
+  ],
+  "consegna": "Leggi con calma. Usa la tabella: hk, dak, uk, h, da, u.",
+  "domande": [
+    {
+      "tipo": "ordina",
+      "immagine": "🗂️",
+      "testo": "Metti le caselle in ordine, dalla più grande alla più piccola. Scrivi 1, 2, 3, 4, 5, 6.",
+      "elementi": [
+        "🟩 hk",
+        "🟥 dak",
+        "🟦 uk",
+        "🟩 h",
+        "🟥 da",
+        "🟦 u"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la sigla al suo nome.",
+      "coppie": [
+        [
+          "hk",
+          "centinaia di migliaia"
+        ],
+        [
+          "dak",
+          "decine di migliaia"
+        ],
+        [
+          "uk",
+          "unità di migliaia"
+        ],
+        [
+          "da",
+          "decine"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Ogni casella vale 10 volte quella alla sua destra.",
+          "vero": true
+        },
+        {
+          "testo": "1 uk = 100 da",
+          "vero": true
+        },
+        {
+          "testo": "4 h = 4 000 u",
+          "vero": false
+        },
+        {
+          "testo": "3 dak = 300 h",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🎬",
+      "testo": "Scrivi 3 dak in tanti modi.",
+      "operazioni": [
+        {
+          "testo": "3 dak in u",
+          "risultato": 30000
+        },
+        {
+          "testo": "3 dak in da",
+          "risultato": 3000
+        },
+        {
+          "testo": "3 dak in h",
+          "risultato": 300
+        },
+        {
+          "testo": "3 dak in uk",
+          "risultato": 30
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🗂️",
+      "testo": "Usa la tabella e completa.",
+      "operazioni": [
+        {
+          "testo": "7 uk in da",
+          "risultato": 700
+        },
+        {
+          "testo": "5 dak in uk",
+          "risultato": 50
+        },
+        {
+          "testo": "8 uk in u",
+          "risultato": 8000
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🔴",
+      "testo": "Il risultato ha la virgola? Scrivi ogni equivalenza nella colonna giusta.",
+      "categorie": [
+        "🔴 Sì, la virgola",
+        "⚪ No, niente virgola"
+      ],
+      "elementi": [
+        {
+          "testo": "3 dak = ? hk",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "5 h = ? uk",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "8 u = ? da",
+          "categoria": "🔴 Sì, la virgola"
+        },
+        {
+          "testo": "3 dak = ? h",
+          "categoria": "⚪ No, niente virgola"
+        },
+        {
+          "testo": "2 uk = ? u",
+          "categoria": "⚪ No, niente virgola"
+        },
+        {
+          "testo": "9 h = ? da",
+          "categoria": "⚪ No, niente virgola"
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔴",
+      "testo": "Attenzione alla virgola!",
+      "operazioni": [
+        {
+          "testo": "3 dak in hk",
+          "risultato": "0,3"
+        },
+        {
+          "testo": "45 h in uk",
+          "risultato": "4,5"
+        },
+        {
+          "testo": "6 u in da",
+          "risultato": "0,6"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "📏",
+      "testo": "Completa la regola con le parole giuste.",
+      "frase": "Metto la cifra nella sua ___. Riempio con gli ___ fino alle unità. Se la casella è più a sinistra, scrivo 0 e la ___.",
+      "soluzioni": [
+        "casella",
+        "zeri",
+        "virgola"
+      ],
+      "parole": [
+        "casella",
+        "zeri",
+        "virgola",
+        "decina"
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "👩‍🏫",
+      "testo": "Ada ha 2 uk di libri. Quante centinaia (h) di libri sono? Spiega come usi la tabella.",
+      "righe": 3,
+      "soluzione": "2 uk = 20 h. Metto il 2 nella casella uk, riempio con gli zeri fino alle unità e leggo fino a h: 20."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "ordina",
+      "immagine": "🗂️",
+      "testo": "Dalla casella più grande alla più piccola. Scrivi 1, 2, 3.",
+      "elementi": [
+        "🟦 uk",
+        "🟩 h",
+        "🟥 da"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔟",
+      "testo": "10 da fanno…",
+      "opzioni": [
+        "🟩 1 h",
+        "🟦 1 uk"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci le scritture uguali.",
+      "coppie": [
+        [
+          "3 dak",
+          "30 uk"
+        ],
+        [
+          "2 uk",
+          "20 h"
+        ],
+        [
+          "6 h",
+          "600 u"
+        ]
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🗂️",
+      "testo": "Usa la tabella e completa.",
+      "operazioni": [
+        {
+          "testo": "3 dak in h",
+          "risultato": 300
+        },
+        {
+          "testo": "7 uk in da",
+          "risultato": 700
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "📏",
+      "testo": "Completa con le parole.",
+      "frase": "Riempio con gli ___ fino alle unità. Se la casella è più a sinistra, metto la ___.",
+      "soluzioni": [
+        "zeri",
+        "virgola"
+      ],
+      "parole": [
+        "zeri",
+        "virgola",
+        "decine"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔴",
+      "testo": "3 dak = ? hk",
+      "opzioni": [
+        "🟩 0,3 hk",
+        "🟩 30 hk"
+      ],
+      "corretta": 0
+    }
+  ]
+}

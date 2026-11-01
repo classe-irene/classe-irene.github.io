@@ -1,0 +1,224 @@
+{
+  "titolo": "Indagini e grafici",
+  "emoji": "📊",
+  "materia": "matematica",
+  "classe": 3,
+  "obiettivi": [
+    "conoscere i passi di un'indagine",
+    "leggere i dati in una tabella",
+    "leggere un istogramma e un ideogramma",
+    "trovare la moda"
+  ],
+  "consegna": "Leggi con calma. I dati dell'indagine: mela 5, banana 3, fragola 7, pera 2.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "testo": "Fare un'indagine vuol dire…",
+      "opzioni": [
+        "🔍 cercare la risposta a una domanda",
+        "🎨 colorare un disegno",
+        "📏 misurare un tavolo"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine i passi dell'indagine.",
+      "elementi": [
+        "scelgo la domanda",
+        "chiedo a tutti",
+        "segno le risposte",
+        "faccio la tabella",
+        "disegno il grafico"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Le risposte raccolte si chiamano dati.",
+          "vero": true
+        },
+        {
+          "testo": "Nell'istogramma la colonna più bassa è la moda.",
+          "vero": false
+        },
+        {
+          "testo": "Nell'ideogramma uso i disegni al posto dei numeri.",
+          "vero": true
+        },
+        {
+          "testo": "Per l'indagine chiedo solo a un bambino.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la parola al suo significato.",
+      "coppie": [
+        [
+          "dati",
+          "le risposte raccolte"
+        ],
+        [
+          "istogramma",
+          "grafico con le colonne"
+        ],
+        [
+          "ideogramma",
+          "grafico con i disegni"
+        ],
+        [
+          "moda",
+          "la risposta più scelta"
+        ]
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍓",
+      "testo": "Nell'ideogramma ogni fragola è un bambino. Quanti bambini hanno scelto la fragola?",
+      "figura": "🍓",
+      "numero": 7
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "📋",
+      "testo": "Leggi i dati: mela 5, banana 3, fragola 7, pera 2.",
+      "operazioni": [
+        {
+          "testo": "bambini in tutto: 5 + 3 + 7 + 2",
+          "risultato": 17
+        },
+        {
+          "testo": "fragola meno banana: 7 − 3",
+          "risultato": 4
+        },
+        {
+          "testo": "mela più pera: 5 + 2",
+          "risultato": 7
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "La frutta più scelta è la ___. La frutta meno scelta è la ___.",
+      "soluzioni": [
+        "fragola",
+        "pera"
+      ],
+      "parole": [
+        "fragola",
+        "pera",
+        "mela"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "❓",
+      "testo": "Quale domanda va bene per un'indagine in classe?",
+      "opzioni": [
+        "🐕 Qual è il tuo animale preferito?",
+        "🦒 Quanto è alta una giraffa?",
+        "🌍 Quanto è grande la Terra?"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Guarda i dati. Che cosa compra la maestra Sara per la merenda della classe? Perché?",
+      "righe": 3,
+      "soluzione": "Compra le fragole, perché sono la frutta più scelta: 7 bambini, è la moda."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Sul quaderno a quadretti disegna l'istogramma: mela 5, banana 3, fragola 7, pera 2."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔢",
+      "testo": "Le risposte raccolte si chiamano…",
+      "opzioni": [
+        "🔢 dati",
+        "📏 lati"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "L'istogramma ha le colonne.",
+          "vero": true
+        },
+        {
+          "testo": "La moda è la risposta meno scelta.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🍎",
+      "testo": "Ogni mela è un bambino. Quanti bambini hanno scelto la mela?",
+      "figura": "🍎",
+      "numero": 5
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "istogramma",
+          "colonne"
+        ],
+        [
+          "ideogramma",
+          "disegni"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "La frutta più scelta è la ___.",
+      "soluzioni": [
+        "fragola"
+      ],
+      "parole": [
+        "fragola",
+        "pera"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "📋",
+      "testo": "Calcola.",
+      "operazioni": [
+        {
+          "testo": "fragola meno banana: 7 − 3",
+          "risultato": 4
+        }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Colora sul quaderno 5 quadretti per la mela e 3 per la banana."
+    }
+  ]
+}

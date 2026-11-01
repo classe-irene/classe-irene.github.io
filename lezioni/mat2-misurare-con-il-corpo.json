@@ -1,0 +1,111 @@
+{
+  "titolo": "Misurare con il corpo",
+  "emoji": "📏",
+  "materia": "matematica",
+  "classe": 2,
+  "introduzione": "Misuriamo le cose con le spanne, i passi, i piedi e le matite.",
+  "storia": {
+    "personaggio": "👵",
+    "testo": "Ciao, sono nonna Rina, la sarta!\nVoglio cucire una tovaglia per il tavolo.\nMa il metro è sparito! Come faccio a misurare?",
+    "immagini": ["🧵 sarta", "🍽️ tavolo", "📏 metro"],
+    "missione": "Aiutate nonna Rina a misurare senza il metro. Alla fine vincete la figurina del righello!"
+  },
+  "premio": "📏",
+  "parole_chiave": ["🖐️ spanna", "👣 passo", "🦶 piede", "✏️ matita", "📏 misurare", "🔢 unità di misura"],
+  "sezioni": [
+    {
+      "titolo": "🖐️ La spanna",
+      "immagine": "🖐️",
+      "testo": "Apri bene la mano.\nDal pollice al mignolo c'è una spanna.\nNonna Rina misura il tavolo con le spanne.\nIl tavolo è lungo 6 spanne.",
+      "immagini": ["✋ mano", "🖐️ spanna", "🍽️ tavolo"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "misuriamo il tavolo con le spanne",
+        "passi": [
+          { "figure": "🖐️", "testo": "Apro bene la mano: questa è una spanna." },
+          { "figure": "🍽️ 🖐️", "testo": "Parto dal bordo del tavolo." },
+          { "figure": "🖐️ 🖐️ 🖐️", "testo": "Metto le spanne una dopo l'altra, senza buchi." },
+          { "figure": "🖐️ 🖐️ 🖐️ 🖐️ 🖐️", "testo": "Conto le spanne fino all'altro bordo." },
+          { "figure": "🍽️ → 6️⃣", "testo": "Il tavolo è lungo 6 spanne." }
+        ]
+      }
+    },
+    {
+      "titolo": "👣 I passi e i piedi",
+      "immagine": "👣",
+      "testo": "Per le cose lunghe uso i passi.\nLa classe è lunga 12 passi.\nPosso misurare anche con i piedi, uno attaccato all'altro.",
+      "immagini": ["👣 passi", "🏫 classe", "🦶 piedi"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "misuriamo la classe con i passi",
+        "passi": [
+          { "figure": "🚶‍♀️ 🏫", "testo": "Lia parte dalla lavagna." },
+          { "figure": "👣 👣 👣", "testo": "Cammina e conta i passi: uno, due, tre…" },
+          { "figure": "🚶‍♀️ 🚪", "testo": "Arriva alla porta." },
+          { "figure": "🏫 → 🔟 👣 👣", "testo": "Dieci passi, e ancora due: la classe è lunga 12 passi." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Il corridoio è molto lungo. Lo misuri con le spanne o con i passi?",
+        "risposta": "Con i passi! Con le spanne ci vorrebbe tantissimo tempo."
+      }
+    },
+    {
+      "titolo": "✏️ Misurare con le cose",
+      "immagine": "✏️",
+      "testo": "Posso misurare anche con una matita o una graffetta.\nLa cosa che uso per misurare si chiama unità di misura.\nLa metto tante volte, una dopo l'altra, e conto.",
+      "immagini": ["✏️ matita", "📎 graffetta", "🔢 unità di misura"],
+      "scopri": [
+        { "fronte": "📘 Il quaderno", "retro": "✏️ È lungo 2 matite." },
+        { "fronte": "🚪 La porta", "retro": "🖐️ È larga 5 spanne." },
+        { "fronte": "🏫 La classe", "retro": "👣 È lunga 12 passi." }
+      ]
+    },
+    {
+      "titolo": "🤔 Perché i numeri cambiano?",
+      "immagine": "🤔",
+      "testo": "La mano della nonna è grande.\nLa mano di Lia è piccola.\nMisurano lo stesso tavolo.\nLa nonna conta 6 spanne, Lia ne conta 9.\nCon la mano piccola servono più spanne.",
+      "immagini": ["👵 mano grande", "👧 mano piccola", "🍽️ tavolo", "🔢 numeri diversi"],
+      "pensa": {
+        "domanda": "Come facciamo ad avere tutti lo stesso numero?",
+        "risposta": "Usiamo tutti la stessa unità di misura: la stessa matita, oppure il metro!"
+      }
+    }
+  ],
+  "esercizi": [
+    { "tipo": "scelta", "immagine": "🖐️", "domanda": "Che cos'è la spanna?", "opzioni": ["🖐️ la mano aperta, dal pollice al mignolo", "👣 un passo lungo", "✏️ una matita"], "corretta": 0, "spiegazione": "La spanna si fa con la mano bene aperta." },
+    { "tipo": "scelta", "immagine": "🏃‍♀️", "domanda": "Per misurare il corridoio, che cosa usi?", "opzioni": ["👣 i passi", "📎 una graffetta"], "corretta": 0, "spiegazione": "Il corridoio è lungo: i passi sono più comodi." },
+    { "tipo": "scelta", "immagine": "📘", "domanda": "Per misurare il quaderno, che cosa usi?", "opzioni": ["✏️ una matita", "👣 i passi"], "corretta": 0, "spiegazione": "Il quaderno è piccolo: basta una matita." },
+    { "tipo": "vero_falso", "immagine": "🖐️", "affermazione": "Quando misuro, metto le spanne una dopo l'altra, senza buchi.", "corretta": true, "spiegazione": "Sì! Se lascio buchi, la misura è sbagliata." },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Misuro con le spanne o con i passi?", "categorie": ["🖐️ Spanne", "👣 Passi"], "elementi": [{ "testo": "📘 il quaderno", "categoria": "🖐️ Spanne" }, { "testo": "🍽️ il tavolo", "categoria": "🖐️ Spanne" }, { "testo": "🪑 la sedia", "categoria": "🖐️ Spanne" }, { "testo": "🏫 la classe", "categoria": "👣 Passi" }, { "testo": "🌳 il giardino", "categoria": "👣 Passi" }, { "testo": "🛝 il cortile", "categoria": "👣 Passi" }] },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Come misuro il tavolo con le spanne? Metti in ordine.", "elementi": ["🖐️ apro bene la mano", "👉 parto dal bordo del tavolo", "🖐️ metto le spanne una dopo l'altra", "🔢 conto le spanne"] },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "Il tavolo è lungo 6 [spanne]. La classe è lunga 12 [passi].", "distrattori": ["matite"] },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci la cosa alla sua misura.", "coppie": [["📘 quaderno", "✏️ 2 matite"], ["🍽️ tavolo", "🖐️ 6 spanne"], ["🏫 classe", "👣 12 passi"]] },
+    { "tipo": "vero_falso", "immagine": "👧", "affermazione": "Se la mano è più piccola, conto meno spanne.", "corretta": false, "spiegazione": "No: con la mano piccola servono più spanne." },
+    { "tipo": "scelta", "immagine": "🍽️", "domanda": "Nonna Rina e Lia misurano lo stesso tavolo. Chi conta più spanne?", "opzioni": ["👧 Lia, che ha la mano piccola", "👵 la nonna, che ha la mano grande", "⚖️ tutte e due uguali"], "corretta": 0, "spiegazione": "La mano piccola entra più volte." },
+    { "tipo": "retta", "immagine": "🖐️", "domanda": "Il banco è lungo 4 spanne. Il tavolo è lungo 3 spanne in più. Tocca la misura del tavolo.", "min": 0, "max": 10, "passo": 1, "corretta": 7 },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Quale NON è una parte del corpo? Trova l'intruso.", "elementi": ["🖐️ spanna", "👣 passo", "🦶 piede", "✏️ matita"], "intruso": 3, "spiegazione": "La matita è un oggetto, non una parte del corpo." },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova le carte che vanno insieme.", "coppie": [["🖐️ spanna", "✋ la mano aperta"], ["👣 passo", "🚶‍♀️ cammino"], ["🦶 piede", "👟 uno attaccato all'altro"], ["✏️ matita", "📘 misura il quaderno"]] },
+    { "tipo": "scelta", "immagine": "📘", "domanda": "Misuro il libro con le graffette. Le graffette sono…", "opzioni": ["🔢 l'unità di misura", "📘 la cosa da misurare", "🏁 il risultato"], "corretta": 0, "spiegazione": "La cosa che uso per misurare è l'unità di misura." },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "La cosa che uso per misurare si chiama [unità] di misura.", "distrattori": ["regola", "linea"] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "affermazione": "Per avere tutti lo stesso numero, usiamo la stessa unità di misura.", "corretta": true, "spiegazione": "Sì! Per questo esiste il metro." },
+    { "tipo": "acchiappa", "immagine": "🐹", "domanda": "Acchiappa le misure fatte con il corpo!", "giusti": ["🖐️ spanna", "👣 passo", "🦶 piede", "💪 braccio"], "sbagliati": ["📘 libro", "🍽️ tavolo", "🚪 porta", "🪑 sedia"], "quanti": 4 },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dalla cosa più corta alla più lunga.", "elementi": ["📎 graffetta", "✏️ matita", "🍽️ tavolo", "🏫 classe"] },
+    { "tipo": "scelta", "immagine": "🏫", "domanda": "Lia misura la classe: 20 passi. La maestra: 12 passi. Perché?", "opzioni": ["👩‍🏫 la maestra fa i passi più lunghi", "🏫 la classe è cambiata", "❌ la maestra ha sbagliato"], "corretta": 0, "spiegazione": "Con passi più lunghi ne servono meno." },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Che cosa NON misuri con i passi? Trova l'intruso.", "elementi": ["🏫 la classe", "🌳 il giardino", "📘 il quaderno", "🛝 il cortile"], "intruso": 2, "spiegazione": "Il quaderno è piccolo: si misura con la matita o la spanna." },
+    { "tipo": "crucipuzzle", "immagine": "🔎", "domanda": "Crucipuzzle: trova le parole delle misure.", "parole": ["🖐️ spanna", "👣 passo", "🦶 piede", "✏️ matita", "📏 misura"] },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "SPANNA", "indizio": "🖐️ La mano aperta, dal pollice al mignolo" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "PASSO", "indizio": "👣 Lo fai quando cammini, e serve per misurare" }
+  ],
+  "ricorda": [
+    "📏 Misurare vuol dire contare quante volte entra l'unità di misura.",
+    "🖐️ La spanna va dal pollice al mignolo.",
+    "👣 Le cose lunghe le misuro con i passi.",
+    "🔢 Metto l'unità una dopo l'altra, senza buchi, e conto.",
+    "👧 Con un'unità piccola il numero è più grande.",
+    "⚖️ Per avere lo stesso numero, usiamo tutti la stessa unità."
+  ],
+  "verifica": "verifiche/mat2-misurare-con-il-corpo.json"
+}

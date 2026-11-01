@@ -1,0 +1,484 @@
+{
+  "titolo": "Il metodo dello scienziato",
+  "emoji": "🧪",
+  "materia": "scienze",
+  "classe": 2,
+  "introduzione": "Impariamo a osservare, fare ipotesi e provare, come le scienziate.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Teresa, la scienziata!\nIo faccio tante domande sul mondo.\nPoi provo a trovare le risposte con gli esperimenti.",
+    "immagini": [
+      "❓ domande",
+      "🌍 mondo",
+      "🧪 esperimenti"
+    ],
+    "missione": "Diventate piccole scienziate e piccoli scienziati con Teresa. Alla fine vincete la figurina della provetta!"
+  },
+  "premio": "🧪",
+  "parole_chiave": [
+    "👀 osservare",
+    "❓ domanda",
+    "💡 ipotesi",
+    "🧪 esperimento",
+    "✅ conclusione",
+    "🖐️ cinque sensi",
+    "📒 quaderno"
+  ],
+  "sezioni": [
+    {
+      "titolo": "👀 Osservare con i cinque sensi",
+      "immagine": "👀",
+      "testo": "La scienziata prima di tutto osserva.\nCon gli occhi guarda.\nCon le orecchie ascolta.\nCon il naso annusa.\nCon le mani tocca.\nCon la lingua assaggia, ma solo il cibo!",
+      "immagini": [
+        "👀 occhi",
+        "👂 orecchie",
+        "👃 naso",
+        "🖐️ mani",
+        "👅 lingua"
+      ],
+      "scopri": [
+        {
+          "fronte": "👀 Vista",
+          "retro": "🌈 Vedo i colori e le forme."
+        },
+        {
+          "fronte": "👂 Udito",
+          "retro": "🔔 Sento i suoni."
+        },
+        {
+          "fronte": "👃 Olfatto",
+          "retro": "🌸 Sento gli odori."
+        },
+        {
+          "fronte": "🖐️ Tatto",
+          "retro": "🧸 Sento se è morbido o duro."
+        }
+      ],
+      "pensa": {
+        "domanda": "Perché non dobbiamo assaggiare le cose che non conosciamo?",
+        "risposta": "Perché possono essere sporche o pericolose. Si assaggia solo il cibo, con il permesso di un adulto."
+      }
+    },
+    {
+      "titolo": "💡 Domanda e ipotesi",
+      "immagine": "💡",
+      "testo": "Dopo aver osservato, la scienziata fa una domanda.\nPer esempio: la mela galleggia nell'acqua?\nPoi pensa una risposta: è l'ipotesi.\nL'ipotesi è un'idea da controllare.",
+      "immagini": [
+        "❓ domanda",
+        "🍎 mela",
+        "💡 ipotesi",
+        "🔍 controllare"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "i passi della scienziata",
+        "passi": [
+          {
+            "figure": "👀",
+            "testo": "Primo: osservo."
+          },
+          {
+            "figure": "❓",
+            "testo": "Secondo: faccio una domanda."
+          },
+          {
+            "figure": "💡",
+            "testo": "Terzo: penso un'ipotesi, cioè una risposta da controllare."
+          },
+          {
+            "figure": "🧪",
+            "testo": "Quarto: provo con un esperimento."
+          },
+          {
+            "figure": "✅ 📒",
+            "testo": "Quinto: scrivo che cosa ho scoperto. È la conclusione."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🧪 Proviamo: galleggia o affonda?",
+      "immagine": "🧪",
+      "testo": "Ora facciamo l'esperimento.\nMettiamo gli oggetti nell'acqua uno alla volta.\nIl tappo di sughero galleggia: resta sopra.\nLa moneta affonda: va giù.",
+      "immagini": [
+        "🧪 esperimento",
+        "🥣 acqua",
+        "🪵 tappo di sughero",
+        "🪙 moneta"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "galleggia o affonda",
+        "passi": [
+          {
+            "figure": "🥣",
+            "testo": "Prendo una bacinella piena d'acqua."
+          },
+          {
+            "figure": "🪵 → 🥣",
+            "testo": "Metto il tappo di sughero: galleggia!"
+          },
+          {
+            "figure": "🪙 → 🥣",
+            "testo": "Metto la moneta: affonda!"
+          },
+          {
+            "figure": "🍎 → 🥣",
+            "testo": "Metto la mela: galleggia!"
+          },
+          {
+            "figure": "📒 ✏️",
+            "testo": "Scrivo tutto sul quaderno."
+          }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Proviamo in classe: galleggia o affonda?",
+        "materiali": [
+          "🥣 bacinella d'acqua",
+          "🍎 mela",
+          "🪙 moneta",
+          "🪵 tappo di sughero",
+          "🖍️ pastello",
+          "🔑 chiave"
+        ],
+        "passi": [
+          "💡 Per ogni oggetto, di' la tua ipotesi: galleggia o affonda?",
+          "🖐️ Metti un oggetto alla volta nell'acqua.",
+          "👀 Guarda bene che cosa succede.",
+          "📒 Scrivi sul quaderno: galleggia o affonda.",
+          "✅ Controlla: la tua ipotesi era giusta?"
+        ],
+        "domanda": "Quali oggetti hanno galleggiato? Quali sono affondati?"
+      }
+    },
+    {
+      "titolo": "✅ La conclusione",
+      "immagine": "✅",
+      "testo": "Alla fine la scienziata controlla.\nSe l'ipotesi era giusta, bene!\nSe era sbagliata, va bene lo stesso: ha imparato una cosa nuova.\nPoi scrive la conclusione sul quaderno.",
+      "immagini": [
+        "✅ controllo",
+        "👍 giusta",
+        "🤔 sbagliata",
+        "📒 quaderno"
+      ],
+      "pensa": {
+        "domanda": "Se la tua ipotesi è sbagliata, hai fatto un errore brutto?",
+        "risposta": "No! Anche un'ipotesi sbagliata ci insegna qualcosa. Le scienziate imparano proprio così."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "👀",
+      "domanda": "Che cosa fa per prima la scienziata?",
+      "opzioni": [
+        "👀 osserva",
+        "📒 scrive la conclusione",
+        "🧪 fa subito l'esperimento"
+      ],
+      "corretta": 0,
+      "spiegazione": "Prima di tutto si osserva bene."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il senso alla parte del corpo.",
+      "coppie": [
+        [
+          "🌈 vedo",
+          "👀 occhi"
+        ],
+        [
+          "🔔 sento i suoni",
+          "👂 orecchie"
+        ],
+        [
+          "🌸 sento gli odori",
+          "👃 naso"
+        ],
+        [
+          "🧸 tocco",
+          "🖐️ mani"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👅",
+      "affermazione": "Posso assaggiare tutte le cose che trovo.",
+      "corretta": false,
+      "spiegazione": "No! Si assaggia solo il cibo, con un adulto."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👂",
+      "domanda": "Con che cosa sento il suono della campanella?",
+      "opzioni": [
+        "👂 con le orecchie",
+        "👃 con il naso",
+        "👅 con la lingua"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'udito è il senso delle orecchie."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi della scienziata.",
+      "elementi": [
+        "👀 osservo",
+        "❓ faccio una domanda",
+        "💡 penso un'ipotesi",
+        "🧪 faccio l'esperimento",
+        "✅ scrivo la conclusione"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "💡",
+      "domanda": "Che cos'è l'ipotesi?",
+      "opzioni": [
+        "💡 un'idea da controllare",
+        "🧪 una provetta",
+        "📒 un quaderno"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'ipotesi è una risposta pensata prima di provare."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪙",
+      "affermazione": "La moneta nell'acqua affonda.",
+      "corretta": true,
+      "spiegazione": "Sì! La moneta va giù."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Galleggia o affonda?",
+      "categorie": [
+        "🛟 Galleggia",
+        "⬇️ Affonda"
+      ],
+      "elementi": [
+        {
+          "testo": "🪵 tappo di sughero",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "🍎 mela",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "🍃 foglia",
+          "categoria": "🛟 Galleggia"
+        },
+        {
+          "testo": "🪙 moneta",
+          "categoria": "⬇️ Affonda"
+        },
+        {
+          "testo": "🔑 chiave",
+          "categoria": "⬇️ Affonda"
+        },
+        {
+          "testo": "🪨 sasso",
+          "categoria": "⬇️ Affonda"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Prima [osservo]. Poi faccio una [domanda]. Poi penso un'[ipotesi].",
+      "distrattori": [
+        "dormo",
+        "mangio"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON galleggia?",
+      "elementi": [
+        "🪵 sughero",
+        "🍃 foglia",
+        "🔑 chiave",
+        "🦆 paperella di gomma"
+      ],
+      "intruso": 2,
+      "spiegazione": "La chiave è di metallo: affonda."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧪",
+      "domanda": "Perché facciamo l'esperimento?",
+      "opzioni": [
+        "🔍 per controllare l'ipotesi",
+        "😴 per riposare",
+        "🎨 per colorare"
+      ],
+      "corretta": 0,
+      "spiegazione": "Con l'esperimento vediamo se l'idea era giusta."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la parola e il suo significato.",
+      "coppie": [
+        [
+          "👀 osservare",
+          "🔍 guardare bene"
+        ],
+        [
+          "💡 ipotesi",
+          "🤔 idea da controllare"
+        ],
+        [
+          "🧪 esperimento",
+          "🖐️ provare"
+        ],
+        [
+          "✅ conclusione",
+          "📒 che cosa ho scoperto"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🤔",
+      "affermazione": "Se l'ipotesi è sbagliata, ho imparato lo stesso una cosa nuova.",
+      "corretta": true,
+      "spiegazione": "Sì! Anche gli errori ci insegnano."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'oggetto a che cosa succede nell'acqua.",
+      "coppie": [
+        [
+          "🪵 sughero",
+          "🛟 galleggia"
+        ],
+        [
+          "🪨 sasso",
+          "⬇️ affonda"
+        ],
+        [
+          "🦆 paperella",
+          "🌊 resta sopra"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🖐️",
+      "domanda": "Tocco il peluche. Com'è?",
+      "opzioni": [
+        "🧸 morbido",
+        "🪨 duro come un sasso",
+        "🔥 caldissimo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Con il tatto sento se una cosa è morbida o dura."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo le cose che galleggiano!",
+      "giusti": [
+        "🪵 sughero",
+        "🍃 foglia",
+        "🦆 paperella",
+        "🍎 mela"
+      ],
+      "sbagliati": [
+        "🪙 moneta",
+        "🔑 chiave",
+        "🪨 sasso",
+        "🔩 bullone"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "completa",
+      "immagine": "👩‍🔬",
+      "domanda": "Completa il testo di Teresa.",
+      "testo": "Con l'[esperimento] controllo l'ipotesi. Alla fine scrivo la [conclusione] sul quaderno.",
+      "distrattori": [
+        "merenda",
+        "pallone"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🥣",
+      "domanda": "Metti in ordine l'esperimento della mela.",
+      "elementi": [
+        "❓ la mela galleggia?",
+        "💡 penso: sì, galleggia",
+        "🥣 metto la mela nell'acqua",
+        "✅ galleggia: l'ipotesi era giusta"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📒",
+      "affermazione": "La scienziata scrive sul quaderno quello che scopre.",
+      "corretta": true,
+      "spiegazione": "Sì! Così si ricorda tutto."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è un senso?",
+      "elementi": [
+        "👀 vista",
+        "👂 udito",
+        "🏃 corsa",
+        "👃 olfatto"
+      ],
+      "intruso": 2,
+      "spiegazione": "La corsa non è un senso."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della scienziata.",
+      "parole": [
+        "💡 ipotesi",
+        "❓ domanda",
+        "👀 vista",
+        "📒 quaderno"
+      ]
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "IPOTESI",
+      "indizio": "💡 Un'idea da controllare"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ESPERIMENTO",
+      "indizio": "🧪 Lo faccio per provare se ho ragione"
+    }
+  ],
+  "ricorda": [
+    "👀 La scienziata osserva con i cinque sensi.",
+    "❓ Poi fa una domanda.",
+    "💡 L'ipotesi è un'idea da controllare.",
+    "🧪 Con l'esperimento controlla l'ipotesi.",
+    "✅ Alla fine scrive la conclusione sul quaderno.",
+    "🤔 Anche un'ipotesi sbagliata insegna qualcosa."
+  ],
+  "verifica": "verifiche/sci2-il-metodo-dello-scienziato.json"
+}

@@ -1,0 +1,489 @@
+{
+  "titolo": "I grandi numeri",
+  "emoji": "🚀",
+  "materia": "matematica",
+  "classe": 4,
+  "introduzione": "Quante persone stanno in uno stadio? Servono i grandi numeri!",
+  "storia": {
+    "personaggio": "👩‍🚀",
+    "testo": "Ciao, sono Stella, astronauta!\nLa mia astronave vola tra numeri giganteschi.\nPer arrivare sulla Luna devo leggere e confrontare i grandi numeri.",
+    "immagini": [
+      "🚀 astronave",
+      "🌙 Luna",
+      "🔢 grandi numeri"
+    ],
+    "missione": "Aiutate Stella a decifrare i numeri del viaggio. Vincete la figurina del razzo!"
+  },
+  "premio": "🚀",
+  "parole_chiave": [
+    "🏟️ migliaio",
+    "🏰 hk",
+    "🏡 dak",
+    "🏠 uk",
+    "🔢 cifra",
+    "🧭 valore posizionale"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🏟️ Il migliaio",
+      "immagine": "🏟️",
+      "testo": "Dieci centinaia fanno mille.\nMille si scrive 1 000.",
+      "immagini": [
+        "💯 100",
+        "🔟 × 10",
+        "🏟️ 1 000"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "10 centinaia fanno 1 000",
+        "passi": [
+          {
+            "figure": "💯",
+            "testo": "Ecco un centinaio: 100."
+          },
+          {
+            "figure": "💯 💯 💯 💯 💯",
+            "testo": "Conto 5 centinaia: 500."
+          },
+          {
+            "figure": "💯 💯 💯 💯 💯",
+            "testo": "Altre 5 centinaia: in tutto sono 10 centinaia."
+          },
+          {
+            "figure": "💯 → 🏟️",
+            "testo": "10 centinaia fanno 1 migliaio: 1 000."
+          },
+          {
+            "figure": "🏟️ 🏟️ 🏟️",
+            "testo": "3 migliaia sono 3 000."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Quante persone ci sono in uno stadio pieno? Più di 100 o più di 1 000?",
+        "risposta": "Molto più di 1 000! Uno stadio grande ha decine di migliaia di posti."
+      }
+    },
+    {
+      "titolo": "🏘️ Le case dei numeri",
+      "immagine": "🏘️",
+      "testo": "Ogni cifra abita in una casa.\nLa casa delle migliaia ha tre stanze. Da sinistra: hk, dak, uk.\nPoi viene la casa delle unità semplici: h, da, u.",
+      "immagini": [
+        "🏰 hk",
+        "🏡 dak",
+        "🏠 uk",
+        "💯 h",
+        "🔟 da",
+        "1️⃣ u"
+      ],
+      "scopri": [
+        {
+          "fronte": "🏰 hk",
+          "retro": "🏰 centinaia di migliaia: 100 000"
+        },
+        {
+          "fronte": "🏡 dak",
+          "retro": "🏡 decine di migliaia: 10 000"
+        },
+        {
+          "fronte": "🏠 uk",
+          "retro": "🏠 unità di migliaia: 1 000"
+        }
+      ]
+    },
+    {
+      "titolo": "🧭 Il posto conta",
+      "immagine": "🧭",
+      "testo": "Una cifra vale di più se sta più a sinistra.\nIn 3 000 il 3 vale tremila.\nIn 30 il 3 vale trenta.",
+      "immagini": [
+        "🏠 3 000 = tremila",
+        "🔟 30 = trenta"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dove abita il 3?",
+        "passi": [
+          {
+            "figure": "3️⃣",
+            "testo": "Ecco la cifra 3. Quanto vale? Dipende dalla sua casa!"
+          },
+          {
+            "figure": "🏠 3️⃣",
+            "testo": "Nella casa uk il 3 vale 3 000."
+          },
+          {
+            "figure": "🏡 3️⃣",
+            "testo": "Nella casa dak il 3 vale 30 000."
+          },
+          {
+            "figure": "🏰 3️⃣",
+            "testo": "Nella casa hk il 3 vale 300 000."
+          },
+          {
+            "figure": "⬅️ 3️⃣",
+            "testo": "Più va a sinistra, più vale!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "In 46 205, quanto vale il 4?",
+        "risposta": "Il 4 sta nella casa dak: vale 40 000, quarantamila!"
+      }
+    },
+    {
+      "titolo": "👓 Leggere i grandi numeri",
+      "immagine": "👓",
+      "testo": "Dividi il numero in gruppi di tre cifre, da destra.\n45 230 si legge: quarantacinquemila duecentotrenta.",
+      "immagini": [
+        "👓 45 230",
+        "🏠 quarantacinquemila",
+        "💯 duecentotrenta"
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: la tabella gigante",
+        "materiali": [
+          "📄 cartelloni",
+          "✂️ cartoncini con le cifre",
+          "📌 puntine o scotch"
+        ],
+        "passi": [
+          "📄 Disegnate sul cartellone le case: hk, dak, uk, h, da, u.",
+          "✂️ Ogni bambino pesca una cifra.",
+          "📌 Attaccatele nelle case e leggete il numero ad alta voce.",
+          "🔁 Scambiate due cifre: il numero cambia?"
+        ],
+        "domanda": "Che cosa succede se spostate una cifra a sinistra?"
+      }
+    },
+    {
+      "titolo": "⚖️ Chi è più grande?",
+      "immagine": "⚖️",
+      "testo": "Vince il numero con più cifre.\nSe hanno lo stesso numero di cifre, confronta le cifre da sinistra.",
+      "immagini": [
+        "🐘 12 000: 5 cifre",
+        "🐭 9 999: 4 cifre",
+        "⚖️ confronto da sinistra"
+      ],
+      "pensa": {
+        "domanda": "Chi è più grande: 45 300 o 45 030?",
+        "risposta": "45 300! Le prime cifre sono uguali, 4 e 5. Poi nelle centinaia 3 è più di 0."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🏟️",
+      "domanda": "10 centinaia fanno…",
+      "opzioni": [
+        "🏟️ 1 000",
+        "💯 100",
+        "🔟 10"
+      ],
+      "corretta": 0,
+      "spiegazione": "10 centinaia fanno un migliaio: 1 000."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Tocca il 7 000.",
+      "min": 0,
+      "max": 10000,
+      "passo": 1000,
+      "corretta": 7000
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🏘️",
+      "domanda": "Metti le case in ordine, da sinistra a destra.",
+      "elementi": [
+        "🏰 hk",
+        "🏡 dak",
+        "🏠 uk",
+        "💯 h",
+        "🔟 da",
+        "1️⃣ u"
+      ],
+      "suggerimento": "Comincia dalla casa più grande: hk."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "domanda": "In 46 205, quanto vale il 6?",
+      "opzioni": [
+        "🔢 6",
+        "🔢 6 000",
+        "🔢 60 000"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il 6 sta nelle unità di migliaia: vale 6 000."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il numero e come si legge.",
+      "coppie": [
+        [
+          "🔢 1 000",
+          "💬 mille"
+        ],
+        [
+          "🔢 10 000",
+          "💬 diecimila"
+        ],
+        [
+          "🔢 2 500",
+          "💬 duemilacinquecento"
+        ],
+        [
+          "🔢 40 300",
+          "💬 quarantamilatrecento"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧭",
+      "affermazione": "In 30 000 il 3 vale trenta.",
+      "corretta": false,
+      "spiegazione": "No! Il 3 sta nella casa dak: vale trentamila."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il numero alle parole.",
+      "coppie": [
+        [
+          "🔢 1 250",
+          "💬 milleduecentocinquanta"
+        ],
+        [
+          "🔢 12 500",
+          "💬 dodicimilacinquecento"
+        ],
+        [
+          "🔢 21 005",
+          "💬 ventunomilacinque"
+        ]
+      ]
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🏘️",
+      "domanda": "Unisci la casa al suo valore.",
+      "coppie": [
+        [
+          "🏰 1 hk",
+          "🔢 100 000"
+        ],
+        [
+          "🏡 1 dak",
+          "🔢 10 000"
+        ],
+        [
+          "🏠 1 uk",
+          "🔢 1 000"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "domanda": "Scomponi 305 420.",
+      "testo": "305 420 = [3] hk + [5] uk + [4] h + [2] da",
+      "distrattori": [
+        "0",
+        "30"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "64 999 è più grande di 65 001.",
+      "corretta": false,
+      "spiegazione": "65 001 ha 5 unità di migliaia. 64 999 ne ha 4."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Tocca il 45 000.",
+      "min": 40000,
+      "max": 50000,
+      "passo": 1000,
+      "corretta": 45000
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dal più piccolo al più grande.",
+      "elementi": [
+        "🔢 9 870",
+        "🔢 10 500",
+        "🔢 98 000",
+        "🔢 100 000"
+      ],
+      "suggerimento": "Conta le cifre di ogni numero."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Meno o più di 10 000?",
+      "categorie": [
+        "🐭 Meno di 10 000",
+        "🐘 Più di 10 000"
+      ],
+      "elementi": [
+        {
+          "testo": "🔢 9 999",
+          "categoria": "🐭 Meno di 10 000"
+        },
+        {
+          "testo": "🔢 1 000",
+          "categoria": "🐭 Meno di 10 000"
+        },
+        {
+          "testo": "🔢 8 500",
+          "categoria": "🐭 Meno di 10 000"
+        },
+        {
+          "testo": "🔢 10 001",
+          "categoria": "🐘 Più di 10 000"
+        },
+        {
+          "testo": "🔢 25 000",
+          "categoria": "🐘 Più di 10 000"
+        },
+        {
+          "testo": "🔢 100 000",
+          "categoria": "🐘 Più di 10 000"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👓",
+      "domanda": "Come si legge 45 230?",
+      "opzioni": [
+        "💬 quarantacinquemila duecentotrenta",
+        "💬 quattrocentocinquantadue",
+        "💬 quarantacinquemila trenta"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gruppi di tre cifre da destra: 45 | 230."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "In quale numero il 7 NON vale 7 000?",
+      "elementi": [
+        "🔢 7 250",
+        "🔢 17 000",
+        "🔢 70 000",
+        "🔢 27 104"
+      ],
+      "intruso": 2,
+      "spiegazione": "In 70 000 il 7 sta nella casa dak: vale 70 000."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚖️",
+      "domanda": "Chi è più grande?",
+      "opzioni": [
+        "🔢 45 300",
+        "🔢 45 030",
+        "🔢 45 003"
+      ],
+      "corretta": 0,
+      "spiegazione": "Le prime cifre sono uguali. Nelle centinaia 3 vince su 0."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa la scomposizione.",
+      "testo": "28 615 = [2] dak + [8] uk + [6] h + 1 da + 5 u",
+      "distrattori": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏆",
+      "domanda": "Con le cifre 4, 9, 1, 7, 3 qual è il numero più grande?",
+      "opzioni": [
+        "🔢 13 479",
+        "🔢 97 431",
+        "🔢 94 731"
+      ],
+      "corretta": 1,
+      "spiegazione": "Metti le cifre dalla più grande alla più piccola."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa i numeri più grandi di 10 000!",
+      "giusti": [
+        "🔢 12 400",
+        "🔢 50 000",
+        "🔢 99 999",
+        "🔢 10 001",
+        "🔢 70 300"
+      ],
+      "sbagliati": [
+        "🔢 9 999",
+        "🔢 1 000",
+        "🔢 8 500",
+        "🔢 999",
+        "🔢 5 050"
+      ],
+      "quanti": 5
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🚀",
+      "domanda": "Completa il testo bucato di Stella.",
+      "testo": "Per leggere un grande numero lo divido in gruppi di [tre] cifre.\nComincio da [destra].\nPiù una cifra sta a [sinistra], più vale.",
+      "distrattori": [
+        "due",
+        "sopra"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dei grandi numeri.",
+      "parole": [
+        "🏟️ mille",
+        "💯 cento",
+        "🔢 cifra",
+        "🏠 migliaia",
+        "🔟 decine",
+        "1️⃣ unità"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "MIL-LE",
+      "indizio": "🏟️ 10 centinaia"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "MIGLIAIO",
+      "indizio": "🏟️ Sono 10 centinaia"
+    }
+  ],
+  "ricorda": [
+    "🏟️ 10 centinaia fanno 1 000.",
+    "🏘️ Le migliaia hanno tre case. Da sinistra: hk, dak, uk.",
+    "🧭 Più a sinistra sta una cifra, più vale.",
+    "👓 Si legge a gruppi di tre cifre, da destra.",
+    "⚖️ Vince il numero con più cifre. Con lo stesso numero di cifre, confronto da sinistra."
+  ],
+  "verifica": "verifiche/mat4-grandi-numeri.json"
+}

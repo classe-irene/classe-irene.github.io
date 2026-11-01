@@ -1,0 +1,271 @@
+{
+  "titolo": "Le misure di lunghezza",
+  "emoji": "📏",
+  "materia": "matematica",
+  "classe": 3,
+  "obiettivi": [
+    "capire perché serve una misura uguale per tutti",
+    "conoscere il metro, i multipli e i sottomultipli",
+    "usare la tabella delle misure di lunghezza",
+    "fare semplici equivalenze"
+  ],
+  "consegna": "Leggi con calma. Guarda bene la tabella: km | hm | dam | m | dm | cm | mm.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "📏",
+      "testo": "Perché usiamo il metro e non la spanna?",
+      "opzioni": [
+        "📏 perché il metro è uguale per tutti",
+        "🖐️ perché la spanna è troppo lunga",
+        "🎨 perché il metro è colorato"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il chilometro è un multiplo del metro.",
+          "vero": true
+        },
+        {
+          "testo": "Il centimetro è più lungo del metro.",
+          "vero": false
+        },
+        {
+          "testo": "1 m = 10 dm.",
+          "vero": true
+        },
+        {
+          "testo": "Nella tabella l'unità più grande sta a destra.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la sigla al nome.",
+      "coppie": [
+        [
+          "km",
+          "chilometro"
+        ],
+        [
+          "m",
+          "metro"
+        ],
+        [
+          "dm",
+          "decimetro"
+        ],
+        [
+          "cm",
+          "centimetro"
+        ],
+        [
+          "mm",
+          "millimetro"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "📋",
+      "testo": "Metti in ordine la tabella: dalla più grande alla più piccola.",
+      "elementi": [
+        "km",
+        "hm",
+        "dam",
+        "m",
+        "dm",
+        "cm",
+        "mm"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Multiplo o sottomultiplo del metro?",
+      "categorie": [
+        "🛣️ Multiplo",
+        "🐜 Sottomultiplo"
+      ],
+      "elementi": [
+        {
+          "testo": "chilometro",
+          "categoria": "🛣️ Multiplo"
+        },
+        {
+          "testo": "decimetro",
+          "categoria": "🐜 Sottomultiplo"
+        },
+        {
+          "testo": "ettometro",
+          "categoria": "🛣️ Multiplo"
+        },
+        {
+          "testo": "millimetro",
+          "categoria": "🐜 Sottomultiplo"
+        },
+        {
+          "testo": "centimetro",
+          "categoria": "🐜 Sottomultiplo"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "L'unità di misura della lunghezza è il ___. Per misurare la strada uso i ___. Per misurare la matita uso i ___.",
+      "soluzioni": [
+        "metro",
+        "chilometri",
+        "centimetri"
+      ],
+      "parole": [
+        "metro",
+        "chilometri",
+        "centimetri",
+        "litri"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔄",
+      "testo": "Fai le equivalenze.",
+      "operazioni": [
+        {
+          "testo": "5 m in dm",
+          "risultato": 50
+        },
+        {
+          "testo": "3 m in cm",
+          "risultato": 300
+        },
+        {
+          "testo": "70 mm in cm",
+          "risultato": 7
+        },
+        {
+          "testo": "2 km in m",
+          "risultato": 2000
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐜",
+      "testo": "Con quale misura misuro una formica?",
+      "opzioni": [
+        "🐜 i millimetri",
+        "🛣️ i chilometri",
+        "📏 i decametri"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🪵",
+      "testo": "Elena ha un'asse lunga 1 m. Ne taglia 30 cm. Quanti cm restano? Scrivi l'operazione e la risposta.",
+      "righe": 3,
+      "soluzione": "1 m = 100 cm. 100 − 30 = 70. Restano 70 cm."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Con il righello disegna una linea lunga 5 cm e una lunga 1 dm."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "📏",
+      "testo": "La lunghezza si misura in…",
+      "opzioni": [
+        "📏 metri",
+        "⚖️ chilogrammi"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "1 m = 100 cm.",
+          "vero": true
+        },
+        {
+          "testo": "Il millimetro è più lungo del metro.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "km",
+          "chilometro"
+        ],
+        [
+          "m",
+          "metro"
+        ],
+        [
+          "cm",
+          "centimetro"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "📋",
+      "testo": "Metti in ordine: dalla più grande alla più piccola.",
+      "elementi": [
+        "km",
+        "m",
+        "cm"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Per misurare la strada uso i ___.",
+      "soluzioni": [
+        "chilometri"
+      ],
+      "parole": [
+        "chilometri",
+        "millimetri"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔄",
+      "testo": "Fai le equivalenze.",
+      "operazioni": [
+        {
+          "testo": "1 m in dm",
+          "risultato": 10
+        },
+        {
+          "testo": "2 m in dm",
+          "risultato": 20
+        }
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Con il righello disegna una linea lunga 5 cm."
+    }
+  ]
+}

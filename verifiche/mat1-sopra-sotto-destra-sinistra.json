@@ -1,0 +1,224 @@
+{
+  "titolo": "Sopra, sotto, destra, sinistra",
+  "emoji": "🧭",
+  "materia": "matematica",
+  "classe": 1,
+  "obiettivi": [
+    "riconoscere sopra e sotto, in alto e in basso",
+    "riconoscere dentro e fuori, davanti e dietro",
+    "riconoscere destra e sinistra",
+    "orientarsi sul foglio"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🛏️",
+      "testo": "La gattina è sul letto. Dov'è?",
+      "opzioni": [
+        "⬆️ sopra",
+        "⬇️ sotto",
+        "📦 dentro"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "testo": "Il gatto è nella scatola. Dov'è?",
+      "opzioni": [
+        "🚪 fuori",
+        "📦 dentro",
+        "⬆️ sopra"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👧",
+      "testo": "🐶 👧 🐱 Chi è a destra?",
+      "opzioni": [
+        "🐶 il cane",
+        "👧 Sofia",
+        "🐱 la gattina"
+      ],
+      "corretta": 2
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍎",
+      "testo": "🍎 🍌 🍓 Chi è in mezzo?",
+      "opzioni": [
+        "🍎 mela",
+        "🍌 banana",
+        "🍓 fragola"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso?",
+      "affermazioni": [
+        {
+          "testo": "☀️ Il sole è in alto.",
+          "vero": true
+        },
+        {
+          "testo": "🐟 Il pesce vive fuori dall'acqua.",
+          "vero": false
+        },
+        {
+          "testo": "🙈 Dietro l'albero sono nascosto.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci i contrari.",
+      "coppie": [
+        [
+          "sopra",
+          "⬇️ sotto"
+        ],
+        [
+          "dentro",
+          "🚪 fuori"
+        ],
+        [
+          "davanti",
+          "🔙 dietro"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "In alto o in basso?",
+      "categorie": [
+        "⬆️ In alto",
+        "⬇️ In basso"
+      ],
+      "elementi": [
+        {
+          "testo": "☁️ nuvola",
+          "categoria": "⬆️ In alto"
+        },
+        {
+          "testo": "🌙 luna",
+          "categoria": "⬆️ In alto"
+        },
+        {
+          "testo": "🌱 erba",
+          "categoria": "⬇️ In basso"
+        },
+        {
+          "testo": "👟 scarpe",
+          "categoria": "⬇️ In basso"
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il cielo è ___. La terra è ___.",
+      "soluzioni": [
+        "sopra",
+        "sotto"
+      ],
+      "parole": [
+        "sopra",
+        "sotto",
+        "dentro"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il sole in alto, una casa in mezzo e l'erba in basso."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🛏️",
+      "testo": "La gattina è sul letto. Dov'è?",
+      "opzioni": [
+        "⬆️ sopra",
+        "⬇️ sotto"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "📦",
+      "testo": "Il gatto è nella scatola. Dov'è?",
+      "opzioni": [
+        "📦 dentro",
+        "🚪 fuori"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👧",
+      "testo": "🐶 👧 🐱 Chi è a sinistra?",
+      "opzioni": [
+        "🐶 il cane",
+        "🐱 la gattina"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "testo": "Vero o falso?",
+      "affermazioni": [
+        {
+          "testo": "☀️ Il sole è in alto.",
+          "vero": true
+        },
+        {
+          "testo": "🌱 L'erba è in alto.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci i contrari.",
+      "coppie": [
+        [
+          "sopra",
+          "⬇️ sotto"
+        ],
+        [
+          "dentro",
+          "🚪 fuori"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il cielo è ___.",
+      "soluzioni": [
+        "sopra"
+      ],
+      "parole": [
+        "sopra",
+        "sotto"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il sole in alto e l'erba in basso."
+    }
+  ]
+}

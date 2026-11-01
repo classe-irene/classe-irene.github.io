@@ -1,0 +1,159 @@
+{
+  "titolo": "I numeri fino a 20",
+  "emoji": "🔢",
+  "materia": "matematica",
+  "classe": 1,
+  "introduzione": "Contiamo insieme fino a 20!",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao, sono Rosa, la contadina!\nNel mio orto ci sono tante mele.\nMi aiutate a contarle?",
+    "immagini": [
+      "👩‍🌾 Rosa",
+      "🌳 orto",
+      "🍎 mele"
+    ],
+    "missione": "Contate con Rosa fino a 20. Alla fine vincete la figurina della mela!"
+  },
+  "premio": "🍎",
+  "parole_chiave": [
+    "🔢 numero",
+    "🖐️ contare",
+    "➡️ dopo",
+    "⬅️ prima",
+    "📦 decina",
+    "🪜 in ordine"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🖐️ Contiamo",
+      "immagine": "🖐️",
+      "testo": "Tocca una cosa alla volta.\nDi' un numero per ogni cosa.\nUna mela: 1.\nDue mele: 2.\nTre mele: 3.",
+      "immagini": [
+        "🖐️ tocca",
+        "🍎 1",
+        "🍎🍎 2",
+        "🍎🍎🍎 3"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "contiamo le mele",
+        "passi": [
+          { "figure": "🍎", "testo": "Una mela: 1." },
+          { "figure": "🍎 🍎", "testo": "Due mele: 2." },
+          { "figure": "🍎 🍎 🍎", "testo": "Tre mele: 3." },
+          { "figure": "🍎 🍎 🍎 🍎", "testo": "Quattro mele: 4." },
+          { "figure": "🍎 🍎 🍎 🍎 🍎", "testo": "Cinque mele: 5." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Se conti due volte la stessa mela, va bene?",
+        "risposta": "No! Ogni cosa si tocca una volta sola."
+      }
+    },
+    {
+      "titolo": "➡️ Prima e dopo",
+      "immagine": "➡️",
+      "testo": "I numeri stanno in fila.\nDopo il 7 viene l'8.\nPrima del 7 c'è il 6.\nDopo il 12 viene il 13.",
+      "immagini": [
+        "🪜 in fila",
+        "➡️ dopo",
+        "⬅️ prima"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la rana salta",
+        "passi": [
+          { "figure": "🐸 → 7", "testo": "La rana è sul 7." },
+          { "figure": "7 → 8", "testo": "Salta avanti: dopo il 7 viene l'8." },
+          { "figure": "6 → 7", "testo": "Prima del 7 c'è il 6." },
+          { "figure": "12 → 13", "testo": "Dopo il 12 viene il 13." }
+        ]
+      },
+      "scopri": [
+        { "fronte": "➡️ Dopo il 9?", "retro": "🔟 Il 10!" },
+        { "fronte": "⬅️ Prima del 15?", "retro": "🔢 Il 14!" },
+        { "fronte": "➡️ Dopo il 19?", "retro": "🎉 Il 20!" }
+      ]
+    },
+    {
+      "titolo": "📦 La decina",
+      "immagine": "📦",
+      "testo": "Dieci cose insieme fanno una decina.\nRosa mette 10 mele in una cassetta.\nIl 13 è una decina e 3.",
+      "immagini": [
+        "🖐️ 10 dita",
+        "📦 1 decina",
+        "🍎 3 unità"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 13,
+        "video": true,
+        "titolo": "costruiamo il 13"
+      },
+      "pensa": {
+        "domanda": "Le dita delle tue mani quante sono?",
+        "risposta": "Sono 10: una decina!"
+      }
+    },
+    {
+      "titolo": "🪜 Fino a 20",
+      "immagine": "🪜",
+      "testo": "Dopo il 10 i numeri continuano.\n11, 12, 13… fino a 19.\nDue decine fanno 20.",
+      "immagini": [
+        "🔟 10",
+        "🔢 11, 12, 13",
+        "📦📦 20"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 20,
+        "video": true,
+        "titolo": "due decine fanno 20"
+      }
+    }
+  ],
+  "esercizi": [
+    { "tipo": "conta", "immagine": "🍎", "domanda": "Quante mele?", "oggetto": "🍎", "numero": 6, "spiegazione": "Sono 6 mele!" },
+    { "tipo": "conta", "immagine": "🎈", "domanda": "Quanti palloncini?", "oggetto": "🎈", "numero": 9, "spiegazione": "Sono 9 palloncini!" },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "Tocca il numero 8.", "min": 0, "max": 10, "passo": 1, "corretta": 8 },
+    { "tipo": "scelta", "immagine": "🍓", "domanda": "Dove ci sono 4 fragole?", "opzioni": ["🍓🍓 due", "🍓🍓🍓🍓 quattro", "🍓🍓🍓🍓🍓🍓 sei"], "corretta": 1, "spiegazione": "Conta: 1, 2, 3, 4!" },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci numero e parola.", "coppie": [["🔢 5", "✏️ cinque"], ["🔢 10", "✏️ dieci"], ["🔢 20", "✏️ venti"]] },
+    { "tipo": "conta", "immagine": "⭐", "domanda": "Quante stelle?", "oggetto": "⭐", "numero": 13, "suggerimento": "Conta piano, una alla volta." },
+    { "tipo": "scelta", "immagine": "➡️", "domanda": "Che numero viene dopo il 15?", "opzioni": ["🔢 14", "🔢 16", "🔢 17"], "corretta": 1, "spiegazione": "Dopo il 15 viene il 16." },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova il numero e le figure.", "coppie": [["🔢 1", "🐶 un cane"], ["🔢 2", "🐱🐱 due gatti"], ["🔢 3", "🐟🐟🐟 tre pesci"], ["🔢 4", "🐞🐞🐞🐞 quattro coccinelle"]] },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal più piccolo al più grande.", "elementi": ["🔢 3", "🔢 7", "🔢 11", "🔢 18"] },
+    { "tipo": "vero_falso", "immagine": "🐘", "affermazione": "12 è più grande di 20.", "corretta": false, "spiegazione": "20 è più grande di 12." },
+    { "tipo": "scelta", "immagine": "⬅️", "domanda": "Che numero c'è prima del 10?", "opzioni": ["🔢 9", "🔢 11", "🔢 8"], "corretta": 0, "spiegazione": "Prima del 10 c'è il 9." },
+    { "tipo": "conta", "immagine": "🐥", "domanda": "Quanti pulcini?", "oggetto": "🐥", "numero": 11, "spiegazione": "Sono 11 pulcini!" },
+    { "tipo": "retta", "immagine": "🐸", "domanda": "Tocca il numero 14.", "min": 10, "max": 20, "passo": 1, "corretta": 14 },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa la fila.", "testo": "16, 17, [18], 19, [20]", "distrattori": ["15", "21"] },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Fino a 10 o più di 10?", "categorie": ["🐭 fino a 10", "🐘 più di 10"], "elementi": [
+      { "testo": "🔢 4", "categoria": "🐭 fino a 10" },
+      { "testo": "🔢 9", "categoria": "🐭 fino a 10" },
+      { "testo": "🔢 2", "categoria": "🐭 fino a 10" },
+      { "testo": "🔢 15", "categoria": "🐘 più di 10" },
+      { "testo": "🔢 12", "categoria": "🐘 più di 10" },
+      { "testo": "🔢 19", "categoria": "🐘 più di 10" }
+    ] },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi NON ha 3 cose?", "elementi": ["🍎🍎🍎 mele", "⭐⭐⭐ stelle", "🎈🎈 palloncini", "🐟🐟🐟 pesci"], "intruso": 2, "spiegazione": "I palloncini sono solo 2." },
+    { "tipo": "costruisci", "immagine": "📦", "domanda": "Costruisci il 12: una decina e 2.", "numero": 12, "spiegazione": "12 = 1 decina e 2 unità." },
+    { "tipo": "vero_falso", "immagine": "🖐️", "affermazione": "Le dita delle due mani sono 10.", "corretta": true, "spiegazione": "Sì! 10 dita: una decina." },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci il numero alla decina.", "coppie": [["🔢 10", "📦 1 decina"], ["🔢 14", "📦 1 decina e 🍎 4"], ["🔢 20", "📦📦 2 decine"]] },
+    { "tipo": "acchiappa", "immagine": "🎯", "domanda": "Acchiappa i numeri più grandi di 10!", "giusti": ["🔢 13", "🔢 17", "🔢 20"], "sbagliati": ["🔢 3", "🔢 6", "🔢 8"] },
+    { "tipo": "costruisci", "immagine": "📦", "domanda": "Costruisci il 17.", "numero": 17, "spiegazione": "17 = 1 decina e 7 unità." },
+    { "tipo": "conta", "immagine": "🦋", "domanda": "Quante farfalle?", "oggetto": "🦋", "numero": 16, "suggerimento": "Conta piano, una alla volta." },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "VENTI", "indizio": "📦📦 Due decine" }
+  ],
+  "ricorda": [
+    "🖐️ Conto una cosa alla volta.",
+    "➡️ Dopo il 7 viene l'8.",
+    "⬅️ Prima del 7 c'è il 6.",
+    "📦 Dieci cose fanno una decina.",
+    "🔢 Due decine fanno 20."
+  ],
+  "verifica": "verifiche/mat1-numeri-fino-a-20.json"
+}

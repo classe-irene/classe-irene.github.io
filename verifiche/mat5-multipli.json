@@ -1,0 +1,314 @@
+{
+  "titolo": "Multipli, divisori e primi",
+  "emoji": "🔗",
+  "materia": "matematica",
+  "classe": 5,
+  "obiettivi": [
+    "trovare i multipli di un numero",
+    "trovare i divisori di un numero",
+    "usare i criteri di divisibilità per 2, 3, 5, 9, 10",
+    "riconoscere i numeri primi e i numeri composti"
+  ],
+  "consegna": "Leggi con calma. Ricorda i trucchi: guarda l'ultima cifra o somma le cifre.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔗",
+      "testo": "Quale numero è un multiplo di 7?",
+      "opzioni": [
+        "🔢 28",
+        "🔢 27",
+        "🔢 17"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔗",
+      "testo": "Scrivi i primi multipli di 6.",
+      "operazioni": [
+        {
+          "testo": "6 × 2",
+          "risultato": 12
+        },
+        {
+          "testo": "6 × 3",
+          "risultato": 18
+        },
+        {
+          "testo": "6 × 4",
+          "risultato": 24
+        },
+        {
+          "testo": "6 × 5",
+          "risultato": 30
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "I multipli di un numero sono infiniti.",
+          "vero": true
+        },
+        {
+          "testo": "5 è un divisore di 12.",
+          "vero": false
+        },
+        {
+          "testo": "1 è divisore di tutti i numeri.",
+          "vero": true
+        },
+        {
+          "testo": "1 è un numero primo.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "18 : 6 = 3 con resto 0. Allora 6 è un ___ di 18 e 18 è un ___ di 6.",
+      "soluzioni": [
+        "divisore",
+        "multiplo"
+      ],
+      "parole": [
+        "divisore",
+        "multiplo",
+        "primo"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔍",
+      "testo": "Unisci ogni criterio al suo trucco.",
+      "coppie": [
+        [
+          "per 2",
+          "l'ultima cifra è pari"
+        ],
+        [
+          "per 5",
+          "finisce con 0 o 5"
+        ],
+        [
+          "per 10",
+          "finisce con 0"
+        ],
+        [
+          "per 3",
+          "la somma delle cifre è nella tabellina del 3"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "5️⃣",
+      "testo": "Divisibile per 5 oppure no? Scrivi ogni numero nella colonna giusta.",
+      "categorie": [
+        "✅ Divisibile per 5",
+        "🚫 Non divisibile per 5"
+      ],
+      "elementi": [
+        {
+          "testo": "45",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "100",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "235",
+          "categoria": "✅ Divisibile per 5"
+        },
+        {
+          "testo": "54",
+          "categoria": "🚫 Non divisibile per 5"
+        },
+        {
+          "testo": "123",
+          "categoria": "🚫 Non divisibile per 5"
+        },
+        {
+          "testo": "509",
+          "categoria": "🚫 Non divisibile per 5"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "3️⃣",
+      "testo": "Quale numero è divisibile per 3? Somma le cifre.",
+      "opzioni": [
+        "🔢 211",
+        "🔢 213",
+        "🔢 214"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "⭐",
+      "testo": "Primo o composto? Scrivi ogni numero nella colonna giusta.",
+      "categorie": [
+        "⭐ Primo",
+        "🧱 Composto"
+      ],
+      "elementi": [
+        {
+          "testo": "3",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "11",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "19",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "8",
+          "categoria": "🧱 Composto"
+        },
+        {
+          "testo": "14",
+          "categoria": "🧱 Composto"
+        },
+        {
+          "testo": "25",
+          "categoria": "🧱 Composto"
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine i divisori di 18, dal più piccolo. Scrivi 1, 2, 3…",
+      "elementi": [
+        "🔢 1",
+        "🔢 2",
+        "🔢 3",
+        "🔢 6",
+        "🔢 9",
+        "🔢 18"
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Nonna Pia ha 20 biscotti. Li può mettere in 3 scatole uguali, senza che ne avanzi nessuno? Spiega perché.",
+      "righe": 3,
+      "soluzione": "No: 20 : 3 = 6 con resto 2. 3 non è divisore di 20."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔗",
+      "testo": "Quale è un multiplo di 5? Guarda la tabellina del 5.",
+      "opzioni": [
+        "🔢 15",
+        "🔢 12"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "3 è un divisore di 12.",
+          "vero": true
+        },
+        {
+          "testo": "7 è un numero primo.",
+          "vero": true
+        },
+        {
+          "testo": "25 è divisibile per 2.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "12 : 4 = 3 con resto 0. Allora 4 è un ___ di 12.",
+      "soluzioni": [
+        "divisore"
+      ],
+      "parole": [
+        "divisore",
+        "primo"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔍",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "per 2",
+          "ultima cifra pari"
+        ],
+        [
+          "per 5",
+          "finisce con 0 o 5"
+        ],
+        [
+          "per 10",
+          "finisce con 0"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "⭐",
+      "testo": "Primo o composto?",
+      "categorie": [
+        "⭐ Primo",
+        "🧱 Composto"
+      ],
+      "elementi": [
+        {
+          "testo": "5",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "7",
+          "categoria": "⭐ Primo"
+        },
+        {
+          "testo": "6",
+          "categoria": "🧱 Composto"
+        },
+        {
+          "testo": "10",
+          "categoria": "🧱 Composto"
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔗",
+      "testo": "Scrivi i multipli di 4.",
+      "operazioni": [
+        {
+          "testo": "4 × 2",
+          "risultato": 8
+        },
+        {
+          "testo": "4 × 3",
+          "risultato": 12
+        }
+      ]
+    }
+  ]
+}

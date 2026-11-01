@@ -1,0 +1,153 @@
+{
+  "titolo": "La materia e i suoi stati",
+  "emoji": "⚛️",
+  "materia": "scienze",
+  "classe": 3,
+  "obiettivi": [
+    "riconoscere solidi, liquidi e gas",
+    "conoscere i passaggi di stato",
+    "collegare caldo e freddo ai passaggi di stato"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Solido, liquido o gas? Scrivi nella colonna giusta.",
+      "categorie": ["🪨 Solido", "💧 Liquido", "🎈 Gas"],
+      "elementi": [
+        { "testo": "sasso", "categoria": "🪨 Solido" },
+        { "testo": "matita", "categoria": "🪨 Solido" },
+        { "testo": "latte", "categoria": "💧 Liquido" },
+        { "testo": "olio", "categoria": "💧 Liquido" },
+        { "testo": "aria", "categoria": "🎈 Gas" },
+        { "testo": "vapore", "categoria": "🎈 Gas" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚛️",
+      "testo": "Che cos'è la materia?",
+      "opzioni": ["⚛️ tutto ciò che occupa uno spazio", "🎨 solo le cose colorate", "🍎 solo il cibo"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Il solido ha una forma sua.", "vero": true },
+        { "testo": "Il liquido prende la forma del recipiente.", "vero": true },
+        { "testo": "Il gas ha una forma sua.", "vero": false },
+        { "testo": "L'aria non è materia.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni passaggio al suo nome.",
+      "coppie": [
+        ["solido → liquido", "fusione"],
+        ["liquido → gas", "evaporazione"],
+        ["gas → liquido", "condensazione"],
+        ["liquido → solido", "solidificazione"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Con il caldo il ghiaccio diventa ___. Con tanto caldo l'acqua diventa ___. Nel freezer l'acqua diventa ___.",
+      "soluzioni": ["acqua", "vapore", "ghiaccio"],
+      "parole": ["acqua", "vapore", "ghiaccio", "sabbia"]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🌡️",
+      "testo": "Serve il caldo o il freddo?",
+      "categorie": ["🔥 Caldo", "❄️ Freddo"],
+      "elementi": [
+        { "testo": "fusione", "categoria": "🔥 Caldo" },
+        { "testo": "evaporazione", "categoria": "🔥 Caldo" },
+        { "testo": "condensazione", "categoria": "❄️ Freddo" },
+        { "testo": "solidificazione", "categoria": "❄️ Freddo" }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Scaldiamo un cubetto di ghiaccio. Metti in ordine.",
+      "elementi": ["🧊 ghiaccio", "💧 acqua", "♨️ vapore"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🪞",
+      "testo": "Il vapore della pentola fa goccioline sul coperchio. Come si chiama?",
+      "opzioni": ["☁️ condensazione", "🫠 fusione", "🧊 solidificazione"],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il ghiacciolo si scioglie se lo tieni in mano? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché la mano è calda: il calore fa diventare liquido il ghiaccio (fusione)."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un solido, un liquido e un gas. Scrivi il nome sotto ogni disegno."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Solido o liquido?",
+      "categorie": ["🪨 Solido", "💧 Liquido"],
+      "elementi": [
+        { "testo": "sasso", "categoria": "🪨 Solido" },
+        { "testo": "sedia", "categoria": "🪨 Solido" },
+        { "testo": "latte", "categoria": "💧 Liquido" },
+        { "testo": "succo", "categoria": "💧 Liquido" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎈",
+      "testo": "Nel palloncino c'è…",
+      "opzioni": ["🎈 un gas", "🪨 un solido"],
+      "corretta": 0
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        { "testo": "Il liquido scorre.", "vero": true },
+        { "testo": "Il ghiaccio è un gas.", "vero": false }
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        ["ghiaccio → acqua", "fusione"],
+        ["acqua → vapore", "evaporazione"],
+        ["acqua → ghiaccio", "solidificazione"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Nel freezer l'acqua diventa ___.",
+      "soluzioni": ["ghiaccio"],
+      "parole": ["ghiaccio", "vapore"]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un cubetto di ghiaccio che si scioglie."
+    }
+  ]
+}

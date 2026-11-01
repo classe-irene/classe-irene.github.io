@@ -1,0 +1,681 @@
+{
+ "titolo": "Numeri in successione",
+ "emoji": "🐸",
+ "materia": "matematica",
+ "classe": 4,
+ "introduzione": "I numeri stanno in fila, ognuno al suo posto. Impariamo a contare avanti e indietro, anche a salti!",
+ "storia": {
+  "personaggio": "🐸",
+  "testo": "Ciao! Sono Rina, la ranocchia saltatrice.\nNel mio stagno ogni foglia ha un numero, tutte in fila.\nIo salto di foglia in foglia: a volte di 1, a volte di 2, a volte all'indietro!\nMi aiutate a trovare i numeri che mancano?",
+  "immagini": [
+   "🐸 ranocchia",
+   "🍃 foglie in fila",
+   "🔢 numeri"
+  ],
+  "missione": "Aiutate Rina a completare tutte le file di numeri. Alla fine vincete la figurina della ranocchia!"
+ },
+ "premio": "🐸",
+ "parole_chiave": [
+  "🔢 successione",
+  "➕ +1 numero dopo",
+  "➖ −1 numero prima",
+  "📈 crescente",
+  "📉 decrescente",
+  "♾️ infiniti",
+  "🎯 regola",
+  "👯 pari",
+  "🧦 dispari",
+  "🪄 testa e coda"
+ ],
+ "sezioni": [
+  {
+   "titolo": "🔢 I numeri in fila",
+   "immagine": "🔢",
+   "testo": "I numeri naturali sono ordinati: ogni numero ha il suo posto preciso, come i bambini in fila.\nDopo 4 901 viene 4 902: ogni volta aggiungo 1.\nI numeri naturali sono infiniti: a ogni numero posso sempre aggiungere 1. Non finiscono mai!\nI numeri in fila si chiamano sequenze numeriche.",
+   "immagini": [
+    "🔢 4 901",
+    "➕ +1",
+    "♾️ infiniti"
+   ],
+   "animazione": {
+    "tipo": "scena",
+    "scena": "salti",
+    "numeri": [
+     4997,
+     4998,
+     4999,
+     5000,
+     5001
+    ],
+    "video": true,
+    "titolo": "Da 4 997 a 5 001",
+    "fine": "I numeri non finiscono mai: dopo 5 001 viene 5 002, e poi ancora, sempre."
+   },
+   "foglio": {
+    "immagine": "immagini/schede/numeri-in-successione-1.png",
+    "titolo": "Numeri in sequenza e in tabella"
+   },
+   "pensa": {
+    "domanda": "Qual è il numero più grande di tutti?",
+    "risposta": "Non esiste! A ogni numero posso aggiungere 1: i numeri sono infiniti."
+   }
+  },
+  {
+   "titolo": "📈 Crescente e 📉 decrescente",
+   "immagine": "📈",
+   "testo": "Ordine crescente: i numeri vanno dal minore al maggiore. Ogni volta +1.\nOrdine decrescente: i numeri vanno dal maggiore al minore. Ogni volta −1.\nPari: l'ultima cifra è 0, 2, 4, 6, 8. Dispari: l'ultima cifra è 1, 3, 5, 7, 9.",
+   "immagini": [
+    "📈 crescente",
+    "📉 decrescente",
+    "👯 pari"
+   ],
+   "animazione": {
+    "tipo": "scena",
+    "scena": "salti",
+    "numeri": [
+     158,
+     157,
+     156,
+     155,
+     154
+    ],
+    "video": true,
+    "titolo": "Ordine decrescente da 158",
+    "fine": "I numeri scendono: è l'ordine decrescente, dal maggiore al minore."
+   },
+   "scopri": [
+    {
+     "fronte": "❓ 234, 235, …",
+     "retro": "📈 236, 237"
+    },
+    {
+     "fronte": "❓ 158, 157, …",
+     "retro": "📉 156, 155"
+    },
+    {
+     "fronte": "❓ 1 436 è…",
+     "retro": "👯 pari: finisce con 6"
+    }
+   ],
+   "foglio": {
+    "immagine": "immagini/schede/numeri-in-successione-2.png",
+    "titolo": "Sequenze di numeri: crescente e decrescente"
+   },
+   "pensa": {
+    "domanda": "Che numero viene prima di 3 900?",
+    "risposta": "3 899. Tolgo 1: le unità diventano 9, e anche le decine."
+   }
+  },
+  {
+   "titolo": "🎯 La regola dei salti",
+   "immagine": "🎯",
+   "testo": "Posso contare anche a salti: è la regola della sequenza.\nCon +2 salto di due in due. Con +3 di tre in tre.\nCon −10 torno indietro di dieci: cambia la cifra delle decine.\nDa un numero pari, con +2, arrivo sempre a un numero pari.",
+   "immagini": [
+    "🎯 regola",
+    "🐸 salti",
+    "➖ −10"
+   ],
+   "animazione": {
+    "tipo": "scena",
+    "scena": "salti",
+    "numeri": [
+     989,
+     991,
+     993,
+     995,
+     997
+    ],
+    "video": true,
+    "titolo": "Regola +2 da 989",
+    "fine": "Partendo da un numero dispari, con +2 trovo solo numeri dispari."
+   },
+   "foglio": {
+    "immagine": "immagini/schede/numeri-in-successione-3.png",
+    "titolo": "Sequenze di numeri: la regola"
+   },
+   "pensa": {
+    "domanda": "Con la regola −5, che numero viene dopo 1 277?",
+    "risposta": "1 272. Tolgo 5: le unità passano da 7 a 2."
+   }
+  },
+  {
+   "titolo": "🪄 Il trucco della testa e della coda",
+   "immagine": "🪄",
+   "testo": "Con un numero che finisce con 9, fare +1 è una piccola magia.\nDivido il numero in due parti: la TESTA e la CODA DI 9.\nLa coda sono tutti i 9 alla fine, a destra: diventano tutti 0.\nLa testa cresce di 1. Se davanti non c'è nulla, la testa è 0.\nCosì 39 + 1 fa 40, e 799 + 1 fa 800.",
+   "immagini": [
+    "🪄 magia",
+    "🧡 testa",
+    "💜 coda di 9"
+   ],
+   "animazione": {
+    "tipo": "scena",
+    "scena": "testacoda",
+    "n": 799,
+    "video": true,
+    "titolo": "799 + 1 con il trucco"
+   },
+   "foglio": {
+    "immagine": "immagini/schede/numeri-in-successione-4.png",
+    "titolo": "Il trucco vedico della testa e della coda"
+   },
+   "pensa": {
+    "domanda": "Quanto fa 9 999 + 1?",
+    "risposta": "10 000. La coda 9 999 diventa 0 000, la testa 0 diventa 1."
+   }
+  }
+ ],
+ "esercizi": [
+  {
+   "tipo": "successione",
+   "numeri": [
+    4901,
+    4902,
+    4903,
+    4904,
+    4905,
+    4906,
+    4907,
+    4908,
+    4909,
+    4910,
+    4911,
+    4912,
+    4913,
+    4914,
+    4915,
+    4916,
+    4917,
+    4918,
+    4919,
+    4920,
+    4921,
+    4922,
+    4923,
+    4924,
+    4925,
+    4926,
+    4927,
+    4928,
+    4929,
+    4930,
+    4931,
+    4932,
+    4933,
+    4934,
+    4935,
+    4936,
+    4937,
+    4938,
+    4939,
+    4940,
+    4941,
+    4942,
+    4943,
+    4944,
+    4945,
+    4946,
+    4947,
+    4948,
+    4949,
+    4950,
+    4951,
+    4952,
+    4953,
+    4954,
+    4955,
+    4956,
+    4957,
+    4958,
+    4959,
+    4960,
+    4961,
+    4962,
+    4963,
+    4964,
+    4965,
+    4966,
+    4967,
+    4968,
+    4969,
+    4970,
+    4971,
+    4972,
+    4973,
+    4974,
+    4975,
+    4976,
+    4977,
+    4978,
+    4979,
+    4980,
+    4981,
+    4982,
+    4983,
+    4984,
+    4985,
+    4986,
+    4987,
+    4988,
+    4989,
+    4990,
+    4991,
+    4992,
+    4993,
+    4994,
+    4995,
+    4996,
+    4997,
+    4998,
+    4999,
+    5000
+   ],
+   "mostra": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+   ],
+   "immagine": "🔢",
+   "colonne": 10,
+   "domanda": "La tabella da 4 901 a 5 000: scrivi i 6 numeri che mancano.",
+   "spiegazione": "In ogni riga ci sono 10 numeri. Scendendo di una riga si aggiunge 10."
+  },
+  {
+   "tipo": "vero_falso",
+   "immagine": "♾️",
+   "affermazione": "I numeri naturali sono infiniti: dopo ogni numero ce n'è sempre un altro.",
+   "corretta": true,
+   "spiegazione": "Vero! A ogni numero posso sempre aggiungere 1."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243
+   ],
+   "mostra": [
+    0,
+    1,
+    5,
+    8
+   ],
+   "immagine": "📈",
+   "domanda": "Ordine crescente: completa con i numeri che mancano.",
+   "spiegazione": "Crescente: ogni volta +1, dal minore al maggiore."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440,
+    1441,
+    1442
+   ],
+   "mostra": [
+    1,
+    4
+   ],
+   "immagine": "📈",
+   "colora": "pari",
+   "domanda": "Completa la fila crescente. Poi colora i numeri pari.",
+   "spiegazione": "Pari: l'ultima cifra è 0, 2, 4, 6 o 8."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    8999,
+    9000,
+    9001,
+    9002,
+    9003,
+    9004,
+    9005,
+    9006
+   ],
+   "mostra": [
+    3,
+    7
+   ],
+   "immagine": "🚀",
+   "domanda": "Attenzione al salto di migliaio! Completa la fila.",
+   "spiegazione": "Dopo 8 999 viene 9 000: le 9 unità, le 9 decine e le 9 centinaia diventano un migliaio in più."
+  },
+  {
+   "tipo": "scelta",
+   "immagine": "📉",
+   "domanda": "Che cosa vuol dire ordine decrescente?",
+   "opzioni": [
+    "📉 dal maggiore al minore",
+    "📈 dal minore al maggiore",
+    "🔀 in disordine"
+   ],
+   "corretta": 0,
+   "spiegazione": "Decrescente: i numeri scendono, dal più grande al più piccolo."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    158,
+    157,
+    156,
+    155,
+    154,
+    153,
+    152,
+    151
+   ],
+   "mostra": [
+    0,
+    1
+   ],
+   "immagine": "📉",
+   "colora": "dispari",
+   "domanda": "Ordine decrescente: completa la fila. Poi colora i numeri dispari.",
+   "spiegazione": "Dispari: l'ultima cifra è 1, 3, 5, 7 o 9."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    6355,
+    6354,
+    6353,
+    6352,
+    6351,
+    6350,
+    6349,
+    6348
+   ],
+   "mostra": [
+    1,
+    4
+   ],
+   "immagine": "📉",
+   "domanda": "Ordine decrescente: completa con i numeri che mancano.",
+   "spiegazione": "Decrescente: ogni volta −1."
+  },
+  {
+   "tipo": "ordina",
+   "immagine": "📈",
+   "domanda": "Metti i numeri in ordine crescente: tocca prima il più piccolo.",
+   "elementi": [
+    "2 664",
+    "2 665",
+    "2 666",
+    "2 667",
+    "2 668"
+   ],
+   "suggerimento": "Le prime tre cifre sono uguali: guarda le unità."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    7204,
+    7206,
+    7208,
+    7210,
+    7212,
+    7214,
+    7216,
+    7218,
+    7220
+   ],
+   "mostra": [
+    0,
+    1,
+    2
+   ],
+   "immagine": "🐸",
+   "domanda": "La ranocchia Rina salta sui numeri pari: completa la fila.",
+   "spiegazione": "Da un numero pari, con +2, si arriva sempre a un numero pari."
+  },
+  {
+   "tipo": "scelta",
+   "immagine": "✏️",
+   "domanda": "Come si scrive 7 212 in lettere?",
+   "opzioni": [
+    "settemiladuecentododici",
+    "settemiladuecentoventi",
+    "settemiladodici"
+   ],
+   "corretta": 0,
+   "spiegazione": "7 212 = 7 migliaia, 2 centinaia, 1 decina e 2 unità: settemila + duecento + dodici."
+  },
+  {
+   "tipo": "scelta",
+   "immagine": "🎯",
+   "domanda": "989, 991, 993, 995… Qual è la regola?",
+   "opzioni": [
+    "+2",
+    "+1",
+    "+3"
+   ],
+   "corretta": 0,
+   "spiegazione": "Da 989 a 991 ci sono 2 salti: la regola è +2."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    2998,
+    3001,
+    3004,
+    3007,
+    3010,
+    3013,
+    3016,
+    3019
+   ],
+   "mostra": [
+    0,
+    1
+   ],
+   "immagine": "🎯",
+   "domanda": "Numera secondo la regola +3, partendo da 2 998.",
+   "spiegazione": "Ogni casella: 3 in più della casella prima."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    2346,
+    2336,
+    2326,
+    2316,
+    2306,
+    2296,
+    2286
+   ],
+   "mostra": [
+    0,
+    1
+   ],
+   "immagine": "🎯",
+   "domanda": "Numera secondo la regola −10, partendo da 2 346.",
+   "spiegazione": "Con −10 cambia la cifra delle decine: le unità restano 6."
+  },
+  {
+   "tipo": "successione",
+   "numeri": [
+    1282,
+    1277,
+    1272,
+    1267,
+    1262,
+    1257,
+    1252
+   ],
+   "mostra": [
+    0,
+    1
+   ],
+   "immagine": "🎯",
+   "domanda": "Numera secondo la regola −5, partendo da 1 282.",
+   "spiegazione": "Con −5 le unità vanno sempre 2, 7, 2, 7…"
+  },
+  {
+   "tipo": "testacoda",
+   "n": 39,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 39 + 1",
+   "spiegazione": "La coda 9 diventa 0, la testa 3 diventa 4: 40."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 29,
+   "immagine": "🪄",
+   "domanda": "Salto alla decina dopo: 29 + 1",
+   "spiegazione": "La testa 2 diventa 3, la coda 9 diventa 0: 30."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 99,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 99 + 1",
+   "spiegazione": "Davanti non c'è nulla: la testa è 0 e diventa 1. Risultato 100."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 799,
+   "immagine": "🪄",
+   "domanda": "Il trucco! 799 + 1",
+   "spiegazione": "La coda è 99: diventa 00. La testa 7 diventa 8: 800."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 199,
+   "immagine": "🪄",
+   "domanda": "Attento al trabocchetto: 199 + 1",
+   "spiegazione": "Tutti e due i 9 sono nella coda: 200."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 2999,
+   "immagine": "🪄",
+   "domanda": "Attento al trabocchetto: 2 999 + 1",
+   "spiegazione": "La coda è 999, la testa 2 diventa 3: 3 000."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 54999,
+   "immagine": "👑",
+   "domanda": "Sfida! 54 999 + 1",
+   "spiegazione": "La testa 54 diventa 55, la coda 999 diventa 000: 55 000."
+  },
+  {
+   "tipo": "testacoda",
+   "n": 9999,
+   "immagine": "👑",
+   "domanda": "Super sfida! 9 999 + 1",
+   "spiegazione": "Tutto è coda: la testa 0 diventa 1. Risultato 10 000!"
+  }
+ ],
+ "ricorda": [
+  "🔢 I numeri naturali sono ordinati: ognuno ha il suo posto.",
+  "♾️ I numeri naturali sono infiniti: a ogni numero posso aggiungere 1.",
+  "📈 Crescente: dal minore al maggiore. 📉 Decrescente: dal maggiore al minore.",
+  "🎯 La regola dice di quanto salto: +2, +3, −10, −5…",
+  "👯 Pari: finisce con 0, 2, 4, 6, 8. 🧦 Dispari: finisce con 1, 3, 5, 7, 9.",
+  "🪄 Trucco per fare +1: la coda di 9 diventa tutta 0, la testa cresce di 1."
+ ],
+ "verifica": "verifiche/mat4-numeri-in-successione.json"
+}

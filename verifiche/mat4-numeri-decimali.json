@@ -1,0 +1,281 @@
+{
+  "titolo": "I numeri decimali",
+  "emoji": "🔸",
+  "materia": "matematica",
+  "classe": 4,
+  "obiettivi": [
+    "riconoscere parte intera e parte decimale",
+    "conoscere decimi, centesimi e millesimi",
+    "confrontare e ordinare i numeri decimali",
+    "eseguire addizioni e sottrazioni con i decimali",
+    "moltiplicare e dividere per 10, 100, 1000"
+  ],
+  "consegna": "Leggi con calma. Ricorda: virgola sotto virgola.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔸",
+      "testo": "Nel numero 12,6 qual è la parte decimale?",
+      "opzioni": [
+        "✨ 6",
+        "🧩 12",
+        "🔢 126"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci la parola al numero.",
+      "coppie": [
+        [
+          "1 decimo",
+          "0,1"
+        ],
+        [
+          "1 centesimo",
+          "0,01"
+        ],
+        [
+          "1 millesimo",
+          "0,001"
+        ],
+        [
+          "10 decimi",
+          "1"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "In 3,47 il 3 vale 3 ___. Il 4 vale 4 ___. Il 7 vale 7 ___.",
+      "soluzioni": [
+        "unità",
+        "decimi",
+        "centesimi"
+      ],
+      "parole": [
+        "unità",
+        "decimi",
+        "centesimi",
+        "millesimi"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "0,8 è più grande di 0,75.",
+          "vero": true
+        },
+        {
+          "testo": "0,3 e 0,30 sono lo stesso numero.",
+          "vero": true
+        },
+        {
+          "testo": "1,2 è più piccolo di 0,9.",
+          "vero": false
+        },
+        {
+          "testo": "100 centesimi formano 1 intero.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dal più piccolo al più grande.",
+      "elementi": [
+        "0,15",
+        "0,4",
+        "0,52",
+        "1,3",
+        "2,01"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➕",
+      "testo": "Esegui in colonna. Virgola sotto virgola.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "2,4 + 3,5",
+          "risultato": "5,9"
+        },
+        {
+          "testo": "1,25 + 0,6",
+          "risultato": "1,85"
+        },
+        {
+          "testo": "7,8 − 4,3",
+          "risultato": "3,5"
+        },
+        {
+          "testo": "5,6 − 2,25",
+          "risultato": "3,35"
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🚀",
+      "testo": "Calcola. Sposta le cifre nella tabella.",
+      "operazioni": [
+        {
+          "testo": "4,5 × 10",
+          "risultato": 45
+        },
+        {
+          "testo": "0,37 × 100",
+          "risultato": 37
+        },
+        {
+          "testo": "62 : 10",
+          "risultato": "6,2"
+        },
+        {
+          "testo": "8 : 100",
+          "risultato": "0,08"
+        }
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Il numero è più piccolo o più grande di 1?",
+      "categorie": [
+        "🔽 Più piccolo di 1",
+        "🔼 Più grande di 1"
+      ],
+      "elementi": [
+        {
+          "testo": "0,9",
+          "categoria": "🔽 Più piccolo di 1"
+        },
+        {
+          "testo": "0,25",
+          "categoria": "🔽 Più piccolo di 1"
+        },
+        {
+          "testo": "1,05",
+          "categoria": "🔼 Più grande di 1"
+        },
+        {
+          "testo": "3,2",
+          "categoria": "🔼 Più grande di 1"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🛒",
+      "testo": "Marta compra una mela da 0,60 euro e un'arancia da 0,85 euro. Quanto spende? Scrivi l'operazione e la risposta.",
+      "righe": 3,
+      "soluzione": "0,60 + 0,85 = 1,45. Marta spende 1,45 euro."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔸",
+      "testo": "Nel numero 5,3 qual è la parte intera?",
+      "opzioni": [
+        "🧩 5",
+        "✨ 3"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "1 decimo",
+          "0,1"
+        ],
+        [
+          "1 centesimo",
+          "0,01"
+        ],
+        [
+          "10 decimi",
+          "1"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "In 2,6 il 6 vale 6 ___.",
+      "soluzioni": [
+        "decimi"
+      ],
+      "parole": [
+        "decimi",
+        "unità"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "0,7 è più grande di 0,2.",
+          "vero": true
+        },
+        {
+          "testo": "1,5 è più piccolo di 0,5.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Dal più piccolo al più grande.",
+      "elementi": [
+        "0,2",
+        "0,5",
+        "1,3"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "➕",
+      "testo": "Calcola. Virgola sotto virgola.",
+      "in_colonna": true,
+      "operazioni": [
+        {
+          "testo": "1,2 + 2,3",
+          "risultato": "3,5"
+        },
+        {
+          "testo": "4,6 − 1,4",
+          "risultato": "3,2"
+        }
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🚀",
+      "testo": "Calcola.",
+      "operazioni": [
+        {
+          "testo": "2,5 × 10",
+          "risultato": 25
+        },
+        {
+          "testo": "36 : 10",
+          "risultato": "3,6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Verifica · La classe di Irene</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/caratteri/caratteri.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/verifica.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<script src="assets/curricolo.js"></script>
+<script src="assets/emoji-elenco.js"></script>
+<script src="assets/comune.js"></script>
+<script src="assets/verifica.js"></script>
+<script src="assets/verifica-online.js"></script>
+</head>
+<body class="pagina-verifica">
+<main class="contenitore">
+  <div class="v-comandi non-stampare" id="comandi" hidden>
+    <div class="v-gruppo" role="group" aria-label="Versione">
+      <button class="btn" data-versione="standard">📄 Standard</button>
+      <button class="btn bianco" data-versione="facilitata">🌈 Facilitata (BES/DSA)</button>
+    </div>
+    <div class="v-gruppo" role="group" aria-label="Modo">
+      <button class="btn" data-modo="carta">🖨️ Su carta</button>
+      <button class="btn bianco" data-modo="online">💻 Online, con correzione</button>
+    </div>
+    <div class="v-gruppo">
+      <button class="btn bianco" data-cambia="maiuscolo">🔠 MAIUSCOLO</button>
+      <button class="btn bianco" data-cambia="grande">🔍 Caratteri grandi</button>
+      <button class="btn bianco" data-cambia="soluzioni">✅ Soluzioni</button>
+      <button class="btn bianco" data-cambia="modifica">✏️ Modifica i testi</button>
+    </div>
+    <div class="v-gruppo">
+      <button class="btn giallo" id="stampa">🖨️ Stampa</button>
+      <a class="btn bianco" id="scarica">💾 Scarica</a>
+    </div>
+    <p class="nota" id="nota-modifica" hidden>✏️ Tocca un testo sul foglio e correggilo. Le modifiche valgono per la stampa di adesso.</p>
+  </div>
+  <div id="radice"><p style="text-align:center;padding:60px">Sto preparando la verifica… 📝</p></div>
+</main>
+<script>
+  creaTestata();
+  const p = parametri();
+  // Dentro la lezione guidata: solo le domande, senza testata e senza pulsanti.
+  if (p.dentro) document.body.classList.add("dentro");
+  const radice = document.getElementById("radice");
+  const errore = (msg) => radice.innerHTML = `<div class="scheda"><h2>😕 Verifica non trovata</h2><p>${escapeHTML(msg)}</p><a class="btn" href="area-insegnante.html">Vai all'area insegnante</a></div>`;
+  (async () => {
+    let v;
+    try {
+      if (p.locale) v = Verifica.Archivio.prendi(p.locale);
+      else if (p.file && /^verifiche\/[\w.-]+\.json$/.test(p.file)) v = await leggiJSON(p.file);
+    } catch { return errore("Non riesco a leggere il file della verifica."); }
+    if (!v) return errore("Questa verifica non esiste o è stata salvata su un altro computer.");
+    const e = Verifica.valida(v);
+    if (e.length) return errore(e.join(" "));
+    document.title = `${v.titolo} · Verifica`;
+    let versione = p.versione === "facilitata" ? "facilitata" : "standard";
+    const ha = { facilitata: !!v.domande_facilitate?.length };
+    const comandi = document.getElementById("comandi");
+    comandi.hidden = false;
+    if (!ha.facilitata) comandi.querySelector('[data-versione="facilitata"]').title = "Questa verifica non ha la versione facilitata: uso caratteri grandi e maiuscolo.";
+    let modo = p.modo === "online" ? "online" : "carta";
+    function mostra() {
+      radice.innerHTML = modo === "online" ? VerificaOnline.disegna(v, { versione }) : Verifica.disegna(v, { versione });
+      comandi.querySelectorAll("[data-modo]").forEach((b) => b.classList.toggle("bianco", b.dataset.modo !== modo));
+      document.body.classList.toggle("online", modo === "online");
+      comandi.querySelectorAll("[data-versione]").forEach((b) => b.classList.toggle("bianco", b.dataset.versione !== versione));
+      // La versione facilitata è sempre più leggibile: caratteri grandi.
+      document.body.classList.toggle("facilitata", versione === "facilitata");
+      if (modo === "carta" && document.body.classList.contains("modifica")) radice.querySelector(".foglio").contentEditable = "true";
+    }
+    mostra();
+    VerificaOnline.attiva(radice);
+    radice.addEventListener("click", (ev) => {
+      const b = ev.target.closest("[data-vo]");
+      if (b?.dataset.vo === "correggi") VerificaOnline.correggi(radice, v, { versione });
+      if (b?.dataset.vo === "ancora") { mostra(); scrollTo({ top: 0, behavior: "smooth" }); }
+    });
+    comandi.addEventListener("click", (ev) => {
+      const b = ev.target.closest("button");
+      if (!b) return;
+      if (b.dataset.versione) { versione = b.dataset.versione; mostra(); }
+      if (b.dataset.modo) { modo = b.dataset.modo; mostra(); }
+      if (b.dataset.cambia) {
+        const on = document.body.classList.toggle(b.dataset.cambia);
+        b.classList.toggle("bianco", !on);
+        if (b.dataset.cambia === "modifica") { radice.querySelector(".foglio").contentEditable = on ? "true" : "false"; document.getElementById("nota-modifica").hidden = !on; }
+      }
+      if (b.id === "stampa") window.print();
+    });
+    const nome = v.titolo.toLowerCase().normalize("NFD").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "") + ".json";
+    const scarica = document.getElementById("scarica");
+    scarica.href = URL.createObjectURL(new Blob([JSON.stringify(v, null, 2)], { type: "application/json" }));
+    scarica.download = "verifica-" + nome;
+  })();
+</script>
+</body>
+</html>

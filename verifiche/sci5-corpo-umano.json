@@ -1,0 +1,255 @@
+{
+  "titolo": "Il corpo umano",
+  "emoji": "🧍",
+  "materia": "scienze",
+  "classe": 5,
+  "obiettivi": [
+    "sapere che il corpo è organizzato in cellule, tessuti, organi e apparati",
+    "riconoscere dove si trovano gli organi principali",
+    "conoscere il lavoro dei principali apparati e del sistema nervoso"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "ordina",
+      "immagine": "🧱",
+      "testo": "Metti in ordine, dal più piccolo al più grande.",
+      "elementi": [
+        "cellula",
+        "tessuto",
+        "organo",
+        "apparato"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤝",
+      "testo": "Che cos'è un apparato?",
+      "opzioni": [
+        "🤝 una squadra di organi che lavorano insieme",
+        "🧫 una cellula molto grande",
+        "🦴 un osso della gamba"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci ogni apparato al suo lavoro.",
+      "coppie": [
+        [
+          "digerente",
+          "trasforma il cibo"
+        ],
+        [
+          "respiratorio",
+          "prende l'aria"
+        ],
+        [
+          "circolatorio",
+          "porta il sangue"
+        ],
+        [
+          "escretore",
+          "pulisce il sangue"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Dove si trova questo organo? Scrivilo nella colonna giusta.",
+      "categorie": [
+        "🙂 Nella testa",
+        "🫁 Nel petto",
+        "🍽️ Nella pancia"
+      ],
+      "elementi": [
+        {
+          "testo": "cervello",
+          "categoria": "🙂 Nella testa"
+        },
+        {
+          "testo": "cuore",
+          "categoria": "🫁 Nel petto"
+        },
+        {
+          "testo": "polmoni",
+          "categoria": "🫁 Nel petto"
+        },
+        {
+          "testo": "stomaco",
+          "categoria": "🍽️ Nella pancia"
+        },
+        {
+          "testo": "intestino",
+          "categoria": "🍽️ Nella pancia"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il cuore si ferma quando dormiamo.",
+          "vero": false
+        },
+        {
+          "testo": "Il cranio protegge il cervello.",
+          "vero": true
+        },
+        {
+          "testo": "I polmoni fanno parte dell'apparato digerente.",
+          "vero": false
+        },
+        {
+          "testo": "I muscoli tirano le ossa e ci fanno muovere.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Il ___ è la pompa che spinge il sangue. I ___ puliscono il sangue. Il ___ comanda tutto il corpo.",
+      "soluzioni": [
+        "cuore",
+        "reni",
+        "cervello"
+      ],
+      "parole": [
+        "cuore",
+        "reni",
+        "cervello",
+        "stomaco"
+      ]
+    },
+    {
+      "tipo": "collega",
+      "immagine": "👁️",
+      "testo": "Unisci ogni senso al suo organo.",
+      "coppie": [
+        [
+          "vista",
+          "occhio"
+        ],
+        [
+          "udito",
+          "orecchio"
+        ],
+        [
+          "olfatto",
+          "naso"
+        ],
+        [
+          "gusto",
+          "lingua"
+        ],
+        [
+          "tatto",
+          "pelle"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤸",
+      "testo": "Dopo una corsa, il cuore batte…",
+      "opzioni": [
+        "🐇 più veloce",
+        "🐢 più piano",
+        "🛑 non batte più"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché diciamo che il corpo è come una squadra? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché ogni organo e ogni apparato fa il suo lavoro, ma tutti lavorano insieme per tenerci vivi."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il contorno del corpo. Disegna dentro il cervello, i polmoni, il cuore e lo stomaco e scrivi i nomi."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "ordina",
+      "immagine": "🧱",
+      "testo": "Metti in ordine, dal più piccolo al più grande.",
+      "elementi": [
+        "cellula",
+        "organo",
+        "apparato"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤝",
+      "testo": "Un apparato è…",
+      "opzioni": [
+        "🤝 una squadra di organi",
+        "🧫 una cellula"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "digerente",
+          "cibo"
+        ],
+        [
+          "respiratorio",
+          "aria"
+        ],
+        [
+          "circolatorio",
+          "sangue"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Il cuore batte sempre.",
+          "vero": true
+        },
+        {
+          "testo": "I polmoni sono nella testa.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Il ___ comanda il corpo. Il ___ spinge il sangue.",
+      "soluzioni": [
+        "cervello",
+        "cuore"
+      ],
+      "parole": [
+        "cervello",
+        "cuore",
+        "naso"
+      ]
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il corpo con il cuore e i polmoni nel petto."
+    }
+  ]
+}

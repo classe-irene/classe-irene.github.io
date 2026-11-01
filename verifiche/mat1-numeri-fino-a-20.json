@@ -1,0 +1,50 @@
+{
+  "titolo": "I numeri fino a 20",
+  "emoji": "🔢",
+  "materia": "matematica",
+  "classe": 1,
+  "obiettivi": [
+    "contare oggetti fino a 20",
+    "leggere e scrivere i numeri fino a 20",
+    "trovare il numero prima e dopo",
+    "ordinare i numeri"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "conta", "immagine": "🍎", "testo": "Conta le mele.", "figura": "🍎", "numero": 7 },
+    { "tipo": "conta", "immagine": "⭐", "testo": "Conta le stelle.", "figura": "⭐", "numero": 15 },
+    { "tipo": "scelta", "immagine": "🐟", "testo": "Dove ci sono 5 pesci?", "opzioni": ["🐟🐟🐟 tre", "🐟🐟🐟🐟🐟 cinque", "🐟🐟🐟🐟🐟🐟🐟 sette"], "corretta": 1 },
+    { "tipo": "completa", "immagine": "➡️", "testo": "Scrivi il numero che manca.", "frase": "8, ___, 10. 13, 14, ___. ___, 19, 20.", "soluzioni": ["9", "15", "18"] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci numero e parola.", "coppie": [["3", "tre"], ["8", "otto"], ["12", "dodici"], ["20", "venti"]] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Dal più piccolo al più grande.", "elementi": ["🔢 2", "🔢 6", "🔢 11", "🔢 17"] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "Dopo il 9 viene il 10.", "vero": true },
+      { "testo": "Prima del 5 c'è il 6.", "vero": false },
+      { "testo": "10 cose fanno una decina.", "vero": true }
+    ] },
+    { "tipo": "calcolo", "immagine": "📦", "testo": "Una decina più le unità.", "operazioni": [
+      { "testo": "10 + 4", "risultato": 14 },
+      { "testo": "10 + 9", "risultato": 19 },
+      { "testo": "10 + 10", "risultato": 20 }
+    ] },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Fino a 10 o più di 10?", "categorie": ["🐭 fino a 10", "🐘 più di 10"], "elementi": [
+      { "testo": "🔢 5", "categoria": "🐭 fino a 10" },
+      { "testo": "🔢 1", "categoria": "🐭 fino a 10" },
+      { "testo": "🔢 16", "categoria": "🐘 più di 10" },
+      { "testo": "🔢 13", "categoria": "🐘 più di 10" }
+    ] },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna 12 palline." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "conta", "immagine": "🍎", "testo": "Conta le mele.", "figura": "🍎", "numero": 5 },
+    { "tipo": "conta", "immagine": "⭐", "testo": "Conta le stelle.", "figura": "⭐", "numero": 11 },
+    { "tipo": "scelta", "immagine": "🐟", "testo": "Dove ci sono 3 pesci?", "opzioni": ["🐟🐟🐟 tre", "🐟 uno"], "corretta": 0 },
+    { "tipo": "completa", "immagine": "➡️", "testo": "Scrivi il numero che manca.", "frase": "4, ___, 6", "soluzioni": ["5"], "parole": ["5", "8"] },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [["2", "due"], ["10", "dieci"], ["20", "venti"]] },
+    { "tipo": "ordina", "immagine": "🪜", "testo": "Dal più piccolo al più grande.", "elementi": ["🔢 1", "🔢 5", "🔢 9"] },
+    { "tipo": "vero_falso", "immagine": "⚖️", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "Dopo il 9 viene il 10.", "vero": true },
+      { "testo": "10 cose fanno una decina.", "vero": true }
+    ] }
+  ]
+}

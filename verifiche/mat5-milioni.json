@@ -1,0 +1,253 @@
+{
+  "titolo": "Milioni e miliardi",
+  "emoji": "🌌",
+  "materia": "matematica",
+  "classe": 5,
+  "obiettivi": [
+    "sapere che mille migliaia fanno un milione e mille milioni un miliardo",
+    "conoscere le classi: milioni, migliaia, unità semplici",
+    "riconoscere il valore di una cifra dal suo posto",
+    "leggere, scrivere e scomporre i numeri grandissimi",
+    "confrontare e ordinare i numeri grandissimi"
+  ],
+  "consegna": "Leggi con calma. Usa la tabella: hM daM uM | hk dak uk | h da u.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🏙️",
+      "testo": "Mille migliaia fanno…",
+      "opzioni": [
+        "🏙️ un milione",
+        "🌌 un miliardo",
+        "🏟️ centomila"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "testo": "In 47 300 000, quanto vale il 4?",
+      "opzioni": [
+        "🔢 4 000 000",
+        "🔢 40 000 000",
+        "🔢 400 000"
+      ],
+      "corretta": 1
+    },
+    {
+      "tipo": "collega",
+      "immagine": "💬",
+      "testo": "Unisci il numero a come si legge.",
+      "coppie": [
+        [
+          "1 000 000",
+          "un milione"
+        ],
+        [
+          "3 000 000",
+          "tre milioni"
+        ],
+        [
+          "20 000 000",
+          "venti milioni"
+        ],
+        [
+          "1 000 000 000",
+          "un miliardo"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Un milione ha 6 zeri.",
+          "vero": true
+        },
+        {
+          "testo": "Un miliardo è cento milioni.",
+          "vero": false
+        },
+        {
+          "testo": "9 999 999 è più grande di 10 000 000.",
+          "vero": false
+        },
+        {
+          "testo": "Ogni classe ha tre caselle.",
+          "vero": true
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🏘️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Da sinistra, la tabella ha la classe dei ___, poi delle ___, poi delle unità semplici.",
+      "soluzioni": [
+        "milioni",
+        "migliaia"
+      ],
+      "parole": [
+        "milioni",
+        "migliaia",
+        "decimi"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔢",
+      "testo": "Scrivi il numero in cifre.",
+      "operazioni": [
+        {
+          "testo": "4 uM + 2 hk + 5 uk",
+          "risultato": 4205000
+        },
+        {
+          "testo": "3 daM + 6 uM",
+          "risultato": 36000000
+        },
+        {
+          "testo": "1 hM + 7 dak",
+          "risultato": 100070000
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Metti in ordine dal più piccolo al più grande. Scrivi 1, 2, 3, 4.",
+      "elementi": [
+        "🔢 999 999",
+        "🔢 1 040 000",
+        "🔢 1 400 000",
+        "🔢 14 000 000"
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Meno o più di un milione? Scrivi ogni numero nella colonna giusta.",
+      "categorie": [
+        "🐭 Meno di un milione",
+        "🐘 Più di un milione"
+      ],
+      "elementi": [
+        {
+          "testo": "999 999",
+          "categoria": "🐭 Meno di un milione"
+        },
+        {
+          "testo": "850 000",
+          "categoria": "🐭 Meno di un milione"
+        },
+        {
+          "testo": "95 000",
+          "categoria": "🐭 Meno di un milione"
+        },
+        {
+          "testo": "1 000 001",
+          "categoria": "🐘 Più di un milione"
+        },
+        {
+          "testo": "6 300 000",
+          "categoria": "🐘 Più di un milione"
+        },
+        {
+          "testo": "20 000 000",
+          "categoria": "🐘 Più di un milione"
+        }
+      ]
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "👓",
+      "testo": "Scrivi in lettere il numero 4 250 000.",
+      "righe": 2,
+      "soluzione": "quattro milioni duecentocinquantamila"
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🏙️",
+      "testo": "Mille migliaia fanno…",
+      "opzioni": [
+        "🏙️ un milione",
+        "🏟️ centomila"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "💬",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "1 000 000",
+          "un milione"
+        ],
+        [
+          "1 000 000 000",
+          "un miliardo"
+        ],
+        [
+          "1 000",
+          "mille"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Un milione ha 6 zeri.",
+          "vero": true
+        },
+        {
+          "testo": "999 999 è più grande di 1 000 000.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🏘️",
+      "testo": "Completa.",
+      "frase": "Mille milioni fanno un ___.",
+      "soluzioni": [
+        "miliardo"
+      ],
+      "parole": [
+        "miliardo",
+        "migliaio"
+      ]
+    },
+    {
+      "tipo": "calcolo",
+      "immagine": "🔢",
+      "testo": "Scrivi il numero in cifre.",
+      "operazioni": [
+        {
+          "testo": "3 uM",
+          "risultato": 3000000
+        },
+        {
+          "testo": "2 uM + 5 hk",
+          "risultato": 2500000
+        }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "testo": "Dal più piccolo al più grande. Scrivi 1, 2, 3.",
+      "elementi": [
+        "🔢 500 000",
+        "🔢 1 000 000",
+        "🔢 3 000 000"
+      ]
+    }
+  ]
+}

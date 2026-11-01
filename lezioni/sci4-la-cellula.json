@@ -1,0 +1,442 @@
+{
+  "titolo": "La cellula",
+  "emoji": "🧫",
+  "materia": "scienze",
+  "classe": 4,
+  "introduzione": "Tutti gli esseri viventi sono fatti di cellule. Scopriamo com'è fatta una cellula animale e una cellula vegetale.",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Lia, la scienziata!\nNel mio laboratorio ho un microscopio: fa vedere le cose piccolissime.\nOggi guardiamo insieme una foglia e scopriamo un segreto.",
+    "immagini": [
+      "🔬 microscopio",
+      "🍃 foglia",
+      "🧫 cellula"
+    ],
+    "missione": "Scoprite con Lia le parti della cellula. Alla fine vincete la figurina del microscopio!"
+  },
+  "premio": "🔬",
+  "parole_chiave": [
+    "🧫 cellula animale",
+    "🥬 cellula vegetale",
+    "🫧 membrana",
+    "🍮 citoplasma",
+    "🎛️ nucleo",
+    "🔋 mitocondri",
+    "🧱 parete",
+    "💧 vacuolo",
+    "🍃 cloroplasti"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🔍 Che cos'è la cellula",
+      "immagine": "🔍",
+      "testo": "Immagina di avere una vista speciale, che ingrandisce tantissimo.\nGuardi una foglia e vedi tanti piccoli contenitori, uno vicino all'altro.\nOgnuno è una cellula: la parte più piccola che è viva.\nLa cellula cresce, si nutre e respira, proprio come te!",
+      "immagini": [
+        "🍃 foglia",
+        "🔬 microscopio",
+        "🧫 cellula animale",
+        "🥬 cellula vegetale"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "foglia",
+        "video": true,
+        "titolo": "che cos'è la cellula"
+      },
+      "pensa": {
+        "domanda": "Perché diciamo che la cellula è la parte più piccola di un essere vivente?",
+        "risposta": "Perché tutti gli esseri viventi sono fatti di cellule, e ogni cellula da sola è già viva: cresce, si nutre e respira."
+      }
+    },
+    {
+      "titolo": "🧫 La cellula animale",
+      "immagine": "🧫",
+      "testo": "La cellula animale ha quattro parti principali.\nLa membrana cellulare la chiude.\nIl citoplasma la riempie.\nIl nucleo la comanda.\nI mitocondri producono energia.",
+      "immagini": [
+        "🫧 membrana",
+        "🍮 citoplasma",
+        "🎛️ nucleo",
+        "🔋 mitocondri"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "cellula",
+        "video": true,
+        "titolo": "la cellula animale"
+      },
+      "scopri": [
+        {
+          "fronte": "🫧 Membrana",
+          "retro": "🚪 Lo strato sottile fuori. Fa entrare e uscire le sostanze."
+        },
+        {
+          "fronte": "🍮 Citoplasma",
+          "retro": "🍮 Una gelatina che riempie la cellula."
+        },
+        {
+          "fronte": "🎛️ Nucleo",
+          "retro": "🎛️ Il centro di controllo: comanda la cellula."
+        },
+        {
+          "fronte": "🔋 Mitocondri",
+          "retro": "⚡ Producono l'energia."
+        }
+      ]
+    },
+    {
+      "titolo": "🥬 La cellula vegetale",
+      "immagine": "🥬",
+      "testo": "La cellula delle piante ha le stesse parti della cellula animale.\nIn più ha tre parti speciali:\nla parete cellulare, il vacuolo e i cloroplasti.",
+      "immagini": [
+        "🧱 parete",
+        "💧 vacuolo",
+        "🍃 cloroplasti"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "cellula_vegetale",
+        "video": true,
+        "titolo": "la cellula vegetale"
+      },
+      "scopri": [
+        {
+          "fronte": "🧱 Parete cellulare",
+          "retro": "💪 Uno strato rigido. Dà la forma e sostiene la cellula."
+        },
+        {
+          "fronte": "💧 Vacuolo",
+          "retro": "🛢️ Un grande serbatoio: tiene l'acqua."
+        },
+        {
+          "fronte": "🍃 Cloroplasti",
+          "retro": "☀️ Fanno la fotosintesi: il cibo della pianta."
+        }
+      ]
+    },
+    {
+      "titolo": "⚖️ Animale o vegetale?",
+      "immagine": "⚖️",
+      "testo": "Tutte e due hanno membrana, citoplasma, nucleo e mitocondri.\nSolo la cellula vegetale ha la parete, il vacuolo e i cloroplasti.\nPer questo la cellula vegetale ha una forma più squadrata ed è verde.",
+      "immagini": [
+        "🧫 cellula animale",
+        "🥬 cellula vegetale"
+      ],
+      "pensa": {
+        "domanda": "Perché solo la cellula vegetale ha i cloroplasti?",
+        "risposta": "Perché la pianta prepara da sola il suo cibo con la luce del sole: la fotosintesi avviene nei cloroplasti. Gli animali invece mangiano."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🔍",
+      "domanda": "Che cos'è la cellula?",
+      "opzioni": [
+        "🧫 la parte più piccola che è viva",
+        "🫀 un organo del corpo",
+        "🔬 uno strumento"
+      ],
+      "corretta": 0,
+      "spiegazione": "La cellula è la parte più piccola di un essere vivente."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥬",
+      "domanda": "Guarda il disegno. Che cellula è?",
+      "opzioni": [
+        "🧫 cellula animale",
+        "🥬 cellula vegetale"
+      ],
+      "corretta": 1,
+      "spiegazione": "È verde, squadrata e ha i cloroplasti: è vegetale."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parte al suo lavoro.",
+      "coppie": [
+        [
+          "🎛️ nucleo",
+          "🎮 comanda la cellula"
+        ],
+        [
+          "🔋 mitocondri",
+          "⚡ producono energia"
+        ],
+        [
+          "🍃 cloroplasti",
+          "☀️ fanno la fotosintesi"
+        ],
+        [
+          "💧 vacuolo",
+          "🛢️ tiene l'acqua"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Dove si trova questa parte?",
+      "categorie": [
+        "⚖️ In tutte e due",
+        "🥬 Solo nella vegetale"
+      ],
+      "elementi": [
+        {
+          "testo": "🫧 membrana",
+          "categoria": "⚖️ In tutte e due"
+        },
+        {
+          "testo": "🎛️ nucleo",
+          "categoria": "⚖️ In tutte e due"
+        },
+        {
+          "testo": "🔋 mitocondri",
+          "categoria": "⚖️ In tutte e due"
+        },
+        {
+          "testo": "🧱 parete",
+          "categoria": "🥬 Solo nella vegetale"
+        },
+        {
+          "testo": "💧 vacuolo",
+          "categoria": "🥬 Solo nella vegetale"
+        },
+        {
+          "testo": "🍃 cloroplasti",
+          "categoria": "🥬 Solo nella vegetale"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧫",
+      "affermazione": "La cellula animale ha i cloroplasti.",
+      "corretta": false,
+      "spiegazione": "No: i cloroplasti ci sono solo nella cellula vegetale."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il [nucleo] è il centro di controllo. I [mitocondri] producono energia.",
+      "distrattori": [
+        "vacuolo",
+        "cuore"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🧱",
+      "affermazione": "La parete cellulare dà forma e sostegno alla cellula vegetale.",
+      "corretta": true,
+      "spiegazione": "Sì! È uno strato rigido, fuori dalla membrana."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la parte e il suo lavoro.",
+      "coppie": [
+        [
+          "🎛️ nucleo",
+          "🎮 comanda"
+        ],
+        [
+          "🔋 mitocondri",
+          "⚡ energia"
+        ],
+        [
+          "🍃 cloroplasti",
+          "☀️ fotosintesi"
+        ],
+        [
+          "💧 vacuolo",
+          "🛢️ serbatoio"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍮",
+      "domanda": "Che cosa riempie la cellula, come una gelatina?",
+      "opzioni": [
+        "🍮 il citoplasma",
+        "🧱 la parete",
+        "🫧 la membrana"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il citoplasma è morbido come una gelatina."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Quale parte NON c'è nella cellula animale?",
+      "elementi": [
+        "🫧 membrana",
+        "🎛️ nucleo",
+        "💧 vacuolo grande",
+        "🔋 mitocondri"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il grande vacuolo c'è nella cellula vegetale."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parti della cellula.",
+      "parole": [
+        "🎛️ nucleo",
+        "🧱 parete",
+        "💧 vacuolo",
+        "🫧 membrana"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔬",
+      "domanda": "Metti in ordine, come nel video: dalla foglia alla cellula.",
+      "elementi": [
+        "🍃 guardo la foglia",
+        "🔬 uso il microscopio",
+        "🔍 vedo tanti contenitori",
+        "🥬 ognuno è una cellula"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🫧",
+      "affermazione": "Dalla membrana cellulare entrano ed escono le sostanze.",
+      "corretta": true,
+      "spiegazione": "Sì! La membrana è come una porta sottile."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍃",
+      "domanda": "Dove avviene la fotosintesi?",
+      "opzioni": [
+        "🍃 nei cloroplasti",
+        "🎛️ nel nucleo",
+        "🫧 nella membrana"
+      ],
+      "corretta": 0,
+      "spiegazione": "I cloroplasti usano la luce del sole per fare il cibo della pianta."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le parti che ha solo la cellula vegetale!",
+      "giusti": [
+        "🧱 parete",
+        "💧 vacuolo",
+        "🍃 cloroplasti"
+      ],
+      "sbagliati": [
+        "🫧 membrana",
+        "🎛️ nucleo",
+        "🔋 mitocondri"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "La [parete] cellulare è rigida. Il [vacuolo] è un serbatoio d'acqua.",
+      "distrattori": [
+        "membrana",
+        "nucleo"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔍",
+      "affermazione": "La cellula si vede bene a occhio nudo.",
+      "corretta": false,
+      "spiegazione": "No: è piccolissima, serve il microscopio."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parte a ciò che le somiglia.",
+      "coppie": [
+        [
+          "🧱 parete",
+          "🏰 un muro forte"
+        ],
+        [
+          "🍮 citoplasma",
+          "🍮 una gelatina"
+        ],
+        [
+          "🎛️ nucleo",
+          "🎮 un telecomando"
+        ]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔋",
+      "domanda": "Chi produce l'energia per la cellula?",
+      "opzioni": [
+        "🔋 i mitocondri",
+        "💧 il vacuolo",
+        "🧱 la parete"
+      ],
+      "corretta": 0,
+      "spiegazione": "I mitocondri sono come piccole batterie."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è una parte della cellula?",
+      "elementi": [
+        "🎛️ nucleo",
+        "🫀 cuore",
+        "🫧 membrana",
+        "🔋 mitocondri"
+      ],
+      "intruso": 1,
+      "spiegazione": "Il cuore è un organo, non una parte della cellula."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🥬",
+      "affermazione": "Anche la cellula vegetale ha il nucleo.",
+      "corretta": true,
+      "spiegazione": "Sì! Membrana, citoplasma, nucleo e mitocondri ci sono in tutte e due."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧫",
+      "domanda": "Che forma ha di solito la cellula animale?",
+      "opzioni": [
+        "⚪ tondeggiante",
+        "🟩 squadrata con la parete"
+      ],
+      "corretta": 0,
+      "spiegazione": "Non ha la parete rigida: la sua forma è più tonda e morbida."
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CELLULA",
+      "indizio": "🔬 La parte più piccola che è viva"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "VACUOLO",
+      "indizio": "💧 Il grande serbatoio d'acqua della cellula vegetale"
+    }
+  ],
+  "ricorda": [
+    "🧫 La cellula è la parte più piccola che è viva: cresce, si nutre e respira.",
+    "🫧 Membrana, citoplasma, nucleo e mitocondri ci sono in tutte e due le cellule.",
+    "🎛️ Il nucleo comanda. I mitocondri producono energia.",
+    "🥬 Solo la cellula vegetale ha parete cellulare, vacuolo e cloroplasti.",
+    "🍃 Nei cloroplasti avviene la fotosintesi."
+  ],
+  "verifica": "verifiche/sci4-la-cellula.json"
+}

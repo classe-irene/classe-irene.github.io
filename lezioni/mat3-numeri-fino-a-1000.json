@@ -1,0 +1,335 @@
+{
+  "titolo": "I numeri fino a 1000",
+  "emoji": "🏰",
+  "materia": "matematica",
+  "classe": 3,
+  "introduzione": "Scopriamo le centinaia, le decine e le unità, fino al numero 1000.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Bea, la pasticcera!\nNel mio negozio ho tantissime caramelle.\nLe metto in sacchetti da 10 e in scatole da 100. Mi aiutate a contarle?",
+    "immagini": [
+      "🍬 caramelle",
+      "🛍️ sacchetto da 10",
+      "📦 scatola da 100"
+    ],
+    "missione": "Contate con Bea fino a 1000. Alla fine vincete la figurina del castello!"
+  },
+  "premio": "🏰",
+  "parole_chiave": [
+    "1️⃣ unità",
+    "🔟 decina",
+    "💯 centinaio",
+    "🏰 migliaio",
+    "🔢 cifra",
+    "🧮 abaco",
+    "⚖️ maggiore e minore"
+  ],
+  "sezioni": [
+    {
+      "titolo": "💯 Il centinaio",
+      "immagine": "💯",
+      "testo": "10 unità fanno 1 decina.\n10 decine fanno 1 centinaio.\nUn centinaio è 100.\nBea mette 10 sacchetti da 10 in una scatola: dentro ci sono 100 caramelle!",
+      "immagini": [
+        "1️⃣ unità",
+        "🔟 decina",
+        "💯 centinaio",
+        "📦 scatola da 100"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "numero",
+        "n": 100,
+        "video": true,
+        "titolo": "10 decine fanno 100"
+      },
+      "pensa": {
+        "domanda": "Quante caramelle ci sono in 3 scatole da 100?",
+        "risposta": "300 caramelle: 3 centinaia fanno 300."
+      }
+    },
+    {
+      "titolo": "🧮 Centinaia, decine e unità",
+      "immagine": "🧮",
+      "testo": "I numeri fino a 999 hanno al massimo tre cifre.\nNella tabella le centinaia stanno a sinistra, poi le decine, poi le unità.\nIl numero 345 ha 3 centinaia, 4 decine e 5 unità.\nOgni cifra vale di più se sta più a sinistra.",
+      "immagini": [
+        "💯 centinaia",
+        "🔟 decine",
+        "1️⃣ unità",
+        "🔢 cifra"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "costruiamo il 345",
+        "passi": [
+          { "figure": "💯 💯 💯", "testo": "Ecco 3 centinaia: fanno 300." },
+          { "figure": "🔟 🔟 🔟 🔟", "testo": "Poi 4 decine: fanno 40." },
+          { "figure": "1️⃣ 1️⃣ 1️⃣ 1️⃣ 1️⃣", "testo": "Poi 5 unità: fanno 5." },
+          { "figure": "💯 ➕ 🔟 ➕ 1️⃣", "testo": "300 + 40 + 5 = 345." },
+          { "figure": "🧮", "testo": "Sull'abaco: 3 palline nelle h, 4 nelle da, 5 nelle u." }
+        ]
+      },
+      "scopri": [
+        { "fronte": "💯 h", "retro": "💯 Le centinaia. Una h vale 100." },
+        { "fronte": "🔟 da", "retro": "🔟 Le decine. Una da vale 10." },
+        { "fronte": "1️⃣ u", "retro": "1️⃣ Le unità. Una u vale 1." }
+      ]
+    },
+    {
+      "titolo": "🏰 Il migliaio",
+      "immagine": "🏰",
+      "testo": "Dopo 999 viene 1000.\n10 centinaia fanno 1 migliaio.\nIl migliaio si scrive k nella tabella.\nLa tabella è: k, h, da, u. La k sta a sinistra.\n1 k = 10 h = 100 da = 1000 u.",
+      "immagini": [
+        "💯 centinaio",
+        "🏰 migliaio",
+        "🔢 1000"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "equivalenza",
+        "n": 1,
+        "da": "k",
+        "a": "u",
+        "video": true,
+        "titolo": "1 migliaio sono 1000 unità"
+      },
+      "pensa": {
+        "domanda": "Bea ha 9 scatole da 100. Quante scatole le mancano per arrivare a 1000?",
+        "risposta": "Le manca 1 scatola: 10 centinaia fanno 1000."
+      }
+    },
+    {
+      "titolo": "⚖️ Confrontare e ordinare",
+      "immagine": "⚖️",
+      "testo": "Per confrontare due numeri guardo prima le centinaia.\nSe sono uguali, guardo le decine.\nSe sono uguali anche quelle, guardo le unità.\n> vuol dire maggiore. < vuol dire minore. = vuol dire uguale.",
+      "immagini": [
+        "💯 centinaia",
+        "🔟 decine",
+        "1️⃣ unità",
+        "⚖️ maggiore e minore"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "chi è più grande?",
+        "passi": [
+          { "figure": "4️⃣ 5️⃣ 2️⃣ ⚖️ 4️⃣ 2️⃣ 8️⃣", "testo": "Confronto 452 e 428." },
+          { "figure": "💯 ⚖️ 💯", "testo": "Le centinaia sono uguali: 4 e 4." },
+          { "figure": "🔟 ⚖️ 🔟", "testo": "Guardo le decine: 5 è più di 2." },
+          { "figure": "🏆", "testo": "Allora 452 > 428." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Qual è il numero che viene subito dopo 399?",
+        "risposta": "400: 399 + 1 = 400."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "💯",
+      "domanda": "10 decine fanno…",
+      "opzioni": ["💯 100", "🔟 10", "🏰 1000"],
+      "corretta": 0,
+      "spiegazione": "10 decine fanno 1 centinaio: 100."
+    },
+    {
+      "tipo": "conta",
+      "immagine": "💯",
+      "domanda": "Quante centinaia vedi?",
+      "oggetto": "💯",
+      "numero": 6,
+      "spiegazione": "6 centinaia fanno 600."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🏰",
+      "affermazione": "10 centinaia fanno 1000.",
+      "corretta": true,
+      "spiegazione": "Sì! 10 centinaia fanno 1 migliaio."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧮",
+      "domanda": "Nel numero 362, quante centinaia ci sono?",
+      "opzioni": ["💯 3", "🔟 6", "1️⃣ 2"],
+      "corretta": 0,
+      "spiegazione": "362 = 3 h, 6 da, 2 u."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "456 ha [4] centinaia, [5] decine e [6] unità.",
+      "distrattori": ["3", "7"]
+    },
+    {
+      "tipo": "equivalenza",
+      "immagine": "🔄",
+      "domanda": "Quante decine ci sono in 3 centinaia?",
+      "n": 3,
+      "da": "h",
+      "a": "da",
+      "spiegazione": "3 h = 30 da."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il numero alle sue parti.",
+      "coppie": [
+        ["🔢 245", "🧮 2 h, 4 da, 5 u"],
+        ["🔢 524", "🧮 5 h, 2 da, 4 u"],
+        ["🔢 405", "🧮 4 h, 0 da, 5 u"]
+      ]
+    },
+    {
+      "tipo": "retta",
+      "immagine": "🦘",
+      "domanda": "Il canguro salta di 100 in 100. Tocca il 700.",
+      "min": 0,
+      "max": 1000,
+      "passo": 100,
+      "corretta": 700
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: il numero e come si legge.",
+      "coppie": [
+        ["🔢 100", "💬 cento"],
+        ["🔢 250", "💬 duecentocinquanta"],
+        ["🔢 608", "💬 seicentotto"],
+        ["🔢 1000", "💬 mille"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔢",
+      "affermazione": "In 528 il 5 vale 5.",
+      "corretta": false,
+      "spiegazione": "No! Il 5 sta nelle centinaia: vale 500."
+    },
+    {
+      "tipo": "equivalenza",
+      "immagine": "🏰",
+      "domanda": "Quante centinaia ci sono in 1 migliaio?",
+      "n": 1,
+      "da": "k",
+      "a": "h",
+      "spiegazione": "1 k = 10 h."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "⚖️",
+      "domanda": "Più piccolo o più grande di 500?",
+      "categorie": ["🐭 Meno di 500", "🐘 Più di 500"],
+      "elementi": [
+        { "testo": "🔢 125", "categoria": "🐭 Meno di 500" },
+        { "testo": "🔢 499", "categoria": "🐭 Meno di 500" },
+        { "testo": "🔢 307", "categoria": "🐭 Meno di 500" },
+        { "testo": "🔢 501", "categoria": "🐘 Più di 500" },
+        { "testo": "🔢 760", "categoria": "🐘 Più di 500" },
+        { "testo": "🔢 999", "categoria": "🐘 Più di 500" }
+      ],
+      "suggerimento": "Guarda prima le centinaia!"
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Dal più piccolo al più grande.",
+      "elementi": ["🔢 189", "🔢 418", "🔢 481", "🔢 814"],
+      "suggerimento": "Guarda prima le centinaia."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Salta di 10 in 10. Tocca il 360.",
+      "min": 300,
+      "max": 400,
+      "passo": 10,
+      "corretta": 360
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🧩",
+      "domanda": "Scomponi il numero.",
+      "testo": "738 = [700] + [30] + [8]",
+      "distrattori": ["7", "3"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⏭️",
+      "domanda": "Quale numero viene subito dopo 499?",
+      "opzioni": ["🔢 500", "🔢 498", "🔢 490"],
+      "corretta": 0,
+      "spiegazione": "499 + 1 = 500."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "In quale numero il 7 NON vale 70?",
+      "elementi": ["🔢 175", "🔢 278", "🔢 704", "🔢 970"],
+      "intruso": 2,
+      "spiegazione": "In 704 il 7 sta nelle centinaia: vale 700."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa i numeri con 3 centinaia!",
+      "giusti": ["🔢 300", "🔢 315", "🔢 342", "🔢 389", "🔢 307"],
+      "sbagliati": ["🔢 230", "🔢 403", "🔢 530", "🔢 133", "🔢 43"],
+      "quanti": 5
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🍳",
+      "domanda": "Completa il testo bucato di Bea.",
+      "testo": "Bea mette 10 caramelle in un sacchetto: è una [decina].\n10 sacchetti fanno un [centinaio].\n10 scatole da 100 fanno [1000] caramelle.",
+      "distrattori": ["unità", "500"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazione": "632 è maggiore di 623.",
+      "corretta": true,
+      "spiegazione": "Sì! Le centinaia sono uguali. Nelle decine 3 è più di 2."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole dei numeri.",
+      "parole": ["💯 cento", "🏰 mille", "🔢 cifra", "🔟 decina", "🧮 abaco"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "CEN-TI-NA-IO",
+      "indizio": "💯 10 decine tutte insieme"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "MIGLIAIO",
+      "indizio": "🏰 Sono 10 centinaia"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "DECINA",
+      "indizio": "🔟 10 unità tutte insieme"
+    }
+  ],
+  "ricorda": [
+    "🔟 10 unità fanno 1 decina.",
+    "💯 10 decine fanno 1 centinaio: 100.",
+    "🏰 10 centinaia fanno 1 migliaio: 1000.",
+    "🧮 Nella tabella: h, da, u. Le centinaia stanno a sinistra.",
+    "🔢 Una cifra vale di più se sta più a sinistra.",
+    "⚖️ Per confrontare guardo prima le centinaia, poi le decine, poi le unità."
+  ],
+  "verifica": "verifiche/mat3-numeri-fino-a-1000.json"
+}

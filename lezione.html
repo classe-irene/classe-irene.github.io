@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Lezione · La classe di Irene</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/caratteri/caratteri.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍🏫</text></svg>">
+<script src="assets/curricolo.js"></script>
+<script src="assets/emoji-elenco.js"></script>
+<script src="assets/comune.js"></script>
+<script src="assets/animazioni.js"></script>
+<script src="assets/giochi.js"></script>
+<script src="assets/effetti.js"></script>
+<script src="assets/guida.js"></script>
+<script src="assets/motore.js"></script>
+</head>
+<body>
+<main class="contenitore" id="radice"><p style="text-align:center;padding:60px">Sto preparando la lezione… 👩‍🏫</p></main>
+<script>
+  creaTestata();
+  const p = parametri();
+  const radice = document.getElementById("radice");
+  const errore = (msg) => radice.innerHTML = `<div class="scheda"><h2>😕 Lezione non trovata</h2><p>${escapeHTML(msg)}</p><a class="btn" href="index.html">Torna alla home</a></div>`;
+  (async () => {
+    try {
+      let l;
+      if (p.locale) l = Archivio.prendi(p.locale);
+      else if (p.file && /^lezioni\/[\w.-]+\.json$/.test(p.file)) l = await leggiJSON(p.file);
+      if (!l) return errore("Questa lezione non esiste o è stata salvata su un altro computer.");
+      const e = Motore.valida(l);
+      if (e.length) return errore(e.join(" "));
+      Motore.disegnaLezione(l, radice);
+    } catch (err) { errore("Non riesco a leggere il file della lezione."); }
+  })();
+</script>
+</body>
+</html>

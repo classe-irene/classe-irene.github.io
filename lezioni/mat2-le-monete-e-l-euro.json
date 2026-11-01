@@ -1,0 +1,123 @@
+{
+  "titolo": "Le monete e l'euro",
+  "emoji": "💶",
+  "materia": "matematica",
+  "classe": 2,
+  "introduzione": "Conosciamo monete e banconote, contiamo i soldi e facciamo la spesa.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Lalla, la fornaia!\nNel mio negozio vendo pane, biscotti e torte.\nOggi la cassa è piena di soldi: mi aiutate a contarli?",
+    "immagini": ["🥖 pane", "🍪 biscotti", "💰 soldi"],
+    "missione": "Aiutate Lalla a contare i soldi e a dare il resto. Alla fine vincete la figurina della moneta!"
+  },
+  "premio": "🪙",
+  "parole_chiave": ["💶 euro", "🪙 moneta", "💵 banconota", "🟤 centesimo", "🏷️ prezzo", "🛒 spesa", "💰 resto"],
+  "sezioni": [
+    {
+      "titolo": "🪙 Le monete",
+      "immagine": "🪙",
+      "testo": "In Italia usiamo l'euro.\nCi sono monete da 1 euro e da 2 euro.\nCi sono anche monete piccole: i centesimi.\n100 centesimi fanno 1 euro.",
+      "immagini": ["💶 euro", "🪙 1 euro", "🪙 2 euro", "🟤 centesimi"],
+      "scopri": [
+        { "fronte": "🪙 1 euro", "retro": "🪙 Una moneta che vale 1 euro." },
+        { "fronte": "🪙 2 euro", "retro": "🪙🪙 Vale come 2 monete da 1 euro." },
+        { "fronte": "🟤 Centesimi", "retro": "🤏 Valgono poco: 100 centesimi fanno 1 euro." }
+      ]
+    },
+    {
+      "titolo": "💵 Le banconote",
+      "immagine": "💵",
+      "testo": "Le banconote sono di carta.\nCi sono banconote da 5, 10, 20 e 50 euro.\nUna banconota da 5 euro vale come 5 monete da 1 euro.",
+      "immagini": ["💵 banconota", "💵 5 euro", "💵 10 euro", "💵 20 euro", "💵 50 euro"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "monete e banconote",
+        "passi": [
+          { "figure": "🪙 🪙 🪙 🪙 🪙", "testo": "Ecco cinque monete da 1 euro: sono 5 euro." },
+          { "figure": "🪙 → 💵", "testo": "Valgono come una banconota da 5 euro." },
+          { "figure": "💵 💵 → 💵", "testo": "Due banconote da 5 euro valgono come una da 10 euro." },
+          { "figure": "💵 💵 → 💵", "testo": "Due banconote da 10 euro valgono come una da 20 euro." }
+        ]
+      }
+    },
+    {
+      "titolo": "🧮 Contare i soldi",
+      "immagine": "🧮",
+      "testo": "Per contare i soldi, parti da quelli che valgono di più.\nPoi aggiungi quelli che valgono meno.\n10 euro, poi 2 euro, poi 1 euro: fanno 13 euro.",
+      "immagini": ["💵 10 euro", "🪙 2 euro", "🪙 1 euro", "💰 13 euro"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "contiamo i soldi di Lalla",
+        "passi": [
+          { "figure": "💵", "testo": "Prendo la banconota da 10 euro: 10." },
+          { "figure": "💵 ➕ 🪙", "testo": "Aggiungo la moneta da 2 euro: 12." },
+          { "figure": "💵 ➕ 🪙 ➕ 🪙", "testo": "Aggiungo la moneta da 1 euro: 13." },
+          { "figure": "💰 1️⃣ 3️⃣", "testo": "In tutto sono 13 euro." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Hai una banconota da 5 euro e una moneta da 2 euro. Quanti euro hai?",
+        "risposta": "Parto da 5 e aggiungo 2: sono 7 euro."
+      }
+    },
+    {
+      "titolo": "🛒 Facciamo la spesa",
+      "immagine": "🛒",
+      "testo": "Al negozio guardo il prezzo.\nUna torta costa 12 euro.\nI biscotti costano 7 euro.\nPer sapere quanto pago, faccio l'addizione.",
+      "immagini": ["🏷️ prezzo", "🍰 torta 12 euro", "🍪 biscotti 7 euro", "➕ addizione"],
+      "animazione": { "tipo": "addizione", "a": 12, "b": 7 },
+      "pensa": {
+        "domanda": "Il pane costa 2 euro e il latte 1 euro. Quanto paghi in tutto?",
+        "risposta": "2 + 1 = 3. Pago 3 euro."
+      }
+    },
+    {
+      "titolo": "💰 Il resto",
+      "immagine": "💰",
+      "testo": "A volte do più soldi del prezzo.\nAllora Lalla mi ridà il resto.\nIl pane costa 3 euro. Io do 5 euro.\nIl resto è 2 euro, perché 5 meno 3 fa 2.",
+      "immagini": ["💵 do più soldi", "💰 resto", "🥖 pane 3 euro", "🪙 resto 2 euro"],
+      "scopri": [
+        { "fronte": "🍦 Gelato 3 euro", "retro": "💵 Do 5 euro: il resto è 2 euro." },
+        { "fronte": "🧃 Succo 1 euro", "retro": "🪙 Do 2 euro: il resto è 1 euro." },
+        { "fronte": "📘 Libro 8 euro", "retro": "💵 Do 10 euro: il resto è 2 euro." }
+      ]
+    }
+  ],
+  "esercizi": [
+    { "tipo": "scelta", "immagine": "🪙", "domanda": "Quanti euro fanno 2 monete da 1 euro?", "opzioni": ["🪙 2 euro", "🪙 1 euro", "🪙 3 euro"], "corretta": 0, "spiegazione": "1 euro + 1 euro = 2 euro." },
+    { "tipo": "scelta", "immagine": "💵", "domanda": "Le banconote sono fatte di…", "opzioni": ["📄 carta", "🪨 pietra", "🧊 ghiaccio"], "corretta": 0, "spiegazione": "Le banconote sono di carta, le monete di metallo." },
+    { "tipo": "vero_falso", "immagine": "💵", "affermazione": "Una banconota da 5 euro vale come 5 monete da 1 euro.", "corretta": true, "spiegazione": "Sì! 1 + 1 + 1 + 1 + 1 = 5." },
+    { "tipo": "categorie", "immagine": "🧺", "domanda": "Moneta o banconota?", "categorie": ["🪙 Moneta", "💵 Banconota"], "elementi": [{ "testo": "🔢 1 euro", "categoria": "🪙 Moneta" }, { "testo": "🔢 2 euro", "categoria": "🪙 Moneta" }, { "testo": "🔢 50 centesimi", "categoria": "🪙 Moneta" }, { "testo": "🔢 5 euro", "categoria": "💵 Banconota" }, { "testo": "🔢 10 euro", "categoria": "💵 Banconota" }, { "testo": "🔢 20 euro", "categoria": "💵 Banconota" }] },
+    { "tipo": "abbina", "immagine": "🔗", "domanda": "Unisci i soldi al totale.", "coppie": [["🪙 2 euro + 2 euro", "💰 4 euro"], ["💵 5 euro + 5 euro", "💰 10 euro"], ["💵 10 euro + 1 euro", "💰 11 euro"]] },
+    { "tipo": "completa", "immagine": "✏️", "domanda": "Completa.", "testo": "Due banconote da 10 euro fanno [20] euro.", "distrattori": ["12", "30"] },
+    { "tipo": "retta", "immagine": "🐷", "domanda": "Nel salvadanaio hai 6 euro. La nonna ti regala 2 euro. Tocca quanti euro hai.", "min": 0, "max": 20, "passo": 1, "corretta": 8 },
+    { "tipo": "ordina", "immagine": "🪜", "domanda": "Dal soldo che vale meno a quello che vale di più.", "elementi": ["🟤 50 centesimi", "🪙 1 euro", "🪙 2 euro", "💵 5 euro", "💵 20 euro"] },
+    { "tipo": "scelta", "immagine": "🥖", "domanda": "Il pane costa 2 euro e il latte 1 euro. Quanto paghi in tutto?", "opzioni": ["🪙 3 euro", "🪙 2 euro", "🪙 4 euro"], "corretta": 0, "spiegazione": "2 + 1 = 3 euro." },
+    { "tipo": "vero_falso", "immagine": "🧮", "affermazione": "Per contare i soldi, conviene partire da quelli che valgono meno.", "corretta": false, "spiegazione": "No: conviene partire da quelli che valgono di più." },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Chi non è un soldo? Trova l'intruso.", "elementi": ["🪙 moneta", "💵 banconota", "🧾 scontrino", "🟤 centesimo"], "intruso": 2, "spiegazione": "Lo scontrino è il foglietto della spesa, non un soldo." },
+    { "tipo": "memory", "immagine": "🧠", "domanda": "Memory: trova la cosa e il suo prezzo.", "coppie": [["🥖 pane", "🏷️ 2 euro"], ["🥛 latte", "🏷️ 1 euro"], ["🍦 gelato", "🏷️ 3 euro"], ["🍰 torta", "🏷️ 12 euro"]] },
+    { "tipo": "scelta", "immagine": "🍰", "domanda": "La torta costa 12 euro, i biscotti 7 euro. Quanto paghi?", "opzioni": ["💵 19 euro", "💵 17 euro", "💵 5 euro"], "corretta": 0, "spiegazione": "12 + 7 = 19 euro." },
+    { "tipo": "completa", "immagine": "🍦", "domanda": "Completa.", "testo": "Il gelato costa 3 euro. Do 5 euro. Il resto è [2] euro.", "distrattori": ["8", "3"] },
+    { "tipo": "categorie", "immagine": "👛", "domanda": "Hai 10 euro. Puoi comprarlo?", "categorie": ["✅ Sì", "❌ No, costa troppo"], "elementi": [{ "testo": "📘 libro 8 euro", "categoria": "✅ Sì" }, { "testo": "⚽ pallone 9 euro", "categoria": "✅ Sì" }, { "testo": "🧃 succo 1 euro", "categoria": "✅ Sì" }, { "testo": "🚲 bici 90 euro", "categoria": "❌ No, costa troppo" }, { "testo": "🧸 orsetto 15 euro", "categoria": "❌ No, costa troppo" }, { "testo": "🎮 gioco 30 euro", "categoria": "❌ No, costa troppo" }] },
+    { "tipo": "scelta", "immagine": "🧃", "domanda": "Hai 2 euro. Il succo costa 1 euro. Quanti euro ti restano?", "opzioni": ["🪙 1 euro", "🪙 2 euro", "🪙 3 euro"], "corretta": 0, "spiegazione": "2 − 1 = 1 euro." },
+    { "tipo": "retta", "immagine": "📒", "domanda": "Compri due quaderni da 3 euro: 3 + 3. Tocca quanto paghi.", "min": 0, "max": 10, "passo": 1, "corretta": 6 },
+    { "tipo": "acchiappa", "immagine": "🐹", "domanda": "Acchiappa solo le monete!", "giusti": ["🪙 1 euro", "🪙 2 euro", "🟤 10 centesimi", "🟤 50 centesimi"], "sbagliati": ["💵 5 euro", "💵 10 euro", "💵 20 euro", "💵 50 euro"], "quanti": 4 },
+    { "tipo": "vero_falso", "immagine": "🟤", "affermazione": "100 centesimi fanno 1 euro.", "corretta": true, "spiegazione": "Sì! Per questo i centesimi valgono poco." },
+    { "tipo": "ordina", "immagine": "🛒", "domanda": "Come si fa la spesa? Metti in ordine.", "elementi": ["🛒 scelgo le cose", "🏷️ guardo il prezzo", "💵 pago alla cassa", "💰 prendo il resto"] },
+    { "tipo": "intruso", "immagine": "🔍", "domanda": "Quale somma NON fa 10 euro? Trova l'intruso.", "elementi": ["💵 5 + 5 euro", "💵 8 + 2 euro", "💵 6 + 3 euro", "💵 7 + 3 euro"], "intruso": 2, "spiegazione": "6 + 3 = 9 euro." },
+    { "tipo": "crucipuzzle", "immagine": "🔎", "domanda": "Crucipuzzle: trova le parole dei soldi.", "parole": ["💶 euro", "🪙 moneta", "💰 resto", "🏷️ prezzo", "🛒 spesa"] },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "MONETA", "indizio": "🪙 È rotonda, di metallo, e vale 1 o 2 euro" },
+    { "tipo": "indovina", "immagine": "🎈", "domanda": "Indovina la parola!", "parola": "RESTO", "indizio": "💰 I soldi che ti ridanno alla cassa" }
+  ],
+  "ricorda": [
+    "💶 In Italia usiamo l'euro.",
+    "🪙 Ci sono monete da 1 e 2 euro, e i centesimi.",
+    "💵 Le banconote sono di carta: 5, 10, 20, 50 euro.",
+    "🧮 Per contare i soldi, parto da quelli che valgono di più.",
+    "🛒 Per sapere quanto pago, faccio l'addizione dei prezzi.",
+    "💰 Il resto è quello che avanza: soldi dati meno prezzo."
+  ],
+  "verifica": "verifiche/mat2-le-monete-e-l-euro.json"
+}

@@ -1,0 +1,347 @@
+{
+  "titolo": "Le quattro operazioni",
+  "emoji": "🧮",
+  "materia": "matematica",
+  "classe": 3,
+  "introduzione": "Addizione, sottrazione, moltiplicazione e divisione: le loro proprietà e il calcolo in colonna.",
+  "storia": {
+    "personaggio": "👩‍🌾",
+    "testo": "Ciao, sono Gina, la contadina!\nNel mio orto raccolgo mele, pere e carote.\nOgni giorno devo contare, aggiungere, togliere e dividere. Mi aiutate?",
+    "immagini": [
+      "🍎 mele",
+      "🍐 pere",
+      "🥕 carote"
+    ],
+    "missione": "Fate i calcoli con Gina. Alla fine vincete la figurina del pallottoliere!"
+  },
+  "premio": "🧮",
+  "parole_chiave": [
+    "➕ addizione",
+    "➖ sottrazione",
+    "✖️ moltiplicazione",
+    "➗ divisione",
+    "🔄 proprietà commutativa",
+    "🤝 proprietà associativa",
+    "🎒 riporto",
+    "🪢 prestito"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🧮 Le quattro operazioni",
+      "immagine": "🧮",
+      "testo": "Con l'addizione aggiungo: 5 + 3 = 8.\nCon la sottrazione tolgo: 8 − 3 = 5.\nCon la moltiplicazione ripeto lo stesso numero: 3 × 4 = 12.\nCon la divisione faccio parti uguali: 12 : 4 = 3.",
+      "immagini": [
+        "➕ addizione",
+        "➖ sottrazione",
+        "✖️ moltiplicazione",
+        "➗ divisione"
+      ],
+      "scopri": [
+        { "fronte": "➕ Addizione", "retro": "🍎 Aggiungo. Il risultato si chiama somma." },
+        { "fronte": "➖ Sottrazione", "retro": "🍐 Tolgo. Il risultato si chiama differenza." },
+        { "fronte": "✖️ Moltiplicazione", "retro": "🥕 Ripeto. Il risultato si chiama prodotto." },
+        { "fronte": "➗ Divisione", "retro": "🧺 Faccio parti uguali. Il risultato si chiama quoziente." }
+      ]
+    },
+    {
+      "titolo": "🔄 Le proprietà",
+      "immagine": "🔄",
+      "testo": "Nell'addizione e nella moltiplicazione posso cambiare l'ordine dei numeri.\nIl risultato non cambia: è la proprietà commutativa.\n4 + 3 = 3 + 4. 2 × 5 = 5 × 2.\nPosso anche unire due numeri prima degli altri: è la proprietà associativa.\nNella sottrazione e nella divisione invece l'ordine non si cambia!",
+      "immagini": [
+        "🔄 proprietà commutativa",
+        "🤝 proprietà associativa",
+        "➕ addizione",
+        "✖️ moltiplicazione"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "cambio l'ordine",
+        "passi": [
+          { "figure": "🍎 🍎 🍎 🍎 ➕ 🍐", "testo": "Gina ha 4 mele e aggiunge 1 pera: 4 + 1 = 5 frutti." },
+          { "figure": "🍐 ➕ 🍎 🍎 🍎 🍎", "testo": "Ora cambia l'ordine: 1 + 4 = 5 frutti." },
+          { "figure": "🔄", "testo": "Il risultato è uguale: è la proprietà commutativa." },
+          { "figure": "🧺 🧺", "testo": "2 cesti con 3 carote: 2 × 3 = 6." },
+          { "figure": "🧺 🧺 🧺", "testo": "3 cesti con 2 carote: 3 × 2 = 6. Ancora uguale!" }
+        ]
+      },
+      "pensa": {
+        "domanda": "8 − 2 è uguale a 2 − 8?",
+        "risposta": "No! 8 − 2 = 6, ma da 2 non posso togliere 8. Nella sottrazione l'ordine non si cambia."
+      }
+    },
+    {
+      "titolo": "➕ L'addizione in colonna",
+      "immagine": "➕",
+      "testo": "Scrivo i numeri in colonna: unità sotto unità, decine sotto decine.\nComincio dalle unità, a destra.\nSe le unità sono 10 o di più, faccio il cambio.\n10 unità diventano 1 decina: è il riporto.",
+      "immagini": [
+        "1️⃣ unità",
+        "🔟 decine",
+        "🎒 riporto"
+      ],
+      "animazione": {
+        "tipo": "addizione",
+        "a": 47,
+        "b": 38,
+        "video": true,
+        "titolo": "47 + 38 con il cambio"
+      },
+      "pensa": {
+        "domanda": "Perché comincio sempre dalle unità?",
+        "risposta": "Perché se le unità fanno 10 o di più, faccio il cambio e porto 1 decina nella colonna delle decine."
+      }
+    },
+    {
+      "titolo": "➖ La sottrazione in colonna",
+      "immagine": "➖",
+      "testo": "Anche nella sottrazione comincio dalle unità.\nSe sopra la cifra è più piccola, chiedo un prestito.\nPrendo 1 decina e la cambio in 10 unità.\nPoi tolgo con calma.",
+      "immagini": [
+        "1️⃣ unità",
+        "🔟 decine",
+        "🪢 prestito"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "52 − 27 con il prestito",
+        "passi": [
+          { "figure": "5️⃣ 2️⃣ ➖ 2️⃣ 7️⃣", "testo": "Faccio 52 − 27 in colonna." },
+          { "figure": "2️⃣ ➖ 7️⃣", "testo": "Nelle unità 2 − 7 non si può: 2 è più piccolo." },
+          { "figure": "🔟 → 1️⃣", "testo": "Chiedo 1 decina in prestito: le unità diventano 12." },
+          { "figure": "1️⃣ 2️⃣ ➖ 7️⃣", "testo": "12 − 7 = 5. Scrivo 5 nelle unità." },
+          { "figure": "4️⃣ ➖ 2️⃣", "testo": "Nelle decine ora c'è 4. 4 − 2 = 2." },
+          { "figure": "2️⃣ 5️⃣", "testo": "52 − 27 = 25." }
+        ]
+      }
+    },
+    {
+      "titolo": "✖️ La moltiplicazione in colonna",
+      "immagine": "✖️",
+      "testo": "Moltiplico la cifra in basso per ogni cifra in alto.\nComincio dalle unità, poi le decine, poi le centinaia.\nSe il risultato è 10 o di più, scrivo le unità e porto le decine.",
+      "immagini": [
+        "1️⃣ unità",
+        "🔟 decine",
+        "💯 centinaia",
+        "🎒 riporto"
+      ],
+      "animazione": {
+        "tipo": "moltiplicazione",
+        "a": 124,
+        "b": 3,
+        "video": true,
+        "titolo": "124 × 3 in colonna"
+      },
+      "pensa": {
+        "domanda": "Gina ha 3 cassette con 124 mele. Quante mele ha?",
+        "risposta": "124 × 3 = 372 mele."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'operazione a cosa fa.",
+      "coppie": [
+        ["➕ addizione", "🍎 aggiungo"],
+        ["➖ sottrazione", "🍐 tolgo"],
+        ["✖️ moltiplicazione", "🔁 ripeto"],
+        ["➗ divisione", "🧺 faccio parti uguali"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "➕",
+      "domanda": "Il risultato dell'addizione si chiama…",
+      "opzioni": ["➕ somma", "➖ differenza", "✖️ prodotto"],
+      "corretta": 0,
+      "spiegazione": "Nell'addizione il risultato è la somma."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🔄",
+      "affermazione": "6 + 3 dà lo stesso risultato di 3 + 6.",
+      "corretta": true,
+      "spiegazione": "Sì! È la proprietà commutativa: 9 tutte e due."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➖",
+      "affermazione": "Nella sottrazione posso cambiare l'ordine dei numeri.",
+      "corretta": false,
+      "spiegazione": "No! 9 − 4 = 5, ma 4 − 9 non si può fare."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🔄",
+      "domanda": "Completa con la proprietà commutativa.",
+      "testo": "7 × 2 = 2 × [7]. 5 + 8 = [8] + 5.",
+      "distrattori": ["5", "2"]
+    },
+    {
+      "tipo": "addizione",
+      "immagine": "➕",
+      "domanda": "Fai l'addizione in colonna.",
+      "a": 36,
+      "b": 47,
+      "spiegazione": "6 + 7 = 13: scrivo 3 e porto 1. 1 + 3 + 4 = 8. Fa 83."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: l'operazione e il nome del risultato.",
+      "coppie": [
+        ["➕ 5 + 3", "🏷️ somma"],
+        ["➖ 8 − 3", "🏷️ differenza"],
+        ["✖️ 3 × 4", "🏷️ prodotto"],
+        ["➗ 12 : 4", "🏷️ quoziente"]
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🤝",
+      "domanda": "Quale modo è più facile per fare 7 + 3 + 6?",
+      "opzioni": ["🤝 (7 + 3) + 6 = 10 + 6", "🔢 7 + (3 + 6) = 7 + 9", "🤷 non si può fare"],
+      "corretta": 0,
+      "spiegazione": "Unisco 7 e 3: fanno 10. Poi 10 + 6 = 16. È la proprietà associativa."
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "✖️",
+      "domanda": "Fai la moltiplicazione in colonna.",
+      "a": 213,
+      "b": 3,
+      "spiegazione": "3 × 3 = 9, 3 × 1 = 3, 3 × 2 = 6. Fa 639."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Posso cambiare l'ordine dei numeri?",
+      "categorie": ["✅ Sì, il risultato non cambia", "❌ No, non si può"],
+      "elementi": [
+        { "testo": "➕ 4 + 5", "categoria": "✅ Sì, il risultato non cambia" },
+        { "testo": "✖️ 3 × 6", "categoria": "✅ Sì, il risultato non cambia" },
+        { "testo": "➕ 12 + 30", "categoria": "✅ Sì, il risultato non cambia" },
+        { "testo": "➖ 9 − 2", "categoria": "❌ No, non si può" },
+        { "testo": "➗ 10 : 5", "categoria": "❌ No, non si può" },
+        { "testo": "➖ 20 − 8", "categoria": "❌ No, non si può" }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine i passi della sottrazione con il prestito.",
+      "elementi": [
+        "👀 Guardo le unità",
+        "🪢 Chiedo 1 decina in prestito",
+        "➖ Tolgo le unità",
+        "🔟 Tolgo le decine"
+      ]
+    },
+    {
+      "tipo": "addizione",
+      "immagine": "🍎",
+      "domanda": "Gina raccoglie 28 mele e poi 45 mele. Quante mele in tutto?",
+      "a": 28,
+      "b": 45,
+      "spiegazione": "28 + 45 = 73 mele."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "➖",
+      "domanda": "Completa la sottrazione.",
+      "testo": "64 − 28 = [36]. 50 − 17 = [33].",
+      "distrattori": ["44", "43"]
+    },
+    {
+      "tipo": "colonna",
+      "immagine": "🥕",
+      "domanda": "4 cassette con 112 carote. Quante carote? Calcola 112 × 4.",
+      "a": 112,
+      "b": 4,
+      "spiegazione": "112 × 4 = 448 carote."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'operazione sbagliata.",
+      "elementi": ["➕ 25 + 15 = 40", "➖ 40 − 15 = 25", "✖️ 6 × 4 = 24", "➗ 20 : 4 = 4"],
+      "intruso": 3,
+      "spiegazione": "20 : 4 = 5, perché 5 × 4 = 20."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎒",
+      "domanda": "In 58 + 26, le unità fanno 14. Che cosa faccio?",
+      "opzioni": ["🎒 scrivo 4 e porto 1 decina", "✏️ scrivo 14 nelle unità", "🗑️ butto via il 10"],
+      "corretta": 0,
+      "spiegazione": "10 unità diventano 1 decina: è il riporto. 58 + 26 = 84."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🐹",
+      "domanda": "Acchiappa le operazioni giuste!",
+      "giusti": ["➕ 35 + 25 = 60", "➖ 70 − 26 = 44", "✖️ 7 × 3 = 21", "➗ 18 : 3 = 6", "✖️ 102 × 3 = 306"],
+      "sbagliati": ["➕ 47 + 15 = 52", "➖ 61 − 9 = 58", "✖️ 6 × 8 = 42", "➗ 24 : 6 = 3", "➕ 99 + 1 = 90"],
+      "quanti": 5
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "✖️",
+      "affermazione": "Nella moltiplicazione in colonna comincio dalle centinaia.",
+      "corretta": false,
+      "spiegazione": "No! Comincio sempre dalle unità, a destra."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🌾",
+      "domanda": "Completa il testo bucato di Gina.",
+      "testo": "Nell'addizione e nella moltiplicazione posso cambiare l'[ordine] dei numeri.\nÈ la proprietà [commutativa].\nNella [sottrazione] invece non si può.",
+      "distrattori": ["associativa", "moltiplicazione"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍐",
+      "domanda": "Gina ha 85 pere. Ne vende 32. Quante pere restano?",
+      "opzioni": ["🍐 53", "🍐 117", "🍐 63"],
+      "corretta": 0,
+      "spiegazione": "Tolgo: 85 − 32 = 53 pere."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole delle operazioni.",
+      "parole": ["➕ somma", "✖️ prodotto", "🎒 riporto", "🪢 prestito", "🏷️ risultato"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "DIF-FE-REN-ZA",
+      "indizio": "➖ Il risultato della sottrazione"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PRODOTTO",
+      "indizio": "✖️ Il risultato della moltiplicazione"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "ADDIZIONE",
+      "indizio": "➕ L'operazione che aggiunge"
+    }
+  ],
+  "ricorda": [
+    "➕ Addizione: aggiungo. ➖ Sottrazione: tolgo.",
+    "✖️ Moltiplicazione: ripeto. ➗ Divisione: faccio parti uguali.",
+    "🔄 Nell'addizione e nella moltiplicazione posso cambiare l'ordine: è la proprietà commutativa.",
+    "🤝 Posso unire due numeri prima degli altri: è la proprietà associativa.",
+    "🎒 In colonna comincio dalle unità. 10 unità diventano 1 decina: è il riporto.",
+    "🪢 Se sopra la cifra è più piccola, chiedo un prestito."
+  ],
+  "verifica": "verifiche/mat3-le-quattro-operazioni.json"
+}

@@ -1,0 +1,512 @@
+{
+  "titolo": "Respiratorio e circolatorio",
+  "emoji": "🫁",
+  "materia": "scienze",
+  "classe": 5,
+  "introduzione": "Respiriamo per prendere l'ossigeno. Il sangue lo porta a tutte le cellule del corpo.",
+  "storia": {
+    "personaggio": "🏃‍♀️",
+    "testo": "Ciao, sono Giulia, l'atleta!\nQuando corro respiro forte e il mio cuore batte veloce.\nOggi scopriamo insieme perché succede.",
+    "immagini": [
+      "🏃‍♀️ corsa",
+      "🫁 polmoni",
+      "🫀 cuore"
+    ],
+    "missione": "Scoprite con Giulia il viaggio dell'aria e del sangue. Alla fine vincete la figurina della medaglia!"
+  },
+  "premio": "🏅",
+  "parole_chiave": [
+    "👃 naso",
+    "🌬️ trachea",
+    "🫁 polmoni",
+    "🫧 alveoli",
+    "🫀 cuore",
+    "🩸 sangue",
+    "🔴 arterie",
+    "🔵 vene"
+  ],
+  "sezioni": [
+    {
+      "titolo": "👃 Il viaggio dell'aria",
+      "immagine": "👃",
+      "testo": "L'aria entra dal naso.\nIl naso la pulisce e la scalda.\nPoi passa nella gola e nella trachea, un tubo.\nLa trachea si divide in due bronchi.\nI bronchi portano l'aria nei due polmoni.",
+      "immagini": [
+        "👃 naso",
+        "🌬️ trachea",
+        "🌳 bronchi",
+        "🫁 polmoni"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il viaggio dell'aria",
+        "passi": [
+          {
+            "figure": "💨 → 👃",
+            "testo": "L'aria entra dal naso."
+          },
+          {
+            "figure": "👃 🧹",
+            "testo": "Il naso pulisce e scalda l'aria."
+          },
+          {
+            "figure": "🌬️",
+            "testo": "L'aria scende nella trachea."
+          },
+          {
+            "figure": "🌳",
+            "testo": "La trachea si divide in due bronchi."
+          },
+          {
+            "figure": "🫁",
+            "testo": "I bronchi portano l'aria nei polmoni."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché è meglio respirare con il naso che con la bocca?",
+        "risposta": "Perché il naso pulisce l'aria dalla polvere e la scalda prima che arrivi ai polmoni."
+      }
+    },
+    {
+      "titolo": "🫁 Dentro i polmoni",
+      "immagine": "🫁",
+      "testo": "Nei polmoni ci sono gli alveoli, come piccoli palloncini.\nNegli alveoli l'ossigeno passa nel sangue.\nIl sangue lascia l'anidride carbonica, un gas di scarto.\nQuando inspiriamo, l'aria entra.\nQuando espiriamo, l'aria esce.\nIl diaframma è un muscolo che ci aiuta a respirare.",
+      "immagini": [
+        "🫧 alveoli",
+        "🩸 sangue",
+        "💨 inspirazione",
+        "🌬️ espirazione"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "corpo",
+        "video": true,
+        "titolo": "i polmoni e il cuore nel corpo"
+      },
+      "scopri": [
+        {
+          "fronte": "💨 Inspirazione",
+          "retro": "⬇️ L'aria entra. I polmoni si gonfiano."
+        },
+        {
+          "fronte": "🌬️ Espirazione",
+          "retro": "⬆️ L'aria esce. I polmoni si sgonfiano."
+        },
+        {
+          "fronte": "🫧 Alveoli",
+          "retro": "🎈 Piccoli palloncini: qui l'ossigeno passa nel sangue."
+        }
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: il torace si muove",
+        "materiali": [
+          "📏 metro da sarta",
+          "🧑‍🤝‍🧑 un compagno",
+          "📒 quaderno"
+        ],
+        "passi": [
+          "📏 Metti il metro intorno al petto del compagno.",
+          "💨 Il compagno prende tanta aria: misura.",
+          "🌬️ Il compagno butta fuori tutta l'aria: misura di nuovo.",
+          "📒 Scrivi le due misure."
+        ],
+        "domanda": "Quando prendiamo aria il petto diventa più grande o più piccolo? Perché?"
+      }
+    },
+    {
+      "titolo": "🫀 Il cuore",
+      "immagine": "🫀",
+      "testo": "Il cuore è un muscolo grande come il tuo pugno.\nSta nel petto, tra i due polmoni.\nÈ una pompa: si stringe e spinge il sangue.\nOgni stretta è un battito.\nBatte sempre, anche quando dormi.",
+      "immagini": [
+        "🫀 cuore",
+        "✊ pugno",
+        "🫁 polmoni",
+        "💓 battito"
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: ascolta il cuore",
+        "materiali": [
+          "⏱️ cronometro",
+          "✋ due dita",
+          "📒 quaderno"
+        ],
+        "passi": [
+          "✋ Appoggia due dita sul polso o sul collo.",
+          "⏱️ Conta i battiti per 30 secondi, seduto.",
+          "🤸 Fai 20 saltelli sul posto.",
+          "⏱️ Conta di nuovo i battiti e scrivi i numeri."
+        ],
+        "domanda": "Dopo i saltelli il cuore batte più veloce o più piano? Perché?"
+      },
+      "curiosita": "Il cuore batte circa 100.000 volte al giorno!"
+    },
+    {
+      "titolo": "🩸 Sangue e vasi",
+      "immagine": "🩸",
+      "testo": "Il sangue viaggia dentro tubicini: i vasi sanguigni.\nLe arterie portano il sangue dal cuore al corpo.\nLe vene riportano il sangue al cuore.\nI capillari sono vasi sottilissimi, vicino alle cellule.",
+      "immagini": [
+        "🔴 arterie",
+        "🔵 vene",
+        "🧵 capillari",
+        "🧫 cellule"
+      ],
+      "scopri": [
+        {
+          "fronte": "🔴 Globuli rossi",
+          "retro": "🚚 Portano l'ossigeno."
+        },
+        {
+          "fronte": "⚪ Globuli bianchi",
+          "retro": "🛡️ Difendono il corpo dai microbi."
+        },
+        {
+          "fronte": "🩹 Piastrine",
+          "retro": "🧱 Chiudono le ferite."
+        },
+        {
+          "fronte": "💧 Plasma",
+          "retro": "🌊 La parte liquida del sangue."
+        }
+      ]
+    },
+    {
+      "titolo": "🤝 Lavorano insieme",
+      "immagine": "🤝",
+      "testo": "Il respiratorio e il circolatorio lavorano in squadra.\nI polmoni danno l'ossigeno al sangue.\nIl cuore spinge il sangue fino alle cellule.\nLe cellule usano l'ossigeno e fanno energia.\nIl sangue riporta l'anidride carbonica ai polmoni.",
+      "immagini": [
+        "🫁 polmoni",
+        "🩸 sangue",
+        "🫀 cuore",
+        "⚡ energia"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il giro dell'ossigeno",
+        "passi": [
+          {
+            "figure": "🫁 → 🩸",
+            "testo": "Nei polmoni l'ossigeno passa nel sangue."
+          },
+          {
+            "figure": "🫀",
+            "testo": "Il cuore spinge il sangue nelle arterie."
+          },
+          {
+            "figure": "🩸 → 🧫",
+            "testo": "Il sangue porta l'ossigeno alle cellule."
+          },
+          {
+            "figure": "⚡",
+            "testo": "Le cellule usano l'ossigeno e fanno energia."
+          },
+          {
+            "figure": "🔵 → 🫁",
+            "testo": "Le vene riportano l'anidride carbonica ai polmoni."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Quando Giulia corre, perché respira forte e il cuore batte veloce?",
+        "risposta": "Perché i muscoli lavorano tanto e hanno bisogno di più ossigeno: i polmoni ne prendono di più e il cuore lo porta più in fretta."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "💨",
+      "domanda": "Da dove entra l'aria?",
+      "opzioni": [
+        "👃 dal naso",
+        "👂 dalle orecchie",
+        "👁️ dagli occhi"
+      ],
+      "corretta": 0,
+      "spiegazione": "L'aria entra dal naso, e anche dalla bocca."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "👃",
+      "affermazione": "Il naso pulisce e scalda l'aria.",
+      "corretta": true,
+      "spiegazione": "Sì! Così l'aria arriva pulita ai polmoni."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "💨",
+      "domanda": "Metti in ordine il viaggio dell'aria.",
+      "elementi": [
+        "👃 naso",
+        "🌬️ trachea",
+        "🌳 bronchi",
+        "🫁 polmoni",
+        "🫧 alveoli"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫁",
+      "domanda": "Che gas prendiamo dall'aria?",
+      "opzioni": [
+        "🟢 l'ossigeno",
+        "⚫ l'anidride carbonica",
+        "🟡 il fumo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Inspiriamo l'ossigeno. Espiriamo l'anidride carbonica."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        [
+          "💨 inspirazione",
+          "⬇️ l'aria entra"
+        ],
+        [
+          "🌬️ espirazione",
+          "⬆️ l'aria esce"
+        ],
+        [
+          "🫧 alveoli",
+          "🎈 piccoli palloncini"
+        ],
+        [
+          "🌳 bronchi",
+          "🛤️ portano l'aria ai polmoni"
+        ]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Negli [alveoli] l'ossigeno passa nel [sangue].",
+      "distrattori": [
+        "denti",
+        "nervi"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🫀",
+      "affermazione": "Il cuore è un muscolo grande come un pugno.",
+      "corretta": true,
+      "spiegazione": "Sì! È una pompa fatta di muscolo."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🫀",
+      "domanda": "Che lavoro fa il cuore?",
+      "opzioni": [
+        "🩸 spinge il sangue",
+        "💨 prende l'aria",
+        "🍽️ digerisce il cibo"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il cuore è la pompa del circolatorio."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "😴",
+      "affermazione": "Quando dormiamo il cuore si ferma.",
+      "corretta": false,
+      "spiegazione": "No: il cuore batte sempre, anche di notte."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: le parti del sangue.",
+      "coppie": [
+        [
+          "🔴 globuli rossi",
+          "🚚 ossigeno"
+        ],
+        [
+          "⚪ globuli bianchi",
+          "🛡️ difesa"
+        ],
+        [
+          "🩹 piastrine",
+          "🧱 ferite"
+        ],
+        [
+          "💧 plasma",
+          "🌊 liquido"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "A quale apparato appartiene?",
+      "categorie": [
+        "🫁 Respiratorio",
+        "🩸 Circolatorio"
+      ],
+      "elementi": [
+        {
+          "testo": "👃 naso",
+          "categoria": "🫁 Respiratorio"
+        },
+        {
+          "testo": "🌬️ trachea",
+          "categoria": "🫁 Respiratorio"
+        },
+        {
+          "testo": "🫧 alveoli",
+          "categoria": "🫁 Respiratorio"
+        },
+        {
+          "testo": "🫀 cuore",
+          "categoria": "🩸 Circolatorio"
+        },
+        {
+          "testo": "🔴 arterie",
+          "categoria": "🩸 Circolatorio"
+        },
+        {
+          "testo": "🔵 vene",
+          "categoria": "🩸 Circolatorio"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔴",
+      "domanda": "Che cosa fanno le arterie?",
+      "opzioni": [
+        "🔴 portano il sangue dal cuore al corpo",
+        "🔵 riportano il sangue al cuore",
+        "💨 portano l'aria"
+      ],
+      "corretta": 0,
+      "spiegazione": "Le arterie partono dal cuore. Le vene tornano al cuore."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa il testo di Giulia.",
+      "testo": "Le [vene] riportano il sangue al cuore.\nI [capillari] sono vasi sottilissimi.\nI globuli [bianchi] difendono il corpo.",
+      "distrattori": [
+        "polmoni",
+        "rossi"
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON fa parte del respiratorio?",
+      "elementi": [
+        "👃 naso",
+        "🌬️ trachea",
+        "🫀 cuore",
+        "🫁 polmoni"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il cuore fa parte del circolatorio."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🏃‍♀️",
+      "domanda": "Giulia corre. Il suo cuore batte…",
+      "opzioni": [
+        "🐇 più veloce",
+        "🐢 più piano",
+        "🛑 non batte"
+      ],
+      "corretta": 0,
+      "spiegazione": "I muscoli vogliono più ossigeno: il cuore spinge più sangue."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔄",
+      "domanda": "Metti in ordine, come nel video: il giro dell'ossigeno.",
+      "elementi": [
+        "🫁 l'ossigeno passa nel sangue",
+        "🫀 il cuore spinge il sangue",
+        "🧫 il sangue arriva alle cellule",
+        "⚡ le cellule fanno energia"
+      ]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le parti del sangue!",
+      "giusti": [
+        "🔴 globuli rossi",
+        "⚪ globuli bianchi",
+        "🩹 piastrine",
+        "💧 plasma"
+      ],
+      "sbagliati": [
+        "🫧 alveoli",
+        "🌳 bronchi",
+        "👃 naso"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌬️",
+      "affermazione": "Quando espiriamo buttiamo fuori l'anidride carbonica.",
+      "corretta": true,
+      "spiegazione": "Sì! È il gas di scarto delle cellule."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il [diaframma] è un muscolo che ci aiuta a respirare. Le [piastrine] chiudono le ferite.",
+      "distrattori": [
+        "stomaco",
+        "vene"
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole.",
+      "parole": [
+        "🫀 cuore",
+        "🩸 sangue",
+        "🔵 vene",
+        "🫁 polmoni",
+        "👃 naso"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "AL-VE-O-LI",
+      "indizio": "🫧 I piccoli palloncini dei polmoni"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "OSSIGENO",
+      "indizio": "🟢 Il gas dell'aria che serve alle cellule"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "TRACHEA",
+      "indizio": "🌬️ Il tubo che porta l'aria ai bronchi"
+    }
+  ],
+  "ricorda": [
+    "👃 L'aria entra dal naso, passa nella trachea e nei bronchi, poi nei polmoni.",
+    "🫧 Negli alveoli l'ossigeno passa nel sangue e l'anidride carbonica esce.",
+    "🫀 Il cuore è un muscolo: è la pompa che spinge il sangue.",
+    "🔴 Le arterie portano il sangue dal cuore al corpo. 🔵 Le vene lo riportano al cuore.",
+    "🩸 Globuli rossi, globuli bianchi, piastrine e plasma formano il sangue.",
+    "🤝 Respiratorio e circolatorio portano l'ossigeno a tutte le cellule."
+  ],
+  "verifica": "verifiche/sci5-respiratorio.json"
+}

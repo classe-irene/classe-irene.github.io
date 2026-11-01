@@ -1,0 +1,577 @@
+{
+  "titolo": "Gli invertebrati",
+  "emoji": "🐝",
+  "materia": "scienze",
+  "classe": 4,
+  "introduzione": "Gli invertebrati sono animali senza colonna vertebrale. Sono tantissimi!",
+  "storia": {
+    "personaggio": "👩‍🔬",
+    "testo": "Ciao, sono Giulia, l'esploratrice dei prati!\nCon la mia lente guardo sotto le foglie e tra i sassi.\nLì vivono tanti piccoli animali senza ossa.",
+    "immagini": [
+      "🔍 lente",
+      "🍃 foglie",
+      "🐞 coccinella"
+    ],
+    "missione": "Cercate con Giulia gli invertebrati. Alla fine vincete la figurina della coccinella!"
+  },
+  "premio": "🐞",
+  "parole_chiave": [
+    "🦴 colonna vertebrale",
+    "🐞 insetti",
+    "🕷️ aracnidi",
+    "🦀 crostacei",
+    "🐌 molluschi",
+    "🪱 anellidi",
+    "🦋 metamorfosi"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🦴 Animali senza colonna vertebrale",
+      "immagine": "🦴",
+      "testo": "Tu hai la colonna vertebrale: è l'osso lungo della schiena.\nTanti animali non ce l'hanno.\nSi chiamano invertebrati.\nSono quasi tutti gli animali della Terra!",
+      "immagini": [
+        "🦴 colonna vertebrale",
+        "🐞 coccinella",
+        "🐌 lumaca",
+        "🪼 medusa"
+      ],
+      "scopri": [
+        {
+          "fronte": "🦴 Vertebrati",
+          "retro": "🐕 Hanno la colonna vertebrale, come il cane."
+        },
+        {
+          "fronte": "🐞 Invertebrati",
+          "retro": "🚫 Non hanno la colonna vertebrale."
+        },
+        {
+          "fronte": "🐚 Conchiglia",
+          "retro": "🛡️ Alcuni invertebrati hanno un guscio che li protegge."
+        }
+      ],
+      "pensa": {
+        "domanda": "La lumaca non ha ossa. Come fa a proteggere il suo corpo morbido?",
+        "risposta": "Ha la conchiglia! Quando c'è un pericolo, si chiude dentro."
+      }
+    },
+    {
+      "titolo": "🐞 Gli insetti",
+      "immagine": "🐞",
+      "testo": "Gli insetti hanno sei zampe.\nIl corpo ha tre parti: capo, torace e addome.\nSul capo ci sono le antenne.\nMolti insetti hanno le ali.",
+      "immagini": [
+        "🐜 formica",
+        "🧠 capo",
+        "💪 torace",
+        "🔵 addome",
+        "🦋 farfalla"
+      ],
+      "scopri": [
+        {
+          "fronte": "🧠 Capo",
+          "retro": "👀 Ha gli occhi e le antenne."
+        },
+        {
+          "fronte": "💪 Torace",
+          "retro": "🦵 Qui ci sono le 6 zampe e le ali."
+        },
+        {
+          "fronte": "🔵 Addome",
+          "retro": "🍽️ La parte dietro: qui si digerisce il cibo."
+        }
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "com'è fatto un insetto",
+        "passi": [
+          {
+            "figure": "🐜",
+            "testo": "Ecco una formica. È un insetto."
+          },
+          {
+            "figure": "🧠 💪 🔵",
+            "testo": "Il suo corpo ha tre parti: capo, torace e addome."
+          },
+          {
+            "figure": "🦵 🦵 🦵 🦵 🦵 🦵",
+            "testo": "Ha sei zampe, attaccate al torace."
+          },
+          {
+            "figure": "📡 📡",
+            "testo": "Sul capo ha due antenne: servono per sentire gli odori."
+          },
+          {
+            "figure": "🐝 🦋 🐞",
+            "testo": "Anche l'ape, la farfalla e la coccinella sono insetti."
+          }
+        ]
+      }
+    },
+    {
+      "titolo": "🦋 La metamorfosi",
+      "immagine": "🦋",
+      "testo": "Alcuni insetti cambiano tanto mentre crescono.\nQuesto cambiamento si chiama metamorfosi.\nLa farfalla nasce da un uovo.\nPrima è un bruco, poi una crisalide, poi una farfalla.",
+      "immagini": [
+        "🥚 uovo",
+        "🐛 bruco",
+        "📦 crisalide",
+        "🦋 farfalla"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "dal bruco alla farfalla",
+        "passi": [
+          {
+            "figure": "🍃 🥚",
+            "testo": "La farfalla depone le uova su una foglia."
+          },
+          {
+            "figure": "🥚 → 🐛",
+            "testo": "Dall'uovo nasce un bruco."
+          },
+          {
+            "figure": "🐛 🍃 🍃",
+            "testo": "Il bruco mangia tante foglie e cresce."
+          },
+          {
+            "figure": "🐛 → 📦",
+            "testo": "Il bruco si chiude in una scatolina: la crisalide."
+          },
+          {
+            "figure": "📦 → 🦋",
+            "testo": "Dalla crisalide esce una farfalla!"
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Il bruco e la farfalla sono due animali diversi?",
+        "risposta": "No! Sono lo stesso animale. Il bruco cresce e diventa farfalla: è la metamorfosi."
+      }
+    },
+    {
+      "titolo": "🕷️ Aracnidi e crostacei",
+      "immagine": "🕷️",
+      "testo": "Il ragno non è un insetto: ha otto zampe.\nRagni e scorpioni sono aracnidi.\nIl granchio e il gambero sono crostacei.\nHanno un guscio duro e vivono quasi tutti nell'acqua.",
+      "immagini": [
+        "🕷️ ragno",
+        "🦂 scorpione",
+        "🦀 granchio",
+        "🦐 gambero"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il ragno e la tela",
+        "passi": [
+          {
+            "figure": "🕷️",
+            "testo": "Il ragno ha otto zampe."
+          },
+          {
+            "figure": "🕷️ → 🕸️",
+            "testo": "Con un filo sottile fa la tela."
+          },
+          {
+            "figure": "🪰 → 🕸️",
+            "testo": "Una mosca vola e resta attaccata alla tela."
+          },
+          {
+            "figure": "🕷️ 🪰",
+            "testo": "Il ragno arriva e la mangia."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🕷️ Aracnidi",
+          "retro": "8️⃣ Hanno otto zampe. Niente antenne."
+        },
+        {
+          "fronte": "🦀 Crostacei",
+          "retro": "🛡️ Hanno un guscio duro. Vivono nell'acqua."
+        }
+      ]
+    },
+    {
+      "titolo": "🐌 Molluschi e vermi",
+      "immagine": "🐌",
+      "testo": "I molluschi hanno il corpo molle.\nMolti hanno una conchiglia, come la lumaca e la cozza.\nIl polpo è un mollusco senza conchiglia.\nIl lombrico è un verme: vive sotto terra.",
+      "immagini": [
+        "🐌 lumaca",
+        "🐚 conchiglia",
+        "🐙 polpo",
+        "🪱 lombrico"
+      ],
+      "scopri": [
+        {
+          "fronte": "🐌 Lumaca",
+          "retro": "🐚 Mollusco con la conchiglia. Vive sulla terra."
+        },
+        {
+          "fronte": "🐙 Polpo",
+          "retro": "🌊 Mollusco con otto braccia. Vive nel mare."
+        },
+        {
+          "fronte": "🪱 Lombrico",
+          "retro": "🌱 Verme: scava e rende la terra buona."
+        }
+      ],
+      "esperimento": {
+        "titolo": "Proviamo in classe: la casa dei lombrichi",
+        "materiali": [
+          "🫙 barattolo di vetro",
+          "🟫 terra",
+          "🏖️ sabbia",
+          "🍂 foglie secche",
+          "🪱 lombrichi"
+        ],
+        "passi": [
+          "🫙 Metti nel barattolo uno strato di terra e uno di sabbia.",
+          "🪱 Metti sopra i lombrichi e le foglie secche.",
+          "💧 Bagna un po' la terra.",
+          "🌑 Copri il barattolo con un foglio scuro.",
+          "🔍 Dopo una settimana guarda gli strati. Poi libera i lombrichi."
+        ],
+        "domanda": "Che cosa è successo agli strati di terra e sabbia?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🦴",
+      "domanda": "Che cosa NON hanno gli invertebrati?",
+      "opzioni": [
+        "🦴 la colonna vertebrale",
+        "👀 gli occhi",
+        "🍽️ la bocca"
+      ],
+      "corretta": 0,
+      "spiegazione": "Invertebrati vuol dire: senza colonna vertebrale."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐞",
+      "affermazione": "Gli insetti hanno sei zampe.",
+      "corretta": true,
+      "spiegazione": "Sì! Sei zampe, attaccate al torace."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Vertebrato o invertebrato?",
+      "categorie": [
+        "🦴 Vertebrato",
+        "🐞 Invertebrato"
+      ],
+      "elementi": [
+        {
+          "testo": "🐕 cane",
+          "categoria": "🦴 Vertebrato"
+        },
+        {
+          "testo": "🐟 pesce",
+          "categoria": "🦴 Vertebrato"
+        },
+        {
+          "testo": "🐦 uccello",
+          "categoria": "🦴 Vertebrato"
+        },
+        {
+          "testo": "🐝 ape",
+          "categoria": "🐞 Invertebrato"
+        },
+        {
+          "testo": "🐌 lumaca",
+          "categoria": "🐞 Invertebrato"
+        },
+        {
+          "testo": "🦀 granchio",
+          "categoria": "🐞 Invertebrato"
+        }
+      ],
+      "suggerimento": "Ha l'osso lungo della schiena?"
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐜",
+      "domanda": "In quante parti è diviso il corpo di un insetto?",
+      "opzioni": [
+        "3️⃣ tre",
+        "2️⃣ due",
+        "5️⃣ cinque"
+      ],
+      "corretta": 0,
+      "spiegazione": "Capo, torace e addome."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🕷️",
+      "affermazione": "Il ragno è un insetto.",
+      "corretta": false,
+      "spiegazione": "No: il ragno ha otto zampe. È un aracnide."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'animale al suo gruppo.",
+      "coppie": [
+        [
+          "🐝 ape",
+          "🐞 insetti"
+        ],
+        [
+          "🕷️ ragno",
+          "🕸️ aracnidi"
+        ],
+        [
+          "🦀 granchio",
+          "🦐 crostacei"
+        ],
+        [
+          "🐌 lumaca",
+          "🐚 molluschi"
+        ]
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🦋",
+      "domanda": "Metti in ordine la metamorfosi della farfalla.",
+      "elementi": [
+        "🥚 uovo",
+        "🐛 bruco",
+        "📦 crisalide",
+        "🦋 farfalla"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il corpo dell'insetto ha capo, [torace] e [addome].",
+      "distrattori": [
+        "coda",
+        "conchiglia"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🕷️",
+      "domanda": "Quante zampe ha un ragno?",
+      "opzioni": [
+        "8️⃣ otto",
+        "6️⃣ sei",
+        "4️⃣ quattro"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gli aracnidi hanno otto zampe."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: l'animale e una sua caratteristica.",
+      "coppie": [
+        [
+          "🐞 coccinella",
+          "🦵 sei zampe"
+        ],
+        [
+          "🕷️ ragno",
+          "🕸️ fa la tela"
+        ],
+        [
+          "🐌 lumaca",
+          "🐚 ha la conchiglia"
+        ],
+        [
+          "🪱 lombrico",
+          "🟫 vive sotto terra"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON è un insetto?",
+      "elementi": [
+        "🐝 ape",
+        "🐜 formica",
+        "🕷️ ragno",
+        "🦋 farfalla"
+      ],
+      "intruso": 2,
+      "spiegazione": "Il ragno ha otto zampe: è un aracnide."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🐙",
+      "affermazione": "Il polpo è un mollusco.",
+      "corretta": true,
+      "spiegazione": "Sì! Ha il corpo molle e otto braccia."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "A quale gruppo appartiene?",
+      "categorie": [
+        "🐞 Insetti",
+        "🐌 Molluschi",
+        "🦀 Crostacei"
+      ],
+      "elementi": [
+        {
+          "testo": "🐜 formica",
+          "categoria": "🐞 Insetti"
+        },
+        {
+          "testo": "🦗 grillo",
+          "categoria": "🐞 Insetti"
+        },
+        {
+          "testo": "🐙 polpo",
+          "categoria": "🐌 Molluschi"
+        },
+        {
+          "testo": "🦪 ostrica",
+          "categoria": "🐌 Molluschi"
+        },
+        {
+          "testo": "🦐 gambero",
+          "categoria": "🦀 Crostacei"
+        },
+        {
+          "testo": "🦞 aragosta",
+          "categoria": "🦀 Crostacei"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐛",
+      "domanda": "Come si chiama il grande cambiamento della farfalla?",
+      "opzioni": [
+        "🦋 metamorfosi",
+        "🌱 germinazione",
+        "🐝 impollinazione"
+      ],
+      "corretta": 0,
+      "spiegazione": "Uovo, bruco, crisalide, farfalla: è la metamorfosi."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova gli invertebrati.",
+      "parole": [
+        "🐝 ape",
+        "🕷️ ragno",
+        "🐌 lumaca",
+        "🐙 polpo",
+        "🦀 granchio",
+        "🐛 bruco"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "I [molluschi] hanno il corpo molle. Molti hanno una [conchiglia].",
+      "distrattori": [
+        "insetti",
+        "coda"
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🪱",
+      "affermazione": "Il lombrico rende la terra buona per le piante.",
+      "corretta": true,
+      "spiegazione": "Sì! Scava gallerie e fa entrare l'aria nella terra."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa solo gli insetti!",
+      "giusti": [
+        "🐝 ape",
+        "🐜 formica",
+        "🦋 farfalla",
+        "🐞 coccinella"
+      ],
+      "sbagliati": [
+        "🕷️ ragno",
+        "🐌 lumaca",
+        "🦀 granchio",
+        "🪱 lombrico"
+      ],
+      "quanti": 4
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parte dell'insetto a cosa ha.",
+      "coppie": [
+        [
+          "🧠 capo",
+          "📡 le antenne"
+        ],
+        [
+          "💪 torace",
+          "🦵 le zampe"
+        ],
+        [
+          "🔵 addome",
+          "🍽️ digerisce il cibo"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Chi NON vive nell'acqua?",
+      "elementi": [
+        "🦀 granchio",
+        "🦐 gambero",
+        "🐙 polpo",
+        "🐌 lumaca di giardino"
+      ],
+      "intruso": 3,
+      "spiegazione": "La lumaca di giardino vive sulla terra."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🦂",
+      "domanda": "Lo scorpione ha otto zampe. Che cos'è?",
+      "opzioni": [
+        "🕸️ un aracnide",
+        "🐞 un insetto",
+        "🐚 un mollusco"
+      ],
+      "corretta": 0,
+      "spiegazione": "Come il ragno: otto zampe, è un aracnide."
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "INSETTO",
+      "indizio": "🐞 Ha sei zampe e il corpo in tre parti"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CRISALIDE",
+      "indizio": "📦 Il bruco si chiude qui dentro e diventa farfalla"
+    }
+  ],
+  "ricorda": [
+    "🦴 Gli invertebrati non hanno la colonna vertebrale.",
+    "🐞 Gli insetti hanno 6 zampe e il corpo in 3 parti: capo, torace, addome.",
+    "🦋 La farfalla fa la metamorfosi: uovo, bruco, crisalide, farfalla.",
+    "🕷️ Gli aracnidi hanno 8 zampe. I crostacei hanno un guscio duro.",
+    "🐌 I molluschi hanno il corpo molle, spesso con la conchiglia."
+  ],
+  "verifica": "verifiche/sci4-gli-invertebrati.json"
+}

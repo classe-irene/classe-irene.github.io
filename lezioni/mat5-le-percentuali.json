@@ -1,0 +1,337 @@
+{
+  "titolo": "Le percentuali",
+  "emoji": "💯",
+  "materia": "matematica",
+  "classe": 5,
+  "introduzione": "Nei negozi vediamo scritte come 20% o 50%. Impariamo che cosa vogliono dire e come si calcolano sconti e aumenti.",
+  "storia": {
+    "personaggio": "👩‍💼",
+    "testo": "Ciao, sono Sara e ho un negozio di giocattoli!\nOggi ci sono i saldi: sui cartellini c'è scritto 10%, 25%, 50%.\nMi aiutate a calcolare i nuovi prezzi?",
+    "immagini": [
+      "🧸 giocattoli",
+      "🏷️ cartellini",
+      "💶 nuovi prezzi"
+    ],
+    "missione": "Aiutate Sara a calcolare percentuali, sconti e aumenti. Alla fine vincete la figurina del cartellino!"
+  },
+  "premio": "🏷️",
+  "parole_chiave": [
+    "💯 percentuale",
+    "🔣 per cento",
+    "🟦 intero",
+    "🍕 metà",
+    "🏷️ sconto",
+    "📈 aumento",
+    "💶 prezzo"
+  ],
+  "sezioni": [
+    {
+      "titolo": "💯 Che cos'è la percentuale",
+      "immagine": "💯",
+      "testo": "Il simbolo % si legge \"per cento\".\n30% vuol dire 30 parti su 100.\nÈ come una frazione con il 100 sotto: 30/100.\nIl 100% è l'intero: tutte le 100 parti.",
+      "immagini": [
+        "🔣 per cento",
+        "🟦 30 su 100",
+        "🍫 30/100",
+        "💯 l'intero"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "la tavoletta da 100 quadretti",
+        "passi": [
+          { "figure": "🍫", "testo": "Ho una tavoletta di cioccolato divisa in 100 quadretti." },
+          { "figure": "🟫 🟫 🟫", "testo": "Ne mangio 30: ho mangiato 30 quadretti su 100." },
+          { "figure": "🍫 → 💯", "testo": "30 su 100 si scrive 30%." },
+          { "figure": "🍫 🍫", "testo": "Se mangio tutti i 100 quadretti, mangio il 100%: tutto l'intero." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Se il cartellino dice 100% cotone, di che cosa è fatta la maglietta?",
+        "risposta": "È fatta tutta di cotone! Il 100% è l'intero."
+      }
+    },
+    {
+      "titolo": "🍕 Le percentuali più facili",
+      "immagine": "🍕",
+      "testo": "Il 50% è la metà: 50 su 100, come 1/2.\nIl 25% è un quarto: 25 su 100, come 1/4.\nIl 10% è un decimo: 10 su 100, come 1/10.\nAnche i decimali sono percentuali: 0,25 = 25%.",
+      "immagini": [
+        "🍕 50% = metà",
+        "🍰 25% = un quarto",
+        "🔟 10% = un decimo",
+        "🔸 0,25 = 25%"
+      ],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "frazione",
+        "n": 1,
+        "d": 4,
+        "video": true,
+        "titolo": "un quarto è il 25%"
+      },
+      "scopri": [
+        { "fronte": "🍕 50%", "retro": "🍕 La metà: 1/2." },
+        { "fronte": "🍰 25%", "retro": "🍰 Un quarto: 1/4." },
+        { "fronte": "🔟 10%", "retro": "🔟 Un decimo: 1/10." },
+        { "fronte": "💯 100%", "retro": "🟦 Tutto l'intero." }
+      ]
+    },
+    {
+      "titolo": "🧮 Calcolare la percentuale",
+      "immagine": "🧮",
+      "testo": "Voglio il 20% di 50.\nPrima divido 50 per 100: trovo 1 parte su 100.\nPoi moltiplico per 20: prendo 20 parti.\n50 : 100 × 20 = 10.\nCon i numeri tondi è più facile: divido per 100 e moltiplico.",
+      "immagini": [
+        "🎯 il 20% di 50",
+        "➗ divido per 100",
+        "✖️ moltiplico per 20",
+        "✅ risultato 10"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il 10% di 200 caramelle",
+        "passi": [
+          { "figure": "🍬 🍬 🍬 🍬 🍬", "testo": "Sara ha 200 caramelle. Ne regala il 10%." },
+          { "figure": "🍬 ➗ 💯", "testo": "Divido 200 per 100: fa 2. È una parte su 100." },
+          { "figure": "🍬 ✖️ 🔟", "testo": "Moltiplico 2 per 10: fa 20." },
+          { "figure": "🎁 🍬", "testo": "Il 10% di 200 è 20: Sara regala 20 caramelle." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Qual è il 50% di 30 figurine?",
+        "risposta": "È la metà: 15 figurine. Infatti 30 : 100 × 50 = 15."
+      }
+    },
+    {
+      "titolo": "🏷️ Lo sconto e l'aumento",
+      "immagine": "🏷️",
+      "testo": "Lo sconto fa diminuire il prezzo.\nUn gioco costa 40 €. Lo sconto è del 10%: 4 €.\nPago 40 − 4 = 36 €.\nL'aumento fa crescere il prezzo.\nUn biglietto costa 20 €. Aumenta del 10%: 2 €. Ora costa 22 €.",
+      "immagini": [
+        "📉 sconto",
+        "🧸 gioco da 40 €",
+        "💶 pago 36 €",
+        "📈 aumento",
+        "🎟️ biglietto da 22 €"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "lo sconto sulla bicicletta",
+        "passi": [
+          { "figure": "🚲 🏷️", "testo": "La bicicletta costa 100 €. Il cartellino dice: sconto 25%." },
+          { "figure": "💶 ➗ 💯", "testo": "100 : 100 = 1. Poi 1 × 25 = 25. Lo sconto è di 25 €." },
+          { "figure": "💶 ➖ 🏷️", "testo": "Tolgo lo sconto dal prezzo: 100 − 25 = 75." },
+          { "figure": "🚲 → 💶", "testo": "Pago la bicicletta 75 €." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Con lo sconto si paga di più o di meno?",
+        "risposta": "Di meno! Lo sconto si toglie dal prezzo. L'aumento invece si aggiunge."
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "💯",
+      "domanda": "Che cosa vuol dire 30%?",
+      "opzioni": [
+        "🟦 30 parti su 100",
+        "🟥 30 parti su 10",
+        "🟨 3 parti su 100"
+      ],
+      "corretta": 0,
+      "spiegazione": "Per cento vuol dire \"su 100\": 30 su 100."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🟦",
+      "affermazione": "Il 100% è l'intero.",
+      "corretta": true,
+      "spiegazione": "Sì! 100 parti su 100 sono tutto l'intero."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la percentuale alla sua parte.",
+      "coppie": [
+        ["🍕 50%", "🍕 la metà"],
+        ["🍰 25%", "🍰 un quarto"],
+        ["🔟 10%", "🔟 un decimo"],
+        ["💯 100%", "🟦 l'intero"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il 50% è la [metà]. Il 100% è l'[intero].",
+      "distrattori": ["doppio", "quarto"]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🪜",
+      "domanda": "Metti in ordine, dalla percentuale più piccola alla più grande.",
+      "elementi": ["🔸 5%", "🔸 25%", "🔸 50%", "🔸 100%"]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "È la metà o un quarto?",
+      "categorie": ["🍕 La metà", "🍰 Un quarto"],
+      "elementi": [
+        { "testo": "🔸 50%", "categoria": "🍕 La metà" },
+        { "testo": "🔸 1/2", "categoria": "🍕 La metà" },
+        { "testo": "🔸 0,5", "categoria": "🍕 La metà" },
+        { "testo": "🔸 25%", "categoria": "🍰 Un quarto" },
+        { "testo": "🔸 1/4", "categoria": "🍰 Un quarto" },
+        { "testo": "🔸 0,25", "categoria": "🍰 Un quarto" }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍬",
+      "domanda": "Qual è il 10% di 50 caramelle?",
+      "opzioni": ["🍬 5", "🍬 10", "🍬 40"],
+      "corretta": 0,
+      "spiegazione": "50 : 100 × 10 = 5. Il 10% è un decimo: 50 : 10 = 5."
+    },
+    {
+      "tipo": "retta",
+      "immagine": "📏",
+      "domanda": "Qual è il 25% di 40? Tocca il risultato sulla linea.",
+      "min": 0,
+      "max": 40,
+      "passo": 5,
+      "corretta": 10,
+      "spiegazione": "Il 25% è un quarto: 40 : 4 = 10."
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è la metà?",
+      "elementi": ["🍕 50%", "🔸 0,5", "🍫 1/2", "🍰 25%"],
+      "intruso": 3,
+      "spiegazione": "Il 25% è un quarto, non la metà."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il numero decimale alla percentuale.",
+      "coppie": [
+        ["🔸 0,5", "💯 50%"],
+        ["🔸 0,25", "💯 25%"],
+        ["🔸 0,1", "💯 10%"],
+        ["🔸 0,75", "💯 75%"]
+      ]
+    },
+    {
+      "tipo": "virgola",
+      "immagine": "🚀",
+      "domanda": "45% vuol dire 45 su 100. Trasformalo in numero decimale: sposta le cifre di 45 : 100",
+      "n": "45",
+      "op": ":",
+      "per": 100,
+      "spiegazione": "45 : 100 = 0,45. Quindi 45% = 0,45."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova la percentuale e il suo risultato.",
+      "coppie": [
+        ["🔟 10% di 100", "🍬 10 caramelle"],
+        ["🍕 50% di 30", "🍬 15 caramelle"],
+        ["🍰 25% di 20", "🍬 5 caramelle"],
+        ["💯 100% di 7", "🍬 7 caramelle"]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "📉",
+      "affermazione": "Con lo sconto il prezzo diventa più alto.",
+      "corretta": false,
+      "spiegazione": "No: lo sconto si toglie, il prezzo diventa più basso."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🧸",
+      "domanda": "Un orsetto costa 40 €. Lo sconto è del 10%. Quanto pago?",
+      "opzioni": ["💶 36 €", "💶 30 €", "💶 44 €"],
+      "corretta": 0,
+      "spiegazione": "Il 10% di 40 è 4. Poi 40 − 4 = 36 €."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "🏷️",
+      "domanda": "Una palla costa 80 €. Lo sconto è del 25%. Completa.",
+      "testo": "Lo sconto è di [20] €. Pago [60] €.",
+      "distrattori": ["40", "75"]
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa le percentuali più grandi della metà!",
+      "giusti": ["🔸 75%", "🔸 60%", "🔸 90%"],
+      "sbagliati": ["🔸 20%", "🔸 45%", "🔸 10%"],
+      "quanti": 3
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🎟️",
+      "domanda": "Un biglietto costa 20 €. Il prezzo aumenta del 10%. Quanto costa ora?",
+      "opzioni": ["💶 22 €", "💶 18 €", "💶 30 €"],
+      "corretta": 0,
+      "spiegazione": "Il 10% di 20 è 2. Con l'aumento si aggiunge: 20 + 2 = 22 €."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍰",
+      "affermazione": "Il 25% di 100 è uguale a 1/4 di 100.",
+      "corretta": true,
+      "spiegazione": "Sì! Tutti e due fanno 25."
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Stendi le parole giuste.",
+      "testo": "Per trovare il 20% di 50 divido 50 per [100]. Poi moltiplico per [20]. Il risultato è [10].",
+      "distrattori": ["5", "25"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "👧",
+      "domanda": "In classe ci sono 20 bambini. Il 50% ha il cane. Quanti bambini hanno il cane?",
+      "opzioni": ["🐶 10", "🐶 5", "🐶 50"],
+      "corretta": 0,
+      "spiegazione": "Il 50% è la metà: 20 : 2 = 10 bambini."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole delle percentuali.",
+      "parole": ["🏷️ sconto", "📈 aumento", "💶 prezzo", "🟦 intero", "💯 cento"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "PER-CEN-TU-A-LE",
+      "indizio": "💯 Si scrive con il simbolo %"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "SCONTO",
+      "indizio": "🏷️ Si toglie dal prezzo e si paga di meno"
+    }
+  ],
+  "ricorda": [
+    "💯 Il simbolo % si legge \"per cento\": 30% vuol dire 30 su 100.",
+    "🟦 Il 100% è l'intero. Il 50% è la metà. Il 25% è un quarto.",
+    "🧮 Per calcolare una percentuale divido per 100 e moltiplico per la percentuale.",
+    "📉 Lo sconto si toglie dal prezzo: si paga di meno.",
+    "📈 L'aumento si aggiunge al prezzo: si paga di più."
+  ],
+  "verifica": "verifiche/mat5-le-percentuali.json"
+}

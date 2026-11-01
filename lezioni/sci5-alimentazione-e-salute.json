@@ -1,0 +1,506 @@
+{
+  "titolo": "Alimentazione e salute",
+  "emoji": "🥗",
+  "materia": "scienze",
+  "classe": 5,
+  "introduzione": "Il cibo ci dà energia e ci fa crescere. Scopriamo la piramide alimentare e come vivere in salute.",
+  "storia": {
+    "personaggio": "👩‍🍳",
+    "testo": "Ciao, sono Nina, la cuoca della mensa!\nOgni giorno preparo pranzi buoni e sani per tanti bambini.\nOggi vi svelo i segreti del cibo che fa bene.",
+    "immagini": [
+      "🍳 cucina",
+      "🥗 pranzo sano",
+      "🍎 frutta"
+    ],
+    "missione": "Scoprite con Nina come mangiare bene e stare in salute. Alla fine vincete la figurina dell'insalata!"
+  },
+  "premio": "🥗",
+  "parole_chiave": [
+    "🍞 carboidrati",
+    "🍗 proteine",
+    "🧈 grassi",
+    "🥕 vitamine",
+    "🧂 sali minerali",
+    "💧 acqua",
+    "🔺 piramide alimentare",
+    "🏃‍♀️ movimento"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🍽️ Perché mangiamo",
+      "immagine": "🍽️",
+      "testo": "Il cibo è il carburante del nostro corpo.\nCi dà energia per muoverci, pensare e giocare.\nCi dà anche i materiali per crescere.\nNel cibo ci sono i nutrienti: sostanze utili al corpo.\nI nutrienti sono: carboidrati, proteine, grassi, vitamine, sali minerali e acqua.",
+      "immagini": [
+        "⛽ carburante",
+        "⚡ energia",
+        "📏 crescere",
+        "🍞 carboidrati",
+        "🍗 proteine"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il viaggio dell'energia del cibo",
+        "passi": [
+          {
+            "figure": "🍝 🍎 🥛",
+            "testo": "Mangiamo pasta, frutta e latte."
+          },
+          {
+            "figure": "🍝 → 🫄",
+            "testo": "Il corpo digerisce il cibo."
+          },
+          {
+            "figure": "🫄 → ⚡",
+            "testo": "Dal cibo il corpo prende energia."
+          },
+          {
+            "figure": "⚡ → 🏃‍♀️ ⚽",
+            "testo": "Con l'energia corriamo e giochiamo."
+          },
+          {
+            "figure": "🧒 → 🧑",
+            "testo": "Con i materiali del cibo cresciamo."
+          }
+        ]
+      },
+      "scopri": [
+        {
+          "fronte": "🍞 Carboidrati",
+          "retro": "⚡ Danno energia subito. Sono in pane, pasta e riso."
+        },
+        {
+          "fronte": "🍗 Proteine",
+          "retro": "💪 Fanno crescere i muscoli. Sono in carne, pesce, uova e legumi."
+        },
+        {
+          "fronte": "🧈 Grassi",
+          "retro": "🔋 Sono una riserva di energia. Sono in olio e burro."
+        },
+        {
+          "fronte": "🥕 Vitamine e sali minerali",
+          "retro": "🛡️ Proteggono il corpo. Sono in frutta e verdura."
+        }
+      ]
+    },
+    {
+      "titolo": "🔺 La piramide alimentare",
+      "immagine": "🔺",
+      "testo": "La piramide alimentare ci dice quanto mangiare di ogni cibo.\nIn basso ci sono i cibi da mangiare spesso.\nIn alto ci sono i cibi da mangiare poco.\nAlla base ci sono acqua, frutta e verdura.\nPoi pane, pasta e riso.\nPoi latte, yogurt e formaggi.\nPoi carne, pesce, uova e legumi.\nIn cima ci sono i dolci: solo ogni tanto!",
+      "immagini": [
+        "🔺 piramide alimentare",
+        "💧 acqua",
+        "🥦 verdura",
+        "🍞 pane",
+        "🍰 dolci"
+      ],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "costruiamo la piramide",
+        "passi": [
+          {
+            "figure": "💧 🍎 🥦",
+            "testo": "Alla base: acqua, frutta e verdura. Ogni giorno!"
+          },
+          {
+            "figure": "🍞 🍝 🍚",
+            "testo": "Sopra: pane, pasta e riso. Ogni giorno."
+          },
+          {
+            "figure": "🥛 🧀",
+            "testo": "Poi latte, yogurt e formaggi."
+          },
+          {
+            "figure": "🐟 🥚 🫘 🍗",
+            "testo": "Poi pesce, uova, legumi e carne."
+          },
+          {
+            "figure": "🍰 🍬",
+            "testo": "In cima i dolci: solo ogni tanto."
+          }
+        ]
+      },
+      "pensa": {
+        "domanda": "Perché i dolci sono in cima alla piramide?",
+        "risposta": "Perché hanno tanto zucchero e grassi. Se ne mangiamo troppi fanno male ai denti e al corpo. Vanno mangiati solo ogni tanto."
+      }
+    },
+    {
+      "titolo": "🕐 I pasti della giornata",
+      "immagine": "🕐",
+      "testo": "È meglio fare cinque pasti al giorno.\nLa colazione è il pasto più importante: dà energia per la scuola.\nA metà mattina c'è lo spuntino.\nPoi il pranzo, la merenda e la cena.\nUn pasto sano ha cibi diversi: è vario ed equilibrato.",
+      "immagini": [
+        "🥣 colazione",
+        "🍎 spuntino",
+        "🍝 pranzo",
+        "🍪 merenda",
+        "🍲 cena"
+      ],
+      "scopri": [
+        {
+          "fronte": "🥣 Colazione",
+          "retro": "☀️ Il pasto del mattino. Non va mai saltata!"
+        },
+        {
+          "fronte": "⚖️ Equilibrato",
+          "retro": "🍽️ Ci sono cibi diversi, nelle giuste quantità."
+        },
+        {
+          "fronte": "🌈 Vario",
+          "retro": "🥗 Ogni giorno cibi e colori diversi."
+        }
+      ],
+      "pensa": {
+        "domanda": "Che cosa succede se salti la colazione?",
+        "risposta": "A scuola ti senti stanco e hai fame. Fai fatica a stare attento, perché il corpo non ha energia."
+      }
+    },
+    {
+      "titolo": "🏃‍♀️ Stili di vita sani",
+      "immagine": "🏃‍♀️",
+      "testo": "Per stare bene non basta mangiare bene.\nServe muoversi ogni giorno: correre, giocare, fare sport.\nServe bere tanta acqua.\nServe dormire almeno nove ore.\nServe lavarsi le mani e i denti.\nTroppo tempo davanti a TV e telefono fa male.",
+      "immagini": [
+        "🏃‍♀️ movimento",
+        "💧 acqua",
+        "😴 dormire",
+        "🧼 lavarsi le mani",
+        "🪥 denti"
+      ],
+      "esperimento": {
+        "titolo": "🧻 La prova della macchia di grasso",
+        "materiali": [
+          "🧻 carta da pane",
+          "🍎 un pezzo di mela",
+          "🍪 un biscotto",
+          "🧀 un pezzo di formaggio",
+          "🫒 una goccia d'olio"
+        ],
+        "passi": [
+          "🖊️ Scrivi sulla carta i nomi dei cibi.",
+          "👆 Strofina ogni cibo sulla carta, vicino al suo nome.",
+          "⏰ Aspetta dieci minuti che la carta si asciughi.",
+          "💡 Metti la carta davanti alla finestra.",
+          "👀 Guarda: dove c'è grasso, resta una macchia trasparente."
+        ],
+        "domanda": "Quali cibi hanno lasciato la macchia? Quali hanno più grassi?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🍽️",
+      "domanda": "Perché mangiamo?",
+      "opzioni": [
+        "⚡ per avere energia e crescere",
+        "😴 per dormire di più",
+        "🎨 per cambiare colore"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il cibo è il carburante del corpo."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍞",
+      "affermazione": "Pane, pasta e riso sono ricchi di carboidrati.",
+      "corretta": true,
+      "spiegazione": "Sì! I carboidrati danno energia subito."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci il nutriente a ciò che fa.",
+      "coppie": [
+        [
+          "🍞 carboidrati",
+          "⚡ energia subito"
+        ],
+        [
+          "🍗 proteine",
+          "💪 fanno crescere"
+        ],
+        [
+          "🧈 grassi",
+          "🔋 riserva di energia"
+        ],
+        [
+          "🥕 vitamine",
+          "🛡️ proteggono"
+        ]
+      ]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Che nutriente ha di più questo cibo?",
+      "categorie": [
+        "🍞 Carboidrati",
+        "🍗 Proteine",
+        "🥕 Vitamine"
+      ],
+      "elementi": [
+        {
+          "testo": "🍝 pasta",
+          "categoria": "🍞 Carboidrati"
+        },
+        {
+          "testo": "🍚 riso",
+          "categoria": "🍞 Carboidrati"
+        },
+        {
+          "testo": "🐟 pesce",
+          "categoria": "🍗 Proteine"
+        },
+        {
+          "testo": "🥚 uova",
+          "categoria": "🍗 Proteine"
+        },
+        {
+          "testo": "🍊 arancia",
+          "categoria": "🥕 Vitamine"
+        },
+        {
+          "testo": "🥦 broccoli",
+          "categoria": "🥕 Vitamine"
+        }
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🔺",
+      "domanda": "Che cosa c'è alla base della piramide alimentare?",
+      "opzioni": [
+        "💧 acqua, frutta e verdura",
+        "🍰 dolci",
+        "🍗 carne"
+      ],
+      "corretta": 0,
+      "spiegazione": "Alla base ci sono i cibi da mangiare ogni giorno."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🍰",
+      "affermazione": "I dolci si possono mangiare tutti i giorni, quanti ne vuoi.",
+      "corretta": false,
+      "spiegazione": "No: sono in cima alla piramide. Solo ogni tanto!"
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔺",
+      "domanda": "Metti in ordine la piramide: dalla base alla cima.",
+      "elementi": [
+        "🥦 frutta e verdura",
+        "🍞 pane, pasta e riso",
+        "🥛 latte e formaggi",
+        "🐟 pesce, uova e carne",
+        "🍰 dolci"
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le [proteine] fanno crescere i muscoli. Le [vitamine] proteggono il corpo.",
+      "distrattori": [
+        "caramelle",
+        "bibite"
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🕐",
+      "domanda": "Metti in ordine i pasti della giornata.",
+      "elementi": [
+        "🥣 colazione",
+        "🍎 spuntino",
+        "🍝 pranzo",
+        "🍪 merenda",
+        "🍲 cena"
+      ]
+    },
+    {
+      "tipo": "conta",
+      "immagine": "🕐",
+      "domanda": "Quanti pasti è meglio fare in un giorno? Conta i piatti.",
+      "oggetto": "🍽️",
+      "numero": 5,
+      "spiegazione": "Colazione, spuntino, pranzo, merenda e cena: 5 pasti."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🥣",
+      "domanda": "Qual è il pasto più importante della giornata?",
+      "opzioni": [
+        "🥣 la colazione",
+        "🍪 la merenda",
+        "🍲 la cena"
+      ],
+      "corretta": 0,
+      "spiegazione": "La colazione dà energia per la mattina a scuola."
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova il cibo e il suo nutriente.",
+      "coppie": [
+        [
+          "🍝 pasta",
+          "🍞 carboidrati"
+        ],
+        [
+          "🥚 uovo",
+          "🍗 proteine"
+        ],
+        [
+          "🫒 olio",
+          "🧈 grassi"
+        ],
+        [
+          "🍊 arancia",
+          "🥕 vitamine"
+        ]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: quale NON è un'abitudine sana?",
+      "elementi": [
+        "🏃‍♀️ fare sport",
+        "💧 bere acqua",
+        "📺 tante ore di TV",
+        "😴 dormire bene"
+      ],
+      "intruso": 2,
+      "spiegazione": "Troppe ore davanti alla TV fanno male al corpo e agli occhi."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "💧",
+      "affermazione": "Bisogna bere acqua tante volte al giorno.",
+      "corretta": true,
+      "spiegazione": "Sì! Il nostro corpo è fatto soprattutto di acqua."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i cibi da mangiare ogni giorno!",
+      "giusti": [
+        "🍎 mela",
+        "🥦 broccoli",
+        "🍞 pane",
+        "🥕 carota"
+      ],
+      "sbagliati": [
+        "🍬 caramelle",
+        "🍟 patatine fritte",
+        "🍭 lecca lecca"
+      ]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "🧺",
+      "domanda": "Completa i consigli di Nina.",
+      "testo": "Ogni giorno mi [muovo] e faccio sport.\nBevo tanta [acqua].\nDormo almeno nove [ore].\nMi lavo spesso le [mani].",
+      "distrattori": [
+        "bibite",
+        "minuti"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "⚖️",
+      "domanda": "Che cosa vuol dire pasto equilibrato?",
+      "opzioni": [
+        "🍽️ cibi diversi nelle giuste quantità",
+        "🍝 solo tanta pasta",
+        "🍰 un dolce grande"
+      ],
+      "corretta": 0,
+      "spiegazione": "Un pasto equilibrato ha un po' di tutti i nutrienti."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Fa bene o fa male alla salute?",
+      "categorie": [
+        "👍 Fa bene",
+        "👎 Fa male"
+      ],
+      "elementi": [
+        {
+          "testo": "🚴‍♀️ andare in bici",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "🪥 lavarsi i denti",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "🥗 mangiare verdura",
+          "categoria": "👍 Fa bene"
+        },
+        {
+          "testo": "🥤 tante bibite zuccherate",
+          "categoria": "👎 Fa male"
+        },
+        {
+          "testo": "🌙 dormire poco",
+          "categoria": "👎 Fa male"
+        },
+        {
+          "testo": "🥐 saltare la colazione",
+          "categoria": "👎 Fa male"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🫘",
+      "affermazione": "Fagioli, ceci e lenticchie sono legumi ricchi di proteine.",
+      "corretta": true,
+      "spiegazione": "Sì! I legumi sono ricchi di proteine, come la carne."
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova i nutrienti.",
+      "parole": [
+        "🍗 proteine",
+        "🧈 grassi",
+        "🥕 vitamine",
+        "💧 acqua"
+      ]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🧩",
+      "domanda": "Metti in ordine le sillabe.",
+      "parola": "CO-LA-ZIO-NE",
+      "indizio": "🥣 Il primo pasto della giornata"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PIRAMIDE",
+      "indizio": "🔺 Ci dice quanto mangiare di ogni cibo"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PROTEINE",
+      "indizio": "💪 Nutrienti che fanno crescere i muscoli"
+    }
+  ],
+  "ricorda": [
+    "🍽️ Il cibo ci dà energia e i materiali per crescere.",
+    "🍞 I nutrienti sono: carboidrati, proteine, grassi, vitamine, sali minerali e acqua.",
+    "🔺 Nella piramide: in basso i cibi da mangiare spesso, in cima quelli da mangiare poco.",
+    "🥣 Facciamo cinque pasti al giorno. La colazione non va mai saltata.",
+    "🏃‍♀️ Per stare bene: muoversi, bere acqua, dormire e lavarsi."
+  ],
+  "verifica": "verifiche/sci5-alimentazione-e-salute.json"
+}

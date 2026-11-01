@@ -1,0 +1,58 @@
+{
+  "titolo": "L'addizione",
+  "emoji": "➕",
+  "materia": "matematica",
+  "classe": 1,
+  "obiettivi": [
+    "capire che addizionare è unire e aggiungere",
+    "leggere e usare i segni + e =",
+    "calcolare addizioni entro il 20, anche sulla linea dei numeri",
+    "sapere che scambiando i numeri il risultato non cambia"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    { "tipo": "conta", "immagine": "⭐", "testo": "⭐⭐⭐ e ⭐⭐. Conta tutte le stelle.", "figura": "⭐", "numero": 5 },
+    { "tipo": "scelta", "immagine": "🍎", "testo": "🍎🍎🍎 + 🍎🍎🍎🍎 = ?", "opzioni": ["🍎 6", "🍎 7", "🍎 8"], "corretta": 1 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci il segno al suo nome.", "coppie": [["+", "➕ più"], ["=", "🟰 uguale"]] },
+    { "tipo": "calcolo", "immagine": "➕", "testo": "Calcola.", "operazioni": [
+      { "testo": "2 + 2", "risultato": 4 },
+      { "testo": "3 + 4", "risultato": 7 },
+      { "testo": "5 + 5", "risultato": 10 },
+      { "testo": "6 + 0", "risultato": 6 }
+    ] },
+    { "tipo": "calcolo", "immagine": "🐸", "testo": "Conta in avanti e calcola.", "operazioni": [
+      { "testo": "10 + 4", "risultato": 14 },
+      { "testo": "12 + 3", "risultato": 15 },
+      { "testo": "15 + 5", "risultato": 20 }
+    ] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Scrivi il numero che manca.", "frase": "4 + ___ = 6. ___ + 3 = 8.", "soluzioni": ["2", "5"] },
+    { "tipo": "vero_falso", "immagine": "🔄", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "3 + 2 = 2 + 3", "vero": true },
+      { "testo": "4 + 1 = 6", "vero": false },
+      { "testo": "Quando aggiungo, le cose diventano di più.", "vero": true }
+    ] },
+    { "tipo": "classifica", "immagine": "🧺", "testo": "Fa 5 o fa 10?", "categorie": ["🖐️ fa 5", "🙌 fa 10"], "elementi": [
+      { "testo": "➕ 4 + 1", "categoria": "🖐️ fa 5" },
+      { "testo": "➕ 3 + 2", "categoria": "🖐️ fa 5" },
+      { "testo": "➕ 7 + 3", "categoria": "🙌 fa 10" },
+      { "testo": "➕ 9 + 1", "categoria": "🙌 fa 10" }
+    ] },
+    { "tipo": "risposta", "immagine": "👩‍🚀", "testo": "Luna ha 5 stelle. Ne trova 4. Quante stelle ha?", "righe": 2, "soluzione": "5 + 4 = 9. Luna ha 9 stelle." },
+    { "tipo": "disegna", "immagine": "🎨", "testo": "Disegna 3 + 2 con le palline." }
+  ],
+  "domande_facilitate": [
+    { "tipo": "conta", "immagine": "⭐", "testo": "⭐⭐ e ⭐⭐. Conta le stelle.", "figura": "⭐", "numero": 4 },
+    { "tipo": "scelta", "immagine": "🍎", "testo": "🍎🍎 + 🍎 = ?", "opzioni": ["🍎 3", "🍎 5"], "corretta": 0 },
+    { "tipo": "collega", "immagine": "🔗", "testo": "Unisci.", "coppie": [["+", "➕ più"], ["=", "🟰 uguale"]] },
+    { "tipo": "calcolo", "immagine": "➕", "testo": "Calcola.", "operazioni": [
+      { "testo": "1 + 1", "risultato": 2 },
+      { "testo": "2 + 3", "risultato": 5 },
+      { "testo": "10 + 2", "risultato": 12 }
+    ] },
+    { "tipo": "completa", "immagine": "✏️", "testo": "Completa.", "frase": "3 + 1 = ___", "soluzioni": ["4"], "parole": ["4", "2"] },
+    { "tipo": "vero_falso", "immagine": "🔄", "testo": "Vero o falso?", "affermazioni": [
+      { "testo": "2 + 1 = 1 + 2", "vero": true },
+      { "testo": "2 + 2 = 5", "vero": false }
+    ] }
+  ]
+}

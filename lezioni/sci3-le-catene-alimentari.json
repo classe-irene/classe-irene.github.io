@@ -1,0 +1,296 @@
+{
+  "titolo": "Le catene alimentari",
+  "emoji": "🦊",
+  "materia": "scienze",
+  "classe": 3,
+  "introduzione": "Chi mangia chi? Scopriamo produttori, consumatori e decompositori.",
+  "storia": {
+    "personaggio": "👩‍🏫",
+    "testo": "Ciao, sono la maestra Chiara!\nOggi siamo in gita nel bosco.\nVedo un coniglio che mangia l'erba e una volpe che lo guarda. Chi mangia chi?",
+    "immagini": ["🌲 bosco", "🐇 coniglio", "🦊 volpe"],
+    "missione": "Costruite con la maestra Chiara le catene del bosco. Alla fine vincete la figurina della volpe!"
+  },
+  "premio": "🦊",
+  "parole_chiave": [
+    "🔗 catena alimentare",
+    "🌱 produttori",
+    "🐇 erbivori",
+    "🦊 carnivori",
+    "🐻 onnivori",
+    "🍄 decompositori"
+  ],
+  "sezioni": [
+    {
+      "titolo": "🌱 I produttori",
+      "immagine": "🌱",
+      "testo": "Le piante preparano da sole il loro cibo.\nUsano la luce del sole, l'acqua e l'aria.\nPer questo si chiamano produttori.\nOgni catena alimentare comincia da una pianta.",
+      "immagini": ["🌿 piante", "☀️ luce", "💧 acqua", "🌱 produttori"],
+      "animazione": {
+        "tipo": "scena",
+        "scena": "fotosintesi",
+        "video": true,
+        "titolo": "la pianta fa il suo cibo"
+      }
+    },
+    {
+      "titolo": "🐇 I consumatori",
+      "immagine": "🐇",
+      "testo": "Gli animali non sanno fare il cibo da soli.\nDevono mangiare: sono consumatori.\nGli erbivori mangiano piante, come il coniglio.\nI carnivori mangiano altri animali, come la volpe.\nGli onnivori mangiano tutti e due, come l'orso.",
+      "immagini": ["🐇 erbivori", "🦊 carnivori", "🐻 onnivori"],
+      "scopri": [
+        { "fronte": "🐇 Erbivori", "retro": "🌿 Mangiano solo piante: erba, foglie, frutti." },
+        { "fronte": "🦊 Carnivori", "retro": "🍖 Mangiano altri animali." },
+        { "fronte": "🐻 Onnivori", "retro": "🍯 Mangiano piante e animali." }
+      ]
+    },
+    {
+      "titolo": "🔗 La catena alimentare",
+      "immagine": "🔗",
+      "testo": "Una catena alimentare dice chi mangia chi.\nL'erba è mangiata dal coniglio.\nIl coniglio è mangiato dalla volpe.\nLa freccia vuol dire: è mangiato da.",
+      "immagini": ["🌿 erba", "🐇 coniglio", "🦊 volpe", "➡️ freccia"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "chi mangia chi",
+        "passi": [
+          { "figure": "☀️ → 🌿", "testo": "Il sole fa crescere l'erba: è il produttore." },
+          { "figure": "🌿 → 🐇", "testo": "Il coniglio mangia l'erba: è un erbivoro." },
+          { "figure": "🐇 → 🦊", "testo": "La volpe mangia il coniglio: è una carnivora." },
+          { "figure": "🌿 → 🐇 → 🦊", "testo": "Ecco la catena alimentare: erba, coniglio, volpe." }
+        ]
+      },
+      "pensa": {
+        "domanda": "Che cosa succede alle volpi se nel bosco sparisce tutta l'erba?",
+        "risposta": "Senza erba i conigli non hanno cibo e diminuiscono. Poi anche le volpi non hanno cibo: la catena si rompe."
+      }
+    },
+    {
+      "titolo": "🍄 I decompositori",
+      "immagine": "🍄",
+      "testo": "Alla fine piante e animali muoiono.\nFunghi, batteri e lombrichi mangiano i resti.\nLi trasformano in sostanze buone per il terreno.\nSi chiamano decompositori.\nCosì le piante crescono di nuovo: è un cerchio!",
+      "immagini": ["🍂 resti", "🍄 funghi", "🪱 lombrichi", "🌱 piante"],
+      "animazione": {
+        "tipo": "sequenza",
+        "video": true,
+        "titolo": "il cerchio della vita",
+        "passi": [
+          { "figure": "🍂 🍂", "testo": "Le foglie e gli animali morti cadono a terra." },
+          { "figure": "🍄 🪱", "testo": "Funghi e lombrichi mangiano i resti." },
+          { "figure": "🍂 → 🟫", "testo": "I resti diventano terra buona." },
+          { "figure": "🟫 → 🌱", "testo": "Nella terra buona crescono nuove piante." }
+        ]
+      },
+      "esperimento": {
+        "titolo": "Il pane che cambia",
+        "materiali": ["🍞 una fetta di pane", "🫙 un sacchetto chiuso", "💧 qualche goccia d'acqua"],
+        "passi": ["Bagna appena il pane.", "Chiudilo nel sacchetto. Non aprirlo!", "Guardalo ogni due giorni.", "Alla fine buttalo via senza aprire il sacchetto."],
+        "domanda": "Che cosa cresce sul pane? Chi lo sta decomponendo?"
+      }
+    }
+  ],
+  "esercizi": [
+    {
+      "tipo": "scelta",
+      "immagine": "🌱",
+      "domanda": "Da chi comincia ogni catena alimentare?",
+      "opzioni": ["🌱 da una pianta", "🦊 dalla volpe", "🍄 dal fungo"],
+      "corretta": 0,
+      "spiegazione": "Le piante sono i produttori: fanno il cibo da sole."
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🔗",
+      "domanda": "Metti in ordine la catena alimentare.",
+      "elementi": ["🌿 erba", "🐇 coniglio", "🦊 volpe"]
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🧺",
+      "domanda": "Erbivoro o carnivoro?",
+      "categorie": ["🌿 Erbivoro", "🍖 Carnivoro"],
+      "elementi": [
+        { "testo": "🐇 coniglio", "categoria": "🌿 Erbivoro" },
+        { "testo": "🐄 mucca", "categoria": "🌿 Erbivoro" },
+        { "testo": "🦒 giraffa", "categoria": "🌿 Erbivoro" },
+        { "testo": "🦁 leone", "categoria": "🍖 Carnivoro" },
+        { "testo": "🦊 volpe", "categoria": "🍖 Carnivoro" },
+        { "testo": "🦈 squalo", "categoria": "🍖 Carnivoro" }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🌿",
+      "affermazione": "Le piante preparano da sole il loro cibo.",
+      "corretta": true,
+      "spiegazione": "Sì! Per questo si chiamano produttori."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci la parola al suo significato.",
+      "coppie": [
+        ["🌱 produttore", "☀️ fa il cibo da solo"],
+        ["🐇 erbivoro", "🌿 mangia piante"],
+        ["🦊 carnivoro", "🍖 mangia animali"],
+        ["🍄 decompositore", "🍂 mangia i resti"]
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Il coniglio mangia l'erba: è un [erbivoro].",
+      "distrattori": ["carnivoro"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐻",
+      "domanda": "L'orso mangia miele, frutti e pesci. Che cos'è?",
+      "opzioni": ["🐻 un onnivoro", "🐇 un erbivoro", "🌱 un produttore"],
+      "corretta": 0,
+      "spiegazione": "Mangia piante e animali: è onnivoro."
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "➡️",
+      "affermazione": "Nella catena la freccia vuol dire: è mangiato da.",
+      "corretta": true,
+      "spiegazione": "Sì! 🌿 → 🐇 vuol dire: l'erba è mangiata dal coniglio."
+    },
+    {
+      "tipo": "acchiappa",
+      "immagine": "🎯",
+      "domanda": "Acchiappa i produttori!",
+      "giusti": ["🌿 erba", "🌳 albero", "🌻 girasole", "🥬 lattuga"],
+      "sbagliati": ["🐇 coniglio", "🦊 volpe", "🍄 fungo", "🐛 bruco"],
+      "quanti": 4
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌊",
+      "domanda": "Metti in ordine la catena del mare.",
+      "elementi": ["🌿 alghe", "🐟 pesciolino", "🦈 squalo"]
+    },
+    {
+      "tipo": "memory",
+      "immagine": "🧠",
+      "domanda": "Memory: trova l'animale e quello che mangia.",
+      "coppie": [
+        ["🐇 coniglio", "🥕 carota"],
+        ["🐛 bruco", "🍃 foglia"],
+        ["🦊 volpe", "🐁 topo"],
+        ["🐝 ape", "🌸 fiore"]
+      ]
+    },
+    {
+      "tipo": "intruso",
+      "immagine": "🔍",
+      "domanda": "Trova l'intruso: chi NON è un decompositore?",
+      "elementi": ["🍄 fungo", "🪱 lombrico", "🦠 batterio", "🦁 leone"],
+      "intruso": 3,
+      "spiegazione": "Il leone è un carnivoro, non un decompositore."
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🍄",
+      "domanda": "Che cosa fanno i decompositori?",
+      "opzioni": ["🍂 trasformano i resti in terra buona", "☀️ fanno il cibo con la luce", "🦊 cacciano i conigli"],
+      "corretta": 0,
+      "spiegazione": "Così la terra nutre le nuove piante."
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "domanda": "Completa.",
+      "testo": "Le piante sono [produttori]. Gli animali sono [consumatori].",
+      "distrattori": ["decompositori", "sassi"]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "🦊",
+      "affermazione": "La volpe sa fare il suo cibo con la luce del sole.",
+      "corretta": false,
+      "spiegazione": "No: gli animali devono mangiare. Solo le piante fanno il cibo da sole."
+    },
+    {
+      "tipo": "categorie",
+      "immagine": "🗂️",
+      "domanda": "Produttore, consumatore o decompositore?",
+      "categorie": ["🌱 Produttore", "🐇 Consumatore", "🍄 Decompositore"],
+      "elementi": [
+        { "testo": "🌳 quercia", "categoria": "🌱 Produttore" },
+        { "testo": "🌿 erba", "categoria": "🌱 Produttore" },
+        { "testo": "🐛 bruco", "categoria": "🐇 Consumatore" },
+        { "testo": "🦉 gufo", "categoria": "🐇 Consumatore" },
+        { "testo": "🍄 fungo", "categoria": "🍄 Decompositore" },
+        { "testo": "🪱 lombrico", "categoria": "🍄 Decompositore" }
+      ]
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🌳",
+      "domanda": "Metti in ordine la catena del prato.",
+      "elementi": ["🍃 foglia", "🐛 bruco", "🐦 uccellino", "🦅 falco"]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🌿",
+      "domanda": "Nel prato sparisce tutta l'erba. Che cosa succede ai conigli?",
+      "opzioni": ["🐇 non hanno più cibo", "🎉 stanno meglio", "🌻 diventano fiori"],
+      "corretta": 0,
+      "spiegazione": "Senza produttori la catena si rompe."
+    },
+    {
+      "tipo": "abbina",
+      "immagine": "🔗",
+      "domanda": "Unisci l'animale al suo cibo.",
+      "coppie": [
+        ["🐄 mucca", "🌿 erba"],
+        ["🐝 ape", "🌸 nettare dei fiori"],
+        ["🦁 leone", "🦓 zebra"]
+      ]
+    },
+    {
+      "tipo": "crucipuzzle",
+      "immagine": "🔎",
+      "domanda": "Crucipuzzle: trova le parole della catena.",
+      "parole": ["🌿 erba", "🐇 coniglio", "🦊 volpe", "🍄 fungo", "🔗 catena"]
+    },
+    {
+      "tipo": "bucato",
+      "immagine": "👩‍🏫",
+      "domanda": "Completa il testo bucato della maestra Chiara.",
+      "testo": "Nel bosco l'erba fa il cibo con il [sole].\nIl [coniglio] mangia l'erba.\nLa [volpe] mangia il coniglio.\nI [funghi] trasformano i resti in terra buona.",
+      "distrattori": ["leone", "sasso"]
+    },
+    {
+      "tipo": "mescolata",
+      "immagine": "🔤",
+      "domanda": "Rimetti in ordine le sillabe.",
+      "parola": "ER-BI-VO-RO",
+      "indizio": "🐇 Mangia solo piante"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "PRODUTTORE",
+      "indizio": "🌱 Fa il cibo da solo con la luce"
+    },
+    {
+      "tipo": "indovina",
+      "immagine": "🎈",
+      "domanda": "Indovina la parola!",
+      "parola": "CARNIVORO",
+      "indizio": "🦊 Mangia altri animali"
+    }
+  ],
+  "ricorda": [
+    "🔗 La catena alimentare dice chi mangia chi.",
+    "🌱 Le piante sono produttori: fanno il cibo da sole con la luce.",
+    "🐇 Gli animali sono consumatori: erbivori, carnivori o onnivori.",
+    "🍄 Funghi, batteri e lombrichi sono decompositori: trasformano i resti in terra buona.",
+    "🌿 Se manca un anello, la catena si rompe."
+  ],
+  "verifica": "verifiche/sci3-le-catene-alimentari.json"
+}

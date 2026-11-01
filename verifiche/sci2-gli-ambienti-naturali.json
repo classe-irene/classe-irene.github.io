@@ -1,0 +1,241 @@
+{
+  "titolo": "Gli ambienti naturali",
+  "emoji": "🏞️",
+  "materia": "scienze",
+  "classe": 2,
+  "obiettivi": [
+    "sapere che cos'è un ambiente naturale",
+    "riconoscere il bosco, il prato, il mare e la montagna",
+    "collegare gli animali al loro ambiente"
+  ],
+  "consegna": "Leggi con calma. Guarda bene i disegni.",
+  "domande": [
+    {
+      "tipo": "scelta",
+      "immagine": "🏞️",
+      "testo": "Che cos'è un ambiente?",
+      "opzioni": [
+        "🏞️ il posto dove vivono piante e animali",
+        "🧸 un giocattolo",
+        "🍕 un cibo"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci l'animale al suo ambiente.",
+      "coppie": [
+        [
+          "delfino",
+          "mare"
+        ],
+        [
+          "scoiattolo",
+          "bosco"
+        ],
+        [
+          "farfalla",
+          "prato"
+        ],
+        [
+          "stambecco",
+          "montagna"
+        ]
+      ]
+    },
+    {
+      "tipo": "classifica",
+      "immagine": "🧺",
+      "testo": "Dove vive? Scrivi nella colonna giusta.",
+      "categorie": [
+        "🌊 Mare",
+        "🌳 Bosco",
+        "🏔️ Montagna"
+      ],
+      "elementi": [
+        {
+          "testo": "polpo",
+          "categoria": "🌊 Mare"
+        },
+        {
+          "testo": "granchio",
+          "categoria": "🌊 Mare"
+        },
+        {
+          "testo": "volpe",
+          "categoria": "🌳 Bosco"
+        },
+        {
+          "testo": "gufo",
+          "categoria": "🌳 Bosco"
+        },
+        {
+          "testo": "marmotta",
+          "categoria": "🏔️ Montagna"
+        },
+        {
+          "testo": "aquila",
+          "categoria": "🏔️ Montagna"
+        }
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "L'acqua del mare è salata.",
+          "vero": true
+        },
+        {
+          "testo": "Nel bosco ci sono tanti alberi.",
+          "vero": true
+        },
+        {
+          "testo": "Il pesce vive nel prato.",
+          "vero": false
+        },
+        {
+          "testo": "In cima alla montagna fa caldissimo.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa con le parole giuste.",
+      "frase": "Nel ___ ci sono erba e fiori. Nel ___ vivono i pesci. In ___ d'inverno c'è la neve.",
+      "soluzioni": [
+        "prato",
+        "mare",
+        "montagna"
+      ],
+      "parole": [
+        "prato",
+        "mare",
+        "montagna",
+        "bosco"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🐝",
+      "testo": "Dove vola l'ape per cercare i fiori?",
+      "opzioni": [
+        "🌼 nel prato",
+        "🌊 nel mare",
+        "❄️ sulla neve"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "ordina",
+      "immagine": "🏔️",
+      "testo": "Saliamo sulla montagna: metti in ordine dal basso all'alto.",
+      "elementi": [
+        "prato",
+        "bosco di abeti",
+        "rocce",
+        "cima con la neve"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚯",
+      "testo": "Come rispetto l'ambiente?",
+      "opzioni": [
+        "🗑️ porto via i miei rifiuti",
+        "🌼 lascio la carta sull'erba",
+        "🌳 rompo i rami degli alberi"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "risposta",
+      "immagine": "🤔",
+      "testo": "Perché il pesce non può vivere nel prato? Scrivi una frase.",
+      "righe": 3,
+      "soluzione": "Perché il pesce ha bisogno dell'acqua per vivere e respirare."
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna un ambiente che ti piace e due animali che ci vivono."
+    }
+  ],
+  "domande_facilitate": [
+    {
+      "tipo": "scelta",
+      "immagine": "🐟",
+      "testo": "Il pesce vive…",
+      "opzioni": [
+        "🌊 nel mare",
+        "🌼 nel prato"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "collega",
+      "immagine": "🔗",
+      "testo": "Unisci.",
+      "coppie": [
+        [
+          "delfino",
+          "mare"
+        ],
+        [
+          "scoiattolo",
+          "bosco"
+        ],
+        [
+          "marmotta",
+          "montagna"
+        ]
+      ]
+    },
+    {
+      "tipo": "vero_falso",
+      "immagine": "⚖️",
+      "affermazioni": [
+        {
+          "testo": "Nel bosco ci sono tanti alberi.",
+          "vero": true
+        },
+        {
+          "testo": "Il pesce vive nel prato.",
+          "vero": false
+        }
+      ]
+    },
+    {
+      "tipo": "completa",
+      "immagine": "✏️",
+      "testo": "Completa.",
+      "frase": "Nel ___ ci sono erba e fiori.",
+      "soluzioni": [
+        "prato"
+      ],
+      "parole": [
+        "prato",
+        "mare"
+      ]
+    },
+    {
+      "tipo": "scelta",
+      "immagine": "🚯",
+      "testo": "Nel prato, la carta…",
+      "opzioni": [
+        "🗑️ la porto via",
+        "🌼 la lascio sull'erba"
+      ],
+      "corretta": 0
+    },
+    {
+      "tipo": "disegna",
+      "immagine": "🎨",
+      "testo": "Disegna il mare con un pesce."
+    }
+  ]
+}
