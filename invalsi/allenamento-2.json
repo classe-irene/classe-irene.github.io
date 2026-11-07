@@ -14,7 +14,7 @@
    "cosa": "Spazio, figure e misure"
   },
   {
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "emoji": "📊",
    "cosa": "Grafici, tabelle e ragionamento"
   }
@@ -343,7 +343,7 @@
   {
    "n": 3,
    "settimana": "9 – 13 novembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Dati e previsioni",
    "titolo": "Contiamo con il grafico",
@@ -593,7 +593,7 @@
   {
    "n": 6,
    "settimana": "16 – 20 novembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Dati e previsioni",
    "titolo": "Certo, possibile, impossibile",
@@ -835,7 +835,7 @@
   {
    "n": 9,
    "settimana": "23 – 27 novembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Dati e previsioni",
    "titolo": "Leggiamo la tabella",
@@ -1280,7 +1280,7 @@
   {
    "n": 12,
    "settimana": "30 novembre – 4 dicembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Dati e previsioni",
    "titolo": "Il grafico a colonne",
@@ -1728,7 +1728,7 @@
   {
    "n": 15,
    "settimana": "7 – 11 dicembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Relazioni e funzioni",
    "titolo": "Indovina chi!",
@@ -2107,7 +2107,7 @@
   {
    "n": 18,
    "settimana": "14 – 18 dicembre",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 1,
    "ambito": "Prova mista",
    "titolo": "Mini prova di Natale",
@@ -2265,7 +2265,7 @@
   {
    "n": 21,
    "settimana": "11 – 15 gennaio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Dati e previsioni",
    "titolo": "Grafici: chi ha di più?",
@@ -2292,7 +2292,7 @@
   {
    "n": 24,
    "settimana": "18 – 22 gennaio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Dati e previsioni",
    "titolo": "Tabelle a doppia entrata",
@@ -2319,7 +2319,7 @@
   {
    "n": 27,
    "settimana": "25 – 29 gennaio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Dati e previsioni",
    "titolo": "Certo, possibile, impossibile",
@@ -2346,7 +2346,7 @@
   {
    "n": 30,
    "settimana": "1 – 5 febbraio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Relazioni e funzioni",
    "titolo": "Vero o falso? Osserva bene",
@@ -2373,7 +2373,7 @@
   {
    "n": 33,
    "settimana": "8 – 12 febbraio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Relazioni e funzioni",
    "titolo": "Ragionare con gli indizi",
@@ -2400,7 +2400,7 @@
   {
    "n": 36,
    "settimana": "15 – 19 febbraio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Dati e previsioni",
    "titolo": "Grafico con due colonne",
@@ -2427,7 +2427,7 @@
   {
    "n": 39,
    "settimana": "22 – 26 febbraio",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 2,
    "ambito": "Prova mista",
    "titolo": "Mini prova di Carnevale",
@@ -2456,7 +2456,7 @@
   {
    "n": 42,
    "settimana": "1 – 5 marzo",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Dati e previsioni",
    "titolo": "Scatole e palline: dove conviene pescare?",
@@ -2486,7 +2486,7 @@
   {
    "n": 45,
    "settimana": "8 – 12 marzo",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Dati e previsioni",
    "titolo": "Che cosa è CERTAMENTE vero?",
@@ -2516,7 +2516,7 @@
   {
    "n": 48,
    "settimana": "15 – 19 marzo",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Prova mista",
    "titolo": "Mini prova mista A",
@@ -2546,7 +2546,7 @@
   {
    "n": 51,
    "settimana": "22 – 26 marzo",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Dati e previsioni",
    "titolo": "Grafici e tabelle",
@@ -2576,7 +2576,7 @@
   {
    "n": 54,
    "settimana": "6 – 9 aprile",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Prova mista",
    "titolo": "Mini prova mista B",
@@ -2606,7 +2606,7 @@
   {
    "n": 57,
    "settimana": "12 – 16 aprile",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 3,
    "ambito": "Prova mista",
    "titolo": "Mini prova mista C",
@@ -2634,7 +2634,7 @@
   {
    "n": 60,
    "settimana": "19 – 23 aprile",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 4,
    "ambito": "Prova mista",
    "titolo": "Prova generale 2",
@@ -2661,7 +2661,7 @@
   {
    "n": 63,
    "settimana": "26 – 30 aprile",
-   "giorno": "Venerdì",
+   "giorno": "Giovedì",
    "fase": 4,
    "ambito": "Prova mista",
    "titolo": "Mini prova della fiducia",

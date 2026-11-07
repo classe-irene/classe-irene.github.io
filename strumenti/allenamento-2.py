@@ -130,7 +130,7 @@ S18 = [
     "Nella scatola ci sono solo stelline: è certo che prendi una stellina.", insiemi=[dict(etichetta="La scatola", figure="⭐⭐⭐⭐⭐")], ambito=D),
 ]
 
-GIORNI = ["Lunedì", "Mercoledì", "Venerdì"]
+GIORNI = ["Lunedì", "Mercoledì", "Giovedì"]
 pronte = [S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18]
 # (settimana, fase, [(titolo, ambito, emoji, domande INVALSI simili)] x3)
 piano = [
@@ -171,7 +171,7 @@ dati = dict(
  titolo="Allenamento INVALSI · classe 2ª",
  classe=2,
  descrizione="Tre mini prove a settimana, da novembre ad aprile, per arrivare sereni alla prova di matematica di maggio. Ogni mini prova dura circa 10 minuti, si fa insieme sulla LIM e si corregge subito.",
- ritmo=[dict(giorno="Lunedì", emoji="🔢", cosa="Numeri e problemi"), dict(giorno="Mercoledì", emoji="📐", cosa="Spazio, figure e misure"), dict(giorno="Venerdì", emoji="📊", cosa="Grafici, tabelle e ragionamento")],
+ ritmo=[dict(giorno="Lunedì", emoji="🔢", cosa="Numeri e problemi"), dict(giorno="Mercoledì", emoji="📐", cosa="Spazio, figure e misure"), dict(giorno="Giovedì", emoji="📊", cosa="Grafici, tabelle e ragionamento")],
  fasi=[
   dict(n=1, nome="Conosciamo la prova", periodo="novembre – dicembre", emoji="🌱", descrizione="3 domande alla volta, senza tempo. Impariamo la crocetta, le lettere A, B, C e a leggere bene il disegno."),
   dict(n=2, nome="Ragioniamo", periodo="gennaio – febbraio", emoji="🧠", descrizione="4 domande alla volta, senza tempo. Problemi con due passaggi, tabelle a doppia entrata, percorsi, vero o falso."),
