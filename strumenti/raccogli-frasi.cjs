@@ -12,6 +12,7 @@ const pagine = [
   ...readdirSync(join(sito, "lezioni")).filter((f) => f.endsWith(".json")).map((f) => `lezione.html?file=lezioni/${f}&nosipario=1`),
   ...readdirSync(join(sito, "verifiche")).filter((f) => f.endsWith(".json")).map((f) => `verifica.html?file=verifiche/${f}&modo=online`),
   ...readdirSync(join(sito, "invalsi")).filter((f) => f.endsWith(".json")).map((f) => `invalsi.html?file=invalsi/${f}`),
+  "allenamento.html",
   "index.html", "equivalenze.html", "invalsi.html",
 ];
 

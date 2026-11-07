@@ -422,7 +422,7 @@
         <h1>Prove in stile INVALSI</h1>
         <p>Allenamento per le prove nazionali di classe 2ª e 5ª: domande numerate, risposte con la crocetta, il tempo e le soluzioni solo alla fine.</p>
       </div>
-      <a class="iv-cal-oggi" href="invalsi.html?file=invalsi%2Fallenamento-2.json">${Figura.img("📅", "figura media")}<span><small>Classe 2ª · da novembre a maggio</small><b>Allenamento: 3 mini prove a settimana</b></span><span class="btn giallo grande">📅 Apri il calendario</span></a>
+      <a class="iv-cal-oggi" href="allenamento.html">${Figura.img("📅", "figura media")}<span><small>Classe 2ª · da novembre a maggio</small><b>Allenamento: 3 mini prove a settimana</b></span><span class="btn giallo grande">📅 Apri il calendario</span></a>
       <div class="iv-elenco">${perClasse.map(({ c, prove }) => `<div class="iv-classe-box"><h2>Classe ${c}ª</h2>
         ${prove.map((p) => `<a class="argomento pronta" href="invalsi.html?file=${encodeURIComponent(p.file)}">${Figura.img(p.emoji, "figura media")}<h3>Matematica · ${h(p.nome)}</h3><span class="stato">▶ Inizia</span></a>`).join("")}</div>`).join("")}</div>
       <p class="nota" style="text-align:center;margin-top:24px">Le prove INVALSI della scuola primaria si fanno in classe 2ª e in classe 5ª.</p>`;
@@ -440,8 +440,9 @@
     const s = dati.sessioni.find((x) => x.n === n);
     return s && pronta(s) ? { ...s, numero: s.n, classe: dati.classe } : null;
   }
-  function calendario(dati, radice, file) {
-    const fatto = fatte(file), href = (n) => `invalsi.html?file=${encodeURIComponent(file)}&n=${n}`;
+  // base: l'indirizzo delle mini prove, a cui si aggiunge "n=…" (la pagina allenamento.html oppure invalsi.html?file=…&).
+  function calendario(dati, radice, file, base = `invalsi.html?file=${encodeURIComponent(file)}&`) {
+    const fatto = fatte(file), href = (n) => `${base}n=${n}`;
     const prossima = dati.sessioni.find((s) => pronta(s) && !fatto[s.n]);
     const giorno = (s) => {
       const f = fatto[s.n], ok = pronta(s);
@@ -472,7 +473,7 @@
       <p class="nota" style="text-align:center;margin:24px 0">Se un giorno salta, si riprende dal prossimo allenamento: il pulsante «Il prossimo allenamento» lo ricorda da solo su questo computer.
         <button class="btn bianco piccolo" data-azzera>↺ Ricomincia da capo</button></p>`;
     radice.querySelector("[data-azzera]")?.addEventListener("click", () => {
-      if (confirm("Tolgo tutti i ✅ degli allenamenti fatti su questo computer?")) { try { localStorage.removeItem(CHIAVE_FATTE(file)); } catch {} calendario(dati, radice, file); }
+      if (confirm("Tolgo tutti i ✅ degli allenamenti fatti su questo computer?")) { try { localStorage.removeItem(CHIAVE_FATTE(file)); } catch {} calendario(dati, radice, file, base); }
     });
   }
   const AMB_CLASSE = { "Numeri": "num", "Spazio e figure": "spa", "Relazioni e funzioni": "rel", "Dati e previsioni": "dat", "Prova mista": "mis" };

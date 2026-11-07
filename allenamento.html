@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Allenamento INVALSI · La classe di Irene</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/caratteri/caratteri.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>">
+<script src="assets/curricolo.js"></script>
+<script src="assets/emoji-elenco.js"></script>
+<script src="assets/comune.js"></script>
+<script src="assets/invalsi.js"></script>
+</head>
+<body class="invalsi">
+<main class="contenitore" id="radice"><p style="text-align:center;padding:60px">Sto preparando l'allenamento… 📅</p></main>
+<script>
+  // L'allenamento INVALSI di classe 2ª: il calendario delle mini prove (3 a settimana) e, con ?n=5, la mini prova numero 5.
+  creaTestata("matematica");
+  const p = parametri();
+  const FILE = "invalsi/allenamento-2.json";
+  const radice = document.getElementById("radice");
+  const errore = (msg) => radice.innerHTML = `<div class="scheda"><h2>😕 Allenamento non trovato</h2><p>${escapeHTML(msg)}</p><a class="btn" href="allenamento.html">📅 Torna al calendario</a></div>`;
+  (async () => {
+    let dati;
+    try { dati = await leggiJSON(FILE); } catch { return errore("Non riesco a leggere il calendario degli allenamenti."); }
+    if (!p.n) return Invalsi.calendario(dati, radice, FILE, "allenamento.html?");
+    const s = Invalsi.sessione(dati, Number(p.n));
+    if (!s) return errore("Questo allenamento non è ancora pronto.");
+    const e = Invalsi.valida(s);
+    if (e.length) return errore(e.join(" "));
+    Invalsi.avvia(s, radice, { allenamento: true, indietro: "allenamento.html", fine: (giuste, totale) => Invalsi.segnaFatta(FILE, s.n, giuste, totale) });
+  })();
+</script>
+</body>
+</html>
