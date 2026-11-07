@@ -24,6 +24,16 @@
     if (!/^invalsi\/[\w.-]+\.json$/.test(p.file)) return errore("Questa prova non esiste.");
     let prova;
     try { prova = await leggiJSON(p.file); } catch { return errore("Non riesco a leggere il file della prova."); }
+    // L'allenamento: il calendario delle mini prove, oppure la mini prova numero n.
+    if (prova.sessioni) {
+      if (!p.n) return Invalsi.calendario(prova, radice, p.file);
+      const s = Invalsi.sessione(prova, Number(p.n));
+      if (!s) return errore("Questo allenamento non è ancora pronto.");
+      const e = Invalsi.valida(s);
+      if (e.length) return errore(e.join(" "));
+      return Invalsi.avvia(s, radice, { allenamento: true, indietro: `invalsi.html?file=${encodeURIComponent(p.file)}`,
+        fine: (giuste, totale) => Invalsi.segnaFatta(p.file, s.n, giuste, totale) });
+    }
     const e = Invalsi.valida(prova);
     if (e.length) return errore(e.join(" "));
     Invalsi.avvia(prova, radice);

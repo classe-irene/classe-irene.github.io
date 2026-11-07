@@ -1740,3 +1740,126 @@ body.lim .tc-piu, body.lim .tc-risultato { font-size: 3rem; }
 body.lim .tc-et { font-size: 1.4rem; }
 body.lim .tc .tastierino { grid-template-columns: repeat(6, 88px); }
 .tc-cifra[hidden] { display: none; }
+
+/* ---------- Allenamento INVALSI (classe 2ª): nuovi disegni, correzione subito, calendario ---------- */
+.iv-retta { width: min(640px, 100%); }
+.iv-r-linea, .iv-r-tacca { stroke: var(--testo); stroke-width: 4; }
+.iv-r-tratt { stroke: var(--testo); stroke-width: 4; stroke-dasharray: 8 6; }
+.iv-r-punta { fill: var(--testo); }
+.iv-r-freccia { stroke: var(--testo); stroke-width: 3; }
+.iv-r-num { font: 800 28px "Baloo 2", sans-serif; text-anchor: middle; fill: var(--testo); }
+.iv-r-cart { fill: #FFF3CC; stroke: var(--testo); stroke-width: 3; }
+.iv-insiemi { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.iv-insieme { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.iv-ins-dentro { min-width: 120px; min-height: 90px; border: 3px solid var(--iv); background: var(--iv-chiaro); border-radius: 18px; padding: 10px 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; max-width: 300px; }
+.iv-insieme.senza .iv-ins-dentro { border: 0; background: none; min-height: 0; min-width: 0; padding: 0; }
+.iv-ins-nome { font: 800 1.2rem "Baloo 2", sans-serif; }
+.iv-moneta, .iv-banconota { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; font-family: "Baloo 2", sans-serif; line-height: 1; color: #4a3500; flex: none; }
+.iv-moneta { width: 54px; height: 54px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff6c8, #e2b93b 60%, #b88a12); border: 4px solid #c9c9c9; box-shadow: 0 3px 0 rgba(0,0,0,.18); }
+.iv-moneta.v1 { background: radial-gradient(circle at 35% 30%, #fff6c8, #e2b93b 60%, #b88a12); border-color: #d8d8d8; }
+.iv-moneta.v2 { background: radial-gradient(circle at 35% 30%, #ffffff, #cfd3d6 60%, #9aa1a6); border-color: #e2b93b; color: #333; }
+.iv-moneta b { font-size: 1.5rem; } .iv-moneta i { font-style: normal; font-size: .8rem; font-weight: 800; }
+.iv-banconota { width: 96px; height: 54px; border-radius: 6px; border: 2px solid rgba(0,0,0,.25); box-shadow: 0 3px 0 rgba(0,0,0,.15); }
+.iv-banconota.v5 { background: linear-gradient(135deg, #e7e7e7, #b9bec4); }
+.iv-banconota.v10 { background: linear-gradient(135deg, #ffd0c8, #e98a7a); }
+.iv-banconota.v20 { background: linear-gradient(135deg, #cfe2ff, #7da7e6); }
+.iv-banconota.v50 { background: linear-gradient(135deg, #ffe2b8, #f0a64a); }
+.iv-banconota b { font-size: 1.6rem; } .iv-banconota i { font-style: normal; font-size: .75rem; font-weight: 800; }
+.iv-op-monete { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+.iv-griglia-ogg { display: grid; grid-template-columns: repeat(var(--col), 84px); gap: 0; border: 3px solid var(--testo); border-radius: 6px; background: #fff; }
+.iv-cella { width: 84px; height: 84px; border: 1.5px solid #9db4d6; display: grid; place-items: center; }
+.iv-cella.strada { background: #FFE8A3; }
+.iv-quadretti.piccoli { width: 150px; max-width: 100%; }
+.iv-op-testo.con-disegno { flex-direction: column; align-items: flex-start; }
+.iv-opzione.giusta { border-color: var(--ok); background: #E3F6EA; }
+.iv-opzione.sbagliata, .iv-opzione.ritenta { border-color: var(--ko); background: #FDE8E8; }
+.iv-casella.giusta { background: #E3F6EA; border-color: var(--ok); }
+.iv-casella.sbagliata, .iv-casella.ritenta { background: #FDE8E8; border-color: var(--ko); }
+.iv-campo.giusta { border-color: var(--ok); background: #E3F6EA; }
+.iv-campo.sbagliata, .iv-campo.ritenta { border-color: var(--ko); background: #FDE8E8; }
+.iv-risposta.controllata .iv-opzione, .iv-risposta.controllata .iv-tasto { cursor: default; }
+.iv-risposta.controllata .iv-tastiera { display: none; }
+.iv-esito-box { display: flex; gap: 14px; align-items: center; margin-top: 16px; border-radius: 16px; padding: 12px 16px; background: var(--giallo-chiaro); animation: compari .4s ease; }
+.iv-esito-box .logo-maestra { width: 70px; height: 70px; flex: none; }
+.iv-esito-box b { font-size: 1.3rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.iv-esito-box p { margin: 6px 0 0; font-weight: 700; font-size: 1.15rem; }
+.iv-esito-box.giusta { background: #E3F6EA; }
+.iv-esito-box.sbagliata { background: #FFF0D6; }
+.iv-esito-box.riprova { background: #FDE8E8; }
+.iv-esito-box .figura { width: 34px; height: 34px; vertical-align: middle; }
+@keyframes compari { from { opacity: 0; } to { opacity: 1; } }
+.iv-num.giusta { background: var(--ok); border-color: var(--ok); color: #fff; }
+.iv-num.sbagliata { background: #F2A33A; border-color: #F2A33A; color: #fff; }
+.iv-cop-figure { display: flex; justify-content: center; align-items: flex-end; gap: 12px; }
+.iv-cop-figure .logo-maestra { width: 160px; height: 160px; }
+.iv-pallini { display: flex; gap: 8px; justify-content: center; margin: 10px 0 18px; flex-wrap: wrap; }
+.iv-pallini span { padding: 6px 12px; border-radius: 999px; font-weight: 800; color: #fff; background: var(--ok); }
+.iv-pallini span.no { background: #F2A33A; } .iv-pallini span.vuoto { background: #bbb; }
+/* Calendario */
+.iv-cal-ritmo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
+.iv-cal-ritmo div { background: var(--carta); border-radius: 16px; box-shadow: var(--ombra); padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; }
+.iv-cal-ritmo .figura { grid-row: span 2; }
+.iv-cal-ritmo span { font-size: .95rem; color: var(--testo-tenue); font-weight: 700; }
+.iv-cal-oggi { display: flex; align-items: center; gap: 16px; background: var(--carta); border: 4px solid var(--giallo); border-radius: var(--raggio); padding: 14px 20px; margin: 0 0 24px; text-decoration: none; color: var(--testo); box-shadow: var(--ombra); }
+.iv-cal-oggi .logo-maestra { width: 72px; height: 72px; }
+.iv-cal-oggi > span:nth-child(2) { flex: 1; display: flex; flex-direction: column; }
+.iv-cal-oggi small { font-weight: 800; color: var(--testo-tenue); }
+.iv-cal-oggi b { font: 800 1.5rem "Baloo 2", sans-serif; }
+.iv-cal-fase { margin-bottom: 28px; }
+.iv-cal-fase h2 { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 4px; color: var(--iv); }
+.iv-cal-fase h2 small { font: 700 1rem "Nunito", sans-serif; color: var(--testo-tenue); }
+.iv-cal-fase-desc { margin: 0 0 12px; font-weight: 600; }
+.iv-cal-sett { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: stretch; margin-bottom: 10px; }
+.iv-cal-data { font-weight: 800; display: flex; align-items: center; color: var(--testo-tenue); }
+.iv-cal-tre { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.iv-cal-sess { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; row-gap: 2px; align-items: center; background: #fff; border-radius: 14px; padding: 10px 12px; text-decoration: none; color: var(--testo); border-left: 8px solid var(--iv); box-shadow: 0 3px 0 rgba(0,0,0,.06); }
+.iv-cal-sess .figura { grid-row: 2 / span 3; width: 52px; height: 52px; }
+.iv-cal-giorno { grid-column: 1 / -1; font-weight: 800; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--testo-tenue); }
+.iv-cal-n { font-size: .8rem; font-weight: 800; color: var(--testo-tenue); }
+.iv-cal-titolo { font: 800 1.05rem "Baloo 2", sans-serif; line-height: 1.15; }
+.iv-cal-amb { font-size: .8rem; font-weight: 700; color: var(--testo-tenue); }
+.iv-cal-fatta, .iv-cal-via, .iv-cal-presto { grid-column: 1 / -1; font-weight: 800; font-size: .9rem; margin-top: 4px; }
+.iv-cal-via { color: var(--iv); } .iv-cal-presto { color: var(--testo-tenue); } .iv-cal-fatta { color: var(--ok); }
+.iv-cal-sess.a-num { border-left-color: #3B7DD8; } .iv-cal-sess.a-spa { border-left-color: #19A35B; }
+.iv-cal-sess.a-dat { border-left-color: #F2A33A; } .iv-cal-sess.a-rel { border-left-color: #A25DDC; }
+.iv-cal-sess.presto { opacity: .6; background: transparent; box-shadow: none; border-style: dashed; border-width: 0 0 0 8px; }
+.iv-cal-sess.fatta { background: #F1FAF4; }
+.iv-cal-sess.prossima { outline: 4px solid var(--giallo); }
+a.iv-cal-sess:hover { transform: translateY(-2px); }
+@media (max-width: 700px) {
+  .iv-cal-sett { grid-template-columns: 1fr; gap: 4px; }
+  .iv-cal-tre, .iv-cal-ritmo { grid-template-columns: 1fr; }
+  .iv-griglia-ogg { grid-template-columns: repeat(var(--col), 56px); }
+  .iv-cella { width: 56px; height: 56px; }
+  .iv-cella .figura.media { width: 44px; height: 44px; }
+  .iv-cal-oggi { flex-wrap: wrap; }
+}
+body.lim.invalsi .iv-esito-box b { font-size: 1.8rem; }
+body.lim.invalsi .iv-esito-box p { font-size: 1.6rem; }
+body.lim.invalsi .iv-esito-box .logo-maestra { width: 100px; height: 100px; }
+body.lim.invalsi .iv-retta { width: 100%; }
+body.lim.invalsi .iv-cella { width: 110px; height: 110px; }
+body.lim.invalsi .iv-griglia-ogg { grid-template-columns: repeat(var(--col), 110px); }
+body.lim.invalsi .iv-cella .figura.media { width: 90px; height: 90px; }
+body.lim.invalsi .iv-quadretti.piccoli { width: 200px; }
+body.lim.invalsi .iv-ins-nome { font-size: 1.6rem; }
+.iv-cal-sess.a-mis { border-left-color: #E5484D; }
+.iv-opzioni.disegni { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.iv-opzioni.disegni .iv-opzione { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+.iv-opzioni.disegni .iv-op-testo.con-disegno { align-items: center; }
+.iv-ins-dentro .figura.media { width: 60px; height: 60px; }
+.iv-figure { font-size: 2.4rem; }
+body.lim.invalsi .iv-figure { font-size: 3.4rem; }
+body.lim.invalsi .iv-pitto-sim { flex-wrap: nowrap; }
+body.lim.invalsi .iv-pitto-sim .figura.piccola { width: 46px; height: 46px; }
+body.lim.invalsi .iv-graf-asse span { font-size: 1.1rem; }
+body.lim.invalsi .iv-graf-area { height: 280px; }
+body.lim.invalsi .iv-graf-etichette span { font-size: 1.2rem; }
+body.lim.invalsi .iv-moneta { width: 76px; height: 76px; } body.lim.invalsi .iv-moneta b { font-size: 2rem; }
+body.lim.invalsi .iv-banconota { width: 130px; height: 72px; } body.lim.invalsi .iv-banconota b { font-size: 2.1rem; }
+body.lim.invalsi .iv-ins-dentro .figura.media { width: 76px; height: 76px; }
+body.lim.invalsi .iv-ins-dentro { max-width: 360px; }
+body.lim.invalsi .iv-tabella { font-size: 1.6rem; }
+body.lim.invalsi .iv-tabella th .figura, body.lim.invalsi .iv-tabella td .figura { width: 44px; height: 44px; }
+.iv-quadretti:not(.piccoli) { max-width: calc(var(--col) * 64px); }
+body.lim.invalsi .iv-quadretti:not(.piccoli) { max-width: min(100%, calc(var(--col) * 96px)); }

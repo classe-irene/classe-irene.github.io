@@ -59,7 +59,10 @@ const prima = () => {
       for (let i = 0; i < 15 && await pg.$('[data-go="avanti"]'); i++) { await pg.evaluate(() => document.querySelector('[data-go="avanti"]')?.click()); await pg.waitForTimeout(400); }
       await clic('[data-go="fine"]', 500);
     }
-    const dette = await pg.evaluate(() => window.__frasi);
+    // Prove INVALSI e allenamento: tutte le domande, anche quelle che non sono sulla prima schermata.
+    const prove = await pg.evaluate(() => { const f = new URLSearchParams(location.search).get("file"); const d = f && window.PACCHETTO?.[f];
+      return d && window.Invalsi?.frasi ? Invalsi.frasi(d).map((t) => Voce.pulisci(t)) : []; });
+    const dette = [...prove, ...await pg.evaluate(() => window.__frasi)];
     let nuove = 0;
     for (const t of [...attr, ...dette]) if (t && !frasi.has(t)) { frasi.set(t, p); nuove++; }
     console.log(`${p}: ${nuove} frasi nuove`);

@@ -1,0 +1,2671 @@
+{
+ "titolo": "Allenamento INVALSI · classe 2ª",
+ "classe": 2,
+ "descrizione": "Tre mini prove a settimana, da novembre ad aprile, per arrivare sereni alla prova di matematica di maggio. Ogni mini prova dura circa 10 minuti, si fa insieme sulla LIM e si corregge subito.",
+ "ritmo": [
+  {
+   "giorno": "Lunedì",
+   "emoji": "🔢",
+   "cosa": "Numeri e problemi"
+  },
+  {
+   "giorno": "Mercoledì",
+   "emoji": "📐",
+   "cosa": "Spazio, figure e misure"
+  },
+  {
+   "giorno": "Venerdì",
+   "emoji": "📊",
+   "cosa": "Grafici, tabelle e ragionamento"
+  }
+ ],
+ "fasi": [
+  {
+   "n": 1,
+   "nome": "Conosciamo la prova",
+   "periodo": "novembre – dicembre",
+   "emoji": "🌱",
+   "descrizione": "3 domande alla volta, senza tempo. Impariamo la crocetta, le lettere A, B, C e a leggere bene il disegno."
+  },
+  {
+   "n": 2,
+   "nome": "Ragioniamo",
+   "periodo": "gennaio – febbraio",
+   "emoji": "🧠",
+   "descrizione": "4 domande alla volta, senza tempo. Problemi con due passaggi, tabelle a doppia entrata, percorsi, vero o falso."
+  },
+  {
+   "n": 3,
+   "nome": "Come alla prova",
+   "periodo": "marzo – metà aprile",
+   "emoji": "⏱️",
+   "descrizione": "5 domande con un tempo da rispettare (10-12 minuti). Domande miste, come nel fascicolo vero."
+  },
+  {
+   "n": 4,
+   "nome": "Prove generali",
+   "periodo": "fine aprile",
+   "emoji": "🏁",
+   "descrizione": "Tre prove complete come quella vera (28 domande, 45 minuti), con la correzione insieme. L'ultima è facile, per arrivare con fiducia."
+  }
+ ],
+ "sessioni": [
+  {
+   "n": 1,
+   "settimana": "9 – 13 novembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "Prima e dopo",
+   "emoji": "🐸",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🐸",
+     "testo": "Quale numero viene subito dopo il 29?",
+     "opzioni": [
+      "28",
+      "30",
+      "39"
+     ],
+     "corretta": 1,
+     "spiegazione": "Dopo il 29 viene il 30. 29 + 1 = 30.",
+     "retta": {
+      "da": 24,
+      "a": 31,
+      "passo": 1,
+      "etichette": [
+       24,
+       25,
+       26,
+       27,
+       28,
+       29
+      ],
+      "vuoto": 30
+     },
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🚂",
+     "testo": "Quale numero viene subito prima del 40?",
+     "opzioni": [
+      "41",
+      "39",
+      "30"
+     ],
+     "corretta": 1,
+     "spiegazione": "Prima del 40 c'è il 39. 40 − 1 = 39.",
+     "retta": {
+      "da": 36,
+      "a": 43,
+      "passo": 1,
+      "etichette": [
+       40,
+       41,
+       42,
+       43
+      ],
+      "vuoto": 39
+     },
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "📏",
+     "testo": "Osserva la retta dei numeri. Quale numero va nel cartellino vuoto?",
+     "opzioni": [
+      "13",
+      "15",
+      "16"
+     ],
+     "corretta": 0,
+     "spiegazione": "Dopo il 12 viene il 13.",
+     "retta": {
+      "da": 10,
+      "a": 17,
+      "passo": 1,
+      "etichette": [
+       10,
+       11,
+       12
+      ],
+      "vuoto": 13
+     },
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "settimana": "9 – 13 novembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "Sopra, sotto, destra, sinistra",
+   "emoji": "🧭",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🐱",
+     "testo": "Che cosa c'è subito sotto il gatto?",
+     "opzioni": [
+      "🍎 la mela",
+      "🐶 il cane",
+      "🐰 il coniglio"
+     ],
+     "corretta": 0,
+     "spiegazione": "Subito sotto il gatto c'è la mela. Il cane è più giù.",
+     "griglia": {
+      "righe": 3,
+      "colonne": 3,
+      "oggetti": [
+       [
+        0,
+        0,
+        "🐱"
+       ],
+       [
+        0,
+        1,
+        "🌞"
+       ],
+       [
+        0,
+        2,
+        "⚽"
+       ],
+       [
+        1,
+        0,
+        "🍎"
+       ],
+       [
+        1,
+        1,
+        "🐰"
+       ],
+       [
+        1,
+        2,
+        "🎈"
+       ],
+       [
+        2,
+        0,
+        "🐶"
+       ],
+       [
+        2,
+        1,
+        "🌸"
+       ],
+       [
+        2,
+        2,
+        "⭐"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🐰",
+     "testo": "Che cosa c'è a destra del coniglio?",
+     "opzioni": [
+      "🍎 la mela",
+      "🎈 il palloncino",
+      "🌸 il fiore"
+     ],
+     "corretta": 1,
+     "spiegazione": "Il coniglio è al centro. A destra, nella stessa riga, c'è il palloncino.",
+     "griglia": {
+      "righe": 3,
+      "colonne": 3,
+      "oggetti": [
+       [
+        0,
+        0,
+        "🐱"
+       ],
+       [
+        0,
+        1,
+        "🌞"
+       ],
+       [
+        0,
+        2,
+        "⚽"
+       ],
+       [
+        1,
+        0,
+        "🍎"
+       ],
+       [
+        1,
+        1,
+        "🐰"
+       ],
+       [
+        1,
+        2,
+        "🎈"
+       ],
+       [
+        2,
+        0,
+        "🐶"
+       ],
+       [
+        2,
+        1,
+        "🌸"
+       ],
+       [
+        2,
+        2,
+        "⭐"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "⚽",
+     "testo": "Dove si trova il pallone?",
+     "opzioni": [
+      "in alto a destra",
+      "in alto a sinistra",
+      "in basso a destra"
+     ],
+     "corretta": 0,
+     "spiegazione": "Il pallone è nella riga in alto, nella casella a destra.",
+     "griglia": {
+      "righe": 3,
+      "colonne": 3,
+      "oggetti": [
+       [
+        0,
+        0,
+        "🐱"
+       ],
+       [
+        0,
+        1,
+        "🌞"
+       ],
+       [
+        0,
+        2,
+        "⚽"
+       ],
+       [
+        1,
+        0,
+        "🍎"
+       ],
+       [
+        1,
+        1,
+        "🐰"
+       ],
+       [
+        1,
+        2,
+        "🎈"
+       ],
+       [
+        2,
+        0,
+        "🐶"
+       ],
+       [
+        2,
+        1,
+        "🌸"
+       ],
+       [
+        2,
+        2,
+        "⭐"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "settimana": "9 – 13 novembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Dati e previsioni",
+   "titolo": "Contiamo con il grafico",
+   "emoji": "📊",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📊",
+     "testo": "Quale animale piace a più bambini?",
+     "opzioni": [
+      "🐶 il cane",
+      "🐱 il gatto",
+      "🐰 il coniglio"
+     ],
+     "corretta": 0,
+     "spiegazione": "Il cane ha la riga più lunga: 6 bambini.",
+     "pittogramma": {
+      "titolo": "🐾 Gli animali preferiti",
+      "legenda": "🙂 = 1 bambino",
+      "simbolo": "🙂",
+      "righe": [
+       {
+        "etichetta": "🐶 Cane",
+        "quanti": 6
+       },
+       {
+        "etichetta": "🐱 Gatto",
+        "quanti": 4
+       },
+       {
+        "etichetta": "🐰 Coniglio",
+        "quanti": 2
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "🐱",
+     "testo": "Quanti bambini preferiscono il gatto?",
+     "risposta": "4",
+     "unita": "bambini",
+     "spiegazione": "Nella riga del gatto ci sono 4 faccine.",
+     "pittogramma": {
+      "titolo": "🐾 Gli animali preferiti",
+      "legenda": "🙂 = 1 bambino",
+      "simbolo": "🙂",
+      "righe": [
+       {
+        "etichetta": "🐶 Cane",
+        "quanti": 6
+       },
+       {
+        "etichetta": "🐱 Gatto",
+        "quanti": 4
+       },
+       {
+        "etichetta": "🐰 Coniglio",
+        "quanti": 2
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🐶",
+     "testo": "Il cane piace a più bambini del gatto. Quanti bambini in più?",
+     "opzioni": [
+      "2",
+      "4",
+      "10"
+     ],
+     "corretta": 0,
+     "spiegazione": "Cane 6, gatto 4. 6 − 4 = 2.",
+     "pittogramma": {
+      "titolo": "🐾 Gli animali preferiti",
+      "legenda": "🙂 = 1 bambino",
+      "simbolo": "🙂",
+      "righe": [
+       {
+        "etichetta": "🐶 Cane",
+        "quanti": 6
+       },
+       {
+        "etichetta": "🐱 Gatto",
+        "quanti": 4
+       },
+       {
+        "etichetta": "🐰 Coniglio",
+        "quanti": 2
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "settimana": "16 – 20 novembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "Decine e unità",
+   "emoji": "📦",
+   "domande": [
+    {
+     "tipo": "numero",
+     "immagine": "🖍️",
+     "testo": "In ogni scatola ci sono 10 pastelli. Ci sono 3 scatole e 4 pastelli fuori. Quanti pastelli in tutto?",
+     "risposta": "34",
+     "unita": "pastelli",
+     "spiegazione": "3 scatole sono 3 decine: 30. Più 4: 34.",
+     "insiemi": [
+      {
+       "etichetta": "10",
+       "figure": "📦",
+       "piccole": true
+      },
+      {
+       "etichetta": "10",
+       "figure": "📦",
+       "piccole": true
+      },
+      {
+       "etichetta": "10",
+       "figure": "📦",
+       "piccole": true
+      },
+      {
+       "etichetta": "4",
+       "figure": "🖍️🖍️🖍️🖍️",
+       "piccole": true
+      }
+     ],
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🔟",
+     "testo": "Nel numero 47, quante sono le decine?",
+     "opzioni": [
+      "4",
+      "7",
+      "47"
+     ],
+     "corretta": 0,
+     "spiegazione": "47 = 4 decine e 7 unità.",
+     "figure": "47",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "➕",
+     "testo": "Al numero 23 aggiungi 1 decina. Quale numero ottieni?",
+     "opzioni": [
+      "24",
+      "33",
+      "13"
+     ],
+     "corretta": 1,
+     "spiegazione": "1 decina è 10. 23 + 10 = 33.",
+     "figure": "23 + 10",
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "settimana": "16 – 20 novembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "Le figure",
+   "emoji": "🔺",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "⭕",
+     "testo": "Quale di queste cose ha la forma di un cerchio?",
+     "opzioni": [
+      "🍕 la fetta di pizza",
+      "🕒 l'orologio",
+      "📘 il libro"
+     ],
+     "corretta": 1,
+     "spiegazione": "L'orologio è rotondo: ha la forma del cerchio.",
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🔺",
+     "testo": "Quanti lati ha il triangolo?",
+     "opzioni": [
+      "3",
+      "4",
+      "5"
+     ],
+     "corretta": 0,
+     "spiegazione": "Il triangolo ha 3 lati: tri vuol dire tre.",
+     "figure": "🔺",
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "🟩",
+     "testo": "Quanti quadretti colorati ci sono nella figura?",
+     "risposta": "6",
+     "unita": "quadretti",
+     "spiegazione": "Conta uno alla volta: sono 6 quadretti.",
+     "quadretti": {
+      "righe": 3,
+      "colonne": 5,
+      "celle": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "settimana": "16 – 20 novembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Dati e previsioni",
+   "titolo": "Certo, possibile, impossibile",
+   "emoji": "🎲",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🙈",
+     "testo": "Nel sacchetto ci sono solo palline rosse. Prendi una pallina senza guardare. Quale frase è vera?",
+     "opzioni": [
+      "È CERTO: la pallina è rossa",
+      "È POSSIBILE: la pallina è blu",
+      "È IMPOSSIBILE: la pallina è rossa"
+     ],
+     "corretta": 0,
+     "spiegazione": "Ci sono solo palline rosse: è certo che prendi una pallina rossa.",
+     "insiemi": [
+      {
+       "etichetta": "Il sacchetto",
+       "figure": "🔴🔴🔴🔴🔴"
+      }
+     ],
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🐱",
+     "testo": "Un gatto vola nel cielo come un uccellino. Questo è…",
+     "opzioni": [
+      "certo",
+      "possibile",
+      "impossibile"
+     ],
+     "corretta": 2,
+     "spiegazione": "I gatti non hanno le ali: è impossibile che volino.",
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🙈",
+     "testo": "Nel sacchetto ci sono palline rosse e palline blu. Prendi una pallina senza guardare. Che sia rossa è…",
+     "opzioni": [
+      "certo",
+      "possibile",
+      "impossibile"
+     ],
+     "corretta": 1,
+     "spiegazione": "Ci sono palline rosse e blu: la pallina può essere rossa, ma anche blu. È possibile.",
+     "insiemi": [
+      {
+       "etichetta": "Il sacchetto",
+       "figure": "🔴🔴🔵🔵🔵"
+      }
+     ],
+     "ambito": "Dati e previsioni"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "settimana": "23 – 27 novembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "Più e meno fino a 20",
+   "emoji": "➕",
+   "domande": [
+    {
+     "tipo": "numero",
+     "immagine": "🐚",
+     "testo": "Marta ha 9 conchiglie. Ne trova altre 4. Quante conchiglie ha adesso?",
+     "risposta": "13",
+     "unita": "conchiglie",
+     "spiegazione": "9 + 4 = 13.",
+     "figure": "🐚🐚🐚🐚🐚🐚🐚🐚🐚 + 🐚🐚🐚🐚",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🌳",
+     "testo": "Sull'albero ci sono 15 mele. Ne cadono 7. Quante mele restano sull'albero?",
+     "opzioni": [
+      "8",
+      "22",
+      "7"
+     ],
+     "corretta": 0,
+     "spiegazione": "15 − 7 = 8.",
+     "figure": "🍎🍎🍎🍎🍎 🍎🍎🍎🍎🍎 🍎🍎🍎🍎🍎",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🧩",
+     "testo": "Quale numero manca?",
+     "opzioni": [
+      "6",
+      "14",
+      "5"
+     ],
+     "corretta": 0,
+     "spiegazione": "6 + 4 = 10.",
+     "figure": "❓ + 4 = 10",
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "settimana": "23 – 27 novembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "In fila!",
+   "emoji": "🚶",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🚶",
+     "testo": "I bambini sono in fila. Anna è la prima. Chi è il terzo?",
+     "opzioni": [
+      "Bruno",
+      "Carla",
+      "Dario"
+     ],
+     "corretta": 1,
+     "spiegazione": "Contiamo: 1 Anna, 2 Bruno, 3 Carla.",
+     "insiemi": [
+      {
+       "etichetta": "Anna",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Bruno",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Carla",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Dario",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Elsa",
+       "figure": "👧",
+       "cornice": false
+      }
+     ],
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "👀",
+     "testo": "Chi c'è tra Bruno e Dario?",
+     "opzioni": [
+      "Anna",
+      "Carla",
+      "Elsa"
+     ],
+     "corretta": 1,
+     "spiegazione": "Tra Bruno e Dario c'è Carla.",
+     "insiemi": [
+      {
+       "etichetta": "Anna",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Bruno",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Carla",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Dario",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Elsa",
+       "figure": "👧",
+       "cornice": false
+      }
+     ],
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🔢",
+     "testo": "Elsa è l'ultima della fila. Quanti bambini ci sono prima di Elsa?",
+     "opzioni": [
+      "4",
+      "5",
+      "3"
+     ],
+     "corretta": 0,
+     "spiegazione": "Prima di Elsa ci sono Anna, Bruno, Carla e Dario: 4 bambini.",
+     "insiemi": [
+      {
+       "etichetta": "Anna",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Bruno",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Carla",
+       "figure": "👧",
+       "cornice": false
+      },
+      {
+       "etichetta": "Dario",
+       "figure": "👦",
+       "cornice": false
+      },
+      {
+       "etichetta": "Elsa",
+       "figure": "👧",
+       "cornice": false
+      }
+     ],
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "settimana": "23 – 27 novembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Dati e previsioni",
+   "titolo": "Leggiamo la tabella",
+   "emoji": "📋",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📋",
+     "testo": "La tabella dice che cosa hanno mangiato i bambini a merenda. Che cosa ha mangiato Sara?",
+     "opzioni": [
+      "la mela e la banana",
+      "la banana e la pera",
+      "solo la pera"
+     ],
+     "corretta": 1,
+     "spiegazione": "Nella riga di Sara ci sono le X sotto la banana e sotto la pera.",
+     "tabella": {
+      "intestazioni": [
+       "",
+       "🍎 Mela",
+       "🍌 Banana",
+       "🍐 Pera"
+      ],
+      "righe": [
+       [
+        "Luca",
+        "X",
+        "",
+        ""
+       ],
+       [
+        "Sara",
+        "",
+        "X",
+        "X"
+       ],
+       [
+        "Tommaso",
+        "X",
+        "X",
+        ""
+       ]
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "🍎",
+     "testo": "Quanti bambini hanno mangiato la mela?",
+     "risposta": "2",
+     "unita": "bambini",
+     "spiegazione": "Sotto la mela ci sono 2 X: Luca e Tommaso.",
+     "tabella": {
+      "intestazioni": [
+       "",
+       "🍎 Mela",
+       "🍌 Banana",
+       "🍐 Pera"
+      ],
+      "righe": [
+       [
+        "Luca",
+        "X",
+        "",
+        ""
+       ],
+       [
+        "Sara",
+        "",
+        "X",
+        "X"
+       ],
+       [
+        "Tommaso",
+        "X",
+        "X",
+        ""
+       ]
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "vf",
+     "immagine": "🤔",
+     "testo": "Leggi le frasi. Sono vere o false?",
+     "affermazioni": [
+      {
+       "testo": "Luca ha mangiato la pera.",
+       "vera": false
+      },
+      {
+       "testo": "Tommaso ha mangiato due frutti.",
+       "vera": true
+      }
+     ],
+     "spiegazione": "Luca ha mangiato solo la mela. Tommaso la mela e la banana: due frutti.",
+     "tabella": {
+      "intestazioni": [
+       "",
+       "🍎 Mela",
+       "🍌 Banana",
+       "🍐 Pera"
+      ],
+      "righe": [
+       [
+        "Luca",
+        "X",
+        "",
+        ""
+       ],
+       [
+        "Sara",
+        "",
+        "X",
+        "X"
+       ],
+       [
+        "Tommaso",
+        "X",
+        "X",
+        ""
+       ]
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "settimana": "30 novembre – 4 dicembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "Il doppio e la metà",
+   "emoji": "✌️",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🍪",
+     "testo": "Quanto fa il doppio di 4?",
+     "opzioni": [
+      "6",
+      "8",
+      "44"
+     ],
+     "corretta": 1,
+     "spiegazione": "Doppio vuol dire due volte: 4 + 4 = 8.",
+     "figure": "🍪🍪🍪🍪 🍪🍪🍪🍪",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🍓",
+     "testo": "Quanto fa la metà di 10?",
+     "opzioni": [
+      "5",
+      "20",
+      "2"
+     ],
+     "corretta": 0,
+     "spiegazione": "Metà vuol dire dividere in due parti uguali: 5 e 5.",
+     "figure": "🍓🍓🍓🍓🍓 🍓🍓🍓🍓🍓",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "✌️",
+     "testo": "Il doppio di 3 è uguale a…",
+     "opzioni": [
+      "3 + 3",
+      "3 + 2",
+      "3 + 1"
+     ],
+     "corretta": 0,
+     "spiegazione": "Il doppio di 3 è 3 + 3 = 6.",
+     "figure": "🧦🧦🧦 🧦🧦🧦",
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "settimana": "30 novembre – 4 dicembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "Figure sui quadretti",
+   "emoji": "🟩",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🔍",
+     "testo": "Guarda la figura verde. Quale figura è uguale?",
+     "opzioni": [
+      {
+       "testo": "Figura A",
+       "quadretti": {
+        "righe": 2,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura B",
+       "quadretti": {
+        "righe": 2,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura C",
+       "quadretti": {
+        "righe": 2,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          2
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ]
+        ]
+       }
+      }
+     ],
+     "corretta": 1,
+     "spiegazione": "La figura B ha gli stessi 4 quadretti, nello stesso posto.",
+     "quadretti": {
+      "righe": 2,
+      "colonne": 3,
+      "celle": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "🟩",
+     "testo": "Quanti quadretti ci sono in questo rettangolo?",
+     "risposta": "8",
+     "unita": "quadretti",
+     "spiegazione": "2 righe da 4 quadretti: 4 + 4 = 8.",
+     "quadretti": {
+      "righe": 2,
+      "colonne": 4,
+      "celle": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🤔",
+     "testo": "Quale figura ha più quadretti colorati?",
+     "opzioni": [
+      {
+       "testo": "Figura A",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          1
+         ],
+         [
+          2,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura B",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          1
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura C",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          2,
+          0
+         ],
+         [
+          2,
+          1
+         ]
+        ]
+       }
+      }
+     ],
+     "corretta": 2,
+     "spiegazione": "A ha 5 quadretti, B ne ha 4, C ne ha 6. La C ne ha di più.",
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "settimana": "30 novembre – 4 dicembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Dati e previsioni",
+   "titolo": "Il grafico a colonne",
+   "emoji": "📊",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📊",
+     "testo": "Chi ha raccolto più figurine?",
+     "opzioni": [
+      "Ada",
+      "Bea",
+      "Ciro"
+     ],
+     "corretta": 1,
+     "spiegazione": "La colonna di Bea è la più alta: 9 figurine.",
+     "grafico": {
+      "titolo": "📒 Le figurine raccolte",
+      "massimo": 10,
+      "passo": 1,
+      "barre": [
+       {
+        "etichetta": "Ada",
+        "emoji": "👧",
+        "valore": 6
+       },
+       {
+        "etichetta": "Bea",
+        "emoji": "👧",
+        "valore": 9
+       },
+       {
+        "etichetta": "Ciro",
+        "emoji": "👦",
+        "valore": 3
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "👧",
+     "testo": "Quante figurine ha raccolto Ada?",
+     "risposta": "6",
+     "unita": "figurine",
+     "spiegazione": "La colonna di Ada arriva al 6.",
+     "grafico": {
+      "titolo": "📒 Le figurine raccolte",
+      "massimo": 10,
+      "passo": 1,
+      "barre": [
+       {
+        "etichetta": "Ada",
+        "emoji": "👧",
+        "valore": 6
+       },
+       {
+        "etichetta": "Bea",
+        "emoji": "👧",
+        "valore": 9
+       },
+       {
+        "etichetta": "Ciro",
+        "emoji": "👦",
+        "valore": 3
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🔎",
+     "testo": "Quanti bambini hanno più di 5 figurine?",
+     "opzioni": [
+      "Un solo bambino",
+      "Due bambini",
+      "Tutti e tre"
+     ],
+     "corretta": 1,
+     "spiegazione": "Ada ne ha 6 e Bea 9: sono più di 5. Ciro ne ha 3.",
+     "grafico": {
+      "titolo": "📒 Le figurine raccolte",
+      "massimo": 10,
+      "passo": 1,
+      "barre": [
+       {
+        "etichetta": "Ada",
+        "emoji": "👧",
+        "valore": 6
+       },
+       {
+        "etichetta": "Bea",
+        "emoji": "👧",
+        "valore": 9
+       },
+       {
+        "etichetta": "Ciro",
+        "emoji": "👦",
+        "valore": 3
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "settimana": "7 – 11 dicembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "La retta dei numeri",
+   "emoji": "📏",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📏",
+     "testo": "Quale numero va nel cartellino vuoto?",
+     "opzioni": [
+      "33",
+      "32",
+      "34"
+     ],
+     "corretta": 0,
+     "spiegazione": "Dopo il 30 contiamo: 31, 32, 33.",
+     "retta": {
+      "da": 30,
+      "a": 40,
+      "passo": 1,
+      "etichette": [
+       30,
+       35,
+       40
+      ],
+      "vuoto": 33
+     },
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🦘",
+     "testo": "Attenzione: sulla retta i numeri vanno di 2 in 2. Quale numero va nel cartellino?",
+     "opzioni": [
+      "15",
+      "16",
+      "18"
+     ],
+     "corretta": 1,
+     "spiegazione": "Di 2 in 2: 10, 12, 14, 16.",
+     "retta": {
+      "da": 10,
+      "a": 22,
+      "passo": 2,
+      "etichette": [
+       10,
+       12,
+       14,
+       20,
+       22
+      ],
+      "vuoto": 16
+     },
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🔢",
+     "testo": "Quale numero sta tra il 46 e il 48?",
+     "opzioni": [
+      "45",
+      "47",
+      "49"
+     ],
+     "corretta": 1,
+     "spiegazione": "46, 47, 48: in mezzo c'è il 47.",
+     "retta": {
+      "da": 44,
+      "a": 50,
+      "passo": 1,
+      "etichette": [
+       44,
+       45,
+       46,
+       48,
+       49,
+       50
+      ],
+      "vuoto": 47
+     },
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "settimana": "7 – 11 dicembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "Più lungo, più corto, passi",
+   "emoji": "🐰",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📏",
+     "testo": "Quale striscia è la più lunga?",
+     "opzioni": [
+      {
+       "testo": "Striscia A",
+       "quadretti": {
+        "righe": 1,
+        "colonne": 8,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          3
+         ],
+         [
+          0,
+          4
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Striscia B",
+       "quadretti": {
+        "righe": 1,
+        "colonne": 8,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          3
+         ],
+         [
+          0,
+          4
+         ],
+         [
+          0,
+          5
+         ],
+         [
+          0,
+          6
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Striscia C",
+       "quadretti": {
+        "righe": 1,
+        "colonne": 8,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          0,
+          3
+         ]
+        ]
+       }
+      }
+     ],
+     "corretta": 1,
+     "spiegazione": "La striscia B ha 7 quadretti: è la più lunga.",
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "numero",
+     "immagine": "🐰",
+     "testo": "Il coniglio va verso la carota. Ogni casella è un passo. Quanti passi fa?",
+     "risposta": "5",
+     "unita": "passi",
+     "spiegazione": "Contiamo le caselle dopo il coniglio: 1, 2, 3, 4, 5.",
+     "griglia": {
+      "righe": 1,
+      "colonne": 6,
+      "oggetti": [
+       [
+        0,
+        0,
+        "🐰"
+       ],
+       [
+        0,
+        5,
+        "🥕"
+       ]
+      ],
+      "percorso": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        0,
+        5
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🏰",
+     "testo": "Guarda le tre torri. Quale torre è la più bassa?",
+     "opzioni": [
+      "la torre rossa",
+      "la torre blu",
+      "la torre verde"
+     ],
+     "corretta": 1,
+     "spiegazione": "La torre blu ha solo 3 piani: è la più bassa.",
+     "quadretti": {
+      "righe": 6,
+      "colonne": 5,
+      "celle": [
+       [
+        1,
+        0,
+        "#E5484D"
+       ],
+       [
+        2,
+        0,
+        "#E5484D"
+       ],
+       [
+        3,
+        0,
+        "#E5484D"
+       ],
+       [
+        4,
+        0,
+        "#E5484D"
+       ],
+       [
+        5,
+        0,
+        "#E5484D"
+       ],
+       [
+        3,
+        2,
+        "#3B7DD8"
+       ],
+       [
+        4,
+        2,
+        "#3B7DD8"
+       ],
+       [
+        5,
+        2,
+        "#3B7DD8"
+       ],
+       [
+        0,
+        4,
+        "#19A35B"
+       ],
+       [
+        1,
+        4,
+        "#19A35B"
+       ],
+       [
+        2,
+        4,
+        "#19A35B"
+       ],
+       [
+        3,
+        4,
+        "#19A35B"
+       ],
+       [
+        4,
+        4,
+        "#19A35B"
+       ],
+       [
+        5,
+        4,
+        "#19A35B"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "settimana": "7 – 11 dicembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Relazioni e funzioni",
+   "titolo": "Indovina chi!",
+   "emoji": "🕵️",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "📏",
+     "testo": "Anna è più alta di Bea. Bea è più alta di Carlo. Chi è più alto di tutti?",
+     "opzioni": [
+      "Anna",
+      "Bea",
+      "Carlo"
+     ],
+     "corretta": 0,
+     "spiegazione": "Anna è più alta di Bea, e Bea è più alta di Carlo. Allora Anna è la più alta.",
+     "ambito": "Relazioni e funzioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🕵️",
+     "testo": "Indovina chi è: ha il pallone, ma non ha lo zaino.",
+     "opzioni": [
+      "Luca",
+      "Sofia",
+      "Marco"
+     ],
+     "corretta": 2,
+     "spiegazione": "Marco ha il pallone e il palloncino. Non ha lo zaino.",
+     "insiemi": [
+      {
+       "etichetta": "Luca",
+       "figure": "🎒⚽"
+      },
+      {
+       "etichetta": "Sofia",
+       "figure": "🎒🎈"
+      },
+      {
+       "etichetta": "Marco",
+       "figure": "⚽🎈"
+      }
+     ],
+     "ambito": "Relazioni e funzioni"
+    },
+    {
+     "tipo": "vf",
+     "immagine": "🧸",
+     "testo": "Guarda gli animali. Le frasi sono vere o false?",
+     "affermazioni": [
+      {
+       "testo": "Due animali hanno il fiocco.",
+       "vera": true
+      },
+      {
+       "testo": "Solo Micio ha il cappello.",
+       "vera": true
+      },
+      {
+       "testo": "Bubu ha il cappello.",
+       "vera": false
+      }
+     ],
+     "spiegazione": "Fido e Bubu hanno il fiocco. Il cappello ce l'ha solo Micio.",
+     "insiemi": [
+      {
+       "etichetta": "Fido",
+       "figure": "🐶🎀"
+      },
+      {
+       "etichetta": "Micio",
+       "figure": "🐱🎩"
+      },
+      {
+       "etichetta": "Bubu",
+       "figure": "🐻🎀"
+      }
+     ],
+     "ambito": "Relazioni e funzioni"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "settimana": "14 – 18 dicembre",
+   "giorno": "Lunedì",
+   "fase": 1,
+   "ambito": "Numeri",
+   "titolo": "Gli euro",
+   "emoji": "💶",
+   "domande": [
+    {
+     "tipo": "numero",
+     "immagine": "👛",
+     "testo": "Quanti euro ci sono nel borsellino?",
+     "risposta": "5",
+     "unita": "euro",
+     "spiegazione": "2 + 2 + 1 = 5 euro.",
+     "insiemi": [
+      {
+       "etichetta": "👛 Il borsellino",
+       "monete": [
+        2,
+        2,
+        1
+       ]
+      }
+     ],
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "💶",
+     "testo": "Chi ha più euro nel borsellino?",
+     "opzioni": [
+      "Ada",
+      "Bea",
+      "Ciro"
+     ],
+     "corretta": 1,
+     "spiegazione": "Ada ha 6 euro, Bea 8 euro, Ciro 6 euro. Bea ne ha di più.",
+     "insiemi": [
+      {
+       "etichetta": "Ada",
+       "monete": [
+        5,
+        1
+       ]
+      },
+      {
+       "etichetta": "Bea",
+       "monete": [
+        2,
+        2,
+        2,
+        1,
+        1
+       ]
+      },
+      {
+       "etichetta": "Ciro",
+       "monete": [
+        2,
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🍦",
+     "testo": "Un gelato costa 3 euro. Paghi con 5 euro. Quanto ricevi di resto?",
+     "opzioni": [
+      "2 euro",
+      "3 euro",
+      "8 euro"
+     ],
+     "corretta": 0,
+     "spiegazione": "5 − 3 = 2. Il resto è 2 euro.",
+     "insiemi": [
+      {
+       "etichetta": "Paghi con",
+       "monete": [
+        5
+       ]
+      }
+     ],
+     "ambito": "Numeri"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "settimana": "14 – 18 dicembre",
+   "giorno": "Mercoledì",
+   "fase": 1,
+   "ambito": "Spazio e figure",
+   "titolo": "Ripasso: figure e posizioni",
+   "emoji": "🧩",
+   "domande": [
+    {
+     "tipo": "scelta",
+     "immagine": "🚲",
+     "testo": "Che cosa c'è sotto la bicicletta?",
+     "opzioni": [
+      "🚂 il treno",
+      "✈️ l'aereo",
+      "🚌 l'autobus"
+     ],
+     "corretta": 0,
+     "spiegazione": "La bicicletta è in alto, al centro. Sotto c'è il treno.",
+     "griglia": {
+      "righe": 2,
+      "colonne": 3,
+      "oggetti": [
+       [
+        0,
+        0,
+        "🚗"
+       ],
+       [
+        0,
+        1,
+        "🚲"
+       ],
+       [
+        0,
+        2,
+        "🚌"
+       ],
+       [
+        1,
+        0,
+        "✈️"
+       ],
+       [
+        1,
+        1,
+        "🚂"
+       ],
+       [
+        1,
+        2,
+        "🚀"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "📐",
+     "testo": "Quanti lati ha il rettangolo?",
+     "opzioni": [
+      "4",
+      "3",
+      "2"
+     ],
+     "corretta": 0,
+     "spiegazione": "Il rettangolo ha 4 lati: 2 lunghi e 2 corti.",
+     "quadretti": {
+      "righe": 2,
+      "colonne": 4,
+      "celle": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🟦",
+     "testo": "Quale figura è un quadrato?",
+     "opzioni": [
+      {
+       "testo": "Figura A",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura B",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          0,
+          1
+         ],
+         [
+          0,
+          2
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ],
+         [
+          1,
+          2
+         ]
+        ]
+       }
+      },
+      {
+       "testo": "Figura C",
+       "quadretti": {
+        "righe": 3,
+        "colonne": 3,
+        "celle": [
+         [
+          0,
+          0
+         ],
+         [
+          1,
+          0
+         ],
+         [
+          1,
+          1
+         ]
+        ]
+       }
+      }
+     ],
+     "corretta": 0,
+     "spiegazione": "Il quadrato ha 4 lati uguali: la figura A è 2 quadretti per 2 quadretti.",
+     "ambito": "Spazio e figure"
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "settimana": "14 – 18 dicembre",
+   "giorno": "Venerdì",
+   "fase": 1,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova di Natale",
+   "emoji": "🎄",
+   "domande": [
+    {
+     "tipo": "numero",
+     "immagine": "🎅",
+     "testo": "Babbo Natale ha 6 regali nel sacco. Ne aggiunge altri 7. Quanti regali ha adesso?",
+     "risposta": "13",
+     "unita": "regali",
+     "spiegazione": "6 + 7 = 13.",
+     "figure": "🎁🎁🎁🎁🎁🎁 + 🎁🎁🎁🎁🎁🎁🎁",
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "📏",
+     "testo": "Quale numero va nel cartellino vuoto?",
+     "opzioni": [
+      "56",
+      "57",
+      "58"
+     ],
+     "corretta": 1,
+     "spiegazione": "Dopo il 55 contiamo: 56, 57.",
+     "retta": {
+      "da": 50,
+      "a": 60,
+      "passo": 1,
+      "etichette": [
+       50,
+       55,
+       60
+      ],
+      "vuoto": 57
+     },
+     "ambito": "Numeri"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🎄",
+     "testo": "Che cosa c'è a sinistra dell'albero?",
+     "opzioni": [
+      "🎅 Babbo Natale",
+      "🦌 la renna",
+      "🎁 il regalo"
+     ],
+     "corretta": 0,
+     "spiegazione": "L'albero è al centro. A sinistra, nella stessa riga, c'è Babbo Natale.",
+     "griglia": {
+      "righe": 3,
+      "colonne": 3,
+      "oggetti": [
+       [
+        0,
+        1,
+        "⭐"
+       ],
+       [
+        1,
+        0,
+        "🎅"
+       ],
+       [
+        1,
+        1,
+        "🎄"
+       ],
+       [
+        1,
+        2,
+        "🦌"
+       ],
+       [
+        2,
+        1,
+        "🎁"
+       ]
+      ]
+     },
+     "ambito": "Spazio e figure"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🍪",
+     "testo": "Chi ha fatto più biscotti?",
+     "opzioni": [
+      "👵 la nonna",
+      "👩 la mamma",
+      "👦 Leo"
+     ],
+     "corretta": 0,
+     "spiegazione": "La riga della nonna è la più lunga: 6 biscotti.",
+     "pittogramma": {
+      "titolo": "🎄 I biscotti di Natale",
+      "legenda": "🍪 = 1 biscotto",
+      "simbolo": "🍪",
+      "righe": [
+       {
+        "etichetta": "👵 Nonna",
+        "quanti": 6
+       },
+       {
+        "etichetta": "👩 Mamma",
+        "quanti": 4
+       },
+       {
+        "etichetta": "👦 Leo",
+        "quanti": 3
+       }
+      ]
+     },
+     "ambito": "Dati e previsioni"
+    },
+    {
+     "tipo": "scelta",
+     "immagine": "🙈",
+     "testo": "Nella scatola ci sono solo stelline. Prendi un addobbo senza guardare. Quale frase è vera?",
+     "opzioni": [
+      "È CERTO: prendi una stellina",
+      "È POSSIBILE: prendi una pallina",
+      "È IMPOSSIBILE: prendi una stellina"
+     ],
+     "corretta": 0,
+     "spiegazione": "Nella scatola ci sono solo stelline: è certo che prendi una stellina.",
+     "insiemi": [
+      {
+       "etichetta": "La scatola",
+       "figure": "⭐⭐⭐⭐⭐"
+      }
+     ],
+     "ambito": "Dati e previsioni"
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "settimana": "11 – 15 gennaio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Numeri fino a 100: più grande, più piccolo",
+   "emoji": "⚖️"
+  },
+  {
+   "n": 20,
+   "settimana": "11 – 15 gennaio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Le figure simmetriche",
+   "emoji": "🦋"
+  },
+  {
+   "n": 21,
+   "settimana": "11 – 15 gennaio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Dati e previsioni",
+   "titolo": "Grafici: chi ha di più?",
+   "emoji": "📊"
+  },
+  {
+   "n": 22,
+   "settimana": "18 – 22 gennaio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Problemi con due domande",
+   "emoji": "🧠"
+  },
+  {
+   "n": 23,
+   "settimana": "18 – 22 gennaio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Percorsi e passi del robot",
+   "emoji": "🤖"
+  },
+  {
+   "n": 24,
+   "settimana": "18 – 22 gennaio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Dati e previsioni",
+   "titolo": "Tabelle a doppia entrata",
+   "emoji": "📋"
+  },
+  {
+   "n": 25,
+   "settimana": "25 – 29 gennaio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Il doppio e il triplo",
+   "emoji": "✖️"
+  },
+  {
+   "n": 26,
+   "settimana": "25 – 29 gennaio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Tessere e figure",
+   "emoji": "🔷"
+  },
+  {
+   "n": 27,
+   "settimana": "25 – 29 gennaio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Dati e previsioni",
+   "titolo": "Certo, possibile, impossibile",
+   "emoji": "🎲"
+  },
+  {
+   "n": 28,
+   "settimana": "1 – 5 febbraio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Il numero nascosto (uguaglianze)",
+   "emoji": "🧩"
+  },
+  {
+   "n": 29,
+   "settimana": "1 – 5 febbraio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Frecce e direzioni",
+   "emoji": "➡️"
+  },
+  {
+   "n": 30,
+   "settimana": "1 – 5 febbraio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Relazioni e funzioni",
+   "titolo": "Vero o falso? Osserva bene",
+   "emoji": "🧸"
+  },
+  {
+   "n": 31,
+   "settimana": "8 – 12 febbraio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Monete e borsellini",
+   "emoji": "👛"
+  },
+  {
+   "n": 32,
+   "settimana": "8 – 12 febbraio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Quanti ne riempio? (misure)",
+   "emoji": "🥛"
+  },
+  {
+   "n": 33,
+   "settimana": "8 – 12 febbraio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Relazioni e funzioni",
+   "titolo": "Ragionare con gli indizi",
+   "emoji": "🕵️"
+  },
+  {
+   "n": 34,
+   "settimana": "15 – 19 febbraio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Aggiungo decine e unità",
+   "emoji": "🔟"
+  },
+  {
+   "n": 35,
+   "settimana": "15 – 19 febbraio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Unisco i punti: linee e figure",
+   "emoji": "✏️"
+  },
+  {
+   "n": 36,
+   "settimana": "15 – 19 febbraio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Dati e previsioni",
+   "titolo": "Grafico con due colonne",
+   "emoji": "📊"
+  },
+  {
+   "n": 37,
+   "settimana": "22 – 26 febbraio",
+   "giorno": "Lunedì",
+   "fase": 2,
+   "ambito": "Numeri",
+   "titolo": "Quanti ne servono? (materiale)",
+   "emoji": "🧵"
+  },
+  {
+   "n": 38,
+   "settimana": "22 – 26 febbraio",
+   "giorno": "Mercoledì",
+   "fase": 2,
+   "ambito": "Spazio e figure",
+   "titolo": "Strisce e lunghezze",
+   "emoji": "📏"
+  },
+  {
+   "n": 39,
+   "settimana": "22 – 26 febbraio",
+   "giorno": "Venerdì",
+   "fase": 2,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova di Carnevale",
+   "emoji": "🎭"
+  },
+  {
+   "n": 40,
+   "settimana": "1 – 5 marzo",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Numeri oltre il 100",
+   "emoji": "🏨",
+   "minuti": 10
+  },
+  {
+   "n": 41,
+   "settimana": "1 – 5 marzo",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "L'orologio: ore e mezz'ore",
+   "emoji": "🕒",
+   "minuti": 10
+  },
+  {
+   "n": 42,
+   "settimana": "1 – 5 marzo",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Dati e previsioni",
+   "titolo": "Scatole e palline: dove conviene pescare?",
+   "emoji": "⚫",
+   "minuti": 10
+  },
+  {
+   "n": 43,
+   "settimana": "8 – 12 marzo",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Tabelle con i prezzi",
+   "emoji": "🥤",
+   "minuti": 10
+  },
+  {
+   "n": 44,
+   "settimana": "8 – 12 marzo",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "Vista dall'alto",
+   "emoji": "🧱",
+   "minuti": 10
+  },
+  {
+   "n": 45,
+   "settimana": "8 – 12 marzo",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Dati e previsioni",
+   "titolo": "Che cosa è CERTAMENTE vero?",
+   "emoji": "🍬",
+   "minuti": 10
+  },
+  {
+   "n": 46,
+   "settimana": "15 – 19 marzo",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Problemi con le metà",
+   "emoji": "🍋",
+   "minuti": 10
+  },
+  {
+   "n": 47,
+   "settimana": "15 – 19 marzo",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "Pezzi e disegni",
+   "emoji": "🧩",
+   "minuti": 10
+  },
+  {
+   "n": 48,
+   "settimana": "15 – 19 marzo",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova mista A",
+   "emoji": "🎯",
+   "minuti": 12
+  },
+  {
+   "n": 49,
+   "settimana": "22 – 26 marzo",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Pacchi e confezioni",
+   "emoji": "🖊️",
+   "minuti": 10
+  },
+  {
+   "n": 50,
+   "settimana": "22 – 26 marzo",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "Copia la figura sui puntini",
+   "emoji": "🔵",
+   "minuti": 10
+  },
+  {
+   "n": 51,
+   "settimana": "22 – 26 marzo",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Dati e previsioni",
+   "titolo": "Grafici e tabelle",
+   "emoji": "📊",
+   "minuti": 10
+  },
+  {
+   "n": 52,
+   "settimana": "6 – 9 aprile",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Doppio, triplo, metà: ripasso",
+   "emoji": "✌️",
+   "minuti": 10
+  },
+  {
+   "n": 53,
+   "settimana": "6 – 9 aprile",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "L'orologio: 10 minuti dopo",
+   "emoji": "⏰",
+   "minuti": 10
+  },
+  {
+   "n": 54,
+   "settimana": "6 – 9 aprile",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova mista B",
+   "emoji": "🎯",
+   "minuti": 12
+  },
+  {
+   "n": 55,
+   "settimana": "12 – 16 aprile",
+   "giorno": "Lunedì",
+   "fase": 3,
+   "ambito": "Numeri",
+   "titolo": "Problemi in due passaggi",
+   "emoji": "🧠",
+   "minuti": 10
+  },
+  {
+   "n": 56,
+   "settimana": "12 – 16 aprile",
+   "giorno": "Mercoledì",
+   "fase": 3,
+   "ambito": "Spazio e figure",
+   "titolo": "Figure e posizioni: ripasso",
+   "emoji": "🧭",
+   "minuti": 10
+  },
+  {
+   "n": 57,
+   "settimana": "12 – 16 aprile",
+   "giorno": "Venerdì",
+   "fase": 3,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova mista C",
+   "emoji": "🎯",
+   "minuti": 12
+  },
+  {
+   "n": 58,
+   "settimana": "19 – 23 aprile",
+   "giorno": "Lunedì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Prova generale 1 (come quella vera)",
+   "emoji": "📝"
+  },
+  {
+   "n": 59,
+   "settimana": "19 – 23 aprile",
+   "giorno": "Mercoledì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Correggiamo insieme gli errori",
+   "emoji": "🔍"
+  },
+  {
+   "n": 60,
+   "settimana": "19 – 23 aprile",
+   "giorno": "Venerdì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Prova generale 2",
+   "emoji": "📝"
+  },
+  {
+   "n": 61,
+   "settimana": "26 – 30 aprile",
+   "giorno": "Lunedì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Prova generale 3",
+   "emoji": "📝"
+  },
+  {
+   "n": 62,
+   "settimana": "26 – 30 aprile",
+   "giorno": "Mercoledì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Ripasso degli errori più frequenti",
+   "emoji": "🔁"
+  },
+  {
+   "n": 63,
+   "settimana": "26 – 30 aprile",
+   "giorno": "Venerdì",
+   "fase": 4,
+   "ambito": "Prova mista",
+   "titolo": "Mini prova della fiducia",
+   "emoji": "💪"
+  }
+ ]
+}
